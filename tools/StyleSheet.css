@@ -1,0 +1,170 @@
+#tbCalculada thead tr td{
+	padding: 10px;
+}
+
+#tbCalculada tr td {
+	padding-left: 10px;
+}
+
+a
+{
+	text-decoration:none;
+	}
+	
+.ArialBlackMinimo
+{
+	color: Black;
+	font-family: cursive;
+	font-size: 1;
+}
+
+.ArialBlackBlack
+{
+	color: Black;
+	font-family: Arial Black;
+	font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ArialBlackBlack tr td
+{
+	color: Black;
+	font-family: Arial Black;
+	font-size: 13px;
+}
+
+.ArialBlackBlack td
+{
+	color: Black;
+	font-family: Arial Black;
+	font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ArialBlackRed
+{
+	color: Red;
+	font-family: Arial Black;
+	font-size: 13px;
+}
+
+.Red
+{
+	color: Red;
+	background-color: Red;
+    height: 19px;
+    padding: 2px;
+}
+
+.White
+{
+	color: White;
+}
+
+.ArialPadrao tr td
+{
+	font-family:cursive;
+	color:Black;
+	}
+
+.ArialPadrao
+{
+	font-family:cursive;
+	color:Black;
+	}
+
+.ArialBlack
+{
+	font-family: cursive;
+	color: Black;
+	/*width: 227px;*/
+}
+
+body
+{
+	border-collapse: collapse;
+	border-spacing: 0px;
+	empty-cells: show;
+}
+
+table
+{
+	border-style: none;
+	border-width: 0px;
+	border-color: inherit;
+	padding: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	white-space: normal;
+	word-spacing: normal;
+	letter-spacing: normal;
+	background-repeat: no-repeat;
+	display: block;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+div
+{
+	border-style: none;
+	border-width: 0px;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+a
+{
+	color: Black;
+}
+
+a:hover
+{
+	color: Blue;
+}
+
+.topoTitulo
+{
+	border-color:Red;
+	border-width: 17px;
+	border-style:solid;
+	}
+
+img
+{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.planilha
+{
+	border-width: 0px;
+	width: 750px;
+}
+
+.leftRed {
+    border-left: 2px solid red;
+    padding-left: 5px;
+}
+
+.DivManobras
+{
+	position: absolute;
+	top: 100px;
+	left: 80px;
+	width: 640px;
+	height: 480px;
+	background-color: white;
+	border-color: Red;
+	border-width: 5px;
+	border-style: solid;
+}

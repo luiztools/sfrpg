@@ -1,0 +1,1121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Street Fighter RPG Brasil | Gerador de Personagem</title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="manobras.js" type="text/javascript"></script>
+    <script src="scripts.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="divFicha" class="planilha">
+    </div>
+    <div id="divFormulario" class="planilha">
+        <table width="100%">
+            <tr>
+                <td colspan="8" class="Red"></td>
+            </tr>
+            <tr>
+                <td rowspan="37" class="Red" width="5%"></td>
+                <td align="center" colspan="6">
+                    <img alt="Street Fighter" src="sheet-img/logo.png" />
+                </td>
+                <td rowspan="37" class="Red" width="5%"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="ArialBlackBlack">
+                    Nome:
+                </td>
+                <td width="20%">
+                    <input type="text" value="" id="txtNome" class="ArialBlack" />
+                </td>
+                <td width="10%" class="ArialBlackBlack">
+                    Estilo:
+                </td>
+                <td width="20%">
+                    <input type="text" value="" id="txtEstilo" class="ArialBlack" />
+                </td>
+                <td width="10%" class="ArialBlackBlack">
+                    Escola:
+                </td>
+                <td width="20%">
+                    <input type="text" value="" id="txtEscola" class="ArialBlack" />
+                </td>
+            </tr>
+            <tr>
+                <td class="ArialBlackBlack">
+                    Jogador:
+                </td>
+                <td>
+                    <input type="text" value="" id="txtJogador" class="ArialBlack" />
+                </td>
+                <td class="ArialBlackBlack">
+                    Equipe:
+                </td>
+                <td>
+                    <input type="text" value="" id="txtEquipe" class="ArialBlack" />
+                </td>
+                <td class="ArialBlackBlack">
+                    Time:
+                </td>
+                <td>
+                    <input type="text" value="" id="txtTime" class="ArialBlack" />
+                </td>
+            </tr>
+            <tr>
+                <td class="ArialBlackBlack">
+                    Cr&ocirc;nica:
+                </td>
+                <td>
+                    <input type="text" value="" id="txtCronica" class="ArialBlack" />
+                </td>
+                <td class="ArialBlackBlack">
+                    Conceito:
+                </td>
+                <td>
+                    <input type="text" value="" id="txtConceito" class="ArialBlack" />
+                </td>
+                <td class="ArialBlackBlack">
+                    Assinatura:
+                </td>
+                <td>
+                    <input type="text" value="" id="txtAssinatura" class="ArialBlack" />
+                </td>
+            </tr>
+            <tr>
+                <td class="Red" colspan="2" width="33%" height="1px"></td>
+                <td class="Red" colspan="2" width="33%" align="center">
+                    <img alt="Atributos" src="sheet-img/sfattributes.jpg" />
+                </td>
+                <td class="Red" colspan="2" width="33%"></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <img alt="Físicos" src="sheet-img/sfphysical.jpg" />
+                </td>
+                <td align="center" colspan="2">
+                    <img alt="Sociais" src="sheet-img/sfsocial.jpg" />
+                </td>
+                <td align="center" colspan="2">
+                    <img alt="Mentais" src="sheet-img/sfmental.jpg" />
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    For&ccedil;a
+                </td>
+                <td>
+                    <select id="ddlForca">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+                <td>
+                    Carisma
+                </td>
+                <td>
+                    <select id="ddlCarisma">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+                <td>
+                    Percep&ccedil;&atilde;o
+                </td>
+                <td>
+                    <select id="ddlPercepcao">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    Destreza
+                </td>
+                <td>
+                    <select id="ddlDestreza">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+                <td>
+                    Manipula&ccedil;&atilde;o
+                </td>
+                <td>
+                    <select id="ddlManipulacao">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+                <td>
+                    Intelig&ecirc;ncia
+                </td>
+                <td>
+                    <select id="ddlInteligencia">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    Vigor
+                </td>
+                <td>
+                    <select id="ddlVigor">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+                <td>
+                    Apar&ecirc;ncia
+                </td>
+                <td>
+                    <select id="ddlAparencia">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+                <td>
+                    Racioc&iacute;nio
+                </td>
+                <td>
+                    <select id="ddlRaciocinio">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="Red" colspan="2"></td>
+                <td width="107" class="Red" colspan="2" align="center">
+                    <img alt="Habilidades" src="sheet-img/sfabilities.jpg" />
+                </td>
+                <td class="Red" colspan="2"></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <img alt="Talentos" src="sheet-img/sftalents.jpg" />
+                </td>
+                <td align="center" colspan="2">
+                    <img alt="Perícias" src="sheet-img/sfskills.jpg" />
+                </td>
+                <td align="center" colspan="2">
+                    <img alt="Conhecimentos" src="sheet-img/sfknowledges.jpg" />
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    Prontid&atilde;o
+                </td>
+                <td>
+                    <select id="ddlProntidao">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Luta às Cegas
+                </td>
+                <td>
+                    <select id="ddlLutaCega">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Arena
+                </td>
+                <td>
+                    <select id="ddlArena">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    Interrogat&oacute;rio
+                </td>
+                <td>
+                    <select id="ddlInterrogatorio">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Condu&ccedil;&atilde;o
+                </td>
+                <td>
+                    <select id="ddlConducao">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Computador
+                </td>
+                <td>
+                    <select id="ddlComputador">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    Intimida&ccedil;&atilde;o
+                </td>
+                <td>
+                    <select id="ddlIntimidacao">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Lideran&ccedil;a
+                </td>
+                <td>
+                    <select id="ddlLideranca">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Investiga&ccedil;&atilde;o
+                </td>
+                <td>
+                    <select id="ddlInvestigacao">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    Perspic&aacute;cia
+                </td>
+                <td>
+                    <select id="ddlPerspicacia">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Seguran&ccedil;a
+                </td>
+                <td>
+                    <select id="ddlSeguranca">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Medicina
+                </td>
+                <td>
+                    <select id="ddlMedicina">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    Manha
+                </td>
+                <td>
+                    <select id="ddlManha">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Furtividade
+                </td>
+                <td>
+                    <select id="ddlFurtividade">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Mist&eacute;rios
+                </td>
+                <td>
+                    <select id="ddlMisterios">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    L&aacute;bia
+                </td>
+                <td>
+                    <select id="ddlLabia">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Sobreviv&ecirc;ncia
+                </td>
+                <td>
+                    <select id="ddlSobrevivencia">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    Estilos
+                </td>
+                <td>
+                    <select id="ddlEstilos">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    <input type="text" id="txtTalento1" />
+                </td>
+                <td>
+                    <select id="ddlTalento1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="txtPericia1" />
+                </td>
+                <td>
+                    <select id="ddlPericia1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="txtConhecimento1" />
+                </td>
+                <td>
+                    <select id="ddlConhecimento1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    <input type="text" id="txtTalento2" />
+                </td>
+                <td>
+                    <select id="ddlTalento2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="txtPericia2" />
+                </td>
+                <td>
+                    <select id="ddlPericia2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="txtConhecimento2" />
+                </td>
+                <td>
+                    <select id="ddlConhecimento2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="ArialBlackBlack">
+                <td>
+                    <input type="text" id="txtTalento3" />
+                </td>
+                <td>
+                    <select id="ddlTalento3">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="txtPericia3" />
+                </td>
+                <td>
+                    <select id="ddlPericia3">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="txtConhecimento3" />
+                </td>
+                <td>
+                    <select id="ddlConhecimento3">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="Red"></td>
+                <td colspan="2" class="Red">
+                    <img alt="Vantagens" src="sheet-img/sfadvantages.jpg" />
+                </td>
+                <td class="Red" colspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <img alt="Antecedentes" src="sheet-img/sfbackgrounds.jpg" />
+                </td>
+                <td colspan="2" align="center">
+                    <img alt="Técnicas" src="sheet-img/sftechniques.jpg" />
+                </td>
+                <td colspan="2" align="center" class="leftRed">
+                    <img alt="Manobras especiais" src="sheet-img/sfspecialmaneuvers.jpg" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="" id="txtAntecedente1" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlAntecedente1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td class="ArialBlackBlack">
+                    Soco
+                </td>
+                <td>
+                    <select id="ddlSoco">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+                <td rowspan="8" colspan="2" class="leftRed">
+                    <textarea id="txtManobrasEspeciais" style="width:94%;height:100%" rows="11">separe as manobras com ','</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="" id="txtAntecedente2" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlAntecedente2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td class="ArialBlackBlack">
+                    Chute
+                </td>
+                <td>
+                    <select id="ddlChute">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="" id="txtAntecedente3" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlAntecedente3">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td class="ArialBlackBlack">
+                    Bloqueio
+                </td>
+                <td>
+                    <select id="ddlBloqueio">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="" id="txtAntecedente4" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlAntecedente4">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td class="ArialBlackBlack">
+                    Apresamento
+                </td>
+                <td>
+                    <select id="ddlApresamento">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="" id="txtAntecedente5" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlAntecedente5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td class="ArialBlackBlack">
+                    Esportes
+                </td>
+                <td>
+                    <select id="ddlEsportes">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="" id="txtAntecedente6" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlAntecedente6">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td class="ArialBlackBlack">
+                    Foco
+                </td>
+                <td>
+                    <select id="ddlFoco">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="" id="txtAntecedente7" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlAntecedente7">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" value="" id="txtTecnica1" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlTecnica1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="" id="txtAntecedente8" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlAntecedente8">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" value="" id="txtTecnica2" class="ArialBlack" />
+                </td>
+                <td>
+                    <select id="ddlTecnica2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="Red" colspan="4" style="height: 20px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <img alt="Renome" src="sheet-img/sfrenown.jpg" />
+                </td>
+                <td colspan="2"></td>
+                <td class="ArialBlackBlack leftRed" colspan="2">
+                    Combos:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="Black" face="Arial Black, Arial" size="2">Gl&oacute;ria: </font>
+                </td>
+                <td>
+                    <select id="ddlGoria">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+                <td>
+                    <img alt="Chi" src="sheet-img/sfchi.jpg" />:
+                </td>
+                <td>
+                    <select id="ddlChi">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+                <td colspan="2" rowspan="4" class="leftRed">
+                    <textarea id="txtCombos" style="width:94%; height: 100%;" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="Black" face="Arial Black, Arial" size="2">Honra: </font>
+                </td>
+                <td>
+                    <select id="ddlHonra">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+                <td>
+                    <img alt="Força de Vontade" src="sheet-img/sfwillpower.jpg" />:
+                </td>
+                <td>
+                    <select id="ddlForcaVontade">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="Black" face="Arial Black, Arial" size="2">Divis&atilde;o: </font>
+                </td>
+                <td>
+                    <select id="ddlDivisao">
+                        <option value="Nenhuma">Nenhuma</option>
+                        <option value="Estilo Livre">Estilo Livre</option>
+                        <option value="Tradicional">Tradicional</option>
+                        <option value="Duelistas">Duelistas</option>
+                        <option value="Guerreiros Mundiais">Guerreiros Mundiais</option>
+                    </select>
+                </td>
+                <td>
+                    <img alt="Saúde" src="sheet-img/sfhealth.jpg" />:
+                </td>
+                <td>
+                    <select id="ddlSaude">
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="Black" face="Arial Black, Arial" size="2">Posto: </font>
+                </td>
+                <td>
+                    <select id="ddlPosto">
+                        <option value="-">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="8" class="Red"></td>
+            </tr>
+        </table>
+        <center style="margin-top: 20px">
+            <input type="button" id="btnGerarPlanilha" value="Gerar Personagem" />
+            <input type="button" id="btnGerarManobras" value="Gerar Manobras" />
+            <input type="button" id="btnGerarJSON" value="Gerar JSON" />
+        </center>
+    </div>
+    <center style="margin-top: 20px">V1.0 de 27/08/2016. Originalmente desenvolvido por Matt Meade (<a href="http://www.sfrpg.com" target="_blank">SFRPG.com</a>). Nova versão por Luiz Fernando Jr (<a href="http://www.sfrpg.com.br" target="_blank">sfrpg.com.br</a>) com contribuição de Eric Musashi (<a href="http://www.sfrpg.com/shotokan" target="_blank">Shotokan RPG</a>)</center>
+</body>
+</html>

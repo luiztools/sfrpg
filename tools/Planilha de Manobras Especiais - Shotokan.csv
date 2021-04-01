@@ -1,0 +1,248 @@
+﻿Nome,Tecnica,ModVel,ModDano,ModMov,Chi,FdV,Sistema
+Jab,Soco,2,-1,0,,,Manobra Básica
+Strong,Soco,0,1,0,,,Manobra Básica
+Fierce,Soco,-1,3,-1,,,Manobra Básica
+Short,Chute,1,0,0,,,Manobra Básica
+Forward,Chute,0,2,-1,,,Manobra Básica
+Roundhouse,Chute,-2,4,-1,,,Manobra Básica
+Apresamento,Apresamento,0,0,Um,,,Manobra Básica. Ignora Bloqueio
+Bloqueio,Bloqueio,4,Nenhum,Nenhum,,,Manobra Básica. Manobra de Interrupção. +2 Vel próx. turno
+Movimento,Esportes,3,Nenhum,3,,,Manobra Básica
+Buffalo Punch,Soco,-2,5,Um,,,
+Dashing Punch,Soco,0,4,2,,1,
+Dashing Uppercut,Soco,0,4,2,,1,Knockdown vs. Manobra Aérea
+Dim Mak,Soco,0,0,0,1,,Pode retardar o dano se desejado; -1 para qualquer atributo físico
+Dragon Punch,Soco,0,6,-2,,1,Knockdown vs. Manobra Aérea; força o oponente 1 hex para trás; esquiva de projéteis; não pode atacar o oponente que lançou o projétil de que se esquiva
+Ear Pop,Soco,-1,-4,-1,,,Ignora o Vigor; -1 Honra por uso
+Fist Sweep,Soco,-1,3,-2,,,"Manobra de Agachamento, Knockdown"
+Flaming Dragon Punch,Soco,-1,6,-2,1,1,Knockdown e força todos os alvos 1 hex para trás; 2 testes vs. o oponente que esteja no hex adjacente no começo do movimento; esquiva de projéteis; não pode atacar o oponente que lançou o projétil de que se esquiva
+Head Butt,Soco,0,3,-2,,,
+Hundred Hand Slap,Soco,-2,0,Um,,1,3 testes de dano
+Hyper Fist,Soco,1,0,Um,,1,3 testes de dano
+Monkey Grab Punch,Soco,-2,1,0,,,Ignora Bloqueio
+Power Uppercut,Soco,-1,3,Um,,,Knockdown vs. Manobra Aérea
+Rekka Ken,Soco,,,,,1,"Deve ser jogado com um Soco Básico, adiciona +3 na VEL; pode ser jogado por 3 turnos consecutivos, somando para atordoar; deve se exibir após usado por 3 turnos consecutivos, senão -3 Glória"
+Shockwave,Soco,0,0,Nenhum,1,,Afeta (Força) hex em liha reta; todos os alvos na linha sofrem o dano e sofrem Knockdown automático; não afeta lutadores que estão executando uma Manobra Aérea
+Spinning Back Fist,Soco,-1,2,1,,,
+Spinning Clothesline,Soco,0,0,-2,,1,"Acerta todos os hex adjacentes, forçando o recuo de 1 hex; o lutador pode se mover e rolar o dano novamente, não afeta oponentes em Manobras de Agachamento"
+Spinning Knuckle,Soco,-1,1,3,,1,2 testes de dano; esquiva de projéteis como Jump
+Triple Strike,Soco,-2,Especial,Nenhum,,,"2 testes de Soco com +0 e 1 de teste Chute com +1, use somente os 2 maiores resultados"
+Turbo Spinning Clothesline,Soco,1,0,-1,,1,"Acerta todos os hex adjacentes, forçando o recuo de 1 hex; o lutador pode se mover e rolar o dano novamente, não afeta oponentes em Manobras de Agachamento"
+Turn Punch,Soco,,,Dois,,1,"Gaste 1 FV no 1º turno; a carta pode ficar na mesa e ser jogada outras em conjunto; outras manobras jogadas enquanto Turn Punch está na mesa recebem -1 na VEL, no DAN e no MOV; os modificadores do Turn Punch modifiers dependem de quanto tempo a carta ficou na mesa, no máximo de 4 turnos "
+Air Hurricane Kick,Chute,-1,-1,1,1,1,"Movimento em Linha Reta; acerta todos os hex adjacentes e o mesmo hex, causando dano toda vez que se move; todos os alvos recuam um hex; Manobra Aérea; esquiva de projéteis como Jump"
+Backflip Kick,Chute,0,2,Dois,,,Atacante move 2 hex para trás após rolar o dano
+Double Dread Kick,Chute,-2,1,1,,1,"1º teste com +1 DAN e joga o alvo 1 hex para trás, o atacante deve mover-se para o hex do oponente e fazer o 2º ataque com +4; pode usar o 2º ataque se o alvo estiver a alcance"
+Double-Hit Kick,Chute,-2,1,-1,,,Dois testes de dano a menos que o alvo esteja em Manobra Aérea ou Manobra de Agachamento
+Double-Hit Knee,Chute,0,0,-2,,,Dois testes de dano
+Dragon Kick,Chute,-1,6,-2,1,1,Knockdown e joga todos os alvos 1 hex para trás; 2 testes vs. alvo que estiver no hex adjacente no começo do movimento; esquiva de projéteis; não pode atacar o oponente que lançou o projétil de que se esquiva
+Flash Kick,Chute,-1,7,Nenhum,1,1,Manobra Aérea; Knockdown vs. Manobra Aérea
+Flying Knee Thrust,Chute,1,2,1,,1,Manobra Aérea; Knockdown vs. Manobra Aérea
+Flying Thrust Kick,Chute,0,6,-2,,1,Knockdown vs. Manobra Aérea; joga o alvo 1 hex para trás; esquiva de projéteis; não pode atacar o oponente que lançou o projétil de que se esquiva
+Foot Sweep,Chute,-2,3,-2,,,Manobra de Agachamento; Knockdown
+Forward Flip Knee,Chute,-2,4,Dois,,,"Somente acerta alvos no mesmo e/ou adjacente hex; o atacante move-se para trás do alvo e rola o dano; se o alvo foi interrompido, perde o ataque"
+Great Wall of China,Chute,-2,1,Nenhum,,2,"3 testes de dano, afeta 3 hex adjacentes e consecutivos"
+Handstand Kick,Chute,-1,4,-2,,,Knockdown vs. Manobra Aérea
+Hurricane Kick,Chute,0,-1,-1,1,1,"Movimento em Linha Reta; acerta todos os hex adjacentes e o mesmo hex, causando dano toda vez que se move; todos os alvos recuam um hex; Manobra Aérea"
+Lightning Leg,Chute,-2,1,0,,1,3 testes de dano
+Slide Kick,Chute,-1,3,1,,,"Knockdown a menos que o alvo esteja bloqueando, Agachamento"
+Spinning Foot Sweep,Chute,-2,3,Nenhum,,1,Manobra de Agachamento; Knockdown a menos que o alvo esteja bloqueando
+Stepping Front Kick,Chute,0,1,1,,1,"2 testes de dano; o atacante se move para o hex do alvo para o 1º dano, forçando-o recuar um hex antes do 2º teste; só pode usar o 2º ataque se estiver a alcance"
+Whirlwind Kick,Chute,-2,0,-1,,2,"Movimento em Linha Reta; acerta todos os hex adjacentes e o mesmo hex, causando dano toda vez que se move; todos os alvos recuam um hex; Manobra Aérea"
+Wounded Knee,Chute,-2,3,-1,,,Alvo tem -2 VEL nos chutes -2 MOV em todas as manobras nos próximos 2 turnos se bem sucedido
+Deflecting Punch,Soco,2,0,Nenhum,,,Bônus de Bloqueio apenas para socos; Após a absorção faça um contra-soco (vs. qualquer ataque)
+Energy Reflection,Bloqueio,1,Nenhum,Nenhum,1,,Cada projétil requer 2 sucessos num teste de Raciocínio; 1 Chi por projétil
+Kick Defense,Bloqueio,4,Nenhum,Nenhum,,,absorção +4 vs. Chute; -2 vs. outros
+Maka Wara,Bloqueio,Especial,Especial,Especial,,,Toda vez que fizer um bloqueio bem sucedido role Vigor + Bloqueio -3 para dar dano no atacante; funciona automaticamente 
+Missile Reflection,Bloqueio,3,Nenhum,-1,,,"Role Destreza para refletir projéteis em um novo alvo; armas de arremesso requerem 1 sucesso; flechas, setas de besta, etc. requerem 2 sucessos; armas de fogo requerem 3 sucessos e um pedaço de material duro para refletir as balas; balas não podem ser refletidas no atirador"
+Punch Defense,Bloqueio,4,Nenhum,Nenhum,,,absorção +4 vs. Soco; -2 vs. outros
+San He,Bloqueio,2,Nenhum,Nenhum,1,,"Adiciona o dobro do Bloqueio na absorção; o lutador não sofre knockdown e não pode ser forçado para fora do hex exceto por Apresamentos; Teste Força + Bloqueio para grandes objetos, o Mestre decide o nº de sucessos; o lutador não ganha +2 na VEL no próximo turno"
+Air Throw,Apresamento,2,5,0,,1,Precisa interromper uma Manobra Aérea do oponente; Knockdown; o alvo pode ser arremessado a 3 hex do atacante; atacante termina seu movimento após o ataque; Manobra Aérea
+Back Breaker,Apresamento,-1,3,Um,,,Knockdown
+Back Roll Throw,Apresamento,-1,4,Um,,,O alvo é arremessado a (Força + Chute) hex; Knockdown
+Bear Hug,Apresamento,-1,3,Um,,,Apresamento Sustentado
+Brain Cracker,Soco,0,2,Um,,,"Apresamento Sustentado, dano calculado c/ soco"
+Grappling Defense,Apresamento,4,Nenhum,-1,,,Adiciona a técnica Apresamento ao Vigor para absorver Apresamentos
+Hair Throw,Apresamento,-2,5,Dois,,,Atacante deve se mover para o hex do alvo e atravessá-lo; o alvo é jogado (Força do atacante) hex na linha do movimento; Knockdown
+Head Bite,Apresamento,1,3,Um,,,Apresamento Sustentado
+Head Butt Hold,Apresamento,-1,3,Um,,,Apresamento Sustentado
+Iron Claw,Apresamento,-1,4,Um,,,Apresamento Sustentado
+Knee Basher,Chute,-1,4,Um,,,"Apresamento Sustentado; uma vez que o alvo é arremessado, ele é considerado Knocked Down, dano calculado c/ chute"
+Neck Choke,Apresamento,-1,3,Um,,,Apresamento Sustentado
+Pile Driver,Apresamento,-2,4,Um,,,Knockdown
+Siberian Bear Crusher,Apresamento,0,3,1,,1,Knockdown; Manobra Aérea enquanto estiver sendo executado (após o movimento)
+Siberian Suplex,Apresamento,0,2,Dois,,1,"Knockdown; considere um Suplex feito imediatamente após outro num mesmo alvo numa mesma direção (2 testes de dano, mas move 1 hex depois)"
+Spinning Pile Driver,Apresamento,-2,7,Dois,,2,Knockdown; o alvo cai a 3 hex após o impacto; Manobra Aérea enquanto estiver sendo executado (após o movimento); esquiva de projéteis como Jump enquanto estiver sendo executado
+Stomach Pump,Apresamento,0,4,Um,,,Apresamento Sustentado
+Storm Hammer,Apresamento,-2,7,Um,,,Knockdown; atacante e alvo terminam a 3 hex do hex do ataque; Manobra Aérea enquanto estiver sendo executado (após o movimento inicial); esquiva de projéteis como Jump enquanto estiver sendo executado
+Suplex,Apresamento,0,2,Um,,,Knockdown; o alvo cai no hex adjacente
+Thigh Press,Apresamento,-1,4,Um,,,Knockdown; o alvo termina no hex inicial da atacante; se ambos começaram no mesmo hex o atacante escolhe o hex adjacente em que o alvo cai
+Throw,Apresamento,-2,2,Um,,,O alvo é arremessado a (Força) hex; Knockdown
+Air Smash,Esportes,-1,4,-1,,,Manobra Aérea; esquiva de projéteis como Jump; Movimento em Linha Reta; o atacante termina o movimento no hex do alvo
+Beast Roll,Esportes,0,3,-2,,1,"Manobra Aérea; esquiva de projéteis como Jump; Movimento em Linha Reta; 1º ataque move-se para trás, então reverte a direção para o 2º ataque; o atacante termina 2 hex na frente do 2º alvo; precisa entrar no hex de ambos os alvos; mov +2 para segundo ataque"
+Cannon Drill,Esportes,2,2,2,,1,Movimento em linha reta
+Diving Hawk,Esportes,0,5,2,,1,Manobra Aérea; esquiva de projéteis como Jump
+Drunken Monkey Roll,Esportes,3,Nenhum,2,,,Manobra de Agachamento; esquiva de projéteis como Jump
+Flying Body Spear,Esportes,0,3,1,,1,Manobra Aérea; esquiva de projéteis como Jump; Movimento em Linha Reta
+Flying Head Butt,Esportes,0,4,3,,1,Manobra Aérea; Movimento em Linha Reta
+Flying Heel Stomp,Esportes,0,1,2,,1,Manobra Aérea; esquiva de projéteis como Jump; Movimento em Linha Reta; o atacante pode fazer o ataque a qualquer momento e continuar o movimento
+Jump,Esportes,3,Nenhum,0,,,"Manobra Aérea; Manobra de Interrupção contra projéteis, deve vencer uma disputa de Destreza + Esportes vs. Foco do atacante; pode ser combinado com chutes e socos básicos (use a VEL, DAN e MOV da manobra)"
+Jumping Shoulder Butt,Esportes,0,3,-1,,,Manobra Aérea; esquiva de projéteis como Jump
+Kippup,Esportes,Especial,Especial,Especial,,,Efeito automático; o lutador sofre apenas -1 VEL(não -2) após sofrer knockdown
+Rolling Attack,Esportes,0,3,4,,1,Manobra Aérea; Movimento em Linha Reta; o atacante termina o movimento 2 hex na frente do alvo; precisa entrar no hex do alvo
+Thunderstrike,Esportes,0,5,-1,,,Precisa entrar no hex do alvo; Complete o movimento após o dano
+Vertical Rolling Attack,Esportes,0,3,0,,1,Manobra Aérea; esquiva de projéteis como Jump; Knockdown vs. Manobra Aérea
+Wall Spring,Esportes,2,Nenhum,0,,,"Manobra Aérea; esquiva de projéteis como Jump; o lutador pode pular em um obstáculo com +0 MOV, quando quica na direção oposta com +2; pode ser combinado com chutes e socos básicos (use o modificador de MOV do Wall Spring)"
+Acid Breath,Foco,-2,3,-1,1,,"Alcance = Vigor; alvo precisa estar na linha de visão; causa +3 DAN imediatamente; no fim do próximo, caso o ácido não seja removido, role agora com +0, e no fim de 2 turnos de espera com -3"
+Chi Kun Healing,Foco,-1,Nenhum,-1,1,,"Restaura 1 Saúde/ponto de Chi, até um máximo de (Foco do lutador) por turno; pode ser usado em outros no mesmo hex"
+Cobra Charm,Foco,-1,Nenhum,-1,1,,Alcance = 3; precisa olhar nos olhos do alvo; atacante precisa vencer uma disputa de Raciocínio + Mistérios para encantar o alvo; o alvo pode quebrar o controle vencendo um teste de Inteligência como em um Apresamento Sustentado; o encantador só pode usar manobras de movimento sem se afastar mais de 3 hex e pode dar comandos simples para o alvo
+Extendible Limbs,Foco,Especial,Especial,Especial,,,Combinado com socos e chutes básicos para adicionar 1 hex de Alcance/Foco; Oponentes podem atingir qualquer parte do membro estendido
+Fireball,Foco,-2,2,Nenhum,1,,Alcance = Raciocínio + Foco; alvo precisa estar na linha de visão
+Flying Fireball,Foco,-2,2,0,1,1,Alcance = Raciocínio + Foco; alvo precisa estar na linha de visão; Não pode ser esquivada com Jump
+Ghost Form,Foco,1,Nenhum,0,2,,2 Chi 1º turno e 1 Chi nos turnos subsequentes; o lutador fica insubstancial
+Ice Blast,Foco,-2,3,Nenhum,2,,"Alcance = Raciocínio + Foco; alvo precisa estar na linha de visão; se sofrer dano, a vítima é congelada até ser atingida ou conseguir acumular 4 sucessos em um teste prolongado de Força (teste no final de cada turno)"
+Improved Fireball,Foco,-1,4,Nenhum,1,,"Alcance = Raciocínio + Foco; alvo precisa estar na linha de visão, knockdown"
+Inferno Strike,Foco,-2,4,Nenhum,2,,Alcance = Raciocínio + Foco; hex alvo precisa estar na linha de visão; afeta o hex alvo e todos os adjacentes
+Mind Reading,Foco,Especial,Especial,Especial,1,,"Alcance = Raciocínio + Foco; usuário declara o alvo de Mind Reading e precisa vencer uma disputa de FV Permanente; se conseguir, o usuário pode ver 2 cartas de combate do alvo, uma deve ser jogada no próximo turno; as cartas devem ser mostradas entre os turnos"
+Musical Accompaniment,Foco,Especial,Especial,Especial,,,"Especifique o tipo de música; se esta música estiver tocando durante uma luta do lutador, o lutador terá +1 na VEL, DAN ou MOV em cada turno (alterável)"
+Regeneration,Foco,0,Nenhum,Nenhum,1,,"Recupera 1 Saúde por Chi, até o máximo de Foco por turno"
+Repeating Fireball,Foco,-2,0,Nenhum,2,,Alcance = Raciocínio + Foco; alvo precisa estar na linha de visão; produz uma Fireball por ponto de Foco; pode atingir diferentes inimigos; alvos que tentam esquivar de vários ataques devem testar para cada ataque separado
+Shock Treatment,Foco,0,7,Nenhum,2,,Afeta todos os lutadores no mesmo ou adjacentes hex; Knockdown a menos que estejam bloqueando; quando adquire decide se é Manobra de Agachamento
+Sonic Boom,Foco,-3,4,Nenhum,1,,Alcance = Raciocínio + Foco; alvo precisa estar na linha de visão
+Stunning Shout,Foco,2,Nenhum,-2,1,,"Afeta um alvo ou, a critério do Narrador, um grupo de pequeno; o atacante deve vencer uma disputa de FV Permanente; se o alvo não agiu neste turno, perderá sua ação; se já agiu, terá um redutor na VEL igual a diferença de que perdeu a disputa"
+Telepathy,Foco,Especial,Especial,Especial,1,,"Alcance = Raciocínio + Foco; personagem pode ligar (Foco) pessoas em comunicação telepática, para poderem conversar mentalmente"
+Thunderclap,Foco,0,-3,Nenhum,1,,Atinge todos em 3 hex em linha reta
+Toughskin,Foco,Especial,Especial,Especial,1,,Jogado com qualquer outra carta; lutador ganha +2 na absorção neste turno
+Yoga Flame,Foco,-2,7,Nenhum,2,,Afeta todos no hex adjacente e nos 3 posteriores a este; a chama dura até o fim do turno
+Yoga Teleport,Foco,3,Nenhum,Especial,2,,"O personagem desaparece, reaparecendo a qualquer momento do turno em qualquer lugar que esteja a (Inteligência + Foco) hexs da posição original"
+Zen No Mind,Foco,Especial,Especial,Especial,,1,"Personagem seleciona outras 3 cartas, precisa esperar até o final do turno para escolher uma delas para jogar"
+Ducking Fierce,Soco,-1,4,Nenhum,,,Manobra de Agachamento
+Elbow Smash,Soco,2,2,Um,,,
+Forward Slide Kick,Chute,0,2,0,,,Knockdown a menos que o alvo esteja bloqueando
+Scissor Kick,Chute,0,3,3,,1,2 testes de dano; Manobra Aérea
+Tiger Knee,Chute,3,2,0,,2,Knockdown; Manobra Aérea; esquiva de projétil como Jump
+Air Suplex,Apresamento,-1,4,0,,,Precisa interromper uma Manobra Aérea do oponente; Knockdown; Atacante e alvo terminam no hex da interrupção; Manobra Aérea
+Choke Throw,Apresamento,-1,2,0,,,Pode interromper oponente em pé ou em Manobra Aérea; atacante e alvo terminam no mesmo hex; Knockdown
+Backflip,Esportes,3,Nenhum,2,,1,"Movimento em Linha Reta; o lutador não pode ser atingido enquanto usa esta manobra, somente antes ou depois"
+Flying Punch,Esportes,-2,2,5,,1,"Manobra Aérea; o atacante precisa mover 2 hexes para trás do alvo e voltar para atingi-lo, reduz a metade (arredondado para baixo) o Vigor efetivo do alvo; -1 Honra por uso; não há perda de Honra ou Vigor se o ataque for frontal"
+Light Feet,Esportes,Especial,Especial,Especial,,,"Automaticamente adiciona +1 MOV para todas as manobras; opcionalmente, o lutador pode gastar 1 FV para adicionar +3 MOV a uma Manobra ao invés de +1"
+Tumbling Attack,Esportes,-1,-1,0,,1,Manobra de Agachamento; Movimento em Linha Reta; precisa entrar no hex do alvo; após o dano o alvo recua 1 hex; role o dano para cada hex que entrar e continue se movendo
+Blind,Foco,0,Nenhum,Nenhum,1,,"Alcance = Raciocínio+Foco; atacante rola Inteligência+Foco VS. Vigor+Mistérios do alvo; Se ganhat, alvo é cegado; todo turno alvo rola Inteligência VS. Inteligência do atacante; Se vencer, escapa"
+Mind Control,Foco,-3,Nenhum,Nenhum,2,,"Alcance = Raciocínio + Foco; alvo não pode ter mais FV; atacante precisa vencer uma disputa de Inteligência contra o alvo; a duração depende do nº de sucessos: 1 = 10 turnos, 2 = 1 hora, 3 = 1 dia, 4 = 1 semana, 5 = 1 mês; alvos controlados ordenados a agir contra seu código moral ou seu instinto de sobrevivência podem resistir ao comando se passarem num teste de Honra Permanente vs. FV do controlador; não afeta alvo com Honra Permanente em 10"
+Psycho Crusher,Foco,-1,5,6,2,,"O atacante pode mudar a direção, mantendo o mesmo plano, no meio do movimento, para atingir vários alvos; precisa entrar no hex do alvo; alvos que não estejam bloqueando sofrem +5 DAN, knockdown e caem em um hex adjacente (alvo escolhe), só podem ser atingidos uma vez; quem estiver bloqueando recua 1 hex (na direção do movimento) e sofre 1 dado de dano (Manobra termina se resultar em falha crítica), alvo pode ser atacado 5 vezes antes do atacante passar para trás dele e continuar seu movimento"
+Psychic Rage,Foco,-2,Nenhum,Nenhum,1,,"Alcance = Raciocínio + Foco; atacante precisa vencer uma disputa de FV; se bem sucedido, o alvo só poderá usar Fierce, Roundhouse e suas Manobras Especiais que causem maior dano enquanto estiver em fúria; pode atacar amigos e aliados; entre os turnos o alvo pode tentar vencer uma disputa de FV vs. Manipulação do controlador para libertar-se; o alvo perde Honra pelas ações feitas sobre efeito do Psychic Rage"
+Psychic Vise,Foco,0,0,Nenhum,1,1,"Alcance = Raciocínio + Foco; o alvo absorve com Inteligência ao invés de Vigor, ignorando Bloqueios; o dano é retirado da FV do alvo e este terá um redutor na VEL no próximo turno igual ao dano; se o dano exceder a Inteligência do alvo, ele estará atordoado; alvos sem FV ainda podem ser atordoados e ter sua VEL reduzida"
+Psychokinetic Channeling,Foco,Especial,Especial,Especial,1,,Jogado com um soco ou chute básico; adiciona +2 no dano do ataque
+Boshi-Ken,Soco,-1,2,0,,,"Se bem sucedido, o alvo terá -1 MOV no próximo turno"
+Haymaker,Soco,-2,4,-2,,,
+Shikan-Ken,Soco,1,1,0,,,"Se bem sucedido, o atacante deve vencer um disputa de Força para forçar o alvo 1 hex para trás; Knockdown vs. Manobra Aérea"
+Shuto,Soco,-1,3,-2,,,"Ignora Toughskin, armaduras, etc.; contra um oponente sem armadura, causa +4 DAN"
+Windowmaker,Soco,-3,5,Dois,,,"Se bem sucedido, o alvo sofre Knockdown; não afeta lutadores em Manobra Aérea; Manobra Aérea; esquiva de projéteis como Jump"
+Ax Kick,Chute,-1,4,-2,,,Precisa entrar no hex do oponente; Knockdown vs. Manobra Aérea; Acerta oponentes em Manobra de Agachamento; Manobra Aérea
+Cartwheel Kick,Chute,0,1,2,,1,Movimento em Linha Reta; acerta um oponente causando dano toda vez que se move; o alvo recua um hex a cada golpe
+Heel Stamp,Chute,2,-4,1,,,"O atacante recua 1 hex após o dano, o alvo recua [(Força + Esportes do atacante) - Força do alvo] hex"
+Reverse Frontal Kick,Chute,-1,3,-1,,,Ignora bloqueios
+Disengage,Apresamento,1,Nenhum,-2,,,Jogado quando estiver preso em Apresamento Sustentado; o lutador pode fazer um 2º teste para sair do apresamento (Destreza vs. Força do atacante)
+Dislocate Limb,Apresamento,-1,1,1,,,"O alvo tem -3 VEL para todas as Manobras; Socos do alvo tem também -2 no DAN. Alvo pode recolocar o braço no lugar, perdendo um turno."
+Eye Rake,Apresamento,-2,3,0,,,"Se funcionar, alvo deve rolar Percepção + Luta às Cegas, se falhar estará atordoado no próximo turno; -1 Honra; em torneios -1 Glória também"
+Jaw Spin,Apresamento,-1,5,Nenhum,1,,"Precisa sofrer um ataque mais lento antes de executar esta manobra, dano baseado em Híbrido Animal"
+Ripping Bite,Apresamento,-1,2,Um,,1,"Alvo tem -1 na Força e Destreza pelo resto do combate; pode ser usado várias vezes no mesmo alvo, dano baseado em Híbrido Animal"
+Sleeper,Apresamento,-1,2,Um,,1,Apresamento Sustentado; se o apresamento for mantido por 3 turnos o alvo é atordoado
+Tearing Bite,Apresamento,1,4,Um,1,,"O dano é causado quando o alvo é arremessado a (Força -1) hex na direção em que veio o ataque, dano baseado em Híbrido Animal"
+Displacement,Soco,2,-1,1,,1,Precisa interromper um ataque; o lutador move-se para um dos lados esquivando do ataque e deve mover-se para o alvo à alcance de seu contra-soco (dano calculado c/ soco)
+Dragon’s Tail,Esportes,-1,5,-2,,,"Knockdown vs. Manobra Aérea; oponentes em pé recuam 1 hex, dano calculado com Híbrido Animal"
+Esquives,Esportes,2,Nenhum,Dois,,,Precisa interromper um ataque; o lutador move-se para um dos lados esquivando do ataque
+Pounce,Esportes,-1,2,4,,1,"Manobra Aérea; esquiva de projéteis como Jump; Knockdown; ambos os lutadores terminam no mesmo hex, dano calculado com Híbrido Animal"
+Tail Sweep,Esportes,-1,1,Nenhum,,,Knockdown; Manobra de Agachamento; atinge todos os hex adjacentes
+Typhoon Tail,Esportes,-2,5,1,1,1,Manobra Aérea; não pode ser atingido por projéteis enquanto executa esta manobra; o oponente no hex alvo sofre +5 DAN e é jogado 1 hex para trás; todos os lutadores nos hex adjacentes sofrem +2 DAN e são jogados 1 hex para trás
+Upper Tail Strike,Esportes,1,2,1,,,"Knockdown vs. Manobra Aérea, dano calculado com Híbrido Animal"
+Air Blast,Foco,-1,3,Nenhum,1,,Alcance = Inteligência + Antecedente Elemental; alvo precisa estar na linha de visão; alvo precisa passar em um teste de Percepção + Luta às Cegas para perceber e interromper este ataque
+Balance,Foco,Especial,Especial,Especial,,,O lutador ganha +1 MOV para Manobras Aérea; automático
+Death’s Visage,Foco,1,Nenhum,Nenhum,1,,Todos no alcance de visão precisam vencer uma disputa de FV vs. Manipulação + Foco do atacante ou irão para o mais longe possível do atacante; vítimas podem tentar novamente no final de cada turno; dura 3 turnos a menos que seja quebrado
+Drain,Foco,-1,Especial,-1,1,,Testemunhas precisam passar num teste de Percepção + Mistérios para perceber (e tentar esquivar) do projétil; a vítima perde 1 de Saúde e terá -1 VEL e MOV no próximo turno
+Drench,Soco,-1,2,-2,1,,Alcance = Inteligência + Foco; dano baseado na técnica Soco
+Elemental Skin,Foco,-2,Especial,Especial,1,1,"Funciona por (Foco) turnos; efeito varia de acordo com o tipo; Fogo = atacantes sofrem dano (Foco), como em Maka Wara, técnicas de Soco, Chute e Apresamento do elemental ganham +1 DAN; Água = qualquer dano sofrido é reduzido de 1; Ar = Manobra Aérea causam -2 DAN, dano de projétil é reduzido de 1; Terra = Socos e Chutes contra o elemental causam -2 DAN, não pode ser arremessado e nem afetado por Knockdown"
+Elemental Stride,Foco,1,Nenhum,Especial,1,,"O lutador pode desaparecer dentro do seu elemento e então reaparecer em outro hex com seu elemento a qualquer momento como Yoga Teleport; fora de combate, custa 1 Chi por hora, o elemental pode mover-se invisível no seu elemento à (Vigor + Foco) em milhas p/ hora"
+Entrancing Cobra,Foco,2,Nenhum,-1,1,,O atacante precisa vencer uma disputa de Destreza + Foco vs. Raciocínio + Mistérios do alvo; se bem sucedido o alvo será atordoado no próximo turno
+Envelop,Foco,-2,1,-2,1,,"Alcance = Foco; ataque em linha de visão; Apresamento Sustentado, usa Foco ao invés de Apresamento para duração máxima; a vítima precisa passar num teste de Vigor todo turno para não ser atordoado; a vítima pode agir normalmente mas terá -2 MOV enquanto estiver presa; se a linha de visão for obstruída, o apresamento acaba; se 2 lutadores estiverem no mesmo hex, o ataque afetará ambos; +1 DAN no 1º turno e -1 nos demais"
+Fire Strike,Foco,-1,3,Nenhum,1,,Alvo precisa estar na linha de visão; afeta o hex adjacente e todos (Foco) hexs ao longo da linha; dura até o fim do turno
+Flaming Fist,Foco,Especial,Especial,Especial,1,,Jogado com qualquer Soco Básico; adiciona +3 DAN
+Flight,Foco,Especial,Especial,Especial,1,,"Requer 1 turno de concentração, no qual o lutador só poderá bloquear; nos turnos seguintes o lutador estará flutuando, todas as manobras terão +1 VEL and MOV = Vigor, só pode ser atingido por Manobras Aérea e ataques de projéteis; fora de combate, custa 1 chi/hora de vôo de (Foco + Destreza) x 10 milhas p/ hora"
+Heal,Foco,-1,Nenhum,-1,1,,O usuário pode curar-se ou a alguém no mesmo hex a 1 Chi por Saúde; também pode purificar um elemento por 1 Chi/5 cm³
+Heat Wave,Foco,0,2,0,1,,Ignora bloqueio; pode ser esquivado como um projétil; dano conta somente para atordoar
+Leech,Foco,0,Especial,Nenhum,1,,"Atacante deve prender o alvo em um Apresamento Sustentado antes; atacante pode passar 1 Saúde do alvo para si por ponto de Chi gasto, máximo de (Foco) pontos por turno; atacante não pode ter mais Saúde que o máximo"
+Lightness,Foco,Especial,Especial,Especial,1,,Pode ser usado no elemental ou outro alvo; o alvo ganha +2 VEL e +3 MOV para todas as manobras acrescidas por Jump; dura (Foco) turnos
+Pit,Foco,-1,1,-1,1,,Cria no hex alvo um buraco com (5 + Foco) pés de profundidade; lutadores no buraco sofrem o dano pela queda no fim do turno e devem gastar o próximo turno subindo (Movimento com -4 VEL); o atacante precisa estar em contato com a terra; buracos são permanentes após criados; -1 Glória se usado em arena
+Pool,Foco,1,Nenhum,-2,,,"Adquire imunidade a ataques físicos e a habilidade de escoar por frestas, etc.; alguns ataques de Foco podem afetar o lutador (Narrador decide)"
+Push,Foco,-2,1,Nenhum,1,,Afeta 3 hex a frente e (Foco) hexs de lado; todos os lutadores na área são atingidos; todos recuam 1 hex por ponto de dano sofrido; Knockdown vs. Manobra Aérea
+Sakki,Foco,Especial,Especial,Especial,,,Personagem está a par do ataque surpresa e pode agir de acordo com esta informação; pode mover Foco + Esportes para evitar o ataque surpresa
+Shrouded Moon,Foco,0,Nenhum,-1,1,,Ninja fica invisível; atacante precisa vencer uma disputa de Percepção + Prontidão vs. Foco + Furtividade do ninja para percebê-lo; se não percebê-lo o ninja terá +1 VEL no próximo turno
+Speed of the Mongoose,Foco,2,Nenhum,-2,1,,Adiciona +4 VEL ou +6 MOV para a Manobra escolhida no próximo turno
+Spontaneous Combustion,Foco,0,5,-2,2,,"Atacante precisa vencer uma disputa de Foco com o alvo; se vencer o alvo começa a pegar fogo; continua enquanto o elemental manter o efeito ou o alvo gastar um turno rolando no chão para apagar as chamas, neste turno terá -2 VEL; 1 Chi por turno para manter as chamas e dano +2 nos turnos seguintes"
+Stone,Foco,-2,Especial,Nenhum,1,,Ataque de projétil; dano é Força + Foco
+Vacuum,Foco,-2,2,-2,1,,Afeta todos no hex alvo; vítimas precisam passar em um teste de Vigor ou estarão automaticamente atordoadas no próximo turno; as vítimas podem interromper com uma Manobra mais rápida e saírem do hex; não afeta elementalistas do ar
+Venom,Foco,1,2,-2,1,,Efeitos retardados: pelos próximos 2 turnos o alvo perde 1 Saúde automático e tem -1 VEL
+Wall,Foco,-2,2,Nenhum,,,"O personagem cria uma barreira em um hex; Alcance = Percepção + Foco; qualquer um que esteja no hex sofre o dano; a barreira pode ser contornada ou destruída, ela tem Vigor igual ao Antecedente Elemental e Saúde igual Foco do personagem"
+Weight,Foco,-2,Nenhum,-1,1,,"Ataque de projétil; vítima atingida tem -2 VEL, -2 MOV e não usar Manobra aérea no próximo turno"
+Improved Pin,Apresamento,0,2,1,,1,"Apresamento Sustentado; pode ser executado em alvos no mesmo hex ou no hex adjacente; +2 DAN e +1 MOV no 1º turno, +1/Dois nos turnos subsequentes; o atacante ganha +3 na Força para manter o apresamento; precisa causar 2 pontos de dano para segurar o apresamento"
+Pin,Apresamento,-1,2,1,,1,"Apresamento Sustentado; o alvo precisa estar Knocked Down ou Atordoado; +2 DAN e +1 MOV 1º turno, +0/Zero para todos subsequentes; o atacante ganha +3 na Força para manter o apresamento; precisa causar 2 pontos de dano para segurar o apresamento"
+Breakfall,Esportes,Especial,Especial,Especial,,,Reduz o dano de Throws e outras manobras de impacto com o solo pelo nº de sucessos no teste de Destreza + Esportes
+Ground Fighting,Esportes,Especial,Especial,Especial,,1,"Após sofrer Knockdown o lutador continua a lutar no chão; não pode usar Manobras Aéreas ou manobras que precisem estar de pé (Narrador decide); sem esta manobra os ataques feitos no chão terão -3 na VEL e DAN; ataques contra quem estiver usando esta manobra terão -2 na VEL e DAN, exceto Manobras de Agachamento e ataques rasteiros"
+Chi Push,Foco,-3,Especial,Nenhum,2,,"Dano = Raciocínio + Foco +3 +1 por Chi extra, máximo de 2; opcionalmente pontos de dano podem forçar o alvo recuar 1 hex(1 dano/1 hex recuado); pode aumentar o alcance por -2 dano por hex; alvo pode adicionar +1 na absorção por 2 Chi gasto; não afeta quem estiver usando San He"
+Levitation,Foco,0,Nenhum,Especial,1,,Lutador pode se mover por Foco hexs por turno em qualquer direção
+Heart Punch,Soco,-1,5,-2,,,"Dano somente para atordoar, não perde Saúde; não pode fazer parte de Combo Atordoante"
+Knife Hand Strike,Soco,1,-1,-1,,,Dano aplicado contra ½ do Vigor do alvo caso não esteja bloqueando
+Lunging Punch,Soco,0,1,1,,,Manobra de Agachamento; apenas Kick Defense funciona
+Forward Backflip Kick,Chute,2,1,Dois,,1,2 testes de dano se o atacante interromper um alvo em Manobra Aérea
+Face Slam,Apresamento,-1,3,Um,,,Knockdown
+Flying Tackle,Apresamento,-1,0,2,,,Atacante e alvo sofrem Knockdown se nenhum dano for causado; ambos voam por 2 hex a partir do hex do oponente; +2 VEL na próxima manobra se ela for um Apresamento
+Rising Storm Crow,Apresamento,-3,Especial,2,,1,"Precisa se mover por pelo menos 2 hex para entrar no hex do alvo; 2 testes de dano, o 1º de Força -3 e o 2º de 2x Força; o dano combina para atordoar; o alvo sofre knockdown e é arremessado na direção do movimento a (Força do atacante) hex, mesmo se não sofrer dano (Esta é uma manobra secreta que aparece no The Perfect Warrior; jogadores não podem começar com ela)"
+Dashing Clothesline,Soco,-1,5,2,,1,Knockdown
+Dragon Smash,Soco,-1,6,0,,2,"Similar ao Dragon Punch, mas após acertar a Manobra (e empurrar o oponente para trás), pode acertar o oponente mais uma vez (se ainda tiver Movimento para isso); o segundo impacto tem dano +4 e causa Knockdown"
+Houzantou,Soco,0,2,1,,1,"Esquiva de projéteis, knockdown"
+Jet Uppercut,Soco,-1,6,-1,,1,Funciona de forma similar ao Dragon Punch
+Kobokushi,Soco,-2,5,Um,1,,"Ao interromper um projétil, fazer um teste de Raciocínio (2 Sucessos) para dissipá-lo por 1 Força de Vontade. Causa Knockdown."
+Machine Gun Blow,Soco,0,0,2,,1,Três testes de dano
+Punch Sweep,Soco,-2,3,-2,,,"Agachamento; knockdown; a única forma de se defender é com Kick Defense; defensor pode rolar Percepção + Perspicácia contra Destreza + Soco do atacante; se vencer, pode se defender com um bloqueio comum"
+Ressen Ha,Soco,0,5,0,1,1,Knockdown contra oponentes aéreos
+Running Dragon Punch,Soco,-1,1,0,,2,Linha hexagonal reta; empurra o oponente para trás e segue acertando enquanto tiver movimento; após o último dano o oponente sofre um Knockdown; só é considerada aérea após o rolamento do último dano
+Senkju Tai,Soco,0,4,0,,1,Knockdown
+Snake Strike,Soco,1,1,-1,,,"Manobra aérea, pode se esquivar de projéteis; oponente interrompido em uma manobra aérea sofre três testes de dano"
+Tornado Punch,Soco,0,1,-2,,1,"Acerta e empurra oponentes de todos os hexágonos adjacentes, seguindo em linha reta e rolando novos danos; o último acerto precisa ser direcionado a apenas um oponente, causando knockdown e tendo um modificador de +2; não atinge oponentes em agachamentos"
+Bushin Hurricane Kick,Chute,1,-1,Um,1,1,"Todos ao redor são atingidos e empurrados para trás; oponentes no mesmo hexágono são puxados pelo golpe, podendo ser acertados até um número de vezes igual à Técnica Esportes do usuário; para cada novo ataque, devem ter sofrido dano no ataque anterior; Knockdown no último acerto"
+Dankuukyaku,Chute,-1,0,4,,2,"Manobra aérea, esquiva de projéteis (dif. 8), após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +2, empurrando de novo e tentando um terceiro com dano +4, que causa knockdown"
+Dive Kick,Chute,0,2,-1,,,"Manobra aérea, afeta personagens em agachamentos"
+Hayagake,Chute,0,3,3,,1,"Manobra aérea ou agachamento, à escolha do jogador; se aérea, esquiva de projéteis; se agachamento, causa knockdown"
+Messiah Kick,Chute,-1,-1,-2,,1,"Manobra aérea, esquiva de projéteis, tem um segundo chute com dano +2 e efeito knockdown; se bloqueado, atacante rola Manipulação + Chute contra Percepção + Bloqueio; se vencer, bloqueio não funciona para o segundo chute"
+Power Kick,Chute,-3,5,Dois,,,Empurra 1 Hexágono para trás e causa Knockdown em Manobras Aéreas
+Rhino Horn,Chute,-1,3,3,,1,Manobra Aérea
+Rising Jaguar,Chute,2,2,1,,2,"Manobra aérea após a rolagem de dano, podendo se esquivar de projéteis; contra oponentes no mesmo hex ou adjacente antes do lutador se movimentar, o dano é rolado duas vezes"
+Rising Lightning Leg,Chute,0,1,Três,,2,"Manobra aérea após a rolagem de dano, podendo se esquivar de projéteis; três testes de dano; knockdown"
+Roundabout Kick,Chute,-2,4,Nenhum,,1,Acerta oponentes no mesmo hex ou adjacente igual à técnica Chute do lutador; causa knockdown; manobra aérea
+Tsumuji,Chute,-1,-1,3,,2,"Após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +1, empurrando de novo e tentando um terceiro com dano +3, que causa knockdown; pode aplicar um quarto chute no oponente caído com dano +1, porém custará 1 ponto temporário de Honra"
+Wheel Kick,Chute,-1,3,1,,1,"Manobra aérea, esquiva de projéteis"
+Counter Attack,Bloqueio,Especial,Especial,Especial,,1,"Lutador deve jogar carta de Bloqueio junto com a carta da Manobra que ele usará após o Counter Attack, dentro de sua lista de manobras possíveis - pode escolher uma para cada 2 pontos em Bloqueio; o lutador terá -2 Absorção; após Bloquear a Manobra do oponente o personagem pode seguir com seu ataque; o personagem não ganha +2 de Velocidade no próximo turno ao usar o Counter Attack e ele não é uma Manobra de Interrupção; personagem pode jogar Punch Defense usar o Counter Attack com uma Manobra de Soco, Absorvendo como nas regras do Punch Defense; o mesmo vale para Kick Defense com Chutes"
+Cross Counter,Soco,2,4,Dois,,1,"Se o lutador é mais rápido que o oponente, ele deve esperar o seu ataque para acertá-lo no exato momento do golpe, de modo que ele absorve com apenas metade do seu Vigor, empurrando um hex e causando knockdown; o lutador pode seguir se movimentando após o soco, mantendo-se próximo do oponente; se derrubado ou atordoado, o atacante não prossegue com o Cross Counter; se atingir antes de receber o ataque, não empurra ou causa knockdown; não há ganho de +2 velocidade no próximo turno"
+Bandit Chain,Apresamento,1,2,Um,,1,"Dano rolado três vezes; no fim, arremessa a até Força hexes"
+Bushin Musou Renge,Apresamento,-2,4,Um,1,1,"Dano rolado três vezes baseado em Soco, Chute ou Apresamento; oponente absorve com Honra"
+Butsumetsu Buster,Apresamento,-2,5,Um,,1,Oponente arremessado em hex adjacente; knockdown
+Daikyou Burning,Apresamento,0,5,0,1,1,Knockdown; pode arrastar oponente pelo chão com movimento restante causando um dado de dano por hex
+Leaping Throw,Apresamento,-2,3,3,,1,"Manobra aérea, esquiva de projéteis; arremessa a Força hexes"
+Power Bomb,Apresamento,0,6,Um,,1,"Knockdown, vítima quica a até 3 hexágonos de distância"
+Sean Tackle,Apresamento,1,3,2,,2,Knockdown e empurra um hexágono para trás
+Soul Throw,Apresamento,-2,7,Dois,1,,"Personagem passa pelo hexágono do oponente, arremessando-o em seguida"
+Tornado Throw,Apresamento,0,6,Um,,1,"Knockdown, arremessa em qualquer hex adjacente"
+Bull Head,Esportes,-1,4,1,,1,"Pode se esquivar de projéteis antes de iniciar o movimento; linha hexagonal reta, knockdown; pode ser carregada por até três turnos, ganhando +1 velocidade e dano a cada turno carregado (mas resultando em Movimento Um) e reduzindo, enquanto carregada, os três modificadores das manobras utilizadas em 1"
+Rear Crush,Esportes,1,2,1,,1,"Não é afetada por agachamentos, mas os afeta; lutador ganha 1 ponto temporário de Glória; caso a vítima seja atordoada ou nocauteada pelo golpe, ela perde 1 ponto temporário de Glória"
+Ashura Senku,Foco,3,Nenhum,2,1,,Lutador não pode ser atingido enquanto a executa
+Chi Pull,Foco,-2,Especial,Nenhum,1,,"Alcance igual ao Raciocínio + Foco; dano de +8 só para atordoar; absorvido com Vigor, mas se ultrapassar o Vigor da vítima, ela estará atordoada; havendo sucesso vítima é atraída um número de hexágonos igual ao Foco do atacante; vítima pode tentar resistir rolando sua Força contra o Foco do adversário"
+Chill Touch,Foco,Especial,Especial,Especial,2,,"Usado com qualquer Soco, Chute ou Apresamento básicos; adiciona os efeitos do Ice Blast e +2 de dano"
+Criminal Upper,Foco,-1,4,Um,1,,Knockdown; o oponente não pode Bloquear (salvo com San He)
+Eletric Channeling,Foco,Especial,Especial,Especial,2,,"Adiciona +3 dano a Socos, Chutes e Apresamento básicos; afeta todos os alvos no hexágono à frente do lutador, e causa um Knockdown a eles"
+Flaming Heel,Foco,Especial,Especial,Especial,1,,Adiciona +3 dano a Chutes básicos
+Instant Hell Murder,Foco,-3,Especial,2,2,,"Funciona como Apresamento; é rolado um dano padrão de 15 um número de vezes igual ao Foco do atacante; oponente rola Raciocínio + Mistérios (dif. 10, reduzindo se já conhecer o golpe); cada sucesso permite evitar uma rolagem de dano, mas deve-se gastar 1 Chi a cada duas rolagens evitadas; não pode gastar mais Chi que o Foco; o usuário também é atacado, rolando Raciocínio + Mistérios (dif. 6, caindo conforme vá utilizando) e gastando Chi para não sofrer o próprio golpe; dano absorvido com Honra"
+Kubiori,Foco,-1,4,-1,1,,Knockdown e empurra 1 hex; atacante deve entrar no hex da vítima
+Raida,Foco,0,5,-1,1,,Knockdown e empurra 1 hex; atacante deve entrar no hex da vítima
+Short Fireball,Foco,0,2,Nenhum,1,,Alcance = 1; dois testes de dano; pode reduzir dois pontos de dano (dos dois testes) por hexágono a mais de alcance
+Soul Spiral,Foco,0,0,-1,1,,Três testes de dano; knockdown
+Spinning Weapon,,0,1,Um,,1,Três testes de dano
+Parry,Bloqueio,2,Nenhum,Nenhum,,,"Usuário rola Destreza + Bloqueio contra a Técnica da manobra do adversário; se bem-sucedido, evita todo o dano do ataque, adicionando também +1 Velocidade no próximo turno para cada sucesso a mais que tiver obtido (ao invés do +2 do Bloqueio comum); se falhar, recebe todo o dano do ataque; contra projéteis, o Narrador pode pedir primeiro um teste de Raciocínio como no Energy Reflection; manobras mais poderosas - com custo em Força de Vontade – podem pedir mais de um sucesso para o Parry ser bem-sucedido; contra Manobras de Múltiplo Impacto, um teste deve ser feito a cada novo rolamento, a não ser por aquelas em que é preciso causar dano para empurrar e seguir batendo, nas quais o Parry as cancela imediatamente se o atacante for impedido de seguir se movendo; Parry bem-sucedido causa o dano do Maka Wara"

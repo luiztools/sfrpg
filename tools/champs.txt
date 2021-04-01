@@ -1,0 +1,64 @@
+﻿Regras
+A contagem de pontos da manobra deve ser igual ou menor que zero
+Nenhuma manobra pode gastar mais de 2Chi e 2 FdV
+Nenhuma manobra pode ter mod. Dano > +7
+Nenhuma manobra pode ter mod. Velocidade > +4
+Nenhuma manobra pode ter mod. Movimento > +3
+Nenhuma manobra pode ter mod. Dano < -3 (exceto as que possuem dano Nenhum ou Especial)
+Nenhuma manobra pode ter mod. Velocidade < y
+Nenhuma manobra pode ter mod. Movimento < y (exceto as que possuem movimento nenhum ou Especial)
+Nenhuma manobra pode ter hits > 3, exceto as baseadas em técnicas
+Nenhuma manobra pode ter requisito de uma técnica > 5
+Nenhuma manobra pode ter mais de 2 técnicas como requisito
+Nenhuma manobra pode ter mais de uma manobra como requisito
+Nenhuma manobra pode ter mais de x vantagens especiais
+Nenhuma manobra pode ter mais de x desvantagens
+Duas manobras diferentes não podem ter os mesmos modificadores e vantagens/desvantagens, mesmo que possua requisitos e custo diferentes
+
+Vantagens e Desvantagens
+Nenhum dano: -4
+Movimento nenhum: -4
+Movimento Um: -3
+Movimento Dois: -2
+Movimento Três: -1
+somente funciona no mesmo hexe: -1
+movimento somente linha reta: -1
+Foco como pré-requisito: -1 ou 0 se aumentar o custo da manobra em +1 Chi. Deve obrigatoriamente ter algum custo de Chi na manobra.
+Custo +1 Chi: -1
+Custo +1 FdV: -1
+Outra manobra como pré-requisito: -1 por cada Ponto de Poder mínimo para adquirir a outra manobra
+Técnica como pré-requisito: -1 por cada ponto de técnica necessário
+perda de renome -1 temporário: -1
+ganho de renome +1 temporário: 1
+Knockback: 1 por hexe no mesmo hit
+knockdown se não bloquear: 1
+Aérea: 0, obrigatoriamente deve ter o Jump como pré-requisito
+agachamento: 1
+não causa dano, mas combina com manobra básica: 1
+projétil com alcance da técnica ou atributo: 1, obrigatoriamente deve ter linha de visão reta
+Mod. Absorção +1: 1, obrigatoriamente deve ter Bloqueio como pré-requisito e técnica
+Mod. Dano +1: 1
+Mod. Velocidade +1: 1
+Mod. Movimento +1: 1
+Dois hits: 1
+Três hits, 2 danos: 1
+causa dano em mais 1 oponente (max 3): 1
+Três Hits, 3 danos: 2, deve obrigatoriamente ter custo de FdV na manobra
+projétil com alcance da técnica + atributo: 2, obrigatoriamente deve ter linha de visão reta
+Causa dano em todos oponentes ao redor: 2 ou 3, se a manobra também lhe causar efeitos especiais
+Hits baseado em técnica: 3, deve obrigatoriamente ter custo de Chi ou FdV na manobra
+ignora bloqueio: 3, custa só 2 se tiver apresamento como pré-requisito
+apresamento sustentado: 3
+interrupcao: 4
+
+Requisitos
+Técnica do dano 1 para até +3 de dano, depois +1 na técnica até dano +7, exceto Foco
+Esportes x até +3 movimento, depois +1 Esportes até movimento +3
+Foco mínimo de 1 para cada custo de Chi da Manobra
+
+Pontos de Poder mais barato
+Se a soma da experiência das técnicas + manobras do pré-requisito é menor ou igual a 3XP = Qualquer estilo 1
+menor ou igual a 6XP = estilo principal 1, Qualquer estilo 2
+menor ou igual a 9XP = estilo principal 1, secundario 2, Qualquer estilo 3
+menor ou igual a 12XP = estilo principal 1, secundario 2, terciario 3, Qualquer estilo 4
+menor ou igual a 15XP = estilo principal 1, secundario 2, terciario 3, quartenario 4, Qualquer estilo 5

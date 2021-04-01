@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Street Fighter RPG| Brasil - Mestre Takashi</title>
+    <meta charset="utf-8" />
+    <script src="http://www.sfrpg.com.br/tools/jquery.js" type="text/javascript"></script>
+    <script src="http://www.sfrpg.com.br/tools/scripts.js" type="text/javascript"></script>
+    <script src="http://www.sfrpg.com.br/tools/manobras.js" type="text/javascript"></script>
+    <link href="http://www.sfrpg.com.br/tools/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="divFicha" class="planilha">
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-7392286-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+
+        function MestreTakashi() {
+            var personagem = {
+                Nome: "Mestre Takashi",
+                Conceito: "Mestre Budista Zen",
+                Time: "nenhum",
+                Equipe: "nenhuma",
+                Jogador: "",
+                Cronica: "",
+                Assinatura: "Arqueia-se",
+                Escola: "",
+                Estilo: "Aikido",
+                Forca: 3,
+                Destreza: 4,
+                Vigor: 5,
+                Carisma: 3,
+                Manipulacao: 4,
+                Aparencia: 3,
+                Percepcao: 5,
+                Inteligencia: 3,
+                Raciocinio: 4,
+                Prontidao: 0,
+                Interrogatorio: 1,
+                Intimidacao: 0,
+                Perspicacia: 5,
+                Manha: 1,
+                Labia: 0,
+                NovosTalentos: [],
+                LutaCega: 3,
+                Conducao: 1,
+                Lideranca: 3,
+                Seguranca: 0,
+                Furtividade: 4,
+                Sobrevivencia: 0,
+                NovasPericias: [],
+                Arena: 4,
+                Computador: 0,
+                Investigacao: 0,
+                Medicina: 5,
+                Misterios: 4,
+                Estilos: 5,
+                NovosConhecimentos: [],
+                Antecedentes: [newCaracteristica("Sensei", 4), newCaracteristica("Aliados", 2), newCaracteristica("Fama", 2), newCaracteristica("Contatos", 2)],
+                Soco: 4,
+                Chute: 5,
+                Bloqueio: 5,
+                Apresamento: 6,
+                Esportes: 3,
+                Foco: 6,
+                NovasTecnicas: [],
+                Gloria: 1,
+                Honra: 10,
+                Posto: 0,
+                Chi: 9,
+                ForcaVontade: 8,
+                Saude: 16,
+                Divisao: 'Nenhuma',
+                ManobrasEspeciais: "Dim Mak, Air Throw, Slide Kick, Zen no Mind, Spinning Foot Sweep, Mind Reading, Deflecting Punch, Regeneration, Back Roll Throw, Kippup, San He, Chi Kun Healing, Improved Pin, Jump, Breakfall, Throw, Telephaty",
+                Combos: "Deflecting Punch para Back Roll Throw para Improved Pin (Dizzy); Roundhouse para Spinning Foot Sweep; San He para Jab para Fierce"
+            };
+            return personagem;
+        }
+
+        $(document).ready(function () {
+            var npc = MestreTakashi();
+
+            if (getParameterByName('format') === 'json')
+                $('#divFicha').html(JSON.stringify(npc));
+            else if (getParameterByName('format') === 'table')
+                $('#divFicha').html(carregarTabela(npc));
+            else
+                $('#divFicha').html(AutoGeradorP(npc));
+            $('#divFicha').show();
+        });
+    </script>
+</body>
+</html>

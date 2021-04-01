@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Street Fighter RPG| Brasil - A Coisa que não devia existir</title>
+    <meta charset="utf-8" />
+    <script src="http://www.sfrpg.com.br/tools/jquery.js" type="text/javascript"></script>
+    <script src="http://www.sfrpg.com.br/tools/scripts.js" type="text/javascript"></script>
+    <script src="http://www.sfrpg.com.br/tools/manobras.js" type="text/javascript"></script>
+    <link href="http://www.sfrpg.com.br/tools/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="divFicha" class="planilha">
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-7392286-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        function ACoisaQueNaoDeviaExistir() {
+            var personagem = {
+                Nome: "A Coisa Que Não Devia Existir",
+                Conceito: "Aberração",
+                Time: "Os Impronunciáveis",
+                Equipe: "nenhuma",
+                Jogador: "",
+                Cronica: "",
+                Assinatura: "Tekeli-Li! Tekeli-Li",
+                Escola: "desconhecida",
+                Estilo: "Sumô",
+                Forca: 6,
+                Destreza: 2,
+                Vigor: 7,
+                Carisma: 1,
+                Manipulacao: 2,
+                Aparencia: 1,
+                Percepcao: 3,
+                Inteligencia: 1,
+                Raciocinio: 2,
+                Prontidao: 0,
+                Interrogatorio: 0,
+                Intimidacao: 5,
+                Perspicacia: 0,
+                Manha: 1,
+                Labia: 0,
+                NovosTalentos: [],
+                LutaCega: 5,
+                Conducao: 0,
+                Lideranca: 0,
+                Seguranca: 0,
+                Furtividade: 0,
+                Sobrevivencia: 2,
+                NovasPericias: [],
+                Arena: 0,
+                Computador: 0,
+                Investigacao: 0,
+                Medicina: 0,
+                Misterios: 1,
+                Estilos: 0,
+                NovosConhecimentos: [],
+                Antecedentes: [newCaracteristica("Hibrido Animal", 5)],
+                Soco: 4,
+                Chute: 2,
+                Bloqueio: 3,
+                Apresamento: 5,
+                Esportes: 1,
+                Foco: 4,
+                NovasTecnicas: [],
+                Gloria: 7,
+                Honra: 0,
+                Posto: 6,
+                Chi: 5,
+                ForcaVontade: 6,
+                Saude: 20,
+                Divisao: "Estilo Livre",
+                ManobrasEspeciais: "Toughskin, San He, Bear Hug, Grappling Defense, Drain",
+                Combos: ""
+            };
+            return personagem;
+        }
+
+        $(document).ready(function () {
+            var npc = ACoisaQueNaoDeviaExistir();
+
+            if (getParameterByName('format') === 'json')
+                $('#divFicha').html(JSON.stringify(npc));
+            else if (getParameterByName('format') === 'table')
+                $('#divFicha').html(carregarTabela(npc));
+            else
+                $('#divFicha').html(AutoGeradorP(npc));
+            $('#divFicha').show();
+        });
+    </script>
+</body>
+</html>
