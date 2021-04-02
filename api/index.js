@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
 const maneuversRouter = require('./routes/maneuvers');
-const charactersRouter = require('./routes/characters');
 
 const app = express();
 
@@ -13,7 +12,6 @@ app.get('/health', (req, res, next) => {
 })
 
 app.use('/maneuvers', maneuversRouter);
-app.use('/characters', charactersRouter);
 
 app.use((error, req, res, next) => {
     console.error(error);
@@ -21,5 +19,7 @@ app.use((error, req, res, next) => {
 })
 
 app.listen(process.env.PORT, () => {
-    console.log(`Started at ${procrss.env.PORT}`);
+    console.log(`Started at ${process.env.PORT}`);
 });
+
+module.exports = app;

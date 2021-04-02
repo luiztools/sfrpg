@@ -1,0 +1,296 @@
+{
+    "Katar": {
+        "Tecnica": "Faca",
+        "ModVel": 0,
+        "ModDano": 1,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Bastão": {
+        "Tecnica": "Bastão",
+        "ModVel": 0,
+        "ModDano": 2,
+        "ModMov": "1",
+        "Sistema": "Duas Mãos"
+    },
+    "Chicote": {
+        "Tecnica": "Chicote",
+        "ModVel": -1,
+        "ModDano": 2,
+        "ModMov": "0",
+        "Sistema": "Alcance: 6 hexes"
+    },
+    "Chicote de Aço": {
+        "Tecnica": "Chicote",
+        "ModVel": -1,
+        "ModDano": 3,
+        "ModMov": "Nenhum",
+        "Sistema": "Alcance: 3 hexes"
+    },
+    "Corrente": {
+        "Tecnica": "Chicote",
+        "ModVel": 0,
+        "ModDano": 2,
+        "ModMov": "-2",
+        "Sistema": "Alcance: 2 hexes"
+    },
+    "Espada": {
+        "Tecnica": "Espada",
+        "ModVel": -1,
+        "ModDano": 4,
+        "ModMov": "0",
+        "Sistema": "Empunhadura: Variável"
+    },
+    "Faca": {
+        "Tecnica": "Faca",
+        "ModVel": 2,
+        "ModDano": 1,
+        "ModMov": "0",
+        "Sistema": "pode ser arremessada; ver descrição"
+    },
+    "Lança": {
+        "Tecnica": "Lança",
+        "ModVel": 0,
+        "ModDano": 3,
+        "ModMov": "1",
+        "Sistema": "Empunhadura: Variável"
+    },
+    "Kusari": {
+        "Tecnica": "Chicote",
+        "ModVel": 0,
+        "ModDano": 2,
+        "ModMov": "-1",
+        "Sistema": "Alcance: 2 hexes"
+    },
+    "Kusarigama": {
+        "Tecnica": "Chicote",
+        "ModVel": 0,
+        "ModDano": 3,
+        "ModMov": "-2",
+        "Sistema": "Alcance: 2 hexes"
+    },
+    "Machado Curto": {
+        "Tecnica": "Machado",
+        "ModVel": 1,
+        "ModDano": 2,
+        "ModMov": "0",
+        "Sistema": "pode ser arremessada; ver descrição"
+    },
+    "Naginata": {
+        "Tecnica": "Lança",
+        "ModVel": 0,
+        "ModDano": 4,
+        "ModMov": "0",
+        "Sistema": "Empunhadura: Duas Mãos"
+    },
+    "Nunchaku": {
+        "Tecnica": "Mangual",
+        "ModVel": 1,
+        "ModDano": 2,
+        "ModMov": "0",
+        "Sistema": "Empunhadura: Uma Mão"
+    },
+    "Katana": {
+        "Tecnica": "Espada",
+        "ModVel": 1,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": "Empunhadura: Variável"
+    },
+    "Garra": {
+        "Tecnica": "Garra",
+        "ModVel": 1,
+        "ModDano": 1,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Tonfa de Ferro": {
+        "Tecnica": "Bastão",
+        "ModVel": 0,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Kunai": {
+        "Tecnica": "Arremesso",
+        "ModVel": 1,
+        "ModDano": -1,
+        "ModMov": "-1",
+        "Sistema": "Alcance: Força + Arremesso."
+    },
+    "Espada Improvisada": {
+        "Tecnica": "Espada",
+        "ModVel": -2,
+        "ModDano": 3,
+        "ModMov": "-1",
+        "Sistema": ""
+    },
+    "Espada Larga": {
+        "Tecnica": "Espada",
+        "ModVel": -2,
+        "ModDano": 5,
+        "ModMov": "-1",
+        "Sistema": "Empunhadura: Duas Mãos."
+    },
+    "Bokken": {
+        "Tecnica": "Espada",
+        "ModVel": 1,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Shinai": {
+        "Tecnica": "Espada",
+        "ModVel": 1,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Espada Gancho": {
+        "Tecnica": "Espada",
+        "ModVel": 0,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": "ver descrição"
+    },
+    "Ninjato": {
+        "Tecnica": "Espada",
+        "ModVel": 1,
+        "ModDano": 2,
+        "ModMov": "1",
+        "Sistema": "Empunhadura: Uma Mão."
+    },
+    "Pata": {
+        "Tecnica": "Espada",
+        "ModVel": -2,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": "ver descrição"
+    },
+    "Rapier": {
+        "Tecnica": "Espada",
+        "ModVel": 2,
+        "ModDano": 1,
+        "ModMov": "1",
+        "Sistema": "Empunhadura: Uma Mão."
+    },
+    "Sabre": {
+        "Tecnica": "Espada",
+        "ModVel": 1,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Wakizashi": {
+        "Tecnica": "Faca",
+        "ModVel": 1,
+        "ModDano": 2,
+        "ModMov": "0",
+        "Sistema": "Empunhadura: Uma Mão."
+    },
+    "Bastão Improvisado": {
+        "Tecnica": "Bastão",
+        "ModVel": -1,
+        "ModDano": 1,
+        "ModMov": "-1",
+        "Sistema": ""
+    },
+    "Bo": {
+        "Tecnica": "Bastão",
+        "ModVel": 0,
+        "ModDano": 2,
+        "ModMov": "1",
+        "Sistema": ""
+    },
+    "Bastão Curto": {
+        "Tecnica": "Bastão",
+        "ModVel": 1,
+        "ModDano": 1,
+        "ModMov": "1",
+        "Sistema": ""
+    },
+    "Tonfa": {
+        "Tecnica": "Bastão",
+        "ModVel": 1,
+        "ModDano": 1,
+        "ModMov": "1",
+        "Sistema": ""
+    },
+    "Cacetete": {
+        "Tecnica": "Bastão",
+        "ModVel": 1,
+        "ModDano": 1,
+        "ModMov": "1",
+        "Sistema": ""
+    },
+    "Bagh Nakh": {
+        "Tecnica": "Faca",
+        "ModVel": 1,
+        "ModDano": 1,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Balisong": {
+        "Tecnica": "Faca",
+        "ModVel": 2,
+        "ModDano": 1,
+        "ModMov": "0",
+        "Sistema": "Empunhadura: Uma Mão."
+    },
+    "Canivete": {
+        "Tecnica": "Faca",
+        "ModVel": 2,
+        "ModDano": 2,
+        "ModMov": "0",
+        "Sistema": "Empunhadura: Uma Mão."
+    },
+    "Foice": {
+        "Tecnica": "Faca",
+        "ModVel": 0,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Faca de Combate": {
+        "Tecnica": "Faca",
+        "ModVel": 0,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Kris": {
+        "Tecnica": "Faca",
+        "ModVel": 2,
+        "ModDano": 3,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Navalha": {
+        "Tecnica": "Faca",
+        "ModVel": 2,
+        "ModDano": 2,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Faca Improvisada": {
+        "Tecnica": "Faca",
+        "ModVel": 2,
+        "ModDano": 2,
+        "ModMov": "0",
+        "Sistema": ""
+    },
+    "Sai": {
+        "Tecnica": "Faca",
+        "ModVel": 1,
+        "ModDano": 0,
+        "ModMov": "0",
+        "Sistema": "ver descrição"
+    },
+    "Shuriken": {
+        "Tecnica": "Arremesso",
+        "ModVel": 1,
+        "ModDano": -1,
+        "ModMov": "-1",
+        "Sistema": "ver descrição"
+    }
+}

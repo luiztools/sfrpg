@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router();
 const maneuversController = require('../controllers/maneuvers');
 
-app.get('/maneuvers', maneuversController.getAllManeuvers);
+router.get('/', maneuversController.getAllManeuvers);
 
-app.get('/maneuvers/techniques/:technique', maneuversController.getManeuversByTechnique);
+router.get('/techniques/:tech', maneuversController.getTechManeuvers);
 
-app.get('/maneuvers/styles/:style', maneuversController.getManeuversByTechnique);
+router.get('/search/:text', maneuversController.searchManeuvers);
+
+router.get('/:name', maneuversController.getManeuver);
 
 module.exports = router;
