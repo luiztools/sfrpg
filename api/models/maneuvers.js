@@ -20,12 +20,14 @@ function getSources(source) {
 function getTech(tech) {
     tech = tech.toLowerCase();
 
-    if (tech === 'soco') return 'Punch';
-    if (tech === 'chute') return 'Kick';
-    if (tech === 'apresamento') return 'Grab';
-    if (tech === 'bloqueio') return 'Block';
-    if (tech === 'foco') return 'Focus';
-    return tech;
+    switch (tech) {
+        case 'soco': return 'Punch';
+        case 'chute': return 'Kick';
+        case 'apresamento': return 'Grab';
+        case 'bloqueio': return 'Block';
+        case 'foco': return 'Focus';
+        default: return tech;
+    }
 }
 
 function getAllManeuvers(source) {
