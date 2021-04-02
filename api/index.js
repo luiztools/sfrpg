@@ -12,6 +12,7 @@ app.get('/health', (req, res, next) => {
 })
 
 app.use('/maneuvers', maneuversRouter);
+app.use('/manobras', maneuversRouter);
 
 app.use((error, req, res, next) => {
     console.error(error);

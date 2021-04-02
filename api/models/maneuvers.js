@@ -1,22 +1,30 @@
-const maneuvers = require('../data/br/maneuvers.json');
+const maneuvers = require('../data/maneuvers.json');
 
 function getSources(source) {
     const officials = ["Core", "Players", "Contenders", "Perfect"];
     const fanmade = ["Shotokan"];
+    source = source ? source.toLowerCase() : '';
 
-    if (!source || source.toLowerCase().startsWith('all')) return [...officials, ...fanmade];
-    if (source.toLowerCase().startsWith('official')) return officials;
-    if (source.toLowerCase().startsWith('fan')) return fanmade;
+    if (!source || source.startsWith('all')
+        || source.startsWith('todos')) return [...officials, ...fanmade];
+
+    if (source.startsWith('official')
+        || source.startsWith('oficia')) return officials;
+
+    if (source.startsWith('fan')
+        || source.startsWith('fã')) return fanmade;
 
     return source;
 }
 
 function getTech(tech) {
-    if (tech.toLowerCase() === 'soco') return 'Punch';
-    if (tech.toLowerCase() === 'chute') return 'Kick';
-    if (tech.toLowerCase() === 'apresamento') return 'Grab';
-    if (tech.toLowerCase() === 'bloqueio') return 'Block';
-    if (tech.toLowerCase() === 'foco') return 'Focus';
+    tech = tech.toLowerCase();
+
+    if (tech === 'soco') return 'Punch';
+    if (tech === 'chute') return 'Kick';
+    if (tech === 'apresamento') return 'Grab';
+    if (tech === 'bloqueio') return 'Block';
+    if (tech === 'foco') return 'Focus';
     return tech;
 }
 
