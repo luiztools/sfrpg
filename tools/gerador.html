@@ -1,12 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
+
 <head>
     <title>Street Fighter RPG Brasil | Gerador de Personagem</title>
+    <meta charset="utf-8">
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
-    <script src="jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="manobras.js" type="text/javascript"></script>
     <script src="scripts.js" type="text/javascript"></script>
 </head>
+
 <body>
     <div id="divFicha" class="planilha">
     </div>
@@ -17,7 +20,7 @@
             </tr>
             <tr>
                 <td rowspan="37" class="Red" width="5%"></td>
-                <td align="center" colspan="6">
+                <td class="center" colspan="6">
                     <img alt="Street Fighter" src="sheet-img/logo.png" />
                 </td>
                 <td rowspan="37" class="Red" width="5%"></td>
@@ -84,19 +87,19 @@
             </tr>
             <tr>
                 <td class="Red" colspan="2" width="33%" height="1px"></td>
-                <td class="Red" colspan="2" width="33%" align="center">
+                <td class="Red center" colspan="2" width="33%">
                     <img alt="Atributos" src="sheet-img/sfattributes.jpg" />
                 </td>
                 <td class="Red" colspan="2" width="33%"></td>
             </tr>
             <tr>
-                <td align="center" colspan="2">
-                    <img alt="FÌsicos" src="sheet-img/sfphysical.jpg" />
+                <td class="center" colspan="2">
+                    <img alt="FÔøΩsicos" src="sheet-img/sfphysical.jpg" />
                 </td>
-                <td align="center" colspan="2">
+                <td class="center" colspan="2">
                     <img alt="Sociais" src="sheet-img/sfsocial.jpg" />
                 </td>
-                <td align="center" colspan="2">
+                <td class="center" colspan="2">
                     <img alt="Mentais" src="sheet-img/sfmental.jpg" />
                 </td>
             </tr>
@@ -243,19 +246,19 @@
             </tr>
             <tr>
                 <td class="Red" colspan="2"></td>
-                <td width="107" class="Red" colspan="2" align="center">
+                <td width="107" class="Red center" colspan="2">
                     <img alt="Habilidades" src="sheet-img/sfabilities.jpg" />
                 </td>
                 <td class="Red" colspan="2"></td>
             </tr>
             <tr>
-                <td align="center" colspan="2">
+                <td class="center" colspan="2">
                     <img alt="Talentos" src="sheet-img/sftalents.jpg" />
                 </td>
-                <td align="center" colspan="2">
-                    <img alt="PerÌcias" src="sheet-img/sfskills.jpg" />
+                <td class="center" colspan="2">
+                    <img alt="Per√≠cias" src="sheet-img/sfskills.jpg" />
                 </td>
-                <td align="center" colspan="2">
+                <td class="center" colspan="2">
                     <img alt="Conhecimentos" src="sheet-img/sfknowledges.jpg" />
                 </td>
             </tr>
@@ -276,7 +279,7 @@
                     </select>
                 </td>
                 <td>
-                    Luta ‡s Cegas
+                    Luta √†s Cegas
                 </td>
                 <td>
                     <select id="ddlLutaCega">
@@ -690,13 +693,13 @@
                 <td class="Red" colspan="3"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center">
+                <td colspan="2" class="center">
                     <img alt="Antecedentes" src="sheet-img/sfbackgrounds.jpg" />
                 </td>
-                <td colspan="2" align="center">
-                    <img alt="TÈcnicas" src="sheet-img/sftechniques.jpg" />
+                <td colspan="2" class="center">
+                    <img alt="T√©cnicas" src="sheet-img/sftechniques.jpg" />
                 </td>
-                <td colspan="2" align="center" class="leftRed">
+                <td colspan="2" class="center" class="leftRed">
                     <img alt="Manobras especiais" src="sheet-img/sfspecialmaneuvers.jpg" />
                 </td>
             </tr>
@@ -732,7 +735,8 @@
                     </select>
                 </td>
                 <td rowspan="8" colspan="2" class="leftRed">
-                    <textarea id="txtManobrasEspeciais" style="width:94%;height:100%" rows="11">separe as manobras com ','</textarea>
+                    <textarea id="txtManobrasEspeciais" style="width:94%;height:100%"
+                        rows="11">separe as manobras com ','</textarea>
                 </td>
             </tr>
             <tr>
@@ -963,7 +967,7 @@
                 <td class="Red" colspan="4" style="height: 20px;"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center">
+                <td colspan="2" class="center">
                     <img alt="Renome" src="sheet-img/sfrenown.jpg" />
                 </td>
                 <td colspan="2"></td>
@@ -973,10 +977,10 @@
             </tr>
             <tr>
                 <td>
-                    <font color="Black" face="Arial Black, Arial" size="2">Gl&oacute;ria: </font>
+                    <span class="arialBlack">Gl&oacute;ria: </span>
                 </td>
                 <td>
-                    <select id="ddlGoria">
+                    <select id="ddlGloria">
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -1013,7 +1017,7 @@
             </tr>
             <tr>
                 <td>
-                    <font color="Black" face="Arial Black, Arial" size="2">Honra: </font>
+                    <span class="arialBlack">Honra: </span>
                 </td>
                 <td>
                     <select id="ddlHonra">
@@ -1031,7 +1035,7 @@
                     </select>
                 </td>
                 <td>
-                    <img alt="ForÁa de Vontade" src="sheet-img/sfwillpower.jpg" />:
+                    <img alt="For√ßa de Vontade" src="sheet-img/sfwillpower.jpg" />:
                 </td>
                 <td>
                     <select id="ddlForcaVontade">
@@ -1050,7 +1054,7 @@
             </tr>
             <tr>
                 <td>
-                    <font color="Black" face="Arial Black, Arial" size="2">Divis&atilde;o: </font>
+                    <span class="arialBlack">Divis&atilde;o: </span>
                 </td>
                 <td>
                     <select id="ddlDivisao">
@@ -1062,7 +1066,7 @@
                     </select>
                 </td>
                 <td>
-                    <img alt="Sa˙de" src="sheet-img/sfhealth.jpg" />:
+                    <img alt="Sa√∫de" src="sheet-img/sfhealth.jpg" />:
                 </td>
                 <td>
                     <select id="ddlSaude">
@@ -1087,7 +1091,7 @@
             </tr>
             <tr>
                 <td>
-                    <font color="Black" face="Arial Black, Arial" size="2">Posto: </font>
+                    <span class="arialBlack">Posto: </span>
                 </td>
                 <td>
                     <select id="ddlPosto">
@@ -1110,12 +1114,28 @@
                 <td colspan="8" class="Red"></td>
             </tr>
         </table>
-        <center style="margin-top: 20px">
+        <span class="center" style="margin-top: 20px">
             <input type="button" id="btnGerarPlanilha" value="Gerar Personagem" />
             <input type="button" id="btnGerarManobras" value="Gerar Manobras" />
             <input type="button" id="btnGerarJSON" value="Gerar JSON" />
-        </center>
+        </span>
     </div>
-    <center style="margin-top: 20px">V1.0 de 27/08/2016. Originalmente desenvolvido por Matt Meade (<a href="http://www.sfrpg.com" target="_blank">SFRPG.com</a>). Nova vers„o por Luiz Fernando Jr (<a href="http://www.sfrpg.com.br" target="_blank">sfrpg.com.br</a>) com contribuiÁ„o de Eric Musashi (<a href="http://www.sfrpg.com/shotokan" target="_blank">Shotokan RPG</a>)</center>
+    <span style="margin-top: 20px">V1.0 de 27/08/2016. Originalmente desenvolvido por Matt Meade (<a
+            href="http://www.sfrpg.com" target="_blank">SFRPG.com</a>). Nova vers√£o por Luiz Fernando Jr (<a
+            href="http://www.sfrpg.com.br" target="_blank">sfrpg.com.br</a>) com contribui√ß√£o de Eric Musashi (<a
+            href="http://www.sfrpg.com/shotokan" target="_blank">Shotokan RPG</a>)</span>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-7392286-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </body>
+
 </html>

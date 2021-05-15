@@ -603,7 +603,7 @@ function CarregarEdicao(nome) {
     //renome
     $('#ddlDivisao').val(dic["Divisao"]);
     $('#ddlPosto').val(dic["Posto"]);
-    $('#ddlGoria').val(dic["Gloria"]);
+    $('#ddlGloria').val(dic["Gloria"]);
     $('#ddlHonra').val(dic["Honra"]);
     $('#ddlSaude').val(dic["Saude"]);
     $('#ddlChi').val(dic["Chi"]);
@@ -754,7 +754,7 @@ function carregarPersonagem() {
     personagem.NovasTecnicas = tecnicas;
 
     //renome
-    personagem.Gloria = parseInt($('#ddlGoria').val());
+    personagem.Gloria = parseInt($('#ddlGloria').val());
     personagem.Honra = parseInt($('#ddlHonra').val());
     personagem.Posto = parseInt($('#ddlPosto').val());
     personagem.Chi = parseInt($('#ddlChi').val());
