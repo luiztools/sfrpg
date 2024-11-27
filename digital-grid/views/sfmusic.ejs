@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<script>
+    let audio;
+    function playAudio(name, loop = false) {
+        if(audio) {
+            audio.pause();
+            audio.currentTime = 0;
+            audio = null;
+            return;
+        }
+
+        audio = new Audio("/audios/" + name + ".mp3");
+        audio.loop = loop;
+        audio.play();
+    }
+    function playAudioSF(name, loop = false) {
+        if(audio) {
+            audio.pause();
+            audio.currentTime = 0;
+            audio = null;
+            return;
+        }
+
+        audio = new Audio("/audios/sf/" + name);
+        audio.loop = loop;
+        audio.play();
+    }
+</script>
+
+<body>
+    <h1>Street Fighter</h1>
+    <%
+    for(let i=0; i < files.length; i++){%>
+        <button onclick="playAudioSF('<%= files[i] %>', true)"><%= files[i].replace(".mp3", "") %></button>
+    <% }
+    %>
+    <h1>Arenas</h1>
+    <button onclick="playAudio('sfrpg/blanka-sf2', true)">Blanka SF2</button> 
+    <button onclick="playAudio('sfrpg/zangief-sf2', true)">Zangief SF2</button> 
+    <button onclick="playAudio('sfrpg/balrog-sf2', true)">Balrog SF2</button> 
+    <button onclick="playAudio('sfrpg/sagat-sf2', true)">Sagat SF2</button> 
+    <button onclick="playAudio('sfrpg/sagat-end-sf2', true)">Sagat End SF2</button> 
+    <button onclick="playAudio('sfrpg/sagat-sf4', true)">Sagat SF4</button> 
+    <h1>Cities</h1>
+    <button onclick="playAudio('market', true)">Market</button> 
+    <h1>Bosses</h1>
+    <button onclick="playAudio('sfrpg/yu-yu-battle-time', true)">Yu Yu Battle Time</button> 
+    <button onclick="playAudio('sfrpg/seth-round-1', true)">Seth Round 1</button> 
+    <button onclick="playAudio('sfrpg/seth-round-2', true)">Seth Round 2</button> 
+    <button onclick="playAudio('sfrpg/tgs08', true)">TGS08 Good Boss</button> 
+    <button onclick="playAudio('sfrpg/shop-tgs08', true)">Shop08 Good Boss</button> 
+    <button onclick="playAudio('sfrpg/staff-tgs08', true)">Staff08 Good Boss</button> 
+    <button onclick="playAudio('sfrpg/akuma-vs-ryu', true)">Akuma vs Ryu</button> 
+    <h1>Maps</h1>
+    <button onclick="playAudio('ancient-temple', true)">Ancient Temple</button> 
+    <h1>Misc</h1>
+    <button onclick="playAudio('sfrpg/end-battle-sf2', true)">End Battle SF2</button> 
+    <button onclick="playAudio('sfrpg/end-tournament-sf2', true)">End Tournament SF2</button> 
+    <button onclick="playAudio('sfrpg/game-over-sf2', true)">Game Over SF2</button> 
+    <button onclick="playAudio('sfrpg/game-over-sf4', true)">Game Over SF4</button> 
+    <button onclick="playAudio('sfrpg/sf4-theme', true)">SF4 Theme</button> 
+    <button onclick="playAudio('sfrpg/victory-sf2', true)">Victory SF2</button> 
+    <button onclick="playAudio('sfrpg/congratulations', true)">Congratulations</button> 
+    <button onclick="playAudio('sfrpg/revival', true)">Revival</button> 
+    <button onclick="playAudio('sfrpg/rival', true)">Rival</button> 
+    <button onclick="playAudio('sfrpg/sf4-intro', true)">Intro SF4</button> 
+    <button onclick="playAudio('sfrpg/sf2-select-char', true)">Select Char SF2</button> 
+    <button onclick="playAudio('sfrpg/sf4-select-char', true)">Select Char SF4</button> 
+    <button onclick="playAudio('sfrpg/sf4-select-mode', true)">Select Mode SF4</button> 
+    <button onclick="playAudio('sfrpg/sf4-select-player', true)">Select Player SF4</button> 
+    <button onclick="playAudio('sfrpg/vs-screen-sf4', true)">VS Screen SF4</button> 
+    <button onclick="playAudio('sfrpg/vs-screen-sf2', true)">VS Screen SF2</button> 
+    <button onclick="playAudio('sfrpg/yu-yu-sad', true)">Yu Yu Sad</button> 
+    <button onclick="playAudio('sfrpg/yu-yu-sadness', true)">Yu Yu Sadness</button> 
+    <button onclick="playAudio('sfrpg/treinando-sf2', true)">Treinando SF2</button> 
+</body>
+</html> 

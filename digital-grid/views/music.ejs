@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<script>
+    let audio;
+    function playAudio(name, loop = false) {
+        if(audio) {
+            audio.pause();
+            audio.currentTime = 0;
+            audio = null;
+            return;
+        }
+
+        audio = new Audio("/audios/" + name + ".mp3");
+        audio.loop = loop;
+        audio.play();
+    }
+</script>
+
+<body>
+    <h1>Cena 1: Valkaria</h1>
+    <button onclick="playAudio('market', true)">Market</button> 
+    <h1>Cena 2a: Viajando de Barco</h1>
+    <button onclick="playAudio('sailor-city', true)">Sailor City</button> 
+    <h1>Cena 2b: Viajando de Carroça</h1>
+    <button onclick="playAudio('travel', true)">Travel</button> 
+    <h1>Cena 3: Vila Marlim</h1>
+    <button onclick="playAudio('reggae', true)">Reggae</button> 
+    <h1>Cena 4: Fundo do Mar</h1>
+    <button onclick="playAudio('deep-ocean', true)">Deep Ocean</button> 
+    <h1>Cena 5: Templo Marinho</h1>
+    <button onclick="playAudio('dungeon-calm', true)">Dungeon Calm</button> 
+    <h1>Maps</h1>
+    <button onclick="playAudio('ancient-temple', true)">Ancient Temple</button> 
+    <button onclick="playAudio('dungeon-depths', true)">Dungeon Depths</button> 
+    <button onclick="playAudio('dungeon-depth2', true)">Dungeon Depth 2</button> 
+    <button onclick="playAudio('tense', true)">Tense</button> 
+    <button onclick="playAudio('tense2', true)">Tense 2</button> 
+    <button onclick="playAudio('trouble', true)">Trouble</button> 
+    <button onclick="playAudio('trouble2', true)">Trouble 2</button> 
+    <button onclick="playAudio('tavern', true)">Tavern</button> 
+    <button onclick="playAudio('destiny', true)">Destiny</button> 
+    <button onclick="playAudio('dragon-lair', true)">Dragon Lair</button> 
+    <button onclick="playAudio('mystery', true)">Mystery</button> 
+    <button onclick="playAudio('relic-uncovered', true)">Relic Uncovered</button> 
+    <button onclick="playAudio('ruins', true)">Ruins</button> 
+    <button onclick="playAudio('secret-chamber', true)">Secret Chamber</button> 
+    <button onclick="playAudio('stealth', true)">Stealth</button> 
+    <button onclick="playAudio('wizard-school', true)">Wizard School</button> 
+    <button onclick="playAudio('castle', true)">Castle</button> 
+    <button onclick="playAudio('city-king', true)">City King</button> 
+    <button onclick="playAudio('dungeon-castle', true)">Dungeon Castle</button> 
+    <button onclick="playAudio('elven-forest', true)">Elven Forest</button> 
+    <button onclick="playAudio('elven-temple', true)">Elven Temple</button> 
+    <button onclick="playAudio('minas-tirith', true)">Minas Tirith</button> 
+    <button onclick="playAudio('swamp', true)">Swamp</button> 
+    <button onclick="playAudio('hogwarts', true)">Hogwarts</button> 
+    <h1>Battles</h1>
+    <button onclick="playAudio('sky-battle', true)">Sky Battle</button> 
+    <button onclick="playAudio('ambush', true)">Ambush</button> 
+    <button onclick="playAudio('ambush2', true)">Ambush 2</button> 
+    <button onclick="playAudio('beast-fight', true)">Beast Fight</button> 
+    <button onclick="playAudio('hero-fight', true)">Hero Fight</button> 
+    <button onclick="playAudio('skirmish', true)">Skirmish</button> 
+    <button onclick="playAudio('undead-army', true)">Undead Army</button> 
+    <button onclick="playAudio('battle-horse', true)">Horse</button> 
+    <button onclick="playAudio('battle-lotr', true)">LotR</button> 
+    <button onclick="playAudio('battle-minas-morgul', true)">Minas Morgul</button> 
+    <h1>Bosses</h1>
+    <button onclick="playAudio('boss-organ', true)">Organ</button> 
+    <button onclick="playAudio('final-confrontation', true)">Final Confrontation</button> 
+    <button onclick="playAudio('battle-boss-lair', true)">Battle Boss Lair</button>
+    <button onclick="playAudio('end-of-all-things', true)">End of all Things</button>  
+    <h1>Misc</h1>
+    <button onclick="playAudio('victory', false)">Victory</button> 
+    <!-- <button onclick="playAudio('bomb', false)">Bomb</button>  -->
+    <!-- <button onclick="playAudio('baby-doge', false)">Baby Doge</button>  -->
+    <button onclick="playAudio('cooking', false)">Link Cooking</button> 
+    <button onclick="playAudio('chant', true)">Chant</button> 
+    <button onclick="playAudio('bard', true)">Bard</button> 
+    <button onclick="playAudio('preparing-to-war', true)">Preparing to War</button> 
+    <button onclick="playAudio('preparing-to-war2', true)">Preparing to War 2</button> 
+    <button onclick="playAudio('storytelling', true)">Storytelling</button> 
+    <button onclick="playAudio('toasty', false)">Toasty</button> 
+    <button onclick="playAudio('wololo', false)">Wololo</button> 
+    <button onclick="playAudio('chariots-of-fire', false)">Chariots of Fire</button> 
+    <button onclick="playAudio('omobuga-feidital', false)">Omobuga Feidital</button> 
+    <button onclick="playAudio('arrow-shot', false)">Arrow Shot</button> 
+    <button onclick="playAudio('arrow-miss', false)">Arrow Miss</button> 
+    <button onclick="playAudio('wilhem-scream', false)">Wilhem Scream</button> 
+    <button onclick="playAudio('sword-draw', false)">Sword Draw</button> 
+    <button onclick="playAudio('sword-cut', false)">Sword Cut</button> 
+    <button onclick="playAudio('axe-cut', false)">Axe Cut</button> 
+</body>
+</html> 

@@ -1,4 +1,216 @@
-﻿function getParameterByName(name) {
+﻿function count(str, search) {
+    if(!str || !search) return 0;
+    return (str.match(/search/g) || []).length;
+}
+
+//XP para atributos e técnicas (current x Y)
+function getXP(att, mul1, mul2) {
+    if (att < 1) return 0;
+
+    let xp = 0, i = 1;
+    do {
+        if (i <= 5)
+            xp += i * mul1;
+        else
+            xp += i * mul2;
+        i++;
+    } while (i <= att);
+
+    return xp;
+}
+
+//XP para chi e Fdv
+function getXP2(att) {
+    if (att < 1) return 0;
+
+    let xp = 0, i = 1;
+    do {
+        xp += i;
+        i++;
+    } while (i < att);
+
+    return xp;
+}
+
+function calcPC(char) {
+    /**
+     * Físicos, Int e Rac = soma e desconta 15
+     * Técnicas = soma e desconta 8
+     * Manobras = soma modificadores Dano, Vel e Movimento
+     * Combos = soma os 'para', 'x2', 'x3' e os dizzy
+     * FdV e Chi = soma e desconta 7
+     * Saúde = desconta 10
+     * Pontos Bônus = soma 3 (assumindo que vai tudo pra atributo ou técnica)
+     * */
+
+    //Físicos + 2 Mentais - 5 naturais - 7 Criação - 3 Bônus (gastando 15 pontos)
+    const attributes = [char.Forca, char.Destreza, char.Vigor, char.Inteligencia, char.Raciocinio];
+    const attrPC = attributes.reduce((a, b) => a + b) - 15;
+
+    const techniques = [char.Soco, char.Chute, char.Bloqueio, char.Apresamento, char.Esportes, char.Foco];
+    if (char.NovasTecnicas && char.NovasTecnicas.length)
+        char.NovasTecnicas.map(nt => techniques.push(nt.Valor));
+
+    const techPC = techniques.reduce((a, b) => a + b) - 8;
+
+    const manobrasEspeciais = char.ManobrasEspeciais.split(",").filter(m => m && m.trim());
+
+    const manPC = manobrasEspeciais.map(m => getPCManobra(m)).reduce((a, b) => a + b);
+    const comboPC = count(char.Combos, " para ") + count(char.Combos, "(Dizzy)") + count(char.Combos, "2x") + (count(char.Combos, "3x") * 2);
+    const fdvChiPC = char.ForcaVontade + char.Chi - 7;
+    const saudePC = char.Saude - 10;
+    const bonus = 3;
+
+    //antecedentes únicos que impactam em combate
+    const backgrounds = /Híbrido Animal|Cibernético|Elemental|Psycho Power|Satsui no Hadou|Paranormal/i;
+    const uniqueBacks = char.Antecedentes.filter(an => backgrounds.test(an.Nome)) | [];
+    const backgroundPC = uniqueBacks.length ? uniqueBacks.map(an => an.Valor).reduce((a, b) => a + b) : 0;
+
+    char.PC = attrPC + techPC + manPC + comboPC + fdvChiPC + saudePC + backgroundPC + bonus;
+    return char;
+}
+
+function adjustGames(game) {
+    if (!game) return "";
+    game = game.toUpperCase();
+    if (game === "SM1" || game === "SM2") return "SM";
+    if (game === "FF1" || game === "SF1") return "SF";
+    if (game === "SFZ2" || game === "SFZ") return "SFZ";
+    if (game === "FF2" || game === "SFZ3") return "SF2";
+    if (game === "FF3") return "SF4";
+    return game;
+}
+
+function getSeq(game) {
+    switch (game) {
+        case 'SM': return 1;
+        case 'SF': return 2;
+        case 'SFZ': return 3;
+        case 'SF4': return 6;
+        case 'SF5': return 7;
+        case 'SF3': return 9;
+        case 'SF6': return 10;
+        case 'FFSW': return 11;
+        default: return 5;//SF2
+    }
+}
+
+function somaTecnicas(char) {
+    let total = char.Soco + char.Chute + char.Bloqueio + char.Apresamento + char.Esportes + char.Foco;
+
+    if (char.NovasTecnicas)
+        total += char.NovasTecnicas.map(nt => nt.Valor).reduce((a, b) => a + b);
+
+    return total;
+}
+
+function adjustPC(char, from, to) {
+    /**
+     * Games	            Ano	        Age	        Escala PC Seq
+        SM1 / SM2	        1981-1982	PASSADO-2	-4          1
+        SF1 / FF1	        1987	    PASSADO-1	-3          2
+        SFZ1 / SFZ2	        1987-1990	PASSADO	    -2          3
+        SFZ3 / SF2 / FF2	1991 - 1993	PRESENTE	0           5
+        SF4 / FF3	        1994 - 1995	PRESENTE+1	1           6
+        SF5	                1997	    PRESENTE+2	2           7
+        SF3	                1998-1999	FUTURO	    4           9
+        SF6	                2000-2005	FUTURO+1	5           10
+        FFSW	            2006	    FUTURO+2	6           11
+     */
+
+    from = adjustGames(from);
+    to = adjustGames(to);
+
+    if (!from || !to || from === to) return calcPC(char);
+
+    const fromSeq = getSeq(from);
+    const toSeq = getSeq(to);
+
+    let adjustFactor = 0;
+    if (fromSeq < toSeq)
+        adjustFactor += toSeq - fromSeq;
+    else
+        adjustFactor -= toSeq - fromSeq;
+
+    //ajuste tecnicas
+    if (somaTecnicas(char) > 8) {//minimo 8 em técnicas
+        const techniques = ['Soco', 'Chute', 'Bloqueio', 'Apresamento', 'Esportes', 'Foco'];
+        if (char.NovasTecnicas) char.NovasTecnicas.map(nt => techniques.push(nt.Nome));
+
+        if (char.Estilo = "Boxe") techniques.splice(techniques.findIndex("Chute"), 1);//remove chute no boxe
+
+        for (let i = 0; i < Math.abs(adjustFactor); i++) {
+            techniques.map(tc => {
+                if (char[tc] >= 8)
+                    techniques.splice(techniques.findIndex(tc), 1);//remove tecnicas que estão no máximo
+                else if(char[tc] <= 0)
+                    techniques.splice(techniques.findIndex(tc), 1)//remove tecnicas que estão no mínimo
+            })
+
+            //TODO: adicionar exceção de soco no boxe, que o mínimo é 1
+            //TODO: ajustar esta função para que seja usada em atributos e habilidades
+            //TODO: depois da revisão de técnicas, tem de revisar manobras sem pré-req
+            //TODO: depois da revisão de manobras, tem de revisar combos sem manobras
+            //TODO: adicionar ajuste de antecedentes
+
+
+            const techIndex = Math.floor(Math.random() * techniques.length);
+            if (adjustFactor > 0)
+                char[techniques[techIndex]] += 1;
+            else
+                char[techniques[techIndex]] -= 1;
+
+            if (somaTecnicas(char) === 8) break;//se chegar no mínimo, cai fora
+        }
+    }
+
+    //ajuste gloria
+    char.Gloria += adjustFactor;
+    if (char.Gloria < 1) char.Gloria = 1;
+    else if (char.Gloria > 10) char.Gloria = 10;
+
+    //ajuste honra
+    if (char.Honra > 0) {//desonrados nunca tiveram ou terão honra
+        if (adjustFactor > 0)
+            char.Honra += adjustFactor;
+        else {
+            if (char.Honra - Math.abs(adjustFactor) >= 3)
+                char.Honra -= Math.abs(adjustFactor);
+        }
+        if (char.Honra < 1) char.Honra = 1;
+        else if (char.Honra > 10) char.Honra = 10;
+    }
+
+    //ajuste posto
+    char.Posto += adjustFactor;
+    if (char.Posto < 1) char.Posto = 1;
+    else if (char.Posto > 10) char.Posto = 10;
+
+    //ajuste de chi
+    if (adjustFactor > 0)
+        char.Chi += adjustFactor;
+    else {
+        if (char.Chi - Math.abs(adjustFactor) >= 3)
+            char.Chi -= Math.abs(adjustFactor);
+    }
+    if (char.Chi > 10) char.Chi = 10;
+
+    //ajuste de fdv
+    if (adjustFactor > 0)
+        char.ForcaVontade += adjustFactor;
+    else {
+        if (char.ForcaVontade - Math.abs(adjustFactor) >= 3)
+            char.ForcaVontade -= Math.abs(adjustFactor);
+    }
+    if (char.ForcaVontade > 10) char.ForcaVontade = 10;
+
+    //ajuste de saúde
+    char.Saude += adjustFactor * 2;
+    if (char.Saude > 20) char.Saude = 20;
+    else if (char.Saude < 10) char.Saude = 10;
+}
+
+function getParameterByName(name) {
     url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -36,16 +248,19 @@ function GeraHtmlLink(titulo) {
 }
 
 function GerarHtmlManobrasEspeciais(manobras) {
-    var retorno = "";
+    if (!manobras) return "";
+
+    let retorno = "";
     manobras = manobras.replace(new RegExp("<br\s?/?>", 'g'), "#");
-    var linhas = manobras.split('#');
-    var colunas = [];
+
+    const linhas = manobras.split('#');
+    let colunas = [];
 
     for (var x = 0; x < linhas.length; x++) {
         var s = linhas[x];
         colunas = s.split(',');
-        for (var y = 0; y < colunas.length; y++){
-            var s2 = colunas[y];
+        for (let y = 0; y < colunas.length; y++) {
+            const s2 = colunas[y];
             if (s2.trim().length > 0)
                 retorno += GeraHtmlLink(s2) + ",";
         }
@@ -56,7 +271,7 @@ function GerarHtmlManobrasEspeciais(manobras) {
 }
 
 function GeraLinkValido(titulo) {
-    if(!titulo) return "#";
+    if (!titulo) return "#";
     titulo = titulo + "";
 
     //minimizando tudo
@@ -93,11 +308,11 @@ function FontPadrao(s) {
 }
 
 function AutoGeradorA(nome, jogador, cronica, estilo, escola, equipe, time, conceito, assinatura, forca, destreza, vigor, carisma, manipulacao,
- aparencia, percepcao, inteligencia, raciocinio, prontidao, interrogacao, intimidacao, perspicacia, manha, labia, lutacega, conducao,
-  lideranca, seguranca, furtividade, sobrevivencia, arena, computador, investigacao, medicina, misterios, estilos, nomeAnt1, valorAnt1,
-   nomeAnt2, valorAnt2, nomeAnt3, valorAnt3, nomeAnt4, valorAnt4, nomeAnt5, valorAnt5, nomeAnt6, valorAnt6, nomeAnt7, valorAnt7, nomeAnt8,
+    aparencia, percepcao, inteligencia, raciocinio, prontidao, interrogacao, intimidacao, perspicacia, manha, labia, lutacega, conducao,
+    lideranca, seguranca, furtividade, sobrevivencia, arena, computador, investigacao, medicina, misterios, estilos, nomeAnt1, valorAnt1,
+    nomeAnt2, valorAnt2, nomeAnt3, valorAnt3, nomeAnt4, valorAnt4, nomeAnt5, valorAnt5, nomeAnt6, valorAnt6, nomeAnt7, valorAnt7, nomeAnt8,
     valorAnt8, nomeAnt9, valorAnt9, gloria, honra, divisao, posto, vitorias, derrotas, empates, KOs, soco, chute, bloqueio, apresamento
-, esportes, foco, chi, fdv, saude, especiais, combos, divisaoFormal) {
+    , esportes, foco, chi, fdv, saude, especiais, combos, divisaoFormal) {
     var antecedentes = [];
     if (nomeAnt1 != '') { antecedentes[0] = newCaracteristica(nomeAnt1, valorAnt1); }
     if (nomeAnt2 != '') { antecedentes[1] = newCaracteristica(nomeAnt2, valorAnt2); }
@@ -178,7 +393,7 @@ function AutoGeradorP(p) {
         p.Intimidacao, p.Perspicacia, p.Manha, p.Labia, p.LutaCega, p.Conducao, p.Lideranca, p.Seguranca, p.Furtividade, p.Sobrevivencia,
         p.Arena, p.Computador, p.Investigacao, p.Medicina, p.Misterios, p.Estilos, p.Antecedentes, p.Gloria, p.Honra,
         p.Divisao, p.Posto, p.Soco, p.Chute, p.Bloqueio, p.Apresamento, p.Esportes, p.Foco, p.Chi, p.ForcaVontade, p.Saude,
-        p.ManobrasEspeciais, p.Combos, p.NovasTecnicas, p.NovosTalentos, p.NovasPericias, p.NovosConhecimentos);
+        p.ManobrasEspeciais, p.Combos, p.NovasTecnicas, p.NovosTalentos, p.NovasPericias, p.NovosConhecimentos, p.PC);
 }
 
 function GeraLinkEstilo(estilo) {
@@ -196,188 +411,188 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
     prontidao, interrogacao, intimidacao, perspicacia, manha, labia, lutacega, conducao, lideranca, seguranca,
     furtividade, sobrevivencia, arena, computador, investigacao, medicina, misterios, estilos, antecedentes,
     gloria, honra, divisao, posto, soco, chute, bloqueio, apresamento, esportes, foco, chi, fdv, saude, especiais,
-    combos, novasTecnicas, novosTalentos, novasPericias, novosConhecimentos) {
+    combos, novasTecnicas, novosTalentos, novasPericias, novosConhecimentos, pontosCombate) {
     var newWindow = "";
 
-    newWindow += "<table width=\"100%\" class=\"topoTitulo\"><tr><td align=\"center\" colspan=\"6\"><img alt=\"Street Fighter RPG\" src=\"http://www.sfrpg.com.br/tools/sheet-img/logo.png\" /></td></tr>";
-    newWindow += "<tr><td colspan=\"2\"><span class=\"ArialBlackRed\">Nome: </span>" + FontPadrao(nome) + "</td>";
-    newWindow += "<td colspan=\"2\"><a class=\"ArialBlackRed\" href=\"http://www.sfrpg.com.br/estilos-de-luta\" target=\"_blank\">Estilo: </a>" + GeraLinkEstilo(estilo) + "</td>";//FontPadrao(GeraHtmlLink(estilo))
-    newWindow += "<td colspan=\"2\"><a class=\"ArialBlackRed\" href=\"http://www.sfrpg.com.br/post/times\" target=\"_blank\">Time: </a>" + FontPadrao(GeraHtmlLink(time)) + "</td></tr>";
-    newWindow += "<tr><td colspan=\"2\"><span class=\"ArialBlackRed\">Jogador: </span>" + FontPadrao(jogador) + "</td>";
-    newWindow += "<td colspan=\"2\"><span class=\"ArialBlackRed\">Escola: </span>" + FontPadrao(escola) + "</td>";
-    newWindow += "<td colspan=\"2\"><a class=\"ArialBlackRed\" href=\"http://www.sfrpg.com.br/post/equipes\" target=\"_blank\">Equipe: </a>" + FontPadrao(GeraHtmlLink(equipe)) + "</td></tr>";
-    newWindow += "<tr><td colspan=\"2\" valign=\"top\"><span class=\"ArialBlackRed\">Conceito: </span>" + FontPadrao(conceito) + "</td>";
-    newWindow += "<td colspan=\"2\" valign=\"top\"><a class=\"ArialBlackRed\" href=\"http://www.sfrpg.com.br/post/conceitos-de-cronicas\" target=\"_blank\">Cr&ocirc;nica: </a>" + FontPadrao(cronica) + "</td>";
-    newWindow += "<td colspan=\"2\" valign=\"top\"><span class=\"ArialBlackRed\">Assinatura: </span>" + FontPadrao(assinatura) + "</td></tr>";
+    newWindow += "<table width=\"100%\" class=\"topoTitulo\"><tr><td align=\"center\" colspan=\"6\"><img alt=\"Street Fighter RPG\" src=\"http://www.sfrpg.com.br/tools/sheet-img/logo.png\" /></td></tr>"
+        + "<tr><td colspan=\"2\"><span class=\"ArialBlackRed\">Nome: </span>" + FontPadrao(nome) + "</td>"
+        + "<td colspan=\"2\"><a class=\"ArialBlackRed\" href=\"http://www.sfrpg.com.br/estilos-de-luta\" target=\"_blank\">Estilo: </a>" + GeraLinkEstilo(estilo) + "</td>"//FontPadrao(GeraHtmlLink(estilo))
+        + "<td colspan=\"2\"><a class=\"ArialBlackRed\" href=\"http://www.sfrpg.com.br/post/times\" target=\"_blank\">Time: </a>" + FontPadrao(GeraHtmlLink(time)) + "</td></tr>"
+        + "<tr><td colspan=\"2\"><span class=\"ArialBlackRed\">Jogador: </span>" + FontPadrao(jogador) + "</td>"
+        + "<td colspan=\"2\"><span class=\"ArialBlackRed\">Escola: </span>" + FontPadrao(escola) + "</td>"
+        + "<td colspan=\"2\"><a class=\"ArialBlackRed\" href=\"http://www.sfrpg.com.br/post/equipes\" target=\"_blank\">Equipe: </a>" + FontPadrao(GeraHtmlLink(equipe)) + "</td></tr>"
+        + "<tr><td colspan=\"2\" valign=\"top\"><span class=\"ArialBlackRed\">Conceito: </span>" + FontPadrao(conceito) + "</td>"
+        + "<td colspan=\"2\" valign=\"top\"><a class=\"ArialBlackRed\" href=\"http://www.sfrpg.com.br/post/conceitos-de-cronicas\" target=\"_blank\">Cr&ocirc;nica: </a>" + FontPadrao(cronica) + "</td>"
+        + "<td colspan=\"2\" valign=\"top\"><span class=\"ArialBlackRed\">Assinatura: </span>" + FontPadrao(assinatura) + "</td></tr>";
 
     //atributos
-    newWindow += "<tr><td colspan=\"6\" align=\"center\" bgcolor=\"Red\"><a href=\"http://www.sfrpg.com.br/post/atributos\" target=\"_blank\"><img alt=\"Atributos\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfattributes.jpg\" /></a></td></tr>";
-    newWindow += "<tr><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/atributos-fisicos\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfphysical.jpg\" alt=\"Físicos\" /></a></td>";
-    newWindow += "<td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/atributos-sociais\" target=\"_blank\"><img alt=\"Sociais\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfsocial.jpg\" /></a>";
-    newWindow += "</td><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/atributos-mentais\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfmental.jpg\" alt=\"Mentais\" /></a></td></tr><tr class=\"ArialBlackBlack\">";
-    newWindow += "<td><a href=\"http://www.sfrpg.com.br/post/forca\" target=\"_blank\">For&ccedil;a</a></td><td>";
-    newWindow += PintaCaracteristica(8, forca); //for&ccedil;a
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/carisma\" target=\"_blank\">Carisma</a></td><td>";
-    newWindow += PintaCaracteristica(8, carisma); //carisma
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/percepcao\" target=\"_blank\">Percep&ccedil;&atilde;o</a></td><td>";
-    newWindow += PintaCaracteristica(8, percepcao); //percep&ccedil;&atilde;o
-    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/destreza\" target=\"_blank\">Destreza</a></td><td>";
-    newWindow += PintaCaracteristica(8, destreza); //destreza
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/manipulacao\" target=\"_blank\">Manipula&ccedil;&atilde;o</a></td><td>";
-    newWindow += PintaCaracteristica(8, manipulacao); //manipula&ccedil;&atilde;o
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/inteligencia\" target=\"_blank\">Intelig&ecirc;ncia</a></td><td>";
-    newWindow += PintaCaracteristica(8, inteligencia); //intelig&ecirc;ncia
-    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/vigor\" target=\"_blank\">Vigor</a></td><td>";
-    newWindow += PintaCaracteristica(8, vigor); //vigor
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/aparencia\" target=\"_blank\">Apar&ecirc;ncia</a></td><td>";
-    newWindow += PintaCaracteristica(8, aparencia); //apar&ecirc;ncia
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/raciocinio\" target=\"_blank\">Racioc&iacute;nio</a></td><td>";
-    newWindow += PintaCaracteristica(8, raciocinio); //racioc&iacute;nio
+    newWindow += "<tr><td colspan=\"6\" align=\"center\" bgcolor=\"Red\"><a href=\"http://www.sfrpg.com.br/post/atributos\" target=\"_blank\"><img alt=\"Atributos\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfattributes.jpg\" /></a></td></tr>"
+        + "<tr><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/atributos-fisicos\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfphysical.jpg\" alt=\"Físicos\" /></a></td>"
+        + "<td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/atributos-sociais\" target=\"_blank\"><img alt=\"Sociais\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfsocial.jpg\" /></a>"
+        + "</td><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/atributos-mentais\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfmental.jpg\" alt=\"Mentais\" /></a></td></tr><tr class=\"ArialBlackBlack\">"
+        + "<td><a href=\"http://www.sfrpg.com.br/post/forca\" target=\"_blank\">For&ccedil;a</a></td><td>"
+        + PintaCaracteristica(8, forca) //for&ccedil;a
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/carisma\" target=\"_blank\">Carisma</a></td><td>"
+        + PintaCaracteristica(8, carisma) //carisma
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/percepcao\" target=\"_blank\">Percep&ccedil;&atilde;o</a></td><td>"
+        + PintaCaracteristica(8, percepcao) //percep&ccedil;&atilde;o
+        + "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/destreza\" target=\"_blank\">Destreza</a></td><td>"
+        + PintaCaracteristica(8, destreza) //destreza
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/manipulacao\" target=\"_blank\">Manipula&ccedil;&atilde;o</a></td><td>"
+        + PintaCaracteristica(8, manipulacao) //manipula&ccedil;&atilde;o
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/inteligencia\" target=\"_blank\">Intelig&ecirc;ncia</a></td><td>"
+        + PintaCaracteristica(8, inteligencia) //intelig&ecirc;ncia
+        + "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/vigor\" target=\"_blank\">Vigor</a></td><td>"
+        + PintaCaracteristica(8, vigor) //vigor
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/aparencia\" target=\"_blank\">Apar&ecirc;ncia</a></td><td>"
+        + PintaCaracteristica(8, aparencia) //apar&ecirc;ncia
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/raciocinio\" target=\"_blank\">Racioc&iacute;nio</a></td><td>"
+        + PintaCaracteristica(8, raciocinio); //racioc&iacute;nio
 
     //habilidades
-    newWindow += "</td></tr><tr><td bgcolor=\"Red\" colspan=\"6\" align=\"center\" ><a href=\"http://www.sfrpg.com.br/post/habilidades\" target=\"_blank\"><img alt=\"Habilidades\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfabilities.jpg\" /></a></td></tr><tr><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\">";
-    newWindow += "<a href=\"http://www.sfrpg.com.br/post/talentos\" target=\"_blank\"><img alt=\"Talentos\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sftalents.jpg\" /></a></td><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/pericias\" target=\"_blank\"><img alt=\"Perícias\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfskills.jpg\" /></a></td><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\">";
-    newWindow += "<a href=\"http://www.sfrpg.com.br/post/conhecimentos\" target=\"_blank\"><img alt=\"Conhecimentos\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfknowledges.jpg\" /></a></td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/prontidao\" target=\"_blank\">Prontid&atilde;o</a></td><td>";
-    newWindow += PintaCaracteristica(8, prontidao); //prontid&atilde;o
-    newWindow += "</td><td nowrap=\"nowrap\"><a href=\"http://www.sfrpg.com.br/post/luta-as-cegas\" target=\"_blank\">Luta &aacute;s Cegas</a></td><td>";
-    newWindow += PintaCaracteristica(8, lutacega); //luta &aacute;s cegas
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/conhecimento-de-arenas\" target=\"_blank\">Arenas</a></td><td>";
-    newWindow += PintaCaracteristica(8, arena); //arena
-    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/interrogatorio\" target=\"_blank\">Interrogat&oacute;rio</a></td><td>";
-    newWindow += PintaCaracteristica(8, interrogacao); //interroga&ccedil;&atilde;o
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/conducao\" target=\"_blank\">Condu&ccedil;&atilde;o</a></td><td>";
-    newWindow += PintaCaracteristica(8, conducao); //condu&ccedil;&atilde;o
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/computador\" target=\"_blank\">Computador</a></td><td>";
-    newWindow += PintaCaracteristica(8, computador); //computador
-    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/intimidacao\" target=\"_blank\">Intimida&ccedil;&atilde;o</a></td><td>";
-    newWindow += PintaCaracteristica(8, intimidacao); //intimida&ccedil;&atilde;o
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/lideranca\" target=\"_blank\">Lideran&ccedil;a</a></td><td>";
-    newWindow += PintaCaracteristica(8, lideranca); //lideran&ccedil;a
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/investigacao\" target=\"_blank\">Investiga&ccedil;&atilde;o</a></td><td>";
-    newWindow += PintaCaracteristica(8, investigacao); //investiga&ccedil;&atilde;o
-    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/perspicacia\" target=\"_blank\">Perspic&aacute;cia</a></td><td>";
-    newWindow += PintaCaracteristica(8, perspicacia); //perspic&aacute;cia
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/seguranca\" target=\"_blank\">Seguran&ccedil;a</a></td><td>";
-    newWindow += PintaCaracteristica(8, seguranca); //seguran&ccedil;a
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/medicina\" target=\"_blank\">Medicina</a></td><td>";
-    newWindow += PintaCaracteristica(8, medicina); //medicina
-    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/manha\" target=\"_blank\">Manha</a></td><td>";
-    newWindow += PintaCaracteristica(8, manha); //manha
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/furtividade\" target=\"_blank\">Furtividade</a></td><td>";
-    newWindow += PintaCaracteristica(8, furtividade); //furtividade
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/misterios\" target=\"_blank\">Mist&eacute;rios</a></td><td>";
-    newWindow += PintaCaracteristica(8, misterios); //mist&eacute;rios
-    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/labia\" target=\"_blank\">L&aacute;bia</a></td><td>";
-    newWindow += PintaCaracteristica(8, labia); //l&aacute;bia
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/sobrevivencia\" target=\"_blank\">Sobreviv&ecirc;ncia</a></td><td>";
-    newWindow += PintaCaracteristica(8, sobrevivencia); //sobreviv&ecirc;ncia
-    newWindow += "</td><td><a href=\"http://www.sfrpg.com.br/post/conhecimento-de-estilos\" target=\"_blank\">Estilos</a></td><td>";
-    newWindow += PintaCaracteristica(8, estilos); //estilos
+    newWindow += "</td></tr><tr><td bgcolor=\"Red\" colspan=\"6\" align=\"center\" ><a href=\"http://www.sfrpg.com.br/post/habilidades\" target=\"_blank\"><img alt=\"Habilidades\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfabilities.jpg\" /></a></td></tr><tr><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\">"
+        + "<a href=\"http://www.sfrpg.com.br/post/talentos\" target=\"_blank\"><img alt=\"Talentos\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sftalents.jpg\" /></a></td><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/pericias\" target=\"_blank\"><img alt=\"Perícias\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfskills.jpg\" /></a></td><td align=\"center\" colspan=\"2\" style=\"padding-top:10px;\">"
+        + "<a href=\"http://www.sfrpg.com.br/post/conhecimentos\" target=\"_blank\"><img alt=\"Conhecimentos\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfknowledges.jpg\" /></a></td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/prontidao\" target=\"_blank\">Prontid&atilde;o</a></td><td>"
+        + PintaCaracteristica(8, prontidao) //prontid&atilde;o
+        + "</td><td nowrap=\"nowrap\"><a href=\"http://www.sfrpg.com.br/post/luta-as-cegas\" target=\"_blank\">Luta &aacute;s Cegas</a></td><td>"
+        + PintaCaracteristica(8, lutacega) //luta &aacute;s cegas
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/conhecimento-de-arenas\" target=\"_blank\">Arenas</a></td><td>"
+        + PintaCaracteristica(8, arena) //arena
+        + "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/interrogatorio\" target=\"_blank\">Interrogat&oacute;rio</a></td><td>"
+        + PintaCaracteristica(8, interrogacao) //interroga&ccedil;&atilde;o
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/conducao\" target=\"_blank\">Condu&ccedil;&atilde;o</a></td><td>"
+        + PintaCaracteristica(8, conducao) //condu&ccedil;&atilde;o
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/computador\" target=\"_blank\">Computador</a></td><td>"
+        + PintaCaracteristica(8, computador) //computador
+        + "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/intimidacao\" target=\"_blank\">Intimida&ccedil;&atilde;o</a></td><td>"
+        + PintaCaracteristica(8, intimidacao) //intimida&ccedil;&atilde;o
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/lideranca\" target=\"_blank\">Lideran&ccedil;a</a></td><td>"
+        + PintaCaracteristica(8, lideranca) //lideran&ccedil;a
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/investigacao\" target=\"_blank\">Investiga&ccedil;&atilde;o</a></td><td>"
+        + PintaCaracteristica(8, investigacao) //investiga&ccedil;&atilde;o
+        + "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/perspicacia\" target=\"_blank\">Perspic&aacute;cia</a></td><td>"
+        + PintaCaracteristica(8, perspicacia) //perspic&aacute;cia
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/seguranca\" target=\"_blank\">Seguran&ccedil;a</a></td><td>"
+        + PintaCaracteristica(8, seguranca) //seguran&ccedil;a
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/medicina\" target=\"_blank\">Medicina</a></td><td>"
+        + PintaCaracteristica(8, medicina) //medicina
+        + "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/manha\" target=\"_blank\">Manha</a></td><td>"
+        + PintaCaracteristica(8, manha) //manha
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/furtividade\" target=\"_blank\">Furtividade</a></td><td>"
+        + PintaCaracteristica(8, furtividade) //furtividade
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/misterios\" target=\"_blank\">Mist&eacute;rios</a></td><td>"
+        + PintaCaracteristica(8, misterios) //mist&eacute;rios
+        + "</td></tr><tr class=\"ArialBlackBlack\"><td><a href=\"http://www.sfrpg.com.br/post/labia\" target=\"_blank\">L&aacute;bia</a></td><td>"
+        + PintaCaracteristica(8, labia) //l&aacute;bia
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/sobrevivencia\" target=\"_blank\">Sobreviv&ecirc;ncia</a></td><td>"
+        + PintaCaracteristica(8, sobrevivencia) //sobreviv&ecirc;ncia
+        + "</td><td><a href=\"http://www.sfrpg.com.br/post/conhecimento-de-estilos\" target=\"_blank\">Estilos</a></td><td>"
+        + PintaCaracteristica(8, estilos); //estilos
 
     //novashabilidades
     if (novasPericias != null || novosConhecimentos != null || novosConhecimentos != null) {
         if (novosTalentos.length >= novosConhecimentos.length && novosTalentos.length >= novasPericias.length) {
             for (var i = 0; i < novosTalentos.length; i++) {
-                newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>";
-                newWindow += PintaCaracteristica(8, novosTalentos[i].Valor);
+                newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>"
+                    + PintaCaracteristica(8, novosTalentos[i].Valor);
 
                 if (novasPericias.length > i) {
-                    newWindow += "</td><td>" + GeraHtmlLink(novasPericias[i].Nome) + "</td><td>";
-                    newWindow += PintaCaracteristica(8, novasPericias[i].Valor);
+                    newWindow += "</td><td>" + GeraHtmlLink(novasPericias[i].Nome) + "</td><td>"
+                        + PintaCaracteristica(8, novasPericias[i].Valor);
                 }
                 else {
-                    newWindow += "</td><td>______________</td><td>";
-                    newWindow += PintaCaracteristica(8, 0);
+                    newWindow += "</td><td>______________</td><td>"
+                        + PintaCaracteristica(8, 0);
                 }
 
                 if (novosConhecimentos.length > i) {
-                    newWindow += "</td><td>" + GeraHtmlLink(novosConhecimentos[i].Nome) + "</td><td>";
-                    newWindow += PintaCaracteristica(8, novosConhecimentos[i].Valor);
+                    newWindow += "</td><td>" + GeraHtmlLink(novosConhecimentos[i].Nome) + "</td><td>"
+                        + PintaCaracteristica(8, novosConhecimentos[i].Valor);
                 }
                 else {
-                    newWindow += "</td><td>______________</td><td>";
-                    newWindow += PintaCaracteristica(8, 0);
+                    newWindow += "</td><td>______________</td><td>"
+                        + PintaCaracteristica(8, 0);
                 }
             }
         }
         else if (novasPericias.length >= novosConhecimentos.length && novasPericias.length >= novosTalentos.length) {
             for (var i = 0; i < novasPericias.length; i++) {
                 if (novosTalentos.length > i) {
-                    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>";
-                    newWindow += PintaCaracteristica(8, novosTalentos[i].Valor);
+                    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>"
+                        + PintaCaracteristica(8, novosTalentos[i].Valor);
                 }
                 else {
-                    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>______________</td><td>";
-                    newWindow += PintaCaracteristica(8, 0);
+                    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>______________</td><td>"
+                        + PintaCaracteristica(8, 0);
                 }
 
-                newWindow += "</td><td>" + GeraHtmlLink(novasPericias[i].Nome) + "</td><td>";
-                newWindow += PintaCaracteristica(8, novasPericias[i].Valor);
+                newWindow += "</td><td>" + GeraHtmlLink(novasPericias[i].Nome) + "</td><td>"
+                    + PintaCaracteristica(8, novasPericias[i].Valor);
 
                 if (novosConhecimentos.length > i) {
-                    newWindow += "</td><td>" + GeraHtmlLink(novosConhecimentos[i].Nome) + "</td><td>";
-                    newWindow += PintaCaracteristica(8, novosConhecimentos[i].Valor);
+                    newWindow += "</td><td>" + GeraHtmlLink(novosConhecimentos[i].Nome) + "</td><td>"
+                        + PintaCaracteristica(8, novosConhecimentos[i].Valor);
                 }
                 else {
-                    newWindow += "</td><td>______________</td><td>";
-                    newWindow += PintaCaracteristica(8, 0);
+                    newWindow += "</td><td>______________</td><td>"
+                        + PintaCaracteristica(8, 0);
                 }
             }
         }
         else {
-            for (var i = 0; i < novosConhecimentos.length; i++) {
+            for (let i = 0; i < novosConhecimentos.length; i++) {
                 if (novosTalentos.length > i) {
-                    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>";
-                    newWindow += PintaCaracteristica(8, novosTalentos[i].Valor);
+                    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>"
+                        + PintaCaracteristica(8, novosTalentos[i].Valor);
                 }
                 else {
-                    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>______________</td><td>";
-                    newWindow += PintaCaracteristica(8, 0);
+                    newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>______________</td><td>"
+                        + PintaCaracteristica(8, 0);
                 }
 
                 if (novasPericias.length > i) {
-                    newWindow += "</td><td>" + GeraHtmlLink(novasPericias[i].Nome) + "</td><td>";
-                    newWindow += PintaCaracteristica(8, novasPericias[i].Valor);
+                    newWindow += "</td><td>" + GeraHtmlLink(novasPericias[i].Nome) + "</td><td>"
+                        + PintaCaracteristica(8, novasPericias[i].Valor);
                 }
                 else {
-                    newWindow += "</td><td>______________</td><td>";
-                    newWindow += PintaCaracteristica(8, 0);
+                    newWindow += "</td><td>______________</td><td>"
+                        + PintaCaracteristica(8, 0);
                 }
 
-                newWindow += "</td><td>" + GeraHtmlLink(novosConhecimentos[i].Nome) + "</td><td>";
-                newWindow += PintaCaracteristica(8, novosConhecimentos[i].Valor);
+                newWindow += "</td><td>" + GeraHtmlLink(novosConhecimentos[i].Nome) + "</td><td>"
+                    + PintaCaracteristica(8, novosConhecimentos[i].Valor);
             }
         }
     }
 
     // antecedentes
-    newWindow += "</td></tr><tr><td colspan=\"6\" style=\"padding-left:150px;\" bgcolor=\"Red\"><img alt=\"Vantagens\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfadvantages.jpg\" /></td>";
-    newWindow += "</tr><tr><td align=\"center\" colspan=\"2\" valign=\"top\" width=\"33%\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/antecedentes\" target=\"_blank\"><img alt=\"Antecedentes\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfbackgrounds.jpg\" /></a><br />";
-    newWindow += "<table width=\"100%\" class=\"ArialPadrao\">";//tabela de antecedentes
+    newWindow += "</td></tr><tr><td colspan=\"6\" style=\"padding-left:150px;\" bgcolor=\"Red\"><img alt=\"Vantagens\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfadvantages.jpg\" /></td>"
+        + "</tr><tr><td align=\"center\" colspan=\"2\" valign=\"top\" width=\"33%\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/antecedentes\" target=\"_blank\"><img alt=\"Antecedentes\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfbackgrounds.jpg\" /></a><br />"
+        + "<table width=\"100%\" class=\"ArialPadrao\">";//tabela de antecedentes
 
     if (antecedentes != null) {   //pinta cada antecedente na ficha
         for (var x = 0; x < antecedentes.length; x++) {
             var ant = antecedentes[x];
-            newWindow += "<tr><td>" + GeraHtmlLink(ant.Nome) + "</td><td>";
-            newWindow += PintaCaracteristica(8, ant.Valor) + "</td></tr>";
+            newWindow += "<tr><td>" + GeraHtmlLink(ant.Nome) + "</td><td>"
+                + PintaCaracteristica(8, ant.Valor) + "</td></tr>";
         }
     }
 
     // tecnicas
-    newWindow += "</table></td><td valign=\"top\" align=\"center\" colspan=\"2\" width=\"33%\" style=\"padding-top:10px;\" ><a href=\"http://www.sfrpg.com.br/post/tecnicas\" target=\"_blank\"><img alt=\"Técnicas\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sftechniques.jpg\" /></a><br />";
-    newWindow += "<table width=\"100%\" class=\"ArialBlackBlack\"><tr><td><a href=\"http://www.sfrpg.com.br/post/soco\" target=\"_blank\">Soco</a></td><td>";
-    newWindow += PintaCaracteristica(8, soco); //soco
-    newWindow += "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/chute\" target=\"_blank\">Chute</a></td><td>";
-    newWindow += PintaCaracteristica(8, chute); //chute
-    newWindow += "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/bloqueio\" target=\"_blank\">Bloqueio</a></td><td>";
-    newWindow += PintaCaracteristica(8, bloqueio); //bloqueio
-    newWindow += "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/apresamento\" target=\"_blank\">Apresamento</a></td><td>";
-    newWindow += PintaCaracteristica(8, apresamento); //apresamento
-    newWindow += "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/esportes\" target=\"_blank\">Esportes</a></td><td>";
-    newWindow += PintaCaracteristica(8, esportes); //esportes
-    newWindow += "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/foco\" target=\"_blank\">Foco</a></td><td>";
-    newWindow += PintaCaracteristica(8, foco); //foco
-    newWindow += "</td></tr>";
+    newWindow += "</table></td><td valign=\"top\" align=\"center\" colspan=\"2\" width=\"33%\" style=\"padding-top:10px;\" ><a href=\"http://www.sfrpg.com.br/post/tecnicas\" target=\"_blank\"><img alt=\"Técnicas\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sftechniques.jpg\" /></a><br />"
+        + "<table width=\"100%\" class=\"ArialBlackBlack\"><tr><td><a href=\"http://www.sfrpg.com.br/post/soco\" target=\"_blank\">Soco</a></td><td>"
+        + PintaCaracteristica(8, soco) //soco
+        + "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/chute\" target=\"_blank\">Chute</a></td><td>"
+        + PintaCaracteristica(8, chute) //chute
+        + "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/bloqueio\" target=\"_blank\">Bloqueio</a></td><td>"
+        + PintaCaracteristica(8, bloqueio) //bloqueio
+        + "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/apresamento\" target=\"_blank\">Apresamento</a></td><td>"
+        + PintaCaracteristica(8, apresamento) //apresamento
+        + "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/esportes\" target=\"_blank\">Esportes</a></td><td>"
+        + PintaCaracteristica(8, esportes) //esportes
+        + "</td></tr><tr><td><a href=\"http://www.sfrpg.com.br/post/foco\" target=\"_blank\">Foco</a></td><td>"
+        + PintaCaracteristica(8, foco) //foco
+        + "</td></tr>";
 
     if (novasTecnicas != null) {//pintando as técnicas doidas
         for (var x = 0; x < novasTecnicas.length; x++) {
@@ -388,44 +603,51 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
     }
 
     // manobras especiais e combos
-    newWindow += "</table></td><td align=\"left\" valign=\"top\" colspan=\"2\" width=\"33%\" style=\"border-left:solid 20px Red;padding-left:10px;padding-top:10px;\" >";
-    newWindow += "<div align=\"center\"><a href=\"http://www.sfrpg.com.br/manobras-especiais\" target=\"_blank\"><img alt=\"Manobras Especiais\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfspecialmaneuvers.jpg\" /></a></div>";
-    newWindow += "<p><span class=\"ArialBlack\">" + GerarHtmlManobrasEspeciais(especiais) + "</span></p></td></tr>";
-    newWindow += "<tr><td colspan=\"4\" bgcolor=\"Red\" height=\"20px\"></td><td colspan=\"2\" style=\"border-left:solid 20px Red;\"></td></tr><tr><td colspan=\"2\" valign=\"top\" align=\"center\">";
-    newWindow += "<a href=\"http://www.sfrpg.com.br/post/renome\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfrenown.jpg\" alt=\"Renome\" /></a></td><td colspan=\"2\"></td><td colspan=\"2\" rowspan=\"5\" style=\"border-left:solid 20px Red;border-bottom:solid 20px Red;\">";
-    newWindow += "<span class=\"ArialBlack\"><b><a href=\"http://www.sfrpg.com.br/post/manobra-combo\" target=\"_blank\">Combos:</a> </b>" + combos + "</span></td></tr><tr><td colspan=\"2\" align=\"center\" class=\"ArialBlackBlack\"><a href=\"http://www.sfrpg.com.br/post/gloria\" target=\"_blank\">Gl&oacute;ria</a></td><td colspan=\"2\" align=\"center\">";
-    newWindow += "<a href=\"http://www.sfrpg.com.br/post/chi\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfchi.jpg\" alt=\"Chi\" /></a></td></tr><tr><td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + gloria + "-10bluedot.jpg\" alt=\"" + gloria + "\" /></td>";
-    newWindow += "<td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + chi + "-10bluedot.jpg\" alt=\"" + chi + "\" /></td></tr><tr><td colspan=\"2\" align=\"center\" style=\"padding-top:10px;\" class=\"ArialBlackBlack\">";
-    newWindow += "<a href=\"http://www.sfrpg.com.br/post/honra\" target=\"_blank\">Honra</a></td><td colspan=\"2\" align=\"center\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/forca-de-vontade\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfwillpower.jpg\" alt=\"Força de Vontade\" /></a></td></tr><tr><td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/";
-    newWindow += honra + "-10bluedot.jpg\" alt=\"" + honra + "\" /></td><td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + fdv + "-10bluedot.jpg\" alt=\"" + fdv + "\" /></td></tr>";
-    newWindow += "<tr><td class=\"ArialBlack\" colspan=\"2\" nowrap=\"nowrap\" style=\"padding-top:10px;padding-left:50px;\"><b><a href=\"http://www.sfrpg.com.br/post/divisao\" target=\"_blank\">Divis&atilde;o: </b></a><u>" + GeraHtmlLink(divisao) + "</u></td><td colspan=\"2\" align=\"center\" style=\"padding-top:10px;\">";
-    newWindow += "<a href=\"http://www.sfrpg.com.br/post/saude\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfhealth.jpg\" alt=\"Saúde\" /></a></td><td colspan=\"2\" align=\"center\" rowspan=\"3\"></td></tr>";
-    newWindow += "<tr><td class=\"ArialBlack\" colspan=\"2\" valign=\"top\" nowrap=\"nowrap\" style=\"padding-top:10px;padding-left:50px;\"><a href=\"http://www.sfrpg.com.br/post/posto\" target=\"_blank\"><b>Posto: </b></a><u>" + posto + "</u></td><td colspan=\"2\" align=\"center\">";
+    newWindow += "</table></td><td align=\"left\" valign=\"top\" colspan=\"2\" width=\"33%\" style=\"border-left:solid 20px Red;padding-left:10px;padding-top:10px;\" >"
+        + "<div align=\"center\"><a href=\"http://www.sfrpg.com.br/manobras-especiais\" target=\"_blank\"><img alt=\"Manobras Especiais\" src=\"http://www.sfrpg.com.br/tools/sheet-img/sfspecialmaneuvers.jpg\" /></a></div>"
+        + "<p><span class=\"ArialBlack\">" + GerarHtmlManobrasEspeciais(especiais) + "</span></p></td></tr>"
+        + "<tr><td colspan=\"4\" bgcolor=\"Red\" height=\"20px\"></td><td colspan=\"2\" style=\"border-left:solid 20px Red;\"></td></tr><tr><td colspan=\"2\" valign=\"top\" align=\"center\">"
+        + "<a href=\"http://www.sfrpg.com.br/post/renome\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfrenown.jpg\" alt=\"Renome\" /></a></td><td colspan=\"2\"></td><td colspan=\"2\" rowspan=\"5\" style=\"border-left:solid 20px Red;border-bottom:solid 20px Red;\">"
+        + "<span class=\"ArialBlack\"><b><a href=\"http://www.sfrpg.com.br/post/manobra-combo\" target=\"_blank\">Combos:</a> </b>" + combos + "</span></td></tr><tr><td colspan=\"2\" align=\"center\" class=\"ArialBlackBlack\"><a href=\"http://www.sfrpg.com.br/post/gloria\" target=\"_blank\">Gl&oacute;ria</a></td><td colspan=\"2\" align=\"center\">"
+        + "<a href=\"http://www.sfrpg.com.br/post/chi\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfchi.jpg\" alt=\"Chi\" /></a></td></tr><tr><td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + gloria + "-10bluedot.jpg\" alt=\"" + gloria + "\" /></td>"
+        + "<td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + chi + "-10bluedot.jpg\" alt=\"" + chi + "\" /></td></tr><tr><td colspan=\"2\" align=\"center\" style=\"padding-top:10px;\" class=\"ArialBlackBlack\">"
+        + "<a href=\"http://www.sfrpg.com.br/post/honra\" target=\"_blank\">Honra</a></td><td colspan=\"2\" align=\"center\" style=\"padding-top:10px;\"><a href=\"http://www.sfrpg.com.br/post/forca-de-vontade\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfwillpower.jpg\" alt=\"Força de Vontade\" /></a></td></tr><tr><td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/"
+        + honra + "-10bluedot.jpg\" alt=\"" + honra + "\" /></td><td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + fdv + "-10bluedot.jpg\" alt=\"" + fdv + "\" /></td></tr>"
+        + "<tr><td class=\"ArialBlack\" colspan=\"2\" nowrap=\"nowrap\" style=\"padding-top:10px;padding-left:50px;\"><b><a href=\"http://www.sfrpg.com.br/post/divisao\" target=\"_blank\">Divis&atilde;o: </b></a><u>" + GeraHtmlLink(divisao) + "</u></td><td colspan=\"2\" align=\"center\" style=\"padding-top:10px;\">"
+        + "<a href=\"http://www.sfrpg.com.br/post/saude\" target=\"_blank\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/sfhealth.jpg\" alt=\"Saúde\" /></a></td><td colspan=\"2\" align=\"center\" rowspan=\"3\"></td></tr>"
+        + "<tr><td class=\"ArialBlack\" colspan=\"2\" valign=\"top\" nowrap=\"nowrap\" style=\"padding-top:10px;padding-left:50px;\"><a href=\"http://www.sfrpg.com.br/post/posto\" target=\"_blank\"><b>Posto: </b></a><u>" + posto + "</u></td>";
 
+    //primeira linha de saúde
     if (saude >= 10)
-        newWindow += "<img src=\"http://www.sfrpg.com.br/tools/sheet-img/10-10bluedot.jpg\" alt=\"" + saude + "\" />";
-    else newWindow += "<img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + saude + "-10bluedot.jpg\" alt=\"" + saude + "\" />";
+        newWindow += "<td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/10-10bluedot.jpg\" alt=\"" + saude + "\" /></td></tr>";
+    else
+        newWindow += "<td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + saude + "-10bluedot.jpg\" alt=\"" + saude + "\" /></td></tr>";
 
-    newWindow += "</td></tr><tr><td colspan=\"2\" align=\"center\" ></td><td colspan=\"2\" align=\"center\">";
+    newWindow += "<tr><td class=\"ArialBlack\" colspan=\"2\" valign=\"top\" nowrap=\"nowrap\" style=\"padding-top:10px;padding-left:50px;\"><b>Pontos de Combate: </b></a><u>" + pontosCombate + "</u></td>";
 
+    //preparando segunda linha de saúde
+    //newWindow += "</tr><tr><td colspan=\"2\" align=\"center\" ></td><td colspan=\"2\" align=\"center\">";
+
+    //segunda linha de saúde
     if (saude > 10)
-        newWindow += "<img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + (saude - 10) + "-10bluedot.jpg\" alt=\"" + saude + "\" /></td></tr>";
-    else newWindow += "<img src=\"http://www.sfrpg.com.br/tools/sheet-img/0-10bluedot.jpg\" alt=\"" + saude + "\" /></td></tr>";
+        newWindow += "<td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + (saude - 10) + "-10bluedot.jpg\" alt=\"" + saude + "\" /></td></tr>";
+    else
+        newWindow += "<td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/0-10bluedot.jpg\" alt=\"" + saude + "\" /></td></tr>";
 
-    return newWindow + "</td></tr><tr><td colspan=\"6\" style=\"height:25px;\"></td></tr></table>";
+    return newWindow + "<tr><td colspan=\"6\" style=\"height:25px;\"></td></tr></table>";
 }
 
 function newCaracteristica(nome, valor) {
     return { Nome: nome, Valor: valor };
 }
 
-function getCaracteristica(arr,nome){
-	var valor = 0;
-	$.each(arr, function(i,v){
-		if(arr[i].Nome == nome)
-		  	valor = arr[i].Valor;
-	});
-	return valor;
+function getCaracteristica(arr, nome) {
+    var valor = 0;
+    $.each(arr, function (i, v) {
+        if (arr[i].Nome == nome)
+            valor = arr[i].Valor;
+    });
+    return valor;
 }
 
 function CarregarEdicao(nome) {

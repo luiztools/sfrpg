@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <!-- <script src="/javascripts/scripts.js" /> -->
+    <script>
+        function playAudio(name) {
+            const audio = new Audio("/audios/" + name + ".mp3");
+            audio.loop = true;
+            audio.play();
+        }
+
+        const divs = {};
+
+        function getTopLeft(event) {
+            const y = Math.floor((event.clientY + document.documentElement.scrollTop) / 138);//scrollTop e Left é a correção pela scrollbar
+            const x = Math.floor((event.clientX + document.documentElement.scrollLeft) / 138);
+
+            const top = ((y * 138) - (y * 2)) + 'px';//2px é a correção por causa das bordas
+            const left = ((x * 138) - (x * 2)) + 'px';
+            return [top, left];
+        }
+
+        function unpaint(evt) {
+            const [top, left] = getTopLeft(evt);
+            const id = top + left;
+            let div = document.getElementById(id);
+            if (div) {
+                document.body.removeChild(div);
+                return;
+            }
+        }
+
+        function paintBlack(evt){
+            paint(evt, "black");
+        }
+
+        const map = {};
+
+        function paint(evt, color) {
+            map.color = color;
+
+            const [top, left] = getTopLeft(evt);
+            const id = top + left;
+
+            let div = document.getElementById(id);
+            if (!div) {
+                //map.divs[id] = [top, left];
+
+                div = document.createElement("div");
+                div.style.backgroundColor = color;
+                div.style.position = "absolute";
+                div.style.width = '138px';
+                div.style.height = '138px';
+                div.style.top = top;
+                div.style.left = left;
+                div.id = id;
+                document.body.appendChild(div);
+            }
+            // else {
+            //     delete map.divs[div.id];
+            //     document.body.removeChild(div);
+            //     return;
+            // }
+        }
+
+        function saveMap(){
+
+        }
+
+        function handleKey(evt) {
+            if (evt.key === "p")
+                playAudio('ruins');
+            // else if(evt.key === "s")
+            //     saveMap();
+
+            // else if (evt.key === "q") {
+            //     document.removeEventListener("mousemove", paintBlack);
+            //     document.removeEventListener("mousemove", unpaint);
+            // }
+            // else if (evt.key === "e")
+            //     document.addEventListener("dblclick",  unpaint);
+        }
+    </script>
+</head>
+
+<!-- <body style="background-image: url('/images/sky.jpg');" onkeypress="playAudio('sky-battle')"> -->
+<!-- <body style="background-image: url('/images/armor-shop.jpg');" onkeypress="playAudio('tense')"> -->
+<!-- <body style="background-image: url('/images/alley.jpg');" onkeypress="playAudio('tense')"> -->
+<!-- <body style="background-image: url('/images/pit.jpg');" onkeypress="playAudio('beast-fight')"> -->
+<!-- <body style="background-image: url('/images/tavern.jpg');" onkeypress="playAudio('tavern')"> -->
+
+<body style="background-image: url('/images/cave-tile.jpeg');">
+    <!-- <body style="background-image: url('/images/sea-tile.png');"></body> -->
+    <!-- <body style="background-image: url('/images/grass-tile.jpg');"></body> -->
+    <!-- <body style="background-image: url('/images/sidewalk-tile.jpg');"></body> -->
+    <!-- <body style="background-image: url('/images/sand-tile.png');"></body> -->
+
+    <!-- <body style="background-color: darkgray;"> -->
+    <div style="background-image: url('/images/square.png'); width: 3840px; height: 1260px; position:absolute;"></div>
+
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());//corrige bug multitouch
+        // document.addEventListener("dblclick", (evt) => {
+        //     document.addEventListener("mousemove", paintBlack)
+        // });
+        document.addEventListener("click", paintBlack);
+        // document.addEventListener("click", (evt) => paint(evt, 'black'));
+        // document.body.addEventListener("keydown", handleKey);
+    </script>
+</body>
+
+</html>
