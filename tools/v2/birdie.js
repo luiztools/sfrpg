@@ -217,7 +217,7 @@ function BirdieSF5() {
 let npc;
 if (getParameterByName('age') === 'sf1')
     npc = BirdieSF1();
-if (getParameterByName('age') === 'sfa')
+else if (getParameterByName('age') === 'sfa')
     npc = BirdieZ3();
 else
     npc = BirdieSF5();
