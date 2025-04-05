@@ -1,4 +1,4 @@
-function Jarek() {
+function Nightwolf() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 3);
     antecedentes[1] = newCaracteristica("Contatos", 3);
@@ -67,6 +67,6 @@ function Jarek() {
     return personagem;
 }
 
-let npc = Jarek();
+let npc = Nightwolf();
 
 npc = calcPC(npc);
