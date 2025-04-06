@@ -324,7 +324,7 @@ function AutoGeradorA(nome, jogador, cronica, estilo, escola, equipe, time, conc
     if (nomeAnt8 != '') { antecedentes[7] = newCaracteristica(nomeAnt8, valorAnt8); }
     if (nomeAnt9 != '') { antecedentes[8] = newCaracteristica(nomeAnt9, valorAnt9); }
 
-    var personagem = {
+    const personagem = {
         Antecedentes: antecedentes,
         NovasTecnicas: [],
         NovosTalentos: [],
