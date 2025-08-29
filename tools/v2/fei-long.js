@@ -1,14 +1,17 @@
 function FeiLongSF4() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Arena", 4);
     antecedentes[1] = newCaracteristica("Fama", 4);
     antecedentes[2] = newCaracteristica("Recursos", 4);
     antecedentes[3] = newCaracteristica("Staff", 4);
 
-    var tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas Brancas", 2);
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Nunchaku", 2);
 
-    var feiLong =
+    const armas = [];
+    armas[0] = "Nunchaku";
+
+    const feiLong =
     {
         Nome: "Fei Long",
         Estilo: "Kung Fu",
@@ -50,6 +53,7 @@ function FeiLongSF4() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
+        Armas: armas,
         Divisao: "Tradicional",
         Posto: 10,
         Gloria: 10,
@@ -71,7 +75,10 @@ function FeiLongSF2() {
     antecedentes[3] = newCaracteristica("Staff", 3);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas Brancas", 2);
+    tecnicas[0] = newCaracteristica("Nunchaku", 2);
+
+    const armas = [];
+    armas[0] = "Nunchaku";
 
     const feiLong =
     {
@@ -115,6 +122,7 @@ function FeiLongSF2() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
+        Armas: armas,
         Divisao: "Tradicional",
         Posto: 9,
         Gloria: 9,
@@ -136,7 +144,10 @@ function FeiLongZ3() {
     antecedentes[3] = newCaracteristica("Staff", 2);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas Brancas", 1);
+    tecnicas[0] = newCaracteristica("Nunchaku", 1);
+
+    const armas = [];
+    armas[0] = "Nunchaku";
 
     const feiLong =
     {
@@ -180,6 +191,7 @@ function FeiLongZ3() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
+        Armas: armas,
         Divisao: "Tradicional",
         Posto: 9,
         Gloria: 9,
@@ -193,7 +205,7 @@ function FeiLongZ3() {
     return feiLong;
 }
 
-var npc;
+let npc;
 if (getParameterByName('age') === 'sfa')
     npc = FeiLongZ3();
 else if (getParameterByName('age') === 'sf4')

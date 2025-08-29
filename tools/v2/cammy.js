@@ -129,7 +129,7 @@ function CammySF2() {
     return cammy;
 }
 
-function CammySF4() {
+function CammySF5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Arena", 4);
@@ -147,7 +147,7 @@ function CammySF4() {
         Assinatura: "Posa e olha por cima do ombro",
         Time: "Delta Red",
         Jogador: "NPC",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Forca: 4,
         Destreza: 6,
         Vigor: 5,
@@ -195,7 +195,7 @@ function CammySF4() {
     return cammy;
 }
 
-function CammySF5() {
+function CammySF6() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 5);
@@ -213,7 +213,7 @@ function CammySF5() {
         Assinatura: "Posa e olha por cima do ombro",
         Time: "Delta Red",
         Jogador: "NPC",
-        Cronica: "Street Fighter 5",
+        Cronica: "Street Fighter 6",
         Forca: 5,
         Destreza: 6,
         Vigor: 5,
@@ -261,77 +261,9 @@ function CammySF5() {
     return cammy;
 }
 
-function CammySF6() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 5);
-    antecedentes[1] = newCaracteristica("Arena", 5);
-    antecedentes[2] = newCaracteristica("Apoio", 5);
-    antecedentes[3] = newCaracteristica("Contatos", 5);
-    antecedentes[4] = newCaracteristica("Recursos", 3);
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
-    const cammy =
-    {
-        Nome: "Cammy",
-        Estilo: "Forças Especiais",
-        Escola: "Agência MI-6",
-        Conceito: "Agente Especial",
-        Assinatura: "Posa e olha por cima do ombro",
-        Time: "Delta Red",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 6",
-        Forca: 5,
-        Destreza: 6,
-        Vigor: 5,
-        Carisma: 5,
-        Manipulacao: 5,
-        Aparencia: 6,
-        Percepcao: 5,
-        Inteligencia: 5,
-        Raciocinio: 6,
-        Prontidao: 5,
-        Interrogacao: 5,
-        Intimidacao: 3,
-        Perspicacia: 5,
-        Manha: 3,
-        Labia: 5,
-        LutaCega: 5,
-        Conducao: 5,
-        Lideranca: 5,
-        Seguranca: 5,
-        Furtividade: 5,
-        Sobrevivencia: 5,
-        Arena: 4,
-        Computador: 4,
-        Investigacao: 5,
-        Medicina: 2,
-        Estilos: 5,
-        Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        Soco: 5,
-        Chute: 6,
-        Bloqueio: 5,
-        Apresamento: 4,
-        Esportes: 6,
-        Foco: 2,
-        Saude: 20,
-        Divisao: "Tradicional",
-        Posto: 10,
-        Gloria: 10,
-        Honra: 9,
-        Chi: 7,
-        ForcaVontade: 10,
-        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
-        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);"
-    };
-    return cammy;
-}
-
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = CammySFZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = CammySF4();
 else if (getParameterByName('age') === 'sf5')
     npc = CammySF5();
     else if (getParameterByName('age') === 'sf6')

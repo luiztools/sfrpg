@@ -114,7 +114,7 @@ function DhalsimSFZ3() {
     return dhalsim;
 }
 
-function DhalsimSF4() {
+function DhalsimSF5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Mascote", 2);
@@ -129,7 +129,7 @@ function DhalsimSF4() {
         Conceito: "Mestre Yoga",
         Assinatura: "Levita",
         Jogador: "NPC",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Forca: 4,
         Destreza: 4,
         Vigor: 5,
@@ -172,7 +172,7 @@ function DhalsimSF4() {
     return dhalsim;
 }
 
-function DhalsimSF5() {
+function DhalsimSF6() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 3);
     antecedentes[1] = newCaracteristica("Mascote", 3);
@@ -187,7 +187,7 @@ function DhalsimSF5() {
         Conceito: "Mestre Yoga",
         Assinatura: "Levita",
         Jogador: "NPC",
-        Cronica: "Street Fighter 5",
+        Cronica: "Street Fighter 6",
         Forca: 4,
         Destreza: 4,
         Vigor: 5,
@@ -233,8 +233,8 @@ function DhalsimSF5() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = DhalsimSFZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = DhalsimSF4();
+else if (getParameterByName('age') === 'sf6')
+    npc = DhalsimSF6();
 else if (getParameterByName('age') === 'sf5')
     npc = DhalsimSF5();
 else

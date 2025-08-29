@@ -111,13 +111,13 @@ function ZangiefSF2() {
         Honra: 7,
         Chi: 5,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
         Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
     };
     return zangief;
 }
 
-function ZangiefSF4() {
+function ZangiefSF5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 2);
@@ -132,7 +132,7 @@ function ZangiefSF4() {
         Conceito: "Homem forte russo",
         Assinatura: "Levanta os braços em vitória",
         Jogador: "NPC",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Forca: 7,
         Destreza: 3,
         Vigor: 7,
@@ -171,13 +171,13 @@ function ZangiefSF4() {
         Honra: 8,
         Chi: 5,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
         Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
     };
     return zangief;
 }
 
-function ZangiefSF5() {
+function ZangiefSF6() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 3);
@@ -192,7 +192,7 @@ function ZangiefSF5() {
         Conceito: "Homem forte russo",
         Assinatura: "Levanta os braços em vitória",
         Jogador: "NPC",
-        Cronica: "Street Fighter 5",
+        Cronica: "Street Fighter 6",
         Forca: 7,
         Destreza: 3,
         Vigor: 7,
@@ -231,67 +231,7 @@ function ZangiefSF5() {
         Honra: 9,
         Chi: 5,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
-        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
-    };
-    return zangief;
-}
-
-function ZangiefSF6() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 5);
-    antecedentes[1] = newCaracteristica("Arena", 4);
-    antecedentes[2] = newCaracteristica("Fama", 4);
-    antecedentes[3] = newCaracteristica("Recursos", 3);
-
-    const zangief =
-    {
-        Nome: "Zangief",
-        Estilo: "Sanbô",
-        Escola: "Campo de Treino Siberiano",
-        Conceito: "Homem forte russo",
-        Assinatura: "Levanta os braços em vitória",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 6",
-        Forca: 7,
-        Destreza: 3,
-        Vigor: 7,
-        Carisma: 5,
-        Manipulacao: 2,
-        Aparencia: 2,
-        Percepcao: 4,
-        Inteligencia: 4,
-        Raciocinio: 4,
-        Prontidao: 5,
-        Interrogacao: 2,
-        Intimidacao: 5,
-        Perspicacia: 4,
-        Manha: 4,
-        Labia: 2,
-        LutaCega: 4,
-        Conducao: 3,
-        Lideranca: 5,
-        Furtividade: 3,
-        Sobrevivencia: 5,
-        Arena: 5,
-        Medicina: 3,
-        Misterios: 2,
-        Estilos: 5,
-        Antecedentes: antecedentes,
-        Soco: 5,
-        Chute: 5,
-        Bloqueio: 5,
-        Apresamento: 7,
-        Esportes: 5,
-        Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 10,
-        Saude: 20,
-        Gloria: 10,
-        Honra: 9,
-        Chi: 5,
-        ForcaVontade: 10,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
         Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
     };
     return zangief;
@@ -300,8 +240,6 @@ function ZangiefSF6() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = ZangiefSFZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = ZangiefSF4();
 else if (getParameterByName('age') === 'sf5')
     npc = ZangiefSF5();
 else if (getParameterByName('age') === 'sf6')

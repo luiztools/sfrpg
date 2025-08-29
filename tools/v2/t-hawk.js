@@ -119,72 +119,9 @@ function THawkSF2() {
     return hawk;
 }
 
-function THawkSF4() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 5);
-    antecedentes[1] = newCaracteristica("Arena", 3);
-    antecedentes[2] = newCaracteristica("Fama", 2);
-    antecedentes[3] = newCaracteristica("Recursos", 1);
-    antecedentes[4] = newCaracteristica("Staff", 1);
-    const hawk =
-    {
-        Nome: "T. Hawk",
-        Estilo: "Luta-Livre Nativo Americana",
-        Conceito: "Guerreiro",
-        Assinatura: "Ele é grande!",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 4",
-        Escola: "Tribo Thunderfoot",
-        Forca: 6,
-        Destreza: 4,
-        Vigor: 6,
-        Carisma: 5,
-        Manipulacao: 3,
-        Aparencia: 4,
-        Percepcao: 5,
-        Inteligencia: 4,
-        Raciocinio: 4,
-        Prontidao: 6,
-        Interrogacao: 1,
-        Intimidacao: 5,
-        Perspicacia: 4,
-        Manha: 3,
-        Labia: 2,
-        LutaCega: 3,
-        Conducao: 2,
-        Lideranca: 5,
-        Furtividade: 5,
-        Sobrevivencia: 5,
-        Arena: 3,
-        Investigacao: 2,
-        Medicina: 4,
-        Misterios: 5,
-        Estilos: 3,
-        Antecedentes: antecedentes,
-        Soco: 5,
-        Chute: 5,
-        Bloqueio: 5,
-        Apresamento: 6,
-        Esportes: 6,
-        Foco: 3,
-        Divisao: "Tradicional",
-        Posto: 10,
-        Gloria: 9,
-        Honra: 10,
-        Chi: 7,
-        ForcaVontade: 10,
-        Saude: 20,
-        ManobrasEspeciais: "Buffalo Punch, Brain Cracker, Grappling Defense, Storm Hammer, Throw, Diving Hawk, Jump, Thunderstrike, Thunderclap",
-        Combos: "Diving Hawk para Thunderstrike (Dizzy); Diving Hawk para Storm Hammer; Bloqueio para Jab para Fierce (Dizzy);"
-    };
-    return hawk;
-}
-
 var npc;
 if (getParameterByName('age') === 'sfa')
     npc = THawkSFZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = THawkSF4();
 else
     npc = THawkSF2();
 npc = calcPC(npc);

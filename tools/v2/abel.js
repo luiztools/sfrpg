@@ -8,7 +8,7 @@ function AbelSF4() {
     const abel =
     {
         Nome: "Abel",
-        Estilo: "Sanbo",
+        Estilo: "Vale-Tudo",
         Escola: "Unidade Mercenária",
         Conceito: "Homem sem passado",
         Assinatura: "Amnésia",
@@ -55,7 +55,7 @@ function AbelSF4() {
         Saude: 20,
         Posto: 9,
         Divisao: "Tradicional",
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Wheel Kick, Tornado Throw, Throw, Grappling Defense, Choke Throw, Flying Tackle",
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Wheel Kick, Tornado Throw, Throw, Grappling Defense, Choke Throw, Flying Tackle, Drunken Monkey Roll",
         Combos: "Power Uppercut para Choke Throw; Forward para Tornado Throw (Dizzy); Flying Tackle para Tornado Throw (Dizzy)",
     };
     return abel;

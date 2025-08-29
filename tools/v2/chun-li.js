@@ -1,74 +1,3 @@
-function ChunLiSF6() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Arena", 5);
-    antecedentes[1] = newCaracteristica("Apoio", 5);
-    antecedentes[2] = newCaracteristica("Contatos", 5);
-    antecedentes[3] = newCaracteristica("Fama", 5);
-    antecedentes[4] = newCaracteristica("Empresario", 5);
-    antecedentes[5] = newCaracteristica("Recursos", 3);
-    antecedentes[6] = newCaracteristica("Sensei", 3);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Pistola", 2);
-
-    const chunLi =
-    {
-        Nome: "Chun Li",
-        Estilo: "Wu Shu",
-        Escola: "Acrobacia chinesa",
-        Conceito: "Detetive",
-        Assinatura: "Braceletes com esporões",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 6",
-        Equipe: "Interpol",
-        Forca: 5,
-        Destreza: 7,
-        Vigor: 5,
-        Carisma: 5,
-        Manipulacao: 5,
-        Aparencia: 6,
-        Percepcao: 5,
-        Inteligencia: 5,
-        Raciocinio: 5,
-        Prontidao: 5,
-        Interrogacao: 5,
-        Intimidacao: 4,
-        Perspicacia: 5,
-        Manha: 4,
-        Labia: 4,
-        LutaCega: 5,
-        Conducao: 4,
-        Lideranca: 5,
-        Seguranca: 5,
-        Furtividade: 5,
-        Sobrevivencia: 4,
-        Arena: 5,
-        Computador: 3,
-        Investigacao: 5,
-        Medicina: 3,
-        Misterios: 5,
-        Estilos: 5,
-        Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        Soco: 5,
-        Chute: 7,
-        Bloqueio: 5,
-        Apresamento: 4,
-        Esportes: 7,
-        Foco: 5,
-        Divisao: "Estilo Livre",
-        Posto: 10,
-        Gloria: 10,
-        Honra: 10,
-        Chi: 10,
-        ForcaVontade: 10,
-        Saude: 20,
-        ManobrasEspeciais: "Backflip Kick, Forward Flip Knee, Lightning Leg, Whirlwind Kick, Throw, Air Throw, Flying Heel Stomp, Jump, Wall Spring, Fireball",
-        Combos: "Strong para Fierce (Dizzy); Fireball para Jump + Roundhouse para Strong; Jump + Forward para Lightning Leg (Dizzy);"
-    };
-    return chunLi;
-}
-
 function ChunLiSF5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Arena", 4);
@@ -140,7 +69,7 @@ function ChunLiSF5() {
     return chunLi;
 }
 
-function ChunLiSF3() {
+function ChunLiSF6() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Arena", 5);
     antecedentes[1] = newCaracteristica("Apoio", 5);
@@ -161,7 +90,7 @@ function ChunLiSF3() {
         Conceito: "Detetive",
         Assinatura: "Braceletes com esporões",
         Jogador: "NPC",
-        Cronica: "Street Fighter 3",
+        Cronica: "Street Fighter 6",
         Equipe: "Interpol",
         Forca: 5,
         Destreza: 7,
@@ -211,7 +140,7 @@ function ChunLiSF3() {
     return chunLi;
 }
 
-function ChunLiSF4() {
+function ChunLiSF5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Arena", 3);
     antecedentes[1] = newCaracteristica("Apoio", 4);
@@ -232,7 +161,7 @@ function ChunLiSF4() {
         Conceito: "Detetive",
         Assinatura: "Braceletes com esporões",
         Jogador: "NPC",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Equipe: "Interpol",
         Forca: 5,
         Destreza: 7,
@@ -427,12 +356,8 @@ function ChunLiSFZ3() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = ChunLiSFZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = ChunLiSF4();
 else if (getParameterByName('age') === 'sf5')
     npc = ChunLiSF5();
-else if (getParameterByName('age') === 'sf3')
-    npc = ChunLiSF3();
 else if (getParameterByName('age') === 'sf6')
     npc = ChunLiSF6();
 else

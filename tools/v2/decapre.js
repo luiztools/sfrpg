@@ -1,3 +1,77 @@
+function DecapreSF5() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 2);
+    antecedentes[1] = newCaracteristica("Arena", 3);
+    antecedentes[2] = newCaracteristica("Contatos", 4);
+    antecedentes[3] = newCaracteristica("Apoio", 4);
+    antecedentes[4] = newCaracteristica("Psycho Power", 4);
+
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Faca", 6);
+    tecnicas[1] = newCaracteristica("Armas de Fogo", 4);
+
+    const armas = [];
+    armas[0] = "Katar";
+
+    const decapre = {
+        Nome: "Decapre",
+        Estilo: "Ler Drit",
+        Escola: "QG da Shadaloo",
+        Jogador: "NPC",
+        Assinatura: "Máscara e adaga",
+        Conceito: "Assassina de Elite",
+        Cronica: "Street Fighter 5",
+        Time: "Dolls",
+        Equipe: "Shadaloo",
+        Forca: 4,
+        Destreza: 6,
+        Vigor: 5,
+        Carisma: 1,
+        Manipulacao: 3,
+        Aparencia: 1,
+        Percepcao: 4,
+        Inteligencia: 3,
+        Raciocinio: 4,
+        Prontidao: 3,
+        Interrogacao: 4,
+        Intimidacao: 5,
+        Perspicacia: 3,
+        Manha: 3,
+        Labia: 4,
+        LutaCega: 3,
+        Conducao: 4,
+        Lideranca: 4,
+        Seguranca: 4,
+        Furtividade: 5,
+        Sobrevivencia: 5,
+        Arena: 3,
+        Computador: 2,
+        Investigacao: 4,
+        Medicina: 2,
+        Misterios: 3,
+        Estilos: 4,
+        Antecedentes: antecedentes,
+        NovasTecnicas: tecnicas,
+        Soco: 5,
+        Chute: 5,
+        Bloqueio: 5,
+        Apresamento: 4,
+        Esportes: 5,
+        Foco: 5,
+        Armas: armas,
+        ManobrasEspeciais: "Jump, Throw, Air Throw, Psycho Crusher, Foot Sweep, Handstand Kick, Haymaker, Suplex, Widowmaker, Thigh Press, Flying Body Spear, Slide Kick, Ducking Fierce, Sonic Boom, Psychokinetic Channeling",
+        Combos: "Movimento para Slide Kick; Jab para Strong para Fierce (Dizzy); ",
+        Gloria: 6,
+        Honra: 0,
+        Chi: 7,
+        ForcaVontade: 8,
+        Saude: 20,
+        Divisao: "Duelistas",
+        Posto: 7
+    };
+    return decapre;
+}
+
 function DecapreSF4() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
@@ -149,6 +223,8 @@ function DecapreSFZ3() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = DecapreSFZ3();
+else if (getParameterByName('age') === 'sf5')
+    npc = DecapreSF5();
 else
     npc = DecapreSF4();
 

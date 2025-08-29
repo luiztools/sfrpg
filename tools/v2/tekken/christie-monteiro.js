@@ -1,4 +1,4 @@
-function ChristieTekken5() {
+function ChristieTekken6() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Contatos", 4);
@@ -129,8 +129,8 @@ function ChristieTekken4() {
 }
 
 let npc;
-if (getParameterByName('age') === 'tekken5')
-    npc = ChristieTekken5();
+if (getParameterByName('age') === 'tekken6')
+    npc = ChristieTekken6();
 else
     npc = ChristieTekken4();
 

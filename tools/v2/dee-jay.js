@@ -1,12 +1,14 @@
 function DeeJayZ3() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Arena", 1);
     antecedentes[2] = newCaracteristica("Recursos", 2);
     antecedentes[3] = newCaracteristica("Fama", 1);
-    var pericias = [];
+    
+    const pericias = [];
     pericias[0] = newCaracteristica("Música", 4);
-    var deeJay =
+    
+    const deeJay =
     {
         Nome: "Dee Jay",
         Estilo: "Kickboxe",
@@ -64,14 +66,16 @@ function DeeJayZ3() {
 }
 
 function DeeJaySF2() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 2);
     antecedentes[2] = newCaracteristica("Recursos", 3);
     antecedentes[3] = newCaracteristica("Fama", 2);
-    var pericias = [];
+    
+    const pericias = [];
     pericias[0] = newCaracteristica("Música", 5);
-    var deeJay =
+    
+    const deeJay =
     {
         Nome: "Dee Jay",
         Estilo: "Kickboxe",
@@ -128,15 +132,17 @@ function DeeJaySF2() {
     return deeJay;
 }
 
-function DeeJaySF4() {
-    var antecedentes = [];
+function DeeJaySF6() {
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 3);
     antecedentes[2] = newCaracteristica("Recursos", 4);
     antecedentes[3] = newCaracteristica("Fama", 3);
-    var pericias = [];
+    
+    const pericias = [];
     pericias[0] = newCaracteristica("Música", 6);
-    var deeJay =
+    
+    const deeJay =
     {
         Nome: "Dee Jay",
         Estilo: "Kickboxe",
@@ -146,7 +152,7 @@ function DeeJaySF4() {
         Posto: 10,
         Divisao: "Estilo Livre",
         Jogador: "NPC",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 6",
         Equipe: "",
         Antecedentes: antecedentes,
         Saude: 20,
@@ -193,11 +199,11 @@ function DeeJaySF4() {
     return deeJay;
 }
 
-var npc;
+let npc;
 if (getParameterByName('age') === 'sfa')
     npc = DeeJayZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = DeeJaySF4();
+else if (getParameterByName('age') === 'sf6')
+    npc = DeeJaySF6();
 else
     npc = DeeJaySF2();
 npc = calcPC(npc);

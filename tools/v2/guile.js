@@ -139,7 +139,7 @@ function GuileSF2() {
     return guile;
 }
 
-function GuileSF4() {
+function GuileSF5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 3);
     antecedentes[1] = newCaracteristica("Arena", 4);
@@ -160,7 +160,7 @@ function GuileSF4() {
         Conceito: "Coronel",
         Assinatura: "Cabelo estiloso",
         Jogador: "NPC",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -209,7 +209,7 @@ function GuileSF4() {
     return guile;
 }
 
-function GuileSF5() {
+function GuileSF6() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Arena", 5);
@@ -230,7 +230,7 @@ function GuileSF5() {
         Conceito: "Coronel",
         Assinatura: "Cabelo estiloso",
         Jogador: "NPC",
-        Cronica: "Street Fighter 5",
+        Cronica: "Street Fighter 6",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -279,83 +279,11 @@ function GuileSF5() {
     return guile;
 }
 
-function GuileSF6() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 5);
-    antecedentes[1] = newCaracteristica("Arena", 5);
-    antecedentes[2] = newCaracteristica("Apoio", 5);
-    antecedentes[3] = newCaracteristica("Contatos", 5);
-    antecedentes[4] = newCaracteristica("Fama", 5);
-    antecedentes[5] = newCaracteristica("Recursos", 3);
-    antecedentes[6] = newCaracteristica("Staff", 5);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
-
-    const guile =
-    {
-        Nome: "Guile",
-        Estilo: "Forças Especiais",
-        Escola: "USAF",
-        Conceito: "Coronel",
-        Assinatura: "Cabelo estiloso",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 6",
-        Forca: 5,
-        Destreza: 5,
-        Vigor: 6,
-        Carisma: 4,
-        Manipulacao: 5,
-        Aparencia: 5,
-        Percepcao: 5,
-        Inteligencia: 4,
-        Raciocinio: 5,
-        Prontidao: 5,
-        Interrogacao: 5,
-        Intimidacao: 6,
-        Perspicacia: 5,
-        Manha: 5,
-        Labia: 3,
-        LutaCega: 5,
-        Conducao: 5,
-        Lideranca: 6,
-        Seguranca: 5,
-        Furtividade: 5,
-        Sobrevivencia: 5,
-        Arena: 5,
-        Computador: 4,
-        Investigacao: 5,
-        Medicina: 3,
-        Misterios: 4,
-        Estilos: 6,
-        Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        Soco: 5,
-        Chute: 7,
-        Bloqueio: 6,
-        Apresamento: 5,
-        Esportes: 5,
-        Foco: 6,
-        Divisao: "Estilo Livre",
-        Posto: 10,
-        Chi: 10,
-        ForcaVontade: 10,
-        Saude: 20,
-        Gloria: 10,
-        Honra: 9,
-        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
-        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep;"
-    };
-    return guile;
-}
-
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = GuileSFZ3();
 else if (getParameterByName('age') === 'sf2')
     npc = GuileSF2();
-else if (getParameterByName('age') === 'sf4')
-    npc = GuileSF4();
 else if (getParameterByName('age') === 'sf6')
     npc = GuileSF6();
 else

@@ -62,7 +62,7 @@ function MBisonSF2() {
     return bison;
 }
 
-function MBisonSF4() {
+function MBisonSF5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Arena", 5);
     antecedentes[1] = newCaracteristica("Fama", 3);
@@ -79,7 +79,7 @@ function MBisonSF4() {
         Equipe: "Shadaloo",
         Time: "Generais de Bison",
         Jogador: "NPC",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Forca: 6,
         Destreza: 6,
         Vigor: 6,
@@ -126,7 +126,7 @@ function MBisonSF4() {
     return bison;
 }
 
-function MBisonSF5() {
+function MBisonSF6() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Arena", 5);
     antecedentes[1] = newCaracteristica("Fama", 4);
@@ -143,7 +143,7 @@ function MBisonSF5() {
         Equipe: "Shadaloo",
         Time: "Generais de Bison",
         Jogador: "NPC",
-        Cronica: "Street Fighter 5",
+        Cronica: "Street Fighter 6",
         Forca: 6,
         Destreza: 6,
         Vigor: 6,
@@ -259,8 +259,8 @@ if (getParameterByName('age') === 'sfa')
     npc = MBisonSFZ3();
 else if (getParameterByName('age') === 'sf2')
     npc = MBisonSF2();
-else if (getParameterByName('age') === 'sf4')
-    npc = MBisonSF4();
-else
+else if (getParameterByName('age') === 'sf5')
     npc = MBisonSF5();
+else
+    npc = MBisonSF6();
 npc = calcPC(npc);

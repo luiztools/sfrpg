@@ -1,67 +1,3 @@
-function AdonSF1() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Arena", 2);
-    antecedentes[1] = newCaracteristica("Contatos", 1);
-    antecedentes[2] = newCaracteristica("Fama", 1);
-    antecedentes[3] = newCaracteristica("Recursos", 2);
-    antecedentes[4] = newCaracteristica("Sensei", 4);
-
-    const adon =
-    {
-        Nome: "Adon",
-        Estilo: "Thai Kickboxe",
-        Escola: "Dojô de Sagat",
-        Conceito: "Desafiante",
-        Assinatura: "Gargalhada",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 1",
-        Forca: 3,
-        Destreza: 5,
-        Vigor: 4,
-        Carisma: 3,
-        Manipulacao: 3,
-        Aparencia: 3,
-        Percepcao: 2,
-        Inteligencia: 2,
-        Raciocinio: 4,
-        Antecedentes: antecedentes,
-        Gloria: 5,
-        Honra: 2,
-        Prontidao: 1,
-        Interrogacao: 2,
-        Intimidacao: 1,
-        Perspicacia: 2,
-        Manha: 1,
-        Labia: 4,
-        LutaCega: 0,
-        Conducao: 1,
-        Lideranca: 2,
-        Seguranca: 0,
-        Furtividade: 3,
-        Sobrevivencia: 2,
-        Arena: 3,
-        Computador: 0,
-        Investigacao: 2,
-        Medicina: 2,
-        Misterios: 1,
-        Estilos: 3,
-        Soco: 4,
-        Chute: 5,
-        Bloqueio: 3,
-        Apresamento: 3,
-        Esportes: 4,
-        Foco: 2,
-        Chi: 3,
-        ForcaVontade: 5,
-        Divisao: "Tradicional",
-        Posto: 7,
-        Saude: 15,
-        ManobrasEspeciais: "Jump, Foot Sweep, Wheel Kick, Elbow Smash, Throw, Tiger Knee, Double-Hit Knee, Back Roll Throw, Wall Spring, Air Throw, Flying Body Spear",
-        Combos: "Elbow Smash 3x (Dizzy); Elbow Smash 2x para Tiger Knee (Dizzy)"
-    };
-    return adon;
-}
-
 function AdonZ3() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Arena", 3);
@@ -191,9 +127,7 @@ function AdonSF4() {
 }
 
 let npc;
-if (getParameterByName('age') === 'sf1')
-    npc = AdonSF1();
-else if (getParameterByName('age') === 'sfa')
+if (getParameterByName('age') === 'sfa')
     npc = AdonZ3();
 else
     npc = AdonSF4();

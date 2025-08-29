@@ -3,80 +3,6 @@ function VegaSF5() {
     antecedentes[0] = newCaracteristica("Arena", 5);
     antecedentes[1] = newCaracteristica("Apoio", 4);
     antecedentes[2] = newCaracteristica("Contatos", 4);
-    antecedentes[3] = newCaracteristica("Fama", 5);
-    antecedentes[4] = newCaracteristica("Recursos", 4);
-    antecedentes[5] = newCaracteristica("Staff", 4);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Garra", 7);
-
-    const armas = [];
-    armas[0] = "Garra";
-
-    const vega =
-    {
-        Nome: "Vega",
-        Estilo: "Ninjitsu Espanhol",
-        Time: "Generais de Bison",
-        Equipe: "Shadaloo",
-        Conceito: "Diletante",
-        Assinatura: "Tira a máscara",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 5",
-        Forca: 5,
-        Destreza: 7,
-        Vigor: 5,
-        Carisma: 4,
-        Manipulacao: 6,
-        Aparencia: 7,
-        Percepcao: 6,
-        Inteligencia: 4,
-        Raciocinio: 6,
-        Prontidao: 5,
-        Interrogacao: 4,
-        Intimidacao: 5,
-        Perspicacia: 5,
-        Manha: 3,
-        Labia: 6,
-        LutaCega: 6,
-        Conducao: 4,
-        Lideranca: 4,
-        Seguranca: 6,
-        Furtividade: 7,
-        Sobrevivencia: 4,
-        Arena: 5,
-        Computador: 2,
-        Investigacao: 5,
-        Medicina: 1,
-        NovasTecnicas: tecnicas,
-        Misterios: 4,
-        Estilos: 5,
-        Antecedentes: antecedentes,
-        Soco: 5,
-        Chute: 5,
-        Bloqueio: 5,
-        Apresamento: 5,
-        Esportes: 7,
-        Foco: 2,
-        Armas: armas,
-        Gloria: 10,
-        Honra: 0,
-        Chi: 6,
-        ForcaVontade: 10,
-        Saude: 20,
-        Divisao: "Duelistas",
-        Posto: 10,
-        ManobrasEspeciais: "Forward Slide Kick, Throw, Air Throw, Choke Throw, Suplex, Jump, Backflip Kick, Light Feet, Tumbling Attack, Wall Spring",
-        Combos: "Wall Spring para Suplex; Tumbling Attack para Tumbling Attack (Dizzy); Jump + Forward para Strong para Tumbling Attack (Dizzy);"
-    };
-    return vega;
-}
-
-function VegaSF4() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Arena", 5);
-    antecedentes[1] = newCaracteristica("Apoio", 4);
-    antecedentes[2] = newCaracteristica("Contatos", 4);
     antecedentes[3] = newCaracteristica("Fama", 4);
     antecedentes[4] = newCaracteristica("Recursos", 4);
     antecedentes[5] = newCaracteristica("Staff", 4);
@@ -96,7 +22,7 @@ function VegaSF4() {
         Conceito: "Diletante",
         Assinatura: "Tira a máscara",
         Jogador: "NPC",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Forca: 4,
         Destreza: 7,
         Vigor: 5,
@@ -299,8 +225,6 @@ if (getParameterByName('age') === 'sfa')
     npc = VegaZ3();
 else if (getParameterByName('age') === 'sf2')
     npc = VegaSF2();
-else if (getParameterByName('age') === 'sf4')
-    npc = VegaSF4();
 else
     npc = VegaSF5();
 npc = calcPC(npc);
