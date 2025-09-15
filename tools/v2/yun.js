@@ -1,12 +1,11 @@
 function YunSF4() {
-    var antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 3);
-    antecedentes[1] = newCaracteristica("Contatos", 3);
-    antecedentes[2] = newCaracteristica("Sensei", 5);
-    antecedentes[3] = newCaracteristica("Staff", 3);
-    antecedentes[4] = newCaracteristica("Recursos", 2);
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 4);
+    antecedentes[1] = newCaracteristica("Arena", 3);
+    antecedentes[2] = newCaracteristica("Fama", 1);
+    antecedentes[3] = newCaracteristica("Sensei", 3);
 
-    var yun =
+    const yun =
     {
         Nome: "Yun Lee",
         Conceito: "Líder Comunitário",
@@ -18,104 +17,108 @@ function YunSF4() {
         Forca: 5,
         Destreza: 6,
         Vigor: 4,
-        Carisma: 5,
+        Carisma: 4,
         Manipulacao: 4,
-        Aparencia: 5,
-        Percepcao: 2,
-        Inteligencia: 3,
+        Aparencia: 4,
+        Percepcao: 3,
+        Inteligencia: 2,
         Raciocinio: 4,
-        Prontidao: 5,
-        Interrogacao: 1,
+        Prontidao: 3,
+        Interrogacao: 4,
         Intimidacao: 3,
-        Perspicacia: 2,
-        Manha: 5,
-        Labia: 3,
-        LutaCega: 5,
-        Conducao: 1,
-        Lideranca: 5,
+        Perspicacia: 3,
+        Manha: 3,
+        Labia: 4,
+        LutaCega: 2,
+        Conducao: 3,
+        Lideranca: 4,
         Seguranca: 3,
         Furtividade: 3,
-        Sobrevivencia: 1,
-        Arena: 4,
-        Computador: 1,
+        Sobrevivencia: 0,
+        Arena: 3,
+        Computador:2,
+        Investigacao: 3,
+        Medicina: 2,
+        Misterios: 1,
         Estilos: 3,
         Antecedentes: antecedentes,
         Soco: 5,
-        Chute: 5,
-        Bloqueio: 5,
+        Chute: 6,
+        Bloqueio: 6,
         Apresamento: 4,
-        Esportes: 5,
-        Foco: 2,
-        Gloria: 9,
-        Honra: 7,
-        Chi: 4,
-        ForcaVontade: 10,
+        Esportes: 6,
+        Foco: 3,
+        Gloria: 8,
+        Honra: 6,
+        Chi: 7,
+        ForcaVontade: 8,
         Saude: 20,
         Divisao: "Tradicional",
         Posto: 9,
-        ManobrasEspeciais: "Back Throw, Body Roll, Dive Kick, Flying Twin Kick, Foot Sweep, Knee Basher, Palm Press, Shoulder Blast, Spring Punch, Throw",
-        Combos: "Foot Sweep para Roundhouse; Body Roll para Shoulder Blast; Throw para Spring Punch para Palm Press (Dizzy)"
+        ManobrasEspeciais: "Jump, Kobokushi, Foot Sweep, Senkju Tai, Knee Basher, Dive Kick, Back Roll Throw, Throw, Flying Heel Stomp, Drunken Monkey Roll, Gekiro, Rekka Ken, Kippup",
+        Combos: "Drunken Monkey Roll para Gekiro; Senkju Tai para Kobokushi (Dizzy); Bloqueio para Knee Basher (dizzy); Short para Forward para Kobokushi"
     };
     return yun;
 }
 
 function YunZ3() {
-    var antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Contatos", 2);
-    antecedentes[2] = newCaracteristica("Sensei", 5);
-    antecedentes[3] = newCaracteristica("Staff", 2);
-    antecedentes[4] = newCaracteristica("Recursos", 2);
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 3);
+    antecedentes[1] = newCaracteristica("Arena", 2);
+    antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    var yun =
+    const yun =
     {
         Nome: "Yun Lee",
-        Conceito: "Líder Comunitário",
+        Conceito: "Estudante",
         Escola: "Dojô de Gen",
         Estilo: "Kung Fu",
         Assinatura: "Skatista",
         Jogador: "NPC",
         Cronica: "Street Fighter Alpha",
-        Forca: 5,
+        Forca: 4,
         Destreza: 5,
-        Vigor: 4,
-        Carisma: 5,
+        Vigor: 3,
+        Carisma: 4,
         Manipulacao: 4,
-        Aparencia: 5,
+        Aparencia: 4,
         Percepcao: 2,
-        Inteligencia: 3,
-        Raciocinio: 4,
-        Prontidao: 4,
-        Interrogacao: 1,
-        Intimidacao: 3,
+        Inteligencia: 1,
+        Raciocinio: 3,
+        Prontidao: 2,
+        Interrogacao: 3,
+        Intimidacao: 2,
         Perspicacia: 2,
-        Manha: 5,
+        Manha: 2,
         Labia: 3,
-        LutaCega: 4,
-        Conducao: 1,
-        Lideranca: 4,
-        Seguranca: 3,
-        Furtividade: 3,
-        Sobrevivencia: 1,
-        Arena: 4,
-        Computador: 1,
-        Estilos: 3,
+        LutaCega: 1,
+        Conducao: 2,
+        Lideranca: 3,
+        Seguranca: 2,
+        Furtividade: 2,
+        Sobrevivencia: 0,
+        Arena: 2,
+        Computador:1,
+        Investigacao: 2,
+        Medicina: 1,
+        Misterios: 0,
+        Estilos: 2,
         Antecedentes: antecedentes,
-        Soco: 5,
+        Soco: 4,
         Chute: 5,
-        Bloqueio: 4,
-        Apresamento: 4,
+        Bloqueio: 5,
+        Apresamento: 3,
         Esportes: 5,
         Foco: 2,
-        Gloria: 8,
-        Honra: 6,
-        Chi: 3,
-        ForcaVontade: 9,
+        Gloria: 7,
+        Honra: 5,
+        Chi: 6,
+        ForcaVontade: 7,
         Saude: 18,
         Divisao: "Tradicional",
-        Posto: 7,
-        ManobrasEspeciais: "Back Throw, Body Roll, Dive Kick, Flying Twin Kick, Foot Sweep, Knee Basher, Palm Press, Shoulder Blast, Spring Punch, Throw",
-        Combos: "Foot Sweep para Roundhouse; Body Roll para Shoulder Blast;"
+        Posto: 8,
+        ManobrasEspeciais: "Jump, Kobokushi, Foot Sweep, Senkju Tai, Knee Basher, Dive Kick, Back Roll Throw, Throw, Flying Heel Stomp, Drunken Monkey Roll,  Gekiro, Rekka Ken, Kippup",
+        Combos: "Drunken Monkey Roll para Gekiro; Senkju Tai para Kobokushi (Dizzy); Bloqueio para Knee Basher (dizzy);"
     };
     return yun;
 }

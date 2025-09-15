@@ -4,6 +4,9 @@ function LiuKangMk3() {
     antecedentes[1] = newCaracteristica("Arena", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
 
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 2);
+
     const personagem = {
         Nome: "Liu Kang",
         Estilo: "Kung Fu",
@@ -11,6 +14,7 @@ function LiuKangMk3() {
         Jogador: "NPC",
         Assinatura: "Cumprimento oriental",
         Conceito: "Monge",
+        Time: "Defensores da Terra",
         Cronica: "Mortal Kombat",
         Forca: 4,
         Destreza: 6,
@@ -37,7 +41,7 @@ function LiuKangMk3() {
         Investigacao: 1,
         Medicina: 2,
         Misterios: 2,
-        NovosTalentos: [newCaracteristica("Instrução", 2)],
+        NovosTalentos: talentos,
         Estilos: 5,
         Antecedentes: antecedentes,
         Soco: 5,

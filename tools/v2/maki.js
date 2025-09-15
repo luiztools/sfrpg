@@ -1,81 +1,16 @@
-function MakiFF2() {
-    var antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 4);
-    antecedentes[1] = newCaracteristica("Sensei", 5);
-    antecedentes[2] = newCaracteristica("Herança de Clã", 5);
-
-    var tecnicas = [];
-    tecnicas[0] = newCaracteristica("Bastão", 5);
-
-    var armas = [];
-    armas[0] = "Tonfa";
-
-    var maki =
-    {
-        Nome: "Maki Genryusai",
-        Estilo: "Ninjitsu (Bojutsu)",
-        Escola: "Bushinryu Ninpou",
-        Conceito: "Kunoichi",
-        Assinatura: "Pula de alegria!",
-        Cronica: "Final Fight 2",
-        Time: "Final Fight",
-        Equipe: "Nenhuma",
-        Jogador: "NPC",
-        Forca: 3,
-        Destreza: 6,
-        Vigor: 3,
-        Carisma: 5,
-        Manipulacao: 3,
-        Aparencia: 5,
-        Percepcao: 3,
-        Inteligencia: 3,
-        Raciocinio: 4,
-        Seguranca: 1,
-        Computador: 1,
-        Prontidao: 3,
-        Perspicacia: 3,
-        Manha: 3,
-        Labia: 3,
-        LutaCega: 4,
-        Furtividade: 3,
-        Sobrevivencia: 2,
-        Investigacao: 1,
-        Medicina: 2,
-        Misterios: 1,
-        Estilos: 2,
-        Conducao: 2,
-        Antecedentes: antecedentes,
-        Soco: 4,
-        Chute: 3,
-        Bloqueio: 3,
-        Apresamento: 3,
-        Esportes: 5,
-        Foco: 2,
-        Armas: armas,
-        NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Fist Sweep, Throw, Suplex, Air Suplex, Knee Basher, Elbow Smash, Rekka Ken, Slide Kick, Heel Stamp, Kippup, Power Uppercut, Spinning Baton",
-        Combos: "Spinning Baton para Spinning Baton (Dizzy), Rekka Ken para Throw, Throw para Slide Kick",
-        Posto: 6,
-        Gloria: 3,
-        Honra: 5,
-        Divisao: "Duelistas",
-        Chi: 3,
-        ForcaVontade: 6,
-        Saude: 17
-    };
-    return maki;
-}
-
-function MakiZ3() {
-    var antecedentes = [];
+function Maki() {
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
-    antecedentes[1] = newCaracteristica("Sensei", 5);
-    antecedentes[2] = newCaracteristica("Herança de Clã", 5);
+    antecedentes[1] = newCaracteristica("Contatos", 3);
+    antecedentes[2] = newCaracteristica("Fama", 1);
+    antecedentes[3] = newCaracteristica("Recursos", 3);
+    antecedentes[4] = newCaracteristica("Sensei", 5);
+    antecedentes[5] = newCaracteristica("Herança de Clã", 4);
 
-    var tecnicas = [];
+    const tecnicas = [];
     tecnicas[0] = newCaracteristica("Bastão", 5);
 
-    var armas = [];
+    const armas = [];
     armas[0] = "Tonfa";
 
     var maki =
@@ -91,53 +26,52 @@ function MakiZ3() {
         Jogador: "NPC",
         Forca: 3,
         Destreza: 6,
-        Vigor: 3,
-        Carisma: 5,
+        Vigor: 4,
+        Carisma: 4,
         Manipulacao: 3,
-        Aparencia: 5,
-        Percepcao: 4,
+        Aparencia: 4,
+        Percepcao: 3,
         Inteligencia: 3,
-        Raciocinio: 4,
-        Seguranca: 1,
-        Computador: 1,
+        Raciocinio: 3,
         Prontidao: 3,
-        Perspicacia: 3,
-        Manha: 4,
-        Labia: 3,
+        Interrogacao: 2,
+        Intimidacao: 3,
+        Perspicacia: 4,
+        Manha: 2,
+        Labia: 1,
         LutaCega: 4,
-        Furtividade: 3,
+        Conducao: 2,
+        Lideranca: 1,
+        Seguranca: 1,
+        Furtividade: 4,
         Sobrevivencia: 2,
-        Investigacao: 1,
-        Medicina: 2,
-        Misterios: 1,
-        Estilos: 2,
-        Conducao: 3,
+        Arena: 2,
+        Computador: 2,
+        Investigacao: 3,
+        Medicina: 3,
+        Misterios: 3,
+        Estilos: 3,
         Antecedentes: antecedentes,
         Soco: 4,
-        Chute: 3,
-        Bloqueio: 4,
+        Chute: 5,
+        Bloqueio: 3,
         Apresamento: 3,
         Esportes: 5,
-        Foco: 2,
+        Foco: 1,
         Armas: armas,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Fist Sweep, Throw, Suplex, Air Suplex, Knee Basher, Elbow Smash, Rekka Ken, Slide Kick, Heel Stamp, Kippup, Power Uppercut, Spinning Baton",
-        Combos: "Spinning Baton para Spinning Baton (Dizzy), Rekka Ken para Throw, Throw para Slide Kick, Heel Stamp para Throw",
-        Posto: 7,
-        Gloria: 4,
+        ManobrasEspeciais: "Jump, Wall Spring, Throw, Air Smash, Handstand Kick, Flying Thrust Kick, Knee Basher, Slide Kick, Kippup",
+        Combos: "Jab para Slide Kick; Slide Kick para Flying Thrust Kick",
+        Posto: 6,
+        Gloria: 5,
         Honra: 6,
         Divisao: "Duelistas",
-        Chi: 4,
+        Chi: 5,
         ForcaVontade: 7,
-        Saude: 18
+        Saude: 17
     };
     return maki;
 }
 
-var npc;
-if (getParameterByName('age') === 'ff2')
-    npc = MakiFF2();
-else
-    npc = MakiZ3();
-
+let npc = Maki();
 npc = calcPC(npc);

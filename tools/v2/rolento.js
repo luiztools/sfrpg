@@ -1,169 +1,15 @@
-function RolentoFF1() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Staff", 5);
-    antecedentes[1] = newCaracteristica("Apoio", 4);
-    antecedentes[2] = newCaracteristica("Arena", 3);
-    antecedentes[3] = newCaracteristica("Contatos", 5);
-    antecedentes[4] = newCaracteristica("Fama", 3);
-    antecedentes[5] = newCaracteristica("Recursos", 3);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 5);
-    tecnicas[1] = newCaracteristica("Faca", 5);
-    tecnicas[2] = newCaracteristica("Arremesso", 4);
-    tecnicas[3] = newCaracteristica("Bastão", 5);
-
-    const armas = [];
-    armas[0] = "Bastão";
-    armas[1] = "Faca";
-
-    const rolento =
-    {
-        Nome: "Rolento F. Schugerg",
-        Estilo: "Forças Especiais (Bojutsu)",
-        Escola: "Exército Americano",
-        Equipe: "Mad Gear",
-        Conceito: "Revolucionário",
-        Assinatura: "Joga uma granada no oponente caído",
-        Jogador: "NPC",
-        Cronica: "Final Fight 1",
-        Forca: 5,
-        Destreza: 5,
-        Vigor: 5,
-        Carisma: 3,
-        Manipulacao: 5,
-        Aparencia: 2,
-        Percepcao: 4,
-        Inteligencia: 5,
-        Raciocinio: 5,
-        Prontidao: 3,
-        Interrogacao: 5,
-        Intimidacao: 4,
-        Manha: 5,
-        Labia: 4,
-        LutaCega: 1,
-        Conducao: 4,
-        Lideranca: 4,
-        Seguranca: 5,
-        Furtividade: 3,
-        Sobrevivencia: 4,
-        Arena: 3,
-        Computador: 2,
-        Investigacao: 3,
-        Medicina: 1,
-        Misterios: 0,
-        Estilos: 3,
-        Antecedentes: antecedentes,
-        Soco: 4,
-        Chute: 5,
-        Bloqueio: 4,
-        Apresamento: 4,
-        Esportes: 5,
-        Foco: 2,
-        Armas: armas,
-        NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Spinning Weapon",
-        Combos: "Bastão Jab para Bastão Strong para Bastão Strong (Dizzy), Granada para Granada para Granada (dizzy), Faca de Arremesso para Granada, Spinning Baton para Spinning Baton para Spinning Baton (dizzy)",
-        Chi: 1,
-        ForcaVontade: 8,
-        Saude: 14,
-        Posto: 4,
-        Honra: 3,
-        Gloria: 3,
-        Divisao: "Duelistas"
-    };
-    return rolento;
-}
-
-function RolentoFF2() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Staff", 5);
-    antecedentes[1] = newCaracteristica("Apoio", 3);
-    antecedentes[2] = newCaracteristica("Arena", 3);
-    antecedentes[3] = newCaracteristica("Contatos", 5);
-    antecedentes[4] = newCaracteristica("Fama", 3);
-    antecedentes[5] = newCaracteristica("Recursos", 3);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 5);
-    tecnicas[1] = newCaracteristica("Faca", 5);
-    tecnicas[2] = newCaracteristica("Arremesso", 4);
-    tecnicas[3] = newCaracteristica("Bastão", 5);
-
-    const armas = [];
-    armas[0] = "Bastão";
-    armas[1] = "Faca";
-
-    const rolento =
-    {
-        Nome: "Rolento F. Schugerg",
-        Estilo: "Forças Especiais (Bojutsu)",
-        Escola: "Exército Americano",
-        Equipe: "Mad Gear",
-        Conceito: "Revolucionário",
-        Assinatura: "Joga uma granada no oponente caído",
-        Jogador: "NPC",
-        Cronica: "Final Fight 2",
-        Forca: 5,
-        Destreza: 5,
-        Vigor: 5,
-        Carisma: 3,
-        Manipulacao: 5,
-        Aparencia: 2,
-        Percepcao: 4,
-        Inteligencia: 5,
-        Raciocinio: 5,
-        Prontidao: 3,
-        Interrogacao: 5,
-        Intimidacao: 4,
-        Manha: 5,
-        Labia: 4,
-        LutaCega: 1,
-        Conducao: 4,
-        Lideranca: 4,
-        Seguranca: 5,
-        Furtividade: 3,
-        Sobrevivencia: 4,
-        Arena: 3,
-        Computador: 2,
-        Investigacao: 3,
-        Medicina: 1,
-        Misterios: 0,
-        Estilos: 3,
-        Antecedentes: antecedentes,
-        Soco: 4,
-        Chute: 5,
-        Bloqueio: 4,
-        Apresamento: 4,
-        Esportes: 5,
-        Foco: 2,
-        Armas: armas,
-        NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Spinning Weapon",
-        Combos: "Bastão Jab para Bastão Strong para Bastão Strong (Dizzy), Granada para Granada para Granada (dizzy), Faca de Arremesso para Granada, Spinning Baton para Spinning Baton para Spinning Baton (dizzy)",
-        Chi: 2,
-        ForcaVontade: 9,
-        Saude: 16,
-        Posto: 4,
-        Honra: 3,
-        Gloria: 4,
-        Divisao: "Duelistas"
-    };
-    return rolento;
-}
-
 function RolentoZ3() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Staff", 5);
     antecedentes[1] = newCaracteristica("Apoio", 3);
     antecedentes[2] = newCaracteristica("Arena", 3);
     antecedentes[3] = newCaracteristica("Contatos", 5);
-    antecedentes[4] = newCaracteristica("Fama", 2);
+    antecedentes[4] = newCaracteristica("Fama", 1);
     antecedentes[5] = newCaracteristica("Recursos", 2);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 5);
-    tecnicas[1] = newCaracteristica("Faca", 5);
+    tecnicas[1] = newCaracteristica("Faca", 4);
     tecnicas[2] = newCaracteristica("Arremesso", 4);
     tecnicas[3] = newCaracteristica("Bastão", 5);
 
@@ -179,6 +25,7 @@ function RolentoZ3() {
         Conceito: "Revolucionário",
         Assinatura: "Joga uma granada no oponente caído",
         Jogador: "NPC",
+        Time: "Mad Gear",
         Cronica: "Street Fighter Alpha",
         Forca: 5,
         Destreza: 5,
@@ -192,6 +39,7 @@ function RolentoZ3() {
         Prontidao: 3,
         Interrogacao: 5,
         Intimidacao: 4,
+        Perspicacia: 2,
         Manha: 5,
         Labia: 4,
         LutaCega: 1,
@@ -207,22 +55,22 @@ function RolentoZ3() {
         Misterios: 0,
         Estilos: 3,
         Antecedentes: antecedentes,
-        Soco: 4,
+        Soco: 3,
         Chute: 5,
         Bloqueio: 4,
-        Apresamento: 4,
-        Esportes: 5,
+        Apresamento: 5,
+        Esportes: 4,
         Foco: 2,
         Armas: armas,
         NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Spinning Weapon",
-        Combos: "Bastão Jab para Bastão Strong para Bastão Strong (Dizzy), Granada para Granada para Granada (dizzy), Faca de Arremesso para Granada, Spinning Baton para Spinning Baton para Spinning Baton (dizzy)",
-        Chi: 2,
+        Combos: "Faca Arremessada para Granada; Spinning Weapon para Spinning Weapon para Spinning Weapon (Dizzy)",
+        Chi: 3,
         ForcaVontade: 9,
         Saude: 18,
-        Posto: 5,
+        Posto: 6,
         Honra: 3,
-        Gloria: 5,
+        Gloria: 6,
         Divisao: "Duelistas"
     };
     return rolento;
@@ -231,16 +79,16 @@ function RolentoZ3() {
 function RolentoSF4() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Staff", 5);
-    antecedentes[1] = newCaracteristica("Apoio", 3);
-    antecedentes[2] = newCaracteristica("Arena", 3);
+    antecedentes[1] = newCaracteristica("Apoio", 2);
+    antecedentes[2] = newCaracteristica("Arena", 2);
     antecedentes[3] = newCaracteristica("Contatos", 5);
-    antecedentes[4] = newCaracteristica("Fama", 1);
-    antecedentes[5] = newCaracteristica("Recursos", 2);
+    antecedentes[4] = newCaracteristica("Fama", 2);
+    antecedentes[5] = newCaracteristica("Recursos", 1);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 5);
     tecnicas[1] = newCaracteristica("Faca", 5);
-    tecnicas[2] = newCaracteristica("Arremesso", 4);
+    tecnicas[2] = newCaracteristica("Arremesso", 5);
     tecnicas[3] = newCaracteristica("Bastão", 5);
 
     const armas = [];
@@ -265,40 +113,41 @@ function RolentoSF4() {
         Percepcao: 4,
         Inteligencia: 5,
         Raciocinio: 5,
-        Prontidao: 3,
+        Prontidao: 4,
         Interrogacao: 5,
         Intimidacao: 4,
+        Perspicacia: 3,
         Manha: 5,
-        Labia: 4,
+        Labia: 5,
         LutaCega: 1,
-        Conducao: 4,
-        Lideranca: 4,
+        Conducao: 5,
+        Lideranca: 5,
         Seguranca: 5,
         Furtividade: 3,
-        Sobrevivencia: 4,
-        Arena: 3,
+        Sobrevivencia: 5,
+        Arena: 4,
         Computador: 2,
         Investigacao: 3,
         Medicina: 1,
         Misterios: 0,
-        Estilos: 3,
+        Estilos: 4,
         Antecedentes: antecedentes,
-        Soco: 4,
+        Soco: 3,
         Chute: 5,
         Bloqueio: 4,
-        Apresamento: 4,
-        Esportes: 5,
+        Apresamento: 5,
+        Esportes: 4,
         Foco: 2,
         Armas: armas,
         NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Spinning Weapon",
-        Combos: "Bastão Jab para Bastão Strong para Bastão Strong (Dizzy), Granada para Granada para Granada (dizzy), Faca de Arremesso para Granada, Spinning Baton para Spinning Baton para Spinning Baton (dizzy)",
-        Chi: 3,
-        ForcaVontade: 9,
+        Combos: "Faca Arremessada para Granada; Spinning Weapon para Spinning Weapon para Spinning Weapon (Dizzy)",
+        Chi: 4,
+        ForcaVontade: 10,
         Saude: 20,
-        Posto: 6,
-        Honra: 3,
-        Gloria: 6,
+        Posto: 7,
+        Honra: 4,
+        Gloria: 7,
         Divisao: "Duelistas"
     };
     return rolento;
@@ -307,10 +156,6 @@ function RolentoSF4() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = RolentoZ3();
-else if (getParameterByName('age') === 'ff1')
-    npc = RolentoFF1();
-else if (getParameterByName('age') === 'ff2')
-    npc = RolentoFF2();
 else
     npc = RolentoSF4();
 

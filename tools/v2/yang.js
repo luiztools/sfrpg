@@ -1,128 +1,129 @@
 function YangSF4() {
-    var antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 3);
-    antecedentes[1] = newCaracteristica("Contatos", 3);
-    antecedentes[2] = newCaracteristica("Sensei", 5);
-    antecedentes[3] = newCaracteristica("Staff", 3);
-    antecedentes[4] = newCaracteristica("Recursos", 2);
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 4);
+    antecedentes[1] = newCaracteristica("Arena", 3);
+    antecedentes[2] = newCaracteristica("Fama", 1);
+    antecedentes[3] = newCaracteristica("Sensei", 3);
 
-    var yang =
+    const yang =
     {
         Nome: "Yang Lee",
         Conceito: "Líder Comunitário",
         Escola: "Dojô de Gen",
         Estilo: "Kung Fu",
-        Assinatura: "Calmaria",
+        Assinatura: "Cabelo estiloso",
         Jogador: "NPC",
         Cronica: "Street Fighter 4",
         Forca: 5,
         Destreza: 6,
         Vigor: 4,
-        Carisma: 2,
-        Manipulacao: 2,
-        Aparencia: 5,
-        Percepcao: 5,
+        Carisma: 3,
+        Manipulacao: 3,
+        Aparencia: 4,
+        Percepcao: 4,
         Inteligencia: 4,
         Raciocinio: 4,
-        Prontidao: 5,
-        Interrogacao: 1,
-        Intimidacao: 3,
+        Prontidao: 3,
+        Interrogacao: 3,
+        Intimidacao: 2,
         Perspicacia: 4,
-        Manha: 4,
-        Labia: 5,
-        LutaCega: 5,
+        Manha: 3,
+        Labia: 2,
+        LutaCega: 4,
         Conducao: 1,
-        Lideranca: 5,
-        Seguranca: 3,
-        Furtividade: 3,
-        Sobrevivencia: 1,
-        Arena: 4,
+        Lideranca: 2,
+        Seguranca: 2,
+        Furtividade: 4,
+        Sobrevivencia: 2,
+        Arena: 3,
         Computador: 2,
-        Misterios: 1,
-        Estilos: 4,
+        Investigacao: 3,
+        Medicina: 4,
+        Misterios: 3,
+        Estilos: 3,
         Antecedentes: antecedentes,
         Soco: 5,
-        Chute: 5,
-        Bloqueio: 5,
+        Chute: 6,
+        Bloqueio: 6,
         Apresamento: 4,
-        Esportes: 5,
+        Esportes: 6,
         Foco: 3,
         Gloria: 6,
-        Honra: 9,
-        Chi: 8,
-        ForcaVontade: 10,
+        Honra: 8,
+        Chi: 6,
+        ForcaVontade: 8,
         Saude: 20,
         Divisao: "Tradicional",
         Posto: 9,
-        ManobrasEspeciais: "Back Roll Throw, Body Roll, Dive Kick, Foot Sweep, Handstand Kick, Knee Basher, Mach Slide, Palm Press, Power Uppercut, Rekka Ken, Spinning Foot Sweep, Spring Kick, Drunken Monkey Roll, Reverse Waterfall",
-        Combos: "Body Roll para Fierce; Strong para Strong para Fierce (Dizzy); Jump para Spring Kick; Mach Slide para Throw"
+        ManobrasEspeciais: "Jump, Kobokushi, Foot Sweep, Senkju Tai, Knee Basher, Dive Kick, Back Roll Throw, Throw, Flying Heel Stomp, Drunken Monkey Roll, Gekiro, Rekka Ken, Kippup",
+        Combos: "Drunkey Monkey Roll para Gekiro; Senkju Tai para Kobokushi (Dizzy); Bloqueio para Knee Basher (Dizzy); Short para Forward para Kobokushi"
     };
     return yang;
 }
 
 function YangZ3() {
-    var antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Contatos", 2);
-    antecedentes[2] = newCaracteristica("Sensei", 5);
-    antecedentes[3] = newCaracteristica("Staff", 2);
-    antecedentes[4] = newCaracteristica("Recursos", 2);
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 3);
+    antecedentes[1] = newCaracteristica("Arena", 2);
+    antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    var yun =
+    const yang =
     {
         Nome: "Yang Lee",
-        Conceito: "Líder Comunitário",
+        Conceito: "Estudante",
         Escola: "Dojô de Gen",
         Estilo: "Kung Fu",
-        Assinatura: "Calmaria",
+        Assinatura: "Cabelo estiloso",
         Jogador: "NPC",
         Cronica: "Street Fighter Alpha",
-        Forca: 5,
+        Forca: 4,
         Destreza: 5,
-        Vigor: 4,
-        Carisma: 2,
-        Manipulacao: 2,
-        Aparencia: 5,
-        Percepcao: 5,
-        Inteligencia: 4,
-        Raciocinio: 4,
-        Prontidao: 4,
-        Interrogacao: 1,
-        Intimidacao: 3,
-        Perspicacia: 4,
-        Manha: 4,
-        Labia: 5,
-        LutaCega: 5,
-        Conducao: 1,
-        Lideranca: 4,
-        Seguranca: 3,
+        Vigor: 3,
+        Carisma: 3,
+        Manipulacao: 3,
+        Aparencia: 4,
+        Percepcao: 3,
+        Inteligencia: 3,
+        Raciocinio: 3,
+        Prontidao: 2,
+        Interrogacao:2,
+        Intimidacao: 1,
+        Perspicacia: 3,
+        Manha: 2,
+        Labia: 1,
+        LutaCega: 3,
+        Conducao: 0,
+        Lideranca: 1,
+        Seguranca: 1,
         Furtividade: 3,
         Sobrevivencia: 1,
-        Arena: 4,
-        Computador: 2,
-        Misterios: 1,
-        Estilos: 4,
+        Arena: 2,
+        Computador: 1,
+        Investigacao: 2,
+        Medicina: 3,
+        Misterios: 2,
+        Estilos: 2,
         Antecedentes: antecedentes,
-        Soco: 5,
+        Soco: 4,
         Chute: 5,
-        Bloqueio: 4,
-        Apresamento: 4,
+        Bloqueio: 5,
+        Apresamento: 3,
         Esportes: 5,
-        Foco: 3,
+        Foco: 2,
         Gloria: 5,
-        Honra: 8,
-        Chi: 7,
-        ForcaVontade: 9,
+        Honra: 7,
+        Chi: 5,
+        ForcaVontade: 7,
         Saude: 18,
         Divisao: "Tradicional",
-        Posto: 7,
-        ManobrasEspeciais: "Back Roll Throw, Body Roll, Dive Kick, Foot Sweep, Handstand Kick, Knee Basher, Mach Slide, Palm Press, Power Uppercut, Rekka Ken, Spinning Foot Sweep, Spring Kick, Drunken Monkey Roll, Reverse Waterfall",
-        Combos: "Body Roll para Fierce; Strong para Strong para Fierce (Dizzy); Jump para Spring Kick;"
+        Posto: 8,
+        ManobrasEspeciais: "Jump, Kobokushi, Foot Sweep, Senkju Tai, Knee Basher, Dive Kick, Back Roll Throw, Throw, Flying Heel Stomp, Drunken Monkey Roll, Gekiro, Rekka Ken, Kippup",
+        Combos: "Drunkey Monkey Roll para Gekiro; Senkju Tai para Kobokushi (Dizzy); Bloqueio para Knee Basher (Dizzy);"
     };
     return yang;
 }
 
-var npc;
+let npc;
 if (getParameterByName('age') === 'sfa')
     npc = YangZ3();
 else

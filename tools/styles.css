@@ -1,0 +1,38 @@
+/* estilo do tema para permitir largura nos posts*/
+.site-content .entry-header,
+.site-content .entry-content,
+.site-content .entry-summary,
+.site-content .entry-meta,
+.page-content {
+	margin: 0 auto;
+}
+
+.post-navigation,
+.image-navigation {
+	margin: 24px auto 48px;
+	padding: 0 10px;
+}
+
+.archive-header,
+.page-header {
+	margin: 24px auto;
+}
+
+.contributor-info {
+	margin: 0 auto;
+}
+
+.site-main .mu_register,
+.widecolumn > h2,
+.widecolumn > form {
+	margin: 0 auto 48px;
+	padding: 0 30px;
+}
+
+#disqus_recommendations {
+    margin: 20px;
+}
+
+#disqus_thread {
+	margin: 20px;	
+}

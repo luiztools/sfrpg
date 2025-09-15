@@ -70,6 +70,80 @@ function Nightwolf() {
     return personagem;
 }
 
-let npc = Nightwolf();
+function NightwolfArmageddon() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 5);
+    antecedentes[1] = newCaracteristica("Fama", 3);
 
-npc = calcPC(npc);
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Machado", 5);
+    tecnicas[1] = newCaracteristica("Arco", 5);
+
+    const armas = [];
+    armas[0] = "Machado Curto";
+
+    const personagem =
+    {
+        Nome: "Nightwolf",
+        Estilo: "Luta Live Nativo Americana",
+        Escola: "Tribo",
+        Equipe: "Nenhum",
+        Time: "Nenhum",
+        Conceito: "Líder da Tribo",
+        Assinatura: "Gargalhada",
+        Jogador: "NPC",
+        Cronica: "MK Armageddon",
+        Forca: 5,
+        Destreza: 6,
+        Vigor: 5,
+        Carisma: 3,
+        Manipulacao: 2,
+        Aparencia: 3,
+        Percepcao: 5,
+        Inteligencia: 4,
+        Raciocinio: 4,
+        Prontidao: 5,
+        Interrogacao: 0,
+        Intimidacao: 1,
+        Perspicacia: 3,
+        Manha: 0,
+        Labia: 2,
+        LutaCega: 4,
+        Conducao: 0,
+        Lideranca: 4,
+        Seguranca: 0,
+        Furtividade: 5,
+        Sobrevivencia: 6,
+        Arena: 3,
+        Computador: 0,
+        Investigacao: 1,
+        Medicina: 1,
+        Misterios: 6,
+        Estilos: 5,
+        Antecedentes: antecedentes,
+        Soco: 5,
+        Chute: 5,
+        Bloqueio: 5,
+        Apresamento: 3,
+        Esportes: 4,
+        Foco: 5,
+        Armas: armas,
+        NovasTecnicas: tecnicas,
+        Divisao: "Livre",
+        Posto: 9,
+        Gloria: 5,
+        Honra: 7,
+        Chi: 10,
+        ForcaVontade: 10,
+        Saude: 20,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Shadow Shoulder, God Invocation",
+        Combos: "Strong para Machado Strong para Machado Jab (Dizzy); Energy Reflection para Fireball (Dizzy); Forward para Forward para Roundhouse (Dizzy); Jab para Jab para String (Dizzy); Jab para Jab para Machado Jab (Dizzy); Short para Jab para Machado Jab (Dizzy)"
+    };
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'mk3')
+    npc = calcPC(Nightwolf());
+else
+    npc = calcPC(NightwolfArmageddon());

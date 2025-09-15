@@ -411,7 +411,7 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
     prontidao, interrogacao, intimidacao, perspicacia, manha, labia, lutacega, conducao, lideranca, seguranca,
     furtividade, sobrevivencia, arena, computador, investigacao, medicina, misterios, estilos, antecedentes,
     gloria, honra, divisao, posto, soco, chute, bloqueio, apresamento, esportes, foco, chi, fdv, saude, especiais,
-    combos, novasTecnicas, novosTalentos, novasPericias, novosConhecimentos, pontosCombate) {
+    combos, novasTecnicas = [], novosTalentos = [], novasPericias = [], novosConhecimentos = [], pontosCombate = 0) {
     var newWindow = "";
 
     newWindow += "<table width=\"100%\" class=\"topoTitulo\"><tr><td align=\"center\" colspan=\"6\"><img alt=\"Street Fighter RPG\" src=\"http://www.sfrpg.com.br/tools/sheet-img/logo.png\" /></td></tr>"
@@ -490,7 +490,7 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
         + PintaCaracteristica(8, estilos); //estilos
 
     //novashabilidades
-    if (novasPericias != null || novosConhecimentos != null || novosConhecimentos != null) {
+    if (novasPericias != null || novosTalentos != null || novosConhecimentos != null) {
         if (novosTalentos.length >= novosConhecimentos.length && novosTalentos.length >= novasPericias.length) {
             for (var i = 0; i < novosTalentos.length; i++) {
                 newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>"
@@ -689,7 +689,7 @@ function CarregarEdicao(nome) {
     $('#ddlIntimidacao').val(dic["Intimidacao"]);
 
     if (!string.IsNullOrEmpty(dic["NovosTalentos"]) && dic["NovosTalentos"] != ",0") {
-        var arrTemp = dic["NovosTalentos"].split(';');
+        let arrTemp = dic["NovosTalentos"].split(';');
         if (arrTemp.Length > 0) {
             $('#txtTalento1').text(arrTemp[0].split(',')[0]);
             $('#ddlTalento1').val(arrTemp[0].split(',')[1]);
@@ -837,7 +837,7 @@ function ExcluirPersonagem(nome) {
 }
 
 function carregarPersonagem() {
-    var personagem = {};
+    const personagem = {};
     //cabeçalho
     personagem.Nome = $('#txtNome').val();
     personagem.Conceito = $('#txtConceito').val();
@@ -993,21 +993,21 @@ function carregarPersonagem() {
 $(document).ready(function () {
 
     $('#btnGerarPlanilha').click(function () {
-        var personagem = carregarPersonagem();
+        const personagem = carregarPersonagem();
         $('#divFicha').html(AutoGeradorP(personagem));
         $('#divFicha').show();
         $('#divFormulario').hide();
     });
 
     $('#btnGerarJSON').click(function () {
-        var personagem = carregarPersonagem();
+        const personagem = carregarPersonagem();
         $('#divFicha').html("var personagem = " + JSON.stringify(personagem));
         $('#divFicha').show();
         $('#divFormulario').hide();
     });
 
     $('#btnGerarManobras').click(function () {
-        var personagem = carregarPersonagem();
+        const personagem = carregarPersonagem();
         $('#divFicha').html(carregarTabela(personagem));
         $('#divFicha').show();
         $('#divFormulario').hide();

@@ -1,4 +1,4 @@
-function Nightwolf() {
+function Jarek() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 3);
     antecedentes[1] = newCaracteristica("Contatos", 3);
@@ -7,6 +7,9 @@ function Nightwolf() {
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Espada", 5);
+    tecnicas[1] = newCaracteristica("Machado", 5);
+
+    const armas = ["Espada", "Machado Curto"];
 
     const personagem =
     {
@@ -23,7 +26,7 @@ function Nightwolf() {
         Destreza: 4,
         Vigor: 6,
         Carisma: 2,
-        Manipulacao: 2,
+        Manipulacao: 3,
         Aparencia: 3,
         Percepcao: 4,
         Inteligencia: 4,
@@ -54,7 +57,8 @@ function Nightwolf() {
         Esportes: 5,
         Foco: 3,
         NovasTecnicas: tecnicas,
-        Divisao: "Tradicional",
+        Armas: armas,
+        Divisao: "Duelista",
         Posto: 8,
         Gloria: 10,
         Honra: 1,
@@ -67,6 +71,6 @@ function Nightwolf() {
     return personagem;
 }
 
-let npc = Nightwolf();
+let npc = Jarek();
 
 npc = calcPC(npc);

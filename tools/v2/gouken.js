@@ -1,12 +1,14 @@
 function GoukenSF4() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Sensei", 7);
     antecedentes[2] = newCaracteristica("Fama", 1);
     antecedentes[3] = newCaracteristica("Recursos", 1);
-    var talentos = [];
+    
+    const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 5);
-    var gouken =
+    
+    const gouken =
     {
         NovosTalentos: talentos,
         Chi: 10,

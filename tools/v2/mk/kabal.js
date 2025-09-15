@@ -8,10 +8,12 @@ function Kabal() {
     tecnicas[0] = newCaracteristica("Espada", 5);
     tecnicas[1] = newCaracteristica("Armas de Fogo", 2);
 
+    const armas = ["Espada Gancho"];
+
     const personagem =
     {
         Nome: "Kabal",
-        Estilo: "Kickboxe",
+        Estilo: "Kenjutsu",
         Escola: "As Ruas",
         Equipe: "Black Dragon",
         Time: "Black Dragon",
@@ -54,6 +56,7 @@ function Kabal() {
         Esportes: 5,
         Foco: 2,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         Divisao: "Duelistas",
         Posto: 8,
         Gloria: 6,

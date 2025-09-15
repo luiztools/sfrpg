@@ -1,13 +1,15 @@
 function KanoMK3() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
-    antecedentes[1] = newCaracteristica("Cibernetico", 1);
+    antecedentes[1] = newCaracteristica("Cibernético", 1);
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Recursos", 3);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 5);
     tecnicas[1] = newCaracteristica("Arremesso", 6);
+
+    const armas = ["Faca"];
 
     const personagem =
     {
@@ -55,7 +57,8 @@ function KanoMK3() {
         Esportes: 5,
         Foco: 1,
         NovasTecnicas: tecnicas,
-        Divisao: "Tradicional",
+        Armas: armas,
+        Divisao: "Duelistas",
         Posto: 8,
         Gloria: 5,
         Honra: 0,
@@ -140,7 +143,7 @@ function KanoMKX() {
 }
 
 let npc;
-if (getParameterByName('age') === 'mk3')
+if (getParameterByName('age') === 'mk1')
     npc = calcPC(KanoMK3());
 else
     npc = calcPC(KanoMKX());
