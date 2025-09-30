@@ -8,7 +8,7 @@ const manobras = {
 	"Forward": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Básica" },
 	"Roundhouse": { Tecnica: "Chute", ModVel: -2, ModDano: 4, ModMov: -1, Sistema: "Básica" },
 	"Apresamento": { Tecnica: "Apresamento", ModVel: 0, ModDano: 0, ModMov: "Um", Sistema: "Básica. Ignora Bloqueio" },
-	"Bloqueio": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "Básica. Interrupção. +2 Vel próx. turno" },
+	"Bloqueio": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "Básica. Interrupção. +2 Vel próx. turno. Impede KD." },
 	"Movimento": { Tecnica: "Esportes", ModVel: 3, ModMov: 3, Sistema: "Básica" },
 	//soco
 	"Buffalo Punch": { Tecnica: "Soco", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
@@ -59,6 +59,13 @@ const manobras = {
 	"Tornado Punch": { Tecnica: "Soco", ModVel: 0, ModDano: "1/2", ModMov: -2, FdV: 1, Sistema: "Bate enquanto move; último ataque usa segundo modificador e causa KD; Esquiva projétil;" },
 	"Double Hit Punch": { Tecnica: "Soco", ModVel: -1, ModDano: "0/0", ModMov: -1, Sistema: "Dois hits; Oponentes aéreos ou agachados tomam apenas 1 hit" },
 	"Burn Knuckle": { Tecnica: "Soco", ModVel: -1, ModDano: 5, ModMov: 3, Chi: 1, FdV: 1, Sistema: "Linha reta, causa KD" },
+	"Boxing Punches": { Tecnica: "Soco", ModVel: "", ModDano: "", ModMov: "", Sistema: "3 novos socos básicos" },
+	"Cross/Hook": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Básica" },
+	"Straight": { Tecnica: "Soco", ModVel: 1, ModDano: 0, ModMov: 0, Sistema: "Básica" },
+	"Uppercut": { Tecnica: "Soco", ModVel: -2, ModDano: 4, ModMov: -1, Sistema: "Básica" },
+	"Flicker Jab": { Tecnica: "Soco", ModVel: 3, ModDano: -1, ModMov: "Um", Alcance: 2, Sistema: "Alcance 2 hex" },
+	"Rabbit Punch": { Tecnica: "Soco", ModVel: 1, ModDano: 1, ModMov: -1, Sistema: "Tem de entrar no hex; ignora metade do ABS total, -1 Honra" },
+	"White Fang": { Tecnica: "Soco", ModVel: 0, ModDano: "2/2", ModMov: "Um", FdV: 1, Sistema: "Dois Hits. Agachados ou aéreos só levam um hit. Bloqueio só absorve um hit, exceto Punch Defense (sem o bônus)." },
 	//Chute
 	"Air Hurricane Kick": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 1, Chi: 1, FdV: 1, Sistema: "Igual Hurricane Kick" },
 	"Backflip Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: "Dois", Sistema: "Mov para trás após dano" },
@@ -129,7 +136,7 @@ const manobras = {
 	"Grappling Defense": { Tecnica: "Apresamento", ModVel: 4, ModMov: -1, Sistema: "Adiciona a técnica Apresamento ao Vigor para absorver Apresamentos" },
 	"Hair Throw": { Tecnica: "Apresamento", ModVel: -2, ModDano: 5, ModMov: "Dois", Sistema: "Atacante deve se mover para o hex do alvo e atravessá-lo; o alvo é jogado (Força do atacante) hex na linha do movimento; KD" },
 	"Head Bite": { Tecnica: "Apresamento", ModVel: 1, ModDano: 3, ModMov: "Um", Sistema: "Sustentado" },
-	"Head Butt Hold": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "Sustentado" },
+	"Head Butt Hold": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "Sustentado" },
 	"Iron Claw": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: "Um", Sistema: "Sustentado" },
 	"Knee Basher": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: "Um", Sistema: "Sustentado; uma vez que o alvo é arremessado, ele é considerado KD, dano calculado c/ chute" },
 	"Neck Choke": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "Sustentado" },
@@ -166,6 +173,7 @@ const manobras = {
 	"Sean Tackle": { Tecnica: "Apresamento", ModVel: 1, ModDano: 3, ModMov: 2, FdV: 2, Sistema: "KD e empurra um hex para trás" },
 	"Soul Throw": { Tecnica: "Apresamento", ModVel: -2, ModDano: 7, ModMov: "Dois", Chi: 1, Sistema: "Personagem passa pelo hex do oponente, arremessando-o em seguida" },
 	"Tornado Throw": { Tecnica: "Apresamento", ModVel: 0, ModDano: 6, ModMov: "Um", FdV: 1, Sistema: "KD, arremessa em qualquer hex adjacente" },
+	"Clinch": { Tecnica: "Apresamento", ModVel: 2, ModDano: 0, ModMov: "Um", Sistema: "Não causa dano real, apenas anula manobra do oponente se agarrar. +1 Vel em apresamentos no próximo turno." },
 	//Esportes
 	"Air Smash": { Tecnica: "Esportes", ModVel: -1, ModDano: 4, ModMov: -1, Sistema: "Aérea; esquiva de projétil; Linha Reta; o atacante termina o movimento no hex do alvo" },
 	"Beast Roll": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: -2, FdV: 1, Sistema: "Aérea; esquiva de projétil;Linha Reta; 1º ataque move-se para trás, então reverte a direção para o 2º ataque; o atacante termina 2 hex na frente do 2º alvo; precisa entrar no hex de ambos os alvos; mov +2 para segundo ataque" },
@@ -187,7 +195,7 @@ const manobras = {
 	"Light Feet": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Automaticamente adiciona +1 MOV para todas as manobras; opcionalmente, o lutador pode gastar 1 FV para adicionar +3 MOV a uma Manobra ao invés de +1" },
 	"Tumbling Attack": { Tecnica: "Esportes", ModVel: -1, ModDano: -1, ModMov: 0, FdV: 1, Sistema: "Agachamento; Linha Reta; precisa entrar no hex do alvo; após o dano o alvo recua 1 hex; role o dano para cada hex que entrar e continue se movendo" },
 	"Dragons Tail": { Tecnica: "Esportes", ModVel: -1, ModDano: 5, ModMov: -2, Sistema: "KD vs. Aérea; oponentes em pé recuam 1 hex, dano calculado com Híbrido Animal" },
-	"Esquives": { Tecnica: "Esportes", ModVel: 2, ModMov: "Dois", Sistema: "Precisa interromper um ataque; o lutador move-se para um dos lados esquivando do ataque" },
+	"Esquives": { Tecnica: "Esportes", ModVel: 2, ModMov: "Dois", Sistema: "Manobra de Interrupção, evita o ataque se for mais rápido" },
 	"Pounce": { Tecnica: "Esportes", ModVel: -1, ModDano: 2, ModMov: 4, FdV: 1, Sistema: "Aérea; esquiva de projétil; KD; ambos os lutadores terminam no mesmo hex, dano calculado com Híbrido Animal" },
 	"Tail Sweep": { Tecnica: "Esportes", ModVel: -1, ModDano: 1, Sistema: "KD; Agachamento; atinge todos os hex adjacentes" },
 	"Typhoon Tail": { Tecnica: "Esportes", ModVel: -2, ModDano: 5, ModMov: 1, Chi: 1, FdV: 1, Sistema: "Aérea; não pode ser atingido por projétil enquanto executa esta manobra; o oponente no hex alvo sofre +5 DAN e é jogado 1 hex para trás; todos os lutadores nos hex adjacentes sofrem +2 DAN e são jogados 1 hex para trás" },
@@ -277,6 +285,10 @@ const manobras = {
 	"Soul Spiral": { Tecnica: "Foco", ModVel: 0, ModDano: "0/0/0", ModMov: -1, Chi: 1, Sistema: "Três Hits; KD" },
 	"God Invocation": { Tecnica: "Foco", ModVel: -2, ModDano: "10", Chi: 2, Sistema: "Ignora bloqueio; Rola Carisma + Mistérios e compara com tabela; Não pode levar dano no turno de invocação ou perde a manobra" },
 	"Dragon Attack": { Tecnica: "Foco", ModVel: -3, Chi: 2, Sistema: "Ver Manobra" },
+	"Lightning": { Tecnica: "Foco", ModVel: -2, ModDano: 3, Chi: 1, Alcance: "Inteligencia+Foco", Sistema: "Projétil" },
+	"Absorb Soul": { Tecnica: "Foco", ModVel: "Especial", Chi: 2, Sistema: "Ver Manobra" },
+	"Metamorphose": { Tecnica: "Foco", ModVel: 1, ModMov: -2, Chi: 2, Sistema: "Ver Manobra" },
+	"Determination": { Tecnica: "Foco", ModVel: "", ModDano: "", ModMov: "", FdV: 1, Sistema: "Permite usar sua manobra no mesmo turno em que ficou Dizzy, mas não no turno seguinte." },
 
 	//Outros
 	"Spinning Weapon": { Tecnica: "Bastão", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits" },
@@ -453,6 +465,7 @@ function calculaMovimento(npc, manobra) {
 function carregarTabela(npc) {
 
 	const manobrasBasicas = ["Jab", "Strong", "Fierce", "Short", "Forward", "Roundhouse", "Apresamento", "Bloqueio", "Movimento"];
+
 	let html = "";
 	$.each(manobrasBasicas, function (i, v) {
 		var manobra = manobras[v.trim()];
@@ -497,6 +510,9 @@ function carregarTabela(npc) {
 	}
 
 	if (npc.ManobrasEspeciais) {
+		if (npc.ManobrasEspeciais.indexOf("Boxing Punches") !== -1)
+			npc.ManobrasEspeciais += "Straight, Cross/Hook, Uppercut";
+
 		$.each(npc.ManobrasEspeciais.split(',').sort(), function (i, v) {
 			var manobra = manobras[v.trim().replace("-", " ")];
 			html += "<tr><td>" + GeraHtmlLink(v.trim()) + "</td>";
