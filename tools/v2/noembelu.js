@@ -5,9 +5,11 @@ function NoembeluSFZ3() {
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 5);
+    tecnicas[1] = newCaracteristica("Arremesso", 5);
 
     const armas = [];
     armas[0] = "Machadinha";
+    armas[1] = "Machadinha Arremessada";
 
     const personagem =
     {

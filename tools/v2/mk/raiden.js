@@ -2,6 +2,7 @@ function RaidenMK3() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Fama", 1);
+    antecedentes[2] = newCaracteristica("Elemental", 5);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 5);
@@ -56,7 +57,7 @@ function RaidenMK3() {
         Esportes: 5,
         Foco: 5,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Shock Treatment, Yoga Teleport, Flying Head Butt, Lightning, Psychokinetic Channeling",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Shock Treatment, Yoga Teleport, Flying Head Butt, Lightning, Psychokinetic Channeling, Improved Yoga Teleport",
         Combos: "Strong para Power Uppercut para Roundhouse (dizzy); Throw para Flyng Head Butt; Jab para Jab para Power Uppercut (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (Dizzy)",
         Gloria: 10,
         Honra: 10,

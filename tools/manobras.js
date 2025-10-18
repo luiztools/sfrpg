@@ -10,6 +10,13 @@ const manobras = {
 	"Apresamento": { Tecnica: "Apresamento", ModVel: 0, ModDano: 0, ModMov: "Um", Sistema: "Básica. Ignora Bloqueio" },
 	"Bloqueio": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "Básica. Interrupção. +2 Vel próx. turno. Impede KD." },
 	"Movimento": { Tecnica: "Esportes", ModVel: 3, ModMov: 3, Sistema: "Básica" },
+	"Bite": { Tecnica: "Híbrido Animal", ModVel: 1, ModDano: 1, ModMov: -1, Sistema: "Básica de Híbrido Animal" },
+	"Tail Slash": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "Básica de Híbrido Animal" },
+	"Fin Slash": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "Básica de Híbrido Animal" },
+	"Quill Sweep": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "Básica de Híbrido Animal" },
+	"Tentacle Squeeze": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "Básica de Híbrido Animal" },
+	"Claw": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 2, ModMov: 0, Sistema: "Básica de Híbrido Animal" },
+	"Athletic": { Tecnica: "Tarkatan", ModVel: "Especial", ModDano: "Nenhum", ModMov: "Nenhum", Sistema: "Passiva Tarkatan: -2 de dificuldade para tarefas com Esportes, exceto dano" },
 	//soco
 	"Buffalo Punch": { Tecnica: "Soco", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
 	"Dashing Punch": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 2, FdV: 1, Sistema: "" },
@@ -66,6 +73,8 @@ const manobras = {
 	"Flicker Jab": { Tecnica: "Soco", ModVel: 3, ModDano: -1, ModMov: "Um", Alcance: 2, Sistema: "Alcance 2 hex" },
 	"Rabbit Punch": { Tecnica: "Soco", ModVel: 1, ModDano: 1, ModMov: -1, Sistema: "Tem de entrar no hex; ignora metade do ABS total, -1 Honra" },
 	"White Fang": { Tecnica: "Soco", ModVel: 0, ModDano: "2/2", ModMov: "Um", FdV: 1, Sistema: "Dois Hits. Agachados ou aéreos só levam um hit. Bloqueio só absorve um hit, exceto Punch Defense (sem o bônus)." },
+	"Split Punch": { Tecnica: "Soco", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Sistema: "Ignora Vigor se não bloquear. Dizzy se causar 1 dano. Perde Honra." },
+
 	//Chute
 	"Air Hurricane Kick": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 1, Chi: 1, FdV: 1, Sistema: "Igual Hurricane Kick" },
 	"Backflip Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: "Dois", Sistema: "Mov para trás após dano" },
@@ -114,6 +123,7 @@ const manobras = {
 	"Bicycle Kick": { Tecnica: "Chute", ModVel: "+0", ModDano: "+0", ModMov: 1, FdV: 1, Sistema: "Linha Reta; causando dano toda vez que entra no hex da vítima; o alvo recua um hex; Aérea" },
 	"Somersault Kick": { Tecnica: "Chute", ModVel: -1, ModDano: "2/7", ModMov: "Um", Chi: 1, FdV: 1, Sistema: "Dois Hits se não andar" },
 	"Slash Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 5, ModMov: 3, Chi: 1, FdV: 1, Sistema: "Linha reta, causa KD" },
+	"Shadow Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 4, ModMov: 2, Chi: 1, Sistema: "Causa KD. Não afeta agachamento." },
 
 	//bloqueio
 	"Deflecting Punch": { Tecnica: "Soco", ModVel: 2, ModDano: 0, Sistema: "Bônus de Bloqueio apenas para socos; Após a ABS faça um contra-soco (vs. qualquer ataque)" },
@@ -289,6 +299,11 @@ const manobras = {
 	"Absorb Soul": { Tecnica: "Foco", ModVel: "Especial", Chi: 2, Sistema: "Ver Manobra" },
 	"Metamorphose": { Tecnica: "Foco", ModVel: 1, ModMov: -2, Chi: 2, Sistema: "Ver Manobra" },
 	"Determination": { Tecnica: "Foco", ModVel: "", ModDano: "", ModMov: "", FdV: 1, Sistema: "Permite usar sua manobra no mesmo turno em que ficou Dizzy, mas não no turno seguinte." },
+	"Improved Yoga Teleport": { Tecnica: "Foco", ModVel: 0, ModDano: "", ModMov: "", Chi: 1, Sistema: "Permite teleportar outras pessoas e a distâncias maiores." },
+	"Sense Element": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Percepção + Elemental para perceber seu elemento" },
+	"Ice Ground": { Tecnica: "Foco", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Alcance: 3, Sistema: "Congela 3 hexes à frente, se pisar leva KD e -3 Vel na próxima manobra. Gelo dura 2 turnos." },
+	"Ice Shower": { Tecnica: "Foco", ModVel: -2, ModDano: 3, ModMov: "Nenhum", Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "Igual Ice Blast, mas afeta lutadores no ar também." },
+	"Ice Clone": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Dois", Chi: 1, Sistema: "Move para trás. Alvo testa Des + Esp contra Foco para não tocar no gelo. Mesmo efeito do Ice Blast mas sem dano. Dura 2 rodadas." },
 
 	//Outros
 	"Spinning Weapon": { Tecnica: "Bastão", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits" },
@@ -303,23 +318,33 @@ const armas = {
 	"Pistola": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 3, ModMov: "-", Sistema: "" },
 	"Katar": { Tecnica: "Faca", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "" },
 	"Machadinha": { Tecnica: "Faca", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "" },
+	"Machado Curto": { Tecnica: "Machado", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "" },
+	"Machadinha Arremessada": { Tecnica: "Arremesso", ModVel: 1, ModDano: 2, ModMov: 0, Alcance: "Força+Arremesso" },
 	"Katar": { Tecnica: "Faca", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "" },
-	"Bastão": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },
-	"Chicote": { Tecnica: "Chicote", ModVel: -1, ModDano: 2, ModMov: 0, Sistema: "Alcance: 6 hex" },
-	"Chicote de Aço": { Tecnica: "Chicote", ModVel: -1, ModDano: 3, Sistema: "Alcance: 3 hex" },
-	"Corrente": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: -2, Sistema: "Alcance: 2 hex" },
+	"Bastão Longo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },
+	"Bo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },
+	"Chicote": { Tecnica: "Chicote", ModVel: -1, ModDano: 2, ModMov: 0, Alcance: 6 },
+	"Chicote de Aço": { Tecnica: "Chicote", ModVel: -1, ModDano: 3, Alcance: 3 },
+	"Corrente": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: -2, Alance: 2 },
 	"Espada": { Tecnica: "Espada", ModVel: -1, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Variável" },
-	"Faca": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "pode ser arremessada; ver descrição" },
+	"Faca": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "" },
+	"Faca Arremessada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: 0, Alcance: "Força+Arremesso" },
+	"Bumerangue": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: 0, Alcance: "Força+Arremesso", Sistema: "Volta ao dono, exceto em falha crítica" },
+	"Chakram": { Tecnica: "Arremesso", ModVel: 1, ModDano: 1, ModMov: -3, Alcance: "Força+Arremesso" },
+	"Chapéu-Lâmina": { Tecnica: "Chapéu", ModVel: 0, ModDano: 2, ModMov: 1 },
+	"Chapéu Arremessado": { Tecnica: "Arremesso", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
+	"Leque": { Tecnica: "Leque", ModVel: 0, ModDano: 2, ModMov: 1 },
+	"Leque Arremessado": { Tecnica: "Arremesso", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
 	"Lança": { Tecnica: "Lança", ModVel: 0, ModDano: 3, ModMov: 1, Sistema: "Empunhadura: Variável" },
 	"Kusari": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Alcance: 2 hex" },
-	"Kusarigama": { Tecnica: "Chicote", ModVel: 0, ModDano: 3, ModMov: -2, Sistema: "Alcance: 2 hex" },
-	"Machado Curto": { Tecnica: "Machado", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "pode ser arremessada; ver descrição" },
+	"Kusarigama": { Tecnica: "Chicote", ModVel: 0, ModDano: 3, ModMov: -2, Alcance: 2, Sistema: "Alcance: 2 hex" },
 	"Naginata": { Tecnica: "Lança", ModVel: 0, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
 	"Nunchaku": { Tecnica: "Mangual", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão" },
 	"Katana": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "Empunhadura: Variável" },
 	"Garra": { Tecnica: "Garra", ModVel: 1, ModDano: 1, ModMov: 0, Sistema: "" },
 	"Tonfa de Ferro": { Tecnica: "Bastão", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
-	"Kunai": { Tecnica: "Arremesso", ModVel: 1, ModDano: -1, ModMov: -1, Sistema: "Alcance: Força + Arremesso." },
+	"Kunai": { Tecnica: "Arremesso", ModVel: 1, ModDano: -1, ModMov: -1, Alcance: "Força+Arremesso" },
+	"Arpão": { Tecnica: "Arremesso", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Alcance: 5, Sistema: "Se causar 3 de dano, atordoa e puxa o oponente." },
 	"Espada Improvisada": { Tecnica: "Espada", ModVel: -2, ModDano: 3, ModMov: -1, Sistema: "" },
 	"Espada Larga": { Tecnica: "Espada", ModVel: -2, ModDano: 5, ModMov: -1, Sistema: "Empunhadura: Duas Mãos." },
 	"Bokken": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },
@@ -331,7 +356,6 @@ const armas = {
 	"Sabre": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Wakizashi": { Tecnica: "Faca", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Bastão Improvisado": { Tecnica: "Bastão", ModVel: -1, ModDano: 1, ModMov: -1, Sistema: "" },
-	"Bo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "" },
 	"Bastão Curto": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
 	"Tonfa": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
 	"Cacetete": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
@@ -343,13 +367,15 @@ const armas = {
 	"Kris": { Tecnica: "Faca", ModVel: 2, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Navalha": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Faca Improvisada": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "" },
-	"Sai": { Tecnica: "Faca", ModVel: 1, ModDano: 0, ModMov: 0, Sistema: "ver descrição" },
-	"Shuriken": { Tecnica: "Arremesso", ModVel: 1, ModDano: -1, ModMov: -1, Sistema: "ver descrição" }
+	"Sai": { Tecnica: "Faca", ModVel: 1, ModDano: 0, ModMov: 0, Sistema: "+1 ABS para Aparar e +2 para desarmar" },
+	"Sai Arremessada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: 0, Alcance: "Força+Arremesso" },
+	"Shuriken": { Tecnica: "Arremesso", ModVel: 2, ModDano: -2, ModMov: 0, Alcance: "Força+Arremesso", Sistema: "1x hit por ponto em Arremesso" }
 };
 
 const valorFixoRegex = new RegExp("^(Um|Dois|Três|Quatro)$");
 
 function estilizaSistema(sistema) {
+	if (!sistema) return "";
 	if (sistema.indexOf("Força") !== -1) sistema = sistema.replace("Força", "<a href='/post/forca' target='_blank'>Força</a>");
 	if (sistema.indexOf("Destreza") !== -1) sistema = sistema.replace("Destreza", "<a href='/post/destreza' target='_blank'>Destreza</a>");
 	if (sistema.indexOf("Vigor") !== -1) sistema = sistema.replace("Vigor", "<a href='/post/vigor' target='_blank'>Vigor</a>");
@@ -369,7 +395,8 @@ function estilizaSistema(sistema) {
 	if (/aérea/i.test(sistema)) sistema = sistema.replace(/aérea/i, "<a href='/post/manobra-aerea' target='_blank'>Aérea</a>");
 	if (/agachamento/i.test(sistema)) sistema = sistema.replace(/agachamento/i, "<a href='/post/manobra-de-agachamento' target='_blank'>Agachamento</a>");
 	if (sistema.indexOf("Sustentado") !== -1) sistema = sistema.replace("Sustentado", "<a href='/post/apresamento-sustentado' target='_blank'>Sustentado</a>");
-	if (sistema.indexOf("Básica") !== -1) sistema = sistema.replace("Básica", "<a href='/post/manobras-basicas' target='_blank'>Básica</a>");
+	if (sistema.indexOf("Básica de Híbrido Animal") !== -1) sistema = sistema.replace("Básica de Híbrido Animal", "<a href='/post/hibrido-animal' target='_blank'>Básica de Híbrido Animal</a>");
+	else if (sistema.indexOf("Básica") !== -1) sistema = sistema.replace("Básica", "<a href='/post/manobras-basicas' target='_blank'>Básica</a>");
 	if (sistema.indexOf("ABS") !== -1) sistema = sistema.replace("ABS", "<a href='/post/absorcao' target='_blank'>ABS</a>");
 	if (sistema.indexOf("Dizzy") !== -1) sistema = sistema.replace("Dizzy", "<a href='/post/dizzy' target='_blank'>Dizzy</a>");
 	if (/projétil/i.test(sistema)) sistema = sistema.replace(/projétil/i, "<a href='/post/manobra-de-projetil' target='_blank'>Projétil</a>");
@@ -389,6 +416,17 @@ function calculaAlcance(npc, manobra) {
 		return parseInt(npc[split[0].trim()]) + parseInt(npc[split[1].trim()]);
 	}
 	return parseInt(npc[manobra.Alcance]);
+}
+
+function calculaAlcanceArremesso(npc, arma) {
+	if (arma.Alcance === null || arma.Alcance === undefined) return "";
+	if (valorFixoRegex.test(arma.Alcance)) return arma.Alcance;
+	if (typeof arma.Alcance === "number") return arma.Alcance;
+	if (arma.Alcance.indexOf("+") !== -1) {
+		const split = arma.Alcance.split("+");
+		return parseInt(npc[split[0].trim()]) + parseInt(npc[split[1].trim()]);
+	}
+	return parseInt(npc[arma.Alcance]);
 }
 
 function calculaVelocidade(npc, manobra) {
@@ -411,6 +449,10 @@ function calculaVelocidadeArma(npc, arma, manobra) {
 	return npc.Destreza + parseInt(manobra.ModVel) + parseInt(arma.ModVel);
 }
 
+function calculaVelocidadeArmaDistancia(npc, arma) {
+	return npc.Destreza + parseInt(arma.ModVel);
+}
+
 function calculaAlcanceArma(arma) {
 	return parseInt(arma.Alcance || 1);
 }
@@ -424,6 +466,11 @@ function calculaDanoArma(npc, arma, manobra) {
 	}
 
 	return npc.Forca + modTecnica + arma.ModDano + parseInt(manobra.ModDano);
+}
+
+function calculaDanoArmaDistancia(npc, arma) {
+	const modTecnica = getCaracteristica(npc.NovasTecnicas, arma.Tecnica || arma.Nome);
+	return npc.Forca + modTecnica + arma.ModDano;
 }
 
 function calculaDano(npc, manobra) {
@@ -453,6 +500,11 @@ function calculaMovimentoArma(npc, arma, manobra) {
 	return npc.Esportes + modMov + parseInt(arma.ModMov);
 }
 
+function calculaMovimentoArmaDistancia(npc, arma) {
+	if (typeof arma.ModMov === "string" && arma.ModMov === "Nenhum") return "-";
+	return npc.Esportes + parseInt(arma.ModMov);
+}
+
 function calculaMovimento(npc, manobra) {
 	if (manobra.ModMov === null || manobra.ModMov === undefined || manobra.ModMov === "Nenhum") return "-";
 	if (manobra.ModMov === "Especial") return "Esp.";
@@ -463,6 +515,39 @@ function calculaMovimento(npc, manobra) {
 }
 
 function carregarTabela(npc) {
+
+	//injetando atributos novos no objeto principal
+	if (npc.NovasTecnicas) npc.NovasTecnicas.forEach((v, i, a) => npc[v.Nome] = v.Valor);
+	if (npc.NovosTalentos) npc.NovosTalentos.forEach((v, i, a) => npc[v.Nome] = v.Valor);
+	if (npc.NovasPericias) npc.NovasPericias.forEach((v, i, a) => npc[v.Nome] = v.Valor);
+	if (npc.NovosConhecimentos) npc.NovosConhecimentos.forEach((v, i, a) => npc[v.Nome] = v.Valor);
+
+	//adicionando duplicatas para campos com acentos
+	npc["Força"] = npc.Forca;
+	npc["Manipulação"] = npc.Manipulacao;
+	npc["Aparência"] = npc.Aparecia;
+	npc["Percepção"] = npc.Percepcao;
+	npc["Raciocínio"] = npc.Raciocinio;
+
+	//injetando antecedentes únicos
+	const antecedentesUnicos = ["Híbrido Animal", "Elemental", "Herança do Clã", "Cibernético", "Tarkatan", "Shokan", "Centaureon", "Psycho Power", "Paranormal", "Satsui no Hadou", "Despertar", "Sangue de Orochi" ,"Sub-Elemental"];
+	antecedentesUnicos.forEach((v, i, a) => {
+		const antecedente = npc.Antecedentes.find(a => a.Nome === v);
+		if (antecedente) npc[v] = antecedente.Valor
+	});
+
+	//compensando antecedentes equivalentes
+	if (npc.Antecedentes.some(a => a.Nome === "Tarkatan")) npc["Híbrido Animal"] = npc["Tarkatan"];
+	else if (npc.Antecedentes.some(a => a.Nome === "Centaureon")) npc["Híbrido Animal"] = npc["Centaureon"];
+	else if (npc.Antecedentes.some(a => a.Nome === "Shokan")) npc["Híbrido Animal"] = npc["Shokan"];
+	else if (npc.Antecedentes.some(a => a.Nome === "Híbrido Animal")) npc["Tarkatan"] = npc["Híbrido Animal"];
+
+	if (npc.Antecedentes.some(a => a.Nome === "Paranormal")) npc["Psycho Power"] = npc["Paranormal"];
+	else if (npc.Antecedentes.some(a => a.Nome === "Psycho Power")) npc["Paranormal"] = npc["Psycho Power"];
+
+	if (npc.Antecedentes.some(a => a.Nome === "Sub-Elemental")) npc["Elemental"] = npc["Sub-Elemental"];
+
+	//preenchendo manobras básicas
 
 	const manobrasBasicas = ["Jab", "Strong", "Fierce", "Short", "Forward", "Roundhouse", "Apresamento", "Bloqueio", "Movimento"];
 
@@ -491,7 +576,16 @@ function carregarTabela(npc) {
 				html += "<td>-</td>";
 				html += "<td>-</td>";
 				html += "<td></td>";
-				html += "<td>" + arma.Sistema + "</td></tr>\r\n";
+				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+			}
+			else if (arma.Tecnica === "Arremesso") {
+				html += "<tr><td>" + v.trim() + "</td>";
+				html += "<td>" + calculaVelocidadeArmaDistancia(npc, arma) + "</td>";
+				html += "<td>" + calculaDanoArmaDistancia(npc, arma) + "</td>";
+				html += "<td>" + calculaMovimentoArmaDistancia(npc, arma) + "</td>";
+				html += "<td>" + calculaAlcanceArremesso(npc, arma) + "</td>";
+				html += "<td></td>";
+				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
 			}
 			else {
 				const manobrasComArmas = ["Jab", "Strong", "Fierce"];

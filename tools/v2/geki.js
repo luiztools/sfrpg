@@ -59,7 +59,7 @@ function Geki() {
         Armas: armas,
         NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Heel Stamp, Shikan-Ken, Jump, Spinning Back Fist, Shuto, Boshi-Ken, Deaths Visage, Sakki, Shrouded Moon, Reverse Frontal Kick",
-        Combos: "Shuto para Jab para Shikan-Ken (Dizzy), Shrouded Moon para Boshi-Ken, Jump + Forward para Reverse Frontal Kick (Dizzy)",
+        Combos: "Shuto para Jab para Shikan-Ken (Dizzy); Shrouded Moon para Boshi-Ken; Jump + Forward para Reverse Frontal Kick (Dizzy)",
         Chi: 10,
         ForcaVontade: 8,
         Saude: 20,

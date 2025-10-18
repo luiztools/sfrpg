@@ -7,11 +7,13 @@ function CodySF4() {
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 3);
-    tecnicas[1] = newCaracteristica("Bastão", 2);
+    tecnicas[1] = newCaracteristica("Arremesso", 3);
+    tecnicas[2] = newCaracteristica("Bastão", 2);
 
     const armas = [];
     armas[0] = "Faca";
-    armas[1] = "Bastão";
+    armas[1] = "Faca Arremessada";
+    armas[2] = "Bastão";
 
     const cody =
     {
@@ -80,11 +82,13 @@ function CodyZ3() {
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 2);
-    tecnicas[1] = newCaracteristica("Bastão", 1);
+    tecnicas[1] = newCaracteristica("Arremesso", 2);
+    tecnicas[2] = newCaracteristica("Bastão", 1);
 
     const armas = [];
     armas[0] = "Faca";
-    armas[1] = "Bastão";
+    armas[1] = "Faca Arremessada";
+    armas[2] = "Bastão";
 
     const cody =
     {
@@ -155,11 +159,13 @@ function CodySF5() {
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 4);
-    tecnicas[1] = newCaracteristica("Bastão", 3);
+    tecnicas[1] = newCaracteristica("Arremesso", 4);
+    tecnicas[2] = newCaracteristica("Bastão", 3);
 
     const armas = [];
     armas[0] = "Faca";
-    armas[1] = "Bastão";
+    armas[1] = "Faca Arremessada";
+    armas[2] = "Bastão";
 
     const cody =
     {

@@ -1,5 +1,5 @@
 ﻿function GeninMatador() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Sensei", 4);
     antecedentes[1] = newCaracteristica("Recursos", 1);
     antecedentes[2] = newCaracteristica("Aliados", 3);
@@ -12,7 +12,7 @@
     const armas = [];
     armas[0] = "Faca";
 
-    var npc =
+    const npc =
     {
         Nome: "Genin Matador",
         Estilo: "Ninjitsu Espanhol",
@@ -72,20 +72,20 @@
 }
 
 function ChuninMatador() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Sensei", 4);
     antecedentes[1] = newCaracteristica("Recursos", 2);
     antecedentes[2] = newCaracteristica("Aliados", 4);
     antecedentes[3] = newCaracteristica("Contatos", 2);
     antecedentes[4] = newCaracteristica("Apoio", 2);
 
-    var tecnicas = [];
+    const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 3);
 
     const armas = [];
     armas[0] = "Faca";
 
-    var npc =
+    const npc =
     {
         Nome: "Chunin Matador",
         Estilo: "Ninjitsu Espanhol",
@@ -145,20 +145,20 @@ function ChuninMatador() {
 }
 
 function JoninMatador() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Sensei", 4);
     antecedentes[1] = newCaracteristica("Recursos", 3);
     antecedentes[2] = newCaracteristica("Aliados", 5);
     antecedentes[3] = newCaracteristica("Contatos", 3);
     antecedentes[4] = newCaracteristica("Apoio", 3);
 
-    var tecnicas = [];
+    const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 4);
 
     const armas = [];
     armas[0] = "Faca";
 
-    var npc =
+    const npc =
     {
         Nome: "Jonin Matador",
         Estilo: "Ninjitsu Espanhol",
