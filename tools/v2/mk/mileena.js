@@ -1,4 +1,4 @@
-function Shokan() {
+function Mileena() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Apoio", 5);
@@ -73,10 +73,10 @@ function Shokan() {
         Chi: 6,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Backflip, Tumbling Attack, Bite, Athletic",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Backflip, Tumbling Attack, Bite, Athletic, Head Bite",
         Combos: "Tumbling Attack para Short (dizzy); Sai Arremessada para Tumbling Attack; Forward para Forward para Forward (dizzy); Jab para Jab para Forward (dizzy)"
     };
     return personagem;
 }
 
-let npc = calcPC(Shokan());
+let npc = calcPC(Mileena());

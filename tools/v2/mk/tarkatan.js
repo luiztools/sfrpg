@@ -1,4 +1,4 @@
-function Shokan() {
+function Tarkatan() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Tarkatan", 3);
 
@@ -68,4 +68,4 @@ function Shokan() {
     return personagem;
 }
 
-let npc = calcPC(Shokan());
+let npc = calcPC(Tarkatan());

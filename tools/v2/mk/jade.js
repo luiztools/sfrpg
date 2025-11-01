@@ -1,4 +1,4 @@
-function Shokan() {
+function Jade() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Apoio", 5);
@@ -74,4 +74,4 @@ function Shokan() {
     return personagem;
 }
 
-let npc = calcPC(Shokan());
+let npc = calcPC(Jade());

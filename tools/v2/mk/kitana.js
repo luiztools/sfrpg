@@ -1,4 +1,4 @@
-function Mileena() {
+function Kitana() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Apoio", 5);
@@ -78,4 +78,4 @@ function Mileena() {
     return personagem;
 }
 
-let npc = calcPC(Mileena());
+let npc = calcPC(Kitana());

@@ -1,11 +1,9 @@
-function Goro() {
+function Kintaro() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Apoio", 3);
-    antecedentes[2] = newCaracteristica("Arena", 2);
-    antecedentes[3] = newCaracteristica("Fama", 2);
-    antecedentes[4] = newCaracteristica("Recursos", 2);
-    antecedentes[5] = newCaracteristica("Shokan", 5);
+    antecedentes[0] = newCaracteristica("Apoio", 5);
+    antecedentes[1] = newCaracteristica("Fama", 2);
+    antecedentes[2] = newCaracteristica("Recursos", 2);
+    antecedentes[3] = newCaracteristica("Shokan", 5);
 
     const armas = [];
     const talentos = [];
@@ -13,23 +11,23 @@ function Goro() {
 
     const personagem =
     {
-        Nome: "Goro",
+        Nome: "Kintaro",
         Estilo: "Boxe",
         Escola: "Nenhuma",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Príncipe de Kuatan",
-        Assinatura: "Grito de Vitória",
+        Conceito: "Guerreiro de Kuatan",
+        Assinatura: "Levanta o Braço",
         Jogador: "NPC",
-        Cronica: "Mortal Kombat",
+        Cronica: "Mortal Kombat 2",
         Forca: 10,
-        Destreza: 3,
+        Destreza: 4,
         Vigor: 10,
-        Carisma: 1,
+        Carisma: 0,
         Manipulacao: 1,
         Aparencia: 0,
         Percepcao: 3,
-        Inteligencia: 4,
+        Inteligencia: 2,
         Raciocinio: 5,
         Prontidao: 5,
         Perspicacia: 0,
@@ -39,37 +37,37 @@ function Goro() {
         Labia: 0,
         LutaCega: 3,
         Conducao: 0,
-        Lideranca: 5,
+        Lideranca: 2,
         Seguranca: 0,
         Furtividade: 0,
         Sobrevivencia: 5,
         Arena: 5,
         Computador: 0,
         Investigacao: 0,
-        Medicina: 1,
+        Medicina: 0,
         Misterios: 5,
         Estilos: 0,
         NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
-        Soco: 7,
+        Soco: 6,
         Chute: 3,
-        Bloqueio: 6,
-        Apresamento: 5,
-        Esportes: 5,
-        Foco: 5,
+        Bloqueio: 7,
+        Apresamento: 2,
+        Esportes: 6,
+        Foco: 6,
         Armas: armas,
         Divisao: "Livre",
-        Posto: 10,
-        Gloria: 10,
+        Posto: 9,
+        Gloria: 8,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash, Grappling Defense",
-        Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy)"
+        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Flying Heel Stomp, Grappling Defense, Double Hit Punch",
+        Combos: "Jab para Brain Cracker (dizzy); Flying Heel Stomp para Power Uppercut; Bloqueio para Sonic Boom; Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy)"
     };
     return personagem;
 }
 
-let npc = calcPC(Goro());
+let npc = calcPC(Kintaro());

@@ -1,4 +1,4 @@
-function Reptile() {
+function Scorpion() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Elemental", 5);
@@ -70,4 +70,4 @@ function Reptile() {
     return personagem;
 }
 
-let npc = calcPC(Reptile());
+let npc = calcPC(Scorpion());

@@ -1,4 +1,4 @@
-function JohnnyCageMk3() {
+function LiuKang() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 5);
@@ -63,5 +63,5 @@ function JohnnyCageMk3() {
     return personagem;
 }
 
-let npc = JohnnyCageMk3();
+let npc = LiuKang();
 npc = calcPC(npc);

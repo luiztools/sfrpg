@@ -1,7 +1,7 @@
 ﻿function Jonin() {
 
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Herança de Clã", 3);
+    antecedentes[0] = newCaracteristica("Herança de Clã", 5);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Espada", 1);
@@ -74,7 +74,7 @@
 function Genin() {
 
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Herança de Clã", 1);
+    antecedentes[0] = newCaracteristica("Herança de Clã", 3);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Espada", 0);
@@ -147,7 +147,7 @@ function Genin() {
 function Chunin() {
 
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Herança de Clã", 2);
+    antecedentes[0] = newCaracteristica("Herança de Clã", 4);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Espada", 0);
