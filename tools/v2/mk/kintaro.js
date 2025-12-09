@@ -64,7 +64,7 @@ function Kintaro() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Flying Heel Stomp, Grappling Defense, Double Hit Punch",
+        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Flying Heel Stomp",
         Combos: "Jab para Brain Cracker (dizzy); Flying Heel Stomp para Power Uppercut; Bloqueio para Sonic Boom; Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy)"
     };
     return personagem;

@@ -64,7 +64,7 @@ function Nightwolf() {
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Shadow Shoulder, God Invocation",
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Shadow Shoulder, God Invocation, Wolf Animality",
         Combos: "Strong para Machado Strong para Machado Jab (Dizzy); Energy Reflection para Fireball (Dizzy); Forward para Forward para Roundhouse (Dizzy); Jab para Jab para String (Dizzy); Jab para Jab para Machado Jab (Dizzy); Short para Jab para Machado Jab (Dizzy)"
     };
     return personagem;
@@ -136,7 +136,7 @@ function NightwolfArmageddon() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Shadow Shoulder, God Invocation",
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Shadow Shoulder, God Invocation, Wolf Animality",
         Combos: "Strong para Machado Strong para Machado Jab (Dizzy); Energy Reflection para Fireball (Dizzy); Forward para Forward para Roundhouse (Dizzy); Jab para Jab para String (Dizzy); Jab para Jab para Machado Jab (Dizzy); Short para Jab para Machado Jab (Dizzy)"
     };
     return personagem;

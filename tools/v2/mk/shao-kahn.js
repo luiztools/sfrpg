@@ -62,7 +62,7 @@ function ShaoKahn() {
         Chute: 4,
         Bloqueio: 6,
         Apresamento: 2,
-        Esportes: 3,
+        Esportes: 4,
         Foco: 8,
         NovasTecnicas: tecnicas,
         Armas: armas,

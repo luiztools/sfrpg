@@ -66,7 +66,7 @@ function Goro() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash, Grappling Defense",
+        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash",
         Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy)"
     };
     return personagem;

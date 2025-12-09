@@ -16,6 +16,7 @@ const manobras = {
 	"Quill Sweep": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "Básica de Híbrido Animal" },
 	"Tentacle Squeeze": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "Básica de Híbrido Animal" },
 	"Claw": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 2, ModMov: 0, Sistema: "Básica de Híbrido Animal" },
+	"Horn": { Tecnica: "Híbrido Animal", ModVel: 0, ModDano: 3, ModMov: -1, Sistema: "Básica de Híbrido Animal" },
 	"Athletic": { Tecnica: "Tarkatan", ModVel: "Especial", ModDano: "Nenhum", ModMov: "Nenhum", Sistema: "Passiva Tarkatan: -2 de dificuldade para tarefas com Esportes, exceto dano" },
 	//soco
 	"Buffalo Punch": { Tecnica: "Soco", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
@@ -246,7 +247,7 @@ const manobras = {
 	"Mind Control": { Tecnica: "Foco", ModVel: -3, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "alvo não pode ter mais FV; atacante precisa vencer uma disputa de Inteligência contra o alvo; a duração depende do nº de sucessos: 1 = 10 turnos, 2 = 1 hora, 3 = 1 dia, 4 = 1 semana, 5 = 1 mês; alvos controlados ordenados a agir contra seu código moral ou seu instinto de sobrevivência podem resistir ao comando se passarem num teste de Honra Permanente vs. FV do controlador; não afeta alvo com Honra Permanente em 10" },
 	"Psycho Crusher": { Tecnica: "Foco", ModVel: -1, ModDano: 5, ModMov: 6, Chi: 2, Sistema: "O atacante pode mudar a direção, mantendo o mesmo plano, no meio do movimento, para atingir vários alvos; precisa entrar no hex do alvo; alvos que não estejam bloqueando sofrem +5 DAN, KD e caem em um hex adjacente (alvo escolhe), só podem ser atingidos uma vez; quem estiver bloqueando recua 1 hex (na direção do movimento) e sofre 1 dado de dano (Manobra termina se resultar em falha crítica), alvo pode ser atacado 5 vezes antes do atacante passar para trás dele e continuar seu movimento" },
 	"Psychic Rage": { Tecnica: "Foco", ModVel: -2, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "atacante precisa vencer uma disputa de FV; se bem sucedido, o alvo só poderá usar Fierce, Roundhouse e suas Manobras Especiais que causem maior dano enquanto estiver em fúria; pode atacar amigos e aliados; entre os turnos o alvo pode tentar vencer uma disputa de FV vs. Manipulação do controlador para libertar-se; o alvo perde Honra pelas ações feitas sobre efeito do Psychic Rage" },
-	"Psychic Vise": { Tecnica: "Foco", ModVel: 0, ModDano: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Sistema: "o alvo absorve com Inteligência ao invés de Vigor, ignorando Bloqueios; o dano é retirado da FV do alvo e este terá um redutor na VEL no próximo turno igual ao dano; se o dano exceder a Inteligência do alvo, ele estará Dizzy; alvos sem FV ainda podem ser Dizzys e ter sua VEL reduzida" },
+	"Psychic Vise": { Tecnica: "Foco", ModVel: 0, ModDano: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Sistema: "O alvo absorve com Inteligência ao invés de Vigor, ignorando Bloqueios; o dano é retirado da FV do alvo e este terá um redutor na VEL no próximo turno igual ao dano; se o dano exceder a Inteligência do alvo, ele estará Dizzy;" },
 	"Psychokinetic Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com um soco ou chute básico; adiciona +2 no dano" },
 	"Air Blast": { Tecnica: "Foco", ModVel: -1, ModDano: 3, Chi: 1, Alcance: "Inteligencia+Elemental", Sistema: "linha de visão; alvo precisa passar em um teste de Percepção + Luta às Cegas para perceber e interromper este ataque" },
 	"Balance": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "O lutador ganha +1 MOV para Manobra Aérea; automático" },
@@ -296,18 +297,21 @@ const manobras = {
 	"Soul Spiral": { Tecnica: "Foco", ModVel: 0, ModDano: "0/0/0", ModMov: -1, Chi: 1, Sistema: "Três Hits; KD" },
 	"God Invocation": { Tecnica: "Foco", ModVel: -2, ModDano: "10", Chi: 2, Sistema: "Ignora bloqueio; Rola Carisma + Mistérios e compara com tabela; Não pode levar dano no turno de invocação ou perde a manobra" },
 	"Dragon Attack": { Tecnica: "Foco", ModVel: -3, Chi: 2, Sistema: "Ver Manobra" },
+	"Wolf Animality": { Tecnica: "Foco", ModVel: -3, Chi: 2, Sistema: "Ver Manobra" },
 	"Lightning": { Tecnica: "Foco", ModVel: -2, ModDano: 3, Chi: 1, Alcance: "Inteligencia+Foco", Sistema: "Projétil" },
 	"Absorb Soul": { Tecnica: "Foco", ModVel: "Especial", Chi: 2, Sistema: "Ver Manobra" },
 	"Metamorphose": { Tecnica: "Foco", ModVel: 1, ModMov: -2, Chi: 2, Sistema: "Ver Manobra" },
-	"Determination": { Tecnica: "Foco", ModVel: "", ModDano: "", ModMov: "", FdV: 1, Sistema: "Permite usar sua manobra no mesmo turno em que ficou Dizzy, mas não no turno seguinte." },
-	"Improved Yoga Teleport": { Tecnica: "Foco", ModVel: 0, ModDano: "", ModMov: "", Chi: 1, Sistema: "Permite teleportar outras pessoas e a distâncias maiores." },
+	"Determination": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "Permite usar sua manobra no mesmo turno em que ficou Dizzy, mas não no turno seguinte." },
+	"Improved Yoga Teleport": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Permite teleportar outras pessoas e a distâncias maiores." },
 	"Sense Element": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Percepção + Elemental para perceber seu elemento" },
 	"Ice Ground": { Tecnica: "Foco", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Alcance: 3, Sistema: "Congela 3 hexes à frente, se pisar leva KD e -3 Vel na próxima manobra. Gelo dura 2 turnos." },
 	"Ice Shower": { Tecnica: "Foco", ModVel: -2, ModDano: 3, ModMov: "Nenhum", Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "Igual Ice Blast, mas afeta lutadores no ar também." },
 	"Ice Clone": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Dois", Chi: 1, Sistema: "Move para trás. Alvo testa Des + Esp contra Foco para não tocar no gelo. Mesmo efeito do Ice Blast mas sem dano. Dura 2 rodadas." },
+	"The Hand From Hell": { Tecnica: "Foco", ModVel: -2, ModDano: 10, ModMov: "Nenhum", Chi: 2, Sistema: "rola Carisma + Mistérios e compara com tabela para saber efeito (dano único ou apresamento sustentado). Não pode ser ser bloqueada." },
 
 	//Outros
 	"Spinning Weapon": { Tecnica: "Bastão", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits" },
+	"Weapon Sweep": { Tecnica: "Bastão", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento." },
 };
 
 const armas = {

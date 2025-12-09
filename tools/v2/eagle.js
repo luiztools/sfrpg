@@ -55,7 +55,7 @@ function EagleZ3() {
         NovasTecnicas: tecnicas,
         Antecedentes: antecedentes,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Buffalo Punch, Triple Strike",
+        ManobrasEspeciais: "Jump, Buffalo Punch, Triple Strike, Weapon Sweep",
         Combos: "Jump + Bastão Fierce para Bastão Strong (Dizzy), Bastão Jab para Bastão Jab para Bastão Berserk (Dizzy), Bastão Strong para Bastão Strong para Bastão Berserk (Dizzy), Bastão Fierce para Bastão Fierce para Bastão Berserk (Dizzy), Aparar para Triple Strike",
         Chi: 2,
         ForcaVontade: 9,
