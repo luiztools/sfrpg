@@ -14,8 +14,10 @@ function RolentoZ3() {
     tecnicas[3] = newCaracteristica("Bastão", 5);
 
     const armas = [];
-    armas[0] = "Bastão";
+    armas[0] = "Tonfa de Ferro";
     armas[1] = "Faca";
+    armas[2] = "Granada";
+    armas[3] = "Garrote";
 
     const rolento =
     {
@@ -92,8 +94,11 @@ function RolentoSF4() {
     tecnicas[3] = newCaracteristica("Bastão", 5);
 
     const armas = [];
-    armas[0] = "Bastão";
+    armas[0] = "Tonfa de Ferro";
     armas[1] = "Faca";
+    armas[2] = "Faca Arremessada";
+    armas[3] = "Granada";
+    armas[4] = "Garrote";
 
     const rolento =
     {

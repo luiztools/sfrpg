@@ -9,7 +9,7 @@ function KanoMK3() {
     tecnicas[0] = newCaracteristica("Faca", 5);
     tecnicas[1] = newCaracteristica("Arremesso", 6);
 
-    const armas = ["Faca"];
+    const armas = ["Faca", "Faca Arremessada"];
 
     const personagem =
     {
@@ -83,6 +83,8 @@ function KanoMKX() {
     tecnicas[1] = newCaracteristica("Arremesso", 6);
     tecnicas[2] = newCaracteristica("Armas de Fogo", 3);
 
+    const armas = ["Faca", "Faca Arremessada"];
+
     const personagem =
     {
         Nome: "Kano",
@@ -129,6 +131,7 @@ function KanoMKX() {
         Esportes: 5,
         Foco: 1,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         Divisao: "Tradicional",
         Posto: 8,
         Gloria: 5,

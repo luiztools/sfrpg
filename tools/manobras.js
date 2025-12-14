@@ -187,6 +187,7 @@ const manobras = {
 	"Soul Throw": { Tecnica: "Apresamento", ModVel: -2, ModDano: 7, ModMov: "Dois", Chi: 1, Sistema: "Personagem passa pelo hex do oponente, arremessando-o em seguida" },
 	"Tornado Throw": { Tecnica: "Apresamento", ModVel: 0, ModDano: 6, ModMov: "Um", FdV: 1, Sistema: "KD, arremessa em qualquer hex adjacente" },
 	"Clinch": { Tecnica: "Apresamento", ModVel: 2, ModDano: 0, ModMov: "Um", Sistema: "Não causa dano real, apenas anula manobra do oponente se agarrar. +1 Vel em apresamentos no próximo turno." },
+
 	//Esportes
 	"Air Smash": { Tecnica: "Esportes", ModVel: -1, ModDano: 4, ModMov: -1, Sistema: "Aérea; esquiva de projétil; Linha Reta; o atacante termina o movimento no hex do alvo" },
 	"Beast Roll": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: -2, FdV: 1, Sistema: "Aérea; esquiva de projétil;Linha Reta; 1º ataque move-se para trás, então reverte a direção para o 2º ataque; o atacante termina 2 hex na frente do 2º alvo; precisa entrar no hex de ambos os alvos; mov +2 para segundo ataque" },
@@ -219,16 +220,18 @@ const manobras = {
 	"Web Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: "+0", ModMov: 3, Chi: 1, FdV: 1, Sistema: "Absorve com Raciocínio. Causa Dizzy, sem dano real." },
 	"Hyper Tackle": { Tecnica: "Esportes", ModVel: -1, ModDano: 4, ModMov: "+0", Sistema: "Linha reta. Tem de entrar no hex. Acerta todos até o fim do movimento. -1 Mov por cada impacto." },
 	"Shadow Shoulder": { Tecnica: "Esportes", ModVel: -1, ModDano: 3, ModMov: 2, Chi: 1, Sistema: "Causa KD; Agachamento ignora; Deve entrar no hex do oponente;" },
+	"Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: -1, ModMov: "Nenhum", Chi: 1, FdV: 1, Sistema: "Causa KD; até 3 hits;" },
+
 	//Foco
 	"Acid Breath": { Tecnica: "Foco", ModVel: -2, ModDano: 3, ModMov: -1, Chi: 1, Alcance: "Vigor", Sistema: "linha de visão; causa +3 DAN imediatamente; no fim do próximo, caso o ácido não seja removido, role agora com +0, e no fim de 2 turnos de espera com -3" },
 	"Chi Kun Healing": { Tecnica: "Foco", ModVel: -1, ModMov: -1, Chi: 1, Sistema: "Restaura 1 Saúde/ponto de Chi, até um máximo de (Foco do lutador) por turno; pode ser usado em outros no mesmo hex" },
 	"Cobra Charm": { Tecnica: "Foco", ModVel: -1, ModMov: -1, Chi: 1, Alcance: "Três", Sistema: "precisa olhar nos olhos do alvo; atacante precisa vencer uma disputa de Raciocínio + Mistérios para encantar o alvo; o alvo pode quebrar o controle vencendo um teste de Inteligência como em um Sustentado; o encantador só pode usar manobras de movimento sem se afastar mais de 3 hex e pode dar comandos simples para o alvo" },
 	"Extendible Limbs": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Combinado com socos e chutes básicos para adicionar 1 hex de Alcance/Foco; Oponentes podem atingir qualquer parte do membro estendido" },
-	"Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "linha de visão" },
+	"Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "Linha de visão. Projétil." },
 	"Flying Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, ModMov: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; Não pode ser esquivada com Jump" },
 	"Ghost Form": { Tecnica: "Foco", ModVel: 1, ModMov: 0, Chi: 2, Sistema: "2 Chi 1º turno e 1 Chi nos turnos subsequentes; o lutador fica insubstancial" },
 	"Ice Blast": { Tecnica: "Foco", ModVel: -2, ModDano: 3, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; se sofrer dano, a vítima é congelada até ser atingida ou conseguir acumular 4 sucessos em um teste prolongado de Força (teste no final de cada turno)" },
-	"Improved Fireball": { Tecnica: "Foco", ModVel: -1, ModDano: 4, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "linha de visão, KD" },
+	"Improved Fireball": { Tecnica: "Foco", ModVel: -1, ModDano: 4, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "Linha de visão, KD, projétil" },
 	"Inferno Strike": { Tecnica: "Foco", ModVel: -2, ModDano: 4, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "hex linha de visão; afeta o hex alvo e todos os adjacentes" },
 	"Mind Reading": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "usuário declara o alvo de Mind Reading e precisa vencer uma disputa de FV Permanente; se conseguir, o usuário pode ver 2 cartas de combate do alvo, uma deve ser jogada no próximo turno; as cartas devem ser mostradas entre os turnos" },
 	"Musical Accompaniment": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Se sua música estiver tocando, ganha +1VEL, DAN ou MOV em cada turno" },
@@ -308,19 +311,28 @@ const manobras = {
 	"Ice Shower": { Tecnica: "Foco", ModVel: -2, ModDano: 3, ModMov: "Nenhum", Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "Igual Ice Blast, mas afeta lutadores no ar também." },
 	"Ice Clone": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Dois", Chi: 1, Sistema: "Move para trás. Alvo testa Des + Esp contra Foco para não tocar no gelo. Mesmo efeito do Ice Blast mas sem dano. Dura 2 rodadas." },
 	"The Hand From Hell": { Tecnica: "Foco", ModVel: -2, ModDano: 10, ModMov: "Nenhum", Chi: 2, Sistema: "rola Carisma + Mistérios e compara com tabela para saber efeito (dano único ou apresamento sustentado). Não pode ser ser bloqueada." },
+	"Telekinesis": { Tecnica: "Foco", ModVel: -2, ModDano: "Nenhum", ModMov: "Nenhum", Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Ver Descrição" },
 
 	//Outros
 	"Spinning Weapon": { Tecnica: "Bastão", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits" },
 	"Weapon Sweep": { Tecnica: "Bastão", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento." },
+	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano" },
 };
 
 const armas = {
+	"Arco Curto": { Tecnica: "Arco", ModVel: 1, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arco", Sistema: "Alc Máx 9" },
+	"Arco Longo": { Tecnica: "Arco", ModVel: 1, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arco", Sistema: "Alc Máx 12" },
+	"Yumi": { Tecnica: "Arco", ModVel: 0, ModDano: 4, ModMov: "Nenhum", Alcance: "Força+Arco", Sistema: "Alc Máx 15" },
+	"Besta Leve": { Tecnica: "Besta", ModVel: 2, ModDano: 1, ModMov: "Nenhum", Alcance: 9, Sistema: "" },
+	"Besta Pesada": { Tecnica: "Besta", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: 12, Sistema: "" },
 	"Arpão": { Tecnica: "Arremesso", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Alcance: 5, Sistema: "Se causar 3 de dano, atordoa e puxa o oponente." },
 	"Bagh Nakh": { Tecnica: "Faca", ModVel: 1, ModDano: 1, ModMov: 0, Sistema: "" },
 	"Balisong": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Bastão Longo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },
 	"Bastão Improvisado": { Tecnica: "Bastão", ModVel: -1, ModDano: 1, ModMov: -1, Sistema: "" },
+	"Clava": { Tecnica: "Bastão", ModVel: -1, ModDano: 1, ModMov: -1, Sistema: "" },
 	"Bastão Curto": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
+	"Bastão Curto Reforçado": { Tecnica: "Bastão", ModVel: 1, ModDano: 2, ModMov: 1, Sistema: "" },
 	"Bazuca": { Tecnica: "Armas de Fogo", ModVel: -4, ModDano: 12, ModMov: "-", Sistema: "A explosão do míssil atinge todos dentro de uma área de 5 hex de raio. Recarregar uma bazuca requer um turno inteiro." },
 	"Bo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },
 	"Bokken": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },
@@ -343,6 +355,7 @@ const armas = {
 	"Faca de Combate": { Tecnica: "Faca", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Faca Improvisada": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Foice": { Tecnica: "Faca", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
+	"Kama": { Tecnica: "Faca", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Fuzil": { Tecnica: "Armas de Fogo", ModVel: 0, ModDano: 5, ModMov: "-", Sistema: "" },
 	"Fuzil de Assalto": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: 6, ModMov: "-", Sistema: "" },
 	"Garra": { Tecnica: "Garra", ModVel: 1, ModDano: 1, ModMov: 0, Sistema: "" },
@@ -353,18 +366,24 @@ const armas = {
 	"Kusari": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Alcance: 2 hex" },
 	"Kusarigama": { Tecnica: "Chicote", ModVel: 0, ModDano: 3, ModMov: -2, Alcance: 2, Sistema: "Alcance: 2 hex" },
 	"Lança": { Tecnica: "Lança", ModVel: 0, ModDano: 3, ModMov: 1, Sistema: "Empunhadura: Variável" },
+	"Lança Arremessada": { Tecnica: "Arremesso", ModVel: -1, ModDano: 3, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
 	"Leque": { Tecnica: "Leque", ModVel: 0, ModDano: 2, ModMov: 1 },
 	"Leque Arremessado": { Tecnica: "Arremesso", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
 	"Machadinha": { Tecnica: "Faca", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Machadinha Arremessada": { Tecnica: "Arremesso", ModVel: 1, ModDano: 2, ModMov: 0, Alcance: "Força+Arremesso" },
 	"Machado Curto": { Tecnica: "Machado", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "" },
+	"Machado Grande": { Tecnica: "Machado", ModVel: -1, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
 	"Martelo de Guerra": { Tecnica: "Martelo", ModVel: -1, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
+	"Martelo Arremessado": { Tecnica: "Arremesso", ModVel: -1, ModDano: 4, ModMov: "Nenhum", Alcance: "Força" },
 	"Naginata": { Tecnica: "Lança", ModVel: 0, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
+	"Glaive": { Tecnica: "Lança", ModVel: 0, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
 	"Navalha": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Ninjato": { Tecnica: "Espada", ModVel: 1, ModDano: 2, ModMov: 1, Sistema: "Empunhadura: Uma Mão." },
-	"Nunchaku": { Tecnica: "Mangual", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão" },
+	"Nunchaku": { Tecnica: "Bastão", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão" },
 	"Pata": { Tecnica: "Espada", ModVel: -2, ModDano: 3, ModMov: 0, Sistema: "ver descrição" },
+	"Granada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 6, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Raio de 3 hexes." },
 	"Pistola": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 3, ModMov: "-", Sistema: "" },
+	"Pistola de Choque": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: "Especial", ModMov: "-", Alcance: 5, Sistema: "5 cargas. Dano 10 fixo. Sustentado Força 5. Ignora Bloqueio." },
 	"Pistola Pesada": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 4, ModMov: "-", Sistema: "" },
 	"Rapier": { Tecnica: "Espada", ModVel: 2, ModDano: 1, ModMov: 1, Sistema: "Empunhadura: Uma Mão." },
 	"Sabre": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },
@@ -375,6 +394,8 @@ const armas = {
 	"Tonfa": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
 	"Tonfa de Ferro": { Tecnica: "Bastão", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Wakizashi": { Tecnica: "Faca", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
+	"Garrote": { Tecnica: "Apresamento", ModVel: -3, ModDano: 4, ModMov: "Nenhum", Sistema: "Se o alvo do ataque é tomado de surpresa ou tomar mais de 5 dano no ataque inicial, ele é considerado em choque e não ABS nos ataques subsequentes ao Apresamento Sustentado!" },
+	"Rede": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Projétil, ignora Bloqueio, requer linha de visão. Não causa dano real, mas se tirar ao menos um sucesso no teste de dano, o oponente está Dizzy até que consiga um número de sucessos em teste de Força igual ao dano causado, testando ao final de cada turno." },
 };
 
 const valorFixoRegex = new RegExp("^(Um|Dois|Três|Quatro)$");
@@ -436,7 +457,16 @@ function calculaAlcanceArremesso(npc, arma) {
 
 function calculaVelocidade(npc, manobra) {
 	if (manobra.ModVel === null || manobra.ModVel === undefined || manobra.ModVel === "Especial") return "Esp.";
-	const modAtributo = manobra.Tecnica === "Foco" ? npc.Raciocinio : npc.Destreza;
+
+	let modAtributo = 0;
+	if (manobra.Tecnica === "Foco") {
+		if (npc["Cibernético"] > 0)
+			modAtributo = npc.Destreza > npc.Raciocinio ? npc.Destreza : npc.Raciocinio;
+		else
+			modAtributo = npc.Raciocinio;
+	}
+	else modAtributo = npc.Destreza;
+
 	const modVel = parseInt(manobra.ModVel);
 	return modAtributo + modVel;
 }
@@ -482,8 +512,16 @@ function calculaDano(npc, manobra) {
 	if (manobra.ModDano === null || manobra.ModDano === undefined || manobra.ModDano === "Nenhum") return "-";
 	if (manobra.ModDano === "Especial") return "Esp.";
 
-	const modAtributo = manobra.Tecnica === "Foco" ? npc.Inteligencia : npc.Forca;
-	const modTecnica = npc[manobra.Tecnica];
+	let modAtributo = 0;
+	let modTecnica = undefined;
+	if (manobra.Tecnica === "Foco") {
+		modAtributo = npc.Inteligencia;
+		modTecnica = npc["Cibernético"] ? npc["Cibernético"] : npc.Foco;
+	}
+	else modAtributo = npc.Forca;
+
+	if (modTecnica === undefined)
+		modTecnica = npc[manobra.Tecnica];
 
 	if (modTecnica === undefined)
 		return calculaDanoArma(npc, armas[manobra.Tecnica], manobra);
@@ -535,30 +573,38 @@ function carregarTabela(npc) {
 	npc["Raciocínio"] = npc.Raciocinio;
 
 	//injetando antecedentes únicos
-	const antecedentesUnicos = ["Híbrido Animal", "Elemental", "Herança do Clã", "Cibernético", "Tarkatan", "Shokan", "Centaureon", "Psycho Power", "Paranormal", "Satsui no Hadou", "Despertar", "Sangue de Orochi" ,"Sub-Elemental"];
+	const antecedentesUnicos = ["Híbrido Animal", "Elemental", "Irmão das Sombras", "Espectro", "Herança de Clã", "Cibernético", "Tarkatan", "Shokan", "Centaurian", "Psycho Power", "Paranormal", "Satsui no Hadou", "Despertar", "Sangue de Orochi"];
 	antecedentesUnicos.forEach((v, i, a) => {
 		const antecedente = npc.Antecedentes.find(a => a.Nome === v);
 		if (antecedente) npc[v] = antecedente.Valor
 	});
 
+	//corrigido nomes
+	if (npc["Irmãos das Sombras"] > npc["Irmão das Sombras"]) npc["Irmão das Sombras"] = npc["Irmãos das Sombras"];
+	if (npc["Herança do Clã"] > npc["Herança de Clã"]) npc["Herança de Clã"] = npc["Herança do Clã"];
+	if (npc["Centaurean"] > npc["Centaurian"]) npc["Centaurian"] = npc["Centaurean"];
+	if (npc["Sub-Elemental"] > npc["Elemental"]) npc["Elemental"] = npc["Sub-Elemental"];
+
 	//compensando antecedentes equivalentes
-	if (npc.Antecedentes.some(a => a.Nome === "Tarkatan")) npc["Híbrido Animal"] = npc["Tarkatan"];
-	else if (npc.Antecedentes.some(a => a.Nome === "Centaureon")) npc["Híbrido Animal"] = npc["Centaureon"];
-	else if (npc.Antecedentes.some(a => a.Nome === "Shokan")) npc["Híbrido Animal"] = npc["Shokan"];
-	else if (npc.Antecedentes.some(a => a.Nome === "Híbrido Animal")) npc["Tarkatan"] = npc["Híbrido Animal"];
+	if (npc["Tarkatan"]) npc["Híbrido Animal"] = npc["Tarkatan"];
+	if (npc["Irmão das Sombras"]) npc["Herança de Clã"] = npc["Irmão das Sombras"];
+	if (npc["Centaurian"]) npc["Híbrido Animal"] = npc["Centaurian"];
+	if (npc["Shokan"]) npc["Híbrido Animal"] = npc["Shokan"];
 
-	if (npc.Antecedentes.some(a => a.Nome === "Paranormal")) npc["Psycho Power"] = npc["Paranormal"];
-	else if (npc.Antecedentes.some(a => a.Nome === "Psycho Power")) npc["Paranormal"] = npc["Psycho Power"];
+	if (npc["Paranormal"] > npc["Psycho Power"]) npc["Psycho Power"] = npc["Paranormal"];
+	else npc["Paranormal"] = npc["Psycho Power"];
 
-	if (npc.Antecedentes.some(a => a.Nome === "Sub-Elemental")) npc["Elemental"] = npc["Sub-Elemental"];
+	if (npc["Sub-Elemental"]) npc["Elemental"] = npc["Sub-Elemental"];
 
 	//preenchendo manobras básicas
 
 	const manobrasBasicas = ["Jab", "Strong", "Fierce", "Short", "Forward", "Roundhouse", "Apresamento", "Bloqueio", "Movimento"];
 
 	let html = "";
-	$.each(manobrasBasicas, function (i, v) {
-		var manobra = manobras[v.trim()];
+	manobrasBasicas.forEach((v) => {
+		const manobra = manobras[v.trim()];
+		if (!manobra) return alert("Manobra " + v.trim() + " não encontrada!");
+
 		html += "<tr><td>" + v.trim() + "</td>";
 		html += "<td>" + calculaVelocidade(npc, manobra) + "</td>";
 		html += "<td>" + calculaDano(npc, manobra) + "</td>";
@@ -566,10 +612,10 @@ function carregarTabela(npc) {
 		html += "<td></td>";
 		html += "<td></td>";
 		html += "<td>" + estilizaSistema(manobra.Sistema) + "</td></tr>\r\n";
-	});
+	})
 
 	if (npc.Armas != null && npc.Armas != undefined) {
-		$.each(npc.Armas, function (i, v) {
+		npc.Armas.forEach((v) => {
 			const arma = armas[v.trim()];
 			if (!arma) return alert("Arma " + v.trim() + " não encontrada!");
 
@@ -583,6 +629,24 @@ function carregarTabela(npc) {
 				html += "<td></td>";
 				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
 			}
+			else if (arma.Tecnica === "Arco") {
+				html += "<tr><td>" + v.trim() + "</td>";
+				html += "<td>" + calculaVelocidadeArma(npc, arma, { ModVel: 0 }) + "</td>";
+				html += "<td>" + (npc.Destreza + npc["Arco"] + arma.ModDano) + "</td>";
+				html += "<td>-</td>";
+				html += "<td>" + calculaAlcanceArremesso(npc, arma) + "</td>";
+				html += "<td></td>";
+				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+			}
+			else if (arma.Tecnica === "Besta") {
+				html += "<tr><td>" + v.trim() + "</td>";
+				html += "<td>" + calculaVelocidadeArmaFogo(npc, arma) + "</td>";
+				html += "<td>" + (npc.Destreza + npc["Besta"] + arma.ModDano) + "</td>";
+				html += "<td>-</td>";
+				html += "<td>" + arma.Alcance + "</td>";
+				html += "<td></td>";
+				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+			}
 			else if (arma.Tecnica === "Arremesso") {
 				html += "<tr><td>" + v.trim() + "</td>";
 				html += "<td>" + calculaVelocidadeArmaDistancia(npc, arma) + "</td>";
@@ -592,9 +656,18 @@ function carregarTabela(npc) {
 				html += "<td></td>";
 				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
 			}
+			else if (arma.Tecnica === "Apresamento") {
+				html += "<tr><td>" + v.trim() + "</td>";
+				html += "<td>" + calculaVelocidadeArma(npc, arma, { ModVel: 0 }) + "</td>";
+				html += "<td>" + calculaDanoArma(npc, arma, { ModDano: 0 }) + "</td>";
+				html += "<td>" + calculaMovimentoArma(npc, arma, { ModMov: 0 }) + "</td>";
+				html += "<td>" + calculaAlcanceArma(npc, arma, {}) + "</td>";
+				html += "<td></td>";
+				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+			}
 			else {
 				const manobrasComArmas = ["Jab", "Strong", "Fierce"];
-				$.each(manobrasComArmas, function (i2, v2) {
+				manobrasComArmas.forEach((v2) => {
 					const manobra = manobras[v2.trim()];
 					html += "<tr><td>" + v.trim() + " " + v2.trim() + "</td>";
 					html += "<td>" + calculaVelocidadeArma(npc, arma, manobra) + "</td>";
@@ -603,17 +676,17 @@ function carregarTabela(npc) {
 					html += "<td>" + calculaAlcanceArma(npc, arma) + "</td>";
 					html += "<td></td>";
 					html += "<td>Básica. " + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
-				});
+				})
 			}
-		});
+		})
 	}
 
 	if (npc.ManobrasEspeciais) {
 		if (npc.ManobrasEspeciais.indexOf("Boxing Punches") !== -1)
 			npc.ManobrasEspeciais += "Straight, Cross/Hook, Uppercut";
 
-		$.each(npc.ManobrasEspeciais.split(',').sort(), function (i, v) {
-			var manobra = manobras[v.trim().replace("-", " ")];
+		npc.ManobrasEspeciais.split(',').sort().forEach((v) => {
+			const manobra = manobras[v.trim().replace("-", " ")];
 			html += "<tr><td>" + GeraHtmlLink(v.trim()) + "</td>";
 			if (manobra == null || manobra == undefined) {
 				html += "<td></td><td></td><td></td><td></td><td></td><td>Manobra não encontrada</td>";
@@ -634,7 +707,7 @@ function carregarTabela(npc) {
 				}
 				html += "<td>" + estilizaSistema(manobra.Sistema) + "</td></tr>\r\n";
 			}
-		});
+		})
 	}
 
 	if (npc.Combos) {

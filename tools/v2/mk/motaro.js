@@ -3,7 +3,7 @@ function Motaro() {
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Apoio", 3);
     antecedentes[2] = newCaracteristica("Fama", 4);
-    antecedentes[3] = newCaracteristica("Híbrido Animal", 5);
+    antecedentes[3] = newCaracteristica("Centaurian", 5);
     antecedentes[4] = newCaracteristica("Recursos", 3);
 
     const armas = [];
@@ -16,7 +16,7 @@ function Motaro() {
     {
         Nome: "Motaro",
         Estilo: "Briga",
-        Escola: "Centaureons",
+        Escola: "Centaurians",
         Equipe: "Outworld",
         Time: "Outworld",
         Conceito: "General do Outworld",
@@ -79,7 +79,7 @@ function Centaurean() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Apoio", 2);
-    antecedentes[2] = newCaracteristica("Híbrido Animal", 5);
+    antecedentes[2] = newCaracteristica("Centaurian", 5);
 
     const armas = [];
     const talentos = [];
@@ -91,10 +91,10 @@ function Centaurean() {
     {
         Nome: "Centaurean",
         Estilo: "Briga",
-        Escola: "Centaureans",
+        Escola: "Centaurians",
         Equipe: "Outworld",
-        Time: "Centaureans",
-        Conceito: "Centaurean médio",
+        Time: "Centaurians",
+        Conceito: "Centaurian médio",
         Assinatura: "Grito de Vitória",
         Jogador: "NPC",
         Cronica: "Mortal Kombat 3",

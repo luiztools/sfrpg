@@ -79,7 +79,7 @@ function ShinnokCorrompido() {
     antecedentes[4] = newCaracteristica("Elemental", 7);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Bastão", 5);
+    tecnicas[0] = newCaracteristica("Lança", 5);
 
     const armas = [];
     armas[0] = "Naginata";

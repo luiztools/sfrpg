@@ -150,8 +150,82 @@ function Tarkatan() {
     return personagem;
 }
 
+function General() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Tarkatan", 4);
+
+    const armas = ["Garra"];
+    const talentos = [];
+    const conhecimentos = [];
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Garra", 4);
+
+    const personagem =
+    {
+        Nome: "Líder Tarkatan",
+        Estilo: "Briga",
+        Escola: "Nenhuma",
+        Equipe: "Nenhuma",
+        Time: "Nenhuma",
+        Conceito: "Tarkatan Líder",
+        Assinatura: "Exibe as presas",
+        Jogador: "NPC",
+        Cronica: "Mortal Kombat",
+        Forca: 4,
+        Destreza: 5,
+        Vigor: 4,
+        Carisma: 1,
+        Manipulacao: 2,
+        Aparencia: 0,
+        Percepcao: 4,
+        Inteligencia: 2,
+        Raciocinio: 3,
+        Prontidao: 5,
+        Perspicacia: 1,
+        Manha: 1,
+        Interrogacao: 0,
+        Intimidacao: 5,
+        Labia: 0,
+        LutaCega: 0,
+        Conducao: 0,
+        Lideranca: 1,
+        Seguranca: 0,
+        Furtividade: 4,
+        Sobrevivencia: 5,
+        Arena: 1,
+        Computador: 0,
+        Investigacao: 1,
+        Medicina: 0,
+        Misterios: 0,
+        Estilos: 0,
+        NovosTalentos: talentos,
+        NovosConhecimentos: conhecimentos,
+        Antecedentes: antecedentes,
+        Soco: 4,
+        Chute: 3,
+        Bloqueio: 3,
+        Apresamento: 5,
+        Esportes: 5,
+        Foco: 0,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        Divisao: "Duelistas",
+        Posto: 3,
+        Gloria: 0,
+        Honra: 0,
+        Chi: 2,
+        ForcaVontade: 8,
+        Saude: 12,
+        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Throw, Bite, Athletic",
+        Combos: ""
+    };
+    return personagem;
+}
+
 let npc;
 if (getParameterByName('age') === 'mk2')
     npc = calcPC(Baraka());
 else if (getParameterByName('age') === 'tarkatan')
     npc = calcPC(Tarkatan());
+else if (getParameterByName('age') === 'general')
+    npc = calcPC(General());

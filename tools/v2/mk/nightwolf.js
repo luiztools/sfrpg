@@ -5,10 +5,10 @@ function Nightwolf() {
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Machado", 5);
-    tecnicas[1] = newCaracteristica("Arco", 5);
+    tecnicas[1] = newCaracteristica("Arremesso", 5);
+    tecnicas[2] = newCaracteristica("Arco", 5);
 
-    const armas = [];
-    armas[0] = "Machado Curto";
+    const armas = ["Machado Curto", "Machadinha Arremessada", "Arco Longo"];
 
     const personagem =
     {
@@ -77,10 +77,10 @@ function NightwolfArmageddon() {
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Machado", 5);
-    tecnicas[1] = newCaracteristica("Arco", 5);
+    tecnicas[1] = newCaracteristica("Arremesso", 5);
+    tecnicas[2] = newCaracteristica("Arco", 5);
 
-    const armas = [];
-    armas[0] = "Machado Curto";
+    const armas = ["Machado Curto", "Machadinha Arremessada", "Arco Longo"];
 
     const personagem =
     {

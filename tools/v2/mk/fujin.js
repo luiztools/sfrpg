@@ -1,4 +1,4 @@
-function RaidenMK3() {
+function Fujin() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Fama", 1);
@@ -8,17 +8,19 @@ function RaidenMK3() {
     talentos[0] = newCaracteristica("Instrução", 5);
 
     const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Besta", 5);
 
+    const armas = ["Besta Pesada"];
 
     const personagem = {
-        Nome: "Raiden",
-        Estilo: "Jeet Kune Dô",
+        Nome: "Fujin",
+        Estilo: "Kung Fu",
         Escola: "Elder Gods",
         Jogador: "NPC",
-        Assinatura: "Flashes de eletricidade",
-        Conceito: "Deus do Trovão",
+        Assinatura: "Levita no Ar",
+        Conceito: "Deus do Vento",
         Time: "Defensores da Terra",
-        Cronica: "Mortal Kombat",
+        Cronica: "Mortal Kombat 4",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -55,10 +57,11 @@ function RaidenMK3() {
         Esportes: 5,
         Foco: 5,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Shock Treatment, Yoga Teleport, Flying Head Butt, Lightning, Psychokinetic Channeling, Improved Yoga Teleport",
-        Combos: "Strong para Power Uppercut para Roundhouse (dizzy); Throw para Flyng Head Butt; Jab para Jab para Power Uppercut (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (Dizzy)",
+        Armas: armas,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Double Hit Kick, Flying Knee Thrust, Power Uppercut, Throw, Hair Throw, Dislocate Limb, Air Blast, Elemental Skin, Elemental Stride, Flight, Heal, Lightness, Push, Sense Element, Spin, Levitation, Double-Hit Knee, Dive Kick, Push, Chi Push",
+        Combos: "Bloqueio - Air Blast; Strong - Strong - Air Blast (Dizzy); Jab - Air Blast (Dizzy); Jumping Short - Foot Sweep - Push; Double Hit Kick para Besta para Besta (Dizzy)",
         Gloria: 10,
-        Honra: 10,
+        Honra: 9,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
@@ -68,5 +71,5 @@ function RaidenMK3() {
     return personagem;
 }
 
-let npc = RaidenMK3();
+let npc = Fujin();
 npc = calcPC(npc);
