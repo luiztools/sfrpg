@@ -111,7 +111,6 @@ const manobras = {
 	"Dankuukyaku": { Tecnica: "Chute", ModVel: -1, ModDano: 0, ModMov: 4, FdV: 2, Sistema: "Aérea, esquiva de projétil (dif. 8), após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +2, empurrando de novo e tentando um terceiro com dano +4, que causa KD" },
 	"Dive Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Aérea, afeta personagens em agachamentos" },
 	"Hayagake": { Tecnica: "Chute", ModVel: 0, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea ou agachamento, à escolha do jogador; se aérea, esquiva de projétil; se agachamento, causa KD" },
-	"Messiah Kick": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: -2, FdV: 1, Sistema: "Aérea, esquiva de projétil, tem um segundo chute com dano +2 e efeito KD; se bloqueado, atacante rola Manipulação + Chute contra Percepção + Bloqueio; se vencer, bloqueio não funciona para o segundo chute" },
 	"Power Kick": { Tecnica: "Chute", ModVel: -3, ModDano: 5, ModMov: "Dois", Sistema: "Empurra 1 Hexágono para trás e causa KD em Manobras Aéreas" },
 	"Rhino Horn": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea" },
 	"Rising Lightning Leg": { Tecnica: "Chute", ModVel: 0, ModDano: "1/1/1", ModMov: "Três", FdV: 2, Sistema: "Aérea após a rolagem de dano, podendo se esquivar de projétil; três hits; KD" },
@@ -218,12 +217,12 @@ const manobras = {
 	"Ground Fighting": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "Após sofrer KD o lutador continua a lutar no chão; não pode usar Manobras Aéreas ou manobras que precisem estar de pé (Narrador decide); sem esta manobra os ataques feitos no chão terão -3 na VEL e DAN; ataques contra quem estiver usando esta manobra terão -2 na VEL e DAN, exceto Manobras de Agachamento e ataques rasteiros" },
 	"Rear Crush": { Tecnica: "Esportes", ModVel: 1, ModDano: 2, ModMov: 1, FdV: 1, Sistema: "Não é afetada por agachamentos, mas os afeta; lutador ganha 1 ponto temporário de Glória; caso a vítima seja atordoada ou nocauteada pelo golpe, ela perde 1 ponto temporário de Glória" },
 	"Web Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: "+0", ModMov: 3, Chi: 1, FdV: 1, Sistema: "Absorve com Raciocínio. Causa Dizzy, sem dano real." },
-	"Hyper Tackle": { Tecnica: "Esportes", ModVel: -1, ModDano: 4, ModMov: "+0", Sistema: "Linha reta. Tem de entrar no hex. Acerta todos até o fim do movimento. -1 Mov por cada impacto." },
-	"Shadow Shoulder": { Tecnica: "Esportes", ModVel: -1, ModDano: 3, ModMov: 2, Chi: 1, Sistema: "Causa KD; Agachamento ignora; Deve entrar no hex do oponente;" },
+	"Hyper Tackle": { Tecnica: "Esportes", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "Linha reta. Tem de entrar no hex. Acerta todos até o fim do movimento. -1 Mov por cada impacto. KD. Crítico cancela." },
 	"Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: -1, ModMov: "Nenhum", Chi: 1, FdV: 1, Sistema: "Causa KD; até 3 hits;" },
 
 	//Foco
 	"Acid Breath": { Tecnica: "Foco", ModVel: -2, ModDano: 3, ModMov: -1, Chi: 1, Alcance: "Vigor", Sistema: "linha de visão; causa +3 DAN imediatamente; no fim do próximo, caso o ácido não seja removido, role agora com +0, e no fim de 2 turnos de espera com -3" },
+	"Acid Puke": { Tecnica: "Foco", ModVel: -2, ModDano: 4, ModMov: "Nenhum", Chi: 2, Alcance: "Um", Sistema: "causa +4 DAN imediatamente; no fim do próximo, caso o ácido não seja removido, role agora com +2, e no fim de 2 turnos de espera com +0" },
 	"Chi Kun Healing": { Tecnica: "Foco", ModVel: -1, ModMov: -1, Chi: 1, Sistema: "Restaura 1 Saúde/ponto de Chi, até um máximo de (Foco do lutador) por turno; pode ser usado em outros no mesmo hex" },
 	"Cobra Charm": { Tecnica: "Foco", ModVel: -1, ModMov: -1, Chi: 1, Alcance: "Três", Sistema: "precisa olhar nos olhos do alvo; atacante precisa vencer uma disputa de Raciocínio + Mistérios para encantar o alvo; o alvo pode quebrar o controle vencendo um teste de Inteligência como em um Sustentado; o encantador só pode usar manobras de movimento sem se afastar mais de 3 hex e pode dar comandos simples para o alvo" },
 	"Extendible Limbs": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Combinado com socos e chutes básicos para adicionar 1 hex de Alcance/Foco; Oponentes podem atingir qualquer parte do membro estendido" },
@@ -231,6 +230,7 @@ const manobras = {
 	"Flying Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, ModMov: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; Não pode ser esquivada com Jump" },
 	"Ghost Form": { Tecnica: "Foco", ModVel: 1, ModMov: 0, Chi: 2, Sistema: "2 Chi 1º turno e 1 Chi nos turnos subsequentes; o lutador fica insubstancial" },
 	"Ice Blast": { Tecnica: "Foco", ModVel: -2, ModDano: 3, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; se sofrer dano, a vítima é congelada até ser atingida ou conseguir acumular 4 sucessos em um teste prolongado de Força (teste no final de cada turno)" },
+	"Improved Ice Blast": { Tecnica: "Foco", ModVel: -1, ModDano: 5, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; se sofrer dano, a vítima é congelada até ser atingida ou conseguir acumular 6 sucessos em um teste prolongado de Força (teste no final de cada turno)" },
 	"Improved Fireball": { Tecnica: "Foco", ModVel: -1, ModDano: 4, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "Linha de visão, KD, projétil" },
 	"Inferno Strike": { Tecnica: "Foco", ModVel: -2, ModDano: 4, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "hex linha de visão; afeta o hex alvo e todos os adjacentes" },
 	"Mind Reading": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "usuário declara o alvo de Mind Reading e precisa vencer uma disputa de FV Permanente; se conseguir, o usuário pode ver 2 cartas de combate do alvo, uma deve ser jogada no próximo turno; as cartas devem ser mostradas entre os turnos" },
@@ -308,15 +308,18 @@ const manobras = {
 	"Improved Yoga Teleport": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Permite teleportar outras pessoas e a distâncias maiores." },
 	"Sense Element": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Percepção + Elemental para perceber seu elemento" },
 	"Ice Ground": { Tecnica: "Foco", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Alcance: 3, Sistema: "Congela 3 hexes à frente, se pisar leva KD e -3 Vel na próxima manobra. Gelo dura 2 turnos." },
-	"Ice Shower": { Tecnica: "Foco", ModVel: -2, ModDano: 3, ModMov: "Nenhum", Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "Igual Ice Blast, mas afeta lutadores no ar também." },
+	"Ice Strike": { Tecnica: "Foco", ModVel: 0, ModDano: 5, ModMov: 0, Chi: 1, Sistema: "" },
 	"Ice Clone": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Dois", Chi: 1, Sistema: "Move para trás. Alvo testa Des + Esp contra Foco para não tocar no gelo. Mesmo efeito do Ice Blast mas sem dano. Dura 2 rodadas." },
 	"The Hand From Hell": { Tecnica: "Foco", ModVel: -2, ModDano: 10, ModMov: "Nenhum", Chi: 2, Sistema: "rola Carisma + Mistérios e compara com tabela para saber efeito (dano único ou apresamento sustentado). Não pode ser ser bloqueada." },
 	"Telekinesis": { Tecnica: "Foco", ModVel: -2, ModDano: "Nenhum", ModMov: "Nenhum", Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Ver Descrição" },
+	"Portal Attack": { Tecnica: "Foco", ModVel:  "Especial", ModDano:  "Especial", ModMov:  "Especial", Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Manobras Básicas ou de projeção à distância (alcance)" },
+	"Soul Illusion": { Tecnica: "Foco", ModVel:  2, ModDano:  "Nenhum", ModMov:  "Nenhum", Chi: 1, Sistema: "1 Chi por turno. Cria 4 ilusões que somem com um hit cada. Diferenciar o verdadeiro exige Percepção + Mistérios dif 2 + cópias existentes. Se o real sofrer hit, todas somem." },
+	"Condensed Energy": { Tecnica: "Foco", ModVel:  "Especial", ModDano:  "Especial", ModMov:  "Nenhum", Chi: 1, Sistema: "Jogue em conjunto com projétil. -1 ou -2 Vel e Alcance para diminuir igualmente a dificuldade do teste de dano" },
 
 	//Outros
-	"Spinning Weapon": { Tecnica: "Bastão", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits" },
-	"Weapon Sweep": { Tecnica: "Bastão", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento." },
-	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano" },
+	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
+	"Weapon Sweep": { Tecnica: "Bastão/Lança", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento. Armado." },
+	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano." },
 };
 
 const armas = {
@@ -344,6 +347,7 @@ const armas = {
 	"Chapéu Arremessado": { Tecnica: "Arremesso", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
 	"Chicote": { Tecnica: "Chicote", ModVel: -1, ModDano: 2, ModMov: 0, Alcance: 6 },
 	"Chicote de Aço": { Tecnica: "Chicote", ModVel: -1, ModDano: 3, Alcance: 3 },
+	"Cimitarra": { Tecnica: "Espada", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "Empunhadura: Variável" },
 	"Corrente": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: -2, Alance: 2 },
 	"Escopeta": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: 2, ModMov: "-", Sistema: "Acerta 2x" },
 	"Espada": { Tecnica: "Espada", ModVel: -1, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Variável" },
@@ -362,7 +366,8 @@ const armas = {
 	"Katana": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "Empunhadura: Variável" },
 	"Katar": { Tecnica: "Faca", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "" },
 	"Kris": { Tecnica: "Faca", ModVel: 2, ModDano: 3, ModMov: 0, Sistema: "" },
-	"Kunai": { Tecnica: "Arremesso", ModVel: 1, ModDano: -1, ModMov: -1, Alcance: "Força+Arremesso" },
+	"Kunai Arremessada": { Tecnica: "Arremesso", ModVel: 1, ModDano: -1, ModMov: -1, Alcance: "Força+Arremesso", Sistema: "1 Hit para cada 2 pontos em Arremesso." },
+	"Kunai": { Tecnica: "Faca", ModVel: 1, ModDano: -1, ModMov: -1 },
 	"Kusari": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Alcance: 2 hex" },
 	"Kusarigama": { Tecnica: "Chicote", ModVel: 0, ModDano: 3, ModMov: -2, Alcance: 2, Sistema: "Alcance: 2 hex" },
 	"Lança": { Tecnica: "Lança", ModVel: 0, ModDano: 3, ModMov: 1, Sistema: "Empunhadura: Variável" },
@@ -376,12 +381,14 @@ const armas = {
 	"Martelo de Guerra": { Tecnica: "Martelo", ModVel: -1, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
 	"Martelo Arremessado": { Tecnica: "Arremesso", ModVel: -1, ModDano: 4, ModMov: "Nenhum", Alcance: "Força" },
 	"Naginata": { Tecnica: "Lança", ModVel: 0, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
+	"Naginata Arremessada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 4, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
 	"Glaive": { Tecnica: "Lança", ModVel: 0, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
 	"Navalha": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Ninjato": { Tecnica: "Espada", ModVel: 1, ModDano: 2, ModMov: 1, Sistema: "Empunhadura: Uma Mão." },
 	"Nunchaku": { Tecnica: "Bastão", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão" },
 	"Pata": { Tecnica: "Espada", ModVel: -2, ModDano: 3, ModMov: 0, Sistema: "ver descrição" },
 	"Granada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 6, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Raio de 3 hexes." },
+	"Granada de Gelo": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Raio de 3 hexes. Igual Ice Blast." },
 	"Pistola": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 3, ModMov: "-", Sistema: "" },
 	"Pistola de Choque": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: "Especial", ModMov: "-", Alcance: 5, Sistema: "5 cargas. Dano 10 fixo. Sustentado Força 5. Ignora Bloqueio." },
 	"Pistola Pesada": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 4, ModMov: "-", Sistema: "" },
@@ -390,12 +397,13 @@ const armas = {
 	"Sai": { Tecnica: "Faca", ModVel: 1, ModDano: 0, ModMov: 0, Sistema: "+1 ABS para Aparar e +2 para desarmar" },
 	"Sai Arremessada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: 0, Alcance: "Força+Arremesso" },
 	"Shinai": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },
-	"Shuriken": { Tecnica: "Arremesso", ModVel: 2, ModDano: -2, ModMov: 0, Alcance: "Força+Arremesso", Sistema: "1x hit por ponto em Arremesso" },
+	"Shuriken": { Tecnica: "Arremesso", ModVel: 2, ModDano: -2, ModMov: 0, Alcance: "Força+Arremesso", Sistema: "1 hit por ponto em Arremesso" },
 	"Tonfa": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
 	"Tonfa de Ferro": { Tecnica: "Bastão", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Wakizashi": { Tecnica: "Faca", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Garrote": { Tecnica: "Apresamento", ModVel: -3, ModDano: 4, ModMov: "Nenhum", Sistema: "Se o alvo do ataque é tomado de surpresa ou tomar mais de 5 dano no ataque inicial, ele é considerado em choque e não ABS nos ataques subsequentes ao Apresamento Sustentado!" },
 	"Rede": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Projétil, ignora Bloqueio, requer linha de visão. Não causa dano real, mas se tirar ao menos um sucesso no teste de dano, o oponente está Dizzy até que consiga um número de sucessos em teste de Força igual ao dano causado, testando ao final de cada turno." },
+	"Wind Blade": { Tecnica: "Faca", ModVel: 0, ModDano: 2, ModMov: 0 },
 };
 
 const valorFixoRegex = new RegExp("^(Um|Dois|Três|Quatro)$");
@@ -523,8 +531,14 @@ function calculaDano(npc, manobra) {
 	if (modTecnica === undefined)
 		modTecnica = npc[manobra.Tecnica];
 
-	if (modTecnica === undefined)
+	if (modTecnica === undefined){
+		if(manobra.Tecnica.indexOf("/") !== -1){
+			const tecnicas = manobra.Tecnica.split("/");
+			const maiorTecnica = npc[tecnicas[0]] > npc[tecnicas[1]] ? tecnicas[0] : tecnicas[1];
+			return calculaDanoArma(npc, armas[maiorTecnica], manobra);
+		}
 		return calculaDanoArma(npc, armas[manobra.Tecnica], manobra);
+	}
 
 	if (typeof manobra.ModDano === "string" && manobra.ModDano.indexOf("/") !== -1) {
 		const modDanos = manobra.ModDano.split("/");
@@ -619,7 +633,7 @@ function carregarTabela(npc) {
 			const arma = armas[v.trim()];
 			if (!arma) return alert("Arma " + v.trim() + " não encontrada!");
 
-			const armasDeFogo = ["Armas de Fogo", "Pistola", "Metralhadora", "Fuzil", "Rifle"];
+			const armasDeFogo = ["Armas de Fogo", "Pistola", "Metralhadora", "Fuzil", "Rifle", "Armas Pesadas"];
 			if (armasDeFogo.includes(arma.Tecnica)) {
 				html += "<tr><td>" + v.trim() + "</td>";
 				html += "<td>" + calculaVelocidadeArmaFogo(npc, arma) + "</td>";
@@ -629,7 +643,7 @@ function carregarTabela(npc) {
 				html += "<td></td>";
 				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
 			}
-			else if (arma.Tecnica === "Arco") {
+			else if (arma.Tecnica === "Arco" || arma.Tecnica === "Arquearia") {
 				html += "<tr><td>" + v.trim() + "</td>";
 				html += "<td>" + calculaVelocidadeArma(npc, arma, { ModVel: 0 }) + "</td>";
 				html += "<td>" + (npc.Destreza + npc["Arco"] + arma.ModDano) + "</td>";

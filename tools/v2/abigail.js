@@ -51,7 +51,7 @@ function AbigailSF5() {
         Saude: 20,
         Posto: 7,
         Divisao: "Tradicional",
-        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Toughskin, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Backflip, Tumbling Attack, Foot Sweep, Wheel Kick, Dashing Shoulder",
+        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Toughskin, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Backflip, Tumbling Attack, Foot Sweep, Wheel Kick, Hyper Tackle",
         Combos: "Flying Tackle para Throw; Hyper Fist para Power Uppercut (Dizzy); Jab para Jab (Dizy); Bloqueio para Air Smash (Dizzy); Tumbling Attack para Foot Sweep",
     };
     return abigail;

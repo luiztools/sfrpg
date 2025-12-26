@@ -66,7 +66,7 @@ function RainUMK3() {
     return personagem;
 }
 
-function RainMKA() {
+function RainMKX() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
     antecedentes[1] = newCaracteristica("Elemental", 5);
@@ -84,7 +84,7 @@ function RainMKA() {
         Conceito: "Elemental da Água",
         Assinatura: "Levanta o Braço",
         Jogador: "NPC",
-        Cronica: "MK Armageddon",
+        Cronica: "Mortal Kombat X",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -128,8 +128,8 @@ function RainMKA() {
         Chi: 10,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Lightning, Shock Treatment, God Invocation, Drench, Elemental Stride, Sense Element, Pool, Envelop, Psychokinetic Channeling",
-        Combos: "Jab para Power Uppercut (Dizzy); Short para Forward para Roundhouse (Dizzy); Forward para Forward para Foot Sweep (Dizzy); Jab para Jab para Power Uppercut (Dizzy); Jab para Jab para Forward (dizzy)"
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Lightning, Shock Treatment, God Invocation, Drench, Elemental Stride, Sense Element, Pool, Envelop, Psychokinetic Channeling, Double Hit Kick, Pile Driver",
+        Combos: "Jab para Power Uppercut (Dizzy); Short para Forward para Roundhouse (Dizzy); Forward para Forward para Foot Sweep (Dizzy); Jab para Jab para Power Uppercut (Dizzy); Jab para Jab para Forward (dizzy); Bloqueio para Pile Driver"
     };
     return personagem;
 }
@@ -137,5 +137,5 @@ function RainMKA() {
 let npc;
 if (getParameterByName('age') === 'mk3')
     npc = calcPC(RainUMK3());
-else if (getParameterByName('age') === 'mka')
-    npc = calcPC(RainMKA());
+else 
+    npc = calcPC(RainMKX());

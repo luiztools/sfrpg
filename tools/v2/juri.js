@@ -1,10 +1,10 @@
 function JuriSF5() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
-    antecedentes[1] = newCaracteristica("Cibernético", 3);
-    antecedentes[2] = newCaracteristica("Fama", 2);
+    antecedentes[1] = newCaracteristica("Cibernético", 1);
+    antecedentes[2] = newCaracteristica("Fama", 1);
 
-    var juri =
+    const juri =
     {
         Nome: "Juri Han",
         Estilo: "Tae Kwon Dô",
@@ -20,54 +20,54 @@ function JuriSF5() {
         Vigor: 5,
         Carisma: 2,
         Manipulacao: 3,
-        Aparencia: 4,
+        Aparencia: 5,
         Percepcao: 6,
         Inteligencia: 4,
         Raciocinio: 4,
-        Prontidao: 5,
+        Prontidao: 4,
         Interrogacao: 5,
-        Intimidacao: 3,
-        Perspicacia: 2,
-        Manha: 3,
-        Labia: 2,
+        Intimidacao: 4,
+        Perspicacia: 3,
+        Manha: 4,
+        Labia: 3,
         LutaCega: 6,
-        Conducao: 2,
+        Conducao: 3,
         Lideranca: 2,
-        Furtividade: 3,
-        Sobrevivencia: 1,
+        Seguranca: 4,
+        Furtividade: 5,
+        Sobrevivencia: 2,
         Arena: 2,
         Computador: 3,
-        Investigacao: 2,
+        Investigacao: 3,
         Medicina: 1,
-        Misterios: 2,
+        Misterios: 3,
         Estilos: 3,
         Antecedentes: antecedentes,
-        Soco: 2,
+        Soco: 3,
         Chute: 7,
-        Apresamento: 2,
+        Apresamento: 3,
         Bloqueio: 5,
         Esportes: 5,
-        Foco: 3,
-        ManobrasEspeciais: "Accuracy, Air Crush, Double Hit Kick, Fireball, Foot Sweep, Handstand Kick, Jump, Kick Defense, Killing Stare, Kippup, Knee Basher, Second Impact, Sniper Kick, Third Strike, Throw, Windmill Kick",
-        Combos: "Forward para Fireball; Fireball para Windmill Kick (Dizzy); Handstand Kick para Windmill Kick; Double Hit Kick para Fireball para Windmill Kick (Dizzy); Jump + Strong para Jump + Strong para Windmill Kick (Dizzy); Third Strike para Windmill Kick",
+        Foco: 4,
+        ManobrasEspeciais: "Accuracy, Double Hit Kick, Fireball, Foot Sweep, Handstand Kick, Jump, Kick Defense, Kippup, Knee Basher, Throw, Air Smash, Wheel Kick, Hurricane Kick, Gekiro",
+        Combos: "Forward para Fireball; Fireball para Hurricane Kick (dizzy); Handstand Kick para Hurricane Kick; Double-Hit Kick para Fireball para Hurricane Kick (dizzy); Gekiro para Hurricane Kick (dizzy)",
         Gloria: 6,
-        Honra: 0,
-        Chi: 2,
+        Honra: 1,
+        Chi: 5,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 10,
+        Posto: 9,
         Divisao: "Estilo Livre"
     };
     return juri;
 }
 
 function JuriSF4() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
-    antecedentes[1] = newCaracteristica("Cibernético", 3);
-    antecedentes[2] = newCaracteristica("Fama", 1);
+    antecedentes[1] = newCaracteristica("Cibernético", 1);
 
-    var juri =
+    const juri =
     {
         Nome: "Juri Han",
         Estilo: "Tae Kwon Dô",
@@ -80,45 +80,46 @@ function JuriSF4() {
         Jogador: "NPC",
         Forca: 5,
         Destreza: 6,
-        Vigor: 5,
-        Carisma: 2,
-        Manipulacao: 3,
-        Aparencia: 4,
+        Vigor: 4,
+        Carisma: 3,
+        Manipulacao: 5,
+        Aparencia: 5,
         Percepcao: 6,
-        Inteligencia: 3,
+        Inteligencia: 4,
         Raciocinio: 4,
         Prontidao: 4,
         Interrogacao: 5,
-        Intimidacao: 3,
-        Perspicacia: 2,
-        Manha: 3,
-        Labia: 1,
+        Intimidacao: 4,
+        Perspicacia: 3,
+        Manha: 4,
+        Labia: 3,
         LutaCega: 6,
-        Conducao: 2,
-        Lideranca: 1,
-        Furtividade: 3,
-        Sobrevivencia: 1,
+        Conducao: 3,
+        Lideranca: 2,
+        Seguranca: 4,
+        Furtividade: 5,
+        Sobrevivencia: 2,
         Arena: 2,
         Computador: 3,
-        Investigacao: 2,
+        Investigacao: 3,
         Medicina: 1,
-        Misterios: 2,
+        Misterios: 3,
         Estilos: 3,
         Antecedentes: antecedentes,
-        Soco: 2,
+        Soco: 3,
         Chute: 7,
-        Apresamento: 2,
-        Bloqueio: 4,
+        Apresamento: 3,
+        Bloqueio: 5,
         Esportes: 5,
-        Foco: 3,
-        ManobrasEspeciais: "Accuracy, Air Crush, Double Hit Kick, Fireball, Foot Sweep, Handstand Kick, Jump, Kick Defense, Killing Stare, Kippup, Knee Basher, Second Impact, Sniper Kick, Third Strike, Throw, Windmill Kick",
-        Combos: "Forward para Fireball; Fireball para Windmill Kick (Dizzy); Handstand Kick para Windmill Kick; Double Hit Kick para Fireball para Windmill Kick (Dizzy); Jump + Strong para Jump + Strong para Windmill Kick (Dizzy); Third Strike para Windmill Kick",
+        Foco: 4,
+        ManobrasEspeciais: "Accuracy, Double Hit Kick, Fireball, Foot Sweep, Handstand Kick, Jump, Kick Defense, Kippup, Knee Basher, Throw, Air Smash, Wheel Kick, Hurricane Kick, Gekiro",
+        Combos: "Forward para Fireball; Fireball para Hurricane Kick (dizzy); Handstand Kick para Hurricane Kick; Double-Hit Kick para Fireball para Hurricane Kick (dizzy); Gekiro para Hurricane Kick (dizzy)",
         Gloria: 5,
-        Honra: 1,
-        Chi: 1,
-        ForcaVontade: 10,
+        Honra: 0,
+        Chi: 5,
+        ForcaVontade: 9,
         Saude: 20,
-        Posto: 9,
+        Posto: 8,
         Divisao: "Estilo Livre"
     };
     return juri;

@@ -248,7 +248,7 @@ function RyuSF6() {
     };
     return ryu;
 }
-
+//Condensed Energy
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = RyuSFZ3();

@@ -21,7 +21,7 @@ function KanoMK3() {
         Conceito: "Mercenário",
         Assinatura: "Placa de metal na face",
         Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
+        Cronica: "Mortal Kombat",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -83,7 +83,7 @@ function KanoMKX() {
     tecnicas[1] = newCaracteristica("Arremesso", 6);
     tecnicas[2] = newCaracteristica("Armas de Fogo", 3);
 
-    const armas = ["Faca", "Faca Arremessada"];
+    const armas = ["Faca", "Faca Arremessada", "Granada"];
 
     const personagem =
     {
