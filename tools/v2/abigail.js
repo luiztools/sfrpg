@@ -6,7 +6,7 @@ function AbigailSF5() {
     const abigail =
     {
         Nome: "Abigail",
-        Estilo: "Forças Especiais",
+        Estilo: "Luta-Livre",
         Escola: "Mad Gear",
         Conceito: "Líder de Gangue",
         Time: "Mad Gear",
@@ -65,7 +65,7 @@ function AbigailFF1() {
     const abigail =
     {
         Nome: "Abigail",
-        Estilo: "Forças Especiais",
+        Estilo: "Luta-Livre",
         Escola: "Mad Gear",
         Conceito: "Líder de Gangue",
         Time: "Mad Gear",

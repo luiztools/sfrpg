@@ -51,7 +51,7 @@ function ZangiefSFZ3() {
         Honra: 6,
         Chi: 4,
         ForcaVontade: 9,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Spinning Back Fist",
         Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
     };
     return zangief;
@@ -111,7 +111,7 @@ function ZangiefSF2() {
         Honra: 7,
         Chi: 5,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Spinning Back Fist",
         Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
     };
     return zangief;

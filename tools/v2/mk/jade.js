@@ -15,14 +15,14 @@ function Jade() {
     const personagem =
     {
         Nome: "Jade",
-        Estilo: "Ninjitsu (Bojutsu)",
+        Estilo: "Kung Fu (Bojutsu)",
         Escola: "Outworld",
         Equipe: "Outworld",
         Time: "Nenhuma",
         Conceito: "Guarda-Costas",
         Assinatura: "Golpeia com Bastão",
         Jogador: "NPC",
-        Cronica: "Mortal Kombat",
+        Cronica: "Mortal Kombat 3",
         Forca: 4,
         Destreza: 7,
         Vigor: 4,

@@ -53,7 +53,7 @@ function EHondaZ3() {
         Chi: 4,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Sumô Slap, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
+        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
         Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy);"
     };
     return honda;
@@ -114,7 +114,7 @@ function EHondaSF2() {
         Chi: 5,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Sumô Slap, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
+        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
         Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);"
     };
     return honda;
@@ -175,7 +175,7 @@ function EHondaSF5() {
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Sumô Slap, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
+        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
         Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);"
     };
     return honda;
@@ -236,7 +236,7 @@ function EHondaSF6() {
         Chi: 7,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Sumô Slap, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
+        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
         Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);"
     };
     return honda;

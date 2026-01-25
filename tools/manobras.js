@@ -39,7 +39,7 @@ const manobras = {
 	"Spinning Back Fist": { Tecnica: "Soco", ModVel: -1, ModDano: 2, ModMov: 1, Sistema: "" },
 	"Spinning Clothesline": { Tecnica: "Soco", ModVel: 0, ModDano: 0, ModMov: -2, FdV: 1, Sistema: "Acerta todos os hex adjacentes, forçando o recuo de 1 hex; o lutador pode se mover e rolar o dano novamente, não afeta oponentes em Manobras de Agachamento" },
 	"Spinning Knuckle": { Tecnica: "Soco", ModVel: -1, ModDano: "1/1", ModMov: 3, FdV: 1, Sistema: "2 hits; esquiva de projétil" },
-	"Triple Strike": { Tecnica: "Soco", ModVel: -2, ModDano: "Especial", Sistema: "2 testes de Soco com +0 e 1 de teste Chute com +1, use somente os 2 maiores resultados" },
+	"Triple Strike": { Tecnica: "Soco", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
 	"Turbo Spinning Clothesline": { Tecnica: "Soco", ModVel: 1, ModDano: 0, ModMov: -1, FdV: 1, Sistema: "Acerta todos os hex adjacentes, forçando o recuo de 1 hex; o lutador pode se mover e rolar o dano novamente, não afeta oponentes em Manobras de Agachamento" },
 	"Turn Punch": { Tecnica: "Soco", ModVel: -1, ModDano: 4, ModMov: "Dois", FdV: 1, Sistema: "Gaste 1 FV no 1º turno; a carta pode ficar na mesa e ser jogada outras em conjunto (-1 nos três mods. enquanto ela estiver na mesa); turno 2: +1 dano; turno 3: +1 vel, +2 dano; turno 4 ou posterior: +2 vel, +3 dano" },
 	"Ducking Fierce": { Tecnica: "Soco", ModVel: -1, ModDano: 4, Sistema: "Agachamento" },
@@ -113,7 +113,6 @@ const manobras = {
 	"Hayagake": { Tecnica: "Chute", ModVel: 0, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea ou agachamento, à escolha do jogador; se aérea, esquiva de projétil; se agachamento, causa KD" },
 	"Power Kick": { Tecnica: "Chute", ModVel: -3, ModDano: 5, ModMov: "Dois", Sistema: "Empurra 1 Hexágono para trás e causa KD em Manobras Aéreas" },
 	"Rhino Horn": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea" },
-	"Rising Lightning Leg": { Tecnica: "Chute", ModVel: 0, ModDano: "1/1/1", ModMov: "Três", FdV: 2, Sistema: "Aérea após a rolagem de dano, podendo se esquivar de projétil; três hits; KD" },
 	"Roundabout Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, FdV: 1, Sistema: "Acerta oponentes no mesmo hex ou adjacente igual à técnica Chute do lutador; causa KD; Aérea" },
 	"Tsumuji": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 3, FdV: 2, Sistema: "Após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +1, empurrando de novo e tentando um terceiro com dano +3, que causa KD; pode aplicar um quarto chute no oponente caído com dano +1, porém custará 1 ponto temporário de Honra" },
 	"Wheel Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 1, FdV: 1, Sistema: "Aérea, esquiva de projétil" },
@@ -131,13 +130,13 @@ const manobras = {
 	"Deflecting Punch": { Tecnica: "Soco", ModVel: 2, ModDano: 0, Sistema: "Bônus de Bloqueio apenas para socos; Após a ABS faça um contra-soco (vs. qualquer ataque)" },
 	"Energy Reflection": { Tecnica: "Bloqueio", ModVel: 1, Chi: 1, Sistema: "Cada projétil requer 2 sucessos num teste de Raciocínio; 1 Chi por projétil" },
 	"Kick Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Chute; -2 vs. outros" },
-	"Maka Wara": { Tecnica: "Bloqueio", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Toda vez que fizer um bloqueio bem sucedido role Vigor + Bloqueio -3 para dar dano no atacante; funciona automaticamente " },
-	"Missile Reflection": { Tecnica: "Bloqueio", ModVel: 3, ModMov: -1, Sistema: "Role Destreza para refletir projétil em um novo alvo; armas de arremesso requerem 1 sucesso; flechas, setas de besta, etc. requerem 2 sucessos; armas de fogo requerem 3 sucessos e um pedaço de material duro para refletir as balas; balas não podem ser refletidas no atirador" },
+	"Maka Wara": { Tecnica: "Bloqueio", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Passiva no bloqueio, causa dano no atacante;" },
+	"Missile Reflection": { Tecnica: "Bloqueio", ModVel: 3, ModMov: -1, Sistema: "DES para refletir projétil; armas de arremesso=1 sucesso; flechas=2; armas de fogo=3 e um pedaço de material; balas não podem ser refletidas no atirador" },
 	"Punch Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Soco; -2 vs. outros" },
 	"San He": { Tecnica: "Bloqueio", ModVel: 2, Chi: 1, Sistema: "Adiciona o dobro do Bloqueio na ABS; o lutador não sofre KD e não pode ser forçado para fora do hex exceto por Apresamentos; Teste Força + Bloqueio para grandes objetos, o Mestre decide o nº de sucessos; o lutador não ganha +2 na VEL no próximo turno" },
 	"Block And Grab": { Tecnica: "Apresamento", ModVel: 4, ModDano: 2, FdV: 1, Alcance: 0, Sistema: "Adiciona o Bloqueio na ABS; evita KD; o lutador aplica Throw após sofrer dano se não ficar Dizzy; Só funciona contra Soco, Chute, Esportes. Não funciona contra Agachamento." },
 	"Counter Attack": { Tecnica: "Bloqueio", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "Lutador deve jogar carta de Bloqueio junto com a carta da Manobra que ele usará após o Counter Attack, dentro de sua lista de manobras possíveis - pode escolher uma para cada 2 pontos em Bloqueio; o lutador terá -2 Absorção; após Bloquear a Manobra do oponente o personagem pode seguir com seu ataque; o personagem não ganha +2 de Velocidade no próximo turno ao usar o Counter Attack e ele não é uma Interrupção; personagem pode jogar Punch Defense usar o Counter Attack com uma Manobra de Soco, Absorvendo como nas regras do Punch Defense; o mesmo vale para Kick Defense com Chutes" },
-	"Parry": { Tecnica: "Bloqueio", ModVel: 2, Sistema: "Usuário rola Destreza + Bloqueio contra a Técnica da manobra do adversário; se bem-sucedido, evita todo o dano do ataque, adicionando também +1 Velocidade no próximo turno para cada sucesso a mais que tiver obtido (ao invés do +2 do Bloqueio comum); se falhar, recebe todo o dano do ataque; contra projétil, o Narrador pode pedir primeiro um teste de Raciocínio como no Energy Reflection; manobras mais poderosas - com custo em Força de Vontade – podem pedir mais de um sucesso para o Parry ser bem-sucedido; contra Manobras de Múltiplo Impacto, um teste deve ser feito a cada novo rolamento, a não ser por aquelas em que é preciso causar dano para empurrar e seguir batendo, nas quais o Parry as cancela imediatamente se o atacante for impedido de seguir se movendo; Parry bem-sucedido causa o dano do Maka Wara" },
+	"Parry": { Tecnica: "Bloqueio", ModVel: 2, Sistema: "Usuário rola DES + BLOCK contra a Técnica da manobra do adversário; se bem-sucedido, evita todo o dano do ataque, adicionando também +1 Velocidade no próximo turno para cada sucesso a mais que tiver obtido (ao invés do +2 do Bloqueio comum); se falhar, recebe todo o dano do ataque; contra projétil, o Narrador pode pedir primeiro um teste de Raciocínio como no Energy Reflection; manobras mais poderosas - com custo em Força de Vontade – podem pedir mais de um sucesso para o Parry ser bem-sucedido; contra Manobras de Múltiplo Impacto, um teste deve ser feito a cada novo rolamento, a não ser por aquelas em que é preciso causar dano para empurrar e seguir batendo, nas quais o Parry as cancela imediatamente se o atacante for impedido de seguir se movendo; Parry bem-sucedido causa o dano do Maka Wara" },
 
 	//apresamento
 	"Air Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; atacante termina seu movimento após o ataque; Aérea" },
@@ -198,7 +197,7 @@ const manobras = {
 	"Flying Heel Stomp": { Tecnica: "Esportes", ModVel: 0, ModDano: 1, ModMov: 2, FdV: 1, Sistema: "Aérea; esquiva de projétil; Linha Reta; o atacante pode fazer o ataque a qualquer momento e continuar o movimento" },
 	"Jump": { Tecnica: "Esportes", ModVel: 3, ModMov: 0, Sistema: "Aérea; Esquiva de projétil (Des + Esp vs. Foco); combina com chutes e socos básicos (use a VEL, DAN e MOV da manobra)" },
 	"Jumping Shoulder Butt": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: -1, Sistema: "Aérea; esquiva de projétil" },
-	"Kippup": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Efeito automático; o lutador sofre apenas -1 VEL(não -2) após sofrer KD" },
+	"Kippup": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Passiva; o lutador sofre apenas -1 VEL após sofrer KD" },
 	"Rolling Attack": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: 4, FdV: 1, Sistema: "Aérea; Linha Reta; o atacante termina o movimento 2 hex na frente do alvo; precisa entrar no hex do alvo" },
 	"Thunderstrike": { Tecnica: "Esportes", ModVel: 0, ModDano: 5, ModMov: -1, Sistema: "Precisa entrar no hex do alvo; Complete o movimento após o dano" },
 	"Vertical Rolling Attack": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: 0, FdV: 1, Sistema: "Aérea; esquiva de projétil; KD vs. Aérea" },
@@ -237,12 +236,12 @@ const manobras = {
 	"Musical Accompaniment": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Se sua música estiver tocando, ganha +1VEL, DAN ou MOV em cada turno" },
 	"Regeneration": { Tecnica: "Foco", ModVel: 0, Chi: 1, Sistema: "Recupera 1 Saúde por Chi, até o máximo de Foco por turno" },
 	"Repeating Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 0, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; produz uma Fireball por ponto de Foco; pode atingir diferentes inimigos; alvos que tentam esquivar de vários ataques devem testar para cada ataque separado" },
-	"Shock Treatment": { Tecnica: "Foco", ModVel: 0, ModDano: 7, Chi: 2, Sistema: "Afeta todos os lutadores no mesmo ou adjacentes hex; KD a menos que estejam bloqueando; quando adquire decide se é Agachamento" },
+	"Shock Treatment": { Tecnica: "Foco", ModVel: 0, ModDano: 7, Chi: 2, Sistema: "Afeta todos adjacentes; KD a menos que bloqueiem;" },
 	"Sonic Boom": { Tecnica: "Foco", ModVel: -3, ModDano: 4, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "linha de visão" },
 	"Stunning Shout": { Tecnica: "Foco", ModVel: 2, ModMov: -2, Chi: 1, Sistema: "Afeta um alvo ou, a critério do Narrador, um grupo de pequeno; o atacante deve vencer uma disputa de FV Permanente; se o alvo não agiu neste turno, perderá sua ação; se já agiu, terá um redutor na VEL igual a diferença de que perdeu a disputa" },
 	"Telepathy": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "personagem pode ligar (Foco) pessoas em comunicação telepática, para poderem conversar mentalmente" },
 	"Thunderclap": { Tecnica: "Foco", ModVel: 0, ModDano: -3, Chi: 1, Alcance: "Três", Sistema: "Atinge todos em 3 hex em linha reta" },
-	"Toughskin": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com qualquer outra carta; lutador ganha +2 na ABS neste turno" },
+	"Toughskin": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Passiva; +2 ABS neste turno" },
 	"Yoga Flame": { Tecnica: "Foco", ModVel: -2, ModDano: 7, ModMov: "Um", Chi: 2, Alcance: "Dois", Sistema: "Afeta todos no hex adjacente e nos 3 posteriores a este; a chama dura até o fim do turno" },
 	"Yoga Teleport": { Tecnica: "Foco", ModVel: 3, ModMov: "Especial", Chi: 2, Sistema: "O personagem desaparece, reaparecendo a qualquer momento do turno em qualquer lugar que esteja a (Inteligência + Foco) hex da posição original" },
 	"Zen No Mind": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "Personagem seleciona outras 3 cartas, precisa esperar até o final do turno para escolher uma delas para jogar" },
@@ -251,7 +250,7 @@ const manobras = {
 	"Psycho Crusher": { Tecnica: "Foco", ModVel: -1, ModDano: 5, ModMov: 6, Chi: 2, Sistema: "O atacante pode mudar a direção, mantendo o mesmo plano, no meio do movimento, para atingir vários alvos; precisa entrar no hex do alvo; alvos que não estejam bloqueando sofrem +5 DAN, KD e caem em um hex adjacente (alvo escolhe), só podem ser atingidos uma vez; quem estiver bloqueando recua 1 hex (na direção do movimento) e sofre 1 dado de dano (Manobra termina se resultar em falha crítica), alvo pode ser atacado 5 vezes antes do atacante passar para trás dele e continuar seu movimento" },
 	"Psychic Rage": { Tecnica: "Foco", ModVel: -2, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "atacante precisa vencer uma disputa de FV; se bem sucedido, o alvo só poderá usar Fierce, Roundhouse e suas Manobras Especiais que causem maior dano enquanto estiver em fúria; pode atacar amigos e aliados; entre os turnos o alvo pode tentar vencer uma disputa de FV vs. Manipulação do controlador para libertar-se; o alvo perde Honra pelas ações feitas sobre efeito do Psychic Rage" },
 	"Psychic Vise": { Tecnica: "Foco", ModVel: 0, ModDano: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Sistema: "O alvo absorve com Inteligência ao invés de Vigor, ignorando Bloqueios; o dano é retirado da FV do alvo e este terá um redutor na VEL no próximo turno igual ao dano; se o dano exceder a Inteligência do alvo, ele estará Dizzy;" },
-	"Psychokinetic Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com um soco ou chute básico; adiciona +2 no dano" },
+	"Psychokinetic Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Passiva com socos e chutes básicos; +2 DANO no turno" },
 	"Air Blast": { Tecnica: "Foco", ModVel: -1, ModDano: 3, Chi: 1, Alcance: "Inteligencia+Elemental", Sistema: "linha de visão; alvo precisa passar em um teste de Percepção + Luta às Cegas para perceber e interromper este ataque" },
 	"Balance": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "O lutador ganha +1 MOV para Manobra Aérea; automático" },
 	"Deaths Visage": { Tecnica: "Foco", ModVel: 1, Chi: 1, Sistema: "Todos no alcance de visão precisam vencer uma disputa de FdV vs. Manipulação + Foco do atacante ou irão para o mais longe possível do atacante; vítimas podem tentar novamente no final de cada turno; dura 3 turnos a menos que seja quebrado" },
@@ -312,9 +311,9 @@ const manobras = {
 	"Ice Clone": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Dois", Chi: 1, Sistema: "Move para trás. Alvo testa Des + Esp contra Foco para não tocar no gelo. Mesmo efeito do Ice Blast mas sem dano. Dura 2 rodadas." },
 	"The Hand From Hell": { Tecnica: "Foco", ModVel: -2, ModDano: 10, ModMov: "Nenhum", Chi: 2, Sistema: "rola Carisma + Mistérios e compara com tabela para saber efeito (dano único ou apresamento sustentado). Não pode ser ser bloqueada." },
 	"Telekinesis": { Tecnica: "Foco", ModVel: -2, ModDano: "Nenhum", ModMov: "Nenhum", Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Ver Descrição" },
-	"Portal Attack": { Tecnica: "Foco", ModVel:  "Especial", ModDano:  "Especial", ModMov:  "Especial", Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Manobras Básicas ou de projeção à distância (alcance)" },
-	"Soul Illusion": { Tecnica: "Foco", ModVel:  2, ModDano:  "Nenhum", ModMov:  "Nenhum", Chi: 1, Sistema: "1 Chi por turno. Cria 4 ilusões que somem com um hit cada. Diferenciar o verdadeiro exige Percepção + Mistérios dif 2 + cópias existentes. Se o real sofrer hit, todas somem." },
-	"Condensed Energy": { Tecnica: "Foco", ModVel:  "Especial", ModDano:  "Especial", ModMov:  "Nenhum", Chi: 1, Sistema: "Jogue em conjunto com projétil. -1 ou -2 Vel e Alcance para diminuir igualmente a dificuldade do teste de dano" },
+	"Portal Attack": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Manobras Básicas ou de projeção à distância (alcance)" },
+	"Soul Illusion": { Tecnica: "Foco", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Sistema: "1 Chi por turno. Cria 4 ilusões que somem com um hit cada. Diferenciar o verdadeiro exige Percepção + Mistérios dif 2 + cópias existentes. Se o real sofrer hit, todas somem." },
+	"Condensed Energy": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Nenhum", Chi: 1, Sistema: "Jogue em conjunto com projétil. -1 ou -2 Vel e Alcance para diminuir igualmente a dificuldade do teste de dano" },
 
 	//Outros
 	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
@@ -517,6 +516,22 @@ function calculaDanoArmaDistancia(npc, arma) {
 }
 
 function calculaDano(npc, manobra) {
+
+	if (manobra.Nome === "Triple Strike")
+		return (npc["Força"] + npc["Soco"]) + "/" +  (npc["Força"] + npc["Soco"]) + "/" + (npc["Força"] + npc["Chute"] + 1);
+
+	if (manobra.Nome === "Maka Wara")
+		return npc["Vigor"] + npc["Bloqueio"] - 3;
+
+	if (manobra.Nome === "Bloqueio")
+		return "ABS" + (npc["Vigor"] + npc["Bloqueio"]);
+
+	if (manobra.Nome === "San He")
+		return "ABS" + (npc["Vigor"] + (npc["Bloqueio"] * 2));
+
+	if (manobra.Nome === "Kick Defense" || manobra.Nome === "Punch Defense")
+		return "ABS" + (npc["Vigor"] + npc["Bloqueio"] + 4) + " ou " + (npc["Vigor"] + npc["Bloqueio"] - 2);
+
 	if (manobra.ModDano === null || manobra.ModDano === undefined || manobra.ModDano === "Nenhum") return "-";
 	if (manobra.ModDano === "Especial") return "Esp.";
 
@@ -531,8 +546,8 @@ function calculaDano(npc, manobra) {
 	if (modTecnica === undefined)
 		modTecnica = npc[manobra.Tecnica];
 
-	if (modTecnica === undefined){
-		if(manobra.Tecnica.indexOf("/") !== -1){
+	if (modTecnica === undefined) {
+		if (manobra.Tecnica.indexOf("/") !== -1) {
 			const tecnicas = manobra.Tecnica.split("/");
 			const maiorTecnica = npc[tecnicas[0]] > npc[tecnicas[1]] ? tecnicas[0] : tecnicas[1];
 			return calculaDanoArma(npc, armas[maiorTecnica], manobra);
@@ -617,6 +632,7 @@ function carregarTabela(npc) {
 	let html = "";
 	manobrasBasicas.forEach((v) => {
 		const manobra = manobras[v.trim()];
+		manobra.Nome = v.trim();
 		if (!manobra) return alert("Manobra " + v.trim() + " não encontrada!");
 
 		html += "<tr><td>" + v.trim() + "</td>";
@@ -683,6 +699,8 @@ function carregarTabela(npc) {
 				const manobrasComArmas = ["Jab", "Strong", "Fierce"];
 				manobrasComArmas.forEach((v2) => {
 					const manobra = manobras[v2.trim()];
+					manobra.Nome = v2.trim();
+
 					html += "<tr><td>" + v.trim() + " " + v2.trim() + "</td>";
 					html += "<td>" + calculaVelocidadeArma(npc, arma, manobra) + "</td>";
 					html += "<td>" + calculaDanoArma(npc, arma, manobra) + "</td>";
@@ -700,7 +718,10 @@ function carregarTabela(npc) {
 			npc.ManobrasEspeciais += "Straight, Cross/Hook, Uppercut";
 
 		npc.ManobrasEspeciais.split(',').sort().forEach((v) => {
-			const manobra = manobras[v.trim().replace("-", " ")];
+			const nome = v.trim().replace("-", " ");
+			const manobra = manobras[nome];
+			manobra.Nome = nome;
+
 			html += "<tr><td>" + GeraHtmlLink(v.trim()) + "</td>";
 			if (manobra == null || manobra == undefined) {
 				html += "<td></td><td></td><td></td><td></td><td></td><td>Manobra não encontrada</td>";

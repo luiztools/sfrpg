@@ -148,7 +148,8 @@ img
 .planilha
 {
 	border-width: 0px;
-	width: 750px;
+	width: 800px;      /* largura fixa */
+    flex: 0 0 800px;   /* não crescer, não encolher, largura = 750 */
 }
 
 .leftRed {
@@ -177,4 +178,10 @@ img
 	font-family: 'Arial Black, Arial';
 	font-size: 2px;
 	color: black;
+}
+
+.container-fichas {
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar linha */
+    gap: 16px; /* opcional: espaço entre as fichas */
 }

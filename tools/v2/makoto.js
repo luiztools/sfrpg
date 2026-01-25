@@ -1,55 +1,64 @@
 function MakotoSF4() {
-    var antecedentes = [];
-    antecedentes[0] = newCaracteristica("Recursos", 1);
-    antecedentes[1] = newCaracteristica("Aliados", 1);
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Apoio", 1);
+    antecedentes[1] = newCaracteristica("Aliados", 5);
+    antecedentes[2] = newCaracteristica("Arena", 4);
+    antecedentes[3] = newCaracteristica("Contatos", 1);
+    antecedentes[4] = newCaracteristica("Sensei", 3);
 
-    var makoto =
+    const makoto =
     {
         Nome: "Makoto Rindou",
         Estilo: "Karatê Rindoukan",
-        Assinatura: "Gi largo",
+        Assinatura: "Postura rígida",
         Escola: "Dojô Rindou",
-        Conceito: "Salvadora",
-        Posto: 9,
-        Divisao: "Tradicional",
+        Conceito: "Estudante",
         Jogador: "NPC",
         Cronica: "Street Fighter 4",
         Equipe: "Nenhuma",
-        Antecedentes: antecedentes,
-        Saude: 20,
-        ForcaVontade: 10,
-        Chi: 4,
-        Honra: 7,
-        Gloria: 8,
         Forca: 5,
         Destreza: 5,
-        Vigor: 5,
-        Carisma: 4,
-        Manipulacao: 2,
-        Aparencia: 4,
+        Vigor: 4,
+        Carisma: 3,
+        Manipulacao: 4,
+        Aparencia: 3,
         Percepcao: 4,
-        Inteligencia: 3,
-        Raciocinio: 4,
-        Prontidao: 5,
-        Intimidacao: 4,
+        Inteligencia: 4,
+        Raciocinio: 5,
+        Prontidao: 4,
+        Interrogacao: 3,
+        Intimidacao: 2,
         Perspicacia: 4,
-        Manha: 1,
-        Labia: 1,
+        Manha: 2,
+        Labia: 2,
         LutaCega: 5,
+        Conducao: 0,
         Lideranca: 4,
-        Seguranca: 1,
-        Arena: 4,
-        Computador: 2,
-        Medicina: 3,
+        Seguranca: 0,
+        Furtividade: 3,
+        Sobrevivencia: 3,
+        Arena: 1,
+        Computador: 0,
+        Investigacao: 3,
+        Medicina: 2,
+        Misterios: 2,
         Estilos: 3,
-        Soco: 6,
-        Chute: 6,
-        Bloqueio: 5,
-        Apresamento: 4,
-        Esportes: 3,
-        Foco: 2,
-        ManobrasEspeciais: "Axe Kick, Capture Punch, Double Hit Kick, Ducking Fierce, Fist Sweep, Forward Foot Sweep, Gale Punch, Headbutt, Jump, Ki Strike, Kippup, Knife Hand Chop, Knife Hand Strike, Dirty Fighting, Neck Crush, Power Uppercurt, Rising Wind Punch, Stepping Crescent, Vital Crush",
-        Combos: "Neck Crush para Knife Hand Chop; Short para Gale Punch; Fierce para Fierce para Fierce (Dizzy); Neck Crush para Fierce para Gale Punch (Dizzy); Short para Forward"
+        Soco: 5,
+        Chute: 5,
+        Bloqueio: 6,
+        Apresamento: 3,
+        Esportes: 5,
+        Foco: 5,
+        Antecedentes: antecedentes,
+        Saude: 20,
+        ForcaVontade: 8,
+        Chi: 9,
+        Honra: 9,
+        Gloria: 5,
+        Posto: 7,
+        Divisao: "Tradicional",
+        ManobrasEspeciais: "Jump, Throw, Flying Thrust Kick, Power Uppercut, Triple Strike, Neck Choke, Double-Hit Kick, Wall Spring, Rekka Ken, Double Dread Kick, Air Smash, Fist Sweep, Dive Kick, Dashing Punch, Knife Hand Strike",
+        Combos: "Fierce para Double Dread Kick; Power Uppercut para Throw; Triple Strike para Neck Choke (Dizzy)"
     };
     return calcPC(makoto);
 }
