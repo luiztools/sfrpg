@@ -56,7 +56,7 @@ function MBisonSF2() {
         Saude: 20,
         Chi: 10,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telephaty, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick",
+        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telepathy, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick",
         Combos: "Forward Slide Kick para Ducking Fierce; Bloqueio para Psycho Crusher; Flying Heel Stomp para Jump + Fierce (Dizzy);"
     };
     return bison;
@@ -120,7 +120,7 @@ function MBisonSF5() {
         Saude: 20,
         Chi: 10,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telephaty, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick",
+        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telepathy, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick",
         Combos: "Forward Slide Kick para Ducking Fierce; Bloqueio para Psycho Crusher; Flying Heel Stomp para Jump + Fierce (Dizzy);"
     };
     return bison;
@@ -184,7 +184,7 @@ function MBisonSF6() {
         Saude: 20,
         Chi: 10,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telephaty, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick",
+        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telepathy, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick",
         Combos: "Forward Slide Kick para Ducking Fierce; Bloqueio para Psycho Crusher; Flying Heel Stomp para Jump + Fierce (Dizzy);"
     };
     return bison;
@@ -248,7 +248,7 @@ function MBisonSFZ3() {
         Saude: 20,
         Chi: 10,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telephaty, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick, Levitation, Fireball, Yoga Teleport",
+        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telepathy, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick, Levitation, Fireball, Yoga Teleport",
         Combos: "Forward Slide Kick para Ducking Fierce; Bloqueio para Psycho Crusher; Flying Heel Stomp para Jump + Fierce (Dizzy);"
     };
     return bison;

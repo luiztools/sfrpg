@@ -61,7 +61,7 @@
         "ForcaVontade": 7,
         "Saude": 10,
         "Divisao": "Tradicional",
-        "ManobrasEspeciais": "Jump, Double Hit Kick, Rising Jaguar, Flying Knee Trust, Foot Sweep, Elbow Smash",
+        "ManobrasEspeciais": "Jump, Double Hit Kick, Rising Jaguar, Flying Knee Thrust, Foot Sweep, Elbow Smash",
         "Combos": ""
     };
     return personagem;
@@ -133,7 +133,7 @@ function KietSFAlpha() {
         "ForcaVontade": 8,
         "Saude": 14,
         "Divisao": "Tradicional",
-        "ManobrasEspeciais": "Jump, Double Hit Kick, Rising Jaguar, Flying Knee Trust, Foot Sweep, Elbow Smash, Tiger Knee, Knee Basher",
+        "ManobrasEspeciais": "Jump, Double Hit Kick, Rising Jaguar, Flying Knee Thrust, Foot Sweep, Elbow Smash, Tiger Knee, Knee Basher",
         "Combos": "Tiger Knee para Elbow Smash (Dizzy); Bloqueio para Knee Basher;"
     };
     return personagem;
@@ -206,7 +206,7 @@ function KietSF2() {
         "ForcaVontade": 9,
         "Saude": 18,
         "Divisao": "Tradicional",
-        "ManobrasEspeciais": "Jump, Double Hit Kick, Rising Jaguar, Flying Knee Trust, Foot Sweep, Elbow Smash, Tiger Knee, Knee Basher, Maka Wara, Musical Accompaniment",
+        "ManobrasEspeciais": "Jump, Double Hit Kick, Rising Jaguar, Flying Knee Thrust, Foot Sweep, Elbow Smash, Tiger Knee, Knee Basher, Maka Wara, Musical Accompaniment",
         "Combos": "Tiger Knee para Elbow Smash (Dizzy); Bloqueio para Knee Basher; Foot Sweep para Knee Basher;"
     };
     return personagem;

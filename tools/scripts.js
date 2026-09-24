@@ -1,5 +1,5 @@
 ﻿function count(str, search) {
-    if(!str || !search) return 0;
+    if (!str || !search) return 0;
     return (str.match(/search/g) || []).length;
 }
 
@@ -53,16 +53,16 @@ function calcPC(char) {
 
     const techPC = techniques.reduce((a, b) => a + b) - 8;
 
-    const manobrasEspeciais = char.ManobrasEspeciais.split(",").filter(m => m && m.trim());
+    const manobrasEspeciais = char.ManobrasEspeciais.split(/[,;]/g).filter(m => m && m.trim()) || [];
 
-    const manPC = manobrasEspeciais.map(m => getPCManobra(m)).reduce((a, b) => a + b);
+    const manPC = manobrasEspeciais.length ? manobrasEspeciais.map(m => getPCManobra(m)).reduce((a, b) => a + b) : 0;
     const comboPC = count(char.Combos, " para ") + count(char.Combos, "(Dizzy)") + count(char.Combos, "2x") + (count(char.Combos, "3x") * 2);
     const fdvChiPC = char.ForcaVontade + char.Chi - 7;
     const saudePC = char.Saude - 10;
     const bonus = 3;
 
     //antecedentes únicos que impactam em combate
-    const backgrounds = /Híbrido Animal|Cibernético|Elemental|Psycho Power|Satsui no Hadou|Paranormal/i;
+    const backgrounds = /Hibrido Animal|Híbrido Animal|Cibernético|Elemental|Psycho Power|Satsui no Hadou|Paranormal/i;
     const uniqueBacks = char.Antecedentes.filter(an => backgrounds.test(an.Nome)) | [];
     const backgroundPC = uniqueBacks.length ? uniqueBacks.map(an => an.Valor).reduce((a, b) => a + b) : 0;
 
@@ -143,7 +143,7 @@ function adjustPC(char, from, to) {
             techniques.map(tc => {
                 if (char[tc] >= 8)
                     techniques.splice(techniques.findIndex(tc), 1);//remove tecnicas que estão no máximo
-                else if(char[tc] <= 0)
+                else if (char[tc] <= 0)
                     techniques.splice(techniques.findIndex(tc), 1)//remove tecnicas que estão no mínimo
             })
 
@@ -211,9 +211,9 @@ function adjustPC(char, from, to) {
 }
 
 function getParameterByName(name) {
-    url = window.location.href;
+    const url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
         results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
@@ -221,7 +221,7 @@ function getParameterByName(name) {
 }
 
 String.prototype.replaceAll = function (search, replacement) {
-    var target = this;
+    const target = this;
     return target.split(search).join(replacement);
 };
 
@@ -256,13 +256,13 @@ function GerarHtmlManobrasEspeciais(manobras) {
     const linhas = manobras.split('#');
     let colunas = [];
 
-    for (var x = 0; x < linhas.length; x++) {
-        var s = linhas[x];
-        colunas = s.split(',');
+    for (let x = 0; x < linhas.length; x++) {
+        const s = linhas[x];
+        colunas = s.split(/[,;]/g);
         for (let y = 0; y < colunas.length; y++) {
             const s2 = colunas[y];
             if (s2.trim().length > 0)
-                retorno += GeraHtmlLink(s2) + ",";
+                retorno += GeraHtmlLink(s2) + ", ";
         }
         retorno += "<br />";
     }
@@ -313,7 +313,7 @@ function AutoGeradorA(nome, jogador, cronica, estilo, escola, equipe, time, conc
     nomeAnt2, valorAnt2, nomeAnt3, valorAnt3, nomeAnt4, valorAnt4, nomeAnt5, valorAnt5, nomeAnt6, valorAnt6, nomeAnt7, valorAnt7, nomeAnt8,
     valorAnt8, nomeAnt9, valorAnt9, gloria, honra, divisao, posto, vitorias, derrotas, empates, KOs, soco, chute, bloqueio, apresamento
     , esportes, foco, chi, fdv, saude, especiais, combos, divisaoFormal) {
-    var antecedentes = [];
+    const antecedentes = [];
     if (nomeAnt1 != '') { antecedentes[0] = newCaracteristica(nomeAnt1, valorAnt1); }
     if (nomeAnt2 != '') { antecedentes[1] = newCaracteristica(nomeAnt2, valorAnt2); }
     if (nomeAnt3 != '') { antecedentes[2] = newCaracteristica(nomeAnt3, valorAnt3); }
@@ -412,7 +412,7 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
     furtividade, sobrevivencia, arena, computador, investigacao, medicina, misterios, estilos, antecedentes,
     gloria, honra, divisao, posto, soco, chute, bloqueio, apresamento, esportes, foco, chi, fdv, saude, especiais,
     combos, novasTecnicas = [], novosTalentos = [], novasPericias = [], novosConhecimentos = [], pontosCombate = 0) {
-    var newWindow = "";
+    let newWindow = "";
 
     newWindow += "<table width=\"100%\" class=\"topoTitulo\"><tr><td align=\"center\" colspan=\"6\"><img alt=\"Street Fighter RPG\" src=\"http://www.sfrpg.com.br/tools/sheet-img/logo.png\" /></td></tr>"
         + "<tr><td colspan=\"2\"><span class=\"ArialBlackRed\">Nome: </span>" + FontPadrao(nome) + "</td>"
@@ -492,7 +492,7 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
     //novashabilidades
     if (novasPericias != null || novosTalentos != null || novosConhecimentos != null) {
         if (novosTalentos.length >= novosConhecimentos.length && novosTalentos.length >= novasPericias.length) {
-            for (var i = 0; i < novosTalentos.length; i++) {
+            for (let i = 0; i < novosTalentos.length; i++) {
                 newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>"
                     + PintaCaracteristica(8, novosTalentos[i].Valor);
 
@@ -516,7 +516,7 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
             }
         }
         else if (novasPericias.length >= novosConhecimentos.length && novasPericias.length >= novosTalentos.length) {
-            for (var i = 0; i < novasPericias.length; i++) {
+            for (let i = 0; i < novasPericias.length; i++) {
                 if (novosTalentos.length > i) {
                     newWindow += "</td></tr><tr class=\"ArialBlackBlack\"><td>" + GeraHtmlLink(novosTalentos[i].Nome) + "</td><td>"
                         + PintaCaracteristica(8, novosTalentos[i].Valor);
@@ -571,8 +571,8 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
         + "<table width=\"100%\" class=\"ArialPadrao\">";//tabela de antecedentes
 
     if (antecedentes != null) {   //pinta cada antecedente na ficha
-        for (var x = 0; x < antecedentes.length; x++) {
-            var ant = antecedentes[x];
+        for (let x = 0; x < antecedentes.length; x++) {
+            const ant = antecedentes[x];
             newWindow += "<tr><td>" + GeraHtmlLink(ant.Nome) + "</td><td>"
                 + PintaCaracteristica(8, ant.Valor) + "</td></tr>";
         }
@@ -595,10 +595,10 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
         + "</td></tr>";
 
     if (novasTecnicas != null) {//pintando as técnicas doidas
-        for (var x = 0; x < novasTecnicas.length; x++) {
-            var tec = novasTecnicas[x];
-            newWindow += "<tr><td>" + tec.Nome + "</td><td>";
-            newWindow += PintaCaracteristica(8, tec.Valor) + "</td></tr>";
+        for (let x = 0; x < novasTecnicas.length; x++) {
+            const tecnica = novasTecnicas[x];
+            newWindow += "<tr><td>" + tecnica.Nome + "</td><td>";
+            newWindow += PintaCaracteristica(8, tecnica.Valor) + "</td></tr>";
         }
     }
 
@@ -642,152 +642,177 @@ function newCaracteristica(nome, valor) {
 }
 
 function getCaracteristica(arr, nome) {
-    var valor = 0;
-    $.each(arr, function (i, v) {
-        if (arr[i].Nome == nome)
-            valor = arr[i].Valor;
-    });
-    return valor;
+    const index = arr.findIndex(x => x.Nome === nome);
+    if (index !== -1) return arr[index].Valor;
+    return 0;
+}
+
+function dom(selector) {
+    const element = typeof selector === "string" ? document.querySelector(selector) : selector;
+
+    return {
+        val(value) {
+            if (arguments.length) element.value = value;
+            return element.value;
+        },
+        text(value) {
+            if (arguments.length) element.textContent = value ?? "";
+            return element.textContent;
+        },
+        html(value) {
+            if (arguments.length) element.innerHTML = value;
+            return element.innerHTML;
+        },
+        show() {
+            element.style.display = "";
+        },
+        hide() {
+            element.style.display = "none";
+        },
+        click(handler) {
+            element.addEventListener("click", handler);
+        }
+    };
 }
 
 function CarregarEdicao(nome) {
     //ler do webservice o json
-    var dic = new JSON();
+    const obj = {};
 
-    $('#divFicha').hide();
-    $('#divNaoEncontrado').hide();
-    $('#divFormulario').show();
+    dom('#divFicha').hide();
+    dom('#divNaoEncontrado').hide();
+    dom('#divFormulario').show();
 
     //cabecalho
-    $('#txtNome').text(dic["Nome"]);
-    $('#txtConceito').text(dic["Conceito"]);
-    $('#txtEstilo').text(dic["Estilo"]);
-    $('#txtAssinatura').text(dic["Assinatura"]);
-    $('#txtEscola').text(dic["Escola"]);
-    $('#txtEquipe').text(dic["Equipe"]);
-    $('#txtTime').text(dic["Time"]);
-    $('#txtCronica').text(dic["Cronica"]);
-    $('#txtJogador').text(dic["Jogador"]);
+    dom('#txtNome').text(obj["Nome"]);
+    dom('#txtConceito').text(obj["Conceito"]);
+    dom('#txtEstilo').text(obj["Estilo"]);
+    dom('#txtAssinatura').text(obj["Assinatura"]);
+    dom('#txtEscola').text(obj["Escola"]);
+    dom('#txtEquipe').text(obj["Equipe"]);
+    dom('#txtTime').text(obj["Time"]);
+    dom('#txtCronica').text(obj["Cronica"]);
+    dom('#txtJogador').text(obj["Jogador"]);
 
     //atributos
-    $('#ddlForca').val(dic["Forca"]);
-    $('#ddlDestreza').val(dic["Destreza"]);
-    $('#ddlVigor').val(dic["Vigor"]);
-    $('#ddlCarisma').val(dic["Carisma"]);
-    $('#ddlManipulacao').val(dic["Manipulacao"]);
-    $('#ddlAparencia').val(dic["Aparencia"]);
-    $('#ddlPercepcao').val(dic["Percepcao"]);
-    $('#ddlInteligencia').val(dic["Inteligencia"]);
-    $('#ddlRaciocinio').val(dic["Raciocinio"]);
+    dom('#ddlForca').val(obj["Forca"]);
+    dom('#ddlDestreza').val(obj["Destreza"]);
+    dom('#ddlVigor').val(obj["Vigor"]);
+    dom('#ddlCarisma').val(obj["Carisma"]);
+    dom('#ddlManipulacao').val(obj["Manipulacao"]);
+    dom('#ddlAparencia').val(obj["Aparencia"]);
+    dom('#ddlPercepcao').val(obj["Percepcao"]);
+    dom('#ddlInteligencia').val(obj["Inteligencia"]);
+    dom('#ddlRaciocinio').val(obj["Raciocinio"]);
 
     //talentos
-    $('#ddlProntidao').val(dic["Prontidao"]);
-    $('#ddlPerspicacia').val(dic["Perspicacia"]);
-    $('#ddlInterrogatorio').val(dic["Interrogatorio"]);
-    $('#ddlManha').val(dic["Manha"]);
-    $('#ddlLabia').val(dic["Labia"]);
-    $('#ddlIntimidacao').val(dic["Intimidacao"]);
+    dom('#ddlProntidao').val(obj["Prontidao"]);
+    dom('#ddlPerspicacia').val(obj["Perspicacia"]);
+    dom('#ddlInterrogatorio').val(obj["Interrogatorio"]);
+    dom('#ddlManha').val(obj["Manha"]);
+    dom('#ddlLabia').val(obj["Labia"]);
+    dom('#ddlIntimidacao').val(obj["Intimidacao"]);
 
-    if (!string.IsNullOrEmpty(dic["NovosTalentos"]) && dic["NovosTalentos"] != ",0") {
-        let arrTemp = dic["NovosTalentos"].split(';');
+    if (obj["NovosTalentos"] && obj["NovosTalentos"] != ",0") {
+        let arrTemp = obj["NovosTalentos"].split(';');
         if (arrTemp.Length > 0) {
-            $('#txtTalento1').text(arrTemp[0].split(',')[0]);
-            $('#ddlTalento1').val(arrTemp[0].split(',')[1]);
+            dom('#txtTalento1').text(arrTemp[0].split(',')[0]);
+            dom('#ddlTalento1').val(arrTemp[0].split(',')[1]);
             if (arrTemp.Length > 1) {
-                $('#txtTalento2').text(arrTemp[1].split(',')[0]);
-                $('#ddlTalento2').val(arrTemp[1].split(',')[1]);
+                dom('#txtTalento2').text(arrTemp[1].split(',')[0]);
+                dom('#ddlTalento2').val(arrTemp[1].split(',')[1]);
 
                 if (arrTemp.Length > 2) {
-                    $('#txtTalento3').text(arrTemp[2].split(',')[0]);
-                    $('#ddlTalento3').val(arrTemp[2].split(',')[1]);
+                    dom('#txtTalento3').text(arrTemp[2].split(',')[0]);
+                    dom('#ddlTalento3').val(arrTemp[2].split(',')[1]);
                 }
             }
         }
     }
 
     //pericias
-    $('#ddlLutaCega').val(dic["LutaCega"]);
-    $('#ddlSobrevivencia').val(dic["Sobrevivencia"]);
-    $('#ddlConducao').val(dic["Conducao"]);
-    $('#ddlLideranca').val(dic["Lideranca"]);
-    $('#ddlFurtividade').val(dic["Furtividade"]);
-    $('#ddlSeguranca').val(dic["Seguranca"]);
+    dom('#ddlLutaCega').val(obj["LutaCega"]);
+    dom('#ddlSobrevivencia').val(obj["Sobrevivencia"]);
+    dom('#ddlConducao').val(obj["Conducao"]);
+    dom('#ddlLideranca').val(obj["Lideranca"]);
+    dom('#ddlFurtividade').val(obj["Furtividade"]);
+    dom('#ddlSeguranca').val(obj["Seguranca"]);
 
-    if (!string.IsNullOrEmpty(dic["NovasPericias"]) && dic["NovasPericias"] != ",0") {
-        var arrTemp = dic["NovasPericias"].split(';');
-        if (arrTemp.Length > 0) {
-            $('#txtPericia1').text(arrTemp[0].split(',')[0]);
-            $('#ddlPericia1').val(arrTemp[0].split(',')[1]);
-            if (arrTemp.Length > 1) {
-                $('#txtPericia2').text(arrTemp[1].split(',')[0]);
-                $('#ddlPericia2').val(arrTemp[1].split(',')[1]);
+    if (obj["NovasPericias"] !== null && obj["NovasPericias"] != ",0") {
+        const arrTemp = obj["NovasPericias"].split(';');
+        if (arrTemp.length > 0) {
+            dom('#txtPericia1').text(arrTemp[0].split(',')[0]);
+            dom('#ddlPericia1').val(arrTemp[0].split(',')[1]);
+            if (arrTemp.length > 1) {
+                dom('#txtPericia2').text(arrTemp[1].split(',')[0]);
+                dom('#ddlPericia2').val(arrTemp[1].split(',')[1]);
 
-                if (arrTemp.Length > 2) {
-                    $('#txtPericia3').text(arrTemp[2].split(',')[0]);
-                    $('#ddlPericia3').val(arrTemp[2].split(',')[1]);
+                if (arrTemp.length > 2) {
+                    dom('#txtPericia3').text(arrTemp[2].split(',')[0]);
+                    dom('#ddlPericia3').val(arrTemp[2].split(',')[1]);
                 }
             }
         }
     }
 
     //conhecimentos
-    $('#ddlArena').val(dic["Arena"]);
-    $('#ddlMisterios').val(dic["Misterios"]);
-    $('#ddlEstilos').val(dic["Estilos"]);
-    $('#ddlMedicina').val(dic["Medicina"]);
-    $('#ddlComputador').val(dic["Computador"]);
-    $('#ddlInvestigacao').val(dic["Investigacao"]);
+    dom('#ddlArena').val(obj["Arena"]);
+    dom('#ddlMisterios').val(obj["Misterios"]);
+    dom('#ddlEstilos').val(obj["Estilos"]);
+    dom('#ddlMedicina').val(obj["Medicina"]);
+    dom('#ddlComputador').val(obj["Computador"]);
+    dom('#ddlInvestigacao').val(obj["Investigacao"]);
 
-    if (dic["NovosConhecimentos"] !== null && dic["NovosConhecimentos"] != ",0") {
-        var arrTemp = dic["NovosConhecimentos"].split(';');
-        if (arrTemp.Length > 0) {
-            $('#txtConhecimento1').text(arrTemp[0].split(',')[0]);
-            $('#ddlConhecimento1').val(arrTemp[0].split(',')[1]);
-            if (arrTemp.Length > 1) {
-                $('#txtConhecimento2').text(arrTemp[1].split(',')[0]);
-                $('#ddlConhecimento2').val(arrTemp[1].split(',')[1]);
+    if (obj["NovosConhecimentos"] !== null && obj["NovosConhecimentos"] != ",0") {
+        const arrTemp = obj["NovosConhecimentos"].split(';');
+        if (arrTemp.length > 0) {
+            dom('#txtConhecimento1').text(arrTemp[0].split(',')[0]);
+            dom('#ddlConhecimento1').val(arrTemp[0].split(',')[1]);
+            if (arrTemp.length > 1) {
+                dom('#txtConhecimento2').text(arrTemp[1].split(',')[0]);
+                dom('#ddlConhecimento2').val(arrTemp[1].split(',')[1]);
 
-                if (arrTemp.Length > 2) {
-                    $('#txtConhecimento3').text(arrTemp[2].split(',')[0]);
-                    $('#ddlConhecimento3').val(arrTemp[2].split(',')[1]);
+                if (arrTemp.length > 2) {
+                    dom('#txtConhecimento3').text(arrTemp[2].split(',')[0]);
+                    dom('#ddlConhecimento3').val(arrTemp[2].split(',')[1]);
                 }
             }
         }
     }
 
     //antecedentes
-    if (dic["Antecedentes"] !== null && dic["Antecedentes"] != ",0") {
-        var arrTemp = dic["Antecedentes"].split(';');
-        if (arrTemp.Length > 0) {
-            $('#txtAntecedente1').text(arrTemp[0].split(',')[0]);
-            $('#ddlAntecedente1').val(arrTemp[0].split(',')[1]);
-            if (arrTemp.Length > 1) {
-                $('#txtAntecedente2').text(arrTemp[1].split(',')[0]);
-                $('#ddlAntecedente2').val(arrTemp[1].split(',')[1]);
+    if (obj["Antecedentes"] !== null && obj["Antecedentes"] != ",0") {
+        const arrTemp = obj["Antecedentes"].split(';');
+        if (arrTemp.length > 0) {
+            dom('#txtAntecedente1').text(arrTemp[0].split(',')[0]);
+            dom('#ddlAntecedente1').val(arrTemp[0].split(',')[1]);
+            if (arrTemp.length > 1) {
+                dom('#txtAntecedente2').text(arrTemp[1].split(',')[0]);
+                dom('#ddlAntecedente2').val(arrTemp[1].split(',')[1]);
 
-                if (arrTemp.Length > 2) {
-                    $('#txtAntecedente3').text(arrTemp[2].split(',')[0]);
-                    $('#ddlAntecedente3').val(arrTemp[2].split(',')[1]);
+                if (arrTemp.length > 2) {
+                    dom('#txtAntecedente3').text(arrTemp[2].split(',')[0]);
+                    dom('#ddlAntecedente3').val(arrTemp[2].split(',')[1]);
 
-                    if (arrTemp.Length > 3) {
-                        $('#txtAntecedente4').text(arrTemp[3].split(',')[0]);
-                        $('#ddlAntecedente4').val(arrTemp[3].split(',')[1]);
+                    if (arrTemp.length > 3) {
+                        dom('#txtAntecedente4').text(arrTemp[3].split(',')[0]);
+                        dom('#ddlAntecedente4').val(arrTemp[3].split(',')[1]);
 
-                        if (arrTemp.Length > 4) {
-                            $('#txtAntecedente5').text(arrTemp[4].split(',')[0]);
-                            $('#ddlAntecedente5').val(arrTemp[4].split(',')[1]);
+                        if (arrTemp.length > 4) {
+                            dom('#txtAntecedente5').text(arrTemp[4].split(',')[0]);
+                            dom('#ddlAntecedente5').val(arrTemp[4].split(',')[1]);
 
-                            if (arrTemp.Length > 5) {
-                                $('#txtAntecedente6').text(arrTemp[5].split(',')[0]);
-                                $('#ddlAntecedente6').val(arrTemp[5].split(',')[1]);
+                            if (arrTemp.length > 5) {
+                                dom('#txtAntecedente6').text(arrTemp[5].split(',')[0]);
+                                dom('#ddlAntecedente6').val(arrTemp[5].split(',')[1]);
 
-                                if (arrTemp.Length > 6) {
-                                    $('#txtAntecedente7').text(arrTemp[6].split(',')[0]);
-                                    $('#ddlAntecedente7').val(arrTemp[6].split(',')[1]);
+                                if (arrTemp.length > 6) {
+                                    dom('#txtAntecedente7').text(arrTemp[6].split(',')[0]);
+                                    dom('#ddlAntecedente7').val(arrTemp[6].split(',')[1]);
 
-                                    if (arrTemp.Length > 7) {
-                                        $('#txtAntecedente8').text(arrTemp[7].split(',')[0]);
-                                        $('#ddlAntecedente8').val(arrTemp[7].split(',')[1]);
+                                    if (arrTemp.length > 7) {
+                                        dom('#txtAntecedente8').text(arrTemp[7].split(',')[0]);
+                                        dom('#ddlAntecedente8').val(arrTemp[7].split(',')[1]);
                                     }
                                 }
                             }
@@ -799,37 +824,37 @@ function CarregarEdicao(nome) {
     }
 
     //tecnicas
-    $('#ddlSoco').val(dic["Soco"]);
-    $('#ddlChute').val(dic["Chute"]);
-    $('#ddlBloqueio').val(dic["Bloqueio"]);
-    $('#ddlApresamento').val(dic["Apresamento"]);
-    $('#ddlEsportes').val(dic["Esportes"]);
-    $('#ddlFoco').val(dic["Foco"]);
+    dom('#ddlSoco').val(obj["Soco"]);
+    dom('#ddlChute').val(obj["Chute"]);
+    dom('#ddlBloqueio').val(obj["Bloqueio"]);
+    dom('#ddlApresamento').val(obj["Apresamento"]);
+    dom('#ddlEsportes').val(obj["Esportes"]);
+    dom('#ddlFoco').val(obj["Foco"]);
 
-    if (dic["NovasTecnicas"] !== null && dic["NovasTecnicas"] != ",0") {
-        var arrTemp = dic["NovasTecnicas"].split(';');
-        if (arrTemp.Length > 0) {
-            $('#txtTecnica1').text(arrTemp[0].split(',')[0]);
-            $('#ddlTecnica1').val(arrTemp[0].split(',')[1]);
-            if (arrTemp.Length > 1) {
-                $('#txtTecnica2').text(arrTemp[1].split(',')[0]);
-                $('#ddlTecnica2').val(arrTemp[1].split(',')[1]);
+    if (obj["NovasTecnicas"] !== null && obj["NovasTecnicas"] != ",0") {
+        const arrTemp = obj["NovasTecnicas"].split(';');
+        if (arrTemp.length > 0) {
+            dom('#txtTecnica1').text(arrTemp[0].split(',')[0]);
+            dom('#ddlTecnica1').val(arrTemp[0].split(',')[1]);
+            if (arrTemp.length > 1) {
+                dom('#txtTecnica2').text(arrTemp[1].split(',')[0]);
+                dom('#ddlTecnica2').val(arrTemp[1].split(',')[1]);
             }
         }
     }
 
     //manobras especiais
-    $('#txtManobrasEspeciais').text(dic["ManobrasEspeciais"]);
-    $('#txtCombos').text(dic["Combos"]);
+    dom('#txtManobrasEspeciais').text(obj["ManobrasEspeciais"]);
+    dom('#txtCombos').text(obj["Combos"]);
 
     //renome
-    $('#ddlDivisao').val(dic["Divisao"]);
-    $('#ddlPosto').val(dic["Posto"]);
-    $('#ddlGloria').val(dic["Gloria"]);
-    $('#ddlHonra').val(dic["Honra"]);
-    $('#ddlSaude').val(dic["Saude"]);
-    $('#ddlChi').val(dic["Chi"]);
-    $('#ddlForcaVontade').val(dic["ForcaVontade"]);
+    dom('#ddlDivisao').val(obj["Divisao"]);
+    dom('#ddlPosto').val(obj["Posto"]);
+    dom('#ddlGloria').val(obj["Gloria"]);
+    dom('#ddlHonra').val(obj["Honra"]);
+    dom('#ddlSaude').val(obj["Saude"]);
+    dom('#ddlChi').val(obj["Chi"]);
+    dom('#ddlForcaVontade').val(obj["ForcaVontade"]);
 }
 
 function ExcluirPersonagem(nome) {
@@ -839,114 +864,114 @@ function ExcluirPersonagem(nome) {
 function carregarPersonagem() {
     const personagem = {};
     //cabeçalho
-    personagem.Nome = $('#txtNome').val();
-    personagem.Conceito = $('#txtConceito').val();
-    personagem.Time = $('#txtTime').val();
-    personagem.Equipe = $('#txtEquipe').val();
-    personagem.Jogador = $('#txtJogador').val();
-    personagem.Cronica = $('#txtCronica').val();
-    personagem.Assinatura = $('#txtAssinatura').val();
-    personagem.Escola = $('#txtEscola').val();
-    personagem.Estilo = $('#txtEstilo').val();
+    personagem.Nome = dom('#txtNome').val();
+    personagem.Conceito = dom('#txtConceito').val();
+    personagem.Time = dom('#txtTime').val();
+    personagem.Equipe = dom('#txtEquipe').val();
+    personagem.Jogador = dom('#txtJogador').val();
+    personagem.Cronica = dom('#txtCronica').val();
+    personagem.Assinatura = dom('#txtAssinatura').val();
+    personagem.Escola = dom('#txtEscola').val();
+    personagem.Estilo = dom('#txtEstilo').val();
 
     //atributos
-    personagem.Forca = parseInt($('#ddlForca').val());
-    personagem.Destreza = parseInt($('#ddlDestreza').val());
-    personagem.Vigor = parseInt($('#ddlVigor').val());
-    personagem.Carisma = parseInt($('#ddlCarisma').val());
-    personagem.Manipulacao = parseInt($('#ddlManipulacao').val());
-    personagem.Aparencia = parseInt($('#ddlAparencia').val());
-    personagem.Percepcao = parseInt($('#ddlPercepcao').val());
-    personagem.Inteligencia = parseInt($('#ddlInteligencia').val());
-    personagem.Raciocinio = parseInt($('#ddlRaciocinio').val());
+    personagem.Forca = parseInt(dom('#ddlForca').val());
+    personagem.Destreza = parseInt(dom('#ddlDestreza').val());
+    personagem.Vigor = parseInt(dom('#ddlVigor').val());
+    personagem.Carisma = parseInt(dom('#ddlCarisma').val());
+    personagem.Manipulacao = parseInt(dom('#ddlManipulacao').val());
+    personagem.Aparencia = parseInt(dom('#ddlAparencia').val());
+    personagem.Percepcao = parseInt(dom('#ddlPercepcao').val());
+    personagem.Inteligencia = parseInt(dom('#ddlInteligencia').val());
+    personagem.Raciocinio = parseInt(dom('#ddlRaciocinio').val());
 
     //talentos
-    personagem.Prontidao = parseInt($('#ddlProntidao').val());
-    personagem.Interrogatorio = parseInt($('#ddlInterrogatorio').val());
-    personagem.Intimidacao = parseInt($('#ddlIntimidacao').val());
-    personagem.Perspicacia = parseInt($('#ddlPerspicacia').val());
-    personagem.Manha = parseInt($('#ddlManha').val());
-    personagem.Labia = parseInt($('#ddlLabia').val());
+    personagem.Prontidao = parseInt(dom('#ddlProntidao').val());
+    personagem.Interrogatorio = parseInt(dom('#ddlInterrogatorio').val());
+    personagem.Intimidacao = parseInt(dom('#ddlIntimidacao').val());
+    personagem.Perspicacia = parseInt(dom('#ddlPerspicacia').val());
+    personagem.Manha = parseInt(dom('#ddlManha').val());
+    personagem.Labia = parseInt(dom('#ddlLabia').val());
 
     //novos talentos
-    var talentos = [];
-    if ($('#txtTalento1').val() != '') {
-        talentos[0] = newCaracteristica($('#txtTalento1').val(), $('#ddlTalento1').val());
+    const talentos = [];
+    if (dom('#txtTalento1').val() != '') {
+        talentos[0] = newCaracteristica(dom('#txtTalento1').val(), dom('#ddlTalento1').val());
 
-        if ($('#txtTalento2').val() != '') {
-            talentos[1] = newCaracteristica($('#txtTalento2').val(), $('#ddlTalento2').val());
+        if (dom('#txtTalento2').val() != '') {
+            talentos[1] = newCaracteristica(dom('#txtTalento2').val(), dom('#ddlTalento2').val());
 
-            if ($('#txtTalento3').val() != '') {
-                talentos[2] = newCaracteristica($('#txtTalento3').val(), $('#ddlTalento3').val());
+            if (dom('#txtTalento3').val() != '') {
+                talentos[2] = newCaracteristica(dom('#txtTalento3').val(), dom('#ddlTalento3').val());
             }
         }
     }
     personagem.NovosTalentos = talentos;
 
     //perícias
-    personagem.LutaCega = parseInt($('#ddlLutaCega').val());
-    personagem.Conducao = parseInt($('#ddlConducao').val());
-    personagem.Lideranca = parseInt($('#ddlLideranca').val());
-    personagem.Seguranca = parseInt($('#ddlSeguranca').val());
-    personagem.Furtividade = parseInt($('#ddlFurtividade').val());
-    personagem.Sobrevivencia = parseInt($('#ddlSobrevivencia').val());
+    personagem.LutaCega = parseInt(dom('#ddlLutaCega').val());
+    personagem.Conducao = parseInt(dom('#ddlConducao').val());
+    personagem.Lideranca = parseInt(dom('#ddlLideranca').val());
+    personagem.Seguranca = parseInt(dom('#ddlSeguranca').val());
+    personagem.Furtividade = parseInt(dom('#ddlFurtividade').val());
+    personagem.Sobrevivencia = parseInt(dom('#ddlSobrevivencia').val());
 
     //novas perícias
-    var pericias = [];
-    if ($('#txtPericia1').val() != '') {
-        pericias[0] = newCaracteristica($('#txtPericia1').val(), $('#ddlPericia1').val());
+    const pericias = [];
+    if (dom('#txtPericia1').val() != '') {
+        pericias[0] = newCaracteristica(dom('#txtPericia1').val(), dom('#ddlPericia1').val());
 
-        if ($('#txtPericia2').val() != '') {
-            pericias[1] = newCaracteristica($('#txtPericia2').val(), $('#ddlPericia2').val());
+        if (dom('#txtPericia2').val() != '') {
+            pericias[1] = newCaracteristica(dom('#txtPericia2').val(), dom('#ddlPericia2').val());
 
-            if ($('#txtPericia3').val() != '') {
-                pericias[2] = newCaracteristica($('#txtPericia3').val(), $('#ddlPericia3').val());
+            if (dom('#txtPericia3').val() != '') {
+                pericias[2] = newCaracteristica(dom('#txtPericia3').val(), dom('#ddlPericia3').val());
             }
         }
     }
     personagem.NovasPericias = pericias;
 
     //conhecimentos
-    personagem.Arena = parseInt($('#ddlArena').val());
-    personagem.Computador = parseInt($('#ddlComputador').val());
-    personagem.Investigacao = parseInt($('#ddlInvestigacao').val());
-    personagem.Medicina = parseInt($('#ddlMedicina').val());
-    personagem.Misterios = parseInt($('#ddlMisterios').val());
-    personagem.Estilos = parseInt($('#ddlEstilos').val());
+    personagem.Arena = parseInt(dom('#ddlArena').val());
+    personagem.Computador = parseInt(dom('#ddlComputador').val());
+    personagem.Investigacao = parseInt(dom('#ddlInvestigacao').val());
+    personagem.Medicina = parseInt(dom('#ddlMedicina').val());
+    personagem.Misterios = parseInt(dom('#ddlMisterios').val());
+    personagem.Estilos = parseInt(dom('#ddlEstilos').val());
 
     //novos conhecimentos
-    var conhecimentos = [];
-    if ($('#txtConhecimento1').val() != '') {
-        conhecimentos[0] = newCaracteristica($('#txtConhecimento1').val(), $('#ddlConhecimento1').val());
+    const conhecimentos = [];
+    if (dom('#txtConhecimento1').val() != '') {
+        conhecimentos[0] = newCaracteristica(dom('#txtConhecimento1').val(), dom('#ddlConhecimento1').val());
 
-        if ($('#txtConhecimento2').val() != '') {
-            conhecimentos[1] = newCaracteristica($('#txtConhecimento2').val(), $('#ddlConhecimento2').val());
+        if (dom('#txtConhecimento2').val() != '') {
+            conhecimentos[1] = newCaracteristica(dom('#txtConhecimento2').val(), dom('#ddlConhecimento2').val());
 
-            if ($('#txtConhecimento3').val() != '') {
-                conhecimentos[2] = newCaracteristica($('#txtConhecimento3').val(), $('#ddlConhecimento3').val());
+            if (dom('#txtConhecimento3').val() != '') {
+                conhecimentos[2] = newCaracteristica(dom('#txtConhecimento3').val(), dom('#ddlConhecimento3').val());
             }
         }
     }
     personagem.NovosConhecimentos = conhecimentos;
 
     //antecedentes
-    var antecedentes = [];
-    if ($('#txtAntecedente1').val() != '') {
-        antecedentes[0] = newCaracteristica($('#txtAntecedente1').val(), $('#ddlAntecedente1').val());
-        if ($('#txtAntecedente2').val() != '') {
-            antecedentes[1] = newCaracteristica($('#txtAntecedente2').val(), $('#ddlAntecedente2').val());
-            if ($('#txtAntecedente3').val() != '') {
-                antecedentes[2] = newCaracteristica($('#txtAntecedente3').val(), $('#ddlAntecedente3').val());
-                if ($('#txtAntecedente4').val() != '') {
-                    antecedentes[3] = newCaracteristica($('#txtAntecedente4').val(), $('#ddlAntecedente4').val());
-                    if ($('#txtAntecedente5').val() != '') {
-                        antecedentes[4] = newCaracteristica($('#txtAntecedente5').val(), $('#ddlAntecedente5').val());
-                        if ($('#txtAntecedente6').val() != '') {
-                            antecedentes[5] = newCaracteristica($('#txtAntecedente6').val(), $('#ddlAntecedente6').val());
-                            if ($('#txtAntecedente7').val() != '') {
-                                antecedentes[6] = newCaracteristica($('#txtAntecedente7').val(), $('#ddlAntecedente7').val());
-                                if ($('#txtAntecedente8').val() != '') {
-                                    antecedentes[7] = newCaracteristica($('#txtAntecedente8').val(), $('#ddlAntecedente8').val());
+    const antecedentes = [];
+    if (dom('#txtAntecedente1').val() != '') {
+        antecedentes[0] = newCaracteristica(dom('#txtAntecedente1').val(), dom('#ddlAntecedente1').val());
+        if (dom('#txtAntecedente2').val() != '') {
+            antecedentes[1] = newCaracteristica(dom('#txtAntecedente2').val(), dom('#ddlAntecedente2').val());
+            if (dom('#txtAntecedente3').val() != '') {
+                antecedentes[2] = newCaracteristica(dom('#txtAntecedente3').val(), dom('#ddlAntecedente3').val());
+                if (dom('#txtAntecedente4').val() != '') {
+                    antecedentes[3] = newCaracteristica(dom('#txtAntecedente4').val(), dom('#ddlAntecedente4').val());
+                    if (dom('#txtAntecedente5').val() != '') {
+                        antecedentes[4] = newCaracteristica(dom('#txtAntecedente5').val(), dom('#ddlAntecedente5').val());
+                        if (dom('#txtAntecedente6').val() != '') {
+                            antecedentes[5] = newCaracteristica(dom('#txtAntecedente6').val(), dom('#ddlAntecedente6').val());
+                            if (dom('#txtAntecedente7').val() != '') {
+                                antecedentes[6] = newCaracteristica(dom('#txtAntecedente7').val(), dom('#ddlAntecedente7').val());
+                                if (dom('#txtAntecedente8').val() != '') {
+                                    antecedentes[7] = newCaracteristica(dom('#txtAntecedente8').val(), dom('#ddlAntecedente8').val());
                                 }
                             }
                         }
@@ -958,72 +983,72 @@ function carregarPersonagem() {
     personagem.Antecedentes = antecedentes;
 
     //técnicas
-    personagem.Soco = parseInt($('#ddlSoco').val());
-    personagem.Chute = parseInt($('#ddlChute').val());
-    personagem.Bloqueio = parseInt($('#ddlBloqueio').val());
-    personagem.Apresamento = parseInt($('#ddlApresamento').val());
-    personagem.Esportes = parseInt($('#ddlEsportes').val());
-    personagem.Foco = parseInt($('#ddlFoco').val());
+    personagem.Soco = parseInt(dom('#ddlSoco').val());
+    personagem.Chute = parseInt(dom('#ddlChute').val());
+    personagem.Bloqueio = parseInt(dom('#ddlBloqueio').val());
+    personagem.Apresamento = parseInt(dom('#ddlApresamento').val());
+    personagem.Esportes = parseInt(dom('#ddlEsportes').val());
+    personagem.Foco = parseInt(dom('#ddlFoco').val());
 
     //novas técnicas
-    var tecnicas = [];
-    if ($('#txtTecnica1').text() != '') {
-        tecnicas[0] = newCaracteristica($('#txtTecnica1').text(), $('#ddlTecnica1').val());
-        if ($('#txtTecnica2').text() != '') {
-            tecnicas[1] = newCaracteristica($('#txtTecnica2').text(), $('#ddlTecnica2').val());
+    const tecnicas = [];
+    if (dom('#txtTecnica1').text() != '') {
+        tecnicas[0] = newCaracteristica(dom('#txtTecnica1').text(), dom('#ddlTecnica1').val());
+        if (dom('#txtTecnica2').text() != '') {
+            tecnicas[1] = newCaracteristica(dom('#txtTecnica2').text(), dom('#ddlTecnica2').val());
         }
     }
     personagem.NovasTecnicas = tecnicas;
 
     //renome
-    personagem.Gloria = parseInt($('#ddlGloria').val());
-    personagem.Honra = parseInt($('#ddlHonra').val());
-    personagem.Posto = parseInt($('#ddlPosto').val());
-    personagem.Chi = parseInt($('#ddlChi').val());
-    personagem.ForcaVontade = parseInt($('#ddlForcaVontade').val());
-    personagem.Saude = parseInt($('#ddlSaude').val());
-    personagem.Divisao = $('#ddlDivisao').val();
+    personagem.Gloria = parseInt(dom('#ddlGloria').val());
+    personagem.Honra = parseInt(dom('#ddlHonra').val());
+    personagem.Posto = parseInt(dom('#ddlPosto').val());
+    personagem.Chi = parseInt(dom('#ddlChi').val());
+    personagem.ForcaVontade = parseInt(dom('#ddlForcaVontade').val());
+    personagem.Saude = parseInt(dom('#ddlSaude').val());
+    personagem.Divisao = dom('#ddlDivisao').val();
 
     //manobras especiais
-    personagem.ManobrasEspeciais = $('#txtManobrasEspeciais').val();
-    personagem.Combos = $('#txtCombos').val();
+    personagem.ManobrasEspeciais = dom('#txtManobrasEspeciais').val();
+    personagem.Combos = dom('#txtCombos').val();
     return personagem;
 }
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-    $('#btnGerarPlanilha').click(function () {
+    dom('#btnGerarPlanilha').click(function () {
         const personagem = carregarPersonagem();
-        $('#divFicha').html(AutoGeradorP(personagem));
-        $('#divFicha').show();
-        $('#divFormulario').hide();
+        dom('#divFicha').html(AutoGeradorP(personagem));
+        dom('#divFicha').show();
+        dom('#divFormulario').hide();
     });
 
-    $('#btnGerarJSON').click(function () {
+    dom('#btnGerarJSON').click(function () {
         const personagem = carregarPersonagem();
-        $('#divFicha').html("var personagem = " + JSON.stringify(personagem));
-        $('#divFicha').show();
-        $('#divFormulario').hide();
+        dom('#divFicha').html("let personagem = " + JSON.stringify(personagem));
+        dom('#divFicha').show();
+        dom('#divFormulario').hide();
     });
 
-    $('#btnGerarManobras').click(function () {
+    dom('#btnGerarManobras').click(function () {
         const personagem = carregarPersonagem();
-        $('#divFicha').html(carregarTabela(personagem));
-        $('#divFicha').show();
-        $('#divFormulario').hide();
+        dom('#divFicha').html(carregarTabela(personagem));
+        dom('#divFicha').show();
+        dom('#divFormulario').hide();
     });
 
     if (getParameterByName("nome") != null) {
-        $('#divFicha').show();
-        $('#divFormulario').hide();
+        dom('#divFicha').show();
+        dom('#divFormulario').hide();
         document.title += ": " + getParameterByName("nome");
-        $('#divFicha').html(VerificaNome(getParameterByName("nome")));
+        dom('#divFicha').html(VerificaNome(getParameterByName("nome")));
     }
     else if (getParameterByName("arquivo") != null) {
-        $('#divFicha').show();
-        $('#divFormulario').hide();
+        dom('#divFicha').show();
+        dom('#divFormulario').hide();
         document.title += ": " + getParameterByName("arquivo");
-        $('#divFicha').html(CarregaArquivo(getParameterByName("arquivo")));
+        dom('#divFicha').html(CarregaArquivo(getParameterByName("arquivo")));
     }
     else if (getParameterByName("editar") != null) {
         CarregarEdicao(getParameterByName("editar"));
@@ -1032,7 +1057,7 @@ $(document).ready(function () {
         ExcluirPersonagem(getParameterByName("excluir"));
     }
     else {
-        $('#divFicha').hide();
-        $('#divFormulario').show();
+        dom('#divFicha').hide();
+        dom('#divFormulario').show();
     }
 })

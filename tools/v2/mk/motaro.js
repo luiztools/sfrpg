@@ -69,7 +69,7 @@ function Motaro() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Yoga Teleport, Tail Sweep, Tail Slash, Upper Tail Strike, Head Butt, Bull Head, Bull Horn, Double Hit Kick, Face Slam",
+        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Yoga Teleport, Tail Sweep, Tail Slash, Upper Tail Strike, Head Butt, Bull Head, Bull Horn, Double Hit Kick, Face Slam, Throw, Missile Reflection, Energy Reflection",
         Combos: "nenhum"
     };
     return personagem;

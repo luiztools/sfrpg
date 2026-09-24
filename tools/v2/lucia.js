@@ -1,18 +1,17 @@
 function Lucia() {
-    var antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 4);
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Contatos", 4);
     antecedentes[1] = newCaracteristica("Recursos", 3);
     antecedentes[2] = newCaracteristica("Apoio", 4);
     antecedentes[3] = newCaracteristica("Fama", 1);
-    antecedentes[4] = newCaracteristica("Elemental (Fogo)", 2);
+    antecedentes[4] = newCaracteristica("Elemental", 2);
 
-    var tecnicas = [];
+    const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
-    var conhecimentos = [];
-    conhecimentos[0] = newCaracteristica("Direito", 1);
+    const conhecimentos = [];
 
-    var lucia =
+    const lucia =
     {
         Nome: "Lucia Morgan",
         Estilo: "Forças Especiais",
@@ -22,6 +21,7 @@ function Lucia() {
         Time: "Final Fight",
         Jogador: "NPC",
         Cronica: "Final Fight 3",
+        Equipe: "MCPD",
         Forca: 3,
         Destreza: 6,
         Vigor: 3,
@@ -29,7 +29,7 @@ function Lucia() {
         Manipulacao: 3,
         Aparencia: 5,
         Percepcao: 4,
-        Inteligencia: 2,
+        Inteligencia: 3,
         Raciocinio: 4,
         Prontidao: 4,
         Interrogacao: 4,
@@ -40,6 +40,7 @@ function Lucia() {
         LutaCega: 2,
         Conducao: 3,
         Lideranca: 4,
+        Seguranca: 3,
         Furtividade: 3,
         Sobrevivencia: 2,
         Arena: 1,
@@ -53,23 +54,40 @@ function Lucia() {
         NovosTalentos: [],
         Antecedentes: antecedentes,
         NovasTecnicas: tecnicas,
-        Soco: 3,
-        Chute: 4,
+        Soco: 4,
+        Chute: 5,
         Bloqueio: 3,
         Apresamento: 3,
         Esportes: 4,
         Foco: 1,
-        ManobrasEspeciais: "Flying Knee Thrust, Double Hit Kick, Jump, Lightning Leg, Gekiro, Throw, Knee Basher, Suplex, Roundabout Kick, Flaming Heel, Elbow Smash",
-        Combos: "Movimento para Elbow Smash; Gekiro para Roundhouse; Jab para Strong para Throw (Dizzy)",
-        Posto: 3,
+        ManobrasEspeciais: "Double Hit Kick, Jump, Lightning Leg, Gekiro, Throw, Knee Basher, Suplex, Roundabout Kick, Flaming Heel, Elbow Smash, Kippup",
+        Combos: "Movimento para Elbow Smash; Gekiro para Roundhouse (Flaming); Jab para Strong para Throw (Dizzy);",
+        Posto: 4,
         Gloria: 4,
         Honra: 4,
         Divisao: "Estilo Livre",
         Chi: 7,
         ForcaVontade: 8,
-        Saude: 16
+        Saude: 18
     };
     return calcPC(lucia);
 }
 
-const npc = Lucia();
+function LuciaSF5() {
+    const lucia = Lucia();
+    lucia.Cronica = "Street Fighter V";
+    lucia.Vigor = 4;
+    lucia.Saude = 20;
+    lucia.ForcaVontade = 9;
+    lucia.Chi = 8;
+    lucia.Combos += "Bloqueio para Lightning Leg (Dizzy);"
+    lucia.Bloqueio = 4;
+    return lucia;
+}
+
+let npc;
+if (getParameterByName('age') === 'ff3')
+    npc = Lucia();
+else
+    npc = LuciaSF5();
+npc = calcPC(npc);

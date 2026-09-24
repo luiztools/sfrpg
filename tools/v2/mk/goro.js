@@ -230,7 +230,7 @@ function Shokan() {
 
     const personagem =
     {
-        Nome: "Shokan",
+        Nome: "Shokan (Draco)",
         Estilo: "Boxe",
         Escola: "Nenhuma",
         Equipe: "Nenhuma",

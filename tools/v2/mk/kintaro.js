@@ -70,4 +70,78 @@ function Kintaro() {
     return personagem;
 }
 
-let npc = calcPC(Kintaro());
+function Tigrar() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Shokan", 3);
+
+    const armas = [];
+    const talentos = [];
+    const conhecimentos = [];
+
+    const personagem =
+    {
+        Nome: "Shokan (Tigrar)",
+        Estilo: "Boxe",
+        Escola: "Nenhuma",
+        Equipe: "Nenhuma",
+        Time: "Nenhuma",
+        Conceito: "Shokan Médio",
+        Assinatura: "Ergue os braços",
+        Jogador: "NPC",
+        Cronica: "Mortal Kombat",
+        Forca: 7,
+        Destreza: 4,
+        Vigor: 7,
+        Carisma: 1,
+        Manipulacao: 1,
+        Aparencia: 0,
+        Percepcao: 2,
+        Inteligencia: 1,
+        Raciocinio: 1,
+        Prontidao: 3,
+        Perspicacia: 0,
+        Manha: 0,
+        Interrogacao: 0,
+        Intimidacao: 5,
+        Labia: 0,
+        LutaCega: 0,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 0,
+        Furtividade: 1,
+        Sobrevivencia: 4,
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 0,
+        Misterios: 0,
+        Estilos: 0,
+        NovosTalentos: talentos,
+        NovosConhecimentos: conhecimentos,
+        Antecedentes: antecedentes,
+        Soco: 3,
+        Chute: 2,
+        Bloqueio: 4,
+        Apresamento: 3,
+        Esportes: 3,
+        Foco: 0,
+        NovasTecnicas: [],
+        Armas: armas,
+        Divisao: "Tradicional",
+        Posto: 1,
+        Gloria: 0,
+        Honra: 0,
+        Chi: 3,
+        ForcaVontade: 7,
+        Saude: 20,
+        ManobrasEspeciais: "Jump, Air Smash, Power Uppercut",
+        Combos: "Jab para Air Smash (Dizzy)"
+    };
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'shokan')
+    npc = calcPC(Tigrar());
+else
+    npc = calcPC(Kintaro());

@@ -1,0 +1,61 @@
+function DorisKungFuDoFighting() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Sensei", 5);
+
+    const doris =
+    {
+        Nome: "Doris",
+        Estilo: "Soul Power",
+        Escola: "",
+        Conceito: "",
+        Assinatura: "Beijo no ar",
+        Jogador: "NPC",
+        Cronica: "Kung Fu Do Fighting",
+        Forca: 1,
+        Destreza: 4,
+        Vigor: 1,
+        Carisma: 3,
+        Manipulacao: 4,
+        Aparencia: 3,
+        Percepcao: 2,
+        Inteligencia: 3,
+        Raciocinio: 3,
+        Prontidao: 0,
+        Interrogacao: 0,
+        Intimidacao: 3,
+        Perspicacia: 1,
+        Manha: 0,
+        Labia: 3,
+        LutaCega: 2,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 0,
+        Furtividade: 2,
+        Sobrevivencia: 0,
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 3,
+        Misterios: 3,
+        Estilos: 3,
+        Antecedentes: antecedentes,
+        Soco: 1,
+        Chute: 1,
+        Bloqueio: 0,
+        Apresamento: 0,
+        Esportes: 0,
+        Foco: 5,
+        Gloria: 2,
+        Honra: 1,
+        Chi: 10,
+        ForcaVontade: 4,
+        Saude: 10,
+        Posto: 1,
+        Divisao: "",
+        ManobrasEspeciais: "Jump, Fireball, Improved Fireball",
+        Combos: "",
+    };
+    return doris;
+}
+
+const npc = calcPC(DorisKungFuDoFighting());

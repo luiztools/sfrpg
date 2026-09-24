@@ -36,3 +36,8 @@
 #disqus_thread {
 	margin: 20px;	
 }
+
+/* largura dos posts */
+.site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content {
+	max-width: 800px;
+}

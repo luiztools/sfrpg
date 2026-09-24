@@ -50,7 +50,7 @@ function DhalsimSF2() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telephaty, Yoga Flame, Yoga Teleport",
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
         Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);"
     };
     return dhalsim;
@@ -108,7 +108,7 @@ function DhalsimSFZ3() {
         Chi: 10,
         ForcaVontade: 9,
         Saude: 18,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telephaty, Yoga Flame, Yoga Teleport",
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
         Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);"
     };
     return dhalsim;
@@ -166,7 +166,7 @@ function DhalsimSF5() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telephaty, Yoga Flame, Yoga Teleport",
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
         Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);"
     };
     return dhalsim;
@@ -224,7 +224,7 @@ function DhalsimSF6() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telephaty, Yoga Flame, Yoga Teleport",
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
         Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);"
     };
     return dhalsim;
