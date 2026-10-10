@@ -63,11 +63,12 @@ function HugoSF4() {
     };
     return hugo;
 }
-
-function HugoFF3() {
+function HugoFF() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Arena", 2);
-    antecedentes[1] = newCaracteristica("Contatos", 3);
+    antecedentes[0] = newCaracteristica("Arena", 1);
+    antecedentes[1] = newCaracteristica("Contatos", 2);
+    antecedentes[2] = newCaracteristica("Recursos", 1);
+    antecedentes[3] = newCaracteristica("Apoio", 1);
 
     const hugo =
     {
@@ -76,13 +77,13 @@ function HugoFF3() {
         Escola: "Ruas de Metro City",
         Conceito: "Wrestler",
         Assinatura: "Roupas Coloridas",
-        Cronica: "Final Fight 3",
-        Time: "Mad Gear",
+        Cronica: "Final Fight",
+        Time: "Nenhum",
         Equipe: "Mad Gear",
         Jogador: "NPC",
-        Forca: 7,
+        Forca: 6,
         Destreza: 2,
-        Vigor: 7,
+        Vigor: 6,
         Carisma: 2,
         Manipulacao: 3,
         Aparencia: 1,
@@ -91,9 +92,9 @@ function HugoFF3() {
         Raciocinio: 3,
         Prontidao: 1,
         Interrogacao: 1,
-        Intimidacao: 5,
+        Intimidacao: 6,
         Perspicacia: 0,
-        Manha: 5,
+        Manha: 4,
         Labia: 1,
         LutaCega: 0,
         Conducao: 1,
@@ -101,7 +102,7 @@ function HugoFF3() {
         Seguranca: 2,
         Furtividade: 0,
         Sobrevivencia: 1,
-        Arena: 3,
+        Arena: 2,
         Computador: 0,
         Investigacao: 2,
         Medicina: 0,
@@ -117,149 +118,149 @@ function HugoFF3() {
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Suplex, Air Suplex, Back Breaker, Siberian Bear Crusher, Haymaker, Ear Pop, Pile Driver, Spinning Pile Driver, Bear Hug, Flying Tackle, Air Smash, Face Slam, Hyper Tackle",
         Combos: "Throw para Air Throw, Throw para Air Suplex, Air Suplex para Back Breaker, Jab para Haymaker (Dizzy), Flying Tackle para Face Slam (Dizzy), Bloqueio para Spinning Pile Driver",
         Posto: 7,
-        Gloria: 5,
-        Honra: 4,
+        Gloria: 4,
+        Honra: 3,
         Divisao: "Tradicional",
         Chi: 2,
-        ForcaVontade: 9,
+        ForcaVontade: 8,
         Saude: 18
     };
     return hugo;
 }
 
-function HugoFF2() {
+function Andore() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Arena", 2);
-    antecedentes[1] = newCaracteristica("Contatos", 3);
+    antecedentes[0] = newCaracteristica("Contatos", 2);
 
     const hugo =
     {
-        Nome: "Hugo Andore",
+        Nome: "Andore",
         Estilo: "Luta-Livre",
         Escola: "Ruas de Metro City",
-        Conceito: "Wrestler",
-        Assinatura: "Roupas Coloridas",
-        Cronica: "Final Fight 2",
+        Conceito: "Valentão",
+        Assinatura: "É gigante!",
+        Cronica: "Final Fight",
         Time: "Mad Gear",
         Equipe: "Mad Gear",
         Jogador: "NPC",
-        Forca: 7,
+        Forca: 6,
         Destreza: 2,
-        Vigor: 7,
+        Vigor: 6,
         Carisma: 2,
-        Manipulacao: 3,
-        Aparencia: 1,
-        Percepcao: 2,
+        Manipulacao: 2,
+        Aparencia: 2,
+        Percepcao: 1,
         Inteligencia: 1,
-        Raciocinio: 3,
-        Prontidao: 1,
-        Interrogacao: 1,
-        Intimidacao: 5,
+        Raciocinio: 1,
+        Prontidao: 0,
+        Interrogacao: 0,
+        Intimidacao: 3,
         Perspicacia: 0,
-        Manha: 5,
-        Labia: 1,
+        Manha: 1,
+        Labia: 0,
         LutaCega: 0,
-        Conducao: 1,
-        Lideranca: 2,
-        Seguranca: 2,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 0,
         Furtividade: 0,
-        Sobrevivencia: 1,
-        Arena: 3,
+        Sobrevivencia: 0,
+        Arena: 0,
         Computador: 0,
-        Investigacao: 2,
+        Investigacao: 0,
         Medicina: 0,
         Misterios: 0,
-        Estilos: 1,
+        Estilos: 0,
         Antecedentes: antecedentes,
-        Soco: 3,
-        Chute: 3,
-        Bloqueio: 2,
-        Apresamento: 5,
+        Soco: 2,
+        Chute: 2,
+        Bloqueio: 0,
+        Apresamento: 4,
         Esportes: 2,
         Foco: 0,
-        ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Suplex, Back Breaker, Siberian Bear Crusher, Haymaker, Ear Pop, Pile Driver, Bear Hug, Flying Tackle, Air Smash, Face Slam",
-        Combos: "Throw para Air Throw, Jab para Haymaker (Dizzy), Flying Tackle para Face Slam (Dizzy)",
-        Posto: 5,
-        Gloria: 4,
-        Honra: 3,
+        ManobrasEspeciais: "Pile Driver, Bear Hug",
+        Combos: "",
+        Posto: 1,
+        Gloria: 1,
+        Honra: 0,
         Divisao: "Tradicional",
         Chi: 1,
-        ForcaVontade: 8,
-        Saude: 16
+        ForcaVontade: 4,
+        Saude: 15
     };
     return hugo;
 }
 
-function HugoFF1() {
+function AndoreJr() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Arena", 2);
-    antecedentes[1] = newCaracteristica("Contatos", 3);
+    antecedentes[0] = newCaracteristica("Aliados", 3);
+    antecedentes[1] = newCaracteristica("Arena", 3);
+    antecedentes[2] = newCaracteristica("Staff", 2);
 
     const hugo =
     {
-        Nome: "Hugo Andore",
+        Nome: "Andore Jr.",
         Estilo: "Luta-Livre",
-        Escola: "Ruas de Metro City",
-        Conceito: "Wrestler",
-        Assinatura: "Roupas Coloridas",
-        Cronica: "Final Fight 1",
-        Time: "Mad Gear",
-        Equipe: "Mad Gear",
+        Escola: "Família Andore",
+        Conceito: "Brutamontes",
+        Assinatura: "Gargalhada",
+        Cronica: "Final Fight 3",
+        Time: "Skull Cross",
+        Equipe: "Skull Cross",
         Jogador: "NPC",
-        Forca: 7,
-        Destreza: 2,
-        Vigor: 7,
-        Carisma: 2,
-        Manipulacao: 3,
-        Aparencia: 1,
+        Forca: 5,
+        Destreza: 4,
+        Vigor: 5,
+        Carisma: 4,
+        Manipulacao: 1,
+        Aparencia: 4,
         Percepcao: 2,
         Inteligencia: 1,
-        Raciocinio: 3,
-        Prontidao: 1,
-        Interrogacao: 1,
-        Intimidacao: 4,
-        Perspicacia: 0,
-        Manha: 4,
-        Labia: 1,
+        Raciocinio: 4,
+        Prontidao: 3,
+        Interrogacao: 0,
+        Intimidacao: 5,
+        Perspicacia: 1,
+        Manha: 3,
+        Labia: 3,
         LutaCega: 0,
-        Conducao: 1,
-        Lideranca: 2,
+        Conducao: 3,
+        Lideranca: 3,
         Seguranca: 2,
-        Furtividade: 0,
-        Sobrevivencia: 1,
+        Furtividade: 2,
+        Sobrevivencia: 2,
         Arena: 3,
         Computador: 0,
-        Investigacao: 2,
+        Investigacao: 0,
         Medicina: 0,
         Misterios: 0,
-        Estilos: 1,
+        Estilos: 2,
         Antecedentes: antecedentes,
-        Soco: 2,
-        Chute: 2,
-        Bloqueio: 1,
-        Apresamento: 4,
-        Esportes: 1,
+        Soco: 3,
+        Chute: 0,
+        Bloqueio: 5,
+        Apresamento: 5,
+        Esportes: 3,
         Foco: 0,
-        ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Suplex, Back Breaker, Siberian Bear Crusher, Haymaker, Ear Pop, Pile Driver, Bear Hug, Air Smash, Face Slam",
-        Combos: "Throw para Air Throw, Jab para Haymaker (Dizzy)",
-        Posto: 3,
+        ManobrasEspeciais: "Jump, Air Smash, Suplex, Ear Pop, Spinning Back Fist, Elbow Smash, Lunging Punch, Head Butt, Pile Driver, Grappling Defense",
+        Combos: "Bloqueio para Suplex; Bloqueio para Lunging Punch; Bloqueio para Pile Driver; Bloqueio para Pile Driver para Air Smash (Dizzy)",
+        Posto: 5,
         Gloria: 3,
         Honra: 2,
         Divisao: "Tradicional",
         Chi: 1,
-        ForcaVontade: 7,
-        Saude: 14
+        ForcaVontade: 6,
+        Saude: 15
     };
     return hugo;
 }
 
 let npc;
-if (getParameterByName('age') === 'ff1')
-    npc = HugoFF1();
-else if (getParameterByName('age') === 'ff2')
-    npc = HugoFF2();
-else if (getParameterByName('age') === 'ff3')
-    npc = HugoFF3();
+if (getParameterByName('age') === 'andore')
+    npc = Andore();
+else if (getParameterByName('age') === 'andore-jr')
+    npc = AndoreJr();
+else if (getParameterByName('age') === 'ff')
+    npc = HugoFF();
 else
     npc = HugoSF4();
 

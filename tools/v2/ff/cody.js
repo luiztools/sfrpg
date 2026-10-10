@@ -13,7 +13,7 @@ function CodySF4() {
     const armas = [];
     armas[0] = "Faca";
     armas[1] = "Faca Arremessada";
-    armas[2] = "Bastão";
+    armas[2] = "Bastão Curto";
 
     const cody =
     {
@@ -88,7 +88,7 @@ function CodyZ3() {
     const armas = [];
     armas[0] = "Faca";
     armas[1] = "Faca Arremessada";
-    armas[2] = "Bastão";
+    armas[2] = "Bastão Curto";
 
     const cody =
     {
@@ -165,7 +165,7 @@ function CodySF5() {
     const armas = [];
     armas[0] = "Faca";
     armas[1] = "Faca Arremessada";
-    armas[2] = "Bastão";
+    armas[2] = "Bastão Curto";
 
     const cody =
     {

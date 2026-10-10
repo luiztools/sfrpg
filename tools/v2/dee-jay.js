@@ -138,6 +138,7 @@ function DeeJaySF6() {
     antecedentes[1] = newCaracteristica("Arena", 3);
     antecedentes[2] = newCaracteristica("Recursos", 4);
     antecedentes[3] = newCaracteristica("Fama", 3);
+    antecedentes[4] = newCaracteristica("Empresário", 3);
     
     const pericias = [];
     pericias[0] = newCaracteristica("Música", 6);

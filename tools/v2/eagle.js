@@ -7,7 +7,7 @@ function EagleZ3() {
     antecedentes[4] = newCaracteristica("Recursos", 3);
 
     const tecnicas = [newCaracteristica("Bastão", 5)];
-    const armas = ["Bastão"];
+    const armas = ["Tonfa de Ferro"];
 
     const npc =
     {
@@ -55,8 +55,8 @@ function EagleZ3() {
         NovasTecnicas: tecnicas,
         Antecedentes: antecedentes,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Buffalo Punch, Triple Strike, Weapon Sweep",
-        Combos: "Jump + Bastão Fierce para Bastão Strong (Dizzy), Bastão Jab para Bastão Jab para Bastão Berserk (Dizzy), Bastão Strong para Bastão Strong para Bastão Berserk (Dizzy), Bastão Fierce para Bastão Fierce para Bastão Berserk (Dizzy), Aparar para Triple Strike",
+        ManobrasEspeciais: "Jump, Buffalo Strike, Triple Blow, Weapon Sweep",
+        Combos: "Jump + Bastão Fierce para Bastão Strong (Dizzy), Bastão Jab para Bastão Jab para Bastão Berserk (Dizzy), Bastão Strong para Bastão Strong para Bastão Berserk (Dizzy), Bastão Fierce para Bastão Fierce para Bastão Berserk (Dizzy), Aparar para Triple Blow",
         Chi: 2,
         ForcaVontade: 9,
         Saude: 20,

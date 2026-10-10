@@ -22,7 +22,7 @@ function Stryker() {
     armas[0] = "Pistola Pesada";
     armas[1] = "Pistola de Choque";
     armas[2] = "Granada";
-    armas[3] = "Cacetete";
+    armas[3] = "Cassetete";
 
     const personagem = {
         Nome: "Kurtis Stryker",
