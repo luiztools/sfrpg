@@ -6,17 +6,16 @@ function HakanSF4() {
     antecedentes[3] = newCaracteristica("Recursos", 3);
     antecedentes[4] = newCaracteristica("Staff", 5);
 
-    var hakan =
-    {
+    var hakan = {
         Nome: "Hakan",
         Estilo: "Yagli Gures",
         Escola: "Desconhecida",
-        Conceito: "Wrestler",
-        Assinatura: "Cabelos Azuis",
-        Cronica: "Street Fighter 4",
-        Time: "Nenhum",
-        Equipe: "Hakan's Oil",
         Jogador: "NPC",
+        Assinatura: "Cabelos Azuis",
+        Conceito: "Wrestler",
+        Cronica: "Street Fighter 4",
+        Equipe: "Hakan's Oil",
+        Time: "Nenhum",
         Forca: 6,
         Destreza: 4,
         Vigor: 6,
@@ -47,8 +46,8 @@ function HakanSF4() {
         Antecedentes: antecedentes,
         Soco: 6,
         Chute: 5,
-        Apresamento: 6,
         Bloqueio: 5,
+        Apresamento: 6,
         Esportes: 4,
         Foco: 1,
         ManobrasEspeciais: "Jump, Air Smash, Throw, Air Throw, Foot Sweep, Slide Kick, Flying Tackle, Bear Hug, Grappling Defense",
@@ -58,8 +57,8 @@ function HakanSF4() {
         Chi: 2,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 9,
-        Divisao: "Tradicional"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return calcPC(hakan);
 }

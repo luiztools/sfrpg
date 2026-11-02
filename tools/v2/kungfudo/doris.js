@@ -2,14 +2,13 @@ function DorisKungFuDoFighting() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Sensei", 5);
 
-    const doris =
-    {
+    const doris = {
         Nome: "Doris",
         Estilo: "Soul Power",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Beijo no ar",
         Jogador: "NPC",
+        Assinatura: "Beijo no ar",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 1,
         Destreza: 4,
@@ -45,15 +44,15 @@ function DorisKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 0,
         Foco: 5,
+        ManobrasEspeciais: "Jump, Fireball, Improved Fireball",
+        Combos: "",
         Gloria: 2,
         Honra: 1,
         Chi: 10,
         ForcaVontade: 4,
         Saude: 10,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Jump, Fireball, Improved Fireball",
-        Combos: "",
+        Posto: 1
     };
     return doris;
 }

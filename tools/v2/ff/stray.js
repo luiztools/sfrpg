@@ -7,17 +7,16 @@ function Stray() {
 
     const tecnicas = [];
 
-    const npc =
-    {
+    const npc = {
         Nome: "Stray",
         Estilo: "Boxe",
-        Conceito: "Assassino Mercenário",
         Escola: "Professor Particular",
-        Time: "Skull Cross",
-        Equipe: "Skull Cross",
-        Assinatura: "Spikes",
         Jogador: "NPC",
+        Assinatura: "Spikes",
+        Conceito: "Assassino Mercenário",
         Cronica: "Final Fight 3",
+        Equipe: "Skull Cross",
+        Time: "Skull Cross",
         Forca: 5,
         Destreza: 6,
         Vigor: 4,
@@ -31,11 +30,11 @@ function Stray() {
         Interrogacao: 0,
         Intimidacao: 5,
         Perspicacia: 1,
-        Labia: 3,
         Manha: 5,
+        Labia: 3,
         LutaCega: 0,
-        Lideranca: 3,
         Conducao: 3,
+        Lideranca: 3,
         Seguranca: 2,
         Furtividade: 2,
         Sobrevivencia: 0,
@@ -46,22 +45,22 @@ function Stray() {
         Misterios: 0,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 0,
         Bloqueio: 5,
         Apresamento: 5,
         Esportes: 5,
         Foco: 0,
-        Divisao: "Estilo Livre",
-        Posto: 8,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Jump, Fist Sweep, Power Uppercut, Dashing Punch, Dashing Uppercut, Lunging Punch, Jumping Shoulder Butt, Haymaker, Widowmaker, Suplex",
+        Combos: "Bloqueio para Dashing Punch para Fist Sweep (Dizzy); Bloqueio para Widowmaker para Haymaker (dizzy); Bloqueio para Lunging Punch para Fist Sweep (Dizzy); Bloqueio para Suplex;",
         Gloria: 4,
         Honra: 3,
         Chi: 1,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Fist Sweep, Power Uppercut, Dashing Punch, Dashing Uppercut, Lunging Punch, Jumping Shoulder Butt, Haymaker, Widowmaker, Suplex",
-        Combos: "Bloqueio para Dashing Punch para Fist Sweep (Dizzy); Bloqueio para Widowmaker para Haymaker (dizzy); Bloqueio para Lunging Punch para Fist Sweep (Dizzy); Bloqueio para Suplex;",
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return npc;
 }

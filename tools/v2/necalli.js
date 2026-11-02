@@ -6,13 +6,12 @@ function Necalli() {
     var tecnicas = [];
     tecnicas[0] = newCaracteristica("Garra", 6);
 
-    var necalli =
-    {
+    var necalli = {
         Nome: "Necalli",
         Estilo: "Luta-Livre Nativo Americana",
-        Conceito: "Devorador de Almas",
-        Assinatura: "Devorar-ar",
         Jogador: "NPC",
+        Assinatura: "Devorar-ar",
+        Conceito: "Devorador de Almas",
         Cronica: "Street Fighter 5",
         Forca: 6,
         Destreza: 4,
@@ -39,22 +38,22 @@ function Necalli() {
         Misterios: 5,
         Estilos: 4,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 4,
         Chute: 4,
         Bloqueio: 5,
         Apresamento: 6,
         Esportes: 5,
         Foco: 3,
-        Divisao: "Estilo Livre",
-        Posto: 9,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Power Uppercut, Dragon Punch, Jump, Foot Sweep, Throw, Power Up, Shockwave, Head Butt, Dive Kick, Flying Head Butt, Storm Hammer, Hyper Fist, Butsumetsu Buster, Daikyou Burning, Heart Punch, Shockwave",
+        Combos: "Forward para Roundhouse para Shockwave (Dizzy); Garra Jab para Garra Strong para Garra Fierce (Dizzy);Shockwave para Shockwave; Daikyou Burning para Hyper Fist",
         Gloria: 3,
         Honra: 0,
         Chi: 3,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Power Uppercut, Dragon Punch, Jump, Foot Sweep, Throw, Power Up, Shockwave, Head Butt, Dive Kick, Flying Head Butt, Storm Hammer, Hyper Fist, Butsumetsu Buster, Daikyou Burning, Heart Punch, Stomp",
-        Combos: "Forward para Roundhouse para Shockwave (Dizzy); Garra Jab para Garra Strong para Garra Fierce (Dizzy);Stomp para Stomp; Daikyou Burning para Hyper Fist"
+        Divisao: "Estilo Livre",
+        Posto: 9
     };
     return calcPC(necalli);
 }

@@ -4,17 +4,16 @@ function JuriSF5() {
     antecedentes[1] = newCaracteristica("Cibernético", 1);
     antecedentes[2] = newCaracteristica("Fama", 1);
 
-    const juri =
-    {
+    const juri = {
         Nome: "Juri Han",
         Estilo: "Tae Kwon Dô",
         Escola: "Nenhuma",
-        Conceito: "Agente da S.I.N",
-        Assinatura: "Lambe os Lábios",
-        Cronica: "Street Fighter 5",
-        Time: "SIN",
-        Equipe: "SIN",
         Jogador: "NPC",
+        Assinatura: "Lambe os Lábios",
+        Conceito: "Agente da S.I.N",
+        Cronica: "Street Fighter 5",
+        Equipe: "SIN",
+        Time: "SIN",
         Forca: 5,
         Destreza: 6,
         Vigor: 5,
@@ -45,8 +44,8 @@ function JuriSF5() {
         Antecedentes: antecedentes,
         Soco: 3,
         Chute: 7,
-        Apresamento: 3,
         Bloqueio: 5,
+        Apresamento: 3,
         Esportes: 5,
         Foco: 4,
         ManobrasEspeciais: "Accuracy, Double Hit Kick, Fireball, Foot Sweep, Handstand Kick, Jump, Kick Defense, Kippup, Knee Basher, Throw, Air Smash, Wheel Kick, Hurricane Kick, Gekiro",
@@ -56,8 +55,8 @@ function JuriSF5() {
         Chi: 5,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 9,
-        Divisao: "Estilo Livre"
+        Divisao: "Estilo Livre",
+        Posto: 9
     };
     return juri;
 }
@@ -67,17 +66,16 @@ function JuriSF4() {
     antecedentes[0] = newCaracteristica("Apoio", 5);
     antecedentes[1] = newCaracteristica("Cibernético", 1);
 
-    const juri =
-    {
+    const juri = {
         Nome: "Juri Han",
         Estilo: "Tae Kwon Dô",
         Escola: "Nenhuma",
-        Conceito: "Agente da S.I.N",
-        Assinatura: "Lambe os Lábios",
-        Cronica: "Street Fighter 4",
-        Time: "SIN",
-        Equipe: "SIN",
         Jogador: "NPC",
+        Assinatura: "Lambe os Lábios",
+        Conceito: "Agente da S.I.N",
+        Cronica: "Street Fighter 4",
+        Equipe: "SIN",
+        Time: "SIN",
         Forca: 5,
         Destreza: 6,
         Vigor: 4,
@@ -108,8 +106,8 @@ function JuriSF4() {
         Antecedentes: antecedentes,
         Soco: 3,
         Chute: 7,
-        Apresamento: 3,
         Bloqueio: 5,
+        Apresamento: 3,
         Esportes: 5,
         Foco: 4,
         ManobrasEspeciais: "Accuracy, Double Hit Kick, Fireball, Foot Sweep, Handstand Kick, Jump, Kick Defense, Kippup, Knee Basher, Throw, Air Smash, Wheel Kick, Hurricane Kick, Gekiro",
@@ -119,8 +117,8 @@ function JuriSF4() {
         Chi: 5,
         ForcaVontade: 9,
         Saude: 20,
-        Posto: 8,
-        Divisao: "Estilo Livre"
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return juri;
 }

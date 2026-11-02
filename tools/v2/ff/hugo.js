@@ -6,17 +6,16 @@ function HugoSF4() {
     antecedentes[3] = newCaracteristica("Fama", 1);
     antecedentes[4] = newCaracteristica("Recursos", 1);
 
-    const hugo =
-    {
+    const hugo = {
         Nome: "Hugo Andore",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Ruas de Metro City",
-        Conceito: "Wrestler",
-        Assinatura: "Roupas Coloridas",
-        Cronica: "Street Fighter 4",
-        Time: "Nenhum",
-        Equipe: "Huge Wrestling Association",
         Jogador: "NPC",
+        Assinatura: "Roupas Coloridas",
+        Conceito: "Wrestler",
+        Cronica: "Street Fighter 4",
+        Equipe: "Huge Wrestling Association",
+        Time: "Nenhum",
         Forca: 7,
         Destreza: 2,
         Vigor: 7,
@@ -53,13 +52,13 @@ function HugoSF4() {
         Foco: 2,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Suplex, Air Suplex, Back Breaker, Siberian Bear Crusher, Haymaker, Ear Pop, Pile Driver, Spinning Pile Driver, Bear Hug, Flying Tackle, Air Smash, Face Slam, Hyper Tackle",
         Combos: "Throw para Air Throw, Throw para Air Suplex, Air Suplex para Back Breaker, Jab para Haymaker (Dizzy), Flying Tackle para Face Slam (Dizzy), Bloqueio para Spinning Pile Driver",
-        Posto: 9,
         Gloria: 6,
         Honra: 5,
-        Divisao: "Tradicional",
         Chi: 3,
         ForcaVontade: 9,
-        Saude: 20
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return hugo;
 }
@@ -70,17 +69,16 @@ function HugoFF() {
     antecedentes[2] = newCaracteristica("Recursos", 1);
     antecedentes[3] = newCaracteristica("Apoio", 1);
 
-    const hugo =
-    {
+    const hugo = {
         Nome: "Hugo Andore",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Ruas de Metro City",
-        Conceito: "Wrestler",
-        Assinatura: "Roupas Coloridas",
-        Cronica: "Final Fight",
-        Time: "Nenhum",
-        Equipe: "Mad Gear",
         Jogador: "NPC",
+        Assinatura: "Roupas Coloridas",
+        Conceito: "Wrestler",
+        Cronica: "Final Fight",
+        Equipe: "Mad Gear",
+        Time: "Nenhum",
         Forca: 6,
         Destreza: 2,
         Vigor: 6,
@@ -117,13 +115,13 @@ function HugoFF() {
         Foco: 1,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Suplex, Air Suplex, Back Breaker, Siberian Bear Crusher, Haymaker, Ear Pop, Pile Driver, Spinning Pile Driver, Bear Hug, Flying Tackle, Air Smash, Face Slam, Hyper Tackle",
         Combos: "Throw para Air Throw, Throw para Air Suplex, Air Suplex para Back Breaker, Jab para Haymaker (Dizzy), Flying Tackle para Face Slam (Dizzy), Bloqueio para Spinning Pile Driver",
-        Posto: 7,
         Gloria: 4,
         Honra: 3,
-        Divisao: "Tradicional",
         Chi: 2,
         ForcaVontade: 8,
-        Saude: 18
+        Saude: 18,
+        Divisao: "Tradicional",
+        Posto: 7
     };
     return hugo;
 }
@@ -132,17 +130,16 @@ function Andore() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Contatos", 2);
 
-    const hugo =
-    {
+    const hugo = {
         Nome: "Andore",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Ruas de Metro City",
-        Conceito: "Valentão",
-        Assinatura: "É gigante!",
-        Cronica: "Final Fight",
-        Time: "Mad Gear",
-        Equipe: "Mad Gear",
         Jogador: "NPC",
+        Assinatura: "É gigante!",
+        Conceito: "Valentão",
+        Cronica: "Final Fight",
+        Equipe: "Mad Gear",
+        Time: "Mad Gear",
         Forca: 6,
         Destreza: 2,
         Vigor: 6,
@@ -179,13 +176,13 @@ function Andore() {
         Foco: 0,
         ManobrasEspeciais: "Pile Driver, Bear Hug",
         Combos: "",
-        Posto: 1,
         Gloria: 1,
         Honra: 0,
-        Divisao: "Tradicional",
         Chi: 1,
         ForcaVontade: 4,
-        Saude: 15
+        Saude: 15,
+        Divisao: "Tradicional",
+        Posto: 1
     };
     return hugo;
 }
@@ -196,17 +193,16 @@ function AndoreJr() {
     antecedentes[1] = newCaracteristica("Arena", 3);
     antecedentes[2] = newCaracteristica("Staff", 2);
 
-    const hugo =
-    {
+    const hugo = {
         Nome: "Andore Jr.",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Família Andore",
-        Conceito: "Brutamontes",
-        Assinatura: "Gargalhada",
-        Cronica: "Final Fight 3",
-        Time: "Skull Cross",
-        Equipe: "Skull Cross",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Brutamontes",
+        Cronica: "Final Fight 3",
+        Equipe: "Skull Cross",
+        Time: "Skull Cross",
         Forca: 5,
         Destreza: 4,
         Vigor: 5,
@@ -243,13 +239,13 @@ function AndoreJr() {
         Foco: 0,
         ManobrasEspeciais: "Jump, Air Smash, Suplex, Ear Pop, Spinning Back Fist, Elbow Smash, Lunging Punch, Head Butt, Pile Driver, Grappling Defense",
         Combos: "Bloqueio para Suplex; Bloqueio para Lunging Punch; Bloqueio para Pile Driver; Bloqueio para Pile Driver para Air Smash (Dizzy)",
-        Posto: 5,
         Gloria: 3,
         Honra: 2,
-        Divisao: "Tradicional",
         Chi: 1,
         ForcaVontade: 6,
-        Saude: 15
+        Saude: 15,
+        Divisao: "Tradicional",
+        Posto: 5
     };
     return hugo;
 }

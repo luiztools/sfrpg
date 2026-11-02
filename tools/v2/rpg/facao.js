@@ -13,16 +13,15 @@ function Facao() {
     const armas = [];
     armas[0] = "Faca";
 
-    const facao =
-    {
+    const facao = {
         Nome: "Nei 'Facão' Cruz",
         Estilo: "Maculelê",
-        Time: "Terceiro Comando",
-        Equipe: "Terceiro Comando",
-        Conceito: "Cobrador de Dívidas",
-        Assinatura: "Risca o chão em cruz",
         Jogador: "NPC",
+        Assinatura: "Risca o chão em cruz",
+        Conceito: "Cobrador de Dívidas",
         Cronica: "Nenhuma",
+        Equipe: "Terceiro Comando",
+        Time: "Terceiro Comando",
         Forca: 5,
         Destreza: 3,
         Vigor: 6,
@@ -48,7 +47,6 @@ function Facao() {
         Computador: 0,
         Investigacao: 0,
         Medicina: 1,
-        NovasTecnicas: tecnicas,
         Misterios: 0,
         Estilos: 3,
         Antecedentes: antecedentes,
@@ -58,16 +56,17 @@ function Facao() {
         Apresamento: 2,
         Esportes: 4,
         Foco: 1,
+        NovasTecnicas: tecnicas,
         Armas: armas,
+        ManobrasEspeciais: "Jump, Rolling Attack, Double Hit Knee, Forward Flip Knee, Power Uppercut, Buffalo Punch, Musical Accompaniment",
+        Combos: "Bloqueio para Faca Strong; Bloqueio para Faca Fierce para Faca Jab (Dizzy)",
         Gloria: 7,
         Honra: 1,
         Chi: 2,
         ForcaVontade: 8,
         Saude: 18,
         Divisao: "Duelistas",
-        Posto: 6,
-        ManobrasEspeciais: "Jump, Rolling Attack, Double Hit Knee, Forward Flip Knee, Power Uppercut, Buffalo Punch, Musical Accompaniment",
-        Combos: "Bloqueio para Faca Strong; Bloqueio para Faca Fierce para Faca Jab (Dizzy)"
+        Posto: 6
     };
     return facao;
 }

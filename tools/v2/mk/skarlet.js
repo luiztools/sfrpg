@@ -14,17 +14,16 @@ function Skarlet() {
 
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Skarlet",
         Estilo: "Ninjitsu",
         Escola: "Shao Kahn",
+        Jogador: "NPC",
+        Assinatura: "Controla o sangue",
+        Conceito: "Assassina",
+        Cronica: "Mortal Kombat X",
         Equipe: "Outworld",
         Time: "Outworld",
-        Conceito: "Assassina",
-        Assinatura: "Controla o sangue",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -35,11 +34,12 @@ function Skarlet() {
         Inteligencia: 3,
         Raciocinio: 5,
         Prontidao: 5,
-        Perspicacia: 5,
-        Manha: 2,
         Interrogacao: 4,
         Intimidacao: 0,
+        Perspicacia: 5,
+        Manha: 2,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 4,
         Conducao: 0,
         Lideranca: 0,
@@ -52,7 +52,6 @@ function Skarlet() {
         Medicina: 3,
         Misterios: 4,
         Estilos: 2,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
@@ -63,15 +62,15 @@ function Skarlet() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Spinning Back Fist, Monkey Grab Punch, Drunken Monkey Roll, Handstand Kick, Drench, Drain, Shrouded Moon, Speed of the Mongoose, Slide Kick",
+        Combos: "Jab - Jab - Strong; Jab - Jab - Roundhouse (dizzy); Kunai Jab - Kunai Strong - Forward (dizzy); Kunai Fierce - Roundhouse",
         Gloria: 6,
         Honra: 2,
         Chi: 6,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Spinning Back Fist, Monkey Grab Punch, Drunken Monkey Roll, Handstand Kick, Drench, Drain, Shrouded Moon, Speed of the Mongoose, Slide Kick",
-        Combos: "Jab - Jab - Strong; Jab - Jab - Roundhouse (dizzy); Kunai Jab - Kunai Strong - Forward (dizzy); Kunai Fierce - Roundhouse"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }

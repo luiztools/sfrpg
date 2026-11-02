@@ -4,17 +4,16 @@ function Ermac() {
     const tecnicas = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Ermac",
         Estilo: "Jeet Kune Dô",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Levanta o Braço",
+        Conceito: "Reencarnação de Guerreiroa",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Defensores da Terra",
         Time: "Defensores da Terra",
-        Conceito: "Reencarnação de Guerreiroa",
-        Assinatura: "Levanta o Braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -51,15 +50,15 @@ function Ermac() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Estilo Livre",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Chi Kun Healing, Chi Push, Fireball, Yoga Teleport, Elbow Smash",
+        Combos: "Jab – Elbow Smash – Chi Push (dizzy); Forward – Forward – Roundhouse (dizzy); Forward – Forward – Jab (dizzy); Jab – Jab – Power Uppercut (dizzy)",
         Gloria: 0,
         Honra: 5,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Chi Kun Healing, Chi Push, Fireball, Yoga Teleport, Elbow Smash",
-        Combos: "Jab – Elbow Smash – Chi Push (dizzy); Forward – Forward – Roundhouse (dizzy); Forward – Forward – Jab (dizzy); Jab – Jab – Power Uppercut (dizzy)"
+        Divisao: "Estilo Livre",
+        Posto: 7
     };
     return personagem;
 }
@@ -70,17 +69,16 @@ function ErmacMKA() {
     const tecnicas = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Ermac",
         Estilo: "Jeet Kune Dô",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Levanta o Braço",
+        Conceito: "Reencarnação de Guerreiroa",
+        Cronica: "MK Armageddon",
         Equipe: "Defensores da Terra",
         Time: "Defensores da Terra",
-        Conceito: "Reencarnação de Guerreiroa",
-        Assinatura: "Levanta o Braço",
-        Jogador: "NPC",
-        Cronica: "MK Armageddon",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -117,21 +115,21 @@ function ErmacMKA() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Estilo Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Chi Kun Healing, Chi Push, Fireball, Yoga Teleport, Elbow Smash, Choke Throw, Air Throw",
+        Combos: "Jab – Elbow Smash – Chi Push (dizzy); Forward – Forward – Roundhouse (dizzy); Forward – Forward – Jab (dizzy); Jab – Jab – Power Uppercut (dizzy); Chi Push para Chi Push (dizzy)",
         Gloria: 0,
         Honra: 5,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Chi Kun Healing, Chi Push, Fireball, Yoga Teleport, Elbow Smash, Choke Throw, Air Throw",
-        Combos: "Jab – Elbow Smash – Chi Push (dizzy); Forward – Forward – Roundhouse (dizzy); Forward – Forward – Jab (dizzy); Jab – Jab – Power Uppercut (dizzy); Chi Push para Chi Push (dizzy)"
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return personagem;
 }
 
 let npc;
-if (getParameterByName('age') === 'mka')
+if (getParameterByName('age') === 'mkx')
     npc = calcPC(ErmacMKA());
 else
     npc = calcPC(Ermac());

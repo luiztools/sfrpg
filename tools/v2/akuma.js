@@ -3,14 +3,13 @@ function AkumaZ3() {
     antecedentes[0] = newCaracteristica("Arena", 3);
     antecedentes[1] = newCaracteristica("Fama", 1);
     antecedentes[2] = newCaracteristica("Satsui no Hadou", 5);
-    const akuma =
-    {
+    const akuma = {
         Nome: "Akuma (Gouki)",
         Estilo: "Karatê Shotokan",
         Escola: "Dojô de Goutetsu",
-        Conceito: "Demônio",
-        Assinatura: "Vira-se de costas",
         Jogador: "NPC",
+        Assinatura: "Vira-se de costas",
+        Conceito: "Demônio",
         Cronica: "Street Fighter Alpha",
         Forca: 6,
         Destreza: 6,
@@ -21,22 +20,6 @@ function AkumaZ3() {
         Percepcao: 6,
         Inteligencia: 5,
         Raciocinio: 6,
-        Soco: 6,
-        Chute: 5,
-        Bloqueio: 5,
-        Apresamento: 4,
-        Esportes: 4,
-        Foco: 6,
-        Antecedentes: antecedentes,
-        Chi: 9,
-        ForcaVontade: 9,
-        Saude: 18,
-        Gloria: 4,
-        Honra: 0,
-        Divisao: "Estilo Livre",
-        Posto: 3,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
-        Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
         Prontidao: 5,
         Interrogacao: 0,
         Intimidacao: 5,
@@ -54,7 +37,23 @@ function AkumaZ3() {
         Investigacao: 2,
         Medicina: 3,
         Misterios: 4,
-        Estilos: 5
+        Estilos: 5,
+        Antecedentes: antecedentes,
+        Soco: 6,
+        Chute: 5,
+        Bloqueio: 5,
+        Apresamento: 4,
+        Esportes: 4,
+        Foco: 6,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
+        Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
+        Gloria: 4,
+        Honra: 0,
+        Chi: 9,
+        ForcaVontade: 9,
+        Saude: 18,
+        Divisao: "Estilo Livre",
+        Posto: 3
     };
     return akuma;
 }
@@ -64,14 +63,13 @@ function AkumaSF2() {
     antecedentes[0] = newCaracteristica("Arena", 3);
     antecedentes[1] = newCaracteristica("Fama", 2);
     antecedentes[2] = newCaracteristica("Satsui no Hadou", 5);
-    const akuma =
-    {
+    const akuma = {
         Nome: "Akuma (Gouki)",
         Estilo: "Karatê Shotokan",
         Escola: "Dojô de Goutetsu",
-        Conceito: "Demônio",
-        Assinatura: "Vira-se de costas",
         Jogador: "NPC",
+        Assinatura: "Vira-se de costas",
+        Conceito: "Demônio",
         Cronica: "Street Fighter 2",
         Forca: 6,
         Destreza: 6,
@@ -82,22 +80,6 @@ function AkumaSF2() {
         Percepcao: 6,
         Inteligencia: 5,
         Raciocinio: 6,
-        Soco: 6,
-        Chute: 6,
-        Bloqueio: 6,
-        Apresamento: 5,
-        Esportes: 4,
-        Foco: 7,
-        Antecedentes: antecedentes,
-        Chi: 10,
-        ForcaVontade: 10,
-        Saude: 20,
-        Gloria: 4,
-        Honra: 0,
-        Divisao: "Estilo Livre",
-        Posto: 4,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
-        Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
         Prontidao: 5,
         Interrogacao: 0,
         Intimidacao: 6,
@@ -115,7 +97,23 @@ function AkumaSF2() {
         Investigacao: 2,
         Medicina: 3,
         Misterios: 5,
-        Estilos: 5
+        Estilos: 5,
+        Antecedentes: antecedentes,
+        Soco: 6,
+        Chute: 6,
+        Bloqueio: 6,
+        Apresamento: 5,
+        Esportes: 4,
+        Foco: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
+        Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
+        Gloria: 4,
+        Honra: 0,
+        Chi: 10,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Estilo Livre",
+        Posto: 4
     };
     return akuma;
 }
@@ -125,14 +123,13 @@ function AkumaSF5() {
     antecedentes[0] = newCaracteristica("Arena", 4);
     antecedentes[1] = newCaracteristica("Fama", 3);
     antecedentes[2] = newCaracteristica("Satsui no Hadou", 5);
-    const akuma =
-    {
+    const akuma = {
         Nome: "Akuma (Gouki)",
         Estilo: "Karatê Shotokan",
         Escola: "Dojô de Goutetsu",
-        Conceito: "Demônio",
-        Assinatura: "Vira-se de costas",
         Jogador: "NPC",
+        Assinatura: "Vira-se de costas",
+        Conceito: "Demônio",
         Cronica: "Street Fighter 5",
         Forca: 6,
         Destreza: 6,
@@ -143,22 +140,6 @@ function AkumaSF5() {
         Percepcao: 6,
         Inteligencia: 5,
         Raciocinio: 6,
-        Soco: 6,
-        Chute: 6,
-        Bloqueio: 6,
-        Apresamento: 5,
-        Esportes: 5,
-        Foco: 7,
-        Antecedentes: antecedentes,
-        Chi: 10,
-        ForcaVontade: 10,
-        Saude: 20,
-        Gloria: 5,
-        Honra: 0,
-        Divisao: "Estilo Livre",
-        Posto: 5,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
-        Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
         Prontidao: 5,
         Interrogacao: 0,
         Intimidacao: 6,
@@ -176,7 +157,23 @@ function AkumaSF5() {
         Investigacao: 2,
         Medicina: 3,
         Misterios: 5,
-        Estilos: 6
+        Estilos: 6,
+        Antecedentes: antecedentes,
+        Soco: 6,
+        Chute: 6,
+        Bloqueio: 6,
+        Apresamento: 5,
+        Esportes: 5,
+        Foco: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
+        Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
+        Gloria: 5,
+        Honra: 0,
+        Chi: 10,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Estilo Livre",
+        Posto: 5
     };
     return akuma;
 }
@@ -186,14 +183,13 @@ function AkumaSF6() {
     antecedentes[0] = newCaracteristica("Arena", 5);
     antecedentes[1] = newCaracteristica("Fama", 4);
     antecedentes[2] = newCaracteristica("Satsui no Hadou", 5);
-    const akuma =
-    {
+    const akuma = {
         Nome: "Akuma (Gouki)",
         Estilo: "Karatê Shotokan",
         Escola: "Dojô de Goutetsu",
-        Conceito: "Demônio",
-        Assinatura: "Vira-se de costas",
         Jogador: "NPC",
+        Assinatura: "Vira-se de costas",
+        Conceito: "Demônio",
         Cronica: "Street Fighter 6",
         Forca: 6,
         Destreza: 6,
@@ -204,22 +200,6 @@ function AkumaSF6() {
         Percepcao: 6,
         Inteligencia: 5,
         Raciocinio: 6,
-        Soco: 7,
-        Chute: 6,
-        Bloqueio: 6,
-        Apresamento: 5,
-        Esportes: 5,
-        Foco: 7,
-        Antecedentes: antecedentes,
-        Chi: 10,
-        ForcaVontade: 10,
-        Saude: 20,
-        Gloria: 6,
-        Honra: 0,
-        Divisao: "Estilo Livre",
-        Posto: 6,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
-        Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
         Prontidao: 5,
         Interrogacao: 1,
         Intimidacao: 6,
@@ -237,7 +217,23 @@ function AkumaSF6() {
         Investigacao: 2,
         Medicina: 3,
         Misterios: 6,
-        Estilos: 6
+        Estilos: 6,
+        Antecedentes: antecedentes,
+        Soco: 7,
+        Chute: 6,
+        Bloqueio: 6,
+        Apresamento: 5,
+        Esportes: 5,
+        Foco: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
+        Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
+        Gloria: 6,
+        Honra: 0,
+        Chi: 10,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Estilo Livre",
+        Posto: 6
     };
     return akuma;
 }

@@ -1,0 +1,72 @@
+﻿function SeireiKaji() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Elemental", 5);
+
+    const personagem = {
+        Nome: "Seirei Kaji (Fogo)",
+        Estilo: "Kickboxe",
+        Escola: "Desconhecida",
+        Jogador: "",
+        Assinatura: "Grita e atira chamas",
+        Conceito: "Elemental do Fogo",
+        Cronica: "",
+        Equipe: "Excalibur Produções",
+        Time: "Chimu Nihon",
+        Forca: 4,
+        Destreza: 3,
+        Vigor: 3,
+        Carisma: 3,
+        Manipulacao: 1,
+        Aparencia: 4,
+        Percepcao: 3,
+        Inteligencia: 1,
+        Raciocinio: 2,
+        Prontidao: 3,
+        Interrogacao: 2,
+        Intimidacao: 3,
+        Perspicacia: 1,
+        Manha: 0,
+        Labia: 0,
+        NovosTalentos: [],
+        LutaCega: 2,
+        Conducao: 3,
+        Lideranca: 2,
+        Seguranca: 0,
+        Furtividade: 0,
+        Sobrevivencia: 0,
+        NovasPericias: [],
+        Arena: 0,
+        Computador: 1,
+        Investigacao: 0,
+        Medicina: 0,
+        Misterios: 0,
+        Estilos: 3,
+        NovosConhecimentos: [],
+        Antecedentes: antecedentes,
+        Soco: 2,
+        Chute: 2,
+        Bloqueio: 0,
+        Apresamento: 0,
+        Esportes: 2,
+        Foco: 3,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Fire Strike, Flying Knee Thrust, Elemental Skin, Jump, Flaming Fist",
+        Combos: "Fierce para Fire Strike para Flying Knee Trust (Dizzy)",
+        Gloria: 2,
+        Honra: 3,
+        Chi: 4,
+        ForcaVontade: 5,
+        Saude: 10,
+        Divisao: "Livre",
+        Posto: 2,
+        Vitorias: 7,
+        Derrotas: 1,
+        Empates: 1,
+        KOs: 6
+    };
+    return personagem;
+}
+
+let npc = SeireiKaji();
+
+npc = calcPC(npc);

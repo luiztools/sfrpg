@@ -4,14 +4,13 @@ function HwaJai() {
     antecedentes[1] = newCaracteristica("Fama", 2);
     antecedentes[2] = newCaracteristica("Apoio", 4);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hwa Jai",
         Estilo: "Thai Kickboxe",
         Escola: "Desconhecida",
-        Conceito: "Lutador vingativo",
-        Assinatura: "Alcoolismo",
         Jogador: "NPC",
+        Assinatura: "Alcoolismo",
+        Conceito: "Lutador vingativo",
         Cronica: "Fatal Fury",
         Equipe: "Howard Connection",
         Time: "Howard Connection",
@@ -49,15 +48,15 @@ function HwaJai() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 4,
-        Divisao: "Tradicional",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Foot Sweep, Elbow Smash, Throw, Flying Knee Thrust, Triple Strike, Regeneration, Maka Wara, Slash Kick, Wheel Kick, Tiger Knee, Dive Kick, Kick Defense",
+        Combos: "Triple Strike – Power Uppercut (dizzy); Tiger Knee – Triple Strike - Wheel Kick;",
         Gloria: 7,
         Honra: 1,
         Chi: 5,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Elbow Smash, Throw, Flying Knee Thrust, Triple Strike, Regeneration, Maka Wara, Slash Kick, Wheel Kick, Tiger Knee, Dive Kick, Kick Defense",
-        Combos: "Triple Strike – Power Uppercut (dizzy); Tiger Knee – Triple Strike - Wheel Kick;"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return personagem;
 }

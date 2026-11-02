@@ -25,6 +25,9 @@
             if (getParameterByName('format') === 'json') {
                 $('#divFicha').html(JSON.stringify(npc));
             }
+            if (getParameterByName('format') === 'cards') {
+                $('#divFicha').html(carregarCartas(npc));
+            }
             else {
                 $('#divFicha2').html(carregarTabela(npc));
                 $('#divFicha').html(AutoGeradorP(npc));

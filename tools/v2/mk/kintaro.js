@@ -9,17 +9,16 @@ function Kintaro() {
     const talentos = [];
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kintaro",
         Estilo: "Boxe",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Levanta o Braço",
+        Conceito: "Guerreiro de Kuatan",
+        Cronica: "Mortal Kombat 2",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Guerreiro de Kuatan",
-        Assinatura: "Levanta o Braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 2",
         Forca: 10,
         Destreza: 4,
         Vigor: 10,
@@ -30,11 +29,12 @@ function Kintaro() {
         Inteligencia: 2,
         Raciocinio: 5,
         Prontidao: 5,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 8,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 3,
         Conducao: 0,
         Lideranca: 2,
@@ -47,7 +47,6 @@ function Kintaro() {
         Medicina: 0,
         Misterios: 5,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 6,
@@ -57,15 +56,15 @@ function Kintaro() {
         Esportes: 6,
         Foco: 6,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Flying Heel Stomp",
+        Combos: "Jab para Brain Cracker (dizzy); Flying Heel Stomp para Power Uppercut; Bloqueio para Sonic Boom; Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy)",
         Gloria: 8,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Flying Heel Stomp",
-        Combos: "Jab para Brain Cracker (dizzy); Flying Heel Stomp para Power Uppercut; Bloqueio para Sonic Boom; Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy)"
+        Divisao: "Livre",
+        Posto: 9
     };
     return personagem;
 }
@@ -78,17 +77,16 @@ function Tigrar() {
     const talentos = [];
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Shokan (Tigrar)",
         Estilo: "Boxe",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Ergue os braços",
+        Conceito: "Shokan Médio",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Shokan Médio",
-        Assinatura: "Ergue os braços",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 7,
         Destreza: 4,
         Vigor: 7,
@@ -99,11 +97,12 @@ function Tigrar() {
         Inteligencia: 1,
         Raciocinio: 1,
         Prontidao: 3,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 5,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 0,
         Conducao: 0,
         Lideranca: 0,
@@ -116,7 +115,6 @@ function Tigrar() {
         Medicina: 0,
         Misterios: 0,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 3,
@@ -127,15 +125,15 @@ function Tigrar() {
         Foco: 0,
         NovasTecnicas: [],
         Armas: armas,
-        Divisao: "Tradicional",
-        Posto: 1,
+        ManobrasEspeciais: "Jump, Air Smash, Power Uppercut",
+        Combos: "Jab para Air Smash (Dizzy)",
         Gloria: 0,
         Honra: 0,
         Chi: 3,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Air Smash, Power Uppercut",
-        Combos: "Jab para Air Smash (Dizzy)"
+        Divisao: "Tradicional",
+        Posto: 1
     };
     return personagem;
 }

@@ -3,14 +3,13 @@ function LauraKungFuDoFighting() {
     antecedentes[0] = newCaracteristica("Fama", 3);
     antecedentes[1] = newCaracteristica("Recursos", 2);
 
-    const laura =
-    {
+    const laura = {
         Nome: "Laura",
         Estilo: "Capoeira",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Salto acrobático",
         Jogador: "NPC",
+        Assinatura: "Salto acrobático",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 2,
         Destreza: 5,
@@ -46,15 +45,15 @@ function LauraKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 3,
         Foco: 3,
+        ManobrasEspeciais: "Double Hit-Kick, Backflip Kick, Cartwheel Kick, Handstand Kick, Jump",
+        Combos: "Cartwheel Kick para Backflip Kick;",
         Gloria: 2,
         Honra: 1,
         Chi: 2,
         ForcaVontade: 8,
         Saude: 20,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Double Hit-Kick, Backflip Kick, Cartwheel Kick, Handstand Kick, Jump",
-        Combos: "Cartwheel Kick para Backflip Kick;",
+        Posto: 1
     };
     return laura;
 }

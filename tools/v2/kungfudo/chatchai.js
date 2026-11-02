@@ -3,14 +3,13 @@ function ChatchaiKungFuDoFighting() {
     antecedentes[0] = newCaracteristica("Sensei", 3);
     antecedentes[1] = newCaracteristica("Apoio", 2);
 
-    const chatchai =
-    {
+    const chatchai = {
         Nome: "Chatchai",
         Estilo: "Muay Thai",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Salto comemorativo",
         Jogador: "NPC",
+        Assinatura: "Salto comemorativo",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 3,
         Destreza: 4,
@@ -46,15 +45,15 @@ function ChatchaiKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 2,
         Foco: 0,
+        ManobrasEspeciais: "Elbow Smash, Jump, Kippup, Tiger Knee",
+        Combos: "Elbow Smash para Tiger Knee;",
         Gloria: 2,
         Honra: 1,
         Chi: 2,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 1,
         Divisao: "Livre",
-        ManobrasEspeciais: "Elbow Smash, Jump, Kippup, Tiger Knee",
-        Combos: "Elbow Smash para Tiger Knee;",
+        Posto: 1
     };
     return chatchai;
 }

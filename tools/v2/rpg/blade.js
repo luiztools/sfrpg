@@ -12,18 +12,15 @@
     const armas = [];
     armas[0] = "Faca";
 
-    const blade =
-    {
+    const blade = {
         Nome: "Blade",
         Estilo: "Ninjitsu Espanhol",
         Escola: "Escola de Vega",
+        Jogador: "NPC",
+        Assinatura: "Reverencia o oponente e sorri",
+        Conceito: "Matador",
         Equipe: "Fernando Degaul",
         Time: "Os Pressagios",
-        Conceito: "Matador",
-        Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
-        Assinatura: "Reverencia o oponente e sorri",
         Forca: 2,
         Destreza: 5,
         Vigor: 3,
@@ -53,8 +50,8 @@
         Bloqueio: 3,
         Apresamento: 1,
         Esportes: 4,
-        Armas: armas,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Slide Kick, Jump, Backflip",
         Combos: "",
         Gloria: 3,

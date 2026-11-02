@@ -8,17 +8,16 @@ function NoobSaibot() {
     const tecnicas = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Bi \"Noob Saibot\" Han",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin Kuei",
+        Jogador: "NPC",
+        Assinatura: "Desaparece nas sombras",
+        Conceito: "Elemental das Trevas",
+        Cronica: "Mortal Kombat 2",
         Equipe: "Clã Irmãos das Sombras",
         Time: "Clã Irmãos das Sombras",
-        Conceito: "Elemental das Trevas",
-        Assinatura: "Desaparece nas sombras",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 2",
         Forca: 5,
         Destreza: 7,
         Vigor: 5,
@@ -55,15 +54,15 @@ function NoobSaibot() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Pile Driver, Shrouded Moon, Deaths Visage, Sakki, Elemental Stride, Elemental Skin",
+        Combos: "Power Uppercut par Deaths Visage para Short (Dizzy); Shrounded Moon para Pile Driver (Dizzy); Short para Short para Short (Dizzy); Short para Short para Jab (dizzy); Jab para Jab para Power Uppercut (Dizzy)",
         Gloria: 4,
         Honra: 1,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Pile Driver, Shrouded Moon, Deaths Visage, Sakki, Elemental Stride, Elemental Skin",
-        Combos: "Power Uppercut par Deaths Visage para Short (Dizzy); Shrounded Moon para Pile Driver (Dizzy); Short para Short para Short (Dizzy); Short para Short para Jab (dizzy); Jab para Jab para Power Uppercut (Dizzy)"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return personagem;
 }

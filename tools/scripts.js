@@ -107,15 +107,11 @@ function somaTecnicas(char) {
 function adjustPC(char, from, to) {
     /**
      * Games	            Ano	        Age	        Escala PC Seq
-        SM1 / SM2	        1981-1982	PASSADO-2	-4          1
-        SF1 / FF1	        1987	    PASSADO-1	-3          2
-        SFZ1 / SFZ2	        1987-1990	PASSADO	    -2          3
-        SFZ3 / SF2 / FF2	1991 - 1993	PRESENTE	0           5
-        SF4 / FF3	        1994 - 1995	PRESENTE+1	1           6
-        SF5	                1997	    PRESENTE+2	2           7
-        SF3	                1998-1999	FUTURO	    4           9
-        SF6	                2000-2005	FUTURO+1	5           10
-        FFSW	            2006	    FUTURO+2	6           11
+        SM1 / SM2 / SF1	    1981-87 	PASSADO-2	-4          1
+        FF1 / SFZ	        1989	    PASSADO-1	-3          2
+        SF2 / FF / SF4	    1991-94 	PRESENTE	0           5
+        SF5	/ SF3           1996-98	    FUTURO+1	2           7
+        SF6	/ FFSW          2000+   	FUTURO+2	5           10
      */
 
     from = adjustGames(from);
@@ -708,7 +704,7 @@ function CarregarEdicao(nome) {
     //talentos
     dom('#ddlProntidao').val(obj["Prontidao"]);
     dom('#ddlPerspicacia').val(obj["Perspicacia"]);
-    dom('#ddlInterrogatorio').val(obj["Interrogatorio"]);
+    dom('#ddlInterrogacao').val(obj["Interrogacao"]);
     dom('#ddlManha').val(obj["Manha"]);
     dom('#ddlLabia').val(obj["Labia"]);
     dom('#ddlIntimidacao').val(obj["Intimidacao"]);
@@ -887,7 +883,7 @@ function carregarPersonagem() {
 
     //talentos
     personagem.Prontidao = parseInt(dom('#ddlProntidao').val());
-    personagem.Interrogatorio = parseInt(dom('#ddlInterrogatorio').val());
+    personagem.Interrogacao = parseInt(dom('#ddlInterrogacao').val());
     personagem.Intimidacao = parseInt(dom('#ddlIntimidacao').val());
     personagem.Perspicacia = parseInt(dom('#ddlPerspicacia').val());
     personagem.Manha = parseInt(dom('#ddlManha').val());

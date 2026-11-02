@@ -16,14 +16,13 @@ function Black() {
     armas[1] = "Faca Arremessada";
     armas[2] = "Submetralhadora";
 
-    const rolento =
-    {
+    const rolento = {
         Nome: "Marshall Black",
         Estilo: "Forças Especiais",
         Escola: "Exército Americano",
-        Conceito: "Militar Mercenário",
-        Assinatura: "Chicoteia o ar",
         Jogador: "NPC",
+        Assinatura: "Chicoteia o ar",
+        Conceito: "Militar Mercenário",
         Cronica: "Final Fight 3",
         Equipe: "Skull Cross",
         Time: "Skull Cross",
@@ -61,17 +60,17 @@ function Black() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 3,
-        Armas: armas,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Spinning Back Fist, Spinning Clothesline, Energy Ball, Turbo Spinning Clothesline, Suplex, Foot Sweep, Maka Wara",
         Combos: "Bloqueio para Energy Ball; Bloqueio para Turbo Spinning Clothesline para Foot Sweep (Dizzy)",
+        Gloria: 5,
+        Honra: 3,
         Chi: 7,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 8,
-        Honra: 3,
-        Gloria: 5,
-        Divisao: "Duelistas"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return rolento;
 }

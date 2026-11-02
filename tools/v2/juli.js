@@ -3,17 +3,16 @@ function Juli() {
     antecedentes[0] = newCaracteristica("Apoio", 5);
     antecedentes[1] = newCaracteristica("Psycho Power", 2);
 
-    const juli =
-    {
+    const juli = {
         Nome: "Juli",
         Estilo: "Forças Especiais",
         Escola: "Shadaloo",
-        Conceito: "Assassina",
+        Jogador: "NPC",
         Assinatura: "Expressão Fria",
+        Conceito: "Assassina",
+        Cronica: "Street Fighter Alpha",
         Equipe: "Shadaloo",
         Time: "Dolls",
-        Jogador: "NPC",
-        Cronica: "Street Fighter Alpha",
         Forca: 3,
         Destreza: 5,
         Vigor: 4,
@@ -41,10 +40,11 @@ function Juli() {
         Medicina: 1,
         Misterios: 0,
         Estilos: 2,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 5,
-        Apresamento: 3,
         Bloqueio: 4,
+        Apresamento: 3,
         Esportes: 5,
         Foco: 2,
         ManobrasEspeciais: "Jump, Back Breaker, Thigh Press, Air Throw, Foot Sweep, Throw, Power Uppercut, Dive Kick, Flying Thrust Kick",
@@ -54,8 +54,7 @@ function Juli() {
         Chi: 4,
         ForcaVontade: 7,
         Saude: 20,
-        Posto: 4,
-        Antecedentes: antecedentes
+        Posto: 4
     };
     return calcPC(juli);
 }

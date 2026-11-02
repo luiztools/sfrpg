@@ -4,14 +4,13 @@ function MonteiroTekken3() {
     antecedentes[1] = newCaracteristica("Contatos", 2);
     antecedentes[2] = newCaracteristica("Fama", 4);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Mestre Monteiro",
         Estilo: "Capoeira",
         Escola: "Desconhecida",
-        Conceito: "Mestre Ancião",
-        Assinatura: "Ginga",
         Jogador: "NPC",
+        Assinatura: "Ginga",
+        Conceito: "Mestre Ancião",
         Cronica: "Tekken 3",
         Forca: 3,
         Destreza: 4,
@@ -47,15 +46,15 @@ function MonteiroTekken3() {
         Apresamento: 2,
         Esportes: 4,
         Foco: 2,
-        Divisao: "Tradicional",
-        Posto: 6,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
+        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;",
         Gloria: 1,
         Honra: 4,
         Chi: 6,
         ForcaVontade: 6,
         Saude: 14,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;"
+        Divisao: "Tradicional",
+        Posto: 6
     };
     return personagem;
 }
@@ -66,14 +65,13 @@ function MonteiroTekken4() {
     antecedentes[1] = newCaracteristica("Contatos", 2);
     antecedentes[2] = newCaracteristica("Fama", 4);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Mestre Monteiro",
         Estilo: "Capoeira",
         Escola: "Desconhecida",
-        Conceito: "Mestre Doente",
-        Assinatura: "Ginga",
         Jogador: "NPC",
+        Assinatura: "Ginga",
+        Conceito: "Mestre Doente",
         Cronica: "Tekken 4",
         Forca: 2,
         Destreza: 3,
@@ -109,15 +107,15 @@ function MonteiroTekken4() {
         Apresamento: 1,
         Esportes: 3,
         Foco: 3,
-        Divisao: "Tradicional",
-        Posto: 5,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
+        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;",
         Gloria: 1,
         Honra: 5,
         Chi: 7,
         ForcaVontade: 6,
         Saude: 12,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;"
+        Divisao: "Tradicional",
+        Posto: 5
     };
     return personagem;
 }

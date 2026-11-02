@@ -7,17 +7,17 @@ function BalrogZ3() {
     antecedentes[4] = newCaracteristica("Empresário", 3);
     antecedentes[5] = newCaracteristica("Recursos", 4);
     antecedentes[6] = newCaracteristica("Staff", 3);
-    const balrog =
-    {
+
+    const balrog = {
         Nome: "Balrog",
         Estilo: "Boxe",
         Escola: "Nenhuma",
-        Conceito: "Ex-campeão de Boxe",
-        Assinatura: "Rasga a camisa",
         Jogador: "NPC",
+        Assinatura: "Rasga a camisa",
+        Conceito: "Ex-campeão de Boxe",
         Cronica: "Street Fighter Alpha",
-        Time: "Generais de Bison",
         Equipe: "Shadaloo",
+        Time: "Generais de Bison",
         Forca: 6,
         Destreza: 3,
         Vigor: 6,
@@ -48,15 +48,15 @@ function BalrogZ3() {
         Apresamento: 3,
         Esportes: 2,
         Foco: 0,
-        Divisao: "Tradicional",
-        Posto: 9,
+        ManobrasEspeciais: "Fist Sweep, Dashing Punch, Dashing Uppercut, Head Butt, Turn Punch, Power Uppercut, Punch Defense, Head Butt Hold, Jump, Jumping Shoulder Butt",
+        Combos: "Jab para Strong para Fierce (Dizzy); Jump + Fierce para Jab para Dashing Uppercut (Dizzy); Bloqueio para Dashing Punch;",
         Gloria: 9,
         Honra: 1,
         Chi: 4,
         ForcaVontade: 9,
         Saude: 18,
-        ManobrasEspeciais: "Fist Sweep, Dashing Punch, Dashing Uppercut, Head Butt, Turn Punch, Power Uppercut, Punch Defense, Head Butt Hold, Jump, Jumping Shoulder Butt",
-        Combos: "Jab para Strong para Fierce (Dizzy); Jump + Fierce para Jab para Dashing Uppercut (Dizzy); Bloqueio para Dashing Punch;"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return balrog;
 }
@@ -70,17 +70,20 @@ function BalrogSF2() {
     antecedentes[4] = newCaracteristica("Empresário", 4);
     antecedentes[5] = newCaracteristica("Recursos", 5);
     antecedentes[6] = newCaracteristica("Staff", 4);
-    const balrog =
-    {
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 3);
+
+    const balrog = {
         Nome: "Balrog",
         Estilo: "Boxe",
         Escola: "Nenhuma",
-        Conceito: "Ex-campeão de Boxe",
-        Assinatura: "Rasga a camisa",
         Jogador: "NPC",
+        Assinatura: "Rasga a camisa",
+        Conceito: "Ex-campeão de Boxe",
         Cronica: "Street Fighter 2",
-        Time: "Generais de Bison",
         Equipe: "Shadaloo",
+        Time: "Generais de Bison",
         Forca: 6,
         Destreza: 3,
         Vigor: 6,
@@ -95,6 +98,7 @@ function BalrogSF2() {
         Intimidacao: 5,
         Manha: 5,
         Labia: 1,
+        NovosTalentos: talentos,
         LutaCega: 1,
         Conducao: 3,
         Lideranca: 2,
@@ -111,15 +115,15 @@ function BalrogSF2() {
         Apresamento: 4,
         Esportes: 2,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 10,
+        ManobrasEspeciais: "Fist Sweep, Dashing Punch, Dashing Uppercut, Head Butt, Turn Punch, Power Uppercut, Punch Defense, Head Butt Hold, Jump, Jumping Shoulder Butt",
+        Combos: "Jab para Strong para Fierce (Dizzy); Jump + Fierce para Jab para Dashing Uppercut (Dizzy); Bloqueio para Dashing Punch; Jab para Turn Punch para Head Butt Hold (Dizzy)",
         Gloria: 10,
         Honra: 1,
         Chi: 5,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Fist Sweep, Dashing Punch, Dashing Uppercut, Head Butt, Turn Punch, Power Uppercut, Punch Defense, Head Butt Hold, Jump, Jumping Shoulder Butt",
-        Combos: "Jab para Strong para Fierce (Dizzy); Jump + Fierce para Jab para Dashing Uppercut (Dizzy); Bloqueio para Dashing Punch; Jab para Turn Punch para Head Butt Hold (Dizzy)"
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return balrog;
 }
@@ -133,17 +137,20 @@ function BalrogSF5() {
     antecedentes[4] = newCaracteristica("Empresário", 3);
     antecedentes[5] = newCaracteristica("Recursos", 4);
     antecedentes[6] = newCaracteristica("Staff", 3);
-    const balrog =
-    {
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 4);
+
+    const balrog = {
         Nome: "Balrog",
         Estilo: "Boxe",
         Escola: "Nenhuma",
-        Conceito: "Ex-campeão de Boxe",
-        Assinatura: "Rasga a camisa",
         Jogador: "NPC",
+        Assinatura: "Rasga a camisa",
+        Conceito: "Ex-campeão de Boxe",
         Cronica: "Street Fighter 5",
-        Time: "Generais de Bison",
         Equipe: "Shadaloo",
+        Time: "Generais de Bison",
         Forca: 6,
         Destreza: 3,
         Vigor: 6,
@@ -158,6 +165,7 @@ function BalrogSF5() {
         Intimidacao: 5,
         Manha: 5,
         Labia: 2,
+        NovosTalentos: talentos,
         LutaCega: 1,
         Conducao: 3,
         Lideranca: 3,
@@ -174,15 +182,15 @@ function BalrogSF5() {
         Apresamento: 5,
         Esportes: 3,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 10,
+        ManobrasEspeciais: "Fist Sweep, Dashing Punch, Dashing Uppercut, Head Butt, Turn Punch, Power Uppercut, Punch Defense, Head Butt Hold, Jump, Jumping Shoulder Butt",
+        Combos: "Jab para Strong para Fierce (Dizzy); Jump + Fierce para Jab para Dashing Uppercut (Dizzy); Bloqueio para Dashing Punch; Jab para Turn Punch para Head Butt Hold (Dizzy)",
         Gloria: 10,
         Honra: 1,
         Chi: 5,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Fist Sweep, Dashing Punch, Dashing Uppercut, Head Butt, Turn Punch, Power Uppercut, Punch Defense, Head Butt Hold, Jump, Jumping Shoulder Butt",
-        Combos: "Jab para Strong para Fierce (Dizzy); Jump + Fierce para Jab para Dashing Uppercut (Dizzy); Bloqueio para Dashing Punch; Jab para Turn Punch para Head Butt Hold (Dizzy)"
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return balrog;
 }
@@ -190,8 +198,8 @@ function BalrogSF5() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = BalrogZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = BalrogSF4();
+else if (getParameterByName('age') === 'sf5')
+    npc = BalrogSF5();
 else
     npc = BalrogSF2();
 npc = calcPC(npc);

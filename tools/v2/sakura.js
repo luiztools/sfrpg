@@ -5,14 +5,13 @@ function SakuraSFZ3() {
     antecedentes[2] = newCaracteristica("Contatos", 1);
     antecedentes[3] = newCaracteristica("Sensei", 1);
 
-    const sakura =
-    {
+    const sakura = {
         Nome: "Sakura Kasugano",
         Estilo: "Karatê Shotokan",
         Escola: "Autodidata",
-        Conceito: "Estudante",
-        Assinatura: "Mostra suas técnicas",
         Jogador: "NPC",
+        Assinatura: "Mostra suas técnicas",
+        Conceito: "Estudante",
         Cronica: "Street Fighter Alpha",
         Forca: 3,
         Destreza: 4,
@@ -50,13 +49,13 @@ function SakuraSFZ3() {
         Foco: 3,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Energy Ball, Fireball, Haymaker, Widowmaker, Neck Choke, Spinning Foot Sweep",
         Combos: "Windowmaker para Dragon Punch (Dizzy); Short para Hurricane Kick (dizzy); Energy Ball para Haymaker (Dizzy); Jab para Dragon Punch",
+        Gloria: 3,
+        Honra: 6,
         Chi: 4,
         ForcaVontade: 9,
         Saude: 18,
         Divisao: "Estilo Livre",
-        Posto: 4,
-        Gloria: 3,
-        Honra: 6
+        Posto: 4
     };
     return sakura;
 }
@@ -69,14 +68,13 @@ function SakuraSF4() {
     antecedentes[3] = newCaracteristica("Recursos", 1);
     antecedentes[4] = newCaracteristica("Sensei", 2);
 
-    const sakura =
-    {
+    const sakura = {
         Nome: "Sakura Kasugano",
         Estilo: "Karatê Shotokan",
         Escola: "Autodidata",
-        Conceito: "Estudante",
-        Assinatura: "Mostra suas técnicas",
         Jogador: "NPC",
+        Assinatura: "Mostra suas técnicas",
+        Conceito: "Estudante",
         Cronica: "Street Fighter 4",
         Forca: 4,
         Destreza: 5,
@@ -114,13 +112,13 @@ function SakuraSF4() {
         Foco: 4,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Energy Ball, Fireball, Haymaker, Widowmaker, Neck Choke, Spinning Foot Sweep",
         Combos: "Windowmaker para Dragon Punch (Dizzy); Short para Hurricane Kick (dizzy); Energy Ball para Haymaker (Dizzy); Jab para Dragon Punch",
+        Gloria: 4,
+        Honra: 7,
         Chi: 5,
         ForcaVontade: 10,
         Saude: 20,
         Divisao: "Estilo Livre",
-        Posto: 5,
-        Gloria: 4,
-        Honra: 7
+        Posto: 5
     };
     return sakura;
 }
@@ -133,14 +131,13 @@ function SakuraSF5() {
     antecedentes[3] = newCaracteristica("Recursos", 2);
     antecedentes[4] = newCaracteristica("Sensei", 3);
 
-    const sakura =
-    {
+    const sakura = {
         Nome: "Sakura Kasugano",
         Estilo: "Karatê Shotokan",
         Escola: "Autodidata",
-        Conceito: "Estudante",
-        Assinatura: "Mostra suas técnicas",
         Jogador: "NPC",
+        Assinatura: "Mostra suas técnicas",
+        Conceito: "Estudante",
         Cronica: "Street Fighter 5",
         Forca: 5,
         Destreza: 5,
@@ -178,20 +175,20 @@ function SakuraSF5() {
         Foco: 4,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Energy Ball, Fireball, Haymaker, Widowmaker, Neck Choke, Spinning Foot Sweep",
         Combos: "Windowmaker para Dragon Punch (Dizzy); Short para Hurricane Kick (dizzy); Energy Ball para Haymaker (Dizzy); Jab para Dragon Punch",
+        Gloria: 5,
+        Honra: 8,
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
         Divisao: "Estilo Livre",
-        Posto: 6,
-        Gloria: 5,
-        Honra: 8
+        Posto: 6
     };
     return sakura;
 }
 
 let npc;
 if (getParameterByName('age') === 'sfa')
-    npc = SakuraZ3();
+    npc = SakuraSFZ3();
 else if (getParameterByName('age') === 'sf5')
     npc = SakuraSF5();
 else

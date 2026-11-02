@@ -14,17 +14,16 @@ function CyraxMK3() {
 
     const armas = ["Granada", "Rede"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Cyrax",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Levanta os braços",
+        Conceito: "Ninja Ciborgue",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Ciborgue",
-        Assinatura: "Levanta os braços",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -52,6 +51,7 @@ function CyraxMK3() {
         Medicina: 0,
         Misterios: 3,
         Estilos: 3,
+        NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
         Chute: 5,
@@ -60,17 +60,16 @@ function CyraxMK3() {
         Esportes: 4,
         Foco: 0,
         NovasTecnicas: tecnicas,
-        NovosConhecimentos: conhecimentos,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Air Throw, Shrouded Moon, Pile Driver, Spinning Pile Driver",
+        Combos: "Granada - Power Uppercut - Rede (dizzy); Rede - Granada - Rede (dizzy); Forward - Forward - Foot Sweep (dizzy); Forward - Forward - Power Uppercut (dizzy); Jab - Jab - Power Uppercut (dizzy)",
         Gloria: 4,
         Honra: 0,
         Chi: 7,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Air Throw, Shrouded Moon, Pile Driver, Spinning Pile Driver",
-        Combos: "Granada - Power Uppercut - Rede (dizzy); Rede - Granada - Rede (dizzy); Forward - Forward - Foot Sweep (dizzy); Forward - Forward - Power Uppercut (dizzy); Jab - Jab - Power Uppercut (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }

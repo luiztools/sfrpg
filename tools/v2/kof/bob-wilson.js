@@ -6,14 +6,13 @@ function BobWilson() {
     antecedentes[3] = newCaracteristica("Recursos", 3);
     antecedentes[4] = newCaracteristica("Staff", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Bob Wilson",
         Estilo: "Capoeira",
         Escola: "Richard Meyer",
-        Conceito: "Lutador",
-        Assinatura: "Sinal de Positivo ao vencer",
         Jogador: "NPC",
+        Assinatura: "Sinal de Positivo ao vencer",
+        Conceito: "Lutador",
         Cronica: "Fatal Fury 3",
         Forca: 5,
         Destreza: 5,
@@ -49,15 +48,15 @@ function BobWilson() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 2,
-        Divisao: "Tradicional",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Slide Kick, Flash Kick, Drunken Monkey Roll, Tumbling Attack, Breakfall, Backflip, Musical Accompaniment, Somersault Kick",
+        Combos: "Jab para Short para Forward (Dizzy); Jump + Roundhouse para Flash Kick (dizzy); Short para Short; Tumbling Attack para Somersault Kick (Dizzy)",
         Gloria: 4,
         Honra: 3,
         Chi: 5,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Slide Kick, Flash Kick, Drunken Monkey Roll, Tumbling Attack, Breakfall, Backflip, Musical Accompaniment, Somersault Kick",
-        Combos: "Jab para Short para Forward (Dizzy); Jump + Roundhouse para Flash Kick (dizzy); Short para Short; Tumbling Attack para Somersault Kick (Dizzy)"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return personagem;
 }

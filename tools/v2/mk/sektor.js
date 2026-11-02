@@ -14,17 +14,16 @@ function SektorMK3() {
 
     const armas = ["Granada", "Rede"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Sektor",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Levanta os braços",
+        Conceito: "Ninja Ciborgue",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Ciborgue",
-        Assinatura: "Levanta os braços",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -52,6 +51,7 @@ function SektorMK3() {
         Medicina: 0,
         Misterios: 3,
         Estilos: 3,
+        NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 6,
         Chute: 5,
@@ -60,17 +60,16 @@ function SektorMK3() {
         Esportes: 4,
         Foco: 0,
         NovasTecnicas: tecnicas,
-        NovosConhecimentos: conhecimentos,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Shrouded Moon, Fireball, Yoga Flame, Accuracy",
+        Combos: "Shrouded Moon - Power Uppercut - Fireball; Foot Sweep - Power Uppercut - Fireball; Forward - Forward - Roundhouse (dizzy); Forward - Forward - Jab (dizzy); Jab - Jab - Power Uppercut (dizzy)",
         Gloria: 4,
         Honra: 0,
         Chi: 8,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Shrouded Moon, Fireball, Yoga Flame, Accuracy",
-        Combos: "Shrouded Moon - Power Uppercut - Fireball; Foot Sweep - Power Uppercut - Fireball; Forward - Forward - Roundhouse (dizzy); Forward - Forward - Jab (dizzy); Jab - Jab - Power Uppercut (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }

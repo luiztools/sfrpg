@@ -13,14 +13,13 @@ function KarinZ3() {
     var tecnicas = [1];
     tecnicas[0] = newCaracteristica("Espada", 4);
 
-    var karin =
-    {
+    var karin = {
         Nome: "Karin Kanzuki",
         Estilo: "Kickboxe",
         Escola: "Professor Particular",
-        Conceito: "Colegial",
-        Assinatura: "Ar de superioridade",
         Jogador: "NPC",
+        Assinatura: "Ar de superioridade",
+        Conceito: "Colegial",
         Cronica: "Street Fighter Alpha",
         Forca: 4,
         Destreza: 6,
@@ -37,10 +36,11 @@ function KarinZ3() {
         Labia: 4,
         Lideranca: 2,
         Furtividade: 1,
+        Sobrevivencia: 5,
         Computador: 2,
         Investigacao: 1,
         Estilos: 2,
-        Sobrevivencia: 5,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 4,
         Bloqueio: 4,
@@ -48,16 +48,15 @@ function KarinZ3() {
         Esportes: 4,
         Foco: 3,
         NovasTecnicas: tecnicas,
-        Antecedentes: antecedentes,
         ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Knee Basher, Thigh Press, Spinning Back Fist, Spinning Knuckle, Double-Hit Kick, Fist Sweep, Ax Kick, Stepping Front Kick, Rekka Ken, Ressen Ha, Counter Attack, Elbow Smash, Punch Defense, Kick Defense",
         Combos: "Elbow Smash para Elbow Smash (dizzy), Jab para Strong (dizzy), Jab para Rekka Ken, Short para Foot Sweep",
+        Gloria: 5,
+        Honra: 3,
         Chi: 6,
         ForcaVontade: 7,
         Saude: 20,
-        Posto: 6,
         Divisao: "Tradicional",
-        Honra: 3,
-        Gloria: 5
+        Posto: 6
     };
     return karin;
 }
@@ -77,14 +76,13 @@ function KarinSF5() {
     var tecnicas = [1];
     tecnicas[0] = newCaracteristica("Espada", 4);
 
-    var karin =
-    {
+    var karin = {
         Nome: "Karin Kanzuki",
         Estilo: "Kickboxe",
         Escola: "Professor Particular",
-        Conceito: "Colegial",
-        Assinatura: "Ar de superioridade",
         Jogador: "NPC",
+        Assinatura: "Ar de superioridade",
+        Conceito: "Colegial",
         Cronica: "Street Fighter 5",
         Forca: 4,
         Destreza: 6,
@@ -101,10 +99,11 @@ function KarinSF5() {
         Labia: 4,
         Lideranca: 2,
         Furtividade: 2,
+        Sobrevivencia: 5,
         Computador: 2,
         Investigacao: 2,
         Estilos: 2,
-        Sobrevivencia: 5,
+        Antecedentes: antecedentes,
         Soco: 5,
         Chute: 5,
         Bloqueio: 5,
@@ -112,16 +111,15 @@ function KarinSF5() {
         Esportes: 4,
         Foco: 3,
         NovasTecnicas: tecnicas,
-        Antecedentes: antecedentes,
         ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Knee Basher, Thigh Press, Spinning Back Fist, Spinning Knuckle, Double-Hit Kick, Fist Sweep, Ax Kick, Stepping Front Kick, Rekka Ken, Ressen Ha, Counter Attack, Elbow Smash, Punch Defense, Kick Defense, Banishing Flat",
         Combos: "Elbow Smash para Elbow Smash (dizzy), Jab para Strong (dizzy), Jab para Rekka Ken, Short para Foot Sweep, Bloqueio para Foot Sweep",
+        Gloria: 6,
+        Honra: 4,
         Chi: 7,
         ForcaVontade: 8,
         Saude: 20,
-        Posto: 9,
         Divisao: "Tradicional",
-        Honra: 4,
-        Gloria: 6
+        Posto: 9
     };
     return karin;
 }

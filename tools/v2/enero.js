@@ -7,17 +7,16 @@ function EneroSFZ3() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
-    const enero =
-    {
+    const enero = {
         Nome: "Enero",
         Estilo: "Forças Especiais",
         Escola: "Shadaloo",
-        Conceito: "Assassina",
+        Jogador: "NPC",
         Assinatura: "Expressão Fria",
+        Conceito: "Assassina",
+        Cronica: "Street Fighter Alpha",
         Equipe: "Shadaloo",
         Time: "Dolls",
-        Jogador: "NPC",
-        Cronica: "Street Fighter Alpha",
         Forca: 2,
         Destreza: 3,
         Vigor: 2,
@@ -45,10 +44,11 @@ function EneroSFZ3() {
         Medicina: 0,
         Misterios: 0,
         Estilos: 1,
+        Antecedentes: antecedentes,
         Soco: 3,
         Chute: 1,
-        Apresamento: 1,
         Bloqueio: 3,
+        Apresamento: 1,
         Esportes: 1,
         Foco: 0,
         ManobrasEspeciais: "Jump, Head Butt, Throw",
@@ -58,9 +58,8 @@ function EneroSFZ3() {
         Chi: 1,
         ForcaVontade: 6,
         Saude: 10,
-        Posto: 2,
-        Antecedentes: antecedentes,
-        Divisao: "Tradicional"
+        Divisao: "Tradicional",
+        Posto: 2
     };
     return enero;
 }
@@ -74,17 +73,16 @@ function EneroSF5() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
-    const enero =
-    {
+    const enero = {
         Nome: "Enero",
         Estilo: "Forças Especiais",
         Escola: "Shadaloo",
-        Conceito: "Assassina",
+        Jogador: "NPC",
         Assinatura: "Expressão Fria",
+        Conceito: "Assassina",
+        Cronica: "Street Fighter 5",
         Equipe: "Shadaloo",
         Time: "Dolls",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 5",
         Forca: 2,
         Destreza: 3,
         Vigor: 3,
@@ -112,10 +110,11 @@ function EneroSF5() {
         Medicina: 0,
         Misterios: 0,
         Estilos: 2,
+        Antecedentes: antecedentes,
         Soco: 3,
         Chute: 2,
-        Apresamento: 2,
         Bloqueio: 3,
+        Apresamento: 2,
         Esportes: 2,
         Foco: 0,
         ManobrasEspeciais: "Jump, Head Butt, Throw",
@@ -125,9 +124,8 @@ function EneroSF5() {
         Chi: 2,
         ForcaVontade: 7,
         Saude: 12,
-        Posto: 3,
-        Antecedentes: antecedentes,
-        Divisao: "Tradicional"
+        Divisao: "Tradicional",
+        Posto: 3
     };
     return enero;
 }

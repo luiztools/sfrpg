@@ -1,0 +1,72 @@
+﻿function KumaMizu() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Elemental", 5);
+
+    const personagem = {
+        Nome: "Kuma Mizu (Água)",
+        Estilo: "Kickboxe",
+        Escola: "Desconhecida",
+        Jogador: "",
+        Assinatura: "Sorri enquanto brinca com água",
+        Conceito: "Elemental da Água",
+        Cronica: "",
+        Equipe: "Excalibur Produções",
+        Time: "Chimu Nihon",
+        Forca: 4,
+        Destreza: 3,
+        Vigor: 3,
+        Carisma: 2,
+        Manipulacao: 1,
+        Aparencia: 3,
+        Percepcao: 3,
+        Inteligencia: 3,
+        Raciocinio: 2,
+        Prontidao: 0,
+        Interrogacao: 0,
+        Intimidacao: 0,
+        Perspicacia: 2,
+        Manha: 3,
+        Labia: 2,
+        NovosTalentos: [],
+        LutaCega: 0,
+        Conducao: 1,
+        Lideranca: 0,
+        Seguranca: 2,
+        Furtividade: 1,
+        Sobrevivencia: 0,
+        NovasPericias: [],
+        Arena: 2,
+        Computador: 1,
+        Investigacao: 3,
+        Medicina: 0,
+        Misterios: 3,
+        Estilos: 0,
+        NovosConhecimentos: [],
+        Antecedentes: antecedentes,
+        Soco: 2,
+        Chute: 0,
+        Bloqueio: 1,
+        Apresamento: 2,
+        Esportes: 1,
+        Foco: 3,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Fist Sweep, Drench, elemental Skin, Jump, Envelop",
+        Combos: "Jab para Fist Sweep para Envelop(Dizzy)",
+        Gloria: 1,
+        Honra: 4,
+        Chi: 4,
+        ForcaVontade: 6,
+        Saude: 10,
+        Divisao: "Livre",
+        Posto: 2,
+        Vitorias: 7,
+        Derrotas: 1,
+        Empates: 1,
+        KOs: 6
+    };
+    return personagem;
+}
+
+let npc = KumaMizu();
+
+npc = calcPC(npc);

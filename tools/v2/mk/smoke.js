@@ -10,17 +10,16 @@ function SmokeMK3() {
 
     const armas = ["Granada", "Arpão"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Smoke (Ciborgue)",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Levanta os braços",
+        Conceito: "Ninja Ciborgue",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Ciborgue",
-        Assinatura: "Levanta os braços",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -57,15 +56,15 @@ function SmokeMK3() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Shrouded Moon",
+        Combos: "Power Uppercut - Arpão; Forward - Forward - Roundhouse (dizzy); Forward - Forward - Jab (dizzy); Jab - Jab - Power Uppercut (dizzy); Shrouded Moon - Power Uppercut",
         Gloria: 3,
         Honra: 0,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Shrouded Moon",
-        Combos: "Power Uppercut - Arpão; Forward - Forward - Roundhouse (dizzy); Forward - Forward - Jab (dizzy); Jab - Jab - Power Uppercut (dizzy); Shrouded Moon - Power Uppercut"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -82,17 +81,16 @@ function SmokeMK2() {
 
     const armas = ["Arpão"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Smoke (Humano)",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Levanta os braços",
+        Conceito: "Ninja Elemental",
+        Cronica: "Mortal Kombat 2",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Elemental",
-        Assinatura: "Levanta os braços",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 2",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -129,15 +127,15 @@ function SmokeMK2() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Elemental Stride, Sense Element",
+        Combos: "Power Uppercut - Arpão; Forward - Forward - Roundhouse (dizzy); Forward - Forward - Jab (dizzy); Jab - Jab - Power Uppercut (dizzy); Elemental Stride - Fierce",
         Gloria: 3,
         Honra: 6,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Elemental Stride, Sense Element",
-        Combos: "Power Uppercut - Arpão; Forward - Forward - Roundhouse (dizzy); Forward - Forward - Jab (dizzy); Jab - Jab - Power Uppercut (dizzy); Elemental Stride - Fierce"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }
@@ -146,4 +144,6 @@ let npc;
 if (getParameterByName('age') === 'mk2')
     npc = calcPC(SmokeMK2());
 else if (getParameterByName('age') === 'mk3')
+    npc = calcPC(SmokeMK3());
+else
     npc = calcPC(SmokeMK3());

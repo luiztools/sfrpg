@@ -14,17 +14,16 @@ function KotalKahn() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Espada", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kotal Kahn",
         Estilo: "Luta-Livre Nativo Americana",
         Escola: "Osh-Tekk",
+        Jogador: "NPC",
+        Assinatura: "Cruza os Braços",
+        Conceito: "Imperador do Outworld",
+        Cronica: "Mortal Kombat X",
         Equipe: "Outworld",
         Time: "Outworld",
-        Conceito: "Imperador do Outworld",
-        Assinatura: "Cruza os Braços",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 6,
         Destreza: 4,
         Vigor: 6,
@@ -35,25 +34,25 @@ function KotalKahn() {
         Inteligencia: 4,
         Raciocinio: 5,
         Prontidao: 3,
-        Perspicacia: 3,
-        Manha: 0,
         Interrogacao: 3,
         Intimidacao: 6,
+        Perspicacia: 3,
+        Manha: 0,
         Labia: 4,
+        NovosTalentos: talentos,
         LutaCega: 2,
         Conducao: 0,
         Lideranca: 5,
         Seguranca: 0,
         Furtividade: 1,
         Sobrevivencia: 3,
+        NovasPericias: pericias,
         Arena: 4,
         Computador: 0,
         Investigacao: 2,
         Medicina: 3,
         Misterios: 4,
         Estilos: 3,
-        NovosTalentos: talentos,
-        NovasPericias: pericias,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
@@ -64,15 +63,15 @@ function KotalKahn() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Power Uppercut, Fireball, Jumping Shoulder Butt, Foot Sweep, Buffalo Punch, Face Slam, Throw",
+        Combos: "Jab – Strong – Jumping Shoulder Butt (dizzy); Jab – Strong – Forward (dizzy); Jumping Strong – Throw; Espada Jab – Espada Fierce (dizzy); Bloqueio – Face Slam – Buffalo Punch",
         Gloria: 8,
         Honra: 7,
         Chi: 7,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Power Uppercut, Fireball, Jumping Shoulder Butt, Foot Sweep, Buffalo Punch, Face Slam, Throw",
-        Combos: "Jab – Strong – Jumping Shoulder Butt (dizzy); Jab – Strong – Forward (dizzy); Jumping Strong – Throw; Espada Jab – Espada Fierce (dizzy); Bloqueio – Face Slam – Buffalo Punch"
+        Divisao: "Livre",
+        Posto: 10
     };
     return personagem;
 }

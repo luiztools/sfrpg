@@ -11,17 +11,16 @@ function Goro() {
     const talentos = [];
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Goro",
         Estilo: "Boxe",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Grito de Vitória",
+        Conceito: "Príncipe de Kuatan",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Príncipe de Kuatan",
-        Assinatura: "Grito de Vitória",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 10,
         Destreza: 3,
         Vigor: 10,
@@ -32,11 +31,12 @@ function Goro() {
         Inteligencia: 4,
         Raciocinio: 5,
         Prontidao: 5,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 8,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 3,
         Conducao: 0,
         Lideranca: 5,
@@ -49,7 +49,6 @@ function Goro() {
         Medicina: 1,
         Misterios: 5,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 7,
@@ -59,15 +58,15 @@ function Goro() {
         Esportes: 5,
         Foco: 5,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash",
+        Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy)",
         Gloria: 10,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash",
-        Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy)"
+        Divisao: "Livre",
+        Posto: 10
     };
     return personagem;
 }
@@ -85,17 +84,16 @@ function GoroMK4() {
     const talentos = [];
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Goro",
         Estilo: "Boxe",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Grito de Vitória",
+        Conceito: "Príncipe de Kuatan",
+        Cronica: "Mortal Kombat 4",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Príncipe de Kuatan",
-        Assinatura: "Grito de Vitória",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 4",
         Forca: 10,
         Destreza: 3,
         Vigor: 10,
@@ -106,11 +104,12 @@ function GoroMK4() {
         Inteligencia: 4,
         Raciocinio: 5,
         Prontidao: 5,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 8,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 3,
         Conducao: 0,
         Lideranca: 5,
@@ -123,7 +122,6 @@ function GoroMK4() {
         Medicina: 1,
         Misterios: 5,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 7,
@@ -133,15 +131,15 @@ function GoroMK4() {
         Esportes: 5,
         Foco: 5,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash, Throw, Back Breaker, Shockwave",
+        Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy); Brain Cracker para Throw (Dizzy);",
         Gloria: 10,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash, Throw, Back Breaker, Shockwave",
-        Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy); Brain Cracker para Throw (Dizzy);"
+        Divisao: "Livre",
+        Posto: 10
     };
     return personagem;
 }
@@ -159,17 +157,16 @@ function GoroMKX() {
     const talentos = [];
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Goro",
         Estilo: "Boxe",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Grito de Vitória",
+        Conceito: "Príncipe de Kuatan",
+        Cronica: "Mortal Kombat X",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Príncipe de Kuatan",
-        Assinatura: "Grito de Vitória",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 10,
         Destreza: 3,
         Vigor: 10,
@@ -180,11 +177,12 @@ function GoroMKX() {
         Inteligencia: 4,
         Raciocinio: 5,
         Prontidao: 5,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 8,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 3,
         Conducao: 0,
         Lideranca: 5,
@@ -197,7 +195,6 @@ function GoroMKX() {
         Medicina: 1,
         Misterios: 5,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 7,
@@ -207,15 +204,15 @@ function GoroMKX() {
         Esportes: 5,
         Foco: 5,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash, Spinning Back Fist, Double-Hit Kick, Flying Heel Stomp, Throw, Back Breaker, Shockwave",
+        Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy); Spinning Back Fist para Jab para Jab (dizzy); Brain Cracker para Throw (Dizzy);",
         Gloria: 10,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash, Spinning Back Fist, Double-Hit Kick, Flying Heel Stomp, Throw, Back Breaker, Shockwave",
-        Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy); Spinning Back Fist para Jab para Jab (dizzy); Brain Cracker para Throw (Dizzy);"
+        Divisao: "Livre",
+        Posto: 10
     };
     return personagem;
 }
@@ -228,17 +225,16 @@ function Shokan() {
     const talentos = [];
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Shokan (Draco)",
         Estilo: "Boxe",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Ergue os braços",
+        Conceito: "Shokan Médio",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Shokan Médio",
-        Assinatura: "Ergue os braços",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 8,
         Destreza: 2,
         Vigor: 8,
@@ -249,11 +245,12 @@ function Shokan() {
         Inteligencia: 1,
         Raciocinio: 2,
         Prontidao: 3,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 6,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 0,
         Conducao: 0,
         Lideranca: 0,
@@ -266,7 +263,6 @@ function Shokan() {
         Medicina: 0,
         Misterios: 0,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
@@ -277,15 +273,15 @@ function Shokan() {
         Foco: 0,
         NovasTecnicas: [],
         Armas: armas,
-        Divisao: "Tradicional",
-        Posto: 1,
+        ManobrasEspeciais: "Jump, Brain Cracker, Power Uppercut",
+        Combos: "Jab para Brain Cracker (Dizzy)",
         Gloria: 0,
         Honra: 0,
         Chi: 3,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Power Uppercut",
-        Combos: "Jab para Brain Cracker (Dizzy)"
+        Divisao: "Tradicional",
+        Posto: 1
     };
     return personagem;
 }

@@ -11,14 +11,13 @@ function FeiLongSF4() {
     const armas = [];
     armas[0] = "Nunchaku";
 
-    const feiLong =
-    {
+    const feiLong = {
         Nome: "Fei Long",
         Estilo: "Kung Fu",
         Escola: "Templo de Hong Kong",
-        Conceito: "Astro de Cinema",
-        Assinatura: "Grita e tensiona os músculos",
         Jogador: "NPC",
+        Assinatura: "Grita e tensiona os músculos",
+        Conceito: "Astro de Cinema",
         Cronica: "Street Fighter 4",
         Forca: 5,
         Destreza: 6,
@@ -46,23 +45,23 @@ function FeiLongSF4() {
         Misterios: 4,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 6,
         Bloqueio: 6,
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
+        NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Tradicional",
-        Posto: 10,
+        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double-Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
+        Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);",
         Gloria: 10,
         Honra: 8,
         Chi: 10,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double-Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
-        Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return feiLong;
 }
@@ -80,14 +79,13 @@ function FeiLongSF2() {
     const armas = [];
     armas[0] = "Nunchaku";
 
-    const feiLong =
-    {
+    const feiLong = {
         Nome: "Fei Long",
         Estilo: "Kung Fu",
         Escola: "Templo de Hong Kong",
-        Conceito: "Astro de Cinema",
-        Assinatura: "Grita e tensiona os músculos",
         Jogador: "NPC",
+        Assinatura: "Grita e tensiona os músculos",
+        Conceito: "Astro de Cinema",
         Cronica: "Street Fighter 2",
         Forca: 5,
         Destreza: 6,
@@ -115,23 +113,23 @@ function FeiLongSF2() {
         Misterios: 4,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 5,
         Bloqueio: 6,
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
+        NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Tradicional",
-        Posto: 9,
+        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double-Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
+        Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);",
         Gloria: 9,
         Honra: 7,
         Chi: 9,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double-Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
-        Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return feiLong;
 }
@@ -149,14 +147,13 @@ function FeiLongZ3() {
     const armas = [];
     armas[0] = "Nunchaku";
 
-    const feiLong =
-    {
+    const feiLong = {
         Nome: "Fei Long",
         Estilo: "Kung Fu",
         Escola: "Templo de Hong Kong",
-        Conceito: "Astro de Cinema",
-        Assinatura: "Grita e tensiona os músculos",
         Jogador: "NPC",
+        Assinatura: "Grita e tensiona os músculos",
+        Conceito: "Astro de Cinema",
         Cronica: "Street Fighter Alpha",
         Forca: 4,
         Destreza: 5,
@@ -184,23 +181,23 @@ function FeiLongZ3() {
         Misterios: 4,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 5,
         Bloqueio: 6,
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
+        NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Tradicional",
-        Posto: 9,
+        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double-Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
+        Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);",
         Gloria: 9,
         Honra: 7,
         Chi: 9,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double-Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
-        Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return feiLong;
 }

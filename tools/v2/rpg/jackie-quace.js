@@ -1,0 +1,60 @@
+﻿
+function JackieQuace() {
+    const personagem = {
+        Nome: "Jackie Quace",
+        Estilo: "Judô",
+        Escola: "Polícia de Miami",
+        Assinatura: "Quebra cabeças",
+        Conceito: "Tira dura-na-queda",
+        Forca: 4,
+        Destreza: 4,
+        Vigor: 4,
+        Carisma: 3,
+        Manipulacao: 3,
+        Aparencia: 3,
+        Percepcao: 4,
+        Inteligencia: 3,
+        Raciocinio: 3,
+        Prontidao: 3,
+        Interrogacao: 4,
+        Intimidacao: 4,
+        Perspicacia: 2,
+        Manha: 4,
+        Labia: 3,
+        NovosTalentos: [],
+        LutaCega: 3,
+        Conducao: 3,
+        Lideranca: 3,
+        Seguranca: 4,
+        Furtividade: 3,
+        Sobrevivencia: 1,
+        NovasPericias: [],
+        Arena: 3,
+        Computador: 2,
+        Investigacao: 4,
+        Medicina: 1,
+        Estilos: 1,
+        NovosConhecimentos: [],
+        Antecedentes: [newCaracteristica("Aliados", 3), newCaracteristica("Apoio", 2), newCaracteristica("Contatos", 4)],
+        Soco: 2,
+        Chute: 1,
+        Bloqueio: 3,
+        Apresamento: 3,
+        Esportes: 3,
+        NovasTecnicas: [newCaracteristica("Pistola", 3)],
+        ManobrasEspeciais: "Power Uppercut, Jump, Spinning Back Fist, Kippup, Air Throw, Grappling Defense, Improved Pin, Pin, Throw, Air Smash, Breakfall",
+        Combos: "Throw para Pin (Dizzy); Bloqueio para Improved Pin",
+        Gloria: 3,
+        Honra: 6,
+        Chi: 3,
+        ForcaVontade: 7,
+        Saude: 11,
+        Divisao: "Estilo Livre",
+        Posto: 5
+    };
+    return personagem;
+}
+
+let npc = JackieQuace();
+
+npc = calcPC(npc);

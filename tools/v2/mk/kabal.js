@@ -10,17 +10,16 @@ function Kabal() {
 
     const armas = ["Espada Gancho"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kabal",
         Estilo: "Kenjutsu",
         Escola: "As Ruas",
+        Jogador: "NPC",
+        Assinatura: "Posa com suas armas",
+        Conceito: "Sobrevivente",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Black Dragon",
         Time: "Black Dragon",
-        Conceito: "Sobrevivente",
-        Assinatura: "Posa com suas armas",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 5,
         Destreza: 6,
         Vigor: 5,
@@ -57,15 +56,15 @@ function Kabal() {
         Foco: 2,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Flying Fireball, Web Spin",
+        Combos: "Espada Jab para Espada Strong para Power Uppercut; Foot Sweep para Web Spin; Short para Short para Roundhouse (dizzy); Short para Short para Jab (Dizzy); Jab para Jab para Power Uppercut (dizzy);",
         Gloria: 6,
         Honra: 3,
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Flying Fireball, Web Spin",
-        Combos: "Espada Jab para Espada Strong para Power Uppercut; Foot Sweep para Web Spin; Short para Short para Roundhouse (dizzy); Short para Short para Jab (Dizzy); Jab para Jab para Power Uppercut (dizzy);"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }

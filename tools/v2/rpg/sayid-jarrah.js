@@ -1,0 +1,60 @@
+﻿
+function SayidJarrah() {
+    const personagem = {
+        Nome: "Sayid Jarrah",
+        Estilo: "Krav Maga",
+        Escola: "Guarda Republicana do Iraque",
+        Assinatura: "Cospe sobre o terrorista",
+        Conceito: "Contra-Terrorista",
+        Forca: 4,
+        Destreza: 4,
+        Vigor: 4,
+        Carisma: 2,
+        Manipulacao: 4,
+        Aparencia: 2,
+        Percepcao: 2,
+        Inteligencia: 3,
+        Raciocinio: 3,
+        Prontidao: 3,
+        Interrogacao: 5,
+        Intimidacao: 2,
+        Perspicacia: 3,
+        Manha: 1,
+        Labia: 2,
+        NovosTalentos: [],
+        LutaCega: 1,
+        Conducao: 3,
+        Lideranca: 2,
+        Seguranca: 5,
+        Furtividade: 2,
+        Sobrevivencia: 5,
+        NovasPericias: [newCaracteristica("Demolicao", 4), newCaracteristica("Reparos", 5)],
+        Arena: 1,
+        Computador: 3,
+        Investigacao: 5,
+        Medicina: 3,
+        Estilos: 3,
+        NovosConhecimentos: [newCaracteristica("Idiomas", 1)],
+        Antecedentes: [newCaracteristica("Recursos", 2), newCaracteristica("Contatos", 3)],
+        Soco: 3,
+        Chute: 1,
+        Bloqueio: 2,
+        Apresamento: 3,
+        Esportes: 2,
+        NovasTecnicas: [newCaracteristica("Pistola", 5)],
+        ManobrasEspeciais: "Head Butt, Power Uppercut, Ducking Fierce, Jump, Air Smash, Throw, Brain Cracker, Arm Wrist Lock",
+        Combos: "Jump + Jab para Arm Wrist Lock (Dizzy)",
+        Gloria: 2,
+        Honra: 4,
+        Chi: 2,
+        ForcaVontade: 6,
+        Saude: 12,
+        Divisao: "Tradicional",
+        Posto: 3
+    };
+    return personagem;
+}
+
+let npc = SayidJarrah();
+
+npc = calcPC(npc);

@@ -9,22 +9,21 @@ function Belger() {
     const tecnicas = [newCaracteristica("Bastão", 5),newCaracteristica("Pistola", 5)];
     const armas = ["Bastão"];
 
-    const npc =
-    {
+    const npc = {
         Nome: "Edi E.",
         Estilo: "Forças Especiais",
-        Conceito: "Policial Corrupto",
-        Assinatura: "Cospe o Chiclete",
         Jogador: "NPC",
+        Assinatura: "Cospe o Chiclete",
+        Conceito: "Policial Corrupto",
         Cronica: "Final Fight 1",
-        Time: "Mad Gear",
         Equipe: "Mad Gear",
+        Time: "Mad Gear",
         Forca: 4,
         Destreza: 4,
         Vigor: 5,
         Carisma: 4,
-        Aparencia: 1,
         Manipulacao: 5,
+        Aparencia: 1,
         Percepcao: 3,
         Inteligencia: 3,
         Raciocinio: 4,
@@ -44,8 +43,9 @@ function Belger() {
         Computador: 2,
         Investigacao: 4,
         Medicina: 3,
-        Misterios:0,
+        Misterios: 0,
         Estilos: 2,
+        Antecedentes: antecedentes,
         Soco: 3,
         Chute: 2,
         Bloqueio: 5,
@@ -53,17 +53,16 @@ function Belger() {
         Esportes: 3,
         Foco: 0,
         NovasTecnicas: tecnicas,
-        Antecedentes: antecedentes,
         Armas: armas,
         ManobrasEspeciais: "Jump, Buffalo Punch, Triple Strike",
         Combos: "Jump + Bastão Fierce para Bastão Strong (Dizzy), Bastão Jab para Bastão Jab para Bastão Berserk (Dizzy), Bastão Strong para Bastão Strong para Bastão Berserk (Dizzy)",
+        Gloria: 6,
+        Honra: 1,
         Chi: 1,
         ForcaVontade: 7,
         Saude: 14,
-        Gloria: 6,
-        Honra: 1,
-        Posto: 4,
-        Divisao: "Duelistas"
+        Divisao: "Duelistas",
+        Posto: 4
     };
     return npc;
 }

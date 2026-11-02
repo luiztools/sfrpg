@@ -6,17 +6,16 @@ function RainUMK3() {
     const tecnicas = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Rain",
         Estilo: "Kung Fu",
         Escola: "Outworld",
+        Jogador: "NPC",
+        Assinatura: "Levanta o Braço",
+        Conceito: "Elemental da Água",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Outworld",
         Time: "Outworld",
-        Conceito: "Elemental da Água",
-        Assinatura: "Levanta o Braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -53,15 +52,15 @@ function RainUMK3() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Lightning, Shock Treatment, God Invocation",
+        Combos: "Jab para Power Uppercut (Dizzy); Short para Forward para Roundhouse (Dizzy); Forward para Forward para Foot Sweep (Dizzy); Jab para Jab para Power Uppercut (Dizzy); Jab para Jab para Forward (dizzy)",
         Gloria: 3,
         Honra: 7,
         Chi: 10,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Lightning, Shock Treatment, God Invocation",
-        Combos: "Jab para Power Uppercut (Dizzy); Short para Forward para Roundhouse (Dizzy); Forward para Forward para Foot Sweep (Dizzy); Jab para Jab para Power Uppercut (Dizzy); Jab para Jab para Forward (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -74,17 +73,16 @@ function RainMKX() {
     const tecnicas = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Rain",
         Estilo: "Kung Fu",
         Escola: "Outworld",
+        Jogador: "NPC",
+        Assinatura: "Levanta o Braço",
+        Conceito: "Elemental da Água",
+        Cronica: "Mortal Kombat X",
         Equipe: "Outworld",
         Time: "Outworld",
-        Conceito: "Elemental da Água",
-        Assinatura: "Levanta o Braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -121,15 +119,15 @@ function RainMKX() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Lightning, Shock Treatment, God Invocation, Drench, Elemental Stride, Sense Element, Pool, Envelop, Psychokinetic Channeling, Double Hit Kick, Pile Driver",
+        Combos: "Jab para Power Uppercut (Dizzy); Short para Forward para Roundhouse (Dizzy); Forward para Forward para Foot Sweep (Dizzy); Jab para Jab para Power Uppercut (Dizzy); Jab para Jab para Forward (dizzy); Bloqueio para Pile Driver",
         Gloria: 3,
         Honra: 7,
         Chi: 10,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Lightning, Shock Treatment, God Invocation, Drench, Elemental Stride, Sense Element, Pool, Envelop, Psychokinetic Channeling, Double Hit Kick, Pile Driver",
-        Combos: "Jab para Power Uppercut (Dizzy); Short para Forward para Roundhouse (Dizzy); Forward para Forward para Foot Sweep (Dizzy); Jab para Jab para Power Uppercut (Dizzy); Jab para Jab para Forward (dizzy); Bloqueio para Pile Driver"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return personagem;
 }

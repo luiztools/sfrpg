@@ -13,17 +13,15 @@
     const armas = [];
     armas[0] = "Espada";
 
-    var Dulcinea =
-    {
+    var Dulcinea = {
         Nome: "Dulcinea",
         Estilo: "Ninjitsu Espanhol",
         Escola: "Dojô de Vega",
-        Equipe: "Shadaloo",
-        Conceito: "Toureira",
         Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
         Assinatura: "Olé!",
+        Conceito: "Toureira",
+        Equipe: "Shadaloo",
+        Time: "Nenhum",
         Forca: 3,
         Destreza: 5,
         Vigor: 3,
@@ -51,17 +49,17 @@
         Bloqueio: 3,
         Apresamento: 1,
         Esportes: 5,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Forward Slide Kick, Back Roll Throw, Backflip, Wall Spring, Tumbling Attack, Jump",
+        Combos: "Jab para Forward Slide Kick; Short para Tumbling Attack",
         Gloria: 5,
         Honra: 3,
-        Divisao: "Duelistas",
-        Posto: 4,
         Chi: 3,
         ForcaVontade: 8,
         Saude: 10,
-        ManobrasEspeciais: "Forward Slide Kick, Back Roll Throw, Backflip, Wall Spring, Tumbling Attack, Jump",
-        Combos: "Jab para Forward Slide Kick; Short para Tumbling Attack",
-        NovasTecnicas: tecnicas,
-        Armas: armas
+        Divisao: "Duelistas",
+        Posto: 4
     };
     return Dulcinea;
 }

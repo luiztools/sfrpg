@@ -5,16 +5,15 @@ function HwoarangTk3() {
     antecedentes[2] = newCaracteristica("Recursos", 2);
     antecedentes[3] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hwoarang",
         Estilo: "Tae Kwon Dô",
         Escola: "Baek Doo San",
-        Equipe: "Exército Coreano",
-        Conceito: "Militar Arrogante",
-        Assinatura: "Chutes no Ar",
         Jogador: "NPC",
+        Assinatura: "Chutes no Ar",
+        Conceito: "Militar Arrogante",
         Cronica: "Tekken 3",
+        Equipe: "Exército Coreano",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,
@@ -49,15 +48,15 @@ function HwoarangTk3() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 2,
-        Divisao: "Livre",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Kippup, Double Hit Punch, Triple Strike, Foot Sweep, Ax Kick, Double Dread Kick, Double-Hit Kick, Hurricane Kick, Foot Sweep, Slide Kick, Stepping Front Kick, Wounded Knee, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Kick Defense, Flamingo Stance",
+        Combos: "Stepping Front Kick para Double Hit Kick para Rhino Horn; Bloqueio para Hurricane Kick para Rhino Horn; Movimento para Slide Kick para Foot Sweep; Bloqueio para Take Down para Foot Sweep; Double Hit Punch para Triple Strike",
         Gloria: 6,
         Honra: 4,
         Chi: 3,
         ForcaVontade: 7,
         Saude: 16,
-        ManobrasEspeciais: "Jump, Kippup, Double Hit Punch, Triple Strike, Foot Sweep, Ax Kick, Double Dread Kick, Double-Hit Kick, Hurricane Kick, Foot Sweep, Slide Kick, Stepping Front Kick, Wounded Knee, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Kick Defense, Flamingo Stance",
-        Combos: "Stepping Front Kick para Double Hit Kick para Rhino Horn; Bloqueio para Hurricane Kick para Rhino Horn; Movimento para Slide Kick para Foot Sweep; Bloqueio para Take Down para Foot Sweep; Double Hit Punch para Triple Strike"
+        Divisao: "Livre",
+        Posto: 7
     };
     return personagem;
 }
@@ -69,16 +68,15 @@ function HwoarangTk4() {
     antecedentes[2] = newCaracteristica("Recursos", 3);
     antecedentes[3] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hwoarang",
         Estilo: "Tae Kwon Dô",
         Escola: "Baek Doo San",
-        Equipe: "Exército Coreano",
-        Conceito: "Militar",
-        Assinatura: "Chutes no Ar",
         Jogador: "NPC",
+        Assinatura: "Chutes no Ar",
+        Conceito: "Militar",
         Cronica: "Tekken 4",
+        Equipe: "Exército Coreano",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -113,15 +111,15 @@ function HwoarangTk4() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 3,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Double Hit Punch, Triple Strike, Foot Sweep, Ax Kick, Double Dread Kick, Double-Hit Kick, Hurricane Kick, Foot Sweep, Slide Kick, Stepping Front Kick, Wounded Knee, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Kick Defense, Flamingo Stance",
+        Combos: "Stepping Front Kick para Double Hit Kick para Rhino Horn; Bloqueio para Hurricane Kick para Rhino Horn; Movimento para Slide Kick para Foot Sweep; Bloqueio para Take Down para Foot Sweep; Double Hit Punch para Triple Strike",
         Gloria: 6,
         Honra: 6,
         Chi: 3,
         ForcaVontade: 8,
         Saude: 18,
-        ManobrasEspeciais: "Jump, Kippup, Double Hit Punch, Triple Strike, Foot Sweep, Ax Kick, Double Dread Kick, Double-Hit Kick, Hurricane Kick, Foot Sweep, Slide Kick, Stepping Front Kick, Wounded Knee, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Kick Defense, Flamingo Stance",
-        Combos: "Stepping Front Kick para Double Hit Kick para Rhino Horn; Bloqueio para Hurricane Kick para Rhino Horn; Movimento para Slide Kick para Foot Sweep; Bloqueio para Take Down para Foot Sweep; Double Hit Punch para Triple Strike"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }
@@ -133,16 +131,15 @@ function HwoarangTk8() {
     antecedentes[2] = newCaracteristica("Recursos", 3);
     antecedentes[3] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hwoarang",
         Estilo: "Tae Kwon Dô",
         Escola: "Baek Do San",
-        Conceito: "Militar",
-        Assinatura: "Chutes no Ar",
-        Equipe: "Exército Coreano",
         Jogador: "NPC",
+        Assinatura: "Chutes no Ar",
+        Conceito: "Militar",
         Cronica: "Tekken 8",
+        Equipe: "Exército Coreano",
         Forca: 5,
         Destreza: 6,
         Vigor: 4,
@@ -177,15 +174,15 @@ function HwoarangTk8() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 3,
-        Divisao: "Livre",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Double Hit Punch, Triple Strike, Foot Sweep, Ax Kick, Double Dread Kick, Double-Hit Kick, Hurricane Kick, Foot Sweep, Slide Kick, Stepping Front Kick, Wounded Knee, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Kick Defense, Flamingo Stance",
+        Combos: "Stepping Front Kick para Double Hit Kick para Rhino Horn; Bloqueio para Hurricane Kick para Rhino Horn; Movimento para Slide Kick para Foot Sweep; Bloqueio para Take Down para Foot Sweep; Double Hit Punch para Triple Strike",
         Gloria: 7,
         Honra: 6,
         Chi: 3,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Double Hit Punch, Triple Strike, Foot Sweep, Ax Kick, Double Dread Kick, Double-Hit Kick, Hurricane Kick, Foot Sweep, Slide Kick, Stepping Front Kick, Wounded Knee, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Kick Defense, Flamingo Stance",
-        Combos: "Stepping Front Kick para Double Hit Kick para Rhino Horn; Bloqueio para Hurricane Kick para Rhino Horn; Movimento para Slide Kick para Foot Sweep; Bloqueio para Take Down para Foot Sweep; Double Hit Punch para Triple Strike"
+        Divisao: "Livre",
+        Posto: 9
     };
     return personagem;
 }

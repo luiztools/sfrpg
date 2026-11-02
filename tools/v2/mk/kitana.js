@@ -16,17 +16,16 @@ function Kitana() {
     const conhecimentos = [];
     conhecimentos[0] = newCaracteristica("Linguística", 1);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kitana",
         Estilo: "Kung Fu",
         Escola: "Shao Kahn",
+        Jogador: "NPC",
+        Assinatura: "Abre os leques",
+        Conceito: "Princesa de Edênia",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Princesa de Edênia",
-        Assinatura: "Abre os leques",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 4,
         Destreza: 7,
         Vigor: 4,
@@ -37,11 +36,12 @@ function Kitana() {
         Inteligencia: 3,
         Raciocinio: 5,
         Prontidao: 5,
-        Perspicacia: 5,
-        Manha: 2,
         Interrogacao: 0,
         Intimidacao: 0,
+        Perspicacia: 5,
+        Manha: 2,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 0,
         Lideranca: 0,
@@ -54,7 +54,6 @@ function Kitana() {
         Medicina: 0,
         Misterios: 5,
         Estilos: 3,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
@@ -65,15 +64,15 @@ function Kitana() {
         Foco: 3,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Wall Spring, Stunning Shout",
+        Combos: "Jab para Short para Leque Fierce; Stunning Shout para Power Uppercut; Forward para Forward para Roundhouse (Dizzy); Jab para Jab para Forward (Dizzy);",
         Gloria: 3,
         Honra: 7,
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Wall Spring, Stunning Shout",
-        Combos: "Jab para Short para Leque Fierce; Stunning Shout para Power Uppercut; Forward para Forward para Roundhouse (Dizzy); Jab para Jab para Forward (Dizzy);"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -96,17 +95,16 @@ function KitanaMKA() {
     const conhecimentos = [];
     conhecimentos[0] = newCaracteristica("Linguística", 1);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kitana",
         Estilo: "Kung Fu",
         Escola: "Shao Kahn",
+        Jogador: "NPC",
+        Assinatura: "Abre os leques",
+        Conceito: "Princesa de Edênia",
+        Cronica: "Mortal Kombat X",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Princesa de Edênia",
-        Assinatura: "Abre os leques",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 4,
         Destreza: 7,
         Vigor: 4,
@@ -117,11 +115,12 @@ function KitanaMKA() {
         Inteligencia: 3,
         Raciocinio: 5,
         Prontidao: 5,
-        Perspicacia: 5,
-        Manha: 2,
         Interrogacao: 0,
         Intimidacao: 0,
+        Perspicacia: 5,
+        Manha: 2,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 0,
         Lideranca: 0,
@@ -134,7 +133,6 @@ function KitanaMKA() {
         Medicina: 0,
         Misterios: 5,
         Estilos: 3,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
@@ -145,21 +143,21 @@ function KitanaMKA() {
         Foco: 3,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Wall Spring, Stunning Shout, Power Uppercut, Dragon Punch, Jumping Shoulder Butt, Missile Reflection, Energy Reflection",
+        Combos: "Jab para Short para Leque Fierce; Stunning Shout para Power Uppercut; Forward para Forward para Roundhouse (Dizzy); Jab para Jab para Forward (Dizzy);",
         Gloria: 3,
         Honra: 7,
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Wall Spring, Stunning Shout, Power Uppercut, Dragon Punch, Jumping Shoulder Butt, Missile Reflection, Energy Reflection",
-        Combos: "Jab para Short para Leque Fierce; Stunning Shout para Power Uppercut; Forward para Forward para Roundhouse (Dizzy); Jab para Jab para Forward (Dizzy);"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return personagem;
 }
 
 let npc;
 if (getParameterByName('age') === 'mkx')
-    npc = calcPC(KitanaMKX());
+    npc = calcPC(KitanaMKA());
 else
     npc = calcPC(Kitana());

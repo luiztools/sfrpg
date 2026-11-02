@@ -9,17 +9,16 @@ function Dave() {
 
     const armas = ["Cassetete"];
 
-    const npc =
-    {
+    const npc = {
         Nome: "Dave",
         Estilo: "Forças Especiais",
-        Conceito: "Policial Corrupto",
         Escola: "Academia de Polícia",
-        Time: "Skull Cross",
-        Equipe: "Skull Cross",
-        Assinatura: "Cassetete na mão",
         Jogador: "NPC",
+        Assinatura: "Cassetete na mão",
+        Conceito: "Policial Corrupto",
         Cronica: "Final Fight 3",
+        Equipe: "Skull Cross",
+        Time: "Skull Cross",
         Forca: 5,
         Destreza: 3,
         Vigor: 5,
@@ -33,11 +32,11 @@ function Dave() {
         Interrogacao: 3,
         Intimidacao: 5,
         Perspicacia: 0,
-        Labia: 3,
         Manha: 3,
+        Labia: 3,
         LutaCega: 0,
-        Lideranca: 3,
         Conducao: 3,
+        Lideranca: 3,
         Seguranca: 1,
         Furtividade: 1,
         Sobrevivencia: 0,
@@ -48,23 +47,23 @@ function Dave() {
         Misterios: 0,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        Armas: armas,
         Soco: 4,
         Chute: 4,
         Bloqueio: 4,
         Apresamento: 3,
         Esportes: 3,
         Foco: 0,
-        Divisao: "Estilo Livre",
-        Posto: 8,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Jump, Air Smash, Ear Pop, Haymaker, Head Butt, Power Uppercut, Wounded Knee, Punch Defense, Kippup, Suplex, Kick Defense",
+        Combos: "Jump + Roundhouse para Cassetete Fierce (Dizzy); Movimento para Air Smash para Wounded Knee (Dizzy); Bloqueio para Suplex para Haymaker (Dizzy);",
         Gloria: 4,
         Honra: 3,
         Chi: 1,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Air Smash, Ear Pop, Haymaker, Head Butt, Power Uppercut, Wounded Knee, Punch Defense, Kippup, Suplex, Kick Defense",
-        Combos: "Jump + Roundhouse para Cassetete Fierce (Dizzy); Movimento para Air Smash para Wounded Knee (Dizzy); Bloqueio para Suplex para Haymaker (Dizzy);",
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return npc;
 }

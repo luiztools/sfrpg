@@ -1,0 +1,67 @@
+﻿function RosaRadioativa() {
+    const antecedentes = [];
+
+    const personagem = {
+        Nome: "Rosa Radioativa",
+        Estilo: "",
+        Escola: "",
+        Jogador: "",
+        Assinatura: "Exala feromônios",
+        Conceito: "Planta Mutante",
+        Cronica: "",
+        Equipe: "",
+        Time: "",
+        Forca: 3,
+        Destreza: 1,
+        Vigor: 4,
+        Carisma: 1,
+        Manipulacao: 1,
+        Aparencia: 1,
+        Percepcao: 1,
+        Inteligencia: 1,
+        Raciocinio: 1,
+        Prontidao: 1,
+        Interrogacao: 0,
+        Intimidacao: 1,
+        Perspicacia: 0,
+        Manha: 0,
+        Labia: 0,
+        NovosTalentos: [],
+        LutaCega: 0,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 0,
+        Furtividade: 1,
+        Sobrevivencia: 1,
+        NovasPericias: [],
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 0,
+        Misterios: 0,
+        Estilos: 0,
+        NovosConhecimentos: [],
+        Antecedentes: antecedentes,
+        Soco: 0,
+        Chute: 0,
+        Bloqueio: 3,
+        Apresamento: 3,
+        Esportes: 0,
+        Foco: 2,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Brain Mulch",
+        Combos: "",
+        Gloria: 0,
+        Honra: 0,
+        Chi: 5,
+        ForcaVontade: 1,
+        Saude: 15,
+        Divisao: "",
+        Posto: 0
+    };
+    return personagem;
+}
+
+let npc = RosaRadioativa();
+
+npc = calcPC(npc);

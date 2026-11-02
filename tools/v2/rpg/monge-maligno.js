@@ -1,0 +1,67 @@
+﻿function MongeMaligno() {
+    const antecedentes = [];
+
+    const personagem = {
+        Nome: "Monge Maligno",
+        Estilo: "Kabaddi",
+        Escola: "Ordem da Escuridão",
+        Jogador: "",
+        Assinatura: "Reverência",
+        Conceito: "Monge da Escuridão",
+        Cronica: "",
+        Equipe: "",
+        Time: "",
+        Forca: 3,
+        Destreza: 3,
+        Vigor: 4,
+        Carisma: 2,
+        Manipulacao: 3,
+        Aparencia: 2,
+        Percepcao: 4,
+        Inteligencia: 3,
+        Raciocinio: 3,
+        Prontidao: 3,
+        Interrogacao: 0,
+        Intimidacao: 0,
+        Perspicacia: 2,
+        Manha: 0,
+        Labia: 2,
+        NovosTalentos: [],
+        LutaCega: 0,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 0,
+        Furtividade: 2,
+        Sobrevivencia: 0,
+        NovasPericias: [],
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 0,
+        Misterios: 5,
+        Estilos: 0,
+        NovosConhecimentos: [],
+        Antecedentes: antecedentes,
+        Soco: 2,
+        Chute: 2,
+        Bloqueio: 3,
+        Apresamento: 0,
+        Esportes: 4,
+        Foco: 5,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Blind, Cobra Charm, Mind Reading, Regeneration, Psychic Rage, Telepathy, Faca Jab (Vel. 9, Dano 4, Mov. 4), Faca Strong (vel. 7, Dano 6, Mov. 4), Faca Fierce (Vel. 6, Dano 8, Mov. 3)",
+        Combos: "",
+        Gloria: 1,
+        Honra: 0,
+        Chi: 5,
+        ForcaVontade: 3,
+        Saude: 10,
+        Divisao: "Livre",
+        Posto: 1
+    };
+    return personagem;
+}
+
+let npc = MongeMaligno();
+
+npc = calcPC(npc);

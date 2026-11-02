@@ -7,17 +7,16 @@ function Reptile() {
     const tecnicas = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Reptile",
         Estilo: "Kung Fu",
         Escola: "Desconhecida",
+        Jogador: "NPC",
+        Assinatura: "Come o oponente",
+        Conceito: "Espião do Outworld",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhum",
-        Conceito: "Espião do Outworld",
-        Assinatura: "Come o oponente",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 5,
         Destreza: 5,
         Vigor: 6,
@@ -54,15 +53,15 @@ function Reptile() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Acid Breath, Slide Kick, Sonic Boom, Throw, Back Roll Throw, Power Uppercut, Bite, Claw, Ripping Bite, Tearing Bite, Jaw Spin",
+        Combos: "Jab para Power Uppercut (dizzy); Jump + Short para Slide Kick para Acid Breath; Sonic Boom para Acid Breath (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (dizzy); Jab para Jab para Power Uppercut (dizzy)",
         Gloria: 5,
         Honra: 0,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Acid Breath, Slide Kick, Sonic Boom, Throw, Back Roll Throw, Power Uppercut, Bite, Claw, Ripping Bite, Tearing Bite, Jaw Spin",
-        Combos: "Jab para Power Uppercut (dizzy); Jump + Short para Slide Kick para Acid Breath; Sonic Boom para Acid Breath (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (dizzy); Jab para Jab para Power Uppercut (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -77,17 +76,16 @@ function ReptileMK4() {
     tecnicas[0] = newCaracteristica("Machado", 3);
     const armas = ["Machado Grande"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Reptile",
         Estilo: "Kung Fu",
         Escola: "Desconhecida",
+        Jogador: "NPC",
+        Assinatura: "Come o oponente",
+        Conceito: "Espião do Outworld",
+        Cronica: "Mortal Kombat 4",
         Equipe: "Nenhuma",
         Time: "Nenhum",
-        Conceito: "Espião do Outworld",
-        Assinatura: "Come o oponente",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 4",
         Forca: 5,
         Destreza: 5,
         Vigor: 6,
@@ -124,15 +122,15 @@ function ReptileMK4() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Acid Breath, Slide Kick, Sonic Boom, Throw, Back Roll Throw, Power Uppercut, Bite, Claw, Ripping Bite, Tearing Bite, Jaw Spin, Spinning Weapon, Dashing Punch, Head Bite, Acid Puke",
+        Combos: "Jab para Power Uppercut (dizzy); Jump + Short para Slide Kick para Acid Breath; Sonic Boom para Acid Breath (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (dizzy); Jab para Jab para Power Uppercut (dizzy)",
         Gloria: 5,
         Honra: 0,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Acid Breath, Slide Kick, Sonic Boom, Throw, Back Roll Throw, Power Uppercut, Bite, Claw, Ripping Bite, Tearing Bite, Jaw Spin, Spinning Weapon, Dashing Punch, Head Bite, Acid Puke",
-        Combos: "Jab para Power Uppercut (dizzy); Jump + Short para Slide Kick para Acid Breath; Sonic Boom para Acid Breath (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (dizzy); Jab para Jab para Power Uppercut (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }

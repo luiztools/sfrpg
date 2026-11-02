@@ -5,17 +5,16 @@ function DudleySF4() {
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Staff", 4);
 
-    var dudley =
-    {
+    var dudley = {
         Nome: "Dudley",
         Estilo: "Boxe",
         Escola: "Nenhuma",
-        Conceito: "Cavalheiro Inglês",
-        Assinatura: "Luvas de Boxe",
-        Cronica: "Street Fighter 4",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
         Jogador: "NPC",
+        Assinatura: "Luvas de Boxe",
+        Conceito: "Cavalheiro Inglês",
+        Cronica: "Street Fighter 4",
+        Equipe: "Nenhuma",
+        Time: "Nenhum",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -43,19 +42,19 @@ function DudleySF4() {
         Antecedentes: antecedentes,
         Soco: 7,
         Chute: 0,
-        Apresamento: 4,
         Bloqueio: 6,
+        Apresamento: 4,
         Esportes: 5,
         Foco: 0,
-        ManobrasEspeciais: "Brain Cracker, Cross Counter, Deflcting Punch, Ducking Straight, Ducking Upper, Fist Sweep, Hyper Fist, Jet Uppercut, Machine Gun Blow, Power Uppercut, Short Swing Blow, Throw, Thunderbolt",
+        ManobrasEspeciais: "Brain Cracker, Cross Counter, Deflecting Punch, Ducking Straight, Ducking Upper, Fist Sweep, Hyper Fist, Jet Uppercut, Machine Gun Blow, Power Uppercut, Short Swing Blow, Throw, Thunderbolt",
         Combos: "Jab para Strong para Fierce (Dizzy); Fist Sweep para Machin Gun Blow (Dizzy); Fist Sweep para Fierce; Fist Sweep para Ducking Upper",
         Gloria: 8,
         Honra: 10,
         Chi: 2,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 9,
-        Divisao: "Tradicional"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return dudley;
 }

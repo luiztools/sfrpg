@@ -6,16 +6,15 @@ function CammySFZ3() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
-    const cammy =
-    {
+    const cammy = {
         Nome: "Killer Bee",
         Estilo: "Forças Especiais",
         Escola: "Shadaloo",
-        Conceito: "Assassina",
-        Assinatura: "Missão completa!",
-        Time: "Dolls",
         Jogador: "NPC",
+        Assinatura: "Missão completa!",
+        Conceito: "Assassina",
         Cronica: "Street Fighter Alpha",
+        Time: "Dolls",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -43,22 +42,22 @@ function CammySFZ3() {
         Medicina: 1,
         Estilos: 4,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 4,
         Chute: 5,
         Bloqueio: 4,
         Apresamento: 3,
         Esportes: 4,
         Foco: 1,
-        Saude: 18,
-        Divisao: "Tradicional",
-        Posto: 8,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
+        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy);",
         Gloria: 7,
         Honra: 2,
         Chi: 4,
         ForcaVontade: 7,
-        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
-        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy);"
+        Saude: 18,
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return cammy;
 }
@@ -72,16 +71,15 @@ function CammySF2() {
     antecedentes[4] = newCaracteristica("Recursos", 3);
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
-    const cammy =
-    {
+    const cammy = {
         Nome: "Cammy",
         Estilo: "Forças Especiais",
         Escola: "Agência MI-6",
-        Conceito: "Agente Especial",
-        Assinatura: "Posa e olha por cima do ombro",
-        Time: "Delta Red",
         Jogador: "NPC",
+        Assinatura: "Posa e olha por cima do ombro",
+        Conceito: "Agente Especial",
         Cronica: "Street Fighter 2",
+        Time: "Delta Red",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -109,22 +107,22 @@ function CammySF2() {
         Medicina: 1,
         Estilos: 4,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 6,
         Bloqueio: 5,
         Apresamento: 4,
         Esportes: 5,
         Foco: 2,
-        Saude: 20,
-        Divisao: "Tradicional",
-        Posto: 9,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
+        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);",
         Gloria: 8,
         Honra: 6,
         Chi: 5,
         ForcaVontade: 8,
-        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
-        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);"
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return cammy;
 }
@@ -138,16 +136,15 @@ function CammySF5() {
     antecedentes[4] = newCaracteristica("Recursos", 3);
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
-    const cammy =
-    {
+    const cammy = {
         Nome: "Cammy",
         Estilo: "Forças Especiais",
         Escola: "Agência MI-6",
-        Conceito: "Agente Especial",
-        Assinatura: "Posa e olha por cima do ombro",
-        Time: "Delta Red",
         Jogador: "NPC",
+        Assinatura: "Posa e olha por cima do ombro",
+        Conceito: "Agente Especial",
         Cronica: "Street Fighter 5",
+        Time: "Delta Red",
         Forca: 4,
         Destreza: 6,
         Vigor: 5,
@@ -175,22 +172,22 @@ function CammySF5() {
         Medicina: 1,
         Estilos: 4,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 6,
         Bloqueio: 5,
         Apresamento: 4,
         Esportes: 5,
         Foco: 2,
-        Saude: 20,
-        Divisao: "Tradicional",
-        Posto: 10,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
+        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);",
         Gloria: 9,
         Honra: 7,
         Chi: 6,
         ForcaVontade: 9,
-        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
-        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);"
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return cammy;
 }
@@ -204,16 +201,15 @@ function CammySF6() {
     antecedentes[4] = newCaracteristica("Recursos", 3);
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
-    const cammy =
-    {
+    const cammy = {
         Nome: "Cammy",
         Estilo: "Forças Especiais",
         Escola: "Agência MI-6",
-        Conceito: "Agente Especial",
-        Assinatura: "Posa e olha por cima do ombro",
-        Time: "Delta Red",
         Jogador: "NPC",
+        Assinatura: "Posa e olha por cima do ombro",
+        Conceito: "Agente Especial",
         Cronica: "Street Fighter 6",
+        Time: "Delta Red",
         Forca: 5,
         Destreza: 6,
         Vigor: 5,
@@ -241,22 +237,22 @@ function CammySF6() {
         Medicina: 1,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 6,
         Bloqueio: 5,
         Apresamento: 4,
         Esportes: 6,
         Foco: 2,
-        Saude: 20,
-        Divisao: "Tradicional",
-        Posto: 10,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
+        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);",
         Gloria: 10,
         Honra: 8,
         Chi: 7,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
-        Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);"
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return cammy;
 }

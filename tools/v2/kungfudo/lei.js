@@ -4,14 +4,13 @@ function LeiKungFuDoFighting() {
     antecedentes[1] = newCaracteristica("Sensei", 2);
     antecedentes[2] = newCaracteristica("Recursos", 1);
 
-    const lei =
-    {
+    const lei = {
         Nome: "Lei",
         Estilo: "Wu Shu",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Vira de costas",
         Jogador: "NPC",
+        Assinatura: "Vira de costas",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 2,
         Destreza: 5,
@@ -47,15 +46,15 @@ function LeiKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 3,
         Foco: 3,
+        ManobrasEspeciais: "Energy Ball, Jump, Flash Kick",
+        Combos: "Foward para Thunder Kick;",
         Gloria: 3,
         Honra: 0,
         Chi: 6,
         ForcaVontade: 6,
         Saude: 10,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Energy Ball, Jump, Flash Kick",
-        Combos: "Foward para Thunder Kick;",
+        Posto: 1
     };
 
     return lei;

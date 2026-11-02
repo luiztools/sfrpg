@@ -7,14 +7,13 @@ function GeeseKoF() {
     antecedentes[4] = newCaracteristica("Staff", 5);
     antecedentes[5] = newCaracteristica("Fama", 2);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Geese Howard",
         Estilo: "Aikidô",
         Escola: "Tung Fu Hue",
-        Conceito: "Rei do Crime",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Rei do Crime",
         Cronica: "King of Fighters",
         Equipe: "Howard Connection",
         Time: "Howard Connection",
@@ -52,15 +51,15 @@ function GeeseKoF() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 6,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Power Uppercut, Jump, Kippup, Throw, Double-Hit Kick, Foot Sweep, Face Slam, Flying Fireball, Fireball, Punch Defense, Kick Defense,Throw, Shock Treatment, San He, Breakfall, Burn Knuckle, Grappling Defense, Air Throw, Spinning Back Fist, Improved Fireball",
+        Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment",
         Gloria: 10,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Power Uppercut, Jump, Kippup, Throw, Double-Hit Kick, Foot Sweep, Face Slam, Flying Fireball, Fireball, Punch Defense, Kick Defense,Throw, Shock Treatment, San He, Breakfall, Burn Knuckle, Grappling Defense, Air Throw, Spinning Back Fist, Improved Fireball",
-        Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }
@@ -74,14 +73,13 @@ function GeeseFF() {
     antecedentes[4] = newCaracteristica("Staff", 5);
     antecedentes[5] = newCaracteristica("Fama", 2);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Geese Howard",
         Estilo: "Aikidô",
         Escola: "Tung Fu Hue",
-        Conceito: "Rei do Crime",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Rei do Crime",
         Cronica: "Fatal Fury",
         Equipe: "Howard Connection",
         Time: "Howard Connection",
@@ -119,15 +117,15 @@ function GeeseFF() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 5,
-        Divisao: "Livre",
-        Posto: 7,
+        ManobrasEspeciais: "Power Uppercut, Jump, Kippup, Throw, Double-Hit Kick, Foot Sweep, Face Slam, Flying Fireball, Fireball, Punch Defense, Kick Defense,Throw, Shock Treatment, San He, Breakfall, Burn Knuckle, Grappling Defense, Air Throw, Spinning Back Fist, Improved Fireball",
+        Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment",
         Gloria: 9,
         Honra: 0,
         Chi: 9,
         ForcaVontade: 10,
         Saude: 18,
-        ManobrasEspeciais: "Power Uppercut, Jump, Kippup, Throw, Double-Hit Kick, Foot Sweep, Face Slam, Flying Fireball, Fireball, Punch Defense, Kick Defense,Throw, Shock Treatment, San He, Breakfall, Burn Knuckle, Grappling Defense, Air Throw, Spinning Back Fist, Improved Fireball",
-        Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment"
+        Divisao: "Livre",
+        Posto: 7
     };
     return personagem;
 }
@@ -141,14 +139,13 @@ function GeeseAoF() {
     antecedentes[4] = newCaracteristica("Staff", 5);
     antecedentes[5] = newCaracteristica("Fama", 1);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Geese Howard",
         Estilo: "Aikidô",
         Escola: "Tung Fu Hue",
-        Conceito: "Rei do Crime",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Rei do Crime",
         Cronica: "Art of Fighting",
         Equipe: "Howard Connection",
         Time: "Howard Connection",
@@ -186,15 +183,15 @@ function GeeseAoF() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 4,
-        Divisao: "Livre",
-        Posto: 6,
+        ManobrasEspeciais: "Power Uppercut, Jump, Kippup, Throw, Double-Hit Kick, Foot Sweep, Face Slam, Flying Fireball, Fireball, Punch Defense, Kick Defense,Throw, Shock Treatment, San He, Breakfall, Burn Knuckle, Grappling Defense, Air Throw, Spinning Back Fist, Improved Fireball",
+        Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment",
         Gloria: 8,
         Honra: 0,
         Chi: 8,
         ForcaVontade: 10,
         Saude: 15,
-        ManobrasEspeciais: "Power Uppercut, Jump, Kippup, Throw, Double-Hit Kick, Foot Sweep, Face Slam, Flying Fireball, Fireball, Punch Defense, Kick Defense,Throw, Shock Treatment, San He, Breakfall, Burn Knuckle, Grappling Defense, Air Throw, Spinning Back Fist, Improved Fireball",
-        Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment"
+        Divisao: "Livre",
+        Posto: 6
     };
     return personagem;
 }

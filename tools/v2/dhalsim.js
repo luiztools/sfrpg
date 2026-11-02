@@ -5,14 +5,16 @@ function DhalsimSF2() {
     antecedentes[2] = newCaracteristica("Arena", 5);
     antecedentes[3] = newCaracteristica("Recursos", 1);
     antecedentes[4] = newCaracteristica("Staff", 2);
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 2);
     
-    const dhalsim =
-    {
+    const dhalsim = {
         Nome: "Dhalsim",
         Estilo: "Kabaddi",
-        Conceito: "Mestre Yoga",
-        Assinatura: "Levita",
         Jogador: "NPC",
+        Assinatura: "Levita",
+        Conceito: "Mestre Yoga",
         Cronica: "Street Fighter 2",
         Forca: 4,
         Destreza: 3,
@@ -27,6 +29,7 @@ function DhalsimSF2() {
         Intimidacao: 4,
         Perspicacia: 5,
         Labia: 2,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Lideranca: 2,
         Furtividade: 3,
@@ -43,15 +46,15 @@ function DhalsimSF2() {
         Apresamento: 4,
         Esportes: 3,
         Foco: 6,
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
+        Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);",
         Gloria: 6,
         Honra: 9,
-        Posto: 9,
-        Divisao: "Estilo Livre",
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
-        Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);"
+        Divisao: "Estilo Livre",
+        Posto: 9
     };
     return dhalsim;
 }
@@ -64,13 +67,12 @@ function DhalsimSFZ3() {
     antecedentes[3] = newCaracteristica("Recursos", 1);
     antecedentes[4] = newCaracteristica("Staff", 1);
     
-    const dhalsim =
-    {
+    const dhalsim = {
         Nome: "Dhalsim",
         Estilo: "Kabaddi",
-        Conceito: "Mestre Yoga",
-        Assinatura: "Levita",
         Jogador: "NPC",
+        Assinatura: "Levita",
+        Conceito: "Mestre Yoga",
         Cronica: "Street Fighter Alpha",
         Forca: 4,
         Destreza: 3,
@@ -101,15 +103,15 @@ function DhalsimSFZ3() {
         Apresamento: 4,
         Esportes: 3,
         Foco: 5,
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
+        Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);",
         Gloria: 5,
         Honra: 8,
-        Posto: 8,
-        Divisao: "Estilo Livre",
         Chi: 10,
         ForcaVontade: 9,
         Saude: 18,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
-        Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);"
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return dhalsim;
 }
@@ -121,14 +123,16 @@ function DhalsimSF5() {
     antecedentes[2] = newCaracteristica("Arena", 5);
     antecedentes[3] = newCaracteristica("Recursos", 2);
     antecedentes[4] = newCaracteristica("Staff", 2);
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 3);
     
-    const dhalsim =
-    {
+    const dhalsim = {
         Nome: "Dhalsim",
         Estilo: "Kabaddi",
-        Conceito: "Mestre Yoga",
-        Assinatura: "Levita",
         Jogador: "NPC",
+        Assinatura: "Levita",
+        Conceito: "Mestre Yoga",
         Cronica: "Street Fighter 5",
         Forca: 4,
         Destreza: 4,
@@ -143,6 +147,7 @@ function DhalsimSF5() {
         Intimidacao: 4,
         Perspicacia: 6,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Lideranca: 2,
         Furtividade: 4,
@@ -159,15 +164,15 @@ function DhalsimSF5() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 6,
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
+        Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);",
         Gloria: 7,
         Honra: 10,
-        Posto: 10,
-        Divisao: "Estilo Livre",
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
-        Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);"
+        Divisao: "Estilo Livre",
+        Posto: 10
     };
     return dhalsim;
 }
@@ -179,14 +184,16 @@ function DhalsimSF6() {
     antecedentes[2] = newCaracteristica("Arena", 5);
     antecedentes[3] = newCaracteristica("Recursos", 2);
     antecedentes[4] = newCaracteristica("Staff", 3);
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 4);
     
-    const dhalsim =
-    {
+    const dhalsim = {
         Nome: "Dhalsim",
         Estilo: "Kabaddi",
-        Conceito: "Mestre Yoga",
-        Assinatura: "Levita",
         Jogador: "NPC",
+        Assinatura: "Levita",
+        Conceito: "Mestre Yoga",
         Cronica: "Street Fighter 6",
         Forca: 4,
         Destreza: 4,
@@ -201,6 +208,7 @@ function DhalsimSF6() {
         Intimidacao: 4,
         Perspicacia: 6,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Lideranca: 3,
         Furtividade: 4,
@@ -217,15 +225,15 @@ function DhalsimSF6() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 6,
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
+        Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);",
         Gloria: 8,
         Honra: 10,
-        Posto: 10,
-        Divisao: "Estilo Livre",
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport",
-        Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);"
+        Divisao: "Estilo Livre",
+        Posto: 10
     };
     return dhalsim;
 }

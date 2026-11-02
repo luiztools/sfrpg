@@ -6,19 +6,21 @@ function CharlieZ3() {
     antecedentes[3] = newCaracteristica("Contatos", 5);
     antecedentes[4] = newCaracteristica("Aliados", 3);
 
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 3);
+
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
     
     const pericias = [];
     
-    const charlie =
-    {
+    const charlie = {
         Nome: "Charles 'Charlie' Nash",
         Estilo: "Forças Especiais",
-        Assinatura: "Ajeita os óculos",
         Escola: "USAF",
-        Conceito: "Soldado",
         Jogador: "NPC",
+        Assinatura: "Ajeita os óculos",
+        Conceito: "Soldado",
         Cronica: "Street Fighter Alpha",
         Equipe: "USAF",
         Forca: 5,
@@ -36,21 +38,22 @@ function CharlieZ3() {
         Perspicacia: 3,
         Manha: 4,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 2,
         Conducao: 5,
         Lideranca: 5,
         Seguranca: 4,
         Furtividade: 4,
         Sobrevivencia: 5,
+        NovasPericias: pericias,
         Arena: 1,
         Computador: 3,
         Investigacao: 5,
         Medicina: 3,
         Misterios: 2,
         Estilos: 3,
-        NovosTalentos: [],
         NovosConhecimentos: [],
-        NovasPericias: pericias,
+        Antecedentes: antecedentes,
         Soco: 5,
         Chute: 5,
         Bloqueio: 5,
@@ -58,16 +61,15 @@ function CharlieZ3() {
         Esportes: 4,
         Foco: 5,
         NovasTecnicas: tecnicas,
-        Antecedentes: antecedentes,
-        Saude: 18,
-        ForcaVontade: 10,
-        Chi: 8,
-        Honra: 8,
-        Gloria: 7,
-        Posto: 8,
-        Divisao: "Estilo Livre",
         ManobrasEspeciais: "Jump, Foot Sweep, Somersault Kick, Suplex, Air Suplex, Knee Basher, Throw, Air Throw, Spinning Back Fist, Flying Knee Thrust, Flash Kick, Power Uppercut, Sonic Boom",
-        Combos: "Bloqueio para Flash Kick; Bloqueio para Foot Sweep; Bloqueio para Knee Basher (Dizzy); Flying Knee Thrust para Spinning Back Fist"
+        Combos: "Bloqueio para Flash Kick; Bloqueio para Foot Sweep; Bloqueio para Knee Basher (Dizzy); Flying Knee Thrust para Spinning Back Fist",
+        Gloria: 7,
+        Honra: 8,
+        Chi: 8,
+        ForcaVontade: 10,
+        Saude: 18,
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return charlie;
 }
@@ -80,19 +82,21 @@ function CharlieSF5() {
     antecedentes[3] = newCaracteristica("Aliados", 2);
     antecedentes[4] = newCaracteristica("Cibernetico", 3);
 
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 3);
+
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
     
     const pericias = [];
     
-    const charlie =
-    {
+    const charlie = {
         Nome: "Charles 'Charlie' Nash",
         Estilo: "Forças Especiais",
-        Assinatura: "Ajeita os óculos",
         Escola: "USAF",
-        Conceito: "Agente sem memória",
         Jogador: "NPC",
+        Assinatura: "Ajeita os óculos",
+        Conceito: "Agente sem memória",
         Cronica: "Street Fighter 5",
         Equipe: "Sociedade Secreta",
         Forca: 5,
@@ -110,21 +114,22 @@ function CharlieSF5() {
         Perspicacia: 3,
         Manha: 4,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 3,
         Conducao: 5,
         Lideranca: 5,
         Seguranca: 5,
         Furtividade: 5,
         Sobrevivencia: 5,
+        NovasPericias: pericias,
         Arena: 2,
         Computador: 4,
         Investigacao: 5,
         Medicina: 3,
         Misterios: 2,
         Estilos: 4,
-        NovosTalentos: [],
         NovosConhecimentos: [],
-        NovasPericias: pericias,
+        Antecedentes: antecedentes,
         Soco: 5,
         Chute: 5,
         Bloqueio: 5,
@@ -132,16 +137,15 @@ function CharlieSF5() {
         Esportes: 4,
         Foco: 5,
         NovasTecnicas: tecnicas,
-        Antecedentes: antecedentes,
-        Saude: 20,
-        ForcaVontade: 10,
-        Chi: 9,
-        Honra: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Sonic Scythe, Somersault Kick, Suplex, Air Suplex, Knee Basher, Throw, Air Throw, Spinning Back Fist, Flying Knee Thrust, Flash Kick, Power Uppercut, Sonic Boom",
+        Combos: "Bloqueio para Flash Kick; Bloqueio para Foot Sweep; Bloqueio para Knee Basher (Dizzy); Flying Knee Thrust para Spinning Back Fist",
         Gloria: 6,
-        Posto: 7,
+        Honra: 7,
+        Chi: 9,
+        ForcaVontade: 10,
+        Saude: 20,
         Divisao: "Estilo Livre",
-        ManobrasEspeciais: "Jump, Foot Sweep, Somersault Kick, Suplex, Air Suplex, Knee Basher, Throw, Air Throw, Spinning Back Fist, Flying Knee Thrust, Flash Kick, Power Uppercut, Sonic Boom",
-        Combos: "Bloqueio para Flash Kick; Bloqueio para Foot Sweep; Bloqueio para Knee Basher (Dizzy); Flying Knee Thrust para Spinning Back Fist"
+        Posto: 7
     };
     return charlie;
 }

@@ -4,14 +4,13 @@ function MikeKungFuDoFighting() {
     antecedentes[1] = newCaracteristica("Fama", 2);
     antecedentes[2] = newCaracteristica("Empresário", 2);
 
-    const mike =
-    {
+    const mike = {
         Nome: "Mike",
         Estilo: "Boxe",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Gancho no ar",
         Jogador: "NPC",
+        Assinatura: "Gancho no ar",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 4,
         Destreza: 2,
@@ -47,15 +46,15 @@ function MikeKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 0,
         Foco: 3,
+        ManobrasEspeciais: "Dashing Punch, Sonic Boom, Jump",
+        Combos: "",
         Gloria: 3,
         Honra: 0,
         Chi: 3,
         ForcaVontade: 6,
         Saude: 10,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Dashing Punch, Sonic Boom, Jump",
-        Combos: "",
+        Posto: 1
     };
 
     return mike;

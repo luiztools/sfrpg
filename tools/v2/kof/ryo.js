@@ -5,14 +5,13 @@ function RyoKoF() {
     antecedentes[2] = newCaracteristica("Sensei", 3);
     antecedentes[3] = newCaracteristica("Mascote", 1);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Ryo Sakazaki",
         Estilo: "Karatê Rindoukan",
         Escola: "Dojô Sakazaki",
-        Conceito: "Estudante",
-        Assinatura: "Cumprimento oriental",
         Jogador: "NPC",
+        Assinatura: "Cumprimento oriental",
+        Conceito: "Estudante",
         Cronica: "King of Fighters",
         Equipe: "Clã Sakazaki",
         Time: "Art of Fighting",
@@ -50,15 +49,15 @@ function RyoKoF() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 6,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Punch Defense, Kick Defense, Hyper Fist, Power Uppercut, Throw, Fireball, Dragon Punch, Jump, Kippup, Hurricane Kick, Flying Fireball, Breakfall, Tameshiwari, Foot Sweep, Improved Fireball, Triple Strike",
+        Combos: "Power Uppercut – Fireball; Foot Sweep - Throw - Improved Fireball (Dizzy); Power Uppercut - Dragon Punch; Short - Short - Foot Sweep (Dizzy); Jab - Strong - Power Uppercut (Dizzy); Movimento - Hyper Fist - Dragon Punch (dizzy)",
         Gloria: 6,
         Honra: 9,
         Chi: 10,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Punch Defense, Kick Defense, Hyper Fist, Power Uppercut, Throw, Fireball, Dragon Punch, Jump, Kippup, Hurricane Kick, Flying Fireball, Breakfall, Tameshiwari, Foot Sweep, Improved Fireball, Triple Strike",
-        Combos: "Power Uppercut – Fireball; Foot Sweep - Throw - Improved Fireball (Dizzy); Power Uppercut - Dragon Punch; Short - Short - Foot Sweep (Dizzy); Jab - Strong - Power Uppercut (Dizzy); Movimento - Hyper Fist - Dragon Punch (dizzy)"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }
@@ -70,14 +69,13 @@ function RyoAoF() {
     antecedentes[2] = newCaracteristica("Sensei", 3);
     antecedentes[3] = newCaracteristica("Mascote", 1);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Ryo Sakazaki",
         Estilo: "Karatê Rindoukan",
         Escola: "Dojô Sakazaki",
-        Conceito: "Estudante",
-        Assinatura: "Cumprimento oriental",
         Jogador: "NPC",
+        Assinatura: "Cumprimento oriental",
+        Conceito: "Estudante",
         Cronica: "Art of Fighting",
         Equipe: "Clã Sakazaki",
         Time: "Art of Fighting",
@@ -115,15 +113,15 @@ function RyoAoF() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 5,
-        Divisao: "Livre",
-        Posto: 6,
+        ManobrasEspeciais: "Punch Defense, Kick Defense, Hyper Fist, Power Uppercut, Throw, Fireball, Dragon Punch, Jump, Kippup, Hurricane Kick, Flying Fireball, Breakfall, Tameshiwari, Foot Sweep, Improved Fireball, Triple Strike",
+        Combos: "Power Uppercut – Fireball; Foot Sweep - Throw - Improved Fireball (Dizzy); Power Uppercut - Dragon Punch; Short - Short - Foot Sweep (Dizzy); Jab - Strong - Power Uppercut (Dizzy); Movimento - Hyper Fist - Dragon Punch (dizzy)",
         Gloria: 4,
         Honra: 7,
         Chi: 8,
         ForcaVontade: 9,
         Saude: 18,
-        ManobrasEspeciais: "Punch Defense, Kick Defense, Hyper Fist, Power Uppercut, Throw, Fireball, Dragon Punch, Jump, Kippup, Hurricane Kick, Flying Fireball, Breakfall, Tameshiwari, Foot Sweep, Improved Fireball, Triple Strike",
-        Combos: "Power Uppercut – Fireball; Foot Sweep - Throw - Improved Fireball (Dizzy); Power Uppercut - Dragon Punch; Short - Short - Foot Sweep (Dizzy); Jab - Strong - Power Uppercut (Dizzy); Movimento - Hyper Fist - Dragon Punch (dizzy)"
+        Divisao: "Livre",
+        Posto: 6
     };
     return personagem;
 }

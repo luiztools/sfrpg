@@ -1,20 +1,20 @@
 function KenZ3() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 3);
     antecedentes[1] = newCaracteristica("Arena", 2);
     antecedentes[2] = newCaracteristica("Contatos", 4);
     antecedentes[3] = newCaracteristica("Fama", 3);
     antecedentes[4] = newCaracteristica("Recursos", 4);
     antecedentes[5] = newCaracteristica("Sensei", 5);
-    var ken =
-    {
+    
+    const ken = {
         Nome: "Ken Masters",
         Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
-        Conceito: "Playboy",
-        Assinatura: "Sinal de vitória com a mão",
-        Cronica: "Street Fighter Alpha",
         Jogador: "NPC",
+        Assinatura: "Sinal de vitória com a mão",
+        Conceito: "Playboy",
+        Cronica: "Street Fighter Alpha",
         Equipe: "Masters Corporation",
         Forca: 5,
         Destreza: 5,
@@ -50,36 +50,36 @@ function KenZ3() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 5,
-        Divisao: "Estilo Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup",
+        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy);",
         Gloria: 9,
         Honra: 7,
         Chi: 8,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup",
-        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy);"
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return ken;
 }
 
 function KenSF2() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Arena", 3);
     antecedentes[2] = newCaracteristica("Contatos", 5);
     antecedentes[3] = newCaracteristica("Fama", 4);
     antecedentes[4] = newCaracteristica("Recursos", 4);
     antecedentes[5] = newCaracteristica("Sensei", 5);
-    var ken =
-    {
+
+    const ken = {
         Nome: "Ken Masters",
         Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
-        Conceito: "Playboy",
-        Assinatura: "Sinal de vitória com a mão",
-        Cronica: "Street Fighter 2",
         Jogador: "NPC",
+        Assinatura: "Sinal de vitória com a mão",
+        Conceito: "Playboy",
+        Cronica: "Street Fighter 2",
         Equipe: "Masters Corporation",
         Forca: 5,
         Destreza: 5,
@@ -115,36 +115,39 @@ function KenSF2() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 5,
-        Divisao: "Estilo Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup",
+        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep;",
         Gloria: 10,
         Honra: 8,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup",
-        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep;"
+        Divisao: "Estilo Livre",
+        Posto: 10
     };
     return ken;
 }
 
 function KenSF5() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 4);
     antecedentes[2] = newCaracteristica("Contatos", 5);
     antecedentes[3] = newCaracteristica("Fama", 5);
     antecedentes[4] = newCaracteristica("Recursos", 4);
     antecedentes[5] = newCaracteristica("Sensei", 5);
-    var ken =
-    {
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 1);
+
+    const ken = {
         Nome: "Ken Masters",
         Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
-        Conceito: "Magnata dos Negócios",
-        Assinatura: "Sinal de vitória com a mão",
-        Cronica: "Street Fighter 5",
         Jogador: "NPC",
+        Assinatura: "Sinal de vitória com a mão",
+        Conceito: "Magnata dos Negócios",
+        Cronica: "Street Fighter 5",
         Equipe: "Masters Corporation",
         Forca: 5,
         Destreza: 5,
@@ -161,6 +164,7 @@ function KenSF5() {
         Perspicacia: 2,
         Manha: 3,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 4,
         Conducao: 4,
         Lideranca: 3,
@@ -180,36 +184,39 @@ function KenSF5() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 5,
-        Divisao: "Estilo Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Knee Basher, Double Hit Kick",
+        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep;",
         Gloria: 10,
         Honra: 9,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Knee Basher, Double Hit Kick",
-        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep;"
+        Divisao: "Estilo Livre",
+        Posto: 10
     };
     return ken;
 }
 
 function KenSF6() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 5);
     antecedentes[2] = newCaracteristica("Contatos", 5);
     antecedentes[3] = newCaracteristica("Fama", 5);
     antecedentes[4] = newCaracteristica("Recursos", 5);
     antecedentes[5] = newCaracteristica("Sensei", 5);
-    var ken =
-    {
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 2);
+
+    const ken = {
         Nome: "Ken Masters",
         Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
-        Conceito: "Magnata dos Negócios",
-        Assinatura: "Sinal de vitória com a mão",
-        Cronica: "Street Fighter 6",
         Jogador: "NPC",
+        Assinatura: "Sinal de vitória com a mão",
+        Conceito: "Magnata dos Negócios",
+        Cronica: "Street Fighter 6",
         Equipe: "Masters Corporation",
         Forca: 5,
         Destreza: 5,
@@ -226,6 +233,7 @@ function KenSF6() {
         Perspicacia: 3,
         Manha: 3,
         Labia: 4,
+        NovosTalentos: talentos,
         LutaCega: 4,
         Conducao: 4,
         Lideranca: 3,
@@ -245,15 +253,15 @@ function KenSF6() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 5,
-        Divisao: "Estilo Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Light Feet, Knee Basher, Double Hit Kick",
+        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep;",
         Gloria: 10,
         Honra: 10,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Light Feet, Knee Basher, Double Hit Kick",
-        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep;"
+        Divisao: "Estilo Livre",
+        Posto: 10
     };
     return ken;
 }

@@ -1,0 +1,56 @@
+﻿function AlNayBinZayed() {
+    const personagem = {
+        Nome: "Al-Nay Bin Zayed",
+        Estilo: "Baraqah",
+        Escola: "Templo de Abu Dhabi",
+        Assinatura: "Honra acima de tudo!",
+        Conceito: "Guerreiro Puro",
+        Forca: 5,
+        Destreza: 5,
+        Vigor: 5,
+        Carisma: 4,
+        Manipulacao: 1,
+        Aparencia: 5,
+        Percepcao: 4,
+        Inteligencia: 4,
+        Raciocinio: 4,
+        Prontidao: 4,
+        Intimidacao: 3,
+        Perspicacia: 4,
+        NovosTalentos: [],
+        LutaCega: 5,
+        Lideranca: 5,
+        Seguranca: 2,
+        Furtividade: 5,
+        Sobrevivencia: 5,
+        NovasPericias: [],
+        Arena: 5,
+        Investigacao: 1,
+        Medicina: 3,
+        Misterios: 5,
+        Estilos: 5,
+        NovosConhecimentos: [],
+        Antecedentes: [newCaracteristica("Empresario", 5), newCaracteristica("Arena", 4), newCaracteristica("Fama", 2), newCaracteristica("Sensei", 5)],
+        Soco: 5,
+        Chute: 5,
+        Bloqueio: 4,
+        Apresamento: 3,
+        Esportes: 3,
+        Foco: 5,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Zen no Mind, Power Uppercut, Foot Sweep, Psychokinetic Channeling, Hundred Hand Slap, Missile Reflection, Energy Reflection, Throw, Regeneration, Jump, Kippup",
+        Combos: "Hundred Hand Slap para Foot Sweep; Jab para Throw (Dizzy);",
+        Gloria: 5,
+        Honra: 10,
+        Chi: 8,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Estilo Livre",
+        Posto: 8
+    };
+    return personagem;
+}
+
+let npc = AlNayBinZayed();
+
+npc = calcPC(npc);

@@ -7,14 +7,13 @@ function EddyTekken3() {
     antecedentes[4] = newCaracteristica("Staff", 3);
     antecedentes[5] = newCaracteristica("Sensei", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Eduardo \"Eddy\" Gordo",
         Estilo: "Capoeira",
         Escola: "Prisão",
-        Conceito: "Dançarino",
-        Assinatura: "Ginga",
         Jogador: "NPC",
+        Assinatura: "Ginga",
+        Conceito: "Dançarino",
         Cronica: "Tekken 3",
         Forca: 4,
         Destreza: 5,
@@ -50,15 +49,15 @@ function EddyTekken3() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
+        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;",
         Gloria: 2,
         Honra: 3,
         Chi: 5,
         ForcaVontade: 7,
         Saude: 16,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;"
+        Divisao: "Tradicional",
+        Posto: 7
     };
     return personagem;
 }
@@ -72,14 +71,13 @@ function EddyTekken4() {
     antecedentes[4] = newCaracteristica("Staff", 3);
     antecedentes[5] = newCaracteristica("Sensei", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Eduardo \"Eddy\" Gordo",
         Estilo: "Capoeira",
         Escola: "Prisão",
-        Conceito: "Dançarino",
-        Assinatura: "Ginga",
         Jogador: "NPC",
+        Assinatura: "Ginga",
+        Conceito: "Dançarino",
         Cronica: "Tekken 4",
         Forca: 4,
         Destreza: 5,
@@ -115,15 +113,15 @@ function EddyTekken4() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 2,
-        Divisao: "Tradicional",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
+        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn; Bloqueio para Take Down para Back Flip Kick",
         Gloria: 3,
         Honra: 3,
         Chi: 6,
         ForcaVontade: 8,
         Saude: 18,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn; Bloqueio para Take Down para Back Flip Kick"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return personagem;
 }
@@ -137,14 +135,13 @@ function EddyTekken8() {
     antecedentes[4] = newCaracteristica("Staff", 4);
     antecedentes[5] = newCaracteristica("Sensei", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Eduardo \"Eddy\" Gordo",
         Estilo: "Capoeira",
         Escola: "Prisão",
-        Conceito: "Dançarino",
-        Assinatura: "Ginga",
         Jogador: "NPC",
+        Assinatura: "Ginga",
+        Conceito: "Dançarino",
         Cronica: "Tekken 8",
         Forca: 5,
         Destreza: 5,
@@ -180,15 +177,15 @@ function EddyTekken8() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 2,
-        Divisao: "Tradicional",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
+        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn; Bloqueio para Take Down para Back Flip Kick",
         Gloria: 4,
         Honra: 4,
         Chi: 7,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn; Bloqueio para Take Down para Back Flip Kick"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return personagem;
 }

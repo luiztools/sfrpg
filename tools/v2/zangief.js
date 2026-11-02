@@ -4,14 +4,13 @@ function ZangiefSFZ3() {
     antecedentes[1] = newCaracteristica("Arena", 1);
     antecedentes[2] = newCaracteristica("Recursos", 1);
 
-    const zangief =
-    {
+    const zangief = {
         Nome: "Zangief",
         Estilo: "Sanbô",
         Escola: "Campo de Treino Siberiano",
-        Conceito: "Homem forte russo",
-        Assinatura: "Levanta os braços em vitória",
         Jogador: "NPC",
+        Assinatura: "Levanta os braços em vitória",
+        Conceito: "Homem forte russo",
         Cronica: "Street Fighter Alpha",
         Forca: 7,
         Destreza: 2,
@@ -44,15 +43,15 @@ function ZangiefSFZ3() {
         Apresamento: 7,
         Esportes: 3,
         Foco: 0,
-        Divisao: "Tradicional",
-        Posto: 9,
-        Saude: 18,
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Spinning Back Fist",
+        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);",
         Gloria: 8,
         Honra: 6,
         Chi: 4,
         ForcaVontade: 9,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Spinning Back Fist",
-        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
+        Saude: 18,
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return zangief;
 }
@@ -64,14 +63,13 @@ function ZangiefSF2() {
     antecedentes[2] = newCaracteristica("Fama", 1);
     antecedentes[3] = newCaracteristica("Recursos", 1);
 
-    const zangief =
-    {
+    const zangief = {
         Nome: "Zangief",
         Estilo: "Sanbô",
         Escola: "Campo de Treino Siberiano",
-        Conceito: "Homem forte russo",
-        Assinatura: "Levanta os braços em vitória",
         Jogador: "NPC",
+        Assinatura: "Levanta os braços em vitória",
+        Conceito: "Homem forte russo",
         Cronica: "Street Fighter 2",
         Forca: 7,
         Destreza: 2,
@@ -104,15 +102,15 @@ function ZangiefSF2() {
         Apresamento: 7,
         Esportes: 4,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 10,
-        Saude: 20,
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Spinning Back Fist",
+        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);",
         Gloria: 9,
         Honra: 7,
         Chi: 5,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Spinning Back Fist",
-        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return zangief;
 }
@@ -124,14 +122,13 @@ function ZangiefSF5() {
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Recursos", 2);
 
-    const zangief =
-    {
+    const zangief = {
         Nome: "Zangief",
         Estilo: "Sanbô",
         Escola: "Campo de Treino Siberiano",
-        Conceito: "Homem forte russo",
-        Assinatura: "Levanta os braços em vitória",
         Jogador: "NPC",
+        Assinatura: "Levanta os braços em vitória",
+        Conceito: "Homem forte russo",
         Cronica: "Street Fighter 5",
         Forca: 7,
         Destreza: 3,
@@ -164,15 +161,15 @@ function ZangiefSF5() {
         Apresamento: 7,
         Esportes: 4,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 10,
-        Saude: 20,
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
+        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);",
         Gloria: 10,
         Honra: 8,
         Chi: 5,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
-        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return zangief;
 }
@@ -184,14 +181,13 @@ function ZangiefSF6() {
     antecedentes[2] = newCaracteristica("Fama", 3);
     antecedentes[3] = newCaracteristica("Recursos", 2);
 
-    const zangief =
-    {
+    const zangief = {
         Nome: "Zangief",
         Estilo: "Sanbô",
         Escola: "Campo de Treino Siberiano",
-        Conceito: "Homem forte russo",
-        Assinatura: "Levanta os braços em vitória",
         Jogador: "NPC",
+        Assinatura: "Levanta os braços em vitória",
+        Conceito: "Homem forte russo",
         Cronica: "Street Fighter 6",
         Forca: 7,
         Destreza: 3,
@@ -224,15 +220,15 @@ function ZangiefSF6() {
         Apresamento: 7,
         Esportes: 4,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 10,
-        Saude: 20,
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
+        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);",
         Gloria: 10,
         Honra: 9,
         Chi: 5,
         ForcaVontade: 10,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double-Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist",
-        Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy);"
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return zangief;
 }

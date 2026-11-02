@@ -3,14 +3,13 @@ function TaroKungFuDoFighting() {
     antecedentes[0] = newCaracteristica("Recursos", 2);
     antecedentes[1] = newCaracteristica("Sensei", 3);
 
-    const taro =
-    {
+    const taro = {
         Nome: "Taro",
         Estilo: "Ninjutsu",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Cumprimento Ninja",
         Jogador: "NPC",
+        Assinatura: "Cumprimento Ninja",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 2,
         Destreza: 5,
@@ -46,15 +45,15 @@ function TaroKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 3,
         Foco: 0,
+        ManobrasEspeciais: "Jump, Haymaker, Widowmaker",
+        Combos: "",
         Gloria: 1,
         Honra: 2,
         Chi: 3,
         ForcaVontade: 2,
         Saude: 10,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Jump, Haymaker, Widowmaker",
-        Combos: "",
+        Posto: 1
     };
 
     return taro;

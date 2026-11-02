@@ -12,17 +12,16 @@ function Jade() {
     const talentos = [];
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Jade",
         Estilo: "Kung Fu (Bojutsu)",
         Escola: "Outworld",
+        Jogador: "NPC",
+        Assinatura: "Golpeia com Bastão",
+        Conceito: "Guarda-Costas",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Outworld",
         Time: "Nenhuma",
-        Conceito: "Guarda-Costas",
-        Assinatura: "Golpeia com Bastão",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 4,
         Destreza: 7,
         Vigor: 4,
@@ -33,11 +32,12 @@ function Jade() {
         Inteligencia: 4,
         Raciocinio: 5,
         Prontidao: 5,
-        Perspicacia: 5,
-        Manha: 2,
         Interrogacao: 0,
         Intimidacao: 0,
+        Perspicacia: 5,
+        Manha: 2,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 0,
         Lideranca: 0,
@@ -50,7 +50,6 @@ function Jade() {
         Medicina: 0,
         Misterios: 4,
         Estilos: 3,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
@@ -61,15 +60,15 @@ function Jade() {
         Foco: 3,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Wall Spring, Shadow Kick, Baton Throw",
+        Combos: "Jab para Short para Foot Sweep; Bastão Jab para Bastão Strong para Bastão Jab (dizzy); Forward para Forward para Forward (dizzy); Jab para Jab para Forward (dizzy)",
         Gloria: 3,
         Honra: 5,
         Chi: 5,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Wall Spring, Shadow Kick",
-        Combos: "Jab para Short para Foot Sweep; Bastão Jab para Bastão Strong para Bastão Jab (dizzy); Forward para Forward para Forward (dizzy); Jab para Jab para Forward (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }

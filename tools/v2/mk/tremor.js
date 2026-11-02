@@ -4,17 +4,16 @@ function Tremor() {
     antecedentes[1] = newCaracteristica("Contatos", 3);
     antecedentes[2] = newCaracteristica("Elemental", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Tremor",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin Kuei",
+        Jogador: "NPC",
+        Assinatura: "Senta sobre os calcanhares",
+        Conceito: "Ninja Desertor",
+        Cronica: "Mortal Kombat",
         Equipe: "Black Dragon",
         Time: "Black Dragon",
-        Conceito: "Ninja Desertor",
-        Assinatura: "Senta sobre os calcanhares",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 5,
         Destreza: 5,
         Vigor: 6,
@@ -49,15 +48,15 @@ function Tremor() {
         Apresamento: 3,
         Esportes: 3,
         Foco: 5,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Power Uppercut, Foot Sweep, Buffalo Punch, Shockwave, Elemental Skin, Spinning Back Fist, Stone, Double Hit Kick, Pit, Wall, Weight, Fireball",
+        Combos: "Jab para Jab para Roundhouse (dizzy); Jab para Strong para Fierce (dizzy); Jab para Strong para Shockwave; Spinning Back Fist para Power Uppercut para Forward (dizzy); Pit para Pit",
         Gloria: 6,
         Honra: 2,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Power Uppercut, Foot Sweep, Buffalo Punch, Shockwave, Elemental Skin, Spinning Back Fist, Stone, Double Hit Kick, Pit, Wall, Weight, Fireball",
-        Combos: "Jab para Jab para Roundhouse (dizzy); Jab para Strong para Fierce (dizzy); Jab para Strong para Shockwave; Spinning Back Fist para Power Uppercut para Forward (dizzy); Pit para Pit"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }

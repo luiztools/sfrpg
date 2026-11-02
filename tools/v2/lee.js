@@ -5,17 +5,16 @@ function LeeSF1() {
     antecedentes[2] = newCaracteristica("Staff", 1);
     antecedentes[3] = newCaracteristica("Sensei", 4);
 
-    var lee =
-    {
+    var lee = {
         Nome: "Lee",
-        Conceito: "Lutador Profissional",
         Estilo: "Kung Fu",
-        Assinatura: "Postura Defensiva",
         Escola: "Dojô de Gen",
         Jogador: "NPC",
+        Assinatura: "Postura Defensiva",
+        Conceito: "Lutador Profissional",
         Cronica: "Street Fighter 1",
-        Time: "Nenhum",
         Equipe: "Nenhuma",
+        Time: "Nenhum",
         Forca: 5,
         Destreza: 5,
         Vigor: 4,
@@ -33,6 +32,7 @@ function LeeSF1() {
         Medicina: 3,
         Misterios: 3,
         Estilos: 3,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 5,
         Bloqueio: 4,
@@ -40,15 +40,14 @@ function LeeSF1() {
         Esportes: 4,
         Foco: 3,
         ManobrasEspeciais: "Jump, Throw, Double-Hit Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Slide Kick",
-        Antecedentes: antecedentes,
         Combos: "Jab para Slide Kick, Flying Knee Thrust para Double-Hit Kick (Dizzy)",
+        Gloria: 6,
+        Honra: 5,
         Chi: 6,
         ForcaVontade: 7,
         Saude: 20,
         Divisao: "Tradicional",
-        Posto: 7,
-        Gloria: 6,
-        Honra: 5
+        Posto: 7
     };
     return calcPC(lee);
 }

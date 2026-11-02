@@ -10,16 +10,15 @@ function CarlosFF2() {
     const armas = [];
     armas[0] = "Katana";
 
-    const carlos =
-    {
+    const carlos = {
         Nome: "Carlos Miyamoto",
         Estilo: "Karatê Shotokan",
         Escola: "Professor de Kenjutsu",
-        Conceito: "Andarilho",
-        Assinatura: "Guarda a espada",
-        Time: "Final Fight",
         Jogador: "NPC",
+        Assinatura: "Guarda a espada",
+        Conceito: "Andarilho",
         Cronica: "Final Fight 2",
+        Time: "Final Fight",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,
@@ -48,23 +47,23 @@ function CarlosFF2() {
         Misterios: 4,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        Armas: armas,
         Soco: 4,
         Chute: 4,
         Bloqueio: 4,
         Apresamento: 4,
         Esportes: 4,
         Foco: 3,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Jump, Throw, Knee Basher, Back Roll Throw, Regeneration, Spinning Weapon, Kippup",
         Combos: "Jab para Strong para Roundhouse (Dizzy); Jab para Strong para Back Roll Throw (Dizzy); Bloqueio para Spinning Weapon (Dizzy)",
-        Posto: 5,
         Gloria: 6,
         Honra: 5,
-        Divisao: "Duelistas",
         Chi: 7,
         ForcaVontade: 8,
-        Saude: 18
+        Saude: 18,
+        Divisao: "Duelistas",
+        Posto: 5
     };
     return carlos;
 }
@@ -81,16 +80,15 @@ function CarlosSF6() {
     const armas = [];
     armas[0] = "Katana";
 
-    const carlos =
-    {
+    const carlos = {
         Nome: "Carlos Miyamoto",
         Estilo: "Karatê Shotokan",
         Escola: "Professor de Kenjutsu",
-        Conceito: "Andarilho",
-        Assinatura: "Guarda a espada",
-        Time: "Final Fight",
         Jogador: "NPC",
+        Assinatura: "Guarda a espada",
+        Conceito: "Andarilho",
         Cronica: "Street Fighter 6",
+        Time: "Final Fight",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,
@@ -119,23 +117,23 @@ function CarlosSF6() {
         Misterios: 4,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        Armas: armas,
         Soco: 4,
         Chute: 4,
         Bloqueio: 5,
         Apresamento: 4,
         Esportes: 4,
         Foco: 3,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Jump, Throw, Knee Basher, Back Roll Throw, Regeneration, Spinning Weapon, Kippup",
         Combos: "Jab para Strong para Roundhouse (Dizzy); Jab para Strong para Back Roll Throw (Dizzy); Bloqueio para Spinning Weapon (Dizzy)",
-        Posto: 6,
         Gloria: 7,
         Honra: 6,
-        Divisao: "Duelistas",
         Chi: 8,
         ForcaVontade: 9,
-        Saude: 20
+        Saude: 20,
+        Divisao: "Duelistas",
+        Posto: 6
     };
     return carlos;
 }

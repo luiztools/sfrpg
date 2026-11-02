@@ -1,14 +1,14 @@
 ﻿function MandarindeKowloon() {
     var personagem = {
         Nome: "Mandarin de Kowloon",
-        Conceito: "Chefão do Crime",
-        Time: "",
-        Equipe: "",
-        Jogador: "",
-        Cronica: "SF2-V",
-        Assinatura: "Manda os capangas pegarem-no!",
-        Escola: "",
         Estilo: "nenhum",
+        Escola: "",
+        Jogador: "",
+        Assinatura: "Manda os capangas pegarem-no!",
+        Conceito: "Chefão do Crime",
+        Cronica: "SF2-V",
+        Equipe: "",
+        Time: "",
         Forca: 2,
         Destreza: 2,
         Vigor: 2,
@@ -19,7 +19,7 @@
         Inteligencia: 5,
         Raciocinio: 4,
         Prontidao: 0,
-        Interrogatorio: 2,
+        Interrogacao: 2,
         Intimidacao: 1,
         Perspicacia: 4,
         Manha: 5,
@@ -47,15 +47,15 @@
         Esportes: 1,
         Foco: 0,
         NovasTecnicas: [],
+        ManobrasEspeciais: "Jump",
+        Combos: "",
         Gloria: 0,
         Honra: 0,
-        Posto: 0,
         Chi: 1,
         ForcaVontade: 3,
         Saude: 8,
         Divisao: "Nenhuma",
-        ManobrasEspeciais: "Jump",
-        Combos: ""
+        Posto: 0
     };
     return personagem;
 }

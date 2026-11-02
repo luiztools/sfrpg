@@ -9,14 +9,13 @@ function HeihachiTekken8() {
     antecedentes[6] = newCaracteristica("Fama", 3);
     antecedentes[7] = newCaracteristica("Staff", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Heihachi Mishima",
         Estilo: "Karate Shotokan",
         Escola: "Mishima Karate",
-        Conceito: "Lutador Megalomaníaco",
-        Assinatura: "Determinação",
         Jogador: "NPC",
+        Assinatura: "Determinação",
+        Conceito: "Lutador Megalomaníaco",
         Cronica: "Tekken 8",
         Forca: 5,
         Destreza: 5,
@@ -52,15 +51,15 @@ function HeihachiTekken8() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 5,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Buffalo Punch, Double Hit Punch, Ducking Fierce, Hurricane Kick, Power Uppercut, Dragon Punch, Head Butt, Spinning Back Fist, Double Hit Kick, Foot Sweep, Throw, Head Butt Grab Attack, Take Down, Brain Cracker, Pile Driver, Air Suplex, Suplex, Jump, Kippup, Psychokinetic Channeling, Block And Grab, Cross Counter, Punch Defense, Kick Defense, Deflecting Punch",
+        Combos: "Double Hit Punch para Power Uppercut para Power Uppercut; Double Hit Punch para Double Hit Punch para Buffalo Punch; Jump Foward para Foot Sweep para Dragon Punch; Fierce para Hurricane Kick para Foot Sweep; Bloqueio para Pile Driver para Foot Sweep;",
         Gloria: 8,
         Honra: 3,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 18,
-        ManobrasEspeciais: "Buffalo Punch, Double Hit Punch, Ducking Fierce, Hurricane Kick, Power Uppercut, Dragon Punch, Head Butt, Spinning Back Fist, Double Hit Kick, Foot Sweep, Throw, Head Butt Grab Attack, Take Down, Brain Cracker, Pile Driver, Air Suplex, Suplex, Jump, Kippup, Psychokinetic Channeling, Block And Grab, Cross Counter, Punch Defense, Kick Defense, Deflecting Punch",
-        Combos: "Double Hit Punch para Power Uppercut para Power Uppercut; Double Hit Punch para Double Hit Punch para Buffalo Punch; Jump Foward para Foot Sweep para Dragon Punch; Fierce para Hurricane Kick para Foot Sweep; Bloqueio para Pile Driver para Foot Sweep;"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }
@@ -76,14 +75,13 @@ function HeihachiTekken4() {
     antecedentes[6] = newCaracteristica("Fama", 3);
     antecedentes[7] = newCaracteristica("Staff", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Heihachi Mishima",
         Estilo: "Karate Shotokan",
         Escola: "Mishima Karate",
-        Conceito: "Lutador Megalomaníaco",
-        Assinatura: "Determinação",
         Jogador: "NPC",
+        Assinatura: "Determinação",
+        Conceito: "Lutador Megalomaníaco",
         Cronica: "Tekken 4",
         Forca: 5,
         Destreza: 5,
@@ -119,15 +117,15 @@ function HeihachiTekken4() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 5,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Buffalo Punch, Double Hit Punch, Ducking Fierce, Hurricane Kick, Power Uppercut, Dragon Punch, Head Butt, Spinning Back Fist, Double Hit Kick, Foot Sweep, Throw, Head Butt Grab Attack, Take Down, Brain Cracker, Pile Driver, Air Suplex, Suplex, Jump, Kippup, Psychokinetic Channeling, Block And Grab, Punch Defense, Kick Defense, Deflecting Punch",
+        Combos: "Double Hit Punch para Power Uppercut para Power Uppercut; Double Hit Punch para Double Hit Punch para Buffalo Punch; Jump Foward para Foot Sweep para Dragon Punch; Fierce para Hurricane Kick para Foot Sweep; Bloqueio para Pile Driver para Foot Sweep;",
         Gloria: 8,
         Honra: 2,
         Chi: 8,
         ForcaVontade: 9,
         Saude: 17,
-        ManobrasEspeciais: "Buffalo Punch, Double Hit Punch, Ducking Fierce, Hurricane Kick, Power Uppercut, Dragon Punch, Head Butt, Spinning Back Fist, Double Hit Kick, Foot Sweep, Throw, Head Butt Grab Attack, Take Down, Brain Cracker, Pile Driver, Air Suplex, Suplex, Jump, Kippup, Psychokinetic Channeling, Block And Grab, Punch Defense, Kick Defense, Deflecting Punch",
-        Combos: "Double Hit Punch para Power Uppercut para Power Uppercut; Double Hit Punch para Double Hit Punch para Buffalo Punch; Jump Foward para Foot Sweep para Dragon Punch; Fierce para Hurricane Kick para Foot Sweep; Bloqueio para Pile Driver para Foot Sweep;"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }
@@ -143,14 +141,13 @@ function HeihachiTekken3() {
     antecedentes[6] = newCaracteristica("Fama", 3);
     antecedentes[7] = newCaracteristica("Staff", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Heihachi Mishima",
         Estilo: "Karate Shotokan",
         Escola: "Mishima Karate",
-        Conceito: "Lutador Megalomaníaco",
-        Assinatura: "Determinação",
         Jogador: "NPC",
+        Assinatura: "Determinação",
+        Conceito: "Lutador Megalomaníaco",
         Cronica: "Tekken 3",
         Forca: 5,
         Destreza: 4,
@@ -186,15 +183,15 @@ function HeihachiTekken3() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 5,
-        Divisao: "Livre",
-        Posto: 7,
+        ManobrasEspeciais: "Buffalo Punch, Double Hit Punch, Ducking Fierce, Hurricane Kick, Power Uppercut, Dragon Punch, Head Butt, Spinning Back Fist, Double Hit Kick, Foot Sweep, Throw, Head Butt Grab Attack, Take Down, Brain Cracker, Pile Driver, Air Suplex, Suplex, Jump, Kippup, Psychokinetic Channeling, Block And Grab, Punch Defense, Kick Defense",
+        Combos: "Double Hit Punch para Power Uppercut para Power Uppercut; Double Hit Punch para Double Hit Punch para Buffalo Punch; Jump Foward para Foot Sweep para Dragon Punch; Fierce para Hurricane Kick para Foot Sweep;",
         Gloria: 7,
         Honra: 2,
         Chi: 8,
         ForcaVontade: 8,
         Saude: 16,
-        ManobrasEspeciais: "Buffalo Punch, Double Hit Punch, Ducking Fierce, Hurricane Kick, Power Uppercut, Dragon Punch, Head Butt, Spinning Back Fist, Double Hit Kick, Foot Sweep, Throw, Head Butt Grab Attack, Take Down, Brain Cracker, Pile Driver, Air Suplex, Suplex, Jump, Kippup, Psychokinetic Channeling, Block And Grab, Punch Defense, Kick Defense",
-        Combos: "Double Hit Punch para Power Uppercut para Power Uppercut; Double Hit Punch para Double Hit Punch para Buffalo Punch; Jump Foward para Foot Sweep para Dragon Punch; Fierce para Hurricane Kick para Foot Sweep;"
+        Divisao: "Livre",
+        Posto: 7
     };
     return personagem;
 }
@@ -210,14 +207,13 @@ function HeihachiTekken1() {
     antecedentes[6] = newCaracteristica("Fama", 3);
     antecedentes[7] = newCaracteristica("Staff", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Heihachi Mishima",
         Estilo: "Karate Shotokan",
         Escola: "Mishima Karate",
-        Conceito: "Lutador Megalomaníaco",
-        Assinatura: "Determinação",
         Jogador: "NPC",
+        Assinatura: "Determinação",
+        Conceito: "Lutador Megalomaníaco",
         Cronica: "Tekken 1",
         Forca: 5,
         Destreza: 4,
@@ -253,15 +249,15 @@ function HeihachiTekken1() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
-        Divisao: "Livre",
-        Posto: 7,
+        ManobrasEspeciais: "Buffalo Punch, Double Hit Punch, Ducking Fierce, Hurricane Kick, Power Uppercut, Dragon Punch, Head Butt, Spinning Back Fist, Double Hit Kick, Foot Sweep, Throw, Head Butt Grab Attack, Take Down, Brain Cracker, Pile Driver,Suplex, Jump, Kippup, Psychokinetic Channeling, Punch Defense, Kick Defense",
+        Combos: "Double Hit Punch para Power Uppercut para Power Uppercut; Double Hit Punch para Double Hit Punch para Buffalo Punch; Jump Foward para Foot Sweep para Dragon Punch; Fierce para Hurricane Kick para Foot Sweep;",
         Gloria: 6,
         Honra: 2,
         Chi: 7,
         ForcaVontade: 8,
         Saude: 15,
-        ManobrasEspeciais: "Buffalo Punch, Double Hit Punch, Ducking Fierce, Hurricane Kick, Power Uppercut, Dragon Punch, Head Butt, Spinning Back Fist, Double Hit Kick, Foot Sweep, Throw, Head Butt Grab Attack, Take Down, Brain Cracker, Pile Driver,Suplex, Jump, Kippup, Psychokinetic Channeling, Punch Defense, Kick Defense",
-        Combos: "Double Hit Punch para Power Uppercut para Power Uppercut; Double Hit Punch para Double Hit Punch para Buffalo Punch; Jump Foward para Foot Sweep para Dragon Punch; Fierce para Hurricane Kick para Foot Sweep;"
+        Divisao: "Livre",
+        Posto: 7
     };
     return personagem;
 }

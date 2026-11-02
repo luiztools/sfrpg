@@ -11,14 +11,13 @@ function BillyKane() {
     const armas = [];
     armas[0] = "Bastão";
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Billy Kane",
         Estilo: "Bojutsu",
         Escola: "Desconhecida",
-        Conceito: "Capanga",
-        Assinatura: "Bandana",
         Jogador: "NPC",
+        Assinatura: "Bandana",
+        Conceito: "Capanga",
         Cronica: "Fatal Fury",
         Equipe: "Howard Connection",
         Time: "Howard Connection",
@@ -58,15 +57,15 @@ function BillyKane() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Slide Kick, Breakfall, Throw, Jump, Wall Spring, Spinning Weapon, Fireball, Handstand Kick",
+        Combos: "Bastão Strong - Bastão Fierce; Handstand Kick - Jumping - Bastão Fierce (Dizzy); Spinning Weapon - Fireball (dizzy)",
         Gloria: 9,
         Honra: 2,
         Chi: 5,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Slide Kick, Breakfall, Throw, Jump, Wall Spring, Spinning Weapon, Fireball, Handstand Kick",
-        Combos: "Bastão Strong - Bastão Fierce; Handstand Kick - Jumping - Bastão Fierce (Dizzy); Spinning Weapon - Fireball (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }

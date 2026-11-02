@@ -15,20 +15,16 @@ function HaggarFF3() {
 
     const conhecimentos = [];
 
-    const haggar =
-    {
+    const haggar = {
         Nome: "Mike Haggar",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Associação Slam Masters",
-        Conceito: "Ex-Wrestler",
-        Assinatura: "Flexiona os músculos!",
-        Cronica: "Final Fight 3",
-        Time: "Final Fight",
-        Equipe: "Prefeitura de Metro City",
         Jogador: "NPC",
-        NovosTalentos: talentos,
-        NovasPericias: pericias,
-        NovosConhecimentos: conhecimentos,
+        Assinatura: "Flexiona os músculos!",
+        Conceito: "Ex-Wrestler",
+        Cronica: "Final Fight 3",
+        Equipe: "Prefeitura de Metro City",
+        Time: "Final Fight",
         Forca: 6,
         Destreza: 3,
         Vigor: 6,
@@ -44,34 +40,37 @@ function HaggarFF3() {
         Perspicacia: 3,
         Manha: 3,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 1,
         Conducao: 2,
         Lideranca: 5,
         Seguranca: 0,
         Furtividade: 2,
         Sobrevivencia: 3,
+        NovasPericias: pericias,
         Arena: 3,
         Computador: 1,
         Investigacao: 4,
         Medicina: 2,
         Misterios: 1,
         Estilos: 3,
+        NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
         Chute: 4,
-        Apresamento: 6,
         Bloqueio: 4,
+        Apresamento: 6,
         Esportes: 4,
         Foco: 1,
         ManobrasEspeciais: "Jump, Throw, Back Breaker, Pile Driver, Suplex, Spinning Pile Driver, Spinning Clothesline, Head Butt, Head Butt Hold, Haymaker, Buffalo Punch",
         Combos: " Jab para Jab para Back Breaker (dizzy); Jab para Suplex; Jump + Short para Spinning Pile Driver; Jab para Jab para Buffalo Punch (dizzy); Movimento para Fierce",
         Gloria: 8,
         Honra: 6,
-        Posto: 8,
         Chi: 3,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Tradicional"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return haggar;
 }

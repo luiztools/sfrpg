@@ -11,17 +11,16 @@ function BoRaiCho() {
 
     const armas = ["Machado Grande"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Bo Rai Cho",
         Estilo: "Kung Fu",
         Escola: "Autodidata",
+        Jogador: "NPC",
+        Assinatura: "Hábitos nojentos",
+        Conceito: "Sifu",
+        Cronica: "Mortal Kombat X",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Sifu",
-        Assinatura: "Hábitos nojentos",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -49,6 +48,7 @@ function BoRaiCho() {
         Medicina: 1,
         Misterios: 4,
         Estilos: 3,
+        NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
         Chute: 4,
@@ -57,17 +57,16 @@ function BoRaiCho() {
         Esportes: 4,
         Foco: 3,
         NovasTecnicas: tecnicas,
-        NovosConhecimentos: conhecimentos,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Spinning Back Fist, Hundred Hand Slap, Handstand Kick, Wounded Knee, Ax Kick, Suplex, Air Smash, Double-Hit Kick, Jumping Shoulder Butt, Cartwheel Kick, Acid Breath, Fireball, Musical Accompaniment",
+        Combos: "Suplex – Air Smash; Jab – Jab – Hundred Hand Slap (dizzy); Jab – Power Uppercut – Double-Hit Kick (dizzy); Spinning Back Fist – Forward – Roundhouse; Forward – Throw",
         Gloria: 6,
         Honra: 4,
         Chi: 7,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Spinning Back Fist, Hundred Hand Slap, Handstand Kick, Wounded Knee, Ax Kick, Suplex, Air Smash, Double-Hit Kick, Jumping Shoulder Butt, Cartwheel Kick, Acid Breath, Fireball, Musical Accompaniment",
-        Combos: "Suplex – Air Smash; Jab – Jab – Hundred Hand Slap (dizzy); Jab – Power Uppercut – Double-Hit Kick (dizzy); Spinning Back Fist – Forward – Roundhouse; Forward – Throw"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }

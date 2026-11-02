@@ -16,17 +16,16 @@ function Baraka() {
     const conhecimentos = [];
     conhecimentos[0] = newCaracteristica("Linguística", 2);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Baraka",
         Estilo: "Kickboxe",
         Escola: "Autodidata",
+        Jogador: "NPC",
+        Assinatura: "Exibe suas lâminas",
+        Conceito: "Imperador",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhum",
-        Conceito: "Imperador",
-        Assinatura: "Exibe suas lâminas",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -37,11 +36,12 @@ function Baraka() {
         Inteligencia: 3,
         Raciocinio: 5,
         Prontidao: 2,
-        Perspicacia: 2,
-        Manha: 2,
         Interrogacao: 0,
         Intimidacao: 6,
+        Perspicacia: 2,
+        Manha: 2,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 2,
         Conducao: 0,
         Lideranca: 5,
@@ -54,7 +54,6 @@ function Baraka() {
         Medicina: 0,
         Misterios: 2,
         Estilos: 1,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
@@ -65,15 +64,15 @@ function Baraka() {
         Foco: 4,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Fireball, Hyper Fist, Throw, Bite, Claw, Athletic",
+        Combos: "Power Uppercut para Fireball (dizzy); Jab para Hyper Fist (Dizzy); Short para Forward para Foot Sweep (Dizzy); Jab para Jab para Claw (Dizzy)",
         Gloria: 5,
         Honra: 1,
         Chi: 5,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Fireball, Hyper Fist, Throw, Bite, Claw, Athletic",
-        Combos: "Power Uppercut para Fireball (dizzy); Jab para Hyper Fist (Dizzy); Short para Forward para Foot Sweep (Dizzy); Jab para Jab para Claw (Dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -96,17 +95,16 @@ function BarakaMKX() {
     const conhecimentos = [];
     conhecimentos[0] = newCaracteristica("Linguística", 2);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Baraka",
         Estilo: "Kickboxe",
         Escola: "Autodidata",
+        Jogador: "NPC",
+        Assinatura: "Exibe suas lâminas",
+        Conceito: "Imperador",
+        Cronica: "Mortal Kombat X",
         Equipe: "Nenhuma",
         Time: "Nenhum",
-        Conceito: "Imperador",
-        Assinatura: "Exibe suas lâminas",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -117,11 +115,12 @@ function BarakaMKX() {
         Inteligencia: 3,
         Raciocinio: 5,
         Prontidao: 2,
-        Perspicacia: 2,
-        Manha: 2,
         Interrogacao: 0,
         Intimidacao: 6,
+        Perspicacia: 2,
+        Manha: 2,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 2,
         Conducao: 0,
         Lideranca: 5,
@@ -134,7 +133,6 @@ function BarakaMKX() {
         Medicina: 0,
         Misterios: 2,
         Estilos: 1,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
@@ -145,15 +143,15 @@ function BarakaMKX() {
         Foco: 4,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Fireball, Hyper Fist, Throw, Bite, Claw, Athletic, Dashing Punch, Spinning Back Fist, Spinning Knuckle",
+        Combos: "Power Uppercut para Fireball (dizzy); Jab para Hyper Fist (Dizzy); Short para Forward para Foot Sweep (Dizzy); Jab para Jab para Claw (Dizzy); Spinning Knuckle para Spinning Back Fist (dizzy)",
         Gloria: 5,
         Honra: 1,
         Chi: 5,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Fireball, Hyper Fist, Throw, Bite, Claw, Athletic, Dashing Punch, Spinning Back Fist, Spinning Knuckle",
-        Combos: "Power Uppercut para Fireball (dizzy); Jab para Hyper Fist (Dizzy); Short para Forward para Foot Sweep (Dizzy); Jab para Jab para Claw (Dizzy); Spinning Knuckle para Spinning Back Fist (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -168,17 +166,16 @@ function Tarkatan() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Garra", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Tarkatan",
         Estilo: "Briga",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Exibe as presas",
+        Conceito: "Tarkatan Médio",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Tarkatan Médio",
-        Assinatura: "Exibe as presas",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 3,
         Destreza: 4,
         Vigor: 3,
@@ -189,11 +186,12 @@ function Tarkatan() {
         Inteligencia: 1,
         Raciocinio: 2,
         Prontidao: 4,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 5,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 0,
         Conducao: 0,
         Lideranca: 0,
@@ -206,7 +204,6 @@ function Tarkatan() {
         Medicina: 0,
         Misterios: 0,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 3,
@@ -217,15 +214,15 @@ function Tarkatan() {
         Foco: 0,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 1,
+        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Throw, Bite, Athletic",
+        Combos: "",
         Gloria: 0,
         Honra: 0,
         Chi: 1,
         ForcaVontade: 7,
         Saude: 10,
-        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Throw, Bite, Athletic",
-        Combos: ""
+        Divisao: "Duelistas",
+        Posto: 1
     };
     return personagem;
 }
@@ -240,17 +237,16 @@ function General() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Garra", 4);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Líder Tarkatan",
         Estilo: "Briga",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Exibe as presas",
+        Conceito: "Tarkatan Líder",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Tarkatan Líder",
-        Assinatura: "Exibe as presas",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,
@@ -261,11 +257,12 @@ function General() {
         Inteligencia: 2,
         Raciocinio: 3,
         Prontidao: 5,
-        Perspicacia: 1,
-        Manha: 1,
         Interrogacao: 0,
         Intimidacao: 5,
+        Perspicacia: 1,
+        Manha: 1,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 0,
         Conducao: 0,
         Lideranca: 1,
@@ -278,7 +275,6 @@ function General() {
         Medicina: 0,
         Misterios: 0,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
@@ -289,15 +285,15 @@ function General() {
         Foco: 0,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 3,
+        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Throw, Bite, Athletic",
+        Combos: "",
         Gloria: 0,
         Honra: 0,
         Chi: 2,
         ForcaVontade: 8,
         Saude: 12,
-        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Throw, Bite, Athletic",
-        Combos: ""
+        Divisao: "Duelistas",
+        Posto: 3
     };
     return personagem;
 }

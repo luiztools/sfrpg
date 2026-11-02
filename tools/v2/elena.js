@@ -1,59 +1,127 @@
-function Elena() {
+function ElenaSF4() {
     var antecedentes = [];
-    antecedentes[0] = newCaracteristica("Mascote", 3);
-    antecedentes[1] = newCaracteristica("Aliados", 2);
-    antecedentes[2] = newCaracteristica("Arena", 4);
-    antecedentes[3] = newCaracteristica("Staff", 3);
+    antecedentes[0] = newCaracteristica("Aliados", 4);
+    antecedentes[1] = newCaracteristica("Arena", 3);
+    antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    var elena =
-    {
+    var elena = {
         Nome: "Elena",
         Estilo: "Capoeira",
-        Escola: "Seu Vilarejo",
-        Conceito: "Princesa",
-        Assinatura: "Bananeira",
+        Escola: "Sua Tribo",
         Jogador: "NPC",
+        Assinatura: "Bananeira",
+        Conceito: "Princesa",
         Cronica: "Street Fighter 4",
-        Forca: 5,
+        Forca: 4,
         Destreza: 6,
-        Vigor: 5,
-        Carisma: 6,
-        Aparencia: 3,
-        Manipulacao: 5,
+        Vigor: 4,
+        Carisma: 4,
+        Manipulacao: 3,
+        Aparencia: 6,
         Percepcao: 4,
         Inteligencia: 3,
-        Raciocinio: 4,
-        Prontidao: 5,
+        Raciocinio: 3,
+        Prontidao: 3,
+        Interrogacao: 2,
+        Intimidacao: 0,
         Perspicacia: 3,
-        LutaCega: 4,
-        Conducao: 1,
-        Lideranca: 5,
-        Furtividade: 4,
-        Sobrevivencia: 4,
-        Arena: 3,
-        Computador: 3,
-        Medicina: 5,
-        Misterios: 1,
+        Manha: 0,
+        Labia: 1,
+        LutaCega: 3,
+        Conducao: 0,
+        Lideranca: 1,
+        Furtividade: 5,
+        Sobrevivencia: 5,
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 3,
+        Medicina: 4,
+        Misterios: 4,
+        Estilos: 1,
+        Antecedentes: antecedentes,
+        Soco: 2,
+        Chute: 6,
+        Bloqueio: 4,
+        Apresamento: 3,
+        Esportes: 5,
+        Foco: 2,
+        ManobrasEspeciais: "Jump, Air Throw, Ax Kick, Regeneration, Double Hit Kick, Handstand Kick, Flash Kick, Foot Sweep, Throw, Wheel Kick, Musical Accompaniment, Back Roll Throw, Backflip, Tumbling Attack, Spinning Foot Sweep",
+        Combos: "Short para Forward para Flash Kick (dizzy), Throw para Regeneration, Foot Sweep para Wheel Kick (dizzy), Forward para Flash Kick (dizzy), Wheel Kick para Forward (dizzy)",
+        Gloria: 4,
+        Honra: 6,
+        Chi: 6,
+        ForcaVontade: 7,
+        Saude: 18,
+        Divisao: "Tradicional",
+        Posto: 8
+    };
+    return elena;
+}
+
+function ElenaSF5() {
+    var antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 5);
+    antecedentes[1] = newCaracteristica("Arena", 3);
+    antecedentes[2] = newCaracteristica("Sensei", 3);
+
+    var elena = {
+        Nome: "Elena",
+        Estilo: "Capoeira",
+        Escola: "Sua Tribo",
+        Jogador: "NPC",
+        Assinatura: "Bananeira",
+        Conceito: "Princesa",
+        Cronica: "Street Fighter 5",
+        Forca: 4,
+        Destreza: 6,
+        Vigor: 4,
+        Carisma: 4,
+        Manipulacao: 3,
+        Aparencia: 6,
+        Percepcao: 4,
+        Inteligencia: 3,
+        Raciocinio: 3,
+        Prontidao: 3,
+        Interrogacao: 2,
+        Intimidacao: 0,
+        Perspicacia: 3,
+        Manha: 0,
+        Labia: 1,
+        LutaCega: 3,
+        Conducao: 0,
+        Lideranca: 2,
+        Furtividade: 5,
+        Sobrevivencia: 5,
+        Arena: 1,
+        Computador: 1,
+        Investigacao: 3,
+        Medicina: 4,
+        Misterios: 4,
         Estilos: 2,
-        Soco: 0,
+        Antecedentes: antecedentes,
+        Soco: 3,
         Chute: 7,
         Bloqueio: 5,
         Apresamento: 3,
         Esportes: 6,
         Foco: 3,
+        ManobrasEspeciais: "Jump, Air Throw, Ax Kick, Regeneration, Double Hit Kick, Handstand Kick, Flash Kick, Foot Sweep, Throw, Wheel Kick, Musical Accompaniment, Back Roll Throw, Backflip, Tumbling Attack, Spinning Foot Sweep",
+        Combos: "Short para Forward para Flash Kick (dizzy), Throw para Regeneration, Foot Sweep para Wheel Kick (dizzy), Forward para Flash Kick (dizzy), Wheel Kick para Forward (dizzy)",
         Gloria: 5,
-        Honra: 9,
-        Chi: 8,
-        ForcaVontade: 9,
-        Divisao: "Tradicional",
-        Antecedentes: antecedentes,
-        ManobrasEspeciais: "Double Hit Kick, Flash Kick, Flying Side Kick, Foot Sweep, Handstand Kick, Jaguar Kick, Jump, Musical Accompaniment, Regeneration, Spinning Foot Sweep, Slide Kick, Spin Kick, Throw",
-        Combos: "Jump + Roundhouse para Flash Kick; Flying Side Kick para Throw; Jump + Roundhouse para Forward para Flash Kick (Dizzy); Jaguar Kick para Flash Kick (Dizzy); Forward para Slide Kick",
+        Honra: 7,
+        Chi: 7,
+        ForcaVontade: 8,
         Saude: 20,
+        Divisao: "Tradicional",
         Posto: 9
     };
     return elena;
 }
 
-var npc = Elena();
+let npc;
+if (getParameterByName('age') === 'sf5')
+    npc = ElenaSF5();
+else
+    npc = ElenaSF4();
+
 npc = calcPC(npc);

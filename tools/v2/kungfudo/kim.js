@@ -4,14 +4,13 @@ function KimKungFuDoFighting() {
     antecedentes[1] = newCaracteristica("Arena", 1);
     antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    const kim =
-    {
+    const kim = {
         Nome: "Kim",
         Estilo: "Tae Kwon Dô",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Pose de Luta",
         Jogador: "NPC",
+        Assinatura: "Pose de Luta",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 3,
         Destreza: 4,
@@ -47,15 +46,15 @@ function KimKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 3,
         Foco: 2,
+        ManobrasEspeciais: "Jump, Flash Kick",
+        Combos: "Flash Kick para Flash Kick para Flash Kick;",
         Gloria: 2,
         Honra: 1,
         Chi: 7,
         ForcaVontade: 7,
         Saude: 20,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Jump, Flash Kick",
-        Combos: "Flash Kick para Flash Kick para Flash Kick;",
+        Posto: 1
     };
     return kim;
 }

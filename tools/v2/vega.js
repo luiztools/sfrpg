@@ -7,22 +7,24 @@ function VegaSF5() {
     antecedentes[4] = newCaracteristica("Recursos", 4);
     antecedentes[5] = newCaracteristica("Staff", 4);
 
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 2);
+
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Garra", 6);
 
     const armas = [];
     armas[0] = "Garra";
 
-    const vega =
-    {
+    const vega = {
         Nome: "Vega",
         Estilo: "Ninjitsu Espanhol",
-        Time: "Generais de Bison",
-        Equipe: "Shadaloo",
-        Conceito: "Diletante",
-        Assinatura: "Tira a máscara",
         Jogador: "NPC",
+        Assinatura: "Tira a máscara",
+        Conceito: "Diletante",
         Cronica: "Street Fighter 5",
+        Equipe: "Shadaloo",
+        Time: "Generais de Bison",
         Forca: 4,
         Destreza: 7,
         Vigor: 5,
@@ -38,6 +40,7 @@ function VegaSF5() {
         Perspicacia: 4,
         Manha: 2,
         Labia: 5,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 4,
         Lideranca: 4,
@@ -48,7 +51,6 @@ function VegaSF5() {
         Computador: 2,
         Investigacao: 4,
         Medicina: 1,
-        NovasTecnicas: tecnicas,
         Misterios: 3,
         Estilos: 5,
         Antecedentes: antecedentes,
@@ -58,16 +60,17 @@ function VegaSF5() {
         Apresamento: 5,
         Esportes: 7,
         Foco: 2,
+        NovasTecnicas: tecnicas,
         Armas: armas,
+        ManobrasEspeciais: "Forward Slide Kick, Throw, Air Throw, Choke Throw, Suplex, Jump, Backflip Kick, Light Feet, Tumbling Attack, Wall Spring",
+        Combos: "Wall Spring para Suplex; Tumbling Attack para Tumbling Attack (Dizzy); Jump + Forward para Strong para Tumbling Attack (Dizzy);",
         Gloria: 9,
         Honra: 0,
         Chi: 5,
         ForcaVontade: 9,
         Saude: 20,
         Divisao: "Duelistas",
-        Posto: 10,
-        ManobrasEspeciais: "Forward Slide Kick, Throw, Air Throw, Choke Throw, Suplex, Jump, Backflip Kick, Light Feet, Tumbling Attack, Wall Spring",
-        Combos: "Wall Spring para Suplex; Tumbling Attack para Tumbling Attack (Dizzy); Jump + Forward para Strong para Tumbling Attack (Dizzy);"
+        Posto: 10
     };
     return vega;
 }
@@ -81,22 +84,24 @@ function VegaSF2() {
     antecedentes[4] = newCaracteristica("Recursos", 5);
     antecedentes[5] = newCaracteristica("Staff", 5);
 
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 1);
+
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Garra", 5);
 
     const armas = [];
     armas[0] = "Garra";
 
-    const vega =
-    {
+    const vega = {
         Nome: "Vega",
         Estilo: "Ninjitsu Espanhol",
-        Time: "Generais de Bison",
-        Equipe: "Shadaloo",
-        Conceito: "Diletante",
-        Assinatura: "Tira a máscara",
         Jogador: "NPC",
+        Assinatura: "Tira a máscara",
+        Conceito: "Diletante",
         Cronica: "Street Fighter 2",
+        Equipe: "Shadaloo",
+        Time: "Generais de Bison",
         Forca: 4,
         Destreza: 7,
         Vigor: 5,
@@ -112,6 +117,7 @@ function VegaSF2() {
         Perspicacia: 3,
         Manha: 2,
         Labia: 5,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 4,
         Lideranca: 4,
@@ -122,7 +128,6 @@ function VegaSF2() {
         Computador: 2,
         Investigacao: 3,
         Medicina: 1,
-        NovasTecnicas: tecnicas,
         Misterios: 2,
         Estilos: 5,
         Antecedentes: antecedentes,
@@ -132,16 +137,17 @@ function VegaSF2() {
         Apresamento: 5,
         Esportes: 7,
         Foco: 2,
+        NovasTecnicas: tecnicas,
         Armas: armas,
+        ManobrasEspeciais: "Forward Slide Kick, Throw, Air Throw, Choke Throw, Suplex, Jump, Backflip Kick, Light Feet, Tumbling Attack, Wall Spring",
+        Combos: "Wall Spring para Suplex; Tumbling Attack para Tumbling Attack (Dizzy); Jump + Forward para Strong para Tumbling Attack (Dizzy);",
         Gloria: 8,
         Honra: 0,
         Chi: 4,
         ForcaVontade: 8,
         Saude: 20,
         Divisao: "Duelistas",
-        Posto: 10,
-        ManobrasEspeciais: "Forward Slide Kick, Throw, Air Throw, Choke Throw, Suplex, Jump, Backflip Kick, Light Feet, Tumbling Attack, Wall Spring",
-        Combos: "Wall Spring para Suplex; Tumbling Attack para Tumbling Attack (Dizzy); Jump + Forward para Strong para Tumbling Attack (Dizzy);"
+        Posto: 10
     };
     return vega;
 }
@@ -161,16 +167,15 @@ function VegaSFZ3() {
     const armas = [];
     armas[0] = "Garra";
 
-    const vega =
-    {
+    const vega = {
         Nome: "Vega",
         Estilo: "Ninjitsu Espanhol",
-        Time: "Generais de Bison",
-        Equipe: "Shadaloo",
-        Conceito: "Diletante",
-        Assinatura: "Tira a máscara",
         Jogador: "NPC",
+        Assinatura: "Tira a máscara",
+        Conceito: "Diletante",
         Cronica: "Street Fighter Alpha",
+        Equipe: "Shadaloo",
+        Time: "Generais de Bison",
         Forca: 4,
         Destreza: 7,
         Vigor: 5,
@@ -199,30 +204,30 @@ function VegaSFZ3() {
         Misterios: 1,
         Estilos: 4,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 5,
         Bloqueio: 4,
         Apresamento: 5,
         Esportes: 6,
         Foco: 1,
+        NovasTecnicas: tecnicas,
         Armas: armas,
+        ManobrasEspeciais: "Forward Slide Kick, Throw, Air Throw, Choke Throw, Suplex, Jump, Backflip Kick, Light Feet, Tumbling Attack, Wall Spring",
+        Combos: "Wall Spring para Suplex; Tumbling Attack para Tumbling Attack (Dizzy); Jump + Forward para Strong para Tumbling Attack (Dizzy);",
         Gloria: 7,
         Honra: 0,
         Chi: 3,
         ForcaVontade: 7,
         Saude: 18,
         Divisao: "Duelistas",
-        Posto: 9,
-        ManobrasEspeciais: "Forward Slide Kick, Throw, Air Throw, Choke Throw, Suplex, Jump, Backflip Kick, Light Feet, Tumbling Attack, Wall Spring",
-        Combos: "Wall Spring para Suplex; Tumbling Attack para Tumbling Attack (Dizzy); Jump + Forward para Strong para Tumbling Attack (Dizzy);"
+        Posto: 9
     };
     return vega;
 }
 
 let npc;
 if (getParameterByName('age') === 'sfa')
-    npc = VegaZ3();
+    npc = VegaSFZ3();
 else if (getParameterByName('age') === 'sf2')
     npc = VegaSF2();
 else

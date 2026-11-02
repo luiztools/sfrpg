@@ -10,17 +10,16 @@ function Scorpion() {
 
     const armas = ["Arpão"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hanzo \"Scorpion\" Hasashi",
         Estilo: "Ninjitsu",
         Escola: "Clã Shirai-ryu",
+        Jogador: "NPC",
+        Assinatura: "Levanta o braço",
+        Conceito: "Espectro",
+        Cronica: "Mortal Kombat",
         Equipe: "Netherrealm",
         Time: "Nenhum",
-        Conceito: "Espectro",
-        Assinatura: "Levanta o braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -57,15 +56,15 @@ function Scorpion() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Air Throw, Sakki, Deaths Visage, Shikan Ken, Sense Element, Flaming Fist, Fire Strike, Heat Wave, Spontaneous Combustion, Elemental Stride, Shrouded Moon",
+        Combos: "Arpão para Power Uppercut; Shrouded Moon para Shikan-Ken para Arpão; Forward para Forward para Foot Sweep (dizzy); Jab para Jab para Forward (dizzy); Short para Short para Short (dizzy)",
         Gloria: 5,
         Honra: 4,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Air Throw, Sakki, Deaths Visage, Shikan Ken, Sense Element, Flaming Fist, Fire Strike, Heat Wave, Spontaneous Combustion, Elemental Stride, Shrouded Moon",
-        Combos: "Arpão para Power Uppercut; Shrouded Moon para Shikan-Ken para Arpão; Forward para Forward para Foot Sweep (dizzy); Jab para Jab para Forward (dizzy); Short para Short para Short (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -83,17 +82,16 @@ function ScorpionMK4() {
 
     const armas = ["Arpão", "Katana"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hanzo \"Scorpion\" Hasashi",
         Estilo: "Ninjitsu",
         Escola: "Clã Shirai-ryu",
+        Jogador: "NPC",
+        Assinatura: "Levanta o braço",
+        Conceito: "Espectro",
+        Cronica: "Mortal Kombat 4",
         Equipe: "Netherrealm",
         Time: "Nenhum",
-        Conceito: "Espectro",
-        Assinatura: "Levanta o braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 4",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -130,15 +128,15 @@ function ScorpionMK4() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Air Throw, Sakki, Deaths Visage, Shikan Ken, Sense Element, Flaming Fist, Fire Strike, Heat Wave, Spontaneous Combustion, Elemental Stride, Shrouded Moon, Dislocate Limb, Spinning Weapon, Yoga Flame",
+        Combos: "Arpão para Power Uppercut; Shrouded Moon para Shikan-Ken para Arpão; Forward para Forward para Foot Sweep (dizzy); Jab para Jab para Forward (dizzy); Short para Short para Short (dizzy)",
         Gloria: 5,
         Honra: 4,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Air Throw, Sakki, Deaths Visage, Shikan Ken, Sense Element, Flaming Fist, Fire Strike, Heat Wave, Spontaneous Combustion, Elemental Stride, Shrouded Moon, Dislocate Limb, Spinning Weapon, Yoga Flame",
-        Combos: "Arpão para Power Uppercut; Shrouded Moon para Shikan-Ken para Arpão; Forward para Forward para Foot Sweep (dizzy); Jab para Jab para Forward (dizzy); Short para Short para Short (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -156,17 +154,16 @@ function ScorpionMKX() {
 
     const armas = ["Arpão", "Katana"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hanzo \"Scorpion\" Hasashi",
         Estilo: "Ninjitsu",
         Escola: "Clã Shirai-ryu",
+        Jogador: "NPC",
+        Assinatura: "Levanta o braço",
+        Conceito: "Espectro",
+        Cronica: "Mortal Kombat X",
         Equipe: "Netherrealm",
         Time: "Nenhum",
-        Conceito: "Espectro",
-        Assinatura: "Levanta o braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -203,15 +200,15 @@ function ScorpionMKX() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Air Throw, Sakki, Deaths Visage, Shikan Ken, Sense Element, Flaming Fist, Fire Strike, Heat Wave, Spontaneous Combustion, Elemental Stride, Shrouded Moon, Fireball, Dislocate Limb, Spinning Weapon, Yoga Flame",
+        Combos: "Arpão para Power Uppercut; Shrouded Moon para Shikan-Ken para Arpão; Forward para Forward para Foot Sweep (dizzy); Jab para Jab para Forward (dizzy); Short para Short para Short (dizzy)",
         Gloria: 5,
         Honra: 4,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Air Throw, Sakki, Deaths Visage, Shikan Ken, Sense Element, Flaming Fist, Fire Strike, Heat Wave, Spontaneous Combustion, Elemental Stride, Shrouded Moon, Fireball, Dislocate Limb, Spinning Weapon, Yoga Flame",
-        Combos: "Arpão para Power Uppercut; Shrouded Moon para Shikan-Ken para Arpão; Forward para Forward para Foot Sweep (dizzy); Jab para Jab para Forward (dizzy); Short para Short para Short (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return personagem;
 }

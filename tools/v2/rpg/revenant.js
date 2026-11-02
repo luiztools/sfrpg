@@ -1,0 +1,67 @@
+﻿function Revenant() {
+    const antecedentes = [];
+
+    const personagem = {
+        Nome: "Revenant",
+        Estilo: "Ler drit",
+        Escola: "Shadaloo",
+        Jogador: "",
+        Assinatura: "Sorriso zumbi",
+        Conceito: "Lutador Zumbi",
+        Cronica: "",
+        Equipe: "Shadaloo",
+        Time: "",
+        Forca: 3,
+        Destreza: 3,
+        Vigor: 4,
+        Carisma: 1,
+        Manipulacao: 1,
+        Aparencia: 1,
+        Percepcao: 2,
+        Inteligencia: 2,
+        Raciocinio: 2,
+        Prontidao: 0,
+        Interrogacao: 0,
+        Intimidacao: 0,
+        Perspicacia: 0,
+        Manha: 0,
+        Labia: 0,
+        NovosTalentos: [],
+        LutaCega: 0,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 0,
+        Furtividade: 0,
+        Sobrevivencia: 0,
+        NovasPericias: [],
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 0,
+        Misterios: 0,
+        Estilos: 0,
+        NovosConhecimentos: [],
+        Antecedentes: antecedentes,
+        Soco: 3,
+        Chute: 2,
+        Bloqueio: 3,
+        Apresamento: 2,
+        Esportes: 2,
+        Foco: 3,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Psychokinetic Channeling, Psychic Rage, Jump, Throw",
+        Combos: "",
+        Gloria: 0,
+        Honra: 0,
+        Chi: 5,
+        ForcaVontade: 1,
+        Saude: 12,
+        Divisao: "Livre",
+        Posto: 0
+    };
+    return personagem;
+}
+
+let npc = Revenant();
+
+npc = calcPC(npc);

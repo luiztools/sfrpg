@@ -7,14 +7,14 @@
 
     var personagem = {
         Nome: "Apostador",
-        Conceito: "Agiota",
-        Time: "",
-        Equipe: "",
-        Jogador: "",
-        Cronica: "",
-        Assinatura: "Olhar frio",
-        Escola: "Desconhecida",
         Estilo: "Briga",
+        Escola: "Desconhecida",
+        Jogador: "",
+        Assinatura: "Olhar frio",
+        Conceito: "Agiota",
+        Cronica: "",
+        Equipe: "",
+        Time: "",
         Forca: 2,
         Destreza: 2,
         Vigor: 2,
@@ -25,7 +25,7 @@
         Inteligencia: 5,
         Raciocinio: 4,
         Prontidao: 1,
-        Interrogatorio: 3,
+        Interrogacao: 3,
         Intimidacao: 1,
         Perspicacia: 4,
         Manha: 5,
@@ -54,15 +54,15 @@
         Foco: 0,
         NovasTecnicas: novasTecnicas,
         Armas: armas,
+        ManobrasEspeciais: "Jump",
+        Combos: "",
         Gloria: 3,
         Honra: 1,
-        Posto: 0,
         Chi: 1,
         ForcaVontade: 3,
         Saude: 6,
         Divisao: "Nenhuma",
-        ManobrasEspeciais: "Jump",
-        Combos: ""
+        Posto: 0
     };
     return personagem;
 }

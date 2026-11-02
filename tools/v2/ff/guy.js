@@ -6,16 +6,15 @@ function GuyFF1() {
     antecedentes[3] = newCaracteristica("Sensei", 5);
     antecedentes[4] = newCaracteristica("Herança de Clã", 3);
     
-    const guy =
-    {
+    const guy = {
         Nome: "Guy",
         Estilo: "Ninjitsu",
         Escola: "Bushinryu Ninpou",
-        Conceito: "Ninja",
+        Jogador: "NPC",
         Assinatura: "Dá as costas",
+        Conceito: "Ninja",
         Cronica: "Final Fight",
         Time: "Final Fight",
-        Jogador: "NPC",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -51,13 +50,13 @@ function GuyFF1() {
         Foco: 5,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Suplex, Air Suplex, Knee Basher, Elbow Smash, Rekka Ken, Light Feet, Slide Kick, Heel Stamp, Kippup, Bushin Sempu Kyaku, Power Uppercut",
         Combos: "Rekka Ken para Roundhouse (Dizzy), Rekka Ken para Throw, Rekka Ken para Heel Stamp para Jump + Forward (Dizzy)",
-        Posto: 6,
         Gloria: 4,
         Honra: 9,
-        Divisao: "Tradicional",
         Chi: 6,
         ForcaVontade: 8,
-        Saude: 20
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 6
     };
     return guy;
 }
@@ -70,16 +69,15 @@ function GuySF4() {
     antecedentes[3] = newCaracteristica("Sensei", 5);
     antecedentes[4] = newCaracteristica("Herança de Clã", 4);
     
-    const guy =
-    {
+    const guy = {
         Nome: "Guy",
         Estilo: "Ninjitsu",
         Escola: "Bushinryu Ninpou",
-        Conceito: "Ninja",
+        Jogador: "NPC",
         Assinatura: "Dá as costas",
+        Conceito: "Ninja",
         Cronica: "Street Fighter 4",
         Time: "Final Fight",
-        Jogador: "NPC",
         Forca: 4,
         Destreza: 7,
         Vigor: 4,
@@ -115,13 +113,13 @@ function GuySF4() {
         Foco: 5,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Suplex, Air Suplex, Knee Basher, Elbow Smash, Rekka Ken, Light Feet, Slide Kick, Heel Stamp, Kippup, Bushin Sempu Kyaku, Power Uppercut",
         Combos: "Rekka Ken para Roundhouse (Dizzy), Rekka Ken para Throw, Rekka Ken para Heel Stamp para Jump + Forward (Dizzy)",
-        Posto: 7,
         Gloria: 5,
         Honra: 10,
-        Divisao: "Tradicional",
         Chi: 7,
         ForcaVontade: 9,
-        Saude: 20
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 7
     };
     return guy;
 }

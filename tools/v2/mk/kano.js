@@ -11,17 +11,16 @@ function KanoMK3() {
 
     const armas = ["Faca", "Faca Arremessada"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kano",
         Estilo: "Aikidô",
         Escola: "Black Dragon",
+        Jogador: "NPC",
+        Assinatura: "Placa de metal na face",
+        Conceito: "Mercenário",
+        Cronica: "Mortal Kombat",
         Equipe: "Black Dragon",
         Time: "Black Dragon",
-        Conceito: "Mercenário",
-        Assinatura: "Placa de metal na face",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -58,15 +57,15 @@ function KanoMK3() {
         Foco: 1,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Head Butt, Throw, Rolling Attack, Sonic Boom",
+        Combos: "Head Butt para Power Uppercut (dizzy); Forward para Forward para Roundhouse (Dizzy); Forward para Forward para Head Butt (Dizzt); Jab para Jab para Head Butt (dizzy)",
         Gloria: 5,
         Honra: 0,
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Head Butt, Throw, Rolling Attack, Sonic Boom",
-        Combos: "Head Butt para Power Uppercut (dizzy); Forward para Forward para Roundhouse (Dizzy); Forward para Forward para Head Butt (Dizzt); Jab para Jab para Head Butt (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -85,17 +84,16 @@ function KanoMKX() {
 
     const armas = ["Faca", "Faca Arremessada", "Granada"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kano",
         Estilo: "Aikidô",
         Escola: "Black Dragon",
+        Jogador: "NPC",
+        Assinatura: "Placa de metal na face",
+        Conceito: "Mercenário",
+        Cronica: "Mortal Kombat X",
         Equipe: "Black Dragon",
         Time: "Black Dragon",
-        Conceito: "Mercenário",
-        Assinatura: "Placa de metal na face",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -132,15 +130,15 @@ function KanoMKX() {
         Foco: 1,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Tradicional",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Head Butt, Throw, Rolling Attack, Sonic Boom, Double Hit Kick, Flying Tackle, Vertical Rolling Attack, Suplex, Knee Basher",
+        Combos: "Head Butt para Power Uppercut (dizzy); Forward para Forward para Roundhouse (Dizzy); Forward para Forward para Head Butt (Dizzt); Jab para Jab para Head Butt (dizzy); Rolling Attack para Flying Tackle (dizzy);",
         Gloria: 5,
         Honra: 0,
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Head Butt, Throw, Rolling Attack, Sonic Boom, Double Hit Kick, Flying Tackle, Vertical Rolling Attack, Suplex, Knee Basher",
-        Combos: "Head Butt para Power Uppercut (dizzy); Forward para Forward para Roundhouse (Dizzy); Forward para Forward para Head Butt (Dizzt); Jab para Jab para Head Butt (dizzy); Rolling Attack para Flying Tackle (dizzy);"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return personagem;
 }

@@ -10,17 +10,16 @@ function Nightwolf() {
 
     const armas = ["Machado Curto", "Machadinha Arremessada", "Arco Longo"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Nightwolf",
         Estilo: "Luta Live Nativo Americana",
         Escola: "Tribo",
+        Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Líder da Tribo",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Nenhum",
         Time: "Nenhum",
-        Conceito: "Líder da Tribo",
-        Assinatura: "Gargalhada",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 5,
         Destreza: 6,
         Vigor: 4,
@@ -55,17 +54,17 @@ function Nightwolf() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 5,
-        Armas: armas,
         NovasTecnicas: tecnicas,
-        Divisao: "Livre",
-        Posto: 8,
+        Armas: armas,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Hyper Tackle, God Invocation, Wolf Animality",
+        Combos: "Strong para Machado Strong para Machado Jab (Dizzy); Energy Reflection para Fireball (Dizzy); Forward para Forward para Roundhouse (Dizzy); Jab para Jab para String (Dizzy); Jab para Jab para Machado Jab (Dizzy); Short para Jab para Machado Jab (Dizzy)",
         Gloria: 4,
         Honra: 6,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Hyper Tackle, God Invocation, Wolf Animality",
-        Combos: "Strong para Machado Strong para Machado Jab (Dizzy); Energy Reflection para Fireball (Dizzy); Forward para Forward para Roundhouse (Dizzy); Jab para Jab para String (Dizzy); Jab para Jab para Machado Jab (Dizzy); Short para Jab para Machado Jab (Dizzy)"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }
@@ -82,17 +81,16 @@ function NightwolfArmageddon() {
 
     const armas = ["Machado Curto", "Machadinha Arremessada", "Arco Longo"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Nightwolf",
         Estilo: "Luta Live Nativo Americana",
         Escola: "Tribo",
+        Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Líder da Tribo",
+        Cronica: "MK Armageddon",
         Equipe: "Nenhum",
         Time: "Nenhum",
-        Conceito: "Líder da Tribo",
-        Assinatura: "Gargalhada",
-        Jogador: "NPC",
-        Cronica: "MK Armageddon",
         Forca: 5,
         Destreza: 6,
         Vigor: 5,
@@ -127,17 +125,17 @@ function NightwolfArmageddon() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 5,
-        Armas: armas,
         NovasTecnicas: tecnicas,
-        Divisao: "Livre",
-        Posto: 9,
+        Armas: armas,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Hyper Tackle, God Invocation, Wolf Animality",
+        Combos: "Strong para Machado Strong para Machado Jab (Dizzy); Energy Reflection para Fireball (Dizzy); Forward para Forward para Roundhouse (Dizzy); Jab para Jab para String (Dizzy); Jab para Jab para Machado Jab (Dizzy); Short para Jab para Machado Jab (Dizzy)",
         Gloria: 5,
         Honra: 7,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Fireball, Psychokinetic Channeling, Missile Reflection, Energy Reflection, Hyper Tackle, God Invocation, Wolf Animality",
-        Combos: "Strong para Machado Strong para Machado Jab (Dizzy); Energy Reflection para Fireball (Dizzy); Forward para Forward para Roundhouse (Dizzy); Jab para Jab para String (Dizzy); Jab para Jab para Machado Jab (Dizzy); Short para Jab para Machado Jab (Dizzy)"
+        Divisao: "Livre",
+        Posto: 9
     };
     return personagem;
 }

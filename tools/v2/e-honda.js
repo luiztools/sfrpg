@@ -5,14 +5,13 @@ function EHondaZ3() {
     antecedentes[2] = newCaracteristica("Staff", 3);
     antecedentes[3] = newCaracteristica("Recursos", 2);
     
-    const honda =
-    {
+    const honda = {
         Nome: "E. Honda",
         Estilo: "Sumô",
         Escola: "Casa de Banho",
-        Conceito: "Campeão de Sumô",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Campeão de Sumô",
         Cronica: "Street Fighter Alpha",
         Forca: 6,
         Destreza: 4,
@@ -46,15 +45,15 @@ function EHondaZ3() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 8,
+        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
+        Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy);",
         Gloria: 7,
         Honra: 8,
         Chi: 4,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
-        Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return honda;
 }
@@ -66,14 +65,13 @@ function EHondaSF2() {
     antecedentes[2] = newCaracteristica("Staff", 4);
     antecedentes[3] = newCaracteristica("Recursos", 3);
     
-    const honda =
-    {
+    const honda = {
         Nome: "E. Honda",
         Estilo: "Sumô",
         Escola: "Casa de Banho",
-        Conceito: "Campeão de Sumô",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Campeão de Sumô",
         Cronica: "Street Fighter 2",
         Forca: 6,
         Destreza: 4,
@@ -107,15 +105,15 @@ function EHondaSF2() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 9,
+        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
+        Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);",
         Gloria: 8,
         Honra: 9,
         Chi: 5,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
-        Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return honda;
 }
@@ -126,15 +124,17 @@ function EHondaSF5() {
     antecedentes[1] = newCaracteristica("Aliados", 4);
     antecedentes[2] = newCaracteristica("Staff", 5);
     antecedentes[3] = newCaracteristica("Recursos", 3);
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 1);
     
-    const honda =
-    {
+    const honda = {
         Nome: "E. Honda",
         Estilo: "Sumô",
         Escola: "Casa de Banho",
-        Conceito: "Campeão de Sumô",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Campeão de Sumô",
         Cronica: "Street Fighter 5",
         Forca: 6,
         Destreza: 4,
@@ -150,6 +150,7 @@ function EHondaSF5() {
         Intimidacao: 6,
         Perspicacia: 5,
         Manha: 3,
+        NovosTalentos: talentos,
         LutaCega: 2,
         Conducao: 2,
         Lideranca: 5,
@@ -168,15 +169,15 @@ function EHondaSF5() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 10,
+        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
+        Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);",
         Gloria: 9,
         Honra: 10,
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
-        Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return honda;
 }
@@ -187,15 +188,17 @@ function EHondaSF6() {
     antecedentes[1] = newCaracteristica("Aliados", 4);
     antecedentes[2] = newCaracteristica("Staff", 5);
     antecedentes[3] = newCaracteristica("Recursos", 4);
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 2);
     
-    const honda =
-    {
+    const honda = {
         Nome: "E. Honda",
         Estilo: "Sumô",
         Escola: "Casa de Banho",
-        Conceito: "Campeão de Sumô",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Campeão de Sumô",
         Cronica: "Street Fighter 6",
         Forca: 6,
         Destreza: 4,
@@ -211,6 +214,7 @@ function EHondaSF6() {
         Intimidacao: 6,
         Perspicacia: 5,
         Manha: 3,
+        NovosTalentos: talentos,
         LutaCega: 2,
         Conducao: 2,
         Lideranca: 5,
@@ -229,15 +233,15 @@ function EHondaSF6() {
         Apresamento: 6,
         Esportes: 5,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 10,
+        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
+        Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);",
         Gloria: 10,
         Honra: 10,
         Chi: 7,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Buffalo Punch, Head Butt, Hundred Hand Slap, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, San He, Bear Hug, Knee Basher, Throw, Air Smash, Flying Head Butt, Jump",
-        Combos: "Jump + Fierce para Strong para Fierce (Dizzy); Jump + Strong para Hundred Hand Slap (Dizzy); Air Smash para Knee Basher (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 10
     };
     return honda;
 }
@@ -245,8 +249,8 @@ function EHondaSF6() {
 var npc;
 if (getParameterByName('age') === 'sfa')
     npc = EHondaZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = EHondaSF4();
+else if (getParameterByName('age') === 'sf5')
+    npc = EHondaSF5();
 else if (getParameterByName('age') === 'sf6')
     npc = EHondaSF6();
 else

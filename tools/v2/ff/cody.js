@@ -15,16 +15,15 @@ function CodySF4() {
     armas[1] = "Faca Arremessada";
     armas[2] = "Bastão Curto";
 
-    const cody =
-    {
+    const cody = {
         Nome: "Cody Travers",
         Estilo: "Kickboxe",
         Escola: "Ruas de Metrocity",
-        Conceito: "Lutador de Rua",
-        Assinatura: "Tira sarro",
-        Time: "Nenhum",
         Jogador: "NPC",
+        Assinatura: "Tira sarro",
+        Conceito: "Lutador de Rua",
         Cronica: "Street Fighter 4",
+        Time: "Nenhum",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -52,23 +51,23 @@ function CodySF4() {
         Medicina: 2,
         Estilos: 3,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 5,
         Bloqueio: 5,
         Apresamento: 4,
         Esportes: 4,
         Foco: 4,
+        NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: " Jump, Foot Sweep, Power Uppercut, Punch Defense, Kick Defense, Criminal Upper, Throw, Air Suplex, Suplex, Knee Basher, Roundabout Kick, Slide Kick, Rekka Ken",
         Combos: "Jab para Throw; Slide Kick para Forward (Dizzy); Rekka Ken para Power Uppercut (Dizzy)",
-        Posto: 7,
         Gloria: 7,
         Honra: 3,
-        Divisao: "Duelistas",
         Chi: 6,
         ForcaVontade: 9,
-        Saude: 20
+        Saude: 20,
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return cody;
 }
@@ -90,16 +89,15 @@ function CodyZ3() {
     armas[1] = "Faca Arremessada";
     armas[2] = "Bastão Curto";
 
-    const cody =
-    {
+    const cody = {
         Nome: "Cody Travers",
         Estilo: "Kickboxe",
         Escola: "Ruas de Metrocity",
-        Conceito: "Lutador de Rua",
-        Assinatura: "Tira sarro",
-        Time: "Final Fight",
         Jogador: "NPC",
+        Assinatura: "Tira sarro",
+        Conceito: "Lutador de Rua",
         Cronica: "SF Alpha / Final Fight",
+        Time: "Final Fight",
         Forca: 5,
         Destreza: 4,
         Vigor: 5,
@@ -127,23 +125,23 @@ function CodyZ3() {
         Medicina: 2,
         Estilos: 3,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 4,
         Chute: 4,
         Bloqueio: 4,
         Apresamento: 3,
         Esportes: 3,
         Foco: 3,
+        NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: " Jump, Foot Sweep, Power Uppercut, Throw, Air Suplex, Suplex, Knee Basher, Roundabout Kick, Rekka Ken",
         Combos: "Jab para Throw; Rekka Ken para Power Uppercut (Dizzy)",
-        Posto: 6,
         Gloria: 6,
         Honra: 2,
-        Divisao: "Duelistas",
         Chi: 5,
         ForcaVontade: 8,
-        Saude: 18
+        Saude: 18,
+        Divisao: "Duelistas",
+        Posto: 6
     };
     return cody;
 }
@@ -167,16 +165,15 @@ function CodySF5() {
     armas[1] = "Faca Arremessada";
     armas[2] = "Bastão Curto";
 
-    const cody =
-    {
+    const cody = {
         Nome: "Cody Travers",
         Estilo: "Kickboxe",
         Escola: "Ruas de Metrocity",
-        Conceito: "Prefeito da Cidade",
-        Assinatura: "Tira sarro",
-        Time: "Nenhum",
         Jogador: "NPC",
+        Assinatura: "Tira sarro",
+        Conceito: "Prefeito da Cidade",
         Cronica: "Street Fighter 5",
+        Time: "Nenhum",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -204,23 +201,23 @@ function CodySF5() {
         Medicina: 2,
         Estilos: 4,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 5,
         Bloqueio: 5,
         Apresamento: 4,
         Esportes: 4,
         Foco: 4,
+        NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: " Jump, Foot Sweep, Power Uppercut, Punch Defense, Kick Defense, Criminal Upper, Throw, Air Suplex, Suplex, Knee Basher, Roundabout Kick, Slide Kick, Rekka Ken",
         Combos: "Jab para Throw; Slide Kick para Forward (Dizzy); Rekka Ken para Power Uppercut (Dizzy)",
-        Posto: 8,
         Gloria: 8,
         Honra: 4,
-        Divisao: "Duelistas",
         Chi: 7,
         ForcaVontade: 10,
-        Saude: 20
+        Saude: 20,
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return cody;
 }

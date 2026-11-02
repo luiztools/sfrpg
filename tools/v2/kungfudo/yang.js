@@ -4,14 +4,13 @@ function YangKungFuDoFighting() {
     antecedentes[1] = newCaracteristica("Recursos", 2);
     antecedentes[2] = newCaracteristica("Staff", 2);
 
-    const yang =
-    {
+    const yang = {
         Nome: "Yang",
         Estilo: "Kickboxing",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Pose de Luta",
         Jogador: "NPC",
+        Assinatura: "Pose de Luta",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 1,
         Destreza: 5,
@@ -47,15 +46,15 @@ function YangKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 0,
         Foco: 5,
+        ManobrasEspeciais: "Jump, Fireball, Repeating Fireball",
+        Combos: "",
         Gloria: 2,
         Honra: 1,
         Chi: 5,
         ForcaVontade: 5,
         Saude: 10,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Jump, Fireball, Repeating Fireball",
-        Combos: "",
+        Posto: 1
     };
 
     return yang;

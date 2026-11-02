@@ -4,14 +4,13 @@ function ElFuerte() {
     antecedentes[1] = newCaracteristica("Recursos", 3);
     antecedentes[2] = newCaracteristica("Staff", 4);
 
-    const elFuerte =
-    {
+    const elFuerte = {
         Nome: "El Fuerte",
-        Conceito: "Chef de Cozinha",
-        Escola: "",
         Estilo: "Lucha Libre",
-        Assinatura: "Cooking Time!",
+        Escola: "",
         Jogador: "NPC",
+        Assinatura: "Cooking Time!",
+        Conceito: "Chef de Cozinha",
         Cronica: "Street Fighter 4",
         Forca: 5,
         Destreza: 5,
@@ -46,16 +45,16 @@ function ElFuerte() {
         Bloqueio: 4,
         Apresamento: 6,
         Esportes: 7,
-        Foco:2,
+        Foco: 2,
+        ManobrasEspeciais: "Air Smash, Throw, Air Throw, Light Feet, Jump, Wall Spring, Thigh Press, Pile Driver, Spinning Pile Driver, Suplex, Air Suplex, Slide Kick, Grappling Defense, Hyper Tackle",
+        Combos: "Air Smash 3x (Dizzy); Jab 3x (Dizzy); Air Smash para Spinning Pile Driver; Hyper Tackle para Spinning Pile Driver",
         Gloria: 8,
         Honra: 7,
         Chi: 2,
         ForcaVontade: 10,
         Saude: 20,
         Divisao: "Guerreiros Mundiais",
-        Posto: 9,
-        ManobrasEspeciais: "Air Smash, Throw, Air Throw, Light Feet, Jump, Wall Spring, Thigh Press, Pile Driver, Spinning Pile Driver, Suplex, Air Suplex, Slide Kick, Grappling Defense, Hyper Tackle",
-        Combos: "Air Smash 3x (Dizzy); Jab 3x (Dizzy); Air Smash para Spinning Pile Driver; Hyper Tackle para Spinning Pile Driver"
+        Posto: 9
     };
     return calcPC(elFuerte);
 }

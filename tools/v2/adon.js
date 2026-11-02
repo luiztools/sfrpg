@@ -6,14 +6,13 @@ function AdonZ3() {
     antecedentes[3] = newCaracteristica("Recursos", 2);
     antecedentes[4] = newCaracteristica("Sensei", 4);
 
-    const adon =
-    {
+    const adon = {
         Nome: "Adon",
         Estilo: "Thai Kickboxe",
         Escola: "Dojô de Sagat",
-        Conceito: "Desafiante",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Desafiante",
         Cronica: "Street Fighter Alpha",
         Forca: 4,
         Destreza: 5,
@@ -24,9 +23,6 @@ function AdonZ3() {
         Percepcao: 3,
         Inteligencia: 2,
         Raciocinio: 4,
-        Antecedentes: antecedentes,
-        Gloria: 6,
-        Honra: 3,
         Prontidao: 1,
         Interrogacao: 2,
         Intimidacao: 2,
@@ -45,19 +41,22 @@ function AdonZ3() {
         Medicina: 2,
         Misterios: 1,
         Estilos: 3,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 5,
         Bloqueio: 4,
         Apresamento: 4,
         Esportes: 4,
         Foco: 3,
+        ManobrasEspeciais: "Jump, Foot Sweep, Wheel Kick, Elbow Smash, Throw, Tiger Knee, Double-Hit Knee, Back Roll Throw, Wall Spring, Air Throw, Flying Body Spear",
+        Combos: "Elbow Smash 3x (Dizzy); Elbow Smash 2x para Tiger Knee (Dizzy)",
+        Gloria: 6,
+        Honra: 3,
         Chi: 4,
         ForcaVontade: 6,
-        Divisao: "Tradicional",
-        Posto: 8,
         Saude: 17,
-        ManobrasEspeciais: "Jump, Foot Sweep, Wheel Kick, Elbow Smash, Throw, Tiger Knee, Double-Hit Knee, Back Roll Throw, Wall Spring, Air Throw, Flying Body Spear",
-        Combos: "Elbow Smash 3x (Dizzy); Elbow Smash 2x para Tiger Knee (Dizzy)"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return adon;
 }
@@ -70,14 +69,13 @@ function AdonSF4() {
     antecedentes[3] = newCaracteristica("Recursos", 2);
     antecedentes[4] = newCaracteristica("Sensei", 4);
 
-    const adon =
-    {
+    const adon = {
         Nome: "Adon",
         Estilo: "Thai Kickboxe",
         Escola: "Dojô de Sagat",
-        Conceito: "Desafiante",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Desafiante",
         Cronica: "Street Fighter 4",
         Forca: 4,
         Destreza: 5,
@@ -88,9 +86,6 @@ function AdonSF4() {
         Percepcao: 3,
         Inteligencia: 3,
         Raciocinio: 4,
-        Antecedentes: antecedentes,
-        Gloria: 7,
-        Honra: 4,
         Prontidao: 1,
         Interrogacao: 2,
         Intimidacao: 3,
@@ -109,19 +104,22 @@ function AdonSF4() {
         Medicina: 2,
         Misterios: 1,
         Estilos: 3,
+        Antecedentes: antecedentes,
         Soco: 5,
         Chute: 5,
         Bloqueio: 4,
         Apresamento: 4,
         Esportes: 5,
         Foco: 3,
+        ManobrasEspeciais: "Jump, Foot Sweep, Wheel Kick, Elbow Smash, Throw,  Tiger Knee, Double-Hit Knee, Back Roll Throw, Wall Spring, Air Throw, Flying Body Spear",
+        Combos: "Elbow Smash 3x (Dizzy); Elbow Smash 2x para Tiger Knee (Dizzy)",
+        Gloria: 7,
+        Honra: 4,
         Chi: 5,
         ForcaVontade: 7,
-        Divisao: "Tradicional",
-        Posto: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Wheel Kick, Elbow Smash, Throw,  Tiger Knee, Double-Hit Knee, Back Roll Throw, Wall Spring, Air Throw, Flying Body Spear",
-        Combos: "Elbow Smash 3x (Dizzy); Elbow Smash 2x para Tiger Knee (Dizzy)"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return adon;
 }

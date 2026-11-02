@@ -5,16 +5,14 @@
     antecedentes[2] = newCaracteristica("Fama", 1);
     antecedentes[3] = newCaracteristica("Staff", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Itoketip",
         Estilo: "Kabaddi",
-        Time: "Punho das Sombras",
-        Conceito: "Sacerdote Antigo",
         Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
         Assinatura: "Nuvens de Tempestade",
+        Conceito: "Sacerdote Antigo",
+        Equipe: "Nenhuma",
+        Time: "Punho das Sombras",
         Forca: 4,
         Destreza: 3,
         Vigor: 5,
@@ -63,15 +61,14 @@ function ItoketipOrochi() {
     antecedentes[2] = newCaracteristica("Fama", 1);
     antecedentes[3] = newCaracteristica("Staff", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Itoketip (Orochi)",
         Estilo: "Kabaddi",
-        Time: "Punho das Sombras",
-        Conceito: "Sangue de Orochi",
         Jogador: "NPC",
-        Equipe: "Nenhuma",
         Assinatura: "Nuvens de Tempestade",
+        Conceito: "Sangue de Orochi",
+        Equipe: "Nenhuma",
+        Time: "Punho das Sombras",
         Forca: 5,
         Destreza: 4,
         Vigor: 6,

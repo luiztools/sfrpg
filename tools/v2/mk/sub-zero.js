@@ -9,17 +9,16 @@ function SubZeroBiHan() {
     const tecnicas = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Bi \"Sub-Zero\" Han",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Frieza",
+        Conceito: "Ninja Criomante",
+        Cronica: "Mortal Kombat",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Criomante",
-        Assinatura: "Frieza",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -56,15 +55,15 @@ function SubZeroBiHan() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick",
+        Combos: "Jab para Ice Blast (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (dizzy); Jab para Jab para Power Uppercut (dizzy)",
         Gloria: 5,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 6,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick",
-        Combos: "Jab para Ice Blast (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (dizzy); Jab para Jab para Power Uppercut (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -80,17 +79,16 @@ function SubZeroKuaiLiang() {
     const tecnicas = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kuai \"Sub-Zero\" Liang",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Levanta o braço",
+        Conceito: "Ninja Criomante",
+        Cronica: "Mortal Kombat",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Criomante",
-        Assinatura: "Levanta o braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -127,15 +125,15 @@ function SubZeroKuaiLiang() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick, Ice Ground, Accuracy, Ice Clone",
+        Combos: "Power Uppercut para Ice Blast; Foot Sweep para Slide Kick (Dizzy); Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy)",
         Gloria: 6,
         Honra: 5,
         Chi: 10,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick, Ice Ground, Accuracy, Ice Clone",
-        Combos: "Power Uppercut para Ice Blast; Foot Sweep para Slide Kick (Dizzy); Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return personagem;
 }
@@ -153,17 +151,16 @@ function SubZeroMK4() {
 
     const armas = ["Bastão Curto"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kuai \"Sub-Zero\" Liang",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Levanta o braço",
+        Conceito: "Ninja Criomante",
+        Cronica: "Mortal Kombat 4",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Criomante",
-        Assinatura: "Levanta o braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 4",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -200,15 +197,15 @@ function SubZeroMK4() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick, Ice Ground, Accuracy, Ice Clone, Wounded Knee, Weapon Sweep, Cryokinesis, Iron Claw, Improved Ice Blast",
+        Combos: "Power Uppercut para Ice Blast; Foot Sweep para Slide Kick (Dizzy); Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy); Ice Clone para Power Uppercut; Ice Clone para Jumping Roundhouse; Improved Ice Blast para Power Uppercut;",
         Gloria: 6,
         Honra: 5,
         Chi: 10,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick, Ice Ground, Accuracy, Ice Clone, Wounded Knee, Weapon Sweep, Cryokinesis, Iron Claw, Improved Ice Blast",
-        Combos: "Power Uppercut para Ice Blast; Foot Sweep para Slide Kick (Dizzy); Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy); Ice Clone para Power Uppercut; Ice Clone para Jumping Roundhouse; Improved Ice Blast para Power Uppercut;"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return personagem;
 }
@@ -226,17 +223,16 @@ function SubZeroMKX() {
 
     const armas = ["Bastão Curto"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Kuai \"Sub-Zero\" Liang",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Levanta o braço",
+        Conceito: "Ninja Criomante",
+        Cronica: "Mortal Kombat X",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Criomante",
-        Assinatura: "Levanta o braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -273,15 +269,15 @@ function SubZeroMKX() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick, Ice Ground, Accuracy, Ice Clone, Ice Strike, Shockwave, Wounded Knee, Weapon Sweep, Cryokinesis, Iron Claw, Improved Ice Blast",
+        Combos: "Power Uppercut para Ice Blast; Foot Sweep para Slide Kick (Dizzy); Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy); Ice Strike para Ice Strike (Dizzy); Slide Kick para Ice Blast (Dizzy); Ice Clone para Power Uppercut; Ice Clone para Jumping Roundhouse; Improved Ice Blast para Power Uppercut;",
         Gloria: 6,
         Honra: 5,
         Chi: 10,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick, Ice Ground, Accuracy, Ice Clone, Ice Strike, Shockwave, Wounded Knee, Weapon Sweep, Cryokinesis, Iron Claw, Improved Ice Blast",
-        Combos: "Power Uppercut para Ice Blast; Foot Sweep para Slide Kick (Dizzy); Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy); Ice Strike para Ice Strike (Dizzy); Slide Kick para Ice Blast (Dizzy); Ice Clone para Power Uppercut; Ice Clone para Jumping Roundhouse; Improved Ice Blast para Power Uppercut;"
+        Divisao: "Duelistas",
+        Posto: 10
     };
     return personagem;
 }
@@ -299,17 +295,16 @@ function CyberSubZero() {
 
     const armas = ["Granada de Gelo"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Cyber Sub-Zero",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Levanta o braço",
+        Conceito: "Ciborgue de Gelo",
+        Cronica: "Mortal Kombat X",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ciborgue de Gelo",
-        Assinatura: "Levanta o braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -346,15 +341,15 @@ function CyberSubZero() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick, Ice Ground, Accuracy, Ice Clone, Ice Strike, Shockwave, Wounded Knee, Weapon Sweep, Cryokinesis, Iron Claw, Improved Ice Blast, Shrouded Moon",
+        Combos: "Power Uppercut para Ice Blast; Foot Sweep para Slide Kick (Dizzy); Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy); Ice Strike para Ice Strike (Dizzy); Slide Kick para Ice Blast (Dizzy); Ice Clone para Power Uppercut; Ice Clone para Jumping Roundhouse; Improved Ice Blast para Power Uppercut;",
         Gloria: 6,
         Honra: 5,
         Chi: 10,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Ice Blast, Slide Kick, Ice Ground, Accuracy, Ice Clone, Ice Strike, Shockwave, Wounded Knee, Weapon Sweep, Cryokinesis, Iron Claw, Improved Ice Blast, Shrouded Moon",
-        Combos: "Power Uppercut para Ice Blast; Foot Sweep para Slide Kick (Dizzy); Forward para Forward para Roundhouse (dizzy); Jab para Jab para Forward (dizzy); Ice Strike para Ice Strike (Dizzy); Slide Kick para Ice Blast (Dizzy); Ice Clone para Power Uppercut; Ice Clone para Jumping Roundhouse; Improved Ice Blast para Power Uppercut;"
+        Divisao: "Duelistas",
+        Posto: 10
     };
     return personagem;
 }

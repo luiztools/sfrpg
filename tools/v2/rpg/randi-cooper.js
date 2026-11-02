@@ -1,0 +1,61 @@
+﻿
+function RandiCooper() {
+    const personagem = {
+        Nome: "Randi Cooper",
+        Estilo: "Forças Especiais",
+        Escola: "Exército dos EUA",
+        Assinatura: "Faz pose e manda beijos",
+        Conceito: "Moleque",
+        Equipe: "Willian Stanton",
+        Time: "Extreme",
+        Forca: 3,
+        Destreza: 4,
+        Vigor: 3,
+        Carisma: 3,
+        Manipulacao: 3,
+        Aparencia: 4,
+        Percepcao: 3,
+        Inteligencia: 2,
+        Raciocinio: 4,
+        Prontidao: 2,
+        Interrogacao: 2,
+        Intimidacao: 4,
+        Perspicacia: 3,
+        Manha: 4,
+        Labia: 4,
+        NovosTalentos: [],
+        LutaCega: 2,
+        Conducao: 2,
+        Lideranca: 2,
+        Seguranca: 1,
+        Furtividade: 4,
+        Sobrevivencia: 2,
+        NovasPericias: [],
+        Arena: 1,
+        Investigacao: 4,
+        Medicina: 1,
+        NovosConhecimentos: [],
+        Antecedentes: [newCaracteristica("Empresario", 3), newCaracteristica("Apoio", 4), newCaracteristica("Sensei", 3), newCaracteristica("Staff", 4)],
+        Soco: 4,
+        Chute: 3,
+        Bloqueio: 3,
+        Apresamento: 3,
+        Esportes: 4,
+        Foco: 2,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Buffalo Punch, Jump, Spinning Back Fist, Kippup, Flash Kick, Flying Heel Stomp, Spinning Clothesline, Foot Sweep, Kick Defense, Punch Defense, Knee Basher, Thigh Press",
+        Combos: "Strong para Strong para Knee Basher (Dizzy); Knee Basher para Buffalo Punch (Dizzy)",
+        Gloria: 5,
+        Honra: 5,
+        Chi: 4,
+        ForcaVontade: 8,
+        Saude: 10,
+        Divisao: "Estilo Livre",
+        Posto: 4
+    };
+    return personagem;
+}
+
+let npc = RandiCooper();
+
+npc = calcPC(npc);

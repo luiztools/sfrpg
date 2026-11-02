@@ -7,14 +7,13 @@ function ChristieTekken6() {
     antecedentes[4] = newCaracteristica("Staff", 3);
     antecedentes[5] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Christie Monteiro",
         Estilo: "Capoeira",
         Escola: "Eddy Gordo",
-        Conceito: "Dançarina",
-        Assinatura: "Ginga",
         Jogador: "NPC",
+        Assinatura: "Ginga",
+        Conceito: "Dançarina",
         Cronica: "Tekken 5",
         Forca: 4,
         Destreza: 6,
@@ -50,15 +49,15 @@ function ChristieTekken6() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 2,
-        Divisao: "Tradicional",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Back Flip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
+        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn; Bloqueio para Take Down para Back Flip Kick",
         Gloria: 2,
         Honra: 2,
         Chi: 6,
         ForcaVontade: 8,
         Saude: 18,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Back Flip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn; Bloqueio para Take Down para Back Flip Kick"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return personagem;
 }
@@ -72,14 +71,13 @@ function ChristieTekken4() {
     antecedentes[4] = newCaracteristica("Staff", 2);
     antecedentes[5] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Christie Monteiro",
         Estilo: "Capoeira",
         Escola: "Academia Monteiro",
-        Conceito: "Dançarina",
-        Assinatura: "Ginga",
         Jogador: "NPC",
+        Assinatura: "Ginga",
+        Conceito: "Dançarina",
         Cronica: "Tekken 4",
         Forca: 4,
         Destreza: 5,
@@ -115,15 +113,15 @@ function ChristieTekken4() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Back Flip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
+        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;",
         Gloria: 2,
         Honra: 2,
         Chi: 5,
         ForcaVontade: 7,
         Saude: 16,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Back Flip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;"
+        Divisao: "Tradicional",
+        Posto: 7
     };
     return personagem;
 }

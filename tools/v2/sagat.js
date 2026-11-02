@@ -5,16 +5,19 @@ function SagatSF2() {
     antecedentes[2] = newCaracteristica("Apoio", 5);
     antecedentes[3] = newCaracteristica("Fama", 3);
     antecedentes[4] = newCaracteristica("Recursos", 3);
-    const sagat =
-    {
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 1);
+
+    const sagat = {
         Nome: "Sagat",
         Estilo: "Thai Kickboxe",
-        Conceito: "Lutador",
-        Assinatura: "Gargalhadas",
-        Time: "Generais de Bison",
-        Equipe: "Shadaloo",
         Jogador: "NPC",
+        Assinatura: "Gargalhadas",
+        Conceito: "Lutador",
         Cronica: "Street Fighter 2",
+        Equipe: "Shadaloo",
+        Time: "Generais de Bison",
         Forca: 5,
         Destreza: 5,
         Vigor: 6,
@@ -29,6 +32,7 @@ function SagatSF2() {
         Intimidacao: 5,
         Perspicacia: 5,
         Manha: 3,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 1,
         Lideranca: 3,
@@ -46,15 +50,15 @@ function SagatSF2() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 5,
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
+        Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;",
         Gloria: 9,
         Honra: 1,
         Chi: 10,
         ForcaVontade: 9,
         Saude: 20,
-        Posto: 9,
         Divisao: "Estilo Livre",
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
-        Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;"
+        Posto: 9
     };
     return sagat;
 }
@@ -66,16 +70,19 @@ function SagatZ3() {
     antecedentes[2] = newCaracteristica("Apoio", 4);
     antecedentes[3] = newCaracteristica("Fama", 3);
     antecedentes[4] = newCaracteristica("Recursos", 3);
-    const sagat =
-    {
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 1);
+
+    const sagat = {
         Nome: "Sagat",
         Estilo: "Thai Kickboxe",
-        Conceito: "Lutador",
-        Assinatura: "Gargalhadas",
-        Time: "Generais de Bison",
-        Equipe: "Shadaloo",
         Jogador: "NPC",
+        Assinatura: "Gargalhadas",
+        Conceito: "Lutador",
         Cronica: "Street Fighter Alpha",
+        Equipe: "Shadaloo",
+        Time: "Generais de Bison",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -90,6 +97,7 @@ function SagatZ3() {
         Intimidacao: 4,
         Perspicacia: 5,
         Manha: 2,
+        NovosTalentos: talentos,
         LutaCega: 4,
         Conducao: 1,
         Lideranca: 2,
@@ -107,15 +115,15 @@ function SagatZ3() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 5,
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
+        Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy);",
         Gloria: 8,
         Honra: 1,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 18,
-        Posto: 8,
         Divisao: "Estilo Livre",
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
-        Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy);"
+        Posto: 8
     };
     return sagat;
 }
@@ -127,16 +135,19 @@ function SagatSF5() {
     antecedentes[2] = newCaracteristica("Apoio", 4);
     antecedentes[3] = newCaracteristica("Fama", 4);
     antecedentes[4] = newCaracteristica("Recursos", 2);
-    const sagat =
-    {
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 2);
+
+    const sagat = {
         Nome: "Sagat",
         Estilo: "Thai Kickboxe",
-        Conceito: "Lutador",
-        Assinatura: "Gargalhadas",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
         Jogador: "NPC",
+        Assinatura: "Gargalhadas",
+        Conceito: "Lutador",
         Cronica: "Street Fighter 5",
+        Equipe: "Nenhuma",
+        Time: "Nenhum",
         Forca: 6,
         Destreza: 5,
         Vigor: 6,
@@ -151,6 +162,7 @@ function SagatSF5() {
         Intimidacao: 5,
         Perspicacia: 5,
         Manha: 4,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 1,
         Lideranca: 4,
@@ -168,15 +180,15 @@ function SagatSF5() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 5,
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
+        Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;",
         Gloria: 10,
         Honra: 2,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 10,
         Divisao: "Estilo Livre",
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
-        Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;"
+        Posto: 10
     };
     return sagat;
 }
@@ -188,16 +200,19 @@ function SagatSF6() {
     antecedentes[2] = newCaracteristica("Apoio", 4);
     antecedentes[3] = newCaracteristica("Fama", 4);
     antecedentes[4] = newCaracteristica("Recursos", 2);
-    const sagat =
-    {
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 3);
+
+    const sagat = {
         Nome: "Sagat",
         Estilo: "Thai Kickboxe",
-        Conceito: "Lutador",
-        Assinatura: "Gargalhadas",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
         Jogador: "NPC",
+        Assinatura: "Gargalhadas",
+        Conceito: "Lutador",
         Cronica: "Street Fighter 5",
+        Equipe: "Nenhuma",
+        Time: "Nenhum",
         Forca: 6,
         Destreza: 5,
         Vigor: 6,
@@ -212,6 +227,7 @@ function SagatSF6() {
         Intimidacao: 6,
         Perspicacia: 5,
         Manha: 4,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 1,
         Lideranca: 5,
@@ -229,15 +245,15 @@ function SagatSF6() {
         Apresamento: 4,
         Esportes: 3,
         Foco: 5,
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
+        Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;",
         Gloria: 10,
         Honra: 3,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 10,
         Divisao: "Estilo Livre",
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
-        Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;"
+        Posto: 10
     };
     return sagat;
 }

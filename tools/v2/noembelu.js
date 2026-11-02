@@ -11,17 +11,16 @@ function NoembeluSFZ3() {
     armas[0] = "Machadinha";
     armas[1] = "Machadinha Arremessada";
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Noembelu",
         Estilo: "Forças Especiais",
         Escola: "Shadaloo",
-        Conceito: "Assassina",
+        Jogador: "NPC",
         Assinatura: "Expressão Fria",
+        Conceito: "Assassina",
+        Cronica: "Street Fighter Alpha",
         Equipe: "Shadaloo",
         Time: "Dolls",
-        Jogador: "NPC",
-        Cronica: "Street Fighter Alpha",
         Forca: 3,
         Destreza: 5,
         Vigor: 3,
@@ -49,14 +48,15 @@ function NoembeluSFZ3() {
         Medicina: 1,
         Misterios: 3,
         Estilos: 4,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 2,
-        Apresamento: 3,
         Bloqueio: 2,
+        Apresamento: 3,
         Esportes: 4,
         Foco: 1,
-        Armas: armas,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Handstand Kick, Slide Kick, Backflip Kick, Back Roll Throw, Wall Spring, Jump",
         Combos: "",
         Gloria: 5,
@@ -64,9 +64,8 @@ function NoembeluSFZ3() {
         Chi: 4,
         ForcaVontade: 6,
         Saude: 13,
-        Posto: 3,
         Divisao: "Duelista",
-        Antecedentes: antecedentes
+        Posto: 3
     };
     return personagem;
 }
@@ -82,17 +81,16 @@ function NoembeluSF5() {
     const armas = [];
     armas[0] = "Machadinha";
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Noembelu",
         Estilo: "Forças Especiais",
         Escola: "Shadaloo",
-        Conceito: "Assassina",
+        Jogador: "NPC",
         Assinatura: "Expressão Fria",
+        Conceito: "Assassina",
+        Cronica: "Street Fighter 5",
         Equipe: "Shadaloo",
         Time: "Dolls",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 5",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,
@@ -120,10 +118,11 @@ function NoembeluSF5() {
         Medicina: 2,
         Misterios: 3,
         Estilos: 5,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 3,
-        Apresamento: 4,
         Bloqueio: 3,
+        Apresamento: 4,
         Esportes: 4,
         Foco: 1,
         NovasTecnicas: tecnicas,
@@ -135,9 +134,8 @@ function NoembeluSF5() {
         Chi: 5,
         ForcaVontade: 7,
         Saude: 15,
-        Posto: 4,
         Divisao: "Duelista",
-        Antecedentes: antecedentes
+        Posto: 4
     };
     return personagem;
 }

@@ -4,14 +4,13 @@ function Kuma() {
     antecedentes[1] = newCaracteristica("Empresário", 2);
     antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    var personagem =
-    {
+    var personagem = {
         Nome: "Kuma",
         Estilo: "Luta Livre",
         Escola: "Dojô Mishima",
-        Conceito: "Urso",
-        Assinatura: "Levanta os braços",
         Jogador: "NPC",
+        Assinatura: "Levanta os braços",
+        Conceito: "Urso",
         Cronica: "Tekken 4",
         Forca: 6,
         Destreza: 3,
@@ -47,15 +46,15 @@ function Kuma() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 0,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Bear Hug, Double Hit Punch, Buffalo Punch, Head Bite, Head Butt",
+        Combos: "Double Hit Punch para Double Hit Punch para Buffalo Punch, Bloqueio para Bear Hug para Head Bite",
         Gloria: 5,
         Honra: 5,
         Chi: 3,
         ForcaVontade: 4,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Bear Hug, Double Hit Punch, Buffalo Punch, Head Bite, Head Butt",
-        Combos: "Double Hit Punch para Double Hit Punch para Buffalo Punch, Bloqueio para Bear Hug para Head Bite"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }

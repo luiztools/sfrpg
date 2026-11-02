@@ -12,18 +12,16 @@ function Geki() {
     armas[0] = "Garra";
     armas[1] = "Shuriken";
 
-    const npc =
-    {
+    const npc = {
         Nome: "Geki",
-        Escola: "Dojô do clã",
-        Assinatura: "Desaparece misteriosamente",
         Estilo: "Ninjitsu",
-        Conceito: "Ninja",
+        Escola: "Dojô do clã",
         Jogador: "NPC",
+        Assinatura: "Desaparece misteriosamente",
+        Conceito: "Ninja",
         Cronica: "Street Fighter 1",
-        Time: "Nenhum",
         Equipe: "Clã Ninja",
-        Antecedentes: antecedentes,
+        Time: "Nenhum",
         Forca: 4,
         Destreza: 6,
         Vigor: 5,
@@ -50,23 +48,24 @@ function Geki() {
         Medicina: 3,
         Misterios: 5,
         Estilos: 3,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 5,
         Bloqueio: 5,
         Apresamento: 3,
         Esportes: 5,
         Foco: 5,
-        Armas: armas,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Heel Stamp, Shikan-Ken, Jump, Spinning Back Fist, Shuto, Boshi-Ken, Deaths Visage, Sakki, Shrouded Moon, Reverse Frontal Kick",
         Combos: "Shuto para Jab para Shikan-Ken (Dizzy); Shrouded Moon para Boshi-Ken; Jump + Forward para Reverse Frontal Kick (Dizzy)",
+        Gloria: 5,
+        Honra: 1,
         Chi: 10,
         ForcaVontade: 8,
         Saude: 20,
-        Gloria: 5,
-        Honra: 1,
-        Posto: 9,
-        Divisao: "Duelistas"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return calcPC(npc);
 }

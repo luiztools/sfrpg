@@ -9,14 +9,13 @@ function MardukTekken7() {
     antecedentes[6] = newCaracteristica("Staff", 3);
     antecedentes[7] = newCaracteristica("Sensei", 3);
 
-    var personagem =
-    {
+    var personagem = {
         Nome: "Craig Marduk",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Bodokan",
-        Conceito: "Campeão Brasileiro",
-        Assinatura: "Grito de vitória",
         Jogador: "NPC",
+        Assinatura: "Grito de vitória",
+        Conceito: "Campeão Brasileiro",
         Cronica: "Tekken 7",
         Forca: 7,
         Destreza: 3,
@@ -52,15 +51,15 @@ function MardukTekken7() {
         Apresamento: 6,
         Esportes: 4,
         Foco: 2,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Buffalo Punch, Power Uppercut, Head Butt, Jump Hammer Punch, Foot Sweep, Wounded Knee, Rhino Horn, Block And Grab, Grappling Defense,  Throw, Back Breaker, Pile Driver, Argentine Back Breaker, Stomach Pump, Dislocate Limb, Flying Tackle, Pin, Improved Pin, Jump, Kippup, Breakfall , Hyper Tackle,  Psychokinetic Channeling",
+        Combos: "Argentine Back Breaker - Argentine Back Breaker - Improved Pin; Improved Pin - Back Breaker - Pile Driver; Rhino Horn - Back Breaker - Dislocate Limb; Jump Roundhouse - Wounded Knee - Foot Sweep; Movimento - Hyper Tackle",
         Gloria: 8,
         Honra: 5,
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Buffalo Punch, Power Uppercut, Head Butt, Jump Hammer Punch, Foot Sweep, Wounded Knee, Rhino Horn, Block And Grab, Grappling Defense,  Throw, Back Breaker, Pile Driver, Argentine Back Breaker, Stomach Pump, Dislocate Limb, Flying Tackle, Pin, Improved Pin, Jump, Kippup, Breakfall , Hyper Tackle,  Psychokinetic Channeling",
-        Combos: "Argentine Back Breaker - Argentine Back Breaker - Improved Pin; Improved Pin - Back Breaker - Pile Driver; Rhino Horn - Back Breaker - Dislocate Limb; Jump Roundhouse - Wounded Knee - Foot Sweep; Movimento - Hyper Tackle"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }
@@ -76,14 +75,13 @@ function MardukTekken6() {
     antecedentes[6] = newCaracteristica("Staff", 2);
     antecedentes[7] = newCaracteristica("Sensei", 3);
 
-    var personagem =
-    {
+    var personagem = {
         Nome: "Craig Marduk",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Bodokan",
-        Conceito: "Campeão Brasileiro",
-        Assinatura: "Grito de vitória",
         Jogador: "NPC",
+        Assinatura: "Grito de vitória",
+        Conceito: "Campeão Brasileiro",
         Cronica: "Tekken 6",
         Forca: 7,
         Destreza: 3,
@@ -119,15 +117,15 @@ function MardukTekken6() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 1,
-        Divisao: "Livre",
-        Posto: 7,
+        ManobrasEspeciais: "Buffalo Punch, Power Uppercut, Head Butt, Jump Hammer Punch, Foot Sweep, Wounded Knee, Block And Grab, Grappling Defense, Throw, Back Breaker, Pile Driver, Stomach Pump, Dislocate Limb, Flying Tackle, Pin, Improved Pin, Jump, Kippup, Breakfall , Hyper Tackle,  Psychokinetic Channeling",
+        Combos: "Improved Pin - Back Breaker - Pile Driver; Jump Roundhouse - Wounded Knee - Foot Sweep; Movimento - Hyper Tackle",
         Gloria: 7,
         Honra: 4,
         Chi: 5,
         ForcaVontade: 9,
         Saude: 18,
-        ManobrasEspeciais: "Buffalo Punch, Power Uppercut, Head Butt, Jump Hammer Punch, Foot Sweep, Wounded Knee, Block And Grab, Grappling Defense, Throw, Back Breaker, Pile Driver, Stomach Pump, Dislocate Limb, Flying Tackle, Pin, Improved Pin, Jump, Kippup, Breakfall , Hyper Tackle,  Psychokinetic Channeling",
-        Combos: "Improved Pin - Back Breaker - Pile Driver; Jump Roundhouse - Wounded Knee - Foot Sweep; Movimento - Hyper Tackle"
+        Divisao: "Livre",
+        Posto: 7
     };
     return personagem;
 }
@@ -143,14 +141,13 @@ function MardukTekken5() {
     antecedentes[6] = newCaracteristica("Staff", 1);
     antecedentes[7] = newCaracteristica("Sensei", 3);
 
-    var personagem =
-    {
+    var personagem = {
         Nome: "Craig Marduk",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Bodokan",
-        Conceito: "Campeão Brasileiro",
-        Assinatura: "Grito de vitória",
         Jogador: "NPC",
+        Assinatura: "Grito de vitória",
+        Conceito: "Campeão Brasileiro",
         Cronica: "Tekken 5",
         Forca: 6,
         Destreza: 3,
@@ -186,15 +183,15 @@ function MardukTekken5() {
         Apresamento: 5,
         Esportes: 3,
         Foco: 1,
-        Divisao: "Livre",
-        Posto: 6,
+        ManobrasEspeciais: "Buffalo Punch, Power Uppercut, Head Butt,  Foot Sweep, Wounded Knee, Grappling Defense, Throw, Back Breaker, Pile Driver, Stomach Pump, Dislocate Limb, Flying Tackle, Pin, Improved Pin, Jump, Kippup, Breakfall , Hyper Tackle,  Psychokinetic Channeling",
+        Combos: "Improved Pin - Back Breaker - Pile Driver; Jump Roundhouse - Wounded Knee - Foot Sweep;",
         Gloria: 6,
         Honra: 3,
         Chi: 4,
         ForcaVontade: 8,
         Saude: 16,
-        ManobrasEspeciais: "Buffalo Punch, Power Uppercut, Head Butt,  Foot Sweep, Wounded Knee, Grappling Defense, Throw, Back Breaker, Pile Driver, Stomach Pump, Dislocate Limb, Flying Tackle, Pin, Improved Pin, Jump, Kippup, Breakfall , Hyper Tackle,  Psychokinetic Channeling",
-        Combos: "Improved Pin - Back Breaker - Pile Driver; Jump Roundhouse - Wounded Knee - Foot Sweep;"
+        Divisao: "Livre",
+        Posto: 6
     };
     return personagem;
 }
@@ -207,14 +204,13 @@ function MardukTekken4() {
     antecedentes[3] = newCaracteristica("Recursos", 2);
     antecedentes[4] = newCaracteristica("Sensei", 3);
 
-    var personagem =
-    {
+    var personagem = {
         Nome: "Craig Marduk",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Bodokan",
-        Conceito: "Campeão Brasileiro",
-        Assinatura: "Grito de vitória",
         Jogador: "NPC",
+        Assinatura: "Grito de vitória",
+        Conceito: "Campeão Brasileiro",
         Cronica: "Tekken 4",
         Forca: 5,
         Destreza: 3,
@@ -250,15 +246,15 @@ function MardukTekken4() {
         Apresamento: 5,
         Esportes: 3,
         Foco: 1,
-        Divisao: "Livre",
-        Posto: 5,
+        ManobrasEspeciais: "Buffalo Punch, Power Uppercut, Head Butt,  Foot Sweep, Wounded Knee, Grappling Defense, Throw, Back Breaker, Pile Driver, Stomach Pump, Dislocate Limb, Flying Tackle, Pin, Improved Pin, Jump, Kippup, Breakfall",
+        Combos: "Improved Pin - Back Breaker - Pile Driver; Jump Roundhouse - Wounded Knee - Foot Sweep;",
         Gloria: 5,
         Honra: 2,
         Chi: 3,
         ForcaVontade: 7,
         Saude: 14,
-        ManobrasEspeciais: "Buffalo Punch, Power Uppercut, Head Butt,  Foot Sweep, Wounded Knee, Grappling Defense, Throw, Back Breaker, Pile Driver, Stomach Pump, Dislocate Limb, Flying Tackle, Pin, Improved Pin, Jump, Kippup, Breakfall",
-        Combos: "Improved Pin - Back Breaker - Pile Driver; Jump Roundhouse - Wounded Knee - Foot Sweep;"
+        Divisao: "Livre",
+        Posto: 5
     };
     return personagem;
 }

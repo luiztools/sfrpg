@@ -9,22 +9,21 @@ function EagleZ3() {
     const tecnicas = [newCaracteristica("Bastão", 5)];
     const armas = ["Tonfa de Ferro"];
 
-    const npc =
-    {
+    const npc = {
         Nome: "Eagle",
         Estilo: "Bojutsu",
-        Conceito: "Agente secreto",
-        Assinatura: "Cruza as tonfas",
         Jogador: "NPC",
+        Assinatura: "Cruza as tonfas",
+        Conceito: "Agente secreto",
         Cronica: "Street Fighter Alpha",
-        Time: "Nenhum",
         Equipe: "MI6",
+        Time: "Nenhum",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,
         Carisma: 3,
-        Aparencia: 3,
         Manipulacao: 5,
+        Aparencia: 3,
         Percepcao: 4,
         Inteligencia: 3,
         Raciocinio: 5,
@@ -44,8 +43,9 @@ function EagleZ3() {
         Computador: 1,
         Investigacao: 4,
         Medicina: 3,
-        Misterios:1,
+        Misterios: 1,
         Estilos: 2,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 4,
         Bloqueio: 5,
@@ -53,17 +53,16 @@ function EagleZ3() {
         Esportes: 4,
         Foco: 0,
         NovasTecnicas: tecnicas,
-        Antecedentes: antecedentes,
         Armas: armas,
         ManobrasEspeciais: "Jump, Buffalo Strike, Triple Blow, Weapon Sweep",
         Combos: "Jump + Bastão Fierce para Bastão Strong (Dizzy), Bastão Jab para Bastão Jab para Bastão Berserk (Dizzy), Bastão Strong para Bastão Strong para Bastão Berserk (Dizzy), Bastão Fierce para Bastão Fierce para Bastão Berserk (Dizzy), Aparar para Triple Blow",
+        Gloria: 6,
+        Honra: 5,
         Chi: 2,
         ForcaVontade: 9,
         Saude: 20,
-        Gloria: 6,
-        Honra: 5,
-        Posto: 9,
-        Divisao: "Duelistas"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return npc;
 }

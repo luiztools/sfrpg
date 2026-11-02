@@ -13,17 +13,16 @@ function Maki() {
     const armas = [];
     armas[0] = "Tonfa";
 
-    var maki =
-    {
+    var maki = {
         Nome: "Maki Genryusai",
         Estilo: "Ninjitsu (Bojutsu)",
         Escola: "Bushinryu Ninpou",
-        Conceito: "Kunoichi",
-        Assinatura: "Pula de alegria!",
-        Cronica: "Street Fighter Alpha",
-        Time: "Final Fight",
-        Equipe: "Nenhuma",
         Jogador: "NPC",
+        Assinatura: "Pula de alegria!",
+        Conceito: "Kunoichi",
+        Cronica: "Street Fighter Alpha",
+        Equipe: "Nenhuma",
+        Time: "Final Fight",
         Forca: 3,
         Destreza: 6,
         Vigor: 4,
@@ -58,17 +57,17 @@ function Maki() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 1,
-        Armas: armas,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Jump, Wall Spring, Throw, Air Smash, Handstand Kick, Flying Thrust Kick, Knee Basher, Slide Kick, Kippup",
         Combos: "Jab para Slide Kick; Slide Kick para Flying Thrust Kick",
-        Posto: 6,
         Gloria: 5,
         Honra: 6,
-        Divisao: "Duelistas",
         Chi: 5,
         ForcaVontade: 7,
-        Saude: 17
+        Saude: 17,
+        Divisao: "Duelistas",
+        Posto: 6
     };
     return maki;
 }

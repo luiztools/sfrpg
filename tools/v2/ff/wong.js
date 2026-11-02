@@ -7,17 +7,16 @@ function Wong() {
 
     const tecnicas = [];
 
-    const npc =
-    {
+    const npc = {
         Nome: "Wong",
         Estilo: "Kung Fu",
-        Conceito: "Chefe de Cozinha",
         Escola: "Templo Shaolin",
-        Time: "Skull Cross",
-        Equipe: "Skull Cross",
-        Assinatura: "Mantra",
         Jogador: "NPC",
+        Assinatura: "Mantra",
+        Conceito: "Chefe de Cozinha",
         Cronica: "Final Fight 3",
+        Equipe: "Skull Cross",
+        Time: "Skull Cross",
         Forca: 5,
         Destreza: 4,
         Vigor: 5,
@@ -31,11 +30,11 @@ function Wong() {
         Interrogacao: 0,
         Intimidacao: 5,
         Perspicacia: 3,
-        Labia: 3,
         Manha: 3,
+        Labia: 3,
         LutaCega: 4,
-        Lideranca: 2,
         Conducao: 2,
+        Lideranca: 2,
         Seguranca: 3,
         Furtividade: 2,
         Sobrevivencia: 0,
@@ -46,22 +45,22 @@ function Wong() {
         Misterios: 5,
         Estilos: 2,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 4,
         Bloqueio: 4,
         Apresamento: 1,
         Esportes: 3,
         Foco: 4,
-        Divisao: "Estilo Livre",
-        Posto: 8,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Monkey Grab Punch, Double-Hit Punch, Double Hit Kick, Foot Sweep, Throw, Jump, Kippup, Punch Defense, Deflecting Punch, Drunken Monkey Roll, Regeneration, Dim Mak, Rolling Attack, Beast Roll, Knife Hand Strike, Vertical Rolling Attack",
+        Combos: "Drunken Monkey Roll para Regeneration; Bloqueio para Double-Hit Punch (Dizzy); Bloqueio para Deflecting Punch para Dim Mak (Dizzy); Double-Hit Kick (Dizzy)",
         Gloria: 4,
         Honra: 3,
         Chi: 4,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Monkey Grab Punch, Double-Hit Punch, Double Hit Kick, Foot Sweep, Throw, Jump, Kippup, Punch Defense, Deflecting Punch, Drunken Monkey Roll, Regeneration, Dim Mak, Rolling Attack, Beast Roll, Knife Hand Strike, Vertical Rolling Attack",
-        Combos: "Drunken Monkey Roll para Regeneration; Bloqueio para Double-Hit Punch (Dizzy); Bloqueio para Deflecting Punch para Dim Mak (Dizzy); Double-Hit Kick (Dizzy)",
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return npc;
 }

@@ -12,17 +12,16 @@ function Onaga() {
     const conhecimentos = [];
     const tecnicas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Onaga",
         Estilo: "Briga",
         Escola: "Desconhecida",
+        Jogador: "NPC",
+        Assinatura: "Abre as asas",
+        Conceito: "Imperador do Outworld",
+        Cronica: "Mortal Kombat Deception",
         Equipe: "Nenhuma",
         Time: "Outworld",
-        Conceito: "Imperador do Outworld",
-        Assinatura: "Abre as asas",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat Deception",
         Forca: 10,
         Destreza: 5,
         Vigor: 9,
@@ -33,25 +32,25 @@ function Onaga() {
         Inteligencia: 7,
         Raciocinio: 7,
         Prontidao: 6,
-        Perspicacia: 7,
-        Manha: 1,
         Interrogacao: 3,
         Intimidacao: 8,
+        Perspicacia: 7,
+        Manha: 1,
         Labia: 5,
+        NovosTalentos: talentos,
         LutaCega: 4,
         Conducao: 0,
         Lideranca: 6,
         Seguranca: 1,
         Furtividade: 1,
         Sobrevivencia: 5,
+        NovasPericias: pericias,
         Arena: 6,
         Computador: 0,
         Investigacao: 2,
         Medicina: 1,
         Misterios: 8,
         Estilos: 5,
-        NovosTalentos: talentos,
-        NovasPericias: pericias,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 8,
@@ -62,15 +61,15 @@ function Onaga() {
         Foco: 8,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 9,
+        ManobrasEspeciais: "Tail Sweep, Bite, Head Bite, Jump, Kippup, San He, Fireball, Improved Fireball, Tearing Bite, Yoga Flame, Fire Strike, Flying Fireball, Flight, Levitation, Regeneration, Chi Kun Healing, Mind Control, Telepathy, Mind Reading, Shockwave, Air Smash, Slide Kick, Pile Driver, Spinning Pile Driver, Missile Reflection, Energy Reflection, Maka Wara",
+        Combos: "nenhum",
         Gloria: 9,
         Honra: 1,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Tail Sweep, Bite, Head Bite, Jump, Kippup, San He, Fireball, Improved Fireball, Tearing Bite, Yoga Flame, Fire Strike, Flying Fireball, Flight, Levitation, Regeneration, Chi Kun Healing, Mind Control, Telepathy, Mind Reading, Shockwave, Air Smash, Slide Kick, Pile Driver, Spinning Pile Driver, Missile Reflection, Energy Reflection, Maka Wara",
-        Combos: "nenhum"
+        Divisao: "Livre",
+        Posto: 9
     };
     return personagem;
 }

@@ -38,7 +38,7 @@ const manobras = {
 	"Hyper Fist": { Tecnica: "Soco", ModVel: 1, ModDano: "0/0/0", ModMov: "Um", FdV: 1, Sistema: "3 hits" },
 	"Monkey Grab Punch": { Tecnica: "Soco", ModVel: -2, ModDano: 1, ModMov: 0, Sistema: "Ignora Bloqueio" },
 	"Power Uppercut": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD vs. Aérea" },
-	"Rekka Ken": { Tecnica: "Soco", ModVel: "Esp.", ModDano: "Esp.", ModMov: "Esp.", FdV: 1, Sistema: "Deve ser jogado com um Soco Básico, adiciona +3 na VEL; pode ser jogado por até 3 turnos consecutivos, somando para atordoar; mas neste caso deve se exibir após senão -3 Glória" },
+	"Rekka Ken": { Tecnica: "Soco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "Deve ser jogado com um Soco Básico, adiciona +3 na VEL; pode ser jogado por até 3 turnos consecutivos, somando para atordoar; mas neste caso deve se exibir após senão -3 Glória" },
 	"Shockwave": { Tecnica: "Soco", ModVel: 0, ModDano: 0, Chi: 1, Sistema: "Afeta (Força) hex em liha reta; todos os alvos na linha sofrem o dano e sofrem KD automático; não afeta lutadores que estão executando uma Aérea" },
 	"Spinning Back Fist": { Tecnica: "Soco", ModVel: -1, ModDano: 2, ModMov: 1, Sistema: "" },
 	"Spinning Clothesline": { Tecnica: "Soco", ModVel: 0, ModDano: 0, ModMov: -2, FdV: 1, Sistema: "Acerta todos os hex adjacentes, empurrando 1 hex; o lutador pode se mover e rolar o dano novamente, não afeta oponentes em Manobras de Agachamento" },
@@ -59,7 +59,7 @@ const manobras = {
 	"Dashing Clothesline": { Tecnica: "Soco", ModVel: -1, ModDano: 5, ModMov: 2, FdV: 1, Sistema: "KD" },
 	"Dragon Smash": { Tecnica: "Soco", ModVel: -1, ModDano: 6, ModMov: 0, FdV: 2, Sistema: "Similar ao Dragon Punch, mas após acertar a Manobra (e empurrar o oponente para trás), pode acertar o oponente mais uma vez (se ainda tiver Movimento para isso); o segundo impacto tem dano +4 e causa KD" },
 	"Houzantou": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: 1, FdV: 1, Sistema: "Esquiva de projétil, KD" },
-	"Jet Uppercut": { Tecnica: "Soco", ModVel: -1, ModDano: 6, ModMov: -1, FdV: 1, Sistema: "Similar ao Dragon Punch" },
+	"Jet Uppercut": { Tecnica: "Soco", ModVel: -1, ModDano: 6, ModMov: -1, FdV: 1, Sistema: "KD vs. Aérea; empourra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
 	"Kobokushi": { Tecnica: "Soco", ModVel: -2, ModDano: 5, ModMov: "Um", Chi: 1, Sistema: "Ao interromper um projétil, fazer um teste de Raciocínio (2 Sucessos) para dissipá-lo por 1 Força de Vontade. Causa KD." },
 	"Machine Gun Blow": { Tecnica: "Soco", ModVel: 0, ModDano: "0/0/0", ModMov: 2, FdV: 1, Sistema: "Três Hits" },
 	"Punch Sweep": { Tecnica: "Soco", ModVel: -2, ModDano: 3, ModMov: -2, Sistema: "Agachamento; KD; a única forma de se defender é com Kick Defense; defensor pode rolar Percepção + Perspicácia contra Destreza + Soco do atacante; se vencer, pode se defender com um bloqueio comum" },
@@ -67,10 +67,9 @@ const manobras = {
 	"Shoouken": { Tecnica: "Soco", ModVel: -1, ModDano: 1, ModMov: 0, FdV: 2, Sistema: "Linha reta; empurra o oponente para trás e segue acertando enquanto tiver movimento; após o último dano o oponente sofre um KD; só é considerada aérea após o rolamento do último dano" },
 	"Senkju Tai": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 0, FdV: 1, Sistema: "KD" },
 	"Snake Strike": { Tecnica: "Soco", ModVel: 1, ModDano: 1, ModMov: -1, Sistema: "Aérea, esquiva de projétil; oponente interrompido em uma Aérea sofre três hits" },
-	"Tornado Punch": { Tecnica: "Soco", ModVel: 0, ModDano: 1, ModMov: -2, FdV: 1, Sistema: "Acerta e empurra oponentes de todos os hex adjacentes, seguindo em linha reta e rolando novos danos; o último acerto precisa ser direcionado a apenas um oponente, causando KD e tendo um modificador de +2; não atinge oponentes em agachamentos" },
-	"Thunderbolt": { Tecnica: "Soco", ModVel: -1, ModDano: 4, ModMov: -1, Sistema: "Aérea, causa KD" },
+	"Tornado Punch": { Tecnica: "Soco", ModVel: 0, ModDano: "1/2", ModMov: -2, FdV: 1, Sistema: "Acerta e empurra oponentes de todos os hex adjacentes, seguindo em linha reta e rolando novos danos; o último hit precisa ser direcionado a apenas um oponente, causando KD e tendo um modificador de +2; não atinge oponentes em agachamentos" },
+	"Thunderbolt": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: -1, Sistema: "Aérea, esquiva de projétil, causa KD, tem de entrar no mesmo hex" },
 	"Cross Counter": { Tecnica: "Soco", ModVel: 2, ModDano: 4, ModMov: "Dois", FdV: 1, Sistema: "Se o lutador é mais rápido que o oponente, ele deve esperar o seu ataque para acertá-lo no exato momento do golpe, de modo que ele absorve com apenas metade do seu Vigor, empurrando um hex e causando KD; o lutador pode seguir se movimentando após o soco, mantendo-se próximo do oponente; se derrubado ou Dizzy, o atacante não prossegue com o Cross Counter; se atingir antes de receber o ataque, não empurra ou causa KD; não há ganho de +2 VEL no próximo turno" },
-	"Tornado Punch": { Tecnica: "Soco", ModVel: 0, ModDano: "1/2", ModMov: -2, FdV: 1, Sistema: "Bate enquanto move; último ataque usa segundo modificador e causa KD; Esquiva projétil;" },
 	"Double Hit Punch": { Tecnica: "Soco", ModVel: -1, ModDano: "0/0", ModMov: -1, Sistema: "Dois hits; Oponentes aéreos ou agachados tomam apenas 1 hit" },
 	"Burn Knuckle": { Tecnica: "Soco", ModVel: -1, ModDano: 5, ModMov: 3, Chi: 1, FdV: 1, Sistema: "Linha reta, causa KD" },
 	"Boxing Punches": { Tecnica: "Soco", ModVel: "", ModDano: "", ModMov: "", Sistema: "3 novos socos básicos" },
@@ -83,6 +82,11 @@ const manobras = {
 	"Split Punch": { Tecnica: "Soco", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Sistema: "Ignora Vigor se não bloquear. Dizzy se causar 1 dano. Perde Honra." },
 	"Palm Press": { Tecnica: "Soco", ModVel: -2, ModDano: 5, ModMov: "Nenhum", Chi: 1, Sistema: "Alcance 2. Se dano superar DES, causa KD e arremessa FOR hexes. Pode bloquear projéteis." },
 	"Tameshiwari": { Tecnica: "Soco", ModVel: 1, ModDano: "", ModMov: "Um", Chi: 1, FdV: 1, Sistema: "Tem de carregar por um turno. No seguinte, FOR + SOCO x 2 de dano, causa KD mesmo bloqueando, empurra FOR hexes" },
+	"Reaping Palm": { Tecnica: "Soco", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "anda linha reta, KD, esquiva projétil ao custo de 1 Chi adicional" },
+	"Metsu Shoryuken": { Tecnica: "Soco", ModVel: 1, ModDano: 7, ModMov: -1, FdV: 1, Chi: 1, Sistema: "KD vs. Aérea; empourra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva; Dano Agravado, -1 Honra; tem de estar com Satsui ativado mas não acumula os efeitos dele" },
+	"Ducking Straight": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "esquiva de projétil" },
+	"Ducking Upper": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "esquiva de projétil; KD vs Aérea" },
+	"Short Swing Blow": { Tecnica: "Soco", ModVel: -2, ModDano: 3, ModMov: "Dois/Um", Sistema: "anda dois hexes para esquivar, anda um para bater" },
 
 	//Chute
 	"Air Hurricane Kick": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 1, Chi: 1, FdV: 1, Sistema: "Igual Hurricane Kick" },
@@ -114,7 +118,7 @@ const manobras = {
 	"Reverse Frontal Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: -1, Sistema: "Ignora bloqueios" },
 	"Forward Backflip Kick": { Tecnica: "Chute", ModVel: 2, ModDano: "1/1", ModMov: "Dois", FdV: 1, Sistema: "2 hits se o atacante interromper um alvo em Aérea" },
 	"Bushin Hurricane Kick": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", Chi: 1, FdV: 1, Sistema: "Todos ao redor são atingidos e empurrados para trás; oponentes no mesmo hex são puxados pelo golpe, podendo ser acertados até um número de vezes igual à Técnica Esportes do usuário; para cada novo ataque, devem ter sofrido dano no ataque anterior; KD no último acerto" },
-	"Dankuukyaku": { Tecnica: "Chute", ModVel: -1, ModDano: 0, ModMov: 4, FdV: 2, Sistema: "Aérea, esquiva de projétil (dif. 8), após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +2, empurrando de novo e tentando um terceiro com dano +4, que causa KD" },
+	"Dakukyaku": { Tecnica: "Chute", ModVel: -1, ModDano: 0, ModMov: 4, FdV: 2, Sistema: "Aérea, esquiva de projétil (dif. 8), após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +2, empurrando de novo e tentando um terceiro com dano +4, que causa KD" },
 	"Dive Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Aérea, afeta personagens em agachamentos" },
 	"Hayagake": { Tecnica: "Chute", ModVel: 0, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea ou agachamento, à escolha do jogador; se aérea, esquiva de projétil; se agachamento, causa KD" },
 	"Power Kick": { Tecnica: "Chute", ModVel: -3, ModDano: 5, ModMov: "Dois", Sistema: "Empurra 1 Hexágono para trás e causa KD em Manobras Aéreas" },
@@ -132,6 +136,8 @@ const manobras = {
 	"Slash Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 5, ModMov: 3, Chi: 1, FdV: 1, Sistema: "Linha reta, causa KD" },
 	"Shadow Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 4, ModMov: 2, Chi: 1, Sistema: "Causa KD. Não afeta agachamento." },
 	"Rising Jaguar": { Tecnica: "Chute", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 2, Sistema: "Manobra fanmade removida. Muito roubada." },
+	"Spin Kick": { Tecnica: "Chute", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "Deve ser jogado com um Chute Básico ou Foot Sweep (turno 2 ou 3), adiciona +2 na VEL; pode ser jogado por até 3 turnos consecutivos; se usar Foot Sweep, não pode usar de novo no turno seguinte;" },
+	"Sonic Scythe": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: "Nenhum", Alcance: 2, Chi: 1, Sistema: "Alcance 2 hexes" },
 
 	//bloqueio
 	"Deflecting Punch": { Tecnica: "Soco", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para socos; Após a ABS faça um contra-soco (vs. qualquer ataque)" },
@@ -148,10 +154,12 @@ const manobras = {
 	//apresamento
 	"Air Suplex": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: 0, Sistema: "Precisa interromper uma Aérea do oponente; KD; Atacante e alvo terminam no hex da interrupção; Aérea" },
 	"Air Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; atacante termina seu movimento após o ataque; Aérea" },
+	"Air Baton Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; Aérea" },
 	"Arm Wrist Lock": { Tecnica: "Apresamento", ModVel: 0, ModDano: 0, ModMov: "Dois", Sistema: "Sustentado. KD. Somente pode ser usado no turno após bloquear soco ou chute e interrompendo o oponente." },
 	"Back Breaker": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD" },
 	"Back Roll Throw": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: "Um", Sistema: "O alvo é arremessado a FOR + CHUT hex; KD" },
 	"Bandit Chain": { Tecnica: "Apresamento", ModVel: 1, ModDano: "2/2/2", ModMov: "Um", FdV: 1, Sistema: "Três Hits; no fim, arremessa a até FOR hexes" },
+	"Baton Throw": { Tecnica: "Apresamento", ModVel: -3, ModDano: 2, ModMov: "Um", Sistema: "O alvo é arremessado a (FOR) hex; KD" },
 	"Bear Hug": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "Sustentado" },
 	"Brain Cracker": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: "Um", Sistema: "Sustentado" },
 	"Bushin Musou Renge": { Tecnica: "Apresamento", ModVel: -2, ModDano: "4/4/4", ModMov: "Um", Chi: 1, FdV: 1, Sistema: "Três Hits baseado em Soco, Chute ou Apresamento; oponente absorve com Honra" },
@@ -205,6 +213,7 @@ const manobras = {
 	"Flying Head Butt": { Tecnica: "Esportes", ModVel: 0, ModDano: 4, ModMov: 3, FdV: 1, Sistema: "Aérea; Linha Reta" },
 	"Flying Heel Stomp": { Tecnica: "Esportes", ModVel: 0, ModDano: 1, ModMov: 2, FdV: 1, Sistema: "Aérea; esquiva de projétil; Linha Reta; o atacante pode fazer o ataque a qualquer momento e continuar o movimento" },
 	"Jump": { Tecnica: "Esportes", ModVel: 3, ModMov: 0, Sistema: "Aérea; Esquiva de projétil (Des + Esp vs. Foco); combina com chutes e socos básicos (use a VEL, DAN e MOV da manobra)" },
+	"Double Jump": { Tecnica: "Esportes", ModVel: 3, ModMov: 1, Sistema: "Similar a Jump; Esquiva de projétil (Des + Esp vs. Foco dif7); não é interrupção" },
 	"Jumping Shoulder Butt": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: -1, Sistema: "Aérea; esquiva de projétil" },
 	"Kippup": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Passiva; o lutador sofre apenas -1 VEL após sofrer KD" },
 	"Rolling Attack": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: 4, FdV: 1, Sistema: "Aérea; Linha Reta; o atacante termina o movimento 2 hex na frente do alvo; precisa entrar no hex do alvo" },
@@ -227,6 +236,8 @@ const manobras = {
 	"Web Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: "+0", ModMov: 3, Chi: 1, FdV: 1, Sistema: "Absorve com Raciocínio. Causa Dizzy, sem dano real." },
 	"Hyper Tackle": { Tecnica: "Esportes", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "Linha reta. Tem de entrar no hex. Acerta todos até o fim do movimento. -1 Mov por cada impacto. KD. Crítico cancela." },
 	"Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: -1, ModMov: "Nenhum", Chi: 1, FdV: 1, Sistema: "Causa KD; até 3 hits;" },
+	"Shishiruirui": { Tecnica: "Esportes", ModVel: -1, ModDano: -1, ModMov: -1, FdV: 1, Sistema: "Aérea e tem de interromper aérea; Bate e empurra em linha reta; Causa KD no final" },
+	"Empty Step": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Passiva. Lutador pode atravessar hexes ocupados ou parcialmente bloqueados durante seu movimento." },
 
 	//Foco
 	"Acid Breath": { Tecnica: "Foco", ModVel: -2, ModDano: 3, ModMov: -1, Chi: 1, Alcance: "Vigor", Sistema: "linha de visão; causa +3 DAN imediatamente; no fim do próximo, caso o ácido não seja removido, role agora com +0, e no fim de 2 turnos de espera com -3" },
@@ -271,28 +282,29 @@ const manobras = {
 	"Envelop": { Tecnica: "Foco", ModVel: -2, ModDano: 1, ModMov: -2, Chi: 1, Alcance: "Foco", Sistema: "linha de visão; Sustentado, usa Foco ao invés de Apresamento para duração máxima; a vítima precisa passar num teste de Vigor todo turno para não ser Dizzy; a vítima pode agir normalmente mas terá -2 MOV enquanto estiver presa; se a linha de visão for obstruída, o apresamento acaba; se 2 lutadores estiverem no mesmo hex, o ataque afetará ambos; +1 DAN no 1º turno e -1 nos demais" },
 	"Fire Strike": { Tecnica: "Foco", ModVel: -1, ModDano: 3, Chi: 1, Alcance: "Foco", Sistema: "linha de visão; afeta todos (Foco) hex ao longo da linha; dura até o fim do turno" },
 	"Flaming Fist": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com qualquer Soco Básico; adiciona +3 DAN" },
+	"Freeze Strike": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 2, Sistema: "Jogado com qualquer Soco, Chute ou Apresamento Básico; adiciona +2 DAN; se sofrer dano, a vítima é congelada até ser atingida ou conseguir acumular 4 sucessos em um teste prolongado de FOR (teste no final de cada turno)" },
 	"Flight": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Requer 1 turno de concentração, no qual o lutador só poderá bloquear; nos turnos seguintes o lutador estará flutuando, todas as manobras terão +1 VEL and MOV = Vigor, só pode ser atingido por Manobras Aérea e ataques de projétil; fora de combate, custa 1 chi/hora de vôo de (Foco + Destreza) x 10 milhas p/ hora" },
 	"Heal": { Tecnica: "Foco", ModVel: -1, ModMov: -1, Chi: 1, Sistema: "O usuário pode curar-se ou a alguém no mesmo hex a 1 Chi por Saúde; também pode purificar um elemento por 1 Chi/5 cm³" },
-	"Heat Wave": { Tecnica: "Foco", ModVel: 0, ModDano: 2, ModMov: 0, Chi: 1, Sistema: "Ignora bloqueio; pode ser esquivado como um projétil; dano conta somente para atordoar" },
+	"Heat Wave": { Tecnica: "Foco", ModVel: 0, ModDano: 2, ModMov: 0, Chi: 1, Alcance: "Raciocínio+Foco", Sistema: "Ignora bloqueio; pode ser esquivado como um projétil; dano conta somente para atordoar" },
 	"Leech": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", Chi: 1, Sistema: "Atacante deve prender o alvo em um Sustentado antes; atacante pode passar 1 Saúde do alvo para si por ponto de Chi gasto, máximo de (Foco) pontos por turno; atacante não pode ter mais Saúde que o máximo" },
-	"Lightness": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Pode ser usado no elemental ou outro alvo; o alvo ganha +2 VEL e +3 MOV para todas as manobras acrescidas por Jump; dura (Foco) turnos" },
-	"Pit": { Tecnica: "Foco", ModVel: -1, ModDano: 1, ModMov: -1, Chi: 1, Sistema: "Cria no hex alvo um buraco com (5 + Foco) pés de profundidade; lutadores no buraco sofrem o dano pela queda no fim do turno e devem gastar o próximo turno subindo (Movimento com -4 VEL); o atacante precisa estar em contato com a terra; buracos são permanentes após criados; -1 Glória se usado em arena" },
+	"Lightness": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Alcance: "Raciocínio+Foco", Chi: 1, Sistema: "Pode ser usado no elemental ou outro alvo; o alvo ganha +2 VEL e +3 MOV para todas as manobras acrescidas por Jump; dura (Foco) turnos" },
+	"Pit": { Tecnica: "Foco", ModVel: -1, ModDano: 1, ModMov: -1, Chi: 1, Alcance: "Raciocínio+Foco", Sistema: "Cria no hex alvo um buraco com (5 + Foco) pés de profundidade; lutadores no buraco sofrem o dano pela queda no fim do turno e devem gastar o próximo turno subindo (Movimento com -4 VEL); o atacante precisa estar em contato com a terra; buracos são permanentes após criados; -1 Glória se usado em arena" },
 	"Pool": { Tecnica: "Foco", ModVel: 1, ModMov: -2, Sistema: "Adquire imunidade a ataques físicos e a habilidade de escoar por frestas, etc.; alguns ataques de Foco podem afetar o lutador (Narrador decide)" },
 	"Push": { Tecnica: "Foco", ModVel: -2, ModDano: 1, Chi: 1, Alcance: "Três", Sistema: "Afeta 3 hex a frente e (Foco) hex de lado; todos os lutadores na área são atingidos; todos recuam 1 hex por ponto de dano sofrido; KD vs. Aérea" },
 	"Sakki": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Personagem está a par do ataque surpresa e pode agir de acordo com esta informação; pode mover Foco + Esportes para evitar o ataque surpresa" },
 	"Shrouded Moon": { Tecnica: "Foco", ModVel: 0, ModMov: -1, Chi: 1, Sistema: "Ninja fica invisível; atacante precisa vencer uma disputa de Percepção + Prontidão vs. Foco + Furtividade do ninja para percebê-lo; se não percebê-lo o ninja terá +1 VEL no próximo turno" },
 	"Speed of the Mongoose": { Tecnica: "Foco", ModVel: 2, ModMov: -2, Chi: 1, Sistema: "Adiciona +4 VEL ou +6 MOV para a Manobra escolhida no próximo turno" },
 	"Spontaneous Combustion": { Tecnica: "Foco", ModVel: 0, ModDano: 5, ModMov: -2, Chi: 2, Sistema: "Atacante precisa vencer uma disputa de Foco com o alvo; se vencer o alvo começa a pegar fogo; continua enquanto o elemental manter o efeito ou o alvo gastar um turno rolando no chão para apagar as chamas, neste turno terá -2 VEL; 1 Chi por turno para manter as chamas e dano +2 nos turnos seguintes" },
-	"Stone": { Tecnica: "Foco", ModVel: -2, ModDano: "Especial", Chi: 1, Sistema: "Ataque de projétil; dano é FOR + Foco" },
-	"Vacuum": { Tecnica: "Foco", ModVel: -2, ModDano: 2, ModMov: -2, Chi: 1, Sistema: "Afeta todos no hex alvo; vítimas precisam passar em um teste de Vigor ou estarão automaticamente atordoadas no próximo turno; as vítimas podem interromper com uma Manobra mais rápida e saírem do hex; não afeta elementalistas do ar" },
+	"Stone": { Tecnica: "Foco", ModVel: -2, ModDano: "Especial", Chi: 1, Alcance: "Raciocínio+Foco", Sistema: "Ataque de projétil; dano é FOR + Foco" },
+	"Vacuum": { Tecnica: "Foco", ModVel: -2, ModDano: 2, ModMov: -2, Chi: 1, Alcance: "Raciocínio+Foco", Sistema: "Afeta todos no hex alvo; vítimas precisam passar em um teste de Vigor ou estarão automaticamente atordoadas no próximo turno; as vítimas podem interromper com uma Manobra mais rápida e saírem do hex; não afeta elementalistas do ar" },
 	"Venom": { Tecnica: "Foco", ModVel: 1, ModDano: 2, ModMov: -2, Chi: 1, Sistema: "Efeitos retardados: pelos próximos 2 turnos o alvo perde 1 Saúde automático e tem -1 VEL" },
 	"Wall": { Tecnica: "Foco", ModVel: -2, ModDano: 2, Alcance: "Percepcao+Foco", Sistema: "O personagem cria uma barreira em um hex; qualquer um que esteja no hex sofre o dano; a barreira pode ser contornada ou destruída, ela tem Vigor igual ao Antecedente Elemental e Saúde igual Foco do personagem" },
-	"Weight": { Tecnica: "Foco", ModVel: -2, ModMov: -1, Chi: 1, Sistema: "Ataque de projétil; vítima atingida tem -2 VEL, -2 MOV e não usar Aérea no próximo turno" },
-	"Chi Push": { Tecnica: "Foco", ModVel: -3, ModDano: "Especial", Chi: 2, Sistema: "Dano = Raciocínio + Foco +3 +1 por Chi extra, máximo de 2; opcionalmente pontos de dano podem forçar o alvo recuar 1 hex(1 dano/1 hex recuado); pode aumentar o alcance por -2 dano por hex; alvo pode adicionar +1 na ABS por 2 Chi gasto; não afeta quem estiver usando San He" },
+	"Weight": { Tecnica: "Foco", ModVel: -2, ModMov: -1, Chi: 1, Alcance: "Raciocínio+Foco", Sistema: "Ataque de projétil; vítima atingida tem -2 VEL, -2 MOV e não usar Aérea no próximo turno" },
+	"Chi Push": { Tecnica: "Foco", ModVel: -3, ModDano: "Especial", Chi: 2, Sistema: "+1 DAN por Chi extra, máximo de 2; opcionalmente pontos de dano podem forçar o alvo recuar 1 hex(1 dano/1 hex recuado); pode aumentar o alcance por -2 dano por hex; alvo pode adicionar +1 na ABS por 2 Chi gasto; não afeta quem estiver usando San He" },
 	"Levitation": { Tecnica: "Foco", ModVel: 0, ModMov: "Especial", Chi: 1, Sistema: "Lutador pode se mover por Foco hex por turno em qualquer direção" },
 	"Power Up": { Tecnica: "Foco", ModVel: 0, ModDano: "", ModMov: "", Chi: 1, Sistema: "+1Vel/Dano ou +1Vel/Abs ou +1Vel/Mov ou +1Dano/Alc ou +1Atri ou +1Habil próx turno" },
-	"Accuracy": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "dificuldade para esquivar de seus projétil +1" },
-	"Mu no Hadou": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "+1Vel/Dano com Foco ou +1Abs/imune dizzy/imune telepatia neste turno" },
+	"Accuracy": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "dificuldade para esquivar de seus projéteis +1" },
+	"Mu No Hadou": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "+1Vel/Dano com Foco ou +1Abs/imune dizzy/imune telepatia neste turno" },
 	"Banishing Flat": { Tecnica: "Soco", ModVel: -2, ModDano: 4, ModMov: -2, Chi: 1, Sistema: "Raciocínio, 2 sucessos, dissipa projétil" },
 	"Ansatsuken": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "+3 Dano Agravado na Manobra Assassina, -1 Honra" },
 	"Ashura Senku": { Tecnica: "Foco", ModVel: 3, ModMov: 2, Chi: 1, Sistema: "Lutador não pode ser atingido enquanto a executa" },
@@ -324,9 +336,13 @@ const manobras = {
 	"Portal Attack": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Manobras Básicas ou de projeção à distância (alcance)" },
 	"Soul Illusion": { Tecnica: "Foco", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Sistema: "1 Chi por turno. Cria 4 ilusões que somem com um hit cada. Diferenciar o verdadeiro exige Percepção + Mistérios dif 2 + cópias existentes. Se o real sofrer hit, todas somem." },
 	"Condensed Energy": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Nenhum", Chi: 1, Sistema: "Jogue em conjunto com projétil. -1 ou -2 Vel e Alcance para diminuir igualmente a dificuldade do teste de dano" },
+	"Denjin Hadouken": { Tecnica: "Foco", ModVel: -2, ModDano: 5, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "Linha de visão, projétil, dificuldade pro dano é 5 (normal) ou 4, se diminuir 1 VEL" },
+	"Metsu Hadouken": { Tecnica: "Foco", ModVel: 0, ModDano: 5, FdV: 1, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "Projétil, KD, linha de visão, Dano Agravado, tem de estar com Satsui ativado e não acumula com os efeitos dele, -1 Honra" },
+	"Tanden Vortex": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", Chi: 1, Alcance: "Raciocinio", Sistema: "Linha de visão, Rola INT + CIBER absorvendo com INT, Dano em FdV do alvo e se passar INT do alvo, Dizzy e suga para hex adjacente." },
+	"Tanden Copy": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", Chi: 1, Alcance: "Percepção", Sistema: "Linha de visão, Rola PER + CIBER dificuldade 5 + 1 por ponto de poder para copiar a manobra assistida" },
 
 	//Outros
-	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
+	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado/Chicote", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
 	"Weapon Sweep": { Tecnica: "Bastão/Lança/Chicote", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento. Armado." },
 	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano." },
 	"Weapon Uppercut": { Tecnica: "Bastão/Espada/Faca/Garra", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD vs. Aérea" },
@@ -334,6 +350,7 @@ const manobras = {
 	"Weapon Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Arma escolhida; -2 vs. outros" },
 	"Deflecting Weapon": { Tecnica: "Bastão/Espada/Machado/Faca", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
 	"Triple Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
+	"Double Hit Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois Hits a menos que o alvo esteja em Aérea ou Agachamento" },
 };
 
 const armas = {
@@ -490,7 +507,7 @@ function calculaAlcanceArremesso(npc, arma) {
 }
 
 function calculaVelocidade(npc, manobra) {
-	if (manobra.ModVel === null || manobra.ModVel === undefined || manobra.ModVel === "Especial") return "Esp.";
+	if (manobra.ModVel === null || manobra.ModVel === undefined || manobra.ModVel === "Especial" || manobra.ModVel === "Esp.") return "Esp.";
 
 	let modAtributo = 0;
 	if (manobra.Tecnica === "Foco") {
@@ -534,11 +551,12 @@ function calculaAlcanceArma(arma) {
 }
 
 function calculaDanoArma(npc, arma, manobra) {
-	if (!arma || !manobra) return alert(`Não foi possível calcular dano de uma manobra com arma`);
+	if (!arma || !manobra) return console.log(`Não foi possível calcular dano de uma manobra com arma`, arma, manobra);
 	const modTecnica = getCaracteristica(npc.NovasTecnicas, arma.Tecnica || arma.Nome);
 
-	if (manobra.Nome === "Aparar")
+	if (manobra.Nome === "Aparar") {
 		return "ABS" + (npc["Vigor"] + npc["Bloqueio"] + npc[arma.Tecnica]);
+	}
 
 	if (manobra.ModDano === undefined || arma.ModDano === undefined) return "-";
 
@@ -563,7 +581,7 @@ function calculaDanoTripleBlow(npc, manobra) {
 }
 
 function buscarArma(str, npc) {
-	if(npc.Armas === undefined || npc.Armas === null || npc.Armas.length === 0) return undefined;
+	if (npc.Armas === undefined || npc.Armas === null || npc.Armas.length === 0) return undefined;
 
 	const tecnicas = str.split("/");
 	let maiorTecnica = 0;
@@ -576,14 +594,32 @@ function buscarArma(str, npc) {
 	});
 
 	const armasPossiveis = ARMAS_ARRAY.filter(a => a.Tecnica === nomeTecnica || a.Nome === nomeTecnica);
-	for(let i = 0; i < armasPossiveis.length; i++) {
-		if(npc.Armas.find(a => a === armasPossiveis[i].Nome)) {
+	for (let i = 0; i < armasPossiveis.length; i++) {
+		if (npc.Armas.find(a => a === armasPossiveis[i].Nome)) {
 			return armasPossiveis[i];
 		}
 	}
 }
 
 function calculaDano(npc, manobra) {
+
+	if (manobra.Nome === "Bushin Musou Renge") {
+		let maiorTecnica = npc["Soco"];
+		if (npc["Chute"] > maiorTecnica) maiorTecnica = npc["Chute"];
+		if (npc["Apresamento"] > maiorTecnica) maiorTecnica = npc["Apresamento"];
+		const total = npc["Força"] + maiorTecnica + 4;
+		return `${total}/${total}/${total}`;
+	}
+
+	if (manobra.Nome === "Baton Throw") {
+		const arma = armas[npc.Armas[0]];
+		return (npc["Força"] + npc["Apresamento"]) + 2 + arma.ModDano;
+	}
+
+	if (manobra.Nome === "Air Baton Throw") {
+		const arma = armas[npc.Armas[0]];
+		return (npc["Força"] + npc["Apresamento"]) + 5 + arma.ModDano;
+	}
 
 	if (manobra.Nome === "Triple Strike")
 		return (npc["Força"] + npc["Soco"]) + "/" + (npc["Força"] + npc["Soco"]) + "/" + (npc["Força"] + npc["Chute"] + 1);
@@ -607,6 +643,12 @@ function calculaDano(npc, manobra) {
 
 	if (manobra.Nome === "Weapon Defense")
 		return "ABS arma + " + (npc["Vigor"] + npc["Bloqueio"] + 4) + " ou arma + " + (npc["Vigor"] + npc["Bloqueio"] - 2);
+
+	if (manobra.Nome === "Stone")
+		return npc["Força"] + npc["Foco"];
+
+	if (manobra.Nome === "Chi Push")
+		return npc["Raciocínio"] + npc["Foco"] + 3;
 
 	if (manobra.ModDano === null || manobra.ModDano === undefined || manobra.ModDano === "Nenhum") return "-";
 	if (manobra.ModDano === "Especial") return "Esp.";
@@ -681,8 +723,7 @@ function normalizarNomeManobra(nome) {
 		.replace(/(^|\s)(\S)/g, (match, espaco, letra) => espaco + letra.toUpperCase());
 }
 
-function carregarTabela(npc) {
-
+function prepareNpc(npc) {
 	//injetando atributos novos no objeto principal
 	if (npc.NovasTecnicas) npc.NovasTecnicas.forEach((v, i, a) => npc[v.Nome] = v.Valor);
 	if (npc.NovosTalentos) npc.NovosTalentos.forEach((v, i, a) => npc[v.Nome] = v.Valor);
@@ -719,9 +760,14 @@ function carregarTabela(npc) {
 	else npc["Paranormal"] = npc["Psycho Power"];
 
 	if (npc["Sub-Elemental"]) npc["Elemental"] = npc["Sub-Elemental"];
+	return npc;
+}
+
+function carregarTabela(npc) {
+
+	npc = prepareNpc(npc);
 
 	//preenchendo manobras básicas
-
 	const manobrasBasicas = ["Jab", "Strong", "Fierce", "Short", "Forward", "Roundhouse", "Apresamento", "Bloqueio", "Movimento"];
 
 	let html = "";
@@ -853,6 +899,155 @@ function carregarTabela(npc) {
 	}
 
 	return '<table id="tbCalculada" border=1><thead><tr style="font-weight:bold;background-color:Black;color:white;"><td width="30%">Manobra</td><td>Vel.</td><td>Dano</td><td>Mov.</td><td>Alc.</td><td>Custo</td><td>Especial</td></tr></thead><tbody>' + html + '</tbody></table>';
+}
+
+function montaCarta(npc, nomeManobra) {
+	const manobra = manobras[nomeManobra.trim()];
+	if (!manobra) return alert("Manobra " + nomeManobra.trim() + " não encontrada!");
+	manobra.Nome = nomeManobra.trim();
+
+	const x =
+	`<table style="border:1px solid black;">
+		<tr><td colspan="2" class="ArialBlackBlack" style="font-size:14px">${manobra.Nome}</td></tr>
+		<tr><td class="ArialBlackBlack">Vel.:</td><td class="ArialPadrao">${calculaVelocidade(npc, manobra)}</td></tr>
+		<tr><td class="ArialBlackBlack">Dano:</td><td class="ArialPadrao">${calculaDano(npc, manobra)}</td></tr>
+		<tr><td class="ArialBlackBlack">Mov.:</td><td class="ArialPadrao">${calculaMovimento(npc, manobra)}</td></tr>
+		<tr><td class="ArialBlackBlack">Chi/FdV:</td><td class="ArialPadrao">${manobra.Chi || ""}/${manobra.FdV | ""}</td></tr>
+		<tr><td class="ArialBlackBlack">Espec.:</td><td class="ArialPadrao">${manobra.Sistema}</td></tr>
+	</table>`;
+	return x;
+}
+
+function carregarCartas(npc) {
+
+	npc = prepareNpc(npc);
+
+	//preenchendo manobras básicas
+	const manobrasBasicas = ["Jab", "Strong", "Fierce", "Short", "Forward", "Roundhouse", "Apresamento", "Bloqueio", "Movimento"];
+
+	let html = "";
+	manobrasBasicas.forEach((v) => html += montaCarta(npc, v));
+
+	// if (npc.Armas != null && npc.Armas != undefined) {
+	// 	npc.Armas.forEach((v) => {
+	// 		const arma = armas[v.trim()];
+	// 		if (!arma) return alert("Arma " + v.trim() + " não encontrada!");
+
+	// 		const armasDeFogo = ["Armas de Fogo", "Pistola", "Metralhadora", "Fuzil", "Rifle", "Armas Pesadas"];
+	// 		if (armasDeFogo.includes(arma.Tecnica)) {
+	// 			html += "<tr><td><a href='/post/armas-de-fogo'>" + v.trim() + "</a></td>";
+	// 			html += "<td>" + calculaVelocidadeArmaFogo(npc, arma) + "</td>";
+	// 			html += "<td>" + calculaDanoArmaFogo(npc, arma) + "</td>";
+	// 			html += "<td>-</td>";
+	// 			html += "<td>-</td>";
+	// 			html += "<td></td>";
+	// 			html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+	// 		}
+	// 		else if (arma.Tecnica === "Arco" || arma.Tecnica === "Arquearia") {
+	// 			html += "<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>" + v.trim() + "</a></td>";
+	// 			html += "<td>" + calculaVelocidadeArma(npc, arma, { ModVel: 0 }) + "</td>";
+	// 			html += "<td>" + (npc.Destreza + npc["Arco"] + arma.ModDano) + "</td>";
+	// 			html += "<td>-</td>";
+	// 			html += "<td>" + calculaAlcanceArremesso(npc, arma) + "</td>";
+	// 			html += "<td></td>";
+	// 			html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+	// 		}
+	// 		else if (arma.Tecnica === "Besta") {
+	// 			html += "<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>" + v.trim() + "</a></td>";
+	// 			html += "<td>" + calculaVelocidadeArmaFogo(npc, arma) + "</td>";
+	// 			html += "<td>" + (npc.Destreza + npc["Besta"] + arma.ModDano) + "</td>";
+	// 			html += "<td>-</td>";
+	// 			html += "<td>" + arma.Alcance + "</td>";
+	// 			html += "<td></td>";
+	// 			html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+	// 		}
+	// 		else if (arma.Tecnica === "Arremesso") {
+	// 			html += "<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>" + v.trim() + "</a></td>";
+	// 			html += "<td>" + calculaVelocidadeArmaDistancia(npc, arma) + "</td>";
+	// 			html += "<td>" + calculaDanoArmaDistancia(npc, arma) + "</td>";
+	// 			html += "<td>" + calculaMovimentoArmaDistancia(npc, arma) + "</td>";
+	// 			html += "<td>" + calculaAlcanceArremesso(npc, arma) + "</td>";
+	// 			html += "<td></td>";
+	// 			html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+	// 		}
+	// 		else if (arma.Tecnica === "Apresamento") {
+	// 			html += "<tr><td><a href='/post/armas-brancas'>" + v.trim() + "</a></td>";
+	// 			html += "<td>" + calculaVelocidadeArma(npc, arma, { ModVel: 0 }) + "</td>";
+	// 			html += "<td>" + calculaDanoArma(npc, arma, { ModDano: 0 }) + "</td>";
+	// 			html += "<td>" + calculaMovimentoArma(npc, arma, { ModMov: 0 }) + "</td>";
+	// 			html += "<td>" + calculaAlcanceArma(arma) + "</td>";
+	// 			html += "<td></td>";
+	// 			html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+	// 		}
+	// 		else {
+	// 			const manobrasComArmas = ["Jab", "Strong", "Fierce", "Berserk", "Aparar", "Desarmar"];
+	// 			manobrasComArmas.forEach((v2) => {
+	// 				const manobra = manobras[v2];
+	// 				manobra.Nome = v2;
+
+	// 				html += "<tr><td>" + v.trim() + " " + v2.trim() + "</td>";
+	// 				html += "<td>" + calculaVelocidadeArma(npc, arma, manobra) + "</td>";
+	// 				html += "<td>" + calculaDanoArma(npc, arma, manobra) + "</td>";
+	// 				html += "<td>" + calculaMovimentoArma(npc, arma, manobra) + "</td>";
+	// 				html += "<td>" + calculaAlcanceArma(arma) + "</td>";
+	// 				html += "<td></td>";
+	// 				html += "<td>" + estilizaSistema(manobra.Sistema + (arma.Sistema ? ". " + arma.Sistema : "")) + "</td></tr>\r\n";
+	// 			})
+	// 		}
+	// 	})
+	// }
+
+	// if (npc.ManobrasEspeciais) {
+	// 	if (npc.ManobrasEspeciais.indexOf("Boxing Punches") !== -1)
+	// 		npc.ManobrasEspeciais += "Straight, Cross/Hook, Uppercut";
+
+	// 	let manobrasNormalizadas = "";
+	// 	npc.ManobrasEspeciais.split(/[,;]/).sort().forEach((v) => {
+	// 		const nome = normalizarNomeManobra(v);
+	// 		manobrasNormalizadas += nome + ";";
+	// 		if (!manobras[nome]) {
+	// 			alert("Manobra " + nome + " não encontrada!");
+	// 			throw new Error("Manobra " + nome + " não encontrada!");
+	// 		}
+	// 		const manobra = manobras[nome];
+	// 		manobra.Nome = nome;
+
+	// 		html += "<tr><td>" + GeraHtmlLink(v.trim()) + "</td>";
+	// 		if (manobra == null || manobra == undefined) {
+	// 			html += "<td></td><td></td><td></td><td></td><td></td><td>Manobra não encontrada</td>";
+	// 		}
+	// 		else {
+	// 			html += "<td>" + calculaVelocidade(npc, manobra) + "</td>";
+	// 			html += "<td>" + calculaDano(npc, manobra) + "</td>";
+	// 			html += "<td>" + calculaMovimento(npc, manobra) + "</td>";
+	// 			html += "<td>" + calculaAlcance(npc, manobra) + "</td>";
+
+	// 			if (manobra.Chi || manobra.FdV) {
+	// 				html += "<td>";
+	// 				if (manobra.Chi > 0) html += " " + manobra.Chi + " Chi<br />";
+	// 				if (manobra.FdV > 0) html += " " + manobra.FdV + " FdV ";
+	// 				html += "</td>";
+	// 			} else {
+	// 				html += "<td></td>";
+	// 			}
+	// 			html += "<td>" + estilizaSistema(manobra.Sistema) + "</td></tr>\r\n";
+	// 		}
+	// 	})
+	// 	npc.ManobrasEspeciais = manobrasNormalizadas;
+	// }
+	return html;
+	// return `<table id="tbCartas" border=1>
+	// 			<thead>
+	// 				<tr style="font-weight:bold;background-color:Black;color:white;">
+	// 					<td width="30%">Manobra</td><td>Vel.</td>
+	// 					<td>Dano</td><td>Mov.</td>
+	// 					<td>Alc.</td>
+	// 					<td>Custo</td>
+	// 					<td>Especial</td>
+	// 				</tr>
+	// 			</thead>
+	// 			<tbody>${html}</tbody>
+	// 		</table>`;
 }
 
 function getPCManobra(nome) {

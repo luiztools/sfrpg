@@ -4,15 +4,14 @@ function THawkSFZ3() {
     antecedentes[1] = newCaracteristica("Arena", 4);
     antecedentes[2] = newCaracteristica("Recursos", 1);
     antecedentes[3] = newCaracteristica("Staff", 2);
-    const hawk =
-    {
+    const hawk = {
         Nome: "T. Hawk",
         Estilo: "Luta-Livre Nativo Americana",
-        Conceito: "Guerreiro",
-        Assinatura: "Ele é grande!",
-        Jogador: "NPC",
-        Cronica: "Street Fighter Alpha",
         Escola: "Tribo Thunderfoot",
+        Jogador: "NPC",
+        Assinatura: "Ele é grande!",
+        Conceito: "Guerreiro",
+        Cronica: "Street Fighter Alpha",
         Forca: 6,
         Destreza: 4,
         Vigor: 6,
@@ -45,15 +44,15 @@ function THawkSFZ3() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 3,
-        Divisao: "Tradicional",
-        Posto: 8,
+        ManobrasEspeciais: "Buffalo Punch, Brain Cracker, Grappling Defense, Storm Hammer, Throw, Diving Hawk, Jump, Thunderstrike, Thunderclap",
+        Combos: "Diving Hawk para Thunderstrike (Dizzy); Diving Hawk para Storm Hammer;",
         Gloria: 7,
         Honra: 8,
         Chi: 5,
         ForcaVontade: 8,
         Saude: 18,
-        ManobrasEspeciais: "Buffalo Punch, Brain Cracker, Grappling Defense, Storm Hammer, Throw, Diving Hawk, Jump, Thunderstrike, Thunderclap",
-        Combos: "Diving Hawk para Thunderstrike (Dizzy); Diving Hawk para Storm Hammer;"
+        Divisao: "Tradicional",
+        Posto: 8
     };
     return hawk;
 }
@@ -65,15 +64,14 @@ function THawkSF2() {
     antecedentes[2] = newCaracteristica("Fama", 1);
     antecedentes[3] = newCaracteristica("Recursos", 1);
     antecedentes[4] = newCaracteristica("Staff", 1);
-    const hawk =
-    {
+    const hawk = {
         Nome: "T. Hawk",
         Estilo: "Luta-Livre Nativo Americana",
-        Conceito: "Guerreiro",
-        Assinatura: "Ele é grande!",
-        Jogador: "NPC",
-        Cronica: "Street Fighter 2",
         Escola: "Tribo Thunderfoot",
+        Jogador: "NPC",
+        Assinatura: "Ele é grande!",
+        Conceito: "Guerreiro",
+        Cronica: "Street Fighter 2",
         Forca: 6,
         Destreza: 4,
         Vigor: 6,
@@ -106,15 +104,15 @@ function THawkSF2() {
         Apresamento: 6,
         Esportes: 5,
         Foco: 3,
-        Divisao: "Tradicional",
-        Posto: 9,
+        ManobrasEspeciais: "Buffalo Punch, Brain Cracker, Grappling Defense, Storm Hammer, Throw, Diving Hawk, Jump, Thunderstrike, Thunderclap",
+        Combos: "Diving Hawk para Thunderstrike (Dizzy); Diving Hawk para Storm Hammer; Bloqueio para Jab para Fierce (Dizzy);",
         Gloria: 8,
         Honra: 9,
         Chi: 6,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Buffalo Punch, Brain Cracker, Grappling Defense, Storm Hammer, Throw, Diving Hawk, Jump, Thunderstrike, Thunderclap",
-        Combos: "Diving Hawk para Thunderstrike (Dizzy); Diving Hawk para Storm Hammer; Bloqueio para Jab para Fierce (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return hawk;
 }

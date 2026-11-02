@@ -6,21 +6,20 @@ function BirdieZ3() {
     antecedentes[3] = newCaracteristica("Fama", 2);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Corrente", 5);
+    tecnicas[0] = newCaracteristica("Chicote", 5);
     tecnicas[1] = newCaracteristica("Faca", 4);
 
     const armas = [];
     armas[0] = "Corrente";
     armas[1] = "Faca";
 
-    const birdie =
-    {
+    const birdie = {
         Nome: "Birdie",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Becos da  Inglaterra",
-        Conceito: "Leão-de-Chácara",
-        Assinatura: "Moicano loiro",
         Jogador: "NPC",
+        Assinatura: "Moicano loiro",
+        Conceito: "Leão-de-Chácara",
         Cronica: "Street Fighter Alpha",
         Forca: 6,
         Destreza: 3,
@@ -46,25 +45,25 @@ function BirdieZ3() {
         Computador: 0,
         Investigacao: 0,
         Medicina: 1,
-        Estilos: 2,
         Misterios: 0,
+        Estilos: 2,
+        Antecedentes: antecedentes,
         Soco: 5,
         Chute: 3,
         Bloqueio: 4,
         Apresamento: 5,
         Esportes: 2,
         Foco: 2,
+        NovasTecnicas: tecnicas,
         Armas: armas,
+        ManobrasEspeciais: "Jump, Foot Sweep, Buffalo Punch, Head Butt, Bull Head, Back Breaker, Throw, Bandit Chain, Head Butt Hold, Air Throw",
+        Combos: "Buffalo Punch para Bull Head (Dizzy)",
         Gloria: 7,
         Honra: 3,
         Chi: 2,
         ForcaVontade: 9,
-        Divisao: "Duelistas",
-        Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Foot Sweep, Buffalo Punch, Head Butt, Bull Head, Back Breaker, Throw, Bandit Chain, Head Butt Hold, Air Throw",
-        Combos: "Buffalo Punch para Bull Head (Dizzy)",
         Saude: 18,
+        Divisao: "Duelistas",
         Posto: 8
     };
     return birdie;
@@ -78,21 +77,20 @@ function BirdieSF5() {
     antecedentes[3] = newCaracteristica("Fama", 3);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Corrente", 5);
+    tecnicas[0] = newCaracteristica("Chicote", 5);
     tecnicas[1] = newCaracteristica("Faca", 5);
 
     const armas = [];
     armas[0] = "Corrente";
     armas[1] = "Faca";
 
-    const birdie =
-    {
+    const birdie = {
         Nome: "Birdie",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Becos da  Inglaterra",
-        Conceito: "Leão-de-Chácara",
-        Assinatura: "Moicano loiro",
         Jogador: "NPC",
+        Assinatura: "Moicano loiro",
+        Conceito: "Leão-de-Chácara",
         Cronica: "Street Fighter 5",
         Forca: 6,
         Destreza: 3,
@@ -118,25 +116,25 @@ function BirdieSF5() {
         Computador: 0,
         Investigacao: 0,
         Medicina: 1,
-        Estilos: 3,
         Misterios: 0,
+        Estilos: 3,
+        Antecedentes: antecedentes,
         Soco: 5,
         Chute: 3,
         Bloqueio: 5,
         Apresamento: 5,
         Esportes: 3,
         Foco: 2,
+        NovasTecnicas: tecnicas,
         Armas: armas,
+        ManobrasEspeciais: "Jump, Foot Sweep, Buffalo Punch, Head Butt, Bull Head, Back Breaker, Throw, Bandit Chain, Head Butt Hold, Air Throw",
+        Combos: "Buffalo Punch para Bull Head (Dizzy)",
         Gloria: 8,
         Honra: 3,
         Chi: 2,
         ForcaVontade: 10,
-        Divisao: "Duelistas",
-        Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Foot Sweep, Buffalo Punch, Head Butt, Bull Head, Back Breaker, Throw, Bandit Chain, Head Butt Hold, Air Throw",
-        Combos: "Buffalo Punch para Bull Head (Dizzy)",
         Saude: 20,
+        Divisao: "Duelistas",
         Posto: 9
     };
     return birdie;

@@ -3,14 +3,13 @@ function Rufus() {
     antecedentes[0] = newCaracteristica("Aliados", 1);
     antecedentes[1] = newCaracteristica("Recursos", 2);
 
-    const rufus =
-    {
+    const rufus = {
         Nome: "Rufus",
-        Conceito: "Motoqueiro Fanfarrão",
-        Escola: "Auto-didata",
         Estilo: "Kung Fu",
-        Assinatura: "Circunferência",
+        Escola: "Auto-didata",
         Jogador: "NPC",
+        Assinatura: "Circunferência",
+        Conceito: "Motoqueiro Fanfarrão",
         Cronica: "Street Fighter 4",
         Forca: 6,
         Destreza: 5,
@@ -45,15 +44,15 @@ function Rufus() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 0,
+        ManobrasEspeciais: "Foot Sweep, Dive Kick, Brain Cracker, Power Uppercut, Gekiro, Snake Strike, Tornado Punch",
+        Combos: "Jump + Roundhouse para Snake Strike (Dizzy); Dive Kick para Fierce para Tornado Punch; Dive Kick para Short para Roundhouse",
         Gloria: 6,
         Honra: 6,
         Chi: 4,
         ForcaVontade: 8,
         Saude: 20,
         Divisao: "Guerreiros Mundiais",
-        Posto: 9,
-        ManobrasEspeciais: "Foot Sweep, Dive Kick, Brain Cracker, Power Uppercut, Gekiro, Snake Strike, Tornado Punch",
-        Combos: "Jump + Roundhouse para Snake Strike (Dizzy); Dive Kick para Fierce para Tornado Punch; Dive Kick para Short para Roundhouse"
+        Posto: 9
     };
     return calcPC(rufus);
 }

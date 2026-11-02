@@ -15,17 +15,16 @@ function Sodom() {
     armas[1] = "Faca";
     armas[2] = "Nunchaku";
 
-    var sodom =
-    {
+    var sodom = {
         Nome: "Sodom",
         Estilo: "Ninjitsu (Kenjutsu)",
         Escola: "Desconhecida",
-        Conceito: "Kabuki",
-        Assinatura: "Cumprimento Oriental",
-        Cronica: "Street Fighter Alpha",
-        Time: "Mad Gear",
-        Equipe: "Nenhuma",
         Jogador: "NPC",
+        Assinatura: "Cumprimento Oriental",
+        Conceito: "Kabuki",
+        Cronica: "Street Fighter Alpha",
+        Equipe: "Nenhuma",
+        Time: "Mad Gear",
         Forca: 6,
         Destreza: 3,
         Vigor: 6,
@@ -47,11 +46,11 @@ function Sodom() {
         Seguranca: 2,
         Furtividade: 2,
         Sobrevivencia: 2,
+        Arena: 2,
         Computador: 0,
         Investigacao: 2,
         Medicina: 0,
         Misterios: 2,
-        Arena: 2,
         Estilos: 3,
         Antecedentes: antecedentes,
         Soco: 3,
@@ -60,17 +59,17 @@ function Sodom() {
         Apresamento: 5,
         Esportes: 3,
         Foco: 3,
-        Armas: armas,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Jump, Slide Kick, Throw, Suplex, Air Suplex, Butsumetsu Buster, Daikyou Burning",
         Combos: "Jitte Jab para Jitte Strong para Jitte Fierce (Dizzy); Bloqueio para Butsumetsu Buster; Bloqueio para Daikyou Burning",
+        Gloria: 5,
+        Honra: 2,
         Chi: 6,
         ForcaVontade: 7,
         Saude: 20,
-        Posto: 7,
         Divisao: "Duelistas",
-        Honra: 2,
-        Gloria: 5
+        Posto: 7
     };
     return sodom;
 }

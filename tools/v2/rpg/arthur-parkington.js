@@ -1,0 +1,67 @@
+﻿function ArthurParkington() { //o doninha
+    const antecedentes = [];
+
+    const personagem = {
+        Nome: "Arthur Parkington",
+        Estilo: "",
+        Escola: "",
+        Jogador: "",
+        Assinatura: "",
+        Conceito: "Contador",
+        Cronica: "",
+        Equipe: "Shadaloo",
+        Time: "",
+        Forca: 2,
+        Destreza: 2,
+        Vigor: 2,
+        Carisma: 1,
+        Manipulacao: 3,
+        Aparencia: 2,
+        Percepcao: 4,
+        Inteligencia: 3,
+        Raciocinio: 2,
+        Prontidao: 1,
+        Interrogacao: 0,
+        Intimidacao: 0,
+        Perspicacia: 0,
+        Manha: 0,
+        Labia: 1,
+        NovosTalentos: [],
+        LutaCega: 0,
+        Conducao: 1,
+        Lideranca: 0,
+        Seguranca: 0,
+        Furtividade: 0,
+        Sobrevivencia: 0,
+        NovasPericias: [],
+        Arena: 0,
+        Computador: 3,
+        Investigacao: 2,
+        Medicina: 0,
+        Misterios: 0,
+        Estilos: 0,
+        NovosConhecimentos: [],
+        Antecedentes: antecedentes,
+        Soco: 1,
+        Chute: 0,
+        Bloqueio: 1,
+        Apresamento: 0,
+        Esportes: 0,
+        Foco: 0,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "",
+        Combos: "",
+        Gloria: 0,
+        Honra: 0,
+        Chi: 1,
+        ForcaVontade: 2,
+        Saude: 5,
+        Divisao: "",
+        Posto: 1
+    };
+    return personagem;
+}
+
+let npc = ArthurParkington();
+
+npc = calcPC(npc);

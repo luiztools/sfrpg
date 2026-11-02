@@ -3,14 +3,13 @@ function LordKungFuDoFighting() {
     antecedentes[0] = newCaracteristica("Recursos", 5);
     antecedentes[1] = newCaracteristica("Staff", 2);
 
-    const lord =
-    {
+    const lord = {
         Nome: "Lord",
         Estilo: "Ler Drit",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Levita com mãos eletrificadas",
         Jogador: "NPC",
+        Assinatura: "Levita com mãos eletrificadas",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 2,
         Destreza: 2,
@@ -46,15 +45,15 @@ function LordKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 2,
         Foco: 3,
+        ManobrasEspeciais: "Jump, Haymaker, Fireball",
+        Combos: "Fireball para Fireball;",
         Gloria: 3,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 2,
         Saude: 10,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Jump, Haymaker, Fireball",
-        Combos: "Fireball para Fireball;",
+        Posto: 1
     };
 
     return lord;

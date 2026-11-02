@@ -11,17 +11,16 @@ function Lucia() {
 
     const conhecimentos = [];
 
-    const lucia =
-    {
+    const lucia = {
         Nome: "Lucia Morgan",
         Estilo: "Forças Especiais",
         Escola: "Unidade Especial de Crimes",
-        Conceito: "Agente especial",
-        Assinatura: "Roupas curtas",
-        Time: "Final Fight",
         Jogador: "NPC",
+        Assinatura: "Roupas curtas",
+        Conceito: "Agente especial",
         Cronica: "Final Fight 3",
         Equipe: "MCPD",
+        Time: "Final Fight",
         Forca: 3,
         Destreza: 6,
         Vigor: 3,
@@ -37,12 +36,14 @@ function Lucia() {
         Perspicacia: 3,
         Manha: 4,
         Labia: 3,
+        NovosTalentos: [],
         LutaCega: 2,
         Conducao: 3,
         Lideranca: 4,
         Seguranca: 3,
         Furtividade: 3,
         Sobrevivencia: 2,
+        NovasPericias: [],
         Arena: 1,
         Computador: 3,
         Investigacao: 5,
@@ -50,25 +51,23 @@ function Lucia() {
         Misterios: 1,
         Estilos: 2,
         NovosConhecimentos: conhecimentos,
-        NovasPericias: [],
-        NovosTalentos: [],
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 4,
         Chute: 5,
         Bloqueio: 3,
         Apresamento: 3,
         Esportes: 4,
         Foco: 1,
+        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Double Hit Kick, Jump, Lightning Leg, Gekiro, Throw, Knee Basher, Suplex, Roundabout Kick, Flaming Heel, Elbow Smash, Kippup",
         Combos: "Movimento para Elbow Smash; Gekiro para Roundhouse (Flaming); Jab para Strong para Throw (Dizzy);",
-        Posto: 4,
         Gloria: 4,
         Honra: 4,
-        Divisao: "Estilo Livre",
         Chi: 7,
         ForcaVontade: 8,
-        Saude: 18
+        Saude: 18,
+        Divisao: "Estilo Livre",
+        Posto: 4
     };
     return calcPC(lucia);
 }

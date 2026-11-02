@@ -6,14 +6,13 @@ function PaulTekken8() {
     antecedentes[3] = newCaracteristica("Recursos", 2);
     antecedentes[4] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Paul Phoenix",
         Estilo: "Karatê Shotokan",
         Escola: "Desconhecida",
-        Conceito: "Motoqueiro",
-        Assinatura: "Levanta o braço em vitória",
         Jogador: "NPC",
+        Assinatura: "Levanta o braço em vitória",
+        Conceito: "Motoqueiro",
         Cronica: "Tekken 8",
         Forca: 4,
         Destreza: 4,
@@ -49,15 +48,15 @@ function PaulTekken8() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 4,
-        Divisao: "Livre",
-        Posto: 6,
+        ManobrasEspeciais: "Power Uppercut, Double Hit Punch, Dashing Punch, Double Hit Kick, Foot Sweep, Wounded Knee, Kick Defense, Punch Defense, Block And Grab, Throw, Pin, Dislocate Limb, Flying Tackle, Jump, Kippup, Ground Roll, Hyper Tackle, Psychokinetic Channeling",
+        Combos: "Double Hit Punch para Double Hit Punch para Dashing Punch; Jump para Double Hit Kick para Roundhouse; Movimento para Hyper Tackle",
         Gloria: 6,
         Honra: 4,
         Chi: 4,
         ForcaVontade: 6,
         Saude: 16,
-        ManobrasEspeciais: "Power Uppercut, Double Hit Punch, Dashing Punch, Double Hit Kick, Foot Sweep, Wounded Knee, Kick Defense, Punch Defense, Block And Grab, Throw, Pin, Dislocate Limb, Flying Tackle, Jump, Kippup, Ground Roll, Hyper Tackle, Psychokinetic Channeling",
-        Combos: "Double Hit Punch para Double Hit Punch para Dashing Punch; Jump para Double Hit Kick para Roundhouse; Movimento para Hyper Tackle"
+        Divisao: "Livre",
+        Posto: 6
     };
     return personagem;
 }
@@ -69,14 +68,13 @@ function PaulTekken4() {
     antecedentes[2] = newCaracteristica("Recursos", 2);
     antecedentes[3] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Paul Phoenix",
         Estilo: "Karatê Shotokan",
         Escola: "Desconhecida",
-        Conceito: "Motoqueiro",
-        Assinatura: "Levanta o braço em vitória",
         Jogador: "NPC",
+        Assinatura: "Levanta o braço em vitória",
+        Conceito: "Motoqueiro",
         Cronica: "Tekken 4",
         Forca: 4,
         Destreza: 4,
@@ -112,15 +110,15 @@ function PaulTekken4() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 3,
-        Divisao: "Livre",
-        Posto: 5,
+        ManobrasEspeciais: "Power Uppercut, Double Hit Punch, Dashing Punch, Double Hit Kick, Foot Sweep,  Kick Defense, Punch Defense, Throw, Pin, Dislocate Limb, Flying Tackle, Jump, Hyper Tackle, Psychokinetic Channeling",
+        Combos: "Double Hit Punch para Double Hit Punch para Dashing Punch; Jump para Double Hit Kick para Roundhouse;",
         Gloria: 5,
         Honra: 3,
         Chi: 3,
         ForcaVontade: 5,
         Saude: 14,
-        ManobrasEspeciais: "Power Uppercut, Double Hit Punch, Dashing Punch, Double Hit Kick, Foot Sweep,  Kick Defense, Punch Defense, Throw, Pin, Dislocate Limb, Flying Tackle, Jump, Hyper Tackle, Psychokinetic Channeling",
-        Combos: "Double Hit Punch para Double Hit Punch para Dashing Punch; Jump para Double Hit Kick para Roundhouse;"
+        Divisao: "Livre",
+        Posto: 5
     };
     return personagem;
 }
@@ -131,14 +129,13 @@ function PaulTekken3() {
     antecedentes[1] = newCaracteristica("Recursos", 2);
     antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Paul Phoenix",
         Estilo: "Karatê Shotokan",
         Escola: "Desconhecida",
-        Conceito: "Motoqueiro",
-        Assinatura: "Levanta o braço em vitória",
         Jogador: "NPC",
+        Assinatura: "Levanta o braço em vitória",
+        Conceito: "Motoqueiro",
         Cronica: "Tekken 3",
         Forca: 4,
         Destreza: 3,
@@ -174,15 +171,15 @@ function PaulTekken3() {
         Apresamento: 3,
         Esportes: 3,
         Foco: 3,
-        Divisao: "Livre",
-        Posto: 4,
+        ManobrasEspeciais: "Power Uppercut, Double Hit Punch, Dashing Punch, Double Hit Kick, Foot Sweep,  Throw, Pin, Dislocate Limb, Flying Tackle, Jump, Hyper Tackle, Psychokinetic Channeling",
+        Combos: "Double Hit Punch para Double Hit Punch para Dashing Punch; Jump para Double Hit Kick para Roundhouse;",
         Gloria: 4,
         Honra: 2,
         Chi: 3,
         ForcaVontade: 5,
         Saude: 12,
-        ManobrasEspeciais: "Power Uppercut, Double Hit Punch, Dashing Punch, Double Hit Kick, Foot Sweep,  Throw, Pin, Dislocate Limb, Flying Tackle, Jump, Hyper Tackle, Psychokinetic Channeling",
-        Combos: "Double Hit Punch para Double Hit Punch para Dashing Punch; Jump para Double Hit Kick para Roundhouse;"
+        Divisao: "Livre",
+        Posto: 4
     };
     return personagem;
 }
@@ -193,14 +190,13 @@ function PaulTekken1() {
     antecedentes[1] = newCaracteristica("Recursos", 2);
     antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Paul Phoenix",
         Estilo: "Karatê Shotokan",
         Escola: "Desconhecida",
-        Conceito: "Motoqueiro",
-        Assinatura: "Levanta o braço em vitória",
         Jogador: "NPC",
+        Assinatura: "Levanta o braço em vitória",
+        Conceito: "Motoqueiro",
         Cronica: "Tekken 1",
         Forca: 4,
         Destreza: 3,
@@ -236,15 +232,15 @@ function PaulTekken1() {
         Apresamento: 2,
         Esportes: 3,
         Foco: 2,
-        Divisao: "Livre",
-        Posto: 4,
+        ManobrasEspeciais: "Power Uppercut, Double Hit Punch, Dashing Punch, Double Hit Kick, Foot Sweep,  Throw, Pin, Flying Tackle, Jump, Hyper Tackle",
+        Combos: "Double Hit Punch para Double Hit Punch para Dashing Punch; Jump para Double Hit Kick para Roundhouse;",
         Gloria: 4,
         Honra: 2,
         Chi: 3,
         ForcaVontade: 5,
         Saude: 11,
-        ManobrasEspeciais: "Power Uppercut, Double Hit Punch, Dashing Punch, Double Hit Kick, Foot Sweep,  Throw, Pin, Flying Tackle, Jump, Hyper Tackle",
-        Combos: "Double Hit Punch para Double Hit Punch para Dashing Punch; Jump para Double Hit Kick para Roundhouse;"
+        Divisao: "Livre",
+        Posto: 4
     };
     return personagem;
 }
@@ -259,4 +255,4 @@ else if (getParameterByName('age') === 'tekken4')
 else
     npc = PaulTekken8();
 
-npc = calcPC(npca);
+npc = calcPC(npc);

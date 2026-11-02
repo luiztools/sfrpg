@@ -3,17 +3,16 @@ function RetsuSF1() {
     antecedentes[0] = newCaracteristica("Arena", 3);
     antecedentes[1] = newCaracteristica("Staff", 2);
 
-    const retsu =
-    {
+    const retsu = {
         Nome: "Retsu",
         Estilo: "Kempo",
         Escola: "Templo Shaolin",
-        Conceito: "Monge caído",
-        Assinatura: "Cruza os braços",
         Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
+        Assinatura: "Cruza os braços",
+        Conceito: "Monge caído",
         Cronica: "Street Fighter 1",
+        Equipe: "Nenhuma",
+        Time: "Nenhum",
         Forca: 5,
         Destreza: 4,
         Vigor: 5,
@@ -41,13 +40,13 @@ function RetsuSF1() {
         Foco: 4,
         ManobrasEspeciais: "Jump, Throw, Back Roll Throw, Power Uppercut, Dragon Punch, Double-Hit Kick, Lightning Leg, Handstand Kick",
         Combos: "Jumping Forward para Handstand Kick (Dizzy)",
+        Gloria: 5,
+        Honra: 6,
         Chi: 6,
         ForcaVontade: 7,
         Saude: 20,
-        Posto: 7,
         Divisao: "Tradicional",
-        Gloria: 5,
-        Honra: 6
+        Posto: 7
     };
     return calcPC(retsu);
 }
@@ -57,17 +56,16 @@ function RetsuSF6() {
     antecedentes[0] = newCaracteristica("Arena", 3);
     antecedentes[1] = newCaracteristica("Staff", 2);
 
-    const retsu =
-    {
+    const retsu = {
         Nome: "Retsu",
         Estilo: "Kempo",
         Escola: "Templo Shaolin",
-        Conceito: "Monge caído",
-        Assinatura: "Cruza os braços",
         Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
+        Assinatura: "Cruza os braços",
+        Conceito: "Monge caído",
         Cronica: "Street Fighter 6",
+        Equipe: "Nenhuma",
+        Time: "Nenhum",
         Forca: 5,
         Destreza: 4,
         Vigor: 5,
@@ -95,13 +93,13 @@ function RetsuSF6() {
         Foco: 5,
         ManobrasEspeciais: "Jump, Throw, Back Roll Throw, Power Uppercut, Dragon Punch, Double-Hit Kick, Lightning Leg, Handstand Kick",
         Combos: "Jumping Forward para Handstand Kick (Dizzy)",
+        Gloria: 6,
+        Honra: 7,
         Chi: 7,
         ForcaVontade: 8,
         Saude: 20,
-        Posto: 8,
         Divisao: "Tradicional",
-        Gloria: 6,
-        Honra: 7
+        Posto: 8
     };
     return calcPC(retsu);
 }

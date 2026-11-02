@@ -12,17 +12,15 @@
     const armas = [];
     armas[0] = "Faca";
 
-    const npc =
-    {
+    const npc = {
         Nome: "Genin Matador",
         Estilo: "Ninjitsu Espanhol",
         Escola: "Dojô de Vega",
-        Equipe: "Shadaloo",
-        Conceito: "Ninja Espanhol",
         Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
         Assinatura: "Golpe de Misericórdia",
+        Conceito: "Ninja Espanhol",
+        Equipe: "Shadaloo",
+        Time: "Nenhum",
         Forca: 2,
         Destreza: 3,
         Vigor: 3,
@@ -56,17 +54,17 @@
         Apresamento: 1,
         Esportes: 2,
         Foco: 0,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Slide Kick, Jump, Backflip Kick",
+        Combos: "",
         Gloria: 0,
         Honra: 0,
-        Divisao: "Duelistas",
-        Posto: 1,
         Chi: 2,
         ForcaVontade: 3,
         Saude: 8,
-        ManobrasEspeciais: "Slide Kick, Jump, Backflip Kick",
-        Combos: "",
-        NovasTecnicas: tecnicas,
-        Armas: armas
+        Divisao: "Duelistas",
+        Posto: 1
     };
     return npc;
 }
@@ -85,17 +83,15 @@ function ChuninMatador() {
     const armas = [];
     armas[0] = "Faca";
 
-    const npc =
-    {
+    const npc = {
         Nome: "Chunin Matador",
         Estilo: "Ninjitsu Espanhol",
         Escola: "Dojô de Vega",
-        Equipe: "Shadaloo",
-        Conceito: "Ninja Espanhol",
         Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
         Assinatura: "Golpe de Misericórdia",
+        Conceito: "Ninja Espanhol",
+        Equipe: "Shadaloo",
+        Time: "Nenhum",
         Forca: 3,
         Destreza: 3,
         Vigor: 3,
@@ -129,17 +125,17 @@ function ChuninMatador() {
         Apresamento: 2,
         Esportes: 3,
         Foco: 1,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Slide Kick, Jump, Backflip Kick",
+        Combos: "Bloqueio para Slide Kick",
         Gloria: 1,
         Honra: 0,
-        Divisao: "Duelistas",
-        Posto: 2,
         Chi: 3,
         ForcaVontade: 4,
         Saude: 10,
-        ManobrasEspeciais: "Slide Kick, Jump, Backflip Kick",
-        Combos: "Bloqueio para Slide Kick",
-        NovasTecnicas: tecnicas,
-        Armas: armas
+        Divisao: "Duelistas",
+        Posto: 2
     };
     return npc;
 }
@@ -158,17 +154,15 @@ function JoninMatador() {
     const armas = [];
     armas[0] = "Faca";
 
-    const npc =
-    {
+    const npc = {
         Nome: "Jonin Matador",
         Estilo: "Ninjitsu Espanhol",
         Escola: "Dojô de Vega",
-        Equipe: "Shadaloo",
-        Conceito: "Ninja Espanhol",
         Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
         Assinatura: "Golpe de Misericórdia",
+        Conceito: "Ninja Espanhol",
+        Equipe: "Shadaloo",
+        Time: "Nenhum",
         Forca: 3,
         Destreza: 4,
         Vigor: 3,
@@ -202,17 +196,17 @@ function JoninMatador() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 2,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Slide Kick, Jump, Backflip Kick",
+        Combos: "Bloqueio para Slide Kick, Bloqueio para Faca Fierce",
         Gloria: 2,
         Honra: 0,
-        Divisao: "Duelistas",
-        Posto: 3,
         Chi: 4,
         ForcaVontade: 5,
         Saude: 12,
-        ManobrasEspeciais: "Slide Kick, Jump, Backflip Kick",
-        Combos: "Bloqueio para Slide Kick, Bloqueio para Faca Fierce",
-        NovasTecnicas: tecnicas,
-        Armas: armas
+        Divisao: "Duelistas",
+        Posto: 3
     };
     return npc;
 }

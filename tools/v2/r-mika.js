@@ -7,14 +7,13 @@ function RMikaZ3() {
     antecedentes[4] = newCaracteristica("Recursos", 3);
     antecedentes[5] = newCaracteristica("Sensei", 3);
     antecedentes[6] = newCaracteristica("Staff", 3);
-    var mika =
-    {
+    var mika = {
         Nome: "Rainbow Mika",
         Estilo: "Luta Livre",
         Escola: "Dojô de Yoko",
-        Conceito: "Estrela da Luta Livre",
-        Assinatura: "Levanta os braços!",
         Jogador: "NPC",
+        Assinatura: "Levanta os braços!",
+        Conceito: "Estrela da Luta Livre",
         Cronica: "Street Fighter Alpha",
         Forca: 5,
         Destreza: 5,
@@ -46,13 +45,13 @@ function RMikaZ3() {
         Foco: 1,
         ManobrasEspeciais: "Jump, Foot Sweep, Back Breaker, Suplex, Air Throw, Air Suplex, Head Butt, Air Smash, Thigh Press, Breakfall, Grappling Defense, Pin",
         Combos: "Jump + Roundhouse para Back Breaker para Pin (Dizzy), Jab para Short para Air Smash (dizzy), Air Smash para Head Butt (Dizzy)",
+        Gloria: 7,
+        Honra: 3,
         Chi: 2,
         ForcaVontade: 9,
         Saude: 20,
-        Posto: 6,
-        Gloria: 7,
-        Honra: 3,
-        Divisao: "Tradicional"
+        Divisao: "Tradicional",
+        Posto: 6
     };
     return mika;
 }
@@ -66,14 +65,13 @@ function RMikaSF5() {
     antecedentes[4] = newCaracteristica("Recursos", 3);
     antecedentes[5] = newCaracteristica("Sensei", 3);
     antecedentes[6] = newCaracteristica("Staff", 3);
-    var mika =
-    {
+    var mika = {
         Nome: "Rainbow Mika",
         Estilo: "Luta Livre",
         Escola: "Dojô de Yoko",
-        Conceito: "Estrela da Luta Livre",
-        Assinatura: "Levanta os braços!",
         Jogador: "NPC",
+        Assinatura: "Levanta os braços!",
+        Conceito: "Estrela da Luta Livre",
         Cronica: "Street Fighter 5",
         Forca: 5,
         Destreza: 5,
@@ -105,13 +103,13 @@ function RMikaSF5() {
         Foco: 1,
         ManobrasEspeciais: "Jump, Foot Sweep, Back Breaker, Suplex, Air Throw, Air Suplex, Head Butt, Air Smash, Thigh Press, Breakfall, Grappling Defense, Pin, Power Up",
         Combos: "Jump + Roundhouse para Back Breaker para Pin (Dizzy), Jab para Short para Air Smash (dizzy), Air Smash para Head Butt (Dizzy)",
+        Gloria: 8,
+        Honra: 4,
         Chi: 3,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 9,
-        Gloria: 8,
-        Honra: 4,
-        Divisao: "Tradicional"
+        Divisao: "Tradicional",
+        Posto: 9
     };
     return mika;
 }

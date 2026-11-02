@@ -6,16 +6,15 @@ function NoFace() {
     antecedentes[3] = newCaracteristica("Fama", 2);
     antecedentes[4] = newCaracteristica("Elemental", 5);
     
-    const personagem =
-    {
+    const personagem = {
         Nome: "No Face",
         Estilo: "Forças Especiais",
-        Conceito: "Piromaníaco",
-        Assinatura: "Bota fogo",
         Jogador: "NPC",
+        Assinatura: "Bota fogo",
+        Conceito: "Piromaníaco",
         Cronica: "MK Special Forces",
-        Time: "Black Dragon",
         Equipe: "Black Dragon",
+        Time: "Black Dragon",
         Forca: 4,
         Destreza: 3,
         Vigor: 5,
@@ -45,15 +44,15 @@ function NoFace() {
         Apresamento: 3,
         Esportes: 2,
         Foco: 5,
+        ManobrasEspeciais: "Head Butt, Foot Sweep, Brain Cracker, Jump, Fire Strike, Yoga Flame, Fireball, Improved Fireball",
+        Combos: "Jab para Jab para Foot Sweep (Dizzy); Foot Sweep para Forward para Yoga Flame (Dizzy); Yoga Flame para Brain Cracker (Dizzy);",
         Gloria: 5,
         Honra: 1,
-        Posto: 7,
-        Divisao: "Duelistas",
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Head Butt, Foot Sweep, Brain Cracker, Jump, Fire Strike, Yoga Flame, Fireball, Improved Fireball",
-        Combos: "Jab para Jab para Foot Sweep (Dizzy); Foot Sweep para Forward para Yoga Flame (Dizzy); Yoga Flame para Brain Cracker (Dizzy);"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }

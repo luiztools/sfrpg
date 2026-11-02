@@ -12,17 +12,16 @@ function Tasia() {
     const armas = [];
     armas[0] = "Katana";
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Tasia",
         Estilo: "Ninjitsu",
         Escola: "Desconhecida",
-        Conceito: "Ninja Assassina",
-        Assinatura: "Executa o oponente",
-        Time: "Black Dragon",
-        Equipe: "Black Dragon",
         Jogador: "NPC",
+        Assinatura: "Executa o oponente",
+        Conceito: "Ninja Assassina",
         Cronica: "MK: Special Forces",
+        Equipe: "Black Dragon",
+        Time: "Black Dragon",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,
@@ -51,23 +50,23 @@ function Tasia() {
         Misterios: 4,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
-        Armas: armas,
         Soco: 3,
         Chute: 3,
         Bloqueio: 4,
         Apresamento: 3,
         Esportes: 4,
         Foco: 5,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Jump, Repeating Fireball, Yoga Teleport, Fireball, Accuracy, Spinning Weapon, Kippup",
         Combos: "Espada Jab para Espada Strong para Espada Roundhouse (Dizzy); Espada Jab para Espada Strong para Fireball (Dizzy); Bloqueio para Spinning Weapon (Dizzy)",
-        Posto: 5,
         Gloria: 6,
         Honra: 5,
-        Divisao: "Duelistas",
         Chi: 7,
         ForcaVontade: 8,
-        Saude: 18
+        Saude: 18,
+        Divisao: "Duelistas",
+        Posto: 5
     };
     return personagem;
 }

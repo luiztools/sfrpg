@@ -17,17 +17,16 @@ function Mileena() {
     const conhecimentos = [];
     conhecimentos[0] = newCaracteristica("Linguística", 1);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Mileena",
         Estilo: "Kung Fu",
         Escola: "Shao Kahn",
+        Jogador: "NPC",
+        Assinatura: "Golpeia com adagas",
+        Conceito: "Clone de Kitana",
+        Cronica: "Mortal Kombat",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Clone de Kitana",
-        Assinatura: "Golpeia com adagas",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat",
         Forca: 4,
         Destreza: 7,
         Vigor: 4,
@@ -38,11 +37,12 @@ function Mileena() {
         Inteligencia: 3,
         Raciocinio: 5,
         Prontidao: 4,
-        Perspicacia: 5,
-        Manha: 1,
         Interrogacao: 0,
         Intimidacao: 0,
+        Perspicacia: 5,
+        Manha: 1,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 0,
         Lideranca: 0,
@@ -55,7 +55,6 @@ function Mileena() {
         Medicina: 0,
         Misterios: 4,
         Estilos: 3,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
@@ -66,15 +65,15 @@ function Mileena() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Backflip, Tumbling Attack, Bite, Athletic, Head Bite",
+        Combos: "Tumbling Attack para Short (dizzy); Sai Arremessada para Tumbling Attack; Forward para Forward para Forward (dizzy); Jab para Jab para Forward (dizzy)",
         Gloria: 4,
         Honra: 0,
         Chi: 6,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Backflip, Tumbling Attack, Bite, Athletic, Head Bite",
-        Combos: "Tumbling Attack para Short (dizzy); Sai Arremessada para Tumbling Attack; Forward para Forward para Forward (dizzy); Jab para Jab para Forward (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -98,17 +97,16 @@ function MileenaMKX() {
     const conhecimentos = [];
     conhecimentos[0] = newCaracteristica("Linguística", 1);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Mileena",
         Estilo: "Kung Fu",
         Escola: "Shao Kahn",
+        Jogador: "NPC",
+        Assinatura: "Golpeia com adagas",
+        Conceito: "Clone de Kitana",
+        Cronica: "Mortal Kombat X",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Clone de Kitana",
-        Assinatura: "Golpeia com adagas",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 4,
         Destreza: 7,
         Vigor: 4,
@@ -119,11 +117,12 @@ function MileenaMKX() {
         Inteligencia: 3,
         Raciocinio: 5,
         Prontidao: 4,
-        Perspicacia: 5,
-        Manha: 1,
         Interrogacao: 0,
         Intimidacao: 0,
+        Perspicacia: 5,
+        Manha: 1,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 5,
         Conducao: 0,
         Lideranca: 0,
@@ -136,7 +135,6 @@ function MileenaMKX() {
         Medicina: 0,
         Misterios: 4,
         Estilos: 3,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
@@ -147,15 +145,15 @@ function MileenaMKX() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Backflip, Tumbling Attack, Bite, Athletic, Head Bite, Double-Hit Kick, Ax Kick, Handstand Kick",
+        Combos: "Tumbling Attack para Short (dizzy); Sai Arremessada para Tumbling Attack; Forward para Forward para Forward (dizzy); Jab para Jab para Forward (dizzy); Ax Kick para Handstand Kick para Foot Sweep (dizzy)",
         Gloria: 4,
         Honra: 0,
         Chi: 6,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Backflip, Tumbling Attack, Bite, Athletic, Head Bite, Double-Hit Kick, Ax Kick, Handstand Kick",
-        Combos: "Tumbling Attack para Short (dizzy); Sai Arremessada para Tumbling Attack; Forward para Forward para Forward (dizzy); Jab para Jab para Forward (dizzy); Ax Kick para Handstand Kick para Foot Sweep (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }

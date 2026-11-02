@@ -4,17 +4,16 @@ function JoeSF1() {
     antecedentes[1] = newCaracteristica("Empresario", 2);
     antecedentes[2] = newCaracteristica("Sensei", 1);
 
-    var joe =
-    {
+    var joe = {
         Nome: "Joe",
         Estilo: "Kickboxe",
         Escola: "Ruas de Chicago",
-        Conceito: "Lutador de Rua",
-        Assinatura: "Ergue os braços",
         Jogador: "NPC",
+        Assinatura: "Ergue os braços",
+        Conceito: "Lutador de Rua",
         Cronica: "Street Fighter 1",
-        Time: "Nenhum",
         Equipe: "Nenhuma",
+        Time: "Nenhum",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -47,13 +46,13 @@ function JoeSF1() {
         Foco: 1,
         ManobrasEspeciais: "Forward Flip Knee, Jump, Throw, Power Uppercut, Spinning Back Fist, Double Hit Kick, Double Dread Kick, Backflip Kick, Back Breaker",
         Combos: "Jab para Forward Flip Knee (Dizzy)",
+        Gloria: 4,
+        Honra: 1,
         Chi: 3,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 7,
         Divisao: "Tradicional",
-        Gloria: 4,
-        Honra: 1
+        Posto: 7
     };
     return calcPC(joe);
 }

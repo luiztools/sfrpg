@@ -6,14 +6,13 @@ function RichardMeyer() {
     antecedentes[3] = newCaracteristica("Recursos", 3);
     antecedentes[4] = newCaracteristica("Staff", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Richard Meyer",
         Estilo: "Capoeira",
         Escola: "Professor particular",
-        Conceito: "Dono de bar",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Dono de bar",
         Cronica: "Fatal Fury",
         Forca: 5,
         Destreza: 4,
@@ -49,15 +48,15 @@ function RichardMeyer() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 1,
-        Divisao: "Tradicional",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Breakfall, Handstand Kick, Foot Sweep, Throw, Ax Kick, Musical Accompaniment, Wall Spring",
+        Combos: "Handstand Kick para Handstand Kick para Handstand Kick (Dizzy);",
         Gloria: 4,
         Honra: 3,
         Chi: 2,
         ForcaVontade: 6,
         Saude: 15,
-        ManobrasEspeciais: "Jump, Breakfall, Handstand Kick, Foot Sweep, Throw, Ax Kick, Musical Accompaniment, Wall Spring",
-        Combos: "Handstand Kick para Handstand Kick para Handstand Kick (Dizzy);"
+        Divisao: "Tradicional",
+        Posto: 7
     };
     return personagem;
 }

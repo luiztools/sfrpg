@@ -209,7 +209,7 @@ Senkju Tai,Soco,0,4,0,,1,Knockdown
 Snake Strike,Soco,1,1,-1,,,"Manobra aérea, pode se esquivar de projéteis; oponente interrompido em uma manobra aérea sofre três testes de dano"
 Tornado Punch,Soco,0,1,-2,,1,"Acerta e empurra oponentes de todos os hexágonos adjacentes, seguindo em linha reta e rolando novos danos; o último acerto precisa ser direcionado a apenas um oponente, causando knockdown e tendo um modificador de +2; não atinge oponentes em agachamentos"
 Bushin Hurricane Kick,Chute,1,-1,Um,1,1,"Todos ao redor são atingidos e empurrados para trás; oponentes no mesmo hexágono são puxados pelo golpe, podendo ser acertados até um número de vezes igual à Técnica Esportes do usuário; para cada novo ataque, devem ter sofrido dano no ataque anterior; Knockdown no último acerto"
-Dankuukyaku,Chute,-1,0,4,,2,"Manobra aérea, esquiva de projéteis (dif. 8), após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +2, empurrando de novo e tentando um terceiro com dano +4, que causa knockdown"
+Dakukyaku,Chute,-1,0,4,,2,"Manobra aérea, esquiva de projéteis (dif. 8), após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +2, empurrando de novo e tentando um terceiro com dano +4, que causa knockdown"
 Dive Kick,Chute,0,2,-1,,,"Manobra aérea, afeta personagens em agachamentos"
 Hayagake,Chute,0,3,3,,1,"Manobra aérea ou agachamento, à escolha do jogador; se aérea, esquiva de projéteis; se agachamento, causa knockdown"
 Messiah Kick,Chute,-1,-1,-2,,1,"Manobra aérea, esquiva de projéteis, tem um segundo chute com dano +2 e efeito knockdown; se bloqueado, atacante rola Manipulação + Chute contra Percepção + Bloqueio; se vencer, bloqueio não funciona para o segundo chute"

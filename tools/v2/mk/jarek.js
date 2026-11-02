@@ -11,17 +11,16 @@ function Jarek() {
 
     const armas = ["Espada", "Machado Curto"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Jarek",
         Estilo: "Aikidô",
         Escola: "Black Dragon",
+        Jogador: "NPC",
+        Assinatura: "Levanta o braço",
+        Conceito: "Mercenário",
+        Cronica: "Mortal Kombat 4",
         Equipe: "Black Dragon",
         Time: "Black Dragon",
-        Conceito: "Mercenário",
-        Assinatura: "Levanta o braço",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 4",
         Forca: 5,
         Destreza: 4,
         Vigor: 6,
@@ -58,15 +57,15 @@ function Jarek() {
         Foco: 3,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelista",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Double-Hit Punch, Double-Hit Kick, Foot Sweep, Handstand Kick, Knee Basher, Throw, Suplex, Rolling Attack",
+        Combos: "Double-Hit Punch para Double-Hit Kick para Power Uppercut (Dizzy); Double-Hit Punch para Double-Hit Kick para Handstand Kick (Dizzy); Jump + Short para Foot Sweep para Power Uppercut (Dizzy); Bloqueio para Rolling Attack para Power Uppercut",
         Gloria: 10,
         Honra: 1,
         Chi: 6,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Double-Hit Punch, Double-Hit Kick, Foot Sweep, Handstand Kick, Knee Basher, Throw, Suplex, Rolling Attack",
-        Combos: "Double-Hit Punch para Double-Hit Kick para Power Uppercut (Dizzy); Double-Hit Punch para Double-Hit Kick para Handstand Kick (Dizzy); Jump + Short para Foot Sweep para Power Uppercut (Dizzy); Bloqueio para Rolling Attack para Power Uppercut"
+        Divisao: "Duelista",
+        Posto: 8
     };
     return personagem;
 }

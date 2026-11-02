@@ -5,14 +5,13 @@ function AbelSF4() {
     antecedentes[2] = newCaracteristica("Psycho Power", 3);
     antecedentes[3] = newCaracteristica("Recursos", 2);
 
-    const abel =
-    {
+    const abel = {
         Nome: "Abel",
         Estilo: "Vale-Tudo",
         Escola: "Unidade Mercenária",
-        Conceito: "Homem sem passado",
-        Assinatura: "Amnésia",
         Jogador: "NPC",
+        Assinatura: "Amnésia",
+        Conceito: "Homem sem passado",
         Cronica: "Street Fighter 4",
         Forca: 6,
         Destreza: 4,
@@ -48,15 +47,15 @@ function AbelSF4() {
         Apresamento: 6,
         Esportes: 4,
         Foco: 2,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Wheel Kick, Tornado Throw, Throw, Grappling Defense, Choke Throw, Flying Tackle, Drunken Monkey Roll",
+        Combos: "Power Uppercut para Choke Throw; Forward para Tornado Throw (Dizzy); Flying Tackle para Tornado Throw (Dizzy)",
         Gloria: 7,
         Honra: 6,
         Chi: 5,
         ForcaVontade: 9,
         Saude: 20,
-        Posto: 9,
         Divisao: "Tradicional",
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Wheel Kick, Tornado Throw, Throw, Grappling Defense, Choke Throw, Flying Tackle, Drunken Monkey Roll",
-        Combos: "Power Uppercut para Choke Throw; Forward para Tornado Throw (Dizzy); Flying Tackle para Tornado Throw (Dizzy)",
+        Posto: 9
     };
     return abel;
 }

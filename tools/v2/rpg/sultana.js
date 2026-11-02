@@ -7,15 +7,14 @@ function Sultana() {
 
     const tecnicas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Sultana",
         Estilo: "Soul Power",
         Escola: "Desconhecida",
-        Conceito: "Feiticeira",
-        Assinatura: "Aparência Fantasmagórica",
-        Cronica: "",
         Jogador: "NPC",
+        Assinatura: "Aparência Fantasmagórica",
+        Conceito: "Feiticeira",
+        Cronica: "",
         Equipe: "Tríade do Dragão",
         Forca: 3,
         Destreza: 4,
@@ -50,13 +49,13 @@ function Sultana() {
         NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Telekinesis, Jump, Soul Throw, Throw, Air Throw, Hair Throw, Soul Spiral, Slide Kick, Psychokinetic Channeling, Fireball, Missile Reflection, Energy Reflection, Power Uppercut, Telepathy, Soul Illusion, Ghost Form",
         Combos: "Energy Reflection para Fireball (dizzy), Slide Kick para Soul Spiral (dizzy), Short para Soul Throw, Short para Short (dizzy); Bloqueio para Fireball",
+        Gloria: 10,
+        Honra: 4,
         Chi: 10,
         ForcaVontade: 6,
         Saude: 18,
-        Posto: 7,
         Divisao: "Estilo Livre",
-        Gloria: 10,
-        Honra: 4
+        Posto: 7
     };
     return personagem;
 }

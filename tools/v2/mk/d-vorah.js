@@ -9,17 +9,16 @@ function DVorah() {
     const conhecimentos = [];
     const armas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "D'Vorah",
         Estilo: "Briga",
         Escola: "Autodidata",
+        Jogador: "NPC",
+        Assinatura: "Voa",
+        Conceito: "Mulher Vespa",
+        Cronica: "Mortal Kombat X",
         Equipe: "Nenhuma",
         Time: "Nenhuma",
-        Conceito: "Mulher Vespa",
-        Assinatura: "Voa",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -47,6 +46,7 @@ function DVorah() {
         Medicina: 3,
         Misterios: 4,
         Estilos: 1,
+        NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
         Chute: 5,
@@ -55,17 +55,16 @@ function DVorah() {
         Esportes: 4,
         Foco: 4,
         NovasTecnicas: tecnicas,
-        NovosConhecimentos: conhecimentos,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Monkey Grab Punch, Acid Breath, Throw, Air Throw, Upper Tail Strike, Typhoon Tail, Claw, Tail Slash",
+        Combos: "Jab – Claw – Tail Slash (dizzy); Jab – Strong – Fierce (dizzy); Power Uppercut – Tail Slash; Acid Breath – Acid Breath (dizzy)",
         Gloria: 5,
         Honra: 2,
         Chi: 9,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Monkey Grab Punch, Acid Breath, Throw, Air Throw, Upper Tail Strike, Typhoon Tail, Claw, Tail Slash",
-        Combos: "Jab – Claw – Tail Slash (dizzy); Jab – Strong – Fierce (dizzy); Power Uppercut – Tail Slash; Acid Breath – Acid Breath (dizzy)"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }

@@ -1,0 +1,57 @@
+﻿function SarahLewis() {
+    const personagem = {
+        Nome: "Sarah Lewis",
+        Estilo: "Aikidô",
+        Escola: "Oakland Aikidô",
+        Assinatura: "Sorri e reverencia",
+        Conceito: "Estudante sábia",
+        Forca: 3,
+        Destreza: 4,
+        Vigor: 3,
+        Carisma: 3,
+        Manipulacao: 3,
+        Aparencia: 2,
+        Percepcao: 4,
+        Inteligencia: 4,
+        Raciocinio: 4,
+        Prontidao: 4,
+        Perspicacia: 3,
+        Manha: 1,
+        NovosTalentos: [],
+        LutaCega: 3,
+        Conducao: 2,
+        Lideranca: 3,
+        Seguranca: 1,
+        Furtividade: 3,
+        Sobrevivencia: 1,
+        NovasPericias: [],
+        Arena: 3,
+        Computador: 1,
+        Investigacao: 2,
+        Medicina: 1,
+        Misterios: 3,
+        Estilos: 4,
+        NovosConhecimentos: [],
+        Antecedentes: [newCaracteristica("Aliados", 3), newCaracteristica("Recursos", 2), newCaracteristica("Sensei", 3), newCaracteristica("Contatos", 2)],
+        Soco: 2,
+        Chute: 3,
+        Bloqueio: 3,
+        Apresamento: 4,
+        Esportes: 3,
+        Foco: 3,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Buffalo Punch, Double Hit Kick, Pin, Improved Pin, Foot Sweep, Jump, Monkey Grab Punch, Kippup, San He, Throw, Air Throw, Deflecting Punch, Grappling Defense, Zen no Mind",
+        Gloria: 5,
+        Honra: 7,
+        Chi: 6,
+        ForcaVontade: 7,
+        Saude: 11,
+        Divisao: "Tradicional",
+        Posto: 3
+    };
+    return personagem;
+}
+
+let npc = SarahLewis();
+
+npc = calcPC(npc);

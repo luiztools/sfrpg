@@ -13,14 +13,13 @@ function MrBig() {
     const armas = [];
     armas[0] = "Tonfa de Ferro";
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Mr. Big",
         Estilo: "Bojutsu",
         Escola: "Desconhecida",
-        Conceito: "Mafioso",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Mafioso",
         Cronica: "Art of Fighting",
         Equipe: "Howard Connection",
         Time: "Howard Connection",
@@ -60,15 +59,15 @@ function MrBig() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 8,
+        ManobrasEspeciais: "Head Butt, Jump, Flying Head Butt, Throw, Fireball, Weapon Uppercut, Shock Treatment, Triple Blow",
+        Combos: "Fierce para Fireball para Weapon Uppercut (Dizzy)",
         Gloria: 4,
         Honra: 0,
         Chi: 5,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Head Butt, Jump, Flying Head Butt, Throw, Fireball, Weapon Uppercut, Shock Treatment, Triple Blow",
-        Combos: "Fierce para Fireball para Weapon Uppercut (Dizzy)"
+        Divisao: "Duelistas",
+        Posto: 8
     };
     return personagem;
 }
@@ -88,14 +87,13 @@ function BigAoF() {
     const armas = [];
     armas[0] = "Tonfa de Ferro";
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Mr. Big",
         Estilo: "Bojutsu",
         Escola: "Desconhecida",
-        Conceito: "Mafioso",
-        Assinatura: "Gargalhada",
         Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Mafioso",
         Cronica: "Art of Fighting",
         Equipe: "Howard Connection",
         Time: "Howard Connection",
@@ -135,15 +133,15 @@ function BigAoF() {
         Foco: 4,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 7,
+        ManobrasEspeciais: "Head Butt, Jump, Flying Head Butt, Throw, Fireball, Weapon Uppercut, Shock Treatment, Triple Blow",
+        Combos: "Fierce para Fireball para Weapon Uppercut (Dizzy)",
         Gloria: 3,
         Honra: 0,
         Chi: 4,
         ForcaVontade: 7,
         Saude: 18,
-        ManobrasEspeciais: "Head Butt, Jump, Flying Head Butt, Throw, Fireball, Weapon Uppercut, Shock Treatment, Triple Blow",
-        Combos: "Fierce para Fireball para Weapon Uppercut (Dizzy)"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }

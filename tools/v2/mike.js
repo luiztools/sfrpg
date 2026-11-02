@@ -4,17 +4,16 @@ function MikeSF1() {
     antecedentes[1] = newCaracteristica("Empresario", 2);
     antecedentes[2] = newCaracteristica("Recursos", 1);
 
-    var mike =
-    {
+    var mike = {
         Nome: "Mike",
-        Conceito: "Pugilista",
-        Escola: "Guetos americanos",
         Estilo: "Boxe",
-        Assinatura: "Levanta o Braço",
+        Escola: "Guetos americanos",
         Jogador: "NPC",
-        Time: "Nenhum",
-        Equipe: "Nenhuma",
+        Assinatura: "Levanta o Braço",
+        Conceito: "Pugilista",
         Cronica: "Street Fighter 1",
+        Equipe: "Nenhuma",
+        Time: "Nenhum",
         Forca: 5,
         Destreza: 3,
         Vigor: 6,
@@ -43,13 +42,13 @@ function MikeSF1() {
         Foco: 1,
         ManobrasEspeciais: "Dashing Punch, Power Uppercut, Fist Sweep, Jump, Dashing Uppercut",
         Combos: "Jab para Power Uppercut (Dizzy), Jab para Jab (Dizzy)",
+        Gloria: 4,
+        Honra: 1,
         Chi: 3,
         ForcaVontade: 9,
         Saude: 20,
         Divisao: "Tradicional",
-        Posto: 7,
-        Honra: 1,
-        Gloria: 4
+        Posto: 7
     };
     return calcPC(mike);
 }

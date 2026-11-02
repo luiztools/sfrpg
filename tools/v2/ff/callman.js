@@ -6,17 +6,16 @@ function Callman() {
 
     const tecnicas = [];
 
-    const npc =
-    {
+    const npc = {
         Nome: "Callman",
         Estilo: "Savate",
-        Conceito: "Barman",
         Escola: "Professor Particular",
-        Time: "Skull Cross",
-        Equipe: "Skull Cross",
-        Assinatura: "Cara de Mau",
         Jogador: "NPC",
+        Assinatura: "Cara de Mau",
+        Conceito: "Barman",
         Cronica: "Final Fight 3",
+        Equipe: "Skull Cross",
+        Time: "Skull Cross",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -30,11 +29,11 @@ function Callman() {
         Interrogacao: 0,
         Intimidacao: 5,
         Perspicacia: 1,
-        Labia: 3,
         Manha: 3,
+        Labia: 3,
         LutaCega: 3,
-        Lideranca: 3,
         Conducao: 3,
+        Lideranca: 3,
         Seguranca: 3,
         Furtividade: 1,
         Sobrevivencia: 0,
@@ -45,22 +44,22 @@ function Callman() {
         Misterios: 0,
         Estilos: 3,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 4,
         Chute: 4,
         Bloqueio: 4,
         Apresamento: 4,
         Esportes: 4,
         Foco: 0,
-        Divisao: "Estilo Livre",
-        Posto: 8,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Jump, Wall Spring, Jumping Shoulder Butt, Kippup, Wounded Knee, Punch Defense, Throw, Push Body, Kick Defense, Foot Sweep",
+        Combos: "Wall Spring para Jumping Shoulder Butt para Foot Sweep (Dizzy); Punch Defense para Push Body; Kick Defense para Push Body; Fierce para Wounded Knee (Dizzy)",
         Gloria: 4,
         Honra: 3,
         Chi: 2,
         ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Wall Spring, Jumping Shoulder Butt, Kippup, Wounded Knee, Punch Defense, Throw, Push Body, Kick Defense, Foot Sweep",
-        Combos: "Wall Spring para Jumping Shoulder Butt para Foot Sweep (Dizzy); Punch Defense para Push Body; Kick Defense para Push Body; Fierce para Wounded Knee (Dizzy)",
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return npc;
 }

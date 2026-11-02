@@ -3,17 +3,16 @@ function AbigailSF5() {
     antecedentes[0] = newCaracteristica("Apoio", 3);
     antecedentes[1] = newCaracteristica("Contatos", 2);
     antecedentes[2] = newCaracteristica("Recursos", 1);
-    const abigail =
-    {
+    const abigail = {
         Nome: "Abigail",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Mad Gear",
-        Conceito: "Líder de Gangue",
-        Time: "Mad Gear",
-        Equipe: "Mad Gear",
-        Assinatura: "Ele é muito grande!",
         Jogador: "NPC",
+        Assinatura: "Ele é muito grande!",
+        Conceito: "Líder de Gangue",
         Cronica: "Street Fighter 5",
+        Equipe: "Mad Gear",
+        Time: "Mad Gear",
         Forca: 7,
         Destreza: 2,
         Vigor: 8,
@@ -44,15 +43,15 @@ function AbigailSF5() {
         Apresamento: 5,
         Esportes: 3,
         Foco: 2,
+        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Toughskin, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Backflip, Tumbling Attack, Foot Sweep, Wheel Kick, Hyper Tackle",
+        Combos: "Flying Tackle para Throw; Hyper Fist para Power Uppercut (Dizzy); Jab para Jab (Dizy); Bloqueio para Air Smash (Dizzy); Tumbling Attack para Foot Sweep",
         Gloria: 6,
         Honra: 0,
         Chi: 7,
         ForcaVontade: 9,
         Saude: 20,
-        Posto: 7,
         Divisao: "Tradicional",
-        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Toughskin, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Backflip, Tumbling Attack, Foot Sweep, Wheel Kick, Hyper Tackle",
-        Combos: "Flying Tackle para Throw; Hyper Fist para Power Uppercut (Dizzy); Jab para Jab (Dizy); Bloqueio para Air Smash (Dizzy); Tumbling Attack para Foot Sweep",
+        Posto: 7
     };
     return abigail;
 }
@@ -62,17 +61,16 @@ function AbigailFF1() {
     antecedentes[0] = newCaracteristica("Apoio", 4);
     antecedentes[1] = newCaracteristica("Contatos", 3);
     antecedentes[2] = newCaracteristica("Recursos", 2);
-    const abigail =
-    {
+    const abigail = {
         Nome: "Abigail",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Mad Gear",
-        Conceito: "Líder de Gangue",
-        Time: "Mad Gear",
-        Equipe: "Mad Gear",
-        Assinatura: "Ele é muito grande!",
         Jogador: "NPC",
+        Assinatura: "Ele é muito grande!",
+        Conceito: "Líder de Gangue",
         Cronica: "Final Fight",
+        Equipe: "Mad Gear",
+        Time: "Mad Gear",
         Forca: 6,
         Destreza: 2,
         Vigor: 7,
@@ -103,15 +101,15 @@ function AbigailFF1() {
         Apresamento: 4,
         Esportes: 2,
         Foco: 1,
+        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Foot Sweep, Wheel Kick",
+        Combos: "Flying Tackle para Throw; Hyper Fist para Power Uppercut (Dizzy); Jab para Jab (Dizy); Bloqueio para Air Smash (Dizzy);",
         Gloria: 4,
         Honra: 0,
         Chi: 5,
         ForcaVontade: 7,
         Saude: 15,
-        Posto: 5,
         Divisao: "Tradicional",
-        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Foot Sweep, Wheel Kick",
-        Combos: "Flying Tackle para Throw; Hyper Fist para Power Uppercut (Dizzy); Jab para Jab (Dizy); Bloqueio para Air Smash (Dizzy);",
+        Posto: 5
     };
     return abigail;
 }

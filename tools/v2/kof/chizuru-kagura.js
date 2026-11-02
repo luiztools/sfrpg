@@ -5,14 +5,13 @@ function ChizuruKagura() {
     antecedentes[2] = newCaracteristica("Recursos", 3);
     antecedentes[3] = newCaracteristica("Elemental", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Chizuru Kagura",
         Estilo: "Yata-ryu (JKD)",
         Escola: "Clã Yata",
-        Conceito: "Elemental do Ar",
-        Assinatura: "Cópias ilusórias",
         Jogador: "NPC",
+        Assinatura: "Cópias ilusórias",
+        Conceito: "Elemental do Ar",
         Cronica: "The King of Fighters 97",
         Forca: 4,
         Destreza: 5,
@@ -48,15 +47,15 @@ function ChizuruKagura() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 6,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Throw, Telepathy, Zen no Mind, Dim Mak, Elemental Stride, Heal, Sense Element, Power Uppercut, Air Blast, Fist Sweep, Foot Sweep, Spinning Clothesline, Turbo Spinning Clothesline, Dragon Punch, Missile Reflection, Energy Reflection, Chi Kun Healing",
+        Combos: "Jab para Jab para Jab (Dizzy); Foot Sweep para Dragon Punch (Dizzy); Throw para Turbo Spinning Clothesline (Dizzy)",
         Gloria: 5,
         Honra: 10,
         Chi: 10,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Throw, Telepathy, Zen no Mind, Dim Mak, Elemental Stride, Heal, Sense Element, Power Uppercut, Air Blast, Fist Sweep, Foot Sweep, Spinning Clothesline, Turbo Spinning Clothesline, Dragon Punch, Missile Reflection, Energy Reflection, Chi Kun Healing",
-        Combos: "Jab para Jab para Jab (Dizzy); Foot Sweep para Dragon Punch (Dizzy); Throw para Turbo Spinning Clothesline (Dizzy)"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }

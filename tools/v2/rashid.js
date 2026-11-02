@@ -5,16 +5,15 @@ function Rashid() {
     antecedentes[2] = newCaracteristica("Recursos", 4);
     antecedentes[3] = newCaracteristica("Staff", 3);
     antecedentes[4] = newCaracteristica("Aliados", 3);
-    antecedentes[5] = newCaracteristica("Elemental", 4);
+    antecedentes[5] = newCaracteristica("Elemental", 5);
 
-    var rashid =
-    {
+    var rashid = {
         Nome: "Rashid",
         Estilo: "Baraqah",
         Escola: "Templo de Bagdá",
-        Conceito: "Geek muçulmano",
-        Assinatura: "Ventos turbulentos",
         Jogador: "NPC",
+        Assinatura: "Ventos turbulentos",
+        Conceito: "Geek muçulmano",
         Cronica: "Street Fighter 5",
         Forca: 4,
         Destreza: 6,
@@ -26,13 +25,14 @@ function Rashid() {
         Inteligencia: 5,
         Raciocinio: 5,
         Prontidao: 5,
-        Intimidacao: 2,
-        Perspicacia: 5,
-        Manha: 2,
+        Interrogacao: 2,
+        Intimidacao: 0,
+        Perspicacia: 3,
+        Manha: 3,
         Labia: 3,
         LutaCega: 4,
         Conducao: 2,
-        Lideranca: 2,
+        Lideranca: 3,
         Furtividade: 5,
         Sobrevivencia: 4,
         Arena: 3,
@@ -47,16 +47,16 @@ function Rashid() {
         Bloqueio: 5,
         Apresamento: 3,
         Esportes: 6,
-        Foco: 3,
-        Divisao: "Estilo Livre",
-        Posto: 9,
-        Gloria: 9,
+        Foco: 5,
+        ManobrasEspeciais: "Jump, Foot Sweep, Spinning Foot Sweep, Dive Kick, Wall Spring, Drunken Monkey Roll, Criminal Upper, Spinning Back Fist, Tornado Punch, Flying Thrust Kick, Air Blast, Sense Element, Jumping Shoulder Butt, Backflip Kick, Flying Heel Stomp, Elemental Stride, Light Feet, Balance",
+        Combos: "Dive Kick para Flying Thrust Kick (Dizzy); Wall Spring + Short para Flying Thrust Kick (Dizzy)",
+        Gloria: 6,
         Honra: 7,
         Chi: 9,
-        ForcaVontade: 8,
+        ForcaVontade: 7,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Foot Sweep, Spinning Foot Sweep, Dive Kick, Wall Spring, Drunken Monkey Roll, Criminal Upper, Light Feet, Spinning Clothesline, Turbo Spinning Clothesline, Bushin Sempu Kyaku, Flying Thrust Kick, Sonic Boom, Hurricane Kick, Air Hurricane Kick, Spinning Back Fist, spinning knuckle, Heel Stamp, Flying Heel Stomp, Reverse Waterfall",
-        Combos: "Light Feet para spinning clothesline (Dizzy); Light Feet para Turbo Spinning Clothesline (Dizzy); Jump + Short para Flying Thrust kick (Dizzy); Bloqueio para Reverse Waterfall; Wall Spring + Short para Flying Thrust Kick (Dizzy);"
+        Divisao: "Estilo Livre",
+        Posto: 7
     };
     return calcPC(rashid);
 }

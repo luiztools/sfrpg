@@ -17,17 +17,16 @@ function ShaoKahnMK2() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Martelo", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Shao Kahn",
         Estilo: "Thai Kickboxe",
         Escola: "Desconhecida",
+        Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Imperador do Outworld",
+        Cronica: "Mortal Kombat 2",
         Equipe: "Nenhuma",
         Time: "Outworld",
-        Conceito: "Imperador do Outworld",
-        Assinatura: "Gargalhada",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 2",
         Forca: 9,
         Destreza: 5,
         Vigor: 8,
@@ -38,25 +37,25 @@ function ShaoKahnMK2() {
         Inteligencia: 6,
         Raciocinio: 6,
         Prontidao: 5,
-        Perspicacia: 6,
-        Manha: 2,
         Interrogacao: 3,
         Intimidacao: 8,
+        Perspicacia: 6,
+        Manha: 2,
         Labia: 4,
+        NovosTalentos: talentos,
         LutaCega: 3,
         Conducao: 0,
         Lideranca: 5,
         Seguranca: 2,
         Furtividade: 2,
         Sobrevivencia: 4,
+        NovasPericias: pericias,
         Arena: 5,
         Computador: 0,
         Investigacao: 3,
         Medicina: 1,
         Misterios: 8,
         Estilos: 4,
-        NovosTalentos: talentos,
-        NovasPericias: pericias,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 8,
@@ -67,15 +66,15 @@ function ShaoKahnMK2() {
         Foco: 8,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Tiger Knee, Power Uppercut, Fireball, Improved Fireball, Jumping Shoulder Butt, Brain Cracker, Leech, Absorb Soul, Face Slam",
+        Combos: "Jab para Jab para Martelo Jab (Dizzy); Forward para Forward para Martelo Jab (Dizzy);",
         Gloria: 10,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Tiger Knee, Power Uppercut, Fireball, Improved Fireball, Jumping Shoulder Butt, Brain Cracker, Leech, Absorb Soul, Face Slam",
-        Combos: "Jab para Jab para Martelo Jab (Dizzy); Forward para Forward para Martelo Jab (Dizzy);"
+        Divisao: "Livre",
+        Posto: 10
     };
     return personagem;
 }
@@ -101,17 +100,16 @@ function ShaoKahn() {
     tecnicas[1] = newCaracteristica("Arremesso", 4);
     tecnicas[2] = newCaracteristica("Lança", 4);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Shao Kahn",
         Estilo: "Thai Kickboxe",
         Escola: "Desconhecida",
+        Jogador: "NPC",
+        Assinatura: "Gargalhada",
+        Conceito: "Imperador do Outworld",
+        Cronica: "Mortal Kombat Armageddon",
         Equipe: "Nenhuma",
         Time: "Outworld",
-        Conceito: "Imperador do Outworld",
-        Assinatura: "Gargalhada",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat Armageddon",
         Forca: 9,
         Destreza: 5,
         Vigor: 8,
@@ -122,25 +120,25 @@ function ShaoKahn() {
         Inteligencia: 6,
         Raciocinio: 6,
         Prontidao: 5,
-        Perspicacia: 6,
-        Manha: 2,
         Interrogacao: 3,
         Intimidacao: 8,
+        Perspicacia: 6,
+        Manha: 2,
         Labia: 4,
+        NovosTalentos: talentos,
         LutaCega: 3,
         Conducao: 0,
         Lideranca: 5,
         Seguranca: 2,
         Furtividade: 2,
         Sobrevivencia: 4,
+        NovasPericias: pericias,
         Arena: 5,
         Computador: 0,
         Investigacao: 3,
         Medicina: 1,
         Misterios: 8,
         Estilos: 4,
-        NovosTalentos: talentos,
-        NovasPericias: pericias,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 8,
@@ -151,15 +149,15 @@ function ShaoKahn() {
         Foco: 8,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Tiger Knee, Power Uppercut, Fireball, Improved Fireball, Jumping Shoulder Butt, Brain Cracker, Leech, Absorb Soul, Face Slam, Regeneration, Energy Reflection, Missile Reflection, Weapon Channeling, Shockwave, Telekinesis, Wounded Knee",
+        Combos: "Jab para Jab para Martelo Jab (Dizzy); Forward para Forward para Martelo Jab (Dizzy);",
         Gloria: 10,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Tiger Knee, Power Uppercut, Fireball, Improved Fireball, Jumping Shoulder Butt, Brain Cracker, Leech, Absorb Soul, Face Slam, Regeneration, Energy Reflection, Missile Reflection, Weapon Channeling, Shockwave, Telekinesis, Wounded Knee",
-        Combos: "Jab para Jab para Martelo Jab (Dizzy); Forward para Forward para Martelo Jab (Dizzy);"
+        Divisao: "Livre",
+        Posto: 10
     };
     return personagem;
 }
@@ -167,5 +165,7 @@ function ShaoKahn() {
 let npc;
 if (getParameterByName('age') === 'mk2')
     npc = calcPC(ShaoKahnMK2());
-else if (getParameterByName('age') === 'mka')
+else if (getParameterByName('age') === 'mkx')
+    npc = calcPC(ShaoKahn());
+else
     npc = calcPC(ShaoKahn());

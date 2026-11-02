@@ -7,17 +7,16 @@ function Torr() {
     const talentos = [];
     const conhecimentos = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Ferra e Torr",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Ferra gargalha",
+        Conceito: "Simbionte",
+        Cronica: "Mortal Kombat X",
         Equipe: "Outworld",
         Time: "Outworld",
-        Conceito: "Simbionte",
-        Assinatura: "Ferra gargalha",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 7,
         Destreza: 2,
         Vigor: 7,
@@ -28,11 +27,12 @@ function Torr() {
         Inteligencia: 1,
         Raciocinio: 2,
         Prontidao: 2,
-        Perspicacia: 1,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 5,
+        Perspicacia: 1,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 0,
         Conducao: 0,
         Lideranca: 1,
@@ -45,7 +45,6 @@ function Torr() {
         Medicina: 2,
         Misterios: 3,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
@@ -55,15 +54,15 @@ function Torr() {
         Esportes: 3,
         Foco: 1,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Spinning Back Fist, Foot Sweep, Power Uppercut, Face Slam, Bear Hug, Back Breaker",
+        Combos: "Jab – Strong – Forward (dizzy); Jab – Foot Sweep (dizzy); Spinning Back Fist – Fierce; Bloqueio – Face Slam – Ataque de Mascote",
         Gloria: 1,
         Honra: 1,
         Chi: 1,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Spinning Back Fist, Foot Sweep, Power Uppercut, Face Slam, Bear Hug, Back Breaker",
-        Combos: "Jab – Strong – Forward (dizzy); Jab – Foot Sweep (dizzy); Spinning Back Fist – Fierce; Bloqueio – Face Slam – Ataque de Mascote"
+        Divisao: "Livre",
+        Posto: 7
     };
     return personagem;
 }
@@ -79,17 +78,16 @@ function Ferra() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 4);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Ferra",
-        Estilo: "Luta-Livre",
+        Estilo: "Wrestling",
         Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Gargalha",
+        Conceito: "Simbionte",
+        Cronica: "Mortal Kombat X",
         Equipe: "Outworld",
         Time: "Outworld",
-        Conceito: "Simbionte",
-        Assinatura: "Gargalha",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat X",
         Forca: 3,
         Destreza: 5,
         Vigor: 3,
@@ -100,11 +98,12 @@ function Ferra() {
         Inteligencia: 2,
         Raciocinio: 2,
         Prontidao: 2,
-        Perspicacia: 1,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 0,
+        Perspicacia: 1,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 0,
         Conducao: 0,
         Lideranca: 1,
@@ -117,7 +116,6 @@ function Ferra() {
         Medicina: 2,
         Misterios: 3,
         Estilos: 0,
-        NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 0,
@@ -127,15 +125,15 @@ function Ferra() {
         Esportes: 4,
         Foco: 0,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 1,
+        ManobrasEspeciais: "Jump",
+        Combos: "",
         Gloria: 1,
         Honra: 1,
         Chi: 1,
         ForcaVontade: 6,
         Saude: 4,
-        ManobrasEspeciais: "Jump",
-        Combos: ""
+        Divisao: "Duelistas",
+        Posto: 1
     };
     return personagem;
 }

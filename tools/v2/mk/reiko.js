@@ -10,17 +10,16 @@ function Reiko() {
 
     const armas = ["Bastão Curto Reforçado", "Shuriken"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Reiko",
         Estilo: "Jeet Kune Dô",
         Escola: "Netherrealm",
+        Jogador: "NPC",
+        Assinatura: "Olhar determinado",
+        Conceito: "General de Shinnok",
+        Cronica: "Mortal Kombat 4",
         Equipe: "Netherrealm",
         Time: "Netherrealm",
-        Conceito: "General de Shinnok",
-        Assinatura: "Olhar determinado",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 4",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -57,15 +56,15 @@ function Reiko() {
         Foco: 4,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 9,
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Breaker, Double-Hit Kick, Double-Hit Punch, Knee Basher, Yoga Teleport, Dislocate Limb, Weapon Sweep, Backflip Kick, Forward Backflip Kick",
+        Combos: "Double-Hit Punch - Double-Hit Punch - Power Uppercut (Dizzy); Double-Hit Punch - Double-Hit Punch - Power Uppercut (Dizzy); Yoga Teleport - Power Uppercut - Throw (Dizzy); Jumping Short - Foot Sweep - Power Uppercut",
         Gloria: 10,
         Honra: 2,
         Chi: 8,
         ForcaVontade: 9,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Breaker, Double-Hit Kick, Double-Hit Punch, Knee Basher, Yoga Teleport, Dislocate Limb, Weapon Sweep, Backflip Kick, Forward Backflip Kick",
-        Combos: "Double-Hit Punch - Double-Hit Punch - Power Uppercut (Dizzy); Double-Hit Punch - Double-Hit Punch - Power Uppercut (Dizzy); Yoga Teleport - Power Uppercut - Throw (Dizzy); Jumping Short - Foot Sweep - Power Uppercut"
+        Divisao: "Duelistas",
+        Posto: 9
     };
     return personagem;
 }

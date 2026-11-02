@@ -8,16 +8,15 @@ function Dean() {
     var tecnicas = [];
     tecnicas[0] = newCaracteristica("Arremesso", 2);
 
-    var dean =
-    {
+    var dean = {
         Nome: "Dean",
         Estilo: "Jeet Kune Dô",
         Escola: "Autodidata",
-        Conceito: "Vingador amargurado",
-        Assinatura: "Eletricidade",
-        Time: "Final Fight",
         Jogador: "NPC",
+        Assinatura: "Eletricidade",
+        Conceito: "Vingador amargurado",
         Cronica: "Final Fight 3",
+        Time: "Final Fight",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -44,22 +43,22 @@ function Dean() {
         Misterios: 2,
         Estilos: 2,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 4,
         Chute: 3,
         Bloqueio: 3,
         Apresamento: 5,
         Esportes: 3,
         Foco: 4,
+        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Elbow Smash, Shock Treatment, Psychokinetic Channeling, Power Uppercut, Slide Kick, Storm Hammer, Stomach Pump, Throw, Suplex, Jump",
         Combos: "Jab para Strong para Fierce (Dizzy); Shock Treatment para Storm Hammer (Dizzy)",
-        Posto: 8,
         Gloria: 8,
         Honra: 5,
-        Divisao: "Estilo Livre",
         Chi: 8,
         ForcaVontade: 8,
-        Saude: 18
+        Saude: 18,
+        Divisao: "Estilo Livre",
+        Posto: 8
     };
     return calcPC(dean);
 }

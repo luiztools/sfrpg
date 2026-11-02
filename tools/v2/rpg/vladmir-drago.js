@@ -10,17 +10,16 @@
 
     const armas = [];
 
-    const vladmir =
-    {
+    const vladmir = {
         Nome: "Vladmir Drago",
         Estilo: "Boxe",
         Escola: "Academia de seu Avô",
-        Equipe: "Vodkas Korlov",
-        Conceito: "Leiteiro",
         Jogador: "Raryson Rost",
-        Cronica: "1991",
-        Time: "Dream Team",
         Assinatura: "Sinal da Cruz",
+        Conceito: "Leiteiro",
+        Cronica: "1991",
+        Equipe: "Vodkas Korlov",
+        Time: "Dream Team",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -55,17 +54,17 @@
         Apresamento: 0,
         Esportes: 4,
         Foco: 0,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Jump, Deflecting Punch, Thunderbolt, Head Butt, Dashing Punch, Punch Defense",
+        Combos: "",
         Gloria: 0,
         Honra: 3,
-        Divisao: "Tradicional",
-        Posto: 7,
         Chi: 1,
         ForcaVontade: 8,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Deflecting Punch, Thunderbolt, Head Butt, Dashing Punch, Punch Defense",
-        Combos: "",
-        NovasTecnicas: tecnicas,
-        Armas: armas
+        Divisao: "Tradicional",
+        Posto: 7
     };
     return vladmir;
 }

@@ -19,15 +19,13 @@ function RolentoZ3() {
     armas[2] = "Granada";
     armas[3] = "Garrote";
 
-    const rolento =
-    {
+    const rolento = {
         Nome: "Rolento F. Schugerg",
         Estilo: "Forças Especiais (Bojutsu)",
         Escola: "Exército Americano",
-        Conceito: "Revolucionário",
-        Assinatura: "Joga uma granada no oponente caído",
         Jogador: "NPC",
-        Time: "Mad Gear",
+        Assinatura: "Joga uma granada no oponente caído",
+        Conceito: "Revolucionário",
         Cronica: "Street Fighter Alpha",
         Equipe: "Mad Gear",
         Time: "Mad Gear",
@@ -65,17 +63,17 @@ function RolentoZ3() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 2,
-        Armas: armas,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Jump, Weapon Sweep, Throw, Air Throw, Spinning Weapon",
         Combos: "Faca Arremessada para Granada; Spinning Weapon para Spinning Weapon para Spinning Weapon (Dizzy)",
+        Gloria: 6,
+        Honra: 3,
         Chi: 3,
         ForcaVontade: 9,
         Saude: 18,
-        Posto: 6,
-        Honra: 3,
-        Gloria: 6,
-        Divisao: "Duelistas"
+        Divisao: "Duelistas",
+        Posto: 6
     };
     return rolento;
 }
@@ -102,14 +100,13 @@ function RolentoSF4() {
     armas[3] = "Granada";
     armas[4] = "Garrote";
 
-    const rolento =
-    {
+    const rolento = {
         Nome: "Rolento F. Schugerg",
         Estilo: "Forças Especiais (Bojutsu)",
         Escola: "Exército Americano",
-        Conceito: "Revolucionário",
-        Assinatura: "Joga uma granada no oponente caído",
         Jogador: "NPC",
+        Assinatura: "Joga uma granada no oponente caído",
+        Conceito: "Revolucionário",
         Cronica: "Street Fighter 4",
         Equipe: "",
         Time: "",
@@ -147,17 +144,17 @@ function RolentoSF4() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 2,
-        Armas: armas,
         NovasTecnicas: tecnicas,
+        Armas: armas,
         ManobrasEspeciais: "Jump, Weapon Sweep, Throw, Air Throw, Spinning Weapon",
         Combos: "Faca Arremessada para Granada; Spinning Weapon para Spinning Weapon para Spinning Weapon (Dizzy)",
+        Gloria: 7,
+        Honra: 4,
         Chi: 4,
         ForcaVontade: 10,
         Saude: 20,
-        Posto: 7,
-        Honra: 4,
-        Gloria: 7,
-        Divisao: "Duelistas"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return rolento;
 }

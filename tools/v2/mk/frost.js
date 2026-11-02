@@ -10,17 +10,16 @@ function Frost() {
 
     const armas = ["Ninjato"];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Frost",
         Estilo: "Ninjitsu",
         Escola: "Clã Lin-Kuei",
+        Jogador: "NPC",
+        Assinatura: "Frieza",
+        Conceito: "Ninja Criomante",
+        Cronica: "MK: Deadly Alliance",
         Equipe: "Lin-Kuei",
         Time: "Lin-Kuei",
-        Conceito: "Ninja Criomante",
-        Assinatura: "Frieza",
-        Jogador: "NPC",
-        Cronica: "MK: Deadly Alliance",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -57,15 +56,15 @@ function Frost() {
         Foco: 4,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Duelistas",
-        Posto: 7,
+        ManobrasEspeciais: "Jump, Kippup, Spinning Back Fist, Face Slam, Ducking Fierce, Elbow Smash, Throw, Flamingo Stance, Power Uppercut, Backflip, Double Hit Punch, Double Hit Kick, Palm Press, Triple Strike, Power Up, Wounded Knee, Ice Blast, Ice Ground, Slide Kick",
+        Combos: "Jab para Jab para Face Slam (dizzy); Jab para Strong para Throw (dizzy); Jab para Strong para Roundhouse (dizzy); Short para Forward para Roundhouse (dizzy); Espada Jab (3x) (Dizzy);",
         Gloria: 4,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 6,
         Saude: 18,
-        ManobrasEspeciais: "Jump, Kippup, Spinning Back Fist, Face Slam, Ducking Fierce, Elbow Smash, Throw, Flamingo Stance, Power Uppercut, Backflip, Double Hit Punch, Double Hit Kick, Palm Press, Triple Strike, Power Up, Wounded Knee, Ice Blast, Ice Ground, Slide Kick",
-        Combos: "Jab para Jab para Face Slam (dizzy); Jab para Strong para Throw (dizzy); Jab para Strong para Roundhouse (dizzy); Short para Forward para Roundhouse (dizzy); Espada Jab (3x) (Dizzy);"
+        Divisao: "Duelistas",
+        Posto: 7
     };
     return personagem;
 }

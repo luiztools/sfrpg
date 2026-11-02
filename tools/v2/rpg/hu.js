@@ -4,17 +4,15 @@
     antecedentes[1] = newCaracteristica("Contatos", 3);
     antecedentes[2] = newCaracteristica("Recursos", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hu",
         Estilo: "Thai Kickboxe",
         Escola: "Dojô de Sagat",
-        Time: "Punho das Sombras",
-        Equipe: "Shadaloo",
-        Conceito: "Aluno furioso",
         Jogador: "NPC",
-        Equipe: "Nenhuma",
         Assinatura: "Fecha os punhos com força e grita",
+        Conceito: "Aluno furioso",
+        Equipe: "Shadaloo",
+        Time: "Punho das Sombras",
         Forca: 5,
         Destreza: 4,
         Vigor: 6,
@@ -48,14 +46,14 @@
         Apresamento: 3,
         Esportes: 5,
         Foco: 2,
+        ManobrasEspeciais: "Elbow Smash, Toughskin, Dragon Punch, Double Dread Kick, Flying Knee Thrust, Wounded Knee, Maka Wara, Punch Defense, Head Butt Hold, Knee Basher, Jump, Air Smash",
         Gloria: 8,
         Honra: 3,
         Chi: 5,
         ForcaVontade: 7,
         Saude: 18,
-        Posto: 9,
         Divisao: "Livre",
-        ManobrasEspeciais: "Elbow Smash, Toughskin, Dragon Punch, Double Dread Kick, Flying Knee Thrust, Wounded Knee, Maka Wara, Punch Defense, Head Butt Hold, Knee Basher, Jump, Air Smash",
+        Posto: 9
     };
     return personagem;
 }
@@ -66,17 +64,15 @@ function HuOrochi() {
     antecedentes[1] = newCaracteristica("Contatos", 3);
     antecedentes[2] = newCaracteristica("Recursos", 3);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Hu (Orochi)",
         Estilo: "Thai Kickboxe",
         Escola: "Dojô de Sagat",
-        Time: "Punho da Sombras",
-        Equipe: "Shadaloo",
-        Conceito: "Sangue de Orochi",
         Jogador: "NPC",
-        Equipe: "Nenhuma",
         Assinatura: "Mata o oponente",
+        Conceito: "Sangue de Orochi",
+        Equipe: "Shadaloo",
+        Time: "Punho da Sombras",
         Forca: 6,
         Destreza: 5,
         Vigor: 7,
@@ -110,14 +106,14 @@ function HuOrochi() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 2,
+        ManobrasEspeciais: "Elbow Smash, Toughskin, Dragon Punch, Double Dread Kick, Flying Knee Thrust, Wounded Knee, Maka Wara, Punch Defense, Head Butt Hold, Knee Basher, Jump, Air Smash",
         Gloria: 8,
         Honra: 0,
         Chi: 5,
         ForcaVontade: 7,
         Saude: 20,
-        Posto: 9,
         Divisao: "Livre",
-        ManobrasEspeciais: "Elbow Smash, Toughskin, Dragon Punch, Double Dread Kick, Flying Knee Thrust, Wounded Knee, Maka Wara, Punch Defense, Head Butt Hold, Knee Basher, Jump, Air Smash",
+        Posto: 9
     };
     return personagem;
 }

@@ -3,17 +3,16 @@ function Juni() {
     antecedentes[0] = newCaracteristica("Apoio", 5);
     antecedentes[1] = newCaracteristica("Psycho Power", 2);
     
-    const juni =
-    {
+    const juni = {
         Nome: "Juni",
         Estilo: "Forças Especiais",
         Escola: "Shadaloo",
-        Conceito: "Assassina",
-        Assinatura: "Missão Completa!",
         Jogador: "NPC",
-        Time: "Dolls",
-        Equipe: "Shadaloo",
+        Assinatura: "Missão Completa!",
+        Conceito: "Assassina",
         Cronica: "Street Fighter Alpha",
+        Equipe: "Shadaloo",
+        Time: "Dolls",
         Forca: 3,
         Destreza: 5,
         Vigor: 4,
@@ -41,10 +40,11 @@ function Juni() {
         Medicina: 1,
         Misterios: 0,
         Estilos: 2,
+        Antecedentes: antecedentes,
         Soco: 4,
         Chute: 5,
-        Apresamento: 3,
         Bloqueio: 4,
+        Apresamento: 3,
         Esportes: 5,
         Foco: 2,
         ManobrasEspeciais: "Jump, Back Breaker, Thigh Press, Air Throw, Foot Sweep, Throw, Power Uppercut, Dive Kick, Flying Thrust Kick",
@@ -54,8 +54,7 @@ function Juni() {
         Chi: 4,
         ForcaVontade: 7,
         Saude: 18,
-        Posto: 4,
-        Antecedentes: antecedentes
+        Posto: 4
     };
     return calcPC(juni);
 }

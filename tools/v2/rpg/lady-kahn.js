@@ -1,0 +1,60 @@
+﻿
+function LadyKahn() {
+    const personagem = {
+        Nome: "Lady Kahn",
+        Estilo: "Baraqah",
+        Escola: "Bangladesh",
+        Assinatura: "Se abaixa para rezar",
+        Conceito: "Mulher Misteriosa",
+        Forca: 2,
+        Destreza: 5,
+        Vigor: 4,
+        Carisma: 3,
+        Manipulacao: 4,
+        Aparencia: 3,
+        Percepcao: 5,
+        Inteligencia: 4,
+        Raciocinio: 4,
+        Prontidao: 3,
+        Interrogacao: 1,
+        Intimidacao: 1,
+        Perspicacia: 3,
+        Labia: 2,
+        NovosTalentos: [],
+        LutaCega: 3,
+        Conducao: 1,
+        Lideranca: 2,
+        Seguranca: 1,
+        Furtividade: 4,
+        NovasPericias: [],
+        Arena: 3,
+        Computador: 1,
+        Investigacao: 3,
+        Medicina: 3,
+        Misterios: 4,
+        Estilos: 3,
+        NovosConhecimentos: [],
+        Antecedentes: [newCaracteristica("Sensei", 5), newCaracteristica("Recursos", 3)],
+        Soco: 2,
+        Chute: 2,
+        Bloqueio: 4,
+        Apresamento: 5,
+        Esportes: 4,
+        Foco: 4,
+        NovasTecnicas: [],
+        ManobrasEspeciais: "Dislocate Limb, Sleeper, Disengage, Deflecting Punch, Ice Blast, Triple Strike, Regeneration, Foot Sweep, Missile Reflection, Energy Reflection, Stunning Shout, Grappling Defense, Iron Claw, Back Roll Throw",
+        Combos: "Grappling Defense para Triple Strike; Deflecting Punch para Back Roll Throw; Roundhouse para Foot Sweep",
+        Gloria: 3,
+        Honra: 7,
+        Chi: 5,
+        ForcaVontade: 6,
+        Saude: 14,
+        Divisao: "Tradicional",
+        Posto: 6
+    };
+    return personagem;
+}
+
+let npc = LadyKahn();
+
+npc = calcPC(npc);

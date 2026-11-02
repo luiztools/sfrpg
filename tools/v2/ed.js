@@ -1,19 +1,19 @@
 function EdSF5() {
-    var antecedentes = [];
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Apoio", 5);
     antecedentes[2] = newCaracteristica("Psycho Power", 5);
     antecedentes[3] = newCaracteristica("Sensei", 3);
-    var ed =
-    {
+
+    const ed = {
         Nome: "Ed",
         Estilo: "Boxe",
         Escola: "Professor particular",
-        Conceito: "Comandante",
-        Assinatura: "Chamas psíquicas",
         Jogador: "NPC",
-        Equipe: "Shadaloo",
+        Assinatura: "Chamas psíquicas",
+        Conceito: "Comandante",
         Cronica: "Street Fighter 5",
+        Equipe: "Shadaloo",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -44,19 +44,19 @@ function EdSF5() {
         Antecedentes: antecedentes,
         Soco: 6,
         Chute: 4,
-        Bloqueio: 4,
-        Apresamento: 0,
+        Bloqueio: 5,
+        Apresamento: 1,
         Esportes: 5,
         Foco: 5,
+        ManobrasEspeciais: "Jump, Dashing Punch, Psychokinetic Channeling, Power Uppercut, Punch Defense, Foot Sweep, Telekinesis, Sonic Boom, Fireball, Hyper Fist, Burn Knuckle, Criminal Upper, Monkey Grab Punch, Flash Kick",
+        Combos: "Criminal Upper para Fireball para Power Uppercut; Punch Defense para Fierce (dizzy), Flash Kick para Burn Knuckle",
         Gloria: 6,
         Honra: 3,
-        Chi: 10,
-        ForcaVontade: 10,
+        Chi: 9,
+        ForcaVontade: 9,
         Saude: 20,
-        Posto: 8,
         Divisao: "Estilo Livre",
-        ManobrasEspeciais: "Jump, Dashing Punch, Psychokinetic Channeling, Power Uppercut, Esquives, Foot Sweep, Chi Pull, Sonic Boom, Fireball, Hyper Fist, Psycho Knuckle, Criminal Upper, Monkey Grab Punch, Flash Kick",
-        Combos: "Criminal Upper para Fireball para Power Uppercut; Esquives para Fierce (Psychokinetic Channeling) (dizzy), Flash Kick para Power Knuckle",
+        Posto: 6
     };
     return calcPC(ed);
 }

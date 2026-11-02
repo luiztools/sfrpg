@@ -12,14 +12,13 @@ function GuileSFZ3() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
-    const guile =
-    {
+    const guile = {
         Nome: "Guile",
         Estilo: "Forças Especiais",
         Escola: "USAF",
-        Conceito: "Capitão",
-        Assinatura: "Cabelo estiloso",
         Jogador: "NPC",
+        Assinatura: "Cabelo estiloso",
+        Conceito: "Capitão",
         Cronica: "Street Fighter Alpha",
         Forca: 5,
         Destreza: 4,
@@ -49,22 +48,22 @@ function GuileSFZ3() {
         Misterios: 1,
         Estilos: 3,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 5,
         Bloqueio: 5,
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
-        Divisao: "Estilo Livre",
-        Posto: 9,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
+        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom;",
+        Gloria: 7,
+        Honra: 6,
         Chi: 8,
         ForcaVontade: 8,
         Saude: 18,
-        Gloria: 7,
-        Honra: 6,
-        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
-        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom;"
+        Divisao: "Estilo Livre",
+        Posto: 9
     };
     return guile;
 }
@@ -82,14 +81,13 @@ function GuileSF2() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
-    const guile =
-    {
+    const guile = {
         Nome: "Guile",
         Estilo: "Forças Especiais",
         Escola: "USAF",
-        Conceito: "Coronel",
-        Assinatura: "Cabelo estiloso",
         Jogador: "NPC",
+        Assinatura: "Cabelo estiloso",
+        Conceito: "Coronel",
         Cronica: "Street Fighter 2",
         Forca: 5,
         Destreza: 5,
@@ -119,22 +117,22 @@ function GuileSF2() {
         Misterios: 1,
         Estilos: 4,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 6,
         Bloqueio: 6,
         Apresamento: 4,
         Esportes: 5,
         Foco: 5,
-        Divisao: "Estilo Livre",
-        Posto: 10,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
+        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep;",
+        Gloria: 8,
+        Honra: 7,
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        Gloria: 8,
-        Honra: 7,
-        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
-        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep;"
+        Divisao: "Estilo Livre",
+        Posto: 10
     };
     return guile;
 }
@@ -152,14 +150,16 @@ function GuileSF5() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
-    const guile =
-    {
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 2);
+
+    const guile = {
         Nome: "Guile",
         Estilo: "Forças Especiais",
         Escola: "USAF",
-        Conceito: "Coronel",
-        Assinatura: "Cabelo estiloso",
         Jogador: "NPC",
+        Assinatura: "Cabelo estiloso",
+        Conceito: "Coronel",
         Cronica: "Street Fighter 5",
         Forca: 5,
         Destreza: 5,
@@ -176,6 +176,7 @@ function GuileSF5() {
         Perspicacia: 3,
         Manha: 5,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 3,
         Conducao: 5,
         Lideranca: 5,
@@ -189,22 +190,22 @@ function GuileSF5() {
         Misterios: 2,
         Estilos: 5,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 6,
         Bloqueio: 6,
         Apresamento: 5,
         Esportes: 5,
         Foco: 5,
-        Divisao: "Estilo Livre",
-        Posto: 10,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
+        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep;",
+        Gloria: 9,
+        Honra: 8,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Gloria: 9,
-        Honra: 8,
-        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
-        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep;"
+        Divisao: "Estilo Livre",
+        Posto: 10
     };
     return guile;
 }
@@ -222,14 +223,16 @@ function GuileSF6() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
-    const guile =
-    {
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 3);
+
+    const guile = {
         Nome: "Guile",
         Estilo: "Forças Especiais",
         Escola: "USAF",
-        Conceito: "Coronel",
-        Assinatura: "Cabelo estiloso",
         Jogador: "NPC",
+        Assinatura: "Cabelo estiloso",
+        Conceito: "Coronel",
         Cronica: "Street Fighter 6",
         Forca: 5,
         Destreza: 5,
@@ -246,6 +249,7 @@ function GuileSF6() {
         Perspicacia: 4,
         Manha: 5,
         Labia: 3,
+        NovosTalentos: talentos,
         LutaCega: 4,
         Conducao: 5,
         Lideranca: 6,
@@ -259,22 +263,22 @@ function GuileSF6() {
         Misterios: 3,
         Estilos: 6,
         Antecedentes: antecedentes,
-        NovasTecnicas: tecnicas,
         Soco: 5,
         Chute: 6,
         Bloqueio: 6,
         Apresamento: 5,
         Esportes: 5,
         Foco: 6,
-        Divisao: "Estilo Livre",
-        Posto: 10,
+        NovasTecnicas: tecnicas,
+        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
+        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep;",
+        Gloria: 10,
+        Honra: 9,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Gloria: 10,
-        Honra: 9,
-        ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
-        Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep;"
+        Divisao: "Estilo Livre",
+        Posto: 10
     };
     return guile;
 }

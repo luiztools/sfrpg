@@ -4,14 +4,13 @@ function LeeKungFuDoFighting() {
     antecedentes[1] = newCaracteristica("Arena", 1);
     antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    const lee =
-    {
+    const lee = {
         Nome: "Lee",
         Estilo: "Tae Kwon Dô",
         Escola: "",
-        Conceito: "",
-        Assinatura: "Chuta o ar",
         Jogador: "NPC",
+        Assinatura: "Chuta o ar",
+        Conceito: "",
         Cronica: "Kung Fu Do Fighting",
         Forca: 3,
         Destreza: 5,
@@ -47,15 +46,15 @@ function LeeKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 2,
         Foco: 0,
+        ManobrasEspeciais: "Double Dread Kick, Double Hit-Kick, Kippup, Jump",
+        Combos: "",
         Gloria: 0,
         Honra: 3,
         Chi: 5,
         ForcaVontade: 6,
         Saude: 10,
-        Posto: 1,
         Divisao: "",
-        ManobrasEspeciais: "Double Dread Kick, Double Hit-Kick, Kippup, Jump",
-        Combos: "",
+        Posto: 1
     };
 
     return lee;

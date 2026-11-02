@@ -5,14 +5,13 @@ function Orochi() {
     antecedentes[2] = newCaracteristica("Sangue de Orochi", 5);
     antecedentes[3] = newCaracteristica("Elemental", 5);
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Orochi",
         Estilo: "Todos",
         Escola: "Nenhuma",
-        Conceito: "Emissário da Morte",
-        Assinatura: "Caçoa do oponente",
         Jogador: "NPC",
+        Assinatura: "Caçoa do oponente",
+        Conceito: "Emissário da Morte",
         Cronica: "The King of Fighters 97",
         Forca: 7,
         Destreza: 5,
@@ -48,15 +47,15 @@ function Orochi() {
         Apresamento: 7,
         Esportes: 7,
         Foco: 7,
-        Divisao: "Livre",
-        Posto: 10,
+        ManobrasEspeciais: "Jump, Power Uppercut,  Wheel Kick, Flaming Fist, Fist Sweep, Fire Strike, Sonic Boom, Breakfall, Kippup, Telepathy, Mind Reading, Psychic Vise, Yoga Teleport, Air Blast, Push, Chi Push, Chi Kun Healing, Elemental Stride, Double-Hit Punch, Sense Orochi, Awakening Orochi",
+        Combos: "Double-Hit Punch para Sonic Boom para Sonic Boom (Dizzy); Chi Push para Yoga Teleport para Push (Dizzy); Chi Push para Elemental Stride para Push (Dizzy); Wheel Kick para Push para Chi Push (Dizzy)",
         Gloria: 0,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Power Uppercut,  Wheel Kick, Flaming Fist, Fist Sweep, Fire Strike, Sonic Boom, Breakfall, Kippup, Telepathy, Mind Reading, Psychic Vise, Yoga Teleport, Air Blast, Push, Chi Push, Chi Kun Healing, Elemental Stride, Double-Hit Punch, Sense Orochi, Awakening Orochi",
-        Combos: "Double-Hit Punch para Sonic Boom para Sonic Boom (Dizzy); Chi Push para Yoga Teleport para Push (Dizzy); Chi Push para Elemental Stride para Push (Dizzy); Wheel Kick para Push para Chi Push (Dizzy)"
+        Divisao: "Livre",
+        Posto: 10
     };
     return personagem;
 }

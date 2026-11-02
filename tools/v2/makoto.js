@@ -6,14 +6,16 @@ function MakotoSF4() {
     antecedentes[3] = newCaracteristica("Contatos", 1);
     antecedentes[4] = newCaracteristica("Sensei", 3);
 
-    const makoto =
-    {
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 1);
+
+    const makoto = {
         Nome: "Makoto Rindou",
         Estilo: "Karatê Rindoukan",
-        Assinatura: "Postura rígida",
         Escola: "Dojô Rindou",
-        Conceito: "Estudante",
         Jogador: "NPC",
+        Assinatura: "Postura rígida",
+        Conceito: "Estudante",
         Cronica: "Street Fighter 4",
         Equipe: "Nenhuma",
         Forca: 5,
@@ -43,22 +45,22 @@ function MakotoSF4() {
         Medicina: 2,
         Misterios: 2,
         Estilos: 3,
+        Antecedentes: antecedentes,
         Soco: 5,
         Chute: 5,
         Bloqueio: 6,
         Apresamento: 3,
         Esportes: 5,
         Foco: 5,
-        Antecedentes: antecedentes,
-        Saude: 20,
-        ForcaVontade: 8,
-        Chi: 9,
-        Honra: 9,
-        Gloria: 5,
-        Posto: 7,
-        Divisao: "Tradicional",
         ManobrasEspeciais: "Jump, Throw, Flying Thrust Kick, Power Uppercut, Triple Strike, Neck Choke, Double-Hit Kick, Wall Spring, Rekka Ken, Double Dread Kick, Air Smash, Fist Sweep, Dive Kick, Dashing Punch, Knife Hand Strike",
-        Combos: "Fierce para Double Dread Kick; Power Uppercut para Throw; Triple Strike para Neck Choke (Dizzy)"
+        Combos: "Fierce para Double Dread Kick; Power Uppercut para Throw; Triple Strike para Neck Choke (Dizzy)",
+        Gloria: 5,
+        Honra: 9,
+        Chi: 9,
+        ForcaVontade: 8,
+        Saude: 20,
+        Divisao: "Tradicional",
+        Posto: 7
     };
     return calcPC(makoto);
 }

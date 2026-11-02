@@ -12,17 +12,16 @@ function Motaro() {
     const conhecimentos = [];
     const tecnicas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Motaro",
         Estilo: "Briga",
         Escola: "Centaurians",
+        Jogador: "NPC",
+        Assinatura: "Grito de Vitória",
+        Conceito: "General do Outworld",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Outworld",
         Time: "Outworld",
-        Conceito: "General do Outworld",
-        Assinatura: "Grito de Vitória",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 8,
         Destreza: 2,
         Vigor: 8,
@@ -33,25 +32,25 @@ function Motaro() {
         Inteligencia: 3,
         Raciocinio: 5,
         Prontidao: 4,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 8,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 0,
         Conducao: 0,
         Lideranca: 5,
         Seguranca: 0,
         Furtividade: 0,
         Sobrevivencia: 5,
+        NovasPericias: pericias,
         Arena: 5,
         Computador: 0,
         Investigacao: 0,
         Medicina: 3,
         Misterios: 5,
         Estilos: 4,
-        NovosTalentos: talentos,
-        NovasPericias: pericias,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 5,
@@ -62,15 +61,15 @@ function Motaro() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 8,
+        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Yoga Teleport, Tail Sweep, Tail Slash, Upper Tail Strike, Head Butt, Bull Head, Bull Horn, Double Hit Kick, Face Slam, Throw, Missile Reflection, Energy Reflection",
+        Combos: "nenhum",
         Gloria: 9,
         Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        ManobrasEspeciais: "Jump, Brain Cracker, Sonic Boom, Power Uppercut, Yoga Teleport, Tail Sweep, Tail Slash, Upper Tail Strike, Head Butt, Bull Head, Bull Horn, Double Hit Kick, Face Slam, Throw, Missile Reflection, Energy Reflection",
-        Combos: "nenhum"
+        Divisao: "Livre",
+        Posto: 8
     };
     return personagem;
 }
@@ -87,17 +86,16 @@ function Centaurean() {
     const conhecimentos = [];
     const tecnicas = [];
 
-    const personagem =
-    {
+    const personagem = {
         Nome: "Centaurean",
         Estilo: "Briga",
         Escola: "Centaurians",
+        Jogador: "NPC",
+        Assinatura: "Grito de Vitória",
+        Conceito: "Centaurian médio",
+        Cronica: "Mortal Kombat 3",
         Equipe: "Outworld",
         Time: "Centaurians",
-        Conceito: "Centaurian médio",
-        Assinatura: "Grito de Vitória",
-        Jogador: "NPC",
-        Cronica: "Mortal Kombat 3",
         Forca: 7,
         Destreza: 2,
         Vigor: 7,
@@ -108,25 +106,25 @@ function Centaurean() {
         Inteligencia: 2,
         Raciocinio: 4,
         Prontidao: 3,
-        Perspicacia: 0,
-        Manha: 0,
         Interrogacao: 0,
         Intimidacao: 7,
+        Perspicacia: 0,
+        Manha: 0,
         Labia: 0,
+        NovosTalentos: talentos,
         LutaCega: 0,
         Conducao: 0,
         Lideranca: 4,
         Seguranca: 0,
         Furtividade: 0,
         Sobrevivencia: 4,
+        NovasPericias: pericias,
         Arena: 4,
         Computador: 0,
         Investigacao: 0,
         Medicina: 2,
         Misterios: 4,
         Estilos: 3,
-        NovosTalentos: talentos,
-        NovasPericias: pericias,
         NovosConhecimentos: conhecimentos,
         Antecedentes: antecedentes,
         Soco: 4,
@@ -137,15 +135,15 @@ function Centaurean() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        Divisao: "Livre",
-        Posto: 6,
+        ManobrasEspeciais: "Jump, Sonic Boom, Power Uppercut, Tail Slash, Head Butt, Horn, Double Hit Kick, Face Slam",
+        Combos: "nenhum",
         Gloria: 7,
         Honra: 0,
         Chi: 8,
         ForcaVontade: 8,
         Saude: 18,
-        ManobrasEspeciais: "Jump, Sonic Boom, Power Uppercut, Tail Slash, Head Butt, Horn, Double Hit Kick, Face Slam",
-        Combos: "nenhum"
+        Divisao: "Livre",
+        Posto: 6
     };
     return personagem;
 }
@@ -156,3 +154,5 @@ if (getParameterByName('age') === 'mk3')
     npc = calcPC(Motaro());
 else if (getParameterByName('age') === 'centaurean')
     npc = calcPC(Centaurean());
+else
+    npc = calcPC(Motaro());
