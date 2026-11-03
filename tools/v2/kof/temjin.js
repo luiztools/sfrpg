@@ -46,7 +46,7 @@ function Temjin() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 4,
-        ManobrasEspeciais: "Jump, Kippup, Throw, Pile Driver, Spinning Pile Driver, Energy Ball, Dashing Elbow, Grappling Defense, Wall Spring, Flying Body Spear",
+        ManobrasEspeciais: "Jump, Kippup, Throw, Pile Driver, Spinning Pile Driver, Energy Ball, Hyper Tackle, Grappling Defense, Wall Spring, Flying Body Spear",
         Combos: "Strong - Roundhouse - Fierce (Dizzy)",
         Gloria: 4,
         Honra: 2,

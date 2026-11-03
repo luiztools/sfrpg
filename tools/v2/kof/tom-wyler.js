@@ -46,7 +46,7 @@ function TomWyler() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 3,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Charge, Reverse Frontal Kick, Breakfall",
+        ManobrasEspeciais: "Jump, Foot Sweep, Hyper Tackle, Reverse Frontal Kick, Breakfall",
         Combos: "",
         Gloria: 7,
         Honra: 1,
