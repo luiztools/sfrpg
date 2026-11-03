@@ -60,7 +60,7 @@
         Foco: 0,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Monkey Grab Punch, Double Dread Kick, Knee Basher, Jump, Cápsulas de Sono (Vel. 4, Especial, Mov.0)",
+        ManobrasEspeciais: "Monkey Grab Punch, Double Dread Kick, Knee Basher, Jump",
         Combos: "",
         Gloria: 0,
         Honra: 1,
