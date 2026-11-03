@@ -6,7 +6,7 @@
     antecedentes[3] = newCaracteristica("Contatos", 4);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Espada", 0);
+    tecnicas[0] = newCaracteristica("Espada", 1);
     tecnicas[1] = newCaracteristica("Arremesso", 3);
 
     const armas = [];

@@ -8,6 +8,8 @@
 
     const armas = [];
     armas[0] = "Lança";
+    armas[1] = "Funda";
+    armas[2] = "Pedra de Luz";
 
     const personagem = {
         Nome: "Selvagem Mrigankalês",
@@ -58,7 +60,7 @@
         Foco: 0,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Funda (Vel. 3, Dano 3, Mov. 0), Pedra de Luz (Vel. 1, Dano 8, Mov. 1)",
+        ManobrasEspeciais: "",
         Combos: "",
         Gloria: 0,
         Honra: 0,
