@@ -73,7 +73,7 @@ function SmokeMK2() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Apoio", 3);
-    antecedentes[2] = newCaracteristica("Elemental", 5);
+    antecedentes[2] = newCaracteristica("Elemental (Ar)", 5);
     antecedentes[3] = newCaracteristica("Herança do Clã", 4);
 
     const tecnicas = [];

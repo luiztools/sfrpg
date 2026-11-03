@@ -1,7 +1,7 @@
 function Scorpion() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Fogo)", 5);
     antecedentes[2] = newCaracteristica("Espectro", 5);
     antecedentes[3] = newCaracteristica("Herança do Clã", 5);
 
@@ -72,7 +72,7 @@ function Scorpion() {
 function ScorpionMK4() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Fogo)", 5);
     antecedentes[2] = newCaracteristica("Espectro", 5);
     antecedentes[3] = newCaracteristica("Herança do Clã", 5);
 
@@ -144,7 +144,7 @@ function ScorpionMK4() {
 function ScorpionMKX() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Fogo)", 5);
     antecedentes[2] = newCaracteristica("Espectro", 5);
     antecedentes[3] = newCaracteristica("Herança do Clã", 5);
 

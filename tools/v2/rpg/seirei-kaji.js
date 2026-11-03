@@ -1,6 +1,6 @@
 ﻿function SeireiKaji() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Elemental", 5);
+    antecedentes[0] = newCaracteristica("Elemental (Fogo)", 5);
 
     const personagem = {
         Nome: "Seirei Kaji (Fogo)",

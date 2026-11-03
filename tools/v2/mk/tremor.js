@@ -2,7 +2,7 @@ function Tremor() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Contatos", 3);
-    antecedentes[2] = newCaracteristica("Elemental", 5);
+    antecedentes[2] = newCaracteristica("Elemental (Terra)", 5);
 
     const personagem = {
         Nome: "Tremor",

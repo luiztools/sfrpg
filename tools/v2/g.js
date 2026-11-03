@@ -3,7 +3,7 @@ function G() {
     antecedentes[0] = newCaracteristica("Apoio", 2);
     antecedentes[1] = newCaracteristica("Fama", 3);
     antecedentes[2] = newCaracteristica("Contatos", 5);
-    antecedentes[3] = newCaracteristica("Elemental", 5);
+    antecedentes[3] = newCaracteristica("Elemental (Magma)", 5);
     antecedentes[4] = newCaracteristica("Recursos", 4);
 
     const talentos = [];

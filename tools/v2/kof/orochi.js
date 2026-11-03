@@ -3,7 +3,7 @@ function Orochi() {
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Fama", 3);
     antecedentes[2] = newCaracteristica("Sangue de Orochi", 5);
-    antecedentes[3] = newCaracteristica("Elemental", 5);
+    antecedentes[3] = newCaracteristica("Elemental (Fogo e Ar)", 5);
 
     const personagem = {
         Nome: "Orochi",

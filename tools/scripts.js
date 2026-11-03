@@ -63,8 +63,8 @@ function calcPC(char) {
 
     //antecedentes únicos que impactam em combate
     const backgrounds = /Hibrido Animal|Híbrido Animal|Cibernético|Elemental|Psycho Power|Satsui no Hadou|Paranormal/i;
-    const uniqueBacks = char.Antecedentes.filter(an => backgrounds.test(an.Nome)) | [];
-    const backgroundPC = uniqueBacks.length ? uniqueBacks.map(an => an.Valor).reduce((a, b) => a + b) : 0;
+    const uniqueBacks = (char.Antecedentes || []).filter(an => backgrounds.test(an.Nome));
+    const backgroundPC = uniqueBacks.length ? uniqueBacks.map(an => Number(an.Valor) || 0).reduce((a, b) => a + b) : 0;
 
     char.PC = attrPC + techPC + manPC + comboPC + fdvChiPC + saudePC + backgroundPC + bonus;
     return char;
@@ -569,7 +569,10 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
     if (antecedentes != null) {   //pinta cada antecedente na ficha
         for (let x = 0; x < antecedentes.length; x++) {
             const ant = antecedentes[x];
-            newWindow += "<tr><td>" + GeraHtmlLink(ant.Nome) + "</td><td>"
+            //detalhe entre parênteses (ex.: "Elemental (Fogo)") fica fora do link
+            const nomeAnt = ant.Nome.split('(');
+            const linkAnt = nomeAnt.length > 1 ? GeraHtmlLink(nomeAnt[0].trim()) + " (" + nomeAnt.slice(1).join('(') : GeraHtmlLink(ant.Nome);
+            newWindow += "<tr><td>" + linkAnt + "</td><td>"
                 + PintaCaracteristica(8, ant.Valor) + "</td></tr>";
         }
     }

@@ -738,9 +738,10 @@ function prepareNpc(npc) {
 	npc["Raciocínio"] = npc.Raciocinio;
 
 	//injetando antecedentes únicos
-	const antecedentesUnicos = ["Híbrido Animal", "Elemental", "Irmão das Sombras", "Espectro", "Herança de Clã", "Cibernético", "Tarkatan", "Shokan", "Centaurian", "Psycho Power", "Paranormal", "Satsui no Hadou", "Despertar", "Sangue de Orochi"];
+	const antecedentesUnicos = ["Híbrido Animal", "Elemental", "Irmão das Sombras", "Espectro", "Herança de Clã", "Cibernético", "Tarkatan", "Shokan", "Centaurian", "Psycho Power", "Paranormal", "Satsui no Hadou", "Despertar", "Sangue de Orochi", "Sub-Elemental"];
 	antecedentesUnicos.forEach((v, i, a) => {
-		const antecedente = npc.Antecedentes.find(a => a.Nome === v);
+		//aceita detalhe entre parênteses, ex.: "Elemental (Fogo)"
+		const antecedente = npc.Antecedentes.find(a => a.Nome === v || a.Nome.startsWith(v + " ("));
 		if (antecedente) npc[v] = antecedente.Valor
 	});
 

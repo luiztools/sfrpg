@@ -3,7 +3,7 @@ function NoobSaibot() {
     antecedentes[0] = newCaracteristica("Apoio", 3);
     antecedentes[1] = newCaracteristica("Contatos", 2);
     antecedentes[2] = newCaracteristica("Irmão das Sombras", 5);
-    antecedentes[3] = newCaracteristica("Elemental", 5);
+    antecedentes[3] = newCaracteristica("Elemental (Trevas)", 5);
 
     const tecnicas = [];
     const armas = [];

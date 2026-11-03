@@ -5,7 +5,7 @@ function Laura() {
     antecedentes[2] = newCaracteristica("Fama", 1);
     antecedentes[3] = newCaracteristica("Recursos", 3);
     antecedentes[4] = newCaracteristica("Sensei", 3);
-    antecedentes[5] = newCaracteristica("Elemental", 1);
+    antecedentes[5] = newCaracteristica("Elemental (Eletricidade)", 1);
 
     var laura = {
         Nome: "Laura Matsuda",

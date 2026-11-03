@@ -1,7 +1,7 @@
 function RainUMK3() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Água)", 5);
 
     const tecnicas = [];
     const armas = [];
@@ -68,7 +68,7 @@ function RainUMK3() {
 function RainMKX() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Água)", 5);
 
     const tecnicas = [];
     const armas = [];

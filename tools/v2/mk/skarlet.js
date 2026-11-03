@@ -1,6 +1,6 @@
 function Skarlet() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Elemental", 5);
+    antecedentes[0] = newCaracteristica("Elemental (Sangue)", 5);
     antecedentes[1] = newCaracteristica("Apoio", 4);
     antecedentes[2] = newCaracteristica("Recursos", 2);
 

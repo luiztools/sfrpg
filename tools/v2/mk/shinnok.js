@@ -4,7 +4,7 @@ function Shinnok() {
     antecedentes[1] = newCaracteristica("Contatos", 4);
     antecedentes[2] = newCaracteristica("Fama", 4);
     antecedentes[3] = newCaracteristica("Arena", 5);
-    antecedentes[4] = newCaracteristica("Elemental", 5);
+    antecedentes[4] = newCaracteristica("Elemental (Trevas)", 5);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Lança", 5);
@@ -76,7 +76,7 @@ function ShinnokMKX() {
     antecedentes[1] = newCaracteristica("Contatos", 4);
     antecedentes[2] = newCaracteristica("Fama", 4);
     antecedentes[3] = newCaracteristica("Arena", 5);
-    antecedentes[4] = newCaracteristica("Elemental", 5);
+    antecedentes[4] = newCaracteristica("Elemental (Trevas)", 5);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Lança", 5);
@@ -148,7 +148,7 @@ function ShinnokCorrompido() {
     antecedentes[1] = newCaracteristica("Contatos", 4);
     antecedentes[2] = newCaracteristica("Fama", 4);
     antecedentes[3] = newCaracteristica("Arena", 5);
-    antecedentes[4] = newCaracteristica("Elemental", 7);
+    antecedentes[4] = newCaracteristica("Elemental (Trevas)", 7);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Lança", 5);

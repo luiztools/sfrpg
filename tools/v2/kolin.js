@@ -3,7 +3,7 @@ function Kolin() {
     antecedentes[0] = newCaracteristica("Apoio", 5);
     antecedentes[1] = newCaracteristica("Contatos", 5);
     antecedentes[2] = newCaracteristica("Recursos", 3);
-    antecedentes[3] = newCaracteristica("Elemental", 5);
+    antecedentes[3] = newCaracteristica("Elemental (Gelo)", 5);
 
     var kolin = {
         Nome: "Kolin",

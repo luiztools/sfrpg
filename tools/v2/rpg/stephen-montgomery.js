@@ -5,7 +5,7 @@
     antecedentes[2] = newCaracteristica("Fama", 3);
     antecedentes[3] = newCaracteristica("Recursos", 5);
     antecedentes[4] = newCaracteristica("Apoio", 4);
-    antecedentes[5] = newCaracteristica("Elemental", 5);
+    antecedentes[5] = newCaracteristica("Elemental (Ar)", 5);
 
     const stephen = {
         Nome: "Stephen Montgomery",

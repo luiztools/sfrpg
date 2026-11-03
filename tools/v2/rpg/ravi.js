@@ -1,7 +1,7 @@
 function Ravi() {
 
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Elemental", 2);
+    antecedentes[0] = newCaracteristica("Elemental (Fogo)", 2);
     antecedentes[1] = newCaracteristica("Sensei", 5);
 
     const tecnicas = [];

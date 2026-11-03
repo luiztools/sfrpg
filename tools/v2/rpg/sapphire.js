@@ -1,6 +1,6 @@
 ﻿function Sapphire() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Elemental", 4);
+    antecedentes[0] = newCaracteristica("Elemental (Fogo)", 4);
     antecedentes[1] = newCaracteristica("Staff", 3);
     antecedentes[2] = newCaracteristica("Recursos", 4);
 

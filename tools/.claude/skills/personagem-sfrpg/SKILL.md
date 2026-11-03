@@ -11,6 +11,7 @@ Scripts de apoio nesta pasta (`scripts/`):
 - `wp.sh`: banco (credenciais temporárias, GET/PUT de post com checagem de concorrência) e FTP.
 - `img.py`: conversão da imagem principal e de banners.
 - `wp_meta.py`: gera o `_wp_attachment_metadata` serializado.
+- `gerar_imagem.py`: gera a imagem da arena com o personagem (API da OpenAI), ver "Arena" em "Estrutura do post".
 
 ## Fluxo
 
@@ -99,7 +100,14 @@ Copie o post de referência da franquia (AoF/KoF: `ryo-sakazaki`; Sensei: `gouke
      3. O cenário do personagem nos jogos (pesquise na internet).
      4. **Personagens de MMA**: o octógono da sua academia, a menos que o texto diga outra coisa.
      5. Se nada disso definir a arena, pergunte ao usuário (junte as dúvidas no fim).
-     Depois de escrever, passe ao usuário uma lista "Personagem: Nome da arena" para ele enviar as imagens, que entram logo abaixo do texto da seção (sem repetir uma imagem que o post já mostra ali). Não há ferramenta de geração de imagens nesta sessão: não prometa gerar ilustrações; use só imagens que o usuário fornecer ou indicar. Se o usuário não tiver imagem, escreva um prompt em inglês para ele gerar a imagem em estilo anime (modelo em `~/Downloads/prompts-arenas-sfrpg.md`: cenário + "anime background art, cel-shaded, vibrant colors, 90s fighting game anime look, wide 16:9, empty open area in the foreground for a fight, no people, no text, no logos") com o nome de arquivo `<slug>-arena.jpg`. Quando ele mandar a imagem, suba como anexo do post e coloque logo abaixo do texto da seção.
+     Depois de escrever, passe ao usuário uma lista "Personagem: Nome da arena" para ele enviar as imagens, que entram logo abaixo do texto da seção (sem repetir uma imagem que o post já mostra ali). Quando o usuário pedir para **gerar** a imagem da arena, use `gerar_imagem.py` (API da OpenAI, chave `OPENAI_API_KEY` no `.env`; nunca imprima a chave). A imagem mostra a arena com o personagem nela fazendo sua pose de luta, em estilo anime, gerada direto em HD 1280x720 (16:9): o script pede esse tamanho à API (`--size 1280x720`) e o repete no prompt, para não precisar recortar e gastar menos créditos e tempo:
+     ```sh
+     venv/bin/python -I .claude/skills/personagem-sfrpg/scripts/gerar_imagem.py <scratchpad>/<slug>-arena.jpg \
+       --cenario "<arena em inglês, a partir do texto da seção>" \
+       --personagem "<nome e aparência em inglês, a partir da Aparência do post>" \
+       --ref <imagem principal do personagem baixada do post>
+     ```
+     Com `--ref`, o script pede para o modelo usar a referência só como guia de visual e redesenhar o personagem do zero no estilo e na luz da cena (sem colar o desenho antigo, que muitas vezes é de baixa qualidade). Abra a imagem gerada (Read) e confira se bate com a seção e com a aparência antes de subir; se o personagem parecer recortado e colado, gere de novo. Se a API devolver outra proporção e o corte 16:9 cortar parte do personagem (pé de um chute alto, cabeça), suba o `<saida>-original.png` inteiro em vez do recorte. Depois siga o fluxo normal: `img.py banner`, `wp_upload_imgs`, anexo e `<img>` logo abaixo do texto da seção. Se o post ainda não tiver imagem destacada (sem `_thumbnail_id` em `wp_postmeta`), use o anexo da imagem gerada como destacada (`_thumbnail_id=<ID do anexo>`); se já tiver, não troque. Cada chamada custa créditos da OpenAI: gere uma por pedido e só gere de novo se o usuário pedir. Se a API recusar (ex.: 429 sem créditos), informe o erro e, como alternativa, escreva um prompt em inglês para o usuário gerar por conta própria (modelo em `~/Downloads/prompts-arenas-sfrpg.md`), com o nome de arquivo `<slug>-arena.jpg`.
    - **Sensei** ("X como Sensei", modelo `gouken`, com `<img class="aligncenter" src="/img/2010/3/Sensei-logo.jpg" alt="Sensei" />`). O nível de Sensei vem da ficha.
    - Na primeira menção a um estilo do jogo original, acrescente o estilo adaptado: "Karatê Kyokugen-ryu (adaptado como <a>Karatê Rindoukan</a>)".
 6. Crédito em itálico, **sempre de acordo com a origem informada pelo usuário** (suplemento, autores). Exemplos já usados:

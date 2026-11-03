@@ -1,7 +1,7 @@
 function SubZeroBiHan() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Herança do Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
@@ -71,7 +71,7 @@ function SubZeroBiHan() {
 function SubZeroKuaiLiang() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Herança do Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
@@ -141,7 +141,7 @@ function SubZeroKuaiLiang() {
 function SubZeroMK4() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Herança do Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
@@ -213,7 +213,7 @@ function SubZeroMK4() {
 function SubZeroMKX() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 4);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Herança do Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
@@ -285,7 +285,7 @@ function SubZeroMKX() {
 function CyberSubZero() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Cibernético", 5);
-    antecedentes[1] = newCaracteristica("Elemental", 5);
+    antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Herança do Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);

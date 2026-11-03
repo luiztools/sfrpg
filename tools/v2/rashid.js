@@ -5,7 +5,7 @@ function Rashid() {
     antecedentes[2] = newCaracteristica("Recursos", 4);
     antecedentes[3] = newCaracteristica("Staff", 3);
     antecedentes[4] = newCaracteristica("Aliados", 3);
-    antecedentes[5] = newCaracteristica("Elemental", 5);
+    antecedentes[5] = newCaracteristica("Elemental (Ar)", 5);
 
     var rashid = {
         Nome: "Rashid",

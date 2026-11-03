@@ -1,6 +1,6 @@
 ﻿function Kai() {
     const personagem = {
-        Nome: "Kai",
+        Nome: "Kai O'Hare",
         Estilo: "Lua",
         Escola: "Hawai",
         Jogador: "",
@@ -39,7 +39,7 @@
         Misterios: 3,
         Estilos: 3,
         NovosConhecimentos: [],
-        Antecedentes: [{ Nome: "Elemental", Valor: "5" }, { Nome: "Arena", Valor: "2" }, { Nome: "Aliados", Valor: "3" }, { Nome: "Recursos", Valor: "1" }, { Nome: "Contatos", Valor: "1" }],
+        Antecedentes: [{ Nome: "Elemental (Água)", Valor: "5" }, { Nome: "Arena", Valor: "2" }, { Nome: "Aliados", Valor: "3" }, { Nome: "Recursos", Valor: "1" }, { Nome: "Contatos", Valor: "1" }],
         Soco: 3,
         Chute: 1,
         Bloqueio: 2,

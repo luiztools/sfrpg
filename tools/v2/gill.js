@@ -3,7 +3,7 @@ function Gill() {
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Arena", 5);
     antecedentes[2] = newCaracteristica("Contatos", 5);
-    antecedentes[3] = newCaracteristica("Elemental", 7);
+    antecedentes[3] = newCaracteristica("Elemental (Fogo e Gelo)", 7);
     antecedentes[4] = newCaracteristica("Recursos", 5);
 
     const talentos = [];

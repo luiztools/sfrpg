@@ -4,7 +4,7 @@ function Lucia() {
     antecedentes[1] = newCaracteristica("Recursos", 3);
     antecedentes[2] = newCaracteristica("Apoio", 4);
     antecedentes[3] = newCaracteristica("Fama", 1);
-    antecedentes[4] = newCaracteristica("Elemental", 2);
+    antecedentes[4] = newCaracteristica("Elemental (Fogo)", 2);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 3);

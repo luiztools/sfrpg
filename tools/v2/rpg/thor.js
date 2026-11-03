@@ -3,7 +3,7 @@
     antecedentes[0] = newCaracteristica("Fama", 1);
     antecedentes[1] = newCaracteristica("Recursos", 2);
     antecedentes[2] = newCaracteristica("Empresario", 1);
-    antecedentes[3] = newCaracteristica("Elemental", 4);
+    antecedentes[3] = newCaracteristica("Elemental (Gelo)", 4);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Mangual", 4);

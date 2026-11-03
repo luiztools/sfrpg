@@ -1,7 +1,7 @@
 function Blaze() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Fama", 1);
-    antecedentes[1] = newCaracteristica("Elemental", 8);
+    antecedentes[1] = newCaracteristica("Elemental (Fogo)", 8);
 
     const armas = [];
     const talentos = [];

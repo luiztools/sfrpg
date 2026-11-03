@@ -1,7 +1,7 @@
 ﻿function PhoenixBright() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Contatos", 1);
-    antecedentes[1] = newCaracteristica("Elemental", 4);
+    antecedentes[1] = newCaracteristica("Elemental (Fogo)", 4);
     antecedentes[2] = newCaracteristica("Sensei", 3);
 
     const phoenix = {

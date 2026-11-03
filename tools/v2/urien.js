@@ -2,7 +2,7 @@ function Urien() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
     antecedentes[1] = newCaracteristica("Arena", 3);
-    antecedentes[2] = newCaracteristica("Elemental", 5);
+    antecedentes[2] = newCaracteristica("Elemental (Terra)", 5);
     antecedentes[3] = newCaracteristica("Recursos", 4);
 
     const urien = {

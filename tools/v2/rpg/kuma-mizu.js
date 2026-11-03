@@ -1,6 +1,6 @@
 ﻿function KumaMizu() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Elemental", 5);
+    antecedentes[0] = newCaracteristica("Elemental (Água)", 5);
 
     const personagem = {
         Nome: "Kuma Mizu (Água)",

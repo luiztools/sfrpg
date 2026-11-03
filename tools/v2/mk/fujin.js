@@ -2,7 +2,7 @@ function Fujin() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Fama", 1);
-    antecedentes[2] = newCaracteristica("Elemental", 5);
+    antecedentes[2] = newCaracteristica("Elemental (Ar)", 5);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 5);

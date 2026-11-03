@@ -39,7 +39,7 @@
         Misterios: 2,
         Estilos: 1,
         NovosConhecimentos: [],
-        Antecedentes: [{ Nome: "Elemental", Valor: "5" }, { Nome: "Aliados", Valor: "3" }, { Nome: "Arena", Valor: "4" }],
+        Antecedentes: [{ Nome: "Elemental (Terra)", Valor: "5" }, { Nome: "Aliados", Valor: "3" }, { Nome: "Arena", Valor: "4" }],
         Soco: 5,
         Chute: 1,
         Bloqueio: 3,

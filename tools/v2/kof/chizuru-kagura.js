@@ -3,7 +3,7 @@ function ChizuruKagura() {
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Apoio", 3);
     antecedentes[2] = newCaracteristica("Recursos", 3);
-    antecedentes[3] = newCaracteristica("Elemental", 5);
+    antecedentes[3] = newCaracteristica("Elemental (Ar)", 5);
 
     const personagem = {
         Nome: "Chizuru Kagura",

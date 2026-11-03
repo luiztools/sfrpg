@@ -4,7 +4,7 @@ function NoFace() {
     antecedentes[1] = newCaracteristica("Contatos", 3);
     antecedentes[2] = newCaracteristica("Cibernetico", 3);
     antecedentes[3] = newCaracteristica("Fama", 2);
-    antecedentes[4] = newCaracteristica("Elemental", 5);
+    antecedentes[4] = newCaracteristica("Elemental (Fogo)", 5);
     
     const personagem = {
         Nome: "No Face",
