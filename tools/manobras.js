@@ -331,6 +331,7 @@ const manobras = {
 	"Determination": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "Permite usar sua manobra no mesmo turno em que ficou Dizzy, mas não no turno seguinte." },
 	"Improved Yoga Teleport": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Permite teleportar outras pessoas e a distâncias maiores." },
 	"Sense Element": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Percepção + Elemental para perceber seu elemento" },
+	"Sense Orochi": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Nenhum", ModMov: "Nenhum", Sistema: "Percepção + Orochi quando um portador do Sangue de Orochi estiver no campo de visão (o Narrador pede o teste sem dizer para quê); 0 sucessos: percebe um Orochi, mas não sabe quem é; 1: identifica o Orochi; 2: identifica Orochi não despertados; 3: identifica Orochi, seus servos e pessoas de má índole; só não percebe nada em falha crítica" },
 	"Ice Ground": { Tecnica: "Foco", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Alcance: 3, Sistema: "Congela 3 hexes à frente, se pisar leva KD e -3 Vel na próxima manobra. Gelo dura 2 turnos." },
 	"Ice Strike": { Tecnica: "Foco", ModVel: 0, ModDano: 5, ModMov: 0, Chi: 1, Sistema: "" },
 	"Ice Clone": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Dois", Chi: 1, Sistema: "Move para trás. Alvo testa Des + Esp contra Foco para não tocar no gelo. Mesmo efeito do Ice Blast mas sem dano. Dura 2 rodadas." },
