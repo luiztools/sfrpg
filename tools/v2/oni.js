@@ -146,7 +146,7 @@ function AkumaSF4() {
         Apresamento: 6,
         Esportes: 6,
         Foco: 7,
-        ManobrasEspeciais: "Accuracy, Bushin Sempu Kyaku, Jump, Kippup, Foot Sweep, Ashura Senku, Hadouken, Metsu Hadouken, Metsu Shoryuken, Power Uppercut, Hurricane Kick, Air Hurricane Kick, Flying Fireball, Instant Hell Murder, Repeating Fireball, Ansatsuken, Throw, Back Roll Throw, Dive Kick, Air Throw, Slide Kick, Haymaker, Choke Throw, Condensed Energy",
+        ManobrasEspeciais: "Accuracy, Bushin Sempu Kyaku, Jump, Kippup, Foot Sweep, Ashura Senku, Fireball, Metsu Hadouken, Metsu Shoryuken, Power Uppercut, Hurricane Kick, Air Hurricane Kick, Flying Fireball, Instant Hell Murder, Repeating Fireball, Ansatsuken, Throw, Back Roll Throw, Dive Kick, Air Throw, Slide Kick, Haymaker, Choke Throw, Condensed Energy",
         Combos: "Hurricane Kick (Ansatsuken); Flying Fireball (Ansatsuken); Tatsumaki para Metsu Shoryuken (Dizzy); Ashura Senku para Metsu Hadouken; Bloqueio para Instant Hell Murder; Bloqueio para Metsu Hadouken; Bloqueio para Tatsumaki",
         Gloria: 10,
         Honra: 0,

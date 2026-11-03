@@ -48,7 +48,7 @@ function YuriSakazaki() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 5,
-        ManobrasEspeciais: "Jump, Power Uppercut, Fireball, Improved Fireball, Flying Fireball, Air Suplex, Kippup, Lightning Leg, Throw, Back Roll Throw, Hand Slap Hold, Short Fireball, Energy Reflection, Wall Spring, Dragon Punch",
+        ManobrasEspeciais: "Jump, Power Uppercut, Fireball, Improved Fireball, Flying Fireball, Air Suplex, Kippup, Lightning Leg, Throw, Back Roll Throw, Hand Slap Hold, Energy Ball, Energy Reflection, Wall Spring, Dragon Punch",
         Combos: "Jab - Forward - Roundhouse; Dragon Punch - Dragon Punch; Short - Lightning Leg (Dizzy)",
         Gloria: 3,
         Honra: 7,
