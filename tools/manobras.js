@@ -218,6 +218,7 @@ const manobras = {
 	"Flying Body Spear": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: 1, FdV: 1, Sistema: "Aérea; esquiva de projétil; Linha Reta" },
 	"Flying Head Butt": { Tecnica: "Esportes", ModVel: 0, ModDano: 4, ModMov: 3, FdV: 1, Sistema: "Aérea; Linha Reta" },
 	"Flying Heel Stomp": { Tecnica: "Esportes", ModVel: 0, ModDano: 1, ModMov: 2, FdV: 1, Sistema: "Aérea; esquiva de projétil; Linha Reta; o atacante pode fazer o ataque a qualquer momento e continuar o movimento" },
+	"Multiple Stomp": { Tecnica: "Esportes", ModVel: -1, ModDano: "0/0/0", ModMov: -1, FdV: 1, Sistema: "Aérea; Linha Reta; dano rolado três vezes; esquiva de projétil como Jump; oponente em manobra de agachamento ainda é atingido pelo último chute" },
 	"Jump": { Tecnica: "Esportes", ModVel: 3, ModMov: 0, Sistema: "Aérea; Esquiva de projétil (Des + Esp vs. Foco); combina com chutes e socos básicos (use a VEL, DAN e MOV da manobra)" },
 	"Double Jump": { Tecnica: "Esportes", ModVel: 3, ModMov: 1, Sistema: "Similar a Jump; Esquiva de projétil (Des + Esp vs. Foco dif7); não é interrupção" },
 	"Jumping Shoulder Butt": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: -1, Sistema: "Aérea; esquiva de projétil" },

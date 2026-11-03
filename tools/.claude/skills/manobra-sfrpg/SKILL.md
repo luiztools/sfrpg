@@ -1,0 +1,136 @@
+---
+name: manobra-sfrpg
+description: Cadastra uma Manobra Especial nova no sfrpg.com.br — entrada em manobras.js (com cálculo de PC), post do blog como rascunho, imagem, e atualização das listas da técnica, de Movimentos Comuns e dos posts de estilo, além das fichas que usam a manobra. Use quando o usuário pedir para cadastrar, adicionar, criar ou adaptar uma manobra especial, colar o texto de uma manobra (Pré-requisitos, Pontos de Poder, Sistema, Custo...) ou ajustar listas de manobras dos posts de técnicas e estilos.
+---
+
+# Cadastro de Manobra Especial (SF RPG Brasil)
+
+Tudo em português, exceto o nome da manobra, que fica em inglês. Antes de começar, leia o CLAUDE.md do projeto: encoding com BOM, tabs em `manobras.js`, cache-buster e a proibição de ler `v2/wp-config.php`.
+
+Os scripts de banco, FTP e imagem são os da skill de personagens: `.claude/skills/personagem-sfrpg/scripts/` (`wp.sh`, `wp_meta.py`, `img.py`). A seção "Banco (WordPress)" daquela skill vale aqui também: nunca imprima credenciais, grave o texto em hex, use `wp_post_get`/`wp_post_put` para editar posts existentes e mostre o `diff` antes de gravar.
+
+## Fluxo
+
+1. **Ler o texto da manobra.** O usuário cola o texto completo (Pré-requisitos, Pontos de Poder, descrição, Sistema, Custo, Velocidade, Dano, Movimento). Se não disser de onde a manobra vem, veja as fichas que já a citam (passo 2); a origem delas costuma indicar a fonte. Pergunte para confirmar e não invente crédito.
+2. **Procurar usos e nomes parecidos:**
+   ```sh
+   grep -n -i '<parte do nome>' manobras.js
+   grep -rln -i '<nome da manobra>' v2
+   ```
+   Fichas que citam uma manobra que ainda não está em `manobras.js` contam 1 PC para ela e não a mostram na tabela de cálculos. Depois do cadastro, elas passam a mostrar.
+3. **Entrada em `manobras.js`.** Ver "manobras.js".
+4. **Validar o custo em PC, enviar por FTP e atualizar o cache-buster.** Ver "manobras.js".
+5. **Imagem.** Ver "Imagem". Antes de subir qualquer arquivo, verifique se a imagem já existe no blog.
+6. **Post da manobra como rascunho.** Ver "Post da manobra".
+7. **Listas cruzadas** (posts publicados): post da técnica, Movimentos Comuns e posts de estilo. Ver "Listas cruzadas".
+8. **Fichas:** se o usuário pedir para colocar a manobra em um personagem, edite todas as versões (`age`) da ficha, valide em Node e envie por FTP (fluxo da skill personagem-sfrpg).
+9. **Informar** o link de edição `https://www.sfrpg.com.br/wp-admin/post.php?post=<ID>&action=edit` e juntar todas as dúvidas no fim.
+
+Quando o usuário mandar correções uma por mensagem, aplique cada uma e siga em frente. Se ele editar algo pelo wp-admin no meio do caminho, baixe o post de novo antes de mexer (o `wp_post_put` aborta se o post mudou).
+
+## manobras.js
+
+- O objeto `manobras` é agrupado por técnica, com comentários (`//Esportes`, `//Apresamento`...). Coloque a entrada no bloco da técnica, perto de uma manobra relacionada (ex.: logo depois do pré-requisito).
+- **Técnica = a primeira técnica dos Pré-requisitos.** Essa é a categoria da manobra: vira o `Tecnica` da entrada, a tag do post e a lista do post da técnica. Ex.: "Esportes 4, Flying Heel Stomp" → `Tecnica: "Esportes"`.
+- Formato (uma linha, tab no início):
+  ```js
+  	"Multiple Stomp": { Tecnica: "Esportes", ModVel: -1, ModDano: "0/0/0", ModMov: -1, FdV: 1, Sistema: "Aérea; Linha Reta; dano rolado três vezes; esquiva de projétil como Jump; oponente em manobra de agachamento ainda é atingido pelo último chute" },
+  ```
+  - `Chi: N` e/ou `FdV: N` conforme o custo (omita quando o custo for "nenhum").
+  - `ModMov`: número, ou `"Nenhum"`, `"Um"`, `"Dois"`, `"Três"`, `"Especial"`.
+  - Multi-hit: `ModDano` com um valor por acerto (`"1/1"`, `"0/0/0"`, `"2/0"`).
+- **O texto de `Sistema` decide o custo em PC** (`getPCManobra`):
+  - Repetição de dano só é contada com "dois testes", "duas vezes", "três testes" ou "três vezes". "3 hits" e "Três Hits" **não** contam. Para multi-hit, escreva "dano rolado três vezes".
+  - Somam +1 cada: "KD"/"knockdown", "área", "aérea" (ou "como Jump"/"esquivar de projétil"), "agachamento", "ignora" (e técnicas Bloqueio/Apresamento).
+  - Chi e FdV subtraem.
+- Antes de editar, confira se a produção é igual ao `HEAD`:
+  ```sh
+  git show HEAD:./manobras.js | cmp - <(curl -s https://www.sfrpg.com.br/tools/manobras.js) && echo PROD=HEAD
+  ```
+- Valide a sintaxe, o BOM e o custo, comparando com manobras parecidas e com o pré-requisito:
+  ```sh
+  head -c3 manobras.js | xxd | head -1   # efbb bf
+  node --check manobras.js && node -e 'const vm=require("vm");const c={};vm.createContext(c);vm.runInContext(require("fs").readFileSync("manobras.js","utf8")+";this.g=getPCManobra",c);for(const n of ["<Nova>","<Pré-requisito>"])console.log(n,c.g(n))'
+  ```
+- Cache-buster: atualize **só** o `?date=AAAAMMDDhhmm` do `manobras.js` (horário de São Paulo) em `v2/_framework.html` e `gerador.html`; não mexa no do `scripts.js` se ele não mudou. Envie os três arquivos e confira:
+  ```sh
+  source .claude/skills/personagem-sfrpg/scripts/wp.sh
+  wp_ftp_put manobras.js public/tools/manobras.js
+  wp_ftp_put v2/_framework.html public/tools/v2/_framework.html
+  wp_ftp_put gerador.html public/tools/gerador.html
+  for f in manobras.js v2/_framework.html gerador.html; do curl -s "https://www.sfrpg.com.br/tools/$f?x=$RANDOM" | cmp - $f && echo "OK $f"; done
+  ```
+
+## Post da manobra
+
+Modelos: `double-hit-kick`, `brain-cracker`, `drunken-monkey-roll`. Linhas soltas com `<strong>` e links relativos `/post/<slug>`; o WordPress transforma as quebras em `<br>`/`<p>`.
+
+```html
+<strong>Pré-Requisitos:</strong> <a title="Esportes" href="/post/esportes">Esportes</a> 4, <a title="Flying Heel Stomp" href="/post/flying-heel-stomp">Flying Heel Stomp</a>
+<strong>Pontos de Poder:</strong> <a title="Kung Fu" href="/post/kung-fu">Kung Fu</a>, <a title="Wu Shu" href="/post/wu-shu">Wu Shu</a>, <a title="Forças Especiais" href="/post/forcas-especiais">Forças Especiais</a> 3; Outros 4.
+
+<descrição, um parágrafo por bloco>
+
+<strong>Sistema:</strong> ... (links na primeira menção: /post/manobra-aerea, /post/manobra-de-projetil, /post/manobra-de-agachamento, /post/jump, /post/knockdown, técnicas e estilos)
+
+<strong>Custo:</strong> 1 <a title="Força de Vontade" href="/post/forca-de-vontade">Força de Vontade</a>
+<strong>Velocidade:</strong> -1
+<strong>Dano:</strong> +0
+<strong>Movimento:</strong> -1
+
+<em>Manobra não oficial, extraída da adaptação "The King of Fighters" da Shotokan RPG. Créditos aos autores.</em>
+
+<img ... />   (imagem vertical sempre aqui no fim; ver "Imagem")
+```
+
+- **Fiel à fonte.** Corrija só ortografia e pontuação. Não acrescente nada que não esteja no texto (ex.: uma frase "lutadores como King e Eiji usam esta manobra" foi removida pelo usuário).
+- **Dano** é escrito como na fonte, mesmo em multi-hit (`+0`, não "+0 (três vezes)"), como na Double Hit Kick; o número de acertos fica no Sistema.
+- Custo "nenhum": `<strong>Custo:</strong> nenhum.` Chi: link `/post/chi`.
+- Confira os slugs dos links: `SELECT post_name FROM wp_posts WHERE post_status='publish' AND post_name IN (...)`.
+- Crédito em itálico conforme a origem confirmada pelo usuário. Exemplos: `Manobra não oficial, extraída do suplemento Tekken 4 da Shotokan RPG. Créditos aos autores.`; `<strong>* OBS:</strong> manobra não-oficial retirada do suplemento Tempos de Glória da Shotokan RPG.`
+
+**Inserir no banco** (como na skill de personagens): `post_status='draft'`, `post_type='post'`, `post_author=1`, `post_date` no horário de São Paulo, `post_date_gmt='0000-00-00 00:00:00'`, `post_name=<slug>`, depois `guid = CONCAT('https://www.sfrpg.com.br/?p=', ID)`. Confira o conteúdo gravado com `wp_post_get` + `cmp`.
+- Categoria **Manobras Especiais** (`term_taxonomy_id` 17).
+- Tags: `manobra especial` (30) e a tag da técnica (ex.: `esportes` 47, `apresamento`...; procure em `wp_terms`/`wp_term_taxonomy` com `taxonomy='post_tag'`). Não mexa no `count` (rascunho não conta).
+- Metas: `_edit_last=1`, `_yoast_wpseo_primary_category=17`, `_yoast_wpseo_focuskw=<nome em minúsculas>`, `_yoast_wpseo_metadesc=<resumo da descrição, gravado em hex>`.
+
+## Imagem
+
+1. **Procure antes se ela já existe no blog**, a começar pelos posts das manobras relacionadas (pré-requisito, variações). Baixe a imagem existente e compare com `cmp` com a que o usuário mandou. Se for igual, **reaproveite o anexo** (`wp-image-<ID>` e a URL existente) e não suba nada. Ex.: a Multiple Stomp usa o GIF da Flying Heel Stomp (anexo 9511, `2024/03/flying-heel-stomp.gif`).
+   ```sql
+   SELECT p.ID FROM wp_posts p JOIN wp_postmeta m ON m.post_id=p.ID AND m.meta_key='_wp_attached_file' WHERE m.meta_value LIKE '%<nome>%';
+   ```
+2. Se for nova: renomeie para `<slug>.<ext>` numa pasta nova do scratchpad, gere a miniatura 150x150 (GIF: quadro estático em `.gif`; outras: `img.py`) e envie com `wp_upload_imgs AAAA/MM ...`. Crie o anexo (`post_type='attachment'`, `post_status='inherit'`, `post_parent=<ID do post>`, `guid=<URL>`, `post_mime_type`) com `_wp_attached_file` e `_wp_attachment_metadata` (`wp_meta.py`, valide com `php -r 'unserialize(...)'`). Sem Pillow no sistema: crie um venv no scratchpad.
+3. **Posição:**
+   - imagem **vertical** (altura > largura): sempre no **fim do post**, depois do crédito;
+   - imagem horizontal: pode ficar entre a descrição e o Sistema (como na Double Hit Kick) ou no fim.
+   - Marcação: `<img class="size-full wp-image-<ID> aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/AAAA/MM/<arquivo>" alt="" width="W" height="H" />`.
+4. **GIF animado nunca é imagem destacada** (`_thumbnail_id`). A destacada só pode ser imagem estática (jpg/png/webp, de preferência banner 16:9). Se a manobra só tiver GIF, o post fica sem destacada.
+
+## Listas cruzadas (posts publicados)
+
+Toda manobra nova entra nestes três lugares. Edite sempre com `wp_post_get` → Python com `open(..., newline="")` → `diff` → `wp_post_put`. **Esses posts são antigos e usam CRLF**; preserve também a indentação de cada item (ex.: `" \t<li>"` com espaço e tab).
+
+| Post | Onde | Formato do item |
+|---|---|---|
+| post da técnica (`esportes` ID 1387, `chute`, `soco`, `apresamento`, `foco`, `bloqueio`...) | lista "Manobras de <Técnica>", ordem alfabética | `<li><a href="https://www.sfrpg.com.br/post/<slug>">Nome</a>*</li>` |
+| `movimentos-comuns` (ID 293) | coluna da técnica na tabela, ordem alfabética; **só se os Pontos de Poder tiverem "Outros"**, com o custo de Outros | `<a href="https://www.sfrpg.com.br/post/<slug>">Nome</a> (N)*` |
+| post de **cada estilo** dos Pontos de Poder (ex.: `kung-fu` 368, `wu-shu` 412, `forcas-especiais` 377) | coluna da técnica na tabela de manobras do estilo, ordem alfabética, com o custo daquele estilo | `<a href="https://www.sfrpg.com.br/post/<slug>">Nome (N)</a>*` |
+
+- `*` marca manobra **não oficial** (fan-made), conforme a nota "* OBS" desses posts. Manobra oficial da White Wolf entra sem `*`.
+- O custo de "Outros" vai **apenas** no Movimentos Comuns, nunca em post de estilo. Leia os custos sempre no post **atual** da manobra (o usuário pode ter editado).
+- Ache a coluna pelo cabeçalho `<strong><Técnica></strong>`: a célula correspondente fica na linha `<tr>` seguinte, na mesma posição.
+- Se um estilo dos Pontos de Poder não tiver post (ou não tiver tabela), liste como dúvida.
+- **Itens colados:** em posts antigos, há itens sem quebra entre eles (`... (2)<a href=...`), que aparecem juntos na página. Ao editar uma lista, procure e separe com CRLF:
+  ```python
+  re.subn(r"(\)\**|</a>\**)[ \xa0]*(?=<a )", lambda m: m.group(1) + "\r\n", t)
+  ```
+- **Nomes antigos que não existem mais.** Se aparecerem numa lista que você estiver editando, remova o item (o nome atual já está listado) e confira os links com `SELECT ... WHERE post_content LIKE '%<slug-antigo>%'`:
+  - Quesadilla Bomb → Hyper Tackle;
+  - Ground Roll → Drunken Monkey Roll.
+
+  O nome antigo pode continuar no texto do post da manobra como apelido ("Luchadores mexicanos chamam este movimento de Quesadilla Bomb"); isso está certo.
+
+## Commit
+
+Só quando o usuário pedir. Mensagem curta em português (ex.: "manobra Multiple Stomp").
