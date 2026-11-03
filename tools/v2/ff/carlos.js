@@ -12,7 +12,7 @@ function CarlosFF2() {
 
     const carlos = {
         Nome: "Carlos Miyamoto",
-        Estilo: "Karatê Shotokan",
+        Estilo: "Karatê Shotokan (Kenjutsu)",
         Escola: "Professor de Kenjutsu",
         Jogador: "NPC",
         Assinatura: "Guarda a espada",
@@ -82,7 +82,7 @@ function CarlosSF6() {
 
     const carlos = {
         Nome: "Carlos Miyamoto",
-        Estilo: "Karatê Shotokan",
+        Estilo: "Karatê Shotokan (Kenjutsu)",
         Escola: "Professor de Kenjutsu",
         Jogador: "NPC",
         Assinatura: "Guarda a espada",

@@ -133,7 +133,7 @@ function adjustPC(char, from, to) {
         const techniques = ['Soco', 'Chute', 'Bloqueio', 'Apresamento', 'Esportes', 'Foco'];
         if (char.NovasTecnicas) char.NovasTecnicas.map(nt => techniques.push(nt.Nome));
 
-        if (char.Estilo = "Boxe") techniques.splice(techniques.findIndex("Chute"), 1);//remove chute no boxe
+        if (char.Estilo === "Boxe") techniques.splice(techniques.indexOf("Chute"), 1);//remove chute no boxe
 
         for (let i = 0; i < Math.abs(adjustFactor); i++) {
             techniques.map(tc => {

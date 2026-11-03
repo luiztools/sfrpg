@@ -73,7 +73,7 @@ function ShaoKahnMK2() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 10
     };
     return personagem;
@@ -156,7 +156,7 @@ function ShaoKahn() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 10
     };
     return personagem;

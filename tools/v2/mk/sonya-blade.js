@@ -152,7 +152,7 @@ function SonyaMk4() {
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 8
     };
     return personagem;
@@ -233,7 +233,7 @@ function SonyaMkX() {
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 9
     };
     return personagem;

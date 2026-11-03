@@ -62,7 +62,7 @@ function Dave() {
         Chi: 1,
         ForcaVontade: 8,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 8
     };
     return npc;

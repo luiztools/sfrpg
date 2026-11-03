@@ -12,7 +12,7 @@ function Scorpion() {
 
     const personagem = {
         Nome: "Hanzo \"Scorpion\" Hasashi",
-        Estilo: "Ninjitsu",
+        Estilo: "Ninjitsu (Kenjutsu)",
         Escola: "Clã Shirai-ryu",
         Jogador: "NPC",
         Assinatura: "Levanta o braço",
@@ -84,7 +84,7 @@ function ScorpionMK4() {
 
     const personagem = {
         Nome: "Hanzo \"Scorpion\" Hasashi",
-        Estilo: "Ninjitsu",
+        Estilo: "Ninjitsu (Kenjutsu)",
         Escola: "Clã Shirai-ryu",
         Jogador: "NPC",
         Assinatura: "Levanta o braço",
@@ -156,7 +156,7 @@ function ScorpionMKX() {
 
     const personagem = {
         Nome: "Hanzo \"Scorpion\" Hasashi",
-        Estilo: "Ninjitsu",
+        Estilo: "Ninjitsu (Kenjutsu)",
         Escola: "Clã Shirai-ryu",
         Jogador: "NPC",
         Assinatura: "Levanta o braço",

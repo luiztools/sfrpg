@@ -137,7 +137,7 @@ function KanoMKX() {
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Tradicional",
+        Divisao: "Duelistas",
         Posto: 8
     };
     return personagem;

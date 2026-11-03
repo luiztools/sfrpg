@@ -11,7 +11,7 @@ function EagleZ3() {
 
     const npc = {
         Nome: "Eagle",
-        Estilo: "Bojutsu",
+        Estilo: "Forças Especiais (Bojutsu)",
         Jogador: "NPC",
         Assinatura: "Cruza as tonfas",
         Conceito: "Agente secreto",

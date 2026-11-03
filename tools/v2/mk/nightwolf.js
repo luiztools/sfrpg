@@ -63,7 +63,7 @@ function Nightwolf() {
         Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 8
     };
     return personagem;
@@ -134,7 +134,7 @@ function NightwolfArmageddon() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 9
     };
     return personagem;

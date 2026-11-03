@@ -145,7 +145,7 @@ function JohnnyCageMk4() {
         Chi: 7,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 9
     };
     return personagem;
@@ -225,7 +225,7 @@ function JohnnyCageMkX() {
         Chi: 7,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 10
     };
     return personagem;

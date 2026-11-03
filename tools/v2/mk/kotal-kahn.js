@@ -70,7 +70,7 @@ function KotalKahn() {
         Chi: 7,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 10
     };
     return personagem;

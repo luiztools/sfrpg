@@ -64,7 +64,7 @@ function NoembeluSFZ3() {
         Chi: 4,
         ForcaVontade: 6,
         Saude: 13,
-        Divisao: "Duelista",
+        Divisao: "Duelistas",
         Posto: 3
     };
     return personagem;
@@ -134,7 +134,7 @@ function NoembeluSF5() {
         Chi: 5,
         ForcaVontade: 7,
         Saude: 15,
-        Divisao: "Duelista",
+        Divisao: "Duelistas",
         Posto: 4
     };
     return personagem;

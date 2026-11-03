@@ -136,7 +136,7 @@ function RaidenMK4() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 10
     };
     return personagem;
@@ -210,7 +210,7 @@ const tecnicas = [];
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 10
     };
     return personagem;

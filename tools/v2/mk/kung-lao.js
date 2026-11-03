@@ -64,7 +64,7 @@ function KungLao() {
         Chi: 7,
         ForcaVontade: 9,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 8
     };
     return personagem;
@@ -136,7 +136,7 @@ function KungLaoMKX() {
         Chi: 7,
         ForcaVontade: 9,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 9
     };
     return personagem;

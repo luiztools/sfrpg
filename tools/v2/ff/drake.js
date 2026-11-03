@@ -66,7 +66,7 @@ function Drake() {
         Chi: 1,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 8
     };
     return npc;

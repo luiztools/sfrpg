@@ -12,7 +12,7 @@ function Falke() {
 
     const personagem = {
         Nome: "Falke",
-        Estilo: "Bojutsu",
+        Estilo: "Ler Drit (Bojutsu)",
         Escola: "Shadaloo",
         Jogador: "NPC",
         Assinatura: "Quepe Militar",

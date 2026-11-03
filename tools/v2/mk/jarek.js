@@ -64,7 +64,7 @@ function Jarek() {
         Chi: 6,
         ForcaVontade: 8,
         Saude: 20,
-        Divisao: "Duelista",
+        Divisao: "Duelistas",
         Posto: 8
     };
     return personagem;

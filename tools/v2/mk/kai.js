@@ -63,7 +63,7 @@ function Kai() {
         Chi: 8,
         ForcaVontade: 8,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 8
     };
     return personagem;

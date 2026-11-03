@@ -62,7 +62,7 @@ function Shujinko() {
         Chi: 10,
         ForcaVontade: 8,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 9
     };
     return personagem;

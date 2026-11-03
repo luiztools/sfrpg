@@ -66,7 +66,7 @@ function QuanChi() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 9
     };
     return personagem;
@@ -141,7 +141,7 @@ function QuanChiMKX() {
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 10
     };
     return personagem;

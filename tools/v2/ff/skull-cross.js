@@ -762,7 +762,7 @@ function May() {
         Chi: 1,
         ForcaVontade: 2,
         Saude: 6,
-        Divisao: "Duelista",
+        Divisao: "Duelistas",
         Posto: 1
     };
     return personagem;

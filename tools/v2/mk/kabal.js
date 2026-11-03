@@ -12,7 +12,7 @@ function Kabal() {
 
     const personagem = {
         Nome: "Kabal",
-        Estilo: "Kenjutsu",
+        Estilo: "Forças Especiais (Kenjutsu)",
         Escola: "As Ruas",
         Jogador: "NPC",
         Assinatura: "Posa com suas armas",

@@ -65,7 +65,7 @@
         Chi: 1,
         ForcaVontade: 6,
         Saude: 10,
-        Divisao: "Tradicional",
+        Divisao: "Duelistas",
         Posto: 1
     };
     return personagem;

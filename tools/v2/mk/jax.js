@@ -153,7 +153,7 @@ function JaxMk4() {
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 9
     };
     return personagem;
@@ -234,7 +234,7 @@ function JaxMkX() {
         Chi: 6,
         ForcaVontade: 10,
         Saude: 20,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 10
     };
     return personagem;
