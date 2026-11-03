@@ -55,7 +55,7 @@ function calcPC(char) {
 
     const manobrasEspeciais = char.ManobrasEspeciais.split(/[,;]/g).filter(m => m && m.trim()) || [];
 
-    const manPC = manobrasEspeciais.length ? manobrasEspeciais.map(m => getPCManobra(m)).reduce((a, b) => a + b) : 0;
+    const manPC = manobrasEspeciais.length ? manobrasEspeciais.map(m => getPCManobra(normalizarNomeManobra(m))).reduce((a, b) => a + b) : 0;
     const comboPC = count(char.Combos, " para ") + count(char.Combos, "(Dizzy)") + count(char.Combos, "2x") + (count(char.Combos, "3x") * 2);
     const fdvChiPC = char.ForcaVontade + char.Chi - 7;
     const saudePC = char.Saude - 10;
