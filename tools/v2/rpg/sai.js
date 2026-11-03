@@ -48,7 +48,7 @@ function Sai() {
         Esportes: 4,
         Foco: 3,
         NovasTecnicas: [newCaracteristica("Sai", 4)],
-        ManobrasEspeciais: "Power Uppercut, Spinning Back Fist, Triple Strike, Backflip Kick, Spinning Foot Sweep, Deflecting Punch, Kippup, Zen No Mind, Stunning Shout, Shrouded Moon, Speed of the Mongoose",
+        ManobrasEspeciais: "Power Uppercut, Spinning Back Fist, Triple Strike, Backflip Kick, Spinning Foot Sweep, Deflecting Punch, Kippup, Zen No Mind, Stunning Shout, Shrouded Moon, Speed Of The Mongoose",
         Combos: "",
         Gloria: 1,
         Honra: 7,

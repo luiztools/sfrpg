@@ -73,7 +73,7 @@ const manobras = {
 	"Double Hit Punch": { Tecnica: "Soco", ModVel: -1, ModDano: "0/0", ModMov: -1, Sistema: "Dois hits; Oponentes aéreos ou agachados tomam apenas 1 hit" },
 	"Burn Knuckle": { Tecnica: "Soco", ModVel: -1, ModDano: 5, ModMov: 3, Chi: 1, FdV: 1, Sistema: "Linha reta, causa KD" },
 	"Boxing Punches": { Tecnica: "Soco", ModVel: "", ModDano: "", ModMov: "", Sistema: "3 novos socos básicos" },
-	"Cross/Hook": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Básica" },
+	"Cross/hook": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Básica" },
 	"Straight": { Tecnica: "Soco", ModVel: 1, ModDano: 0, ModMov: 0, Sistema: "Básica" },
 	"Uppercut": { Tecnica: "Soco", ModVel: -2, ModDano: 4, ModMov: -1, Sistema: "Básica" },
 	"Flicker Jab": { Tecnica: "Soco", ModVel: 3, ModDano: -1, ModMov: "Um", Alcance: 2, Sistema: "Alcance 2 hex" },
@@ -100,7 +100,7 @@ const manobras = {
 	"Flying Thrust Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 6, ModMov: -2, FdV: 1, Sistema: "KD vs. Aérea; joga o alvo 1 hex para trás; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
 	"Foot Sweep": { Tecnica: "Chute", ModVel: -2, ModDano: 3, ModMov: -2, Sistema: "Agachamento; KD" },
 	"Forward Flip Knee": { Tecnica: "Chute", ModVel: -2, ModDano: 4, ModMov: "Dois", Sistema: "Somente acerta alvos no mesmo e/ou adjacente hex; o atacante move-se para trás do alvo e rola o dano; se o alvo foi interrompido, perde o ataque" },
-	"Great Wall of China": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1/1", FdV: 2, Sistema: "3 hits, afeta 3 hex adjacentes e consecutivos" },
+	"Great Wall Of China": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1/1", FdV: 2, Sistema: "3 hits, afeta 3 hex adjacentes e consecutivos" },
 	"Handstand Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: -2, Sistema: "KD vs. Aérea" },
 	"Hurricane Kick": { Tecnica: "Chute", ModVel: 0, ModDano: -1, ModMov: -1, Chi: 1, FdV: 1, Sistema: "Linha Reta; acerta todos os hex adjacentes e o mesmo hex, causando dano toda vez que se move; todos os alvos recuam um hex; Aérea" },
 	"Lightning Leg": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1/1", FdV: 1, Sistema: "3 hits" },
@@ -294,7 +294,7 @@ const manobras = {
 	"Push": { Tecnica: "Foco", ModVel: -2, ModDano: 1, Chi: 1, Alcance: "Três", Sistema: "Afeta 3 hex a frente e (Foco) hex de lado; todos os lutadores na área são atingidos; todos recuam 1 hex por ponto de dano sofrido; KD vs. Aérea" },
 	"Sakki": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Personagem está a par do ataque surpresa e pode agir de acordo com esta informação; pode mover Foco + Esportes para evitar o ataque surpresa" },
 	"Shrouded Moon": { Tecnica: "Foco", ModVel: 0, ModMov: -1, Chi: 1, Sistema: "Ninja fica invisível; atacante precisa vencer uma disputa de Percepção + Prontidão vs. Foco + Furtividade do ninja para percebê-lo; se não percebê-lo o ninja terá +1 VEL no próximo turno" },
-	"Speed of the Mongoose": { Tecnica: "Foco", ModVel: 2, ModMov: -2, Chi: 1, Sistema: "Adiciona +4 VEL ou +6 MOV para a Manobra escolhida no próximo turno" },
+	"Speed Of The Mongoose": { Tecnica: "Foco", ModVel: 2, ModMov: -2, Chi: 1, Sistema: "Adiciona +4 VEL ou +6 MOV para a Manobra escolhida no próximo turno" },
 	"Spontaneous Combustion": { Tecnica: "Foco", ModVel: 0, ModDano: 5, ModMov: -2, Chi: 2, Sistema: "Atacante precisa vencer uma disputa de Foco com o alvo; se vencer o alvo começa a pegar fogo; continua enquanto o elemental manter o efeito ou o alvo gastar um turno rolando no chão para apagar as chamas, neste turno terá -2 VEL; 1 Chi por turno para manter as chamas e dano +2 nos turnos seguintes" },
 	"Stone": { Tecnica: "Foco", ModVel: -2, ModDano: "Especial", Chi: 1, Alcance: "Raciocínio+Foco", Sistema: "Ataque de projétil; dano é FOR + Foco" },
 	"Vacuum": { Tecnica: "Foco", ModVel: -2, ModDano: 2, ModMov: -2, Chi: 1, Alcance: "Raciocínio+Foco", Sistema: "Afeta todos no hex alvo; vítimas precisam passar em um teste de Vigor ou estarão automaticamente atordoadas no próximo turno; as vítimas podem interromper com uma Manobra mais rápida e saírem do hex; não afeta elementalistas do ar" },
@@ -859,7 +859,7 @@ function carregarTabela(npc) {
 
 	if (npc.ManobrasEspeciais) {
 		if (npc.ManobrasEspeciais.indexOf("Boxing Punches") !== -1)
-			npc.ManobrasEspeciais += "Straight, Cross/Hook, Uppercut";
+			npc.ManobrasEspeciais += "Straight, Cross/hook, Uppercut";
 
 		let manobrasNormalizadas = "";
 		npc.ManobrasEspeciais.split(/[,;]/).sort().forEach((v) => {
@@ -1002,7 +1002,7 @@ function carregarCartas(npc) {
 
 	// if (npc.ManobrasEspeciais) {
 	// 	if (npc.ManobrasEspeciais.indexOf("Boxing Punches") !== -1)
-	// 		npc.ManobrasEspeciais += "Straight, Cross/Hook, Uppercut";
+	// 		npc.ManobrasEspeciais += "Straight, Cross/hook, Uppercut";
 
 	// 	let manobrasNormalizadas = "";
 	// 	npc.ManobrasEspeciais.split(/[,;]/).sort().forEach((v) => {
