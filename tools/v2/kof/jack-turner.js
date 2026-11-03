@@ -48,7 +48,7 @@ function JackTurner() {
         Apresamento: 5,
         Esportes: 2,
         Foco: 3,
-        ManobrasEspeciais: "Jump, Grappling Defense, Foot Sweep, Throw, Neck Choke, Flying Kick, Spinning Back Fist, Slide Kick",
+        ManobrasEspeciais: "Jump, Grappling Defense, Foot Sweep, Throw, Neck Choke, Flying Kick, Spinning Back Fist, Slide Kick, Slash Kick",
         Combos: "",
         Gloria: 5,
         Honra: 2,
