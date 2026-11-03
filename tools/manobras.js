@@ -35,7 +35,7 @@ const manobras = {
 	"Fist Sweep": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: -2, Sistema: "Agachamento, KD" },
 	"Flaming Dragon Punch": { Tecnica: "Soco", ModVel: -1, ModDano: 6, ModMov: -2, Chi: 1, FdV: 1, Sistema: "KD e empurra 1 hex; 2 hits se alvo estiver adjacente (vc não se mover); pode esquivar de projétil mas não pode atacar quem lançou" },
 	"Head Butt": { Tecnica: "Soco", ModVel: 0, ModDano: 3, ModMov: -2, Sistema: "" },
-	"Electro Bolt": { Tecnica: "Soco", ModVel: 1, ModDano: 6, ModMov: -2, Chi: 1, Alcance: 5, Sistema: "Arco de eletricidade com alcance de até 5 hex. Exclusiva dos Robôs de Elite." },
+	"Electro Bolt": { Tecnica: "Foco", ModVel: 1, ModDano: 6, ModMov: "Nenhum", Chi: 1, Alcance: 5, Sistema: "Arco de eletricidade com alcance de até 5 hex. Exclusiva dos Robôs de Elite." },
 	"Gore": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: -4, Sistema: "Chifrada; se acertar, o oponente é arremessado 3 hex para trás. Exclusiva do touro Diablo." },
 	"Hundred Hand Slap": { Tecnica: "Soco", ModVel: -2, ModDano: "0/0/0", ModMov: "Um", FdV: 1, Sistema: "3 hits" },
 	"Hyper Fist": { Tecnica: "Soco", ModVel: 1, ModDano: "0/0/0", ModMov: "Um", FdV: 1, Sistema: "3 hits" },

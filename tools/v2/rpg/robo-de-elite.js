@@ -1,5 +1,6 @@
 ﻿function RoboElite() {
     const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Cibernético", 5);
 
     const personagem = {
         Nome: "Robô de Elite",
