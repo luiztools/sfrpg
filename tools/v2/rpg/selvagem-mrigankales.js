@@ -9,7 +9,6 @@
     const armas = [];
     armas[0] = "Lança";
     armas[1] = "Funda";
-    armas[2] = "Pedra de Luz";
 
     const personagem = {
         Nome: "Selvagem Mrigankalês",
