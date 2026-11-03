@@ -32,6 +32,10 @@ Quando o usuário mandar correções uma por mensagem, aplique cada uma e siga e
 
 - O objeto `manobras` é agrupado por técnica, com comentários (`//Esportes`, `//Apresamento`...). Coloque a entrada no bloco da técnica, perto de uma manobra relacionada (ex.: logo depois do pré-requisito).
 - **Técnica = a primeira técnica dos Pré-requisitos.** Essa é a categoria da manobra: vira o `Tecnica` da entrada, a tag do post e a lista do post da técnica. Ex.: "Esportes 4, Flying Heel Stomp" → `Tecnica: "Esportes"`.
+  - **Cada manobra tem UMA categoria só:** uma única tag de técnica e uma única lista de técnica. Se os pré-requisitos estiverem fora de ordem, reordene no post para que a categoria venha primeiro (ex.: Take Down → "Apresamento 3, Chute 3").
+  - Exceção: a categoria pode seguir a manobra pré-requisito. Daikyou Burning ("Foco 3, Butsumetsu Buster") é Apresamento porque a Butsumetsu Buster é Apresamento.
+  - O `Tecnica` em `manobras.js` é a técnica usada no **cálculo do dano**. Normalmente é a mesma da categoria, mas não quando o Sistema diz outra (Take Down: categoria Apresamento, mas "o dano é calculado com Chute" → `Tecnica: "Chute"`).
+  - Manobra de Foco exclusiva de Elemental (ex.: Flaming Fist, "Foco 1, Soco 1, Elemental 2") é da categoria Foco e fica no post Elemental, não na lista de Soco.
 - Formato (uma linha, tab no início):
   ```js
   	"Multiple Stomp": { Tecnica: "Esportes", ModVel: -1, ModDano: "0/0/0", ModMov: -1, FdV: 1, Sistema: "Aérea; Linha Reta; dano rolado três vezes; esquiva de projétil como Jump; oponente em manobra de agachamento ainda é atingido pelo último chute" },
@@ -118,7 +122,10 @@ Toda manobra nova entra nestes três lugares. Edite sempre com `wp_post_get` →
 | post de **cada estilo** dos Pontos de Poder (ex.: `kung-fu` 368, `wu-shu` 412, `forcas-especiais` 377) | coluna da técnica na tabela de manobras do estilo, ordem alfabética, com o custo daquele estilo | `<a href="https://www.sfrpg.com.br/post/<slug>">Nome (N)</a>*` |
 
 - `*` marca manobra **não oficial** (fan-made), conforme a nota "* OBS" desses posts. Manobra oficial da White Wolf entra sem `*`.
-- O custo de "Outros" vai **apenas** no Movimentos Comuns, nunca em post de estilo. Leia os custos sempre no post **atual** da manobra (o usuário pode ter editado).
+- O custo de "Outros" vai **apenas** no Movimentos Comuns, nunca em post de estilo. Nos posts, ele aparece como "Outros N", "Outros Estilos N", "Qualquer N" ou "Qualquer Estilo N"; todos contam.
+- No Movimentos Comuns, a coluna é a da tag de técnica da manobra. Manobras de arma sem tag de técnica (Buffalo Strike, Triple Blow, Weapon Uppercut...) ficam na linha **Armas** (`colspan="2"`, cabeçalho `background-color: silver`), no fim da tabela. Manobras comuns de Híbridos Animais ficam no post `explorando-os-hibridos-animais`.
+- **O post da manobra é a fonte da verdade.** Se o custo de uma lista (Movimentos Comuns, post de estilo) for diferente do custo nos Pontos de Poder do post da manobra, corrija a lista.
+- **Páginas de desambiguação:** `/post/push` explica que existem duas manobras com esse nome e aponta para elas: Push (Elemental), em `push-elemental`, e Push (Body), de Apresamento, em `push-body`. Nas listas, aponte sempre para a manobra, nunca para a desambiguação. Leia os custos sempre no post **atual** da manobra (o usuário pode ter editado).
 - Ache a coluna pelo cabeçalho `<strong><Técnica></strong>`: a célula correspondente fica na linha `<tr>` seguinte, na mesma posição.
 - Se um estilo dos Pontos de Poder não tiver post (ou não tiver tabela), liste como dúvida.
 - **Itens colados:** em posts antigos, há itens sem quebra entre eles (`... (2)<a href=...`), que aparecem juntos na página. Ao editar uma lista, procure e separe com CRLF:
@@ -126,8 +133,19 @@ Toda manobra nova entra nestes três lugares. Edite sempre com `wp_post_get` →
   re.subn(r"(\)\**|</a>\**)[ \xa0]*(?=<a )", lambda m: m.group(1) + "\r\n", t)
   ```
 - **Nomes antigos que não existem mais.** Se aparecerem numa lista que você estiver editando, remova o item (o nome atual já está listado) e confira os links com `SELECT ... WHERE post_content LIKE '%<slug-antigo>%'`:
-  - Quesadilla Bomb → Hyper Tackle;
-  - Ground Roll → Drunken Monkey Roll.
+  - Quesadilla Bomb, Dashing Shoulder, Shadow Shoulder → Hyper Tackle;
+  - Ground Roll → Drunken Monkey Roll;
+  - Flash Chop → Haymaker; Falling Sky → Choke Throw; Short Fireball → Energy Ball; Fajita Buster → Thigh Press.
+
+  Para saber se um link morto é um nome antigo, veja para onde o site redireciona: `curl -s -o /dev/null -w "%{http_code} %{redirect_url}" https://www.sfrpg.com.br/post/<slug>` (301 → nome atual; 404 → manobra que não existe mais).
+- **Seções especiais dos posts de técnica.** A lista principal fica sob "Manobras de <Técnica>", e as manobras exclusivas de um Antecedente Único ficam em seções próprias:
+  - Soco: "Manobras com Tentáculos";
+  - Esportes: "Manobras Exclusivas para Híbridos Animais";
+  - Apresamento: "Manobras de Apresamento de Híbridos Animais";
+  - Foco: "Manobras Exclusivas para Cibernéticos". As manobras de Elementais, Sub-Elementais, Satsui no Hadou, Psycho Power e Paranormais ficam nos posts desses antecedentes, e o post de Foco só aponta para eles.
+
+  Manobra de Foco que tem alternativa sem antecedente (ex.: "Foco 3 ou Elemental (Gelo) 2") entra na lista principal de Foco. A que exige o antecedente em todas as alternativas (ex.: "Foco 2, Elemental 2") vai para o post do antecedente.
+- **Conferir uma lista inteira:** a fonte de verdade são os posts publicados da categoria 17 com a tag da técnica. Ignore `manobras-basicas` e `movimentos-comuns`, que têm essas tags mas não são manobras, e as listas de exemplos dos posts (ex.: "Exemplos de Uso de Esportes"). Revisões antigas do post (`post_type='revision'`, `post_parent=<ID>`) guardam listas apagadas.
 
   O nome antigo pode continuar no texto do post da manobra como apelido ("Luchadores mexicanos chamam este movimento de Quesadilla Bomb"); isso está certo.
 
