@@ -5,6 +5,12 @@
     antecedentes[2] = newCaracteristica("Aliados", 2);
     antecedentes[3] = newCaracteristica("Contatos", 3);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Armas de Fogo", 4);
+
+    const armas = [];
+    armas[0] = "Pistola";
+
     const personagem = {
         Nome: "Carta Branca",
         Estilo: "Briga",
@@ -52,8 +58,9 @@
         Apresamento: 3,
         Esportes: 2,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Monkey Grab Punch, Double Dread Kick, Knee Basher, Jump, Pistola (vel. 6, Dano 7, Mov. 0), Cápsulas de Sono (Vel. 4, Especial, Mov.0)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Monkey Grab Punch, Double Dread Kick, Knee Basher, Jump, Cápsulas de Sono (Vel. 4, Especial, Mov.0)",
         Combos: "",
         Gloria: 0,
         Honra: 1,

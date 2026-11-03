@@ -3,6 +3,12 @@
     antecedentes[0] = newCaracteristica("Aliados", 1);
     antecedentes[1] = newCaracteristica("Apoio", 1);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Armas de Fogo", 2);
+
+    const armas = [];
+    armas[0] = "Fuzil";
+
     const personagem = {
         Nome: "Veterano",
         Estilo: "Forças Especiais",
@@ -50,8 +56,9 @@
         Apresamento: 1,
         Esportes: 2,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Spinning Back Fist, Suplex, Jump, Fuzil (Vel. 3, Dano 7, Mov. 0)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Spinning Back Fist, Suplex, Jump",
         Combos: "",
         Gloria: 1,
         Honra: 1,

@@ -40,7 +40,7 @@
         Esportes: 3,
         Foco: 3,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Buffalo Punch, Double Hit Kick, Pin, Improved Pin, Foot Sweep, Jump, Monkey Grab Punch, Kippup, San He, Throw, Air Throw, Deflecting Punch, Grappling Defense, Zen no Mind",
+        ManobrasEspeciais: "Buffalo Punch, Double Hit Kick, Pin, Improved Pin, Foot Sweep, Jump, Monkey Grab Punch, Kippup, San He, Throw, Air Throw, Deflecting Punch, Grappling Defense, Zen No Mind",
         Gloria: 5,
         Honra: 7,
         Chi: 6,

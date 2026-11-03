@@ -3,6 +3,12 @@
     antecedentes[0] = newCaracteristica("Apoio", 1);
     antecedentes[1] = newCaracteristica("Aliados", 1);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Bastão", 2);
+
+    const armas = [];
+    armas[0] = "Bastão Longo";
+
     const personagem = {
         Nome: "Theão",
         Estilo: "Ler Drit",
@@ -50,15 +56,16 @@
         Apresamento: 1,
         Esportes: 1,
         Foco: 3,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Psychokinetic Channeling, Telepathy, Psychic Vise, Mind Reading, Cajado Jab (Vel. 4, Dano 5, Mov. 2), Cajado Strong (Vel. 2, Dano 7, Mov. 2), Cajado Fierce (Vel. 1, Dano 9, Mov. 1)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Psychokinetic Channeling, Telepathy, Psychic Vise, Mind Reading",
         Combos: "",
         Gloria: 0,
         Honra: 0,
         Chi: 6,
         ForcaVontade: 4,
         Saude: 10,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 1
     };
     return personagem;

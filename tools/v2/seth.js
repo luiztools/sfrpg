@@ -110,7 +110,7 @@ function SethSF5() {
         Apresamento: 6,
         Esportes: 5,
         Foco: 0,
-        ManobrasEspeciais: "HandStand Kick, Fist Sweep, Jump, Choke Throw, Telekinesis, Stomach Pump, Light Feet, Fist Sweep, Bushin Sempu Kyaku, Spinning Clothesline, Turbo Spinning Clothesline, Fireball, Accuracy, Improved Fireball, Knife Hand Strike, Lunging Punch, Dashing Punch, Ax Kick, Wounded Knee, Double Hit Punch, Triple Strike, Hyper Fist, Yoga Teleport, Dragon Punch, Power Uppercut, Flying Body Spear, Wheel Kick, Chi Push, Power Up, Energy Ball, Tanden Copy, Tanden Vortex",
+        ManobrasEspeciais: "Handstand Kick, Fist Sweep, Jump, Choke Throw, Telekinesis, Stomach Pump, Light Feet, Fist Sweep, Bushin Sempu Kyaku, Spinning Clothesline, Turbo Spinning Clothesline, Fireball, Accuracy, Improved Fireball, Knife Hand Strike, Lunging Punch, Dashing Punch, Ax Kick, Wounded Knee, Double Hit Punch, Triple Strike, Hyper Fist, Yoga Teleport, Dragon Punch, Power Uppercut, Flying Body Spear, Wheel Kick, Chi Push, Power Up, Energy Ball, Tanden Copy, Tanden Vortex",
         Combos: "Dragon Punch para Flying Body Spear (Dizzy), Yoga Teleport para Wheel Kick, Wheel Kick para Yoga Teleport para Power Uppercut (Dizzy); Movimento para Hyper Fist (Dizzy); Movimento para Busin Sempu Kyaku para Roundhouse (Dizzy); Energy Ball para Energy Ball (Dizzy); Double Hit Punch para Telekinesis; Hyper Fist para Dashing Punch (Dizzy); Hyper Fist para Yoga Teleport para Fierce (Dizzy);",
         Gloria: 8,
         Honra: 1,

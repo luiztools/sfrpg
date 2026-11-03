@@ -109,7 +109,7 @@ function GenSF4() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 5,
-        ManobrasEspeciais: "Ansatsuken, Zan-ei, Tumbling Attack, Gekiro, Jump, Kippup, Foot Sweep, Throw, Hyakurenko, Chi Kun Healing, Dim Mak, Drunken Monkey Roll, Punch Defense, Deflecting Punch, Air Throw, Wall Spring, Mu no Hadou",
+        ManobrasEspeciais: "Ansatsuken, Zan-ei, Tumbling Attack, Gekiro, Jump, Kippup, Foot Sweep, Throw, Hyakurenko, Chi Kun Healing, Dim Mak, Drunken Monkey Roll, Punch Defense, Deflecting Punch, Air Throw, Wall Spring, Mu No Hadou",
         Combos: "Dim Mak (Ansatsuken); Hyakurenko (Ansatsuken); Drunken Monkey Roll para Hyakurenko (Dizzy), Hyakurenko para Dim Mak (Dizzy), Jab para Jab para Short (Dizzy), Bloqueio para Dim Mak",
         Gloria: 10,
         Honra: 4,

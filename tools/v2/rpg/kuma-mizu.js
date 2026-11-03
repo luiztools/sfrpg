@@ -50,7 +50,7 @@
         Esportes: 1,
         Foco: 3,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Fist Sweep, Drench, elemental Skin, Jump, Envelop",
+        ManobrasEspeciais: "Fist Sweep, Drench, Elemental Skin, Jump, Envelop",
         Combos: "Jab para Fist Sweep para Envelop(Dizzy)",
         Gloria: 1,
         Honra: 4,

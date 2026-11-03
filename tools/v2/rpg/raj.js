@@ -200,7 +200,7 @@ function RajSF2() {
         Esportes: 2,
         Foco: 5,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Fireball, Regeneration, Jump, Flying Body Spear, Yoga Flame, Repeating Fireball, Accuracy, Mu no Hadou",
+        ManobrasEspeciais: "Fireball, Regeneration, Jump, Flying Body Spear, Yoga Flame, Repeating Fireball, Accuracy, Mu No Hadou",
         Combos: "Bloqueio para Repeating Fireball (Dizzy); Repeating Fireball para Bloqueio para Yoga Flame (Dizzy)",
         Gloria: 5,
         Honra: 5,

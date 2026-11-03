@@ -47,7 +47,7 @@ function ChizuruKagura() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 6,
-        ManobrasEspeciais: "Jump, Throw, Telepathy, Zen no Mind, Dim Mak, Elemental Stride, Heal, Sense Element, Power Uppercut, Air Blast, Fist Sweep, Foot Sweep, Spinning Clothesline, Turbo Spinning Clothesline, Dragon Punch, Missile Reflection, Energy Reflection, Chi Kun Healing",
+        ManobrasEspeciais: "Jump, Throw, Telepathy, Zen No Mind, Dim Mak, Elemental Stride, Heal, Sense Element, Power Uppercut, Air Blast, Fist Sweep, Foot Sweep, Spinning Clothesline, Turbo Spinning Clothesline, Dragon Punch, Missile Reflection, Energy Reflection, Chi Kun Healing",
         Combos: "Jab para Jab para Jab (Dizzy); Foot Sweep para Dragon Punch (Dizzy); Throw para Turbo Spinning Clothesline (Dizzy)",
         Gloria: 5,
         Honra: 10,

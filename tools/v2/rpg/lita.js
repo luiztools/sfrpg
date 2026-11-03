@@ -5,6 +5,14 @@
     antecedentes[2] = newCaracteristica("Recursos", 3);
     antecedentes[3] = newCaracteristica("Contatos", 4);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Espada", 1);
+    tecnicas[1] = newCaracteristica("Arremesso", 3);
+
+    const armas = [];
+    armas[0] = "Espada";
+    armas[1] = "Faca Arremessada";
+
     const personagem = {
         Nome: "Lita C. Luwanda",
         Estilo: "Forças Especiais",
@@ -52,8 +60,9 @@
         Apresamento: 1,
         Esportes: 4,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Spinning Back Fist, Suplex, Jump, Espada Longa Jab (Vel. 8, Dano 7, Mov. 3), Espada Longa Strong (Vel. 6, Dano 9, Mov. 3), Espada Longa Fierce (Vel. 5, Dano 11, Mov. 2), Arremesso de Faca (Vel. 9, Dano 6, Mov 0, Alcance 5)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Spinning Back Fist, Suplex, Jump",
         Combos: "",
         Gloria: 1,
         Honra: 3,

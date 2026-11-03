@@ -204,7 +204,7 @@ function GoroMKX() {
         Esportes: 5,
         Foco: 5,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash, Spinning Back Fist, Double-Hit Kick, Flying Heel Stomp, Throw, Back Breaker, Shockwave",
+        ManobrasEspeciais: "Jump, Brain Cracker, Fireball, Power Uppercut, Air Smash, Spinning Back Fist, Double Hit Kick, Flying Heel Stomp, Throw, Back Breaker, Shockwave",
         Combos: "Jab para Brain Cracker (dizzy); Bloqueio para Fireball; Bloqueio para Roundhouse; Jab para Jab para Forward (dizzy); Spinning Back Fist para Jab para Jab (dizzy); Brain Cracker para Throw (Dizzy);",
         Gloria: 10,
         Honra: 0,

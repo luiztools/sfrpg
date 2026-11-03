@@ -46,7 +46,7 @@ function GoukenSF4() {
         Apresamento: 5,
         Esportes: 4,
         Foco: 7,
-        ManobrasEspeciais: "Accuracy, Hurricane Kick, Air Hurricane Kick, Chi Kun Healing, Condensed Energy, Deflecting Punch, Dive Kick, Dragon Punch, Foot Sweep, Fireball, Jump, Air Throw, Power Uppercut, Reaping Palm, Throw, Zen no Mind, Mu no Hadou, Flaming Dragon Punch, Counter Attack, Ashura Senku, Bushin Sempu Kyaku, Denjin Hadouken",
+        ManobrasEspeciais: "Accuracy, Hurricane Kick, Air Hurricane Kick, Chi Kun Healing, Condensed Energy, Deflecting Punch, Dive Kick, Dragon Punch, Foot Sweep, Fireball, Jump, Air Throw, Power Uppercut, Reaping Palm, Throw, Zen No Mind, Mu No Hadou, Flaming Dragon Punch, Counter Attack, Ashura Senku, Bushin Sempu Kyaku, Denjin Hadouken",
         Combos: "Throw para Dragon Punch; Throw para Bushin Sempu Kyaku (Dizzy); Fireball para Fireball para Fireball (Dizzy), Reaping Palm para Reaping Palm",
         Gloria: 6,
         Honra: 10,

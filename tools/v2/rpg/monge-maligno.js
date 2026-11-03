@@ -1,6 +1,12 @@
 ﻿function MongeMaligno() {
     const antecedentes = [];
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Faca", 1);
+
+    const armas = [];
+    armas[0] = "Faca";
+
     const personagem = {
         Nome: "Monge Maligno",
         Estilo: "Kabaddi",
@@ -12,7 +18,7 @@
         Equipe: "",
         Time: "",
         Forca: 3,
-        Destreza: 3,
+        Destreza: 5,
         Vigor: 4,
         Carisma: 2,
         Manipulacao: 3,
@@ -48,15 +54,16 @@
         Apresamento: 0,
         Esportes: 4,
         Foco: 5,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Blind, Cobra Charm, Mind Reading, Regeneration, Psychic Rage, Telepathy, Faca Jab (Vel. 9, Dano 4, Mov. 4), Faca Strong (vel. 7, Dano 6, Mov. 4), Faca Fierce (Vel. 6, Dano 8, Mov. 3)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Blind, Cobra Charm, Mind Reading, Regeneration, Psychic Rage, Telepathy",
         Combos: "",
         Gloria: 1,
         Honra: 0,
         Chi: 5,
         ForcaVontade: 3,
         Saude: 10,
-        Divisao: "Livre",
+        Divisao: "Duelistas",
         Posto: 1
     };
     return personagem;

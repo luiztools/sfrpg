@@ -5,6 +5,12 @@
     antecedentes[2] = newCaracteristica("Recursos", 3);
     antecedentes[3] = newCaracteristica("Contatos", 4);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Armas de Fogo", 5);
+
+    const armas = [];
+    armas[0] = "Pistola";
+
     const personagem = {
         Nome: "Keith B. Wolfman",
         Estilo: "Forças Especiais",
@@ -52,8 +58,9 @@
         Apresamento: 2,
         Esportes: 3,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Spinning Back Fist, Suplex, Jump, Pistolas (Vel. 7, Dano 8, Mov. 0)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Spinning Back Fist, Suplex, Jump",
         Combos: "",
         Gloria: 2,
         Honra: 2,

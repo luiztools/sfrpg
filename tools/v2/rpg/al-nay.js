@@ -38,7 +38,7 @@
         Esportes: 3,
         Foco: 5,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Zen no Mind, Power Uppercut, Foot Sweep, Psychokinetic Channeling, Hundred Hand Slap, Missile Reflection, Energy Reflection, Throw, Regeneration, Jump, Kippup",
+        ManobrasEspeciais: "Zen No Mind, Power Uppercut, Foot Sweep, Psychokinetic Channeling, Hundred Hand Slap, Missile Reflection, Energy Reflection, Throw, Regeneration, Jump, Kippup",
         Combos: "Hundred Hand Slap para Foot Sweep; Jab para Throw (Dizzy);",
         Gloria: 5,
         Honra: 10,

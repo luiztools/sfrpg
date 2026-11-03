@@ -3,6 +3,12 @@
     antecedentes[0] = newCaracteristica("Mais Habilid.:", 0);
     antecedentes[1] = newCaracteristica("Rastreamento", 3);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Lança", 1);
+
+    const armas = [];
+    armas[0] = "Lança";
+
     const personagem = {
         Nome: "Selvagem Mrigankalês",
         Estilo: "Briga",
@@ -50,15 +56,16 @@
         Apresamento: 0,
         Esportes: 3,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Lanç (Vel. 3, Dano 8, Mov. 4), Funda (Vel. 3, Dano 3, Mov. 0), Pedra de Luz (Vel. 1, Dano 8, Mov. 1)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Funda (Vel. 3, Dano 3, Mov. 0), Pedra de Luz (Vel. 1, Dano 8, Mov. 1)",
         Combos: "",
         Gloria: 0,
         Honra: 0,
         Chi: 0,
         ForcaVontade: 1,
         Saude: 10,
-        Divisao: "Tradicional",
+        Divisao: "Duelistas",
         Posto: 0
     };
     return personagem;

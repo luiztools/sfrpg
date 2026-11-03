@@ -52,7 +52,7 @@ function Wong() {
         Esportes: 3,
         Foco: 4,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Monkey Grab Punch, Double-Hit Punch, Double Hit Kick, Foot Sweep, Throw, Jump, Kippup, Punch Defense, Deflecting Punch, Drunken Monkey Roll, Regeneration, Dim Mak, Rolling Attack, Beast Roll, Knife Hand Strike, Vertical Rolling Attack",
+        ManobrasEspeciais: "Monkey Grab Punch, Double Hit Punch, Double Hit Kick, Foot Sweep, Throw, Jump, Kippup, Punch Defense, Deflecting Punch, Drunken Monkey Roll, Regeneration, Dim Mak, Rolling Attack, Beast Roll, Knife Hand Strike, Vertical Rolling Attack",
         Combos: "Drunken Monkey Roll para Regeneration; Bloqueio para Double-Hit Punch (Dizzy); Bloqueio para Deflecting Punch para Dim Mak (Dizzy); Double-Hit Kick (Dizzy)",
         Gloria: 4,
         Honra: 3,

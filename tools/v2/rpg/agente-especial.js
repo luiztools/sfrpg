@@ -5,6 +5,12 @@
     antecedentes[2] = newCaracteristica("Recursos", 2);
     antecedentes[3] = newCaracteristica("Contatos", 2);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
+
+    const armas = [];
+    armas[0] = "Pistola";
+
     const personagem = {
         Nome: "Agente Especial",
         Estilo: "",
@@ -52,8 +58,9 @@
         Apresamento: 1,
         Esportes: 1,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Head Butt, Throw, Pistola (Vel. 6, Dano 6, Mov. 0)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Head Butt, Throw",
         Combos: "",
         Gloria: 0,
         Honra: 1,

@@ -44,7 +44,7 @@
         Bloqueio: 4,
         Apresamento: 5,
         Esportes: 3,
-        ManobrasEspeciais: "Pin, Improved Pin, Double-Hit Punch, Foot Sweep, Maka Wara, Bear Hug, Grappling Defense, Back Breaker, Pile Driver, Power Uppercut, Jump, Buffalo Punch, Throw, Air Smash, Suplex, Stomach Pump, Hyper Tackle",
+        ManobrasEspeciais: "Pin, Improved Pin, Double Hit Punch, Foot Sweep, Maka Wara, Bear Hug, Grappling Defense, Back Breaker, Pile Driver, Power Uppercut, Jump, Buffalo Punch, Throw, Air Smash, Suplex, Stomach Pump, Hyper Tackle",
         Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Pile Driver (Dizzy);",
         Gloria: 5,
         Honra: 7,

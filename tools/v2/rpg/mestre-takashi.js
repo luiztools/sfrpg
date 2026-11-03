@@ -48,7 +48,7 @@ function MestreTakashi() {
         Esportes: 3,
         Foco: 6,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Dim Mak, Air Throw, Slide Kick, Zen no Mind, Spinning Foot Sweep, Mind Reading, Deflecting Punch, Regeneration, Back Roll Throw, Kippup, San He, Chi Kun Healing, Improved Pin, Jump, Breakfall, Throw, Telepathy",
+        ManobrasEspeciais: "Dim Mak, Air Throw, Slide Kick, Zen No Mind, Spinning Foot Sweep, Mind Reading, Deflecting Punch, Regeneration, Back Roll Throw, Kippup, San He, Chi Kun Healing, Improved Pin, Jump, Breakfall, Throw, Telepathy",
         Combos: "Deflecting Punch para Back Roll Throw para Improved Pin (Dizzy); Roundhouse para Spinning Foot Sweep; San He para Jab para Fierce",
         Gloria: 1,
         Honra: 10,

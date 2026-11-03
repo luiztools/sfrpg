@@ -45,7 +45,7 @@ function Juan() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 1,
-        ManobrasEspeciais: "Dragon Punch, Power Uppercut, Jump, Foot Sweep, Cartwheel Kick, Throw, Backflip Kick, Pin, Kick Defense, Double-Hit Kick, Kippup",
+        ManobrasEspeciais: "Dragon Punch, Power Uppercut, Jump, Foot Sweep, Cartwheel Kick, Throw, Backflip Kick, Pin, Kick Defense, Double Hit Kick, Kippup",
         Combos: "Bloqueio para Backflip Kick; Movimento para Cartwheel Kick para Dragon Punch (Dizzy), Bloqueio para Throw para Pin (Dizzy)",
         Gloria: 5,
         Honra: 7,

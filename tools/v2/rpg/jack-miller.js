@@ -34,7 +34,7 @@ function JackMiller() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 3,
-        ManobrasEspeciais: "Dragon Punch, Throw, Back Roll Throw, Power Uppercut, Foot Sweep, Spinning Foot Sweep, Jump, Punch Defense, Kick Defense, Counter Attack, Kippup, Esquives, Light Feet, Double-Hit Punch, Flaming Dragon Punch",
+        ManobrasEspeciais: "Dragon Punch, Throw, Back Roll Throw, Power Uppercut, Foot Sweep, Spinning Foot Sweep, Jump, Punch Defense, Kick Defense, Counter Attack, Kippup, Esquives, Light Feet, Double Hit Punch, Flaming Dragon Punch",
         Combos: "Counter Attack para Dragon Punch (Dizzy), Bloqueio para Back Roll Throw, Foot Sweep para Flaming Dragon Punch (Dizzy)",
         Gloria: 6,
         Honra: 6,

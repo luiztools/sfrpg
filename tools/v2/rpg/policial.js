@@ -4,6 +4,12 @@
     antecedentes[1] = newCaracteristica("Aliados", 1);
     antecedentes[2] = newCaracteristica("Recursos", 1);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
+
+    const armas = [];
+    armas[0] = "Pistola";
+
     const personagem = {
         Nome: "Policial",
         Estilo: "Briga",
@@ -22,7 +28,7 @@
         Aparencia: 2,
         Percepcao: 3,
         Inteligencia: 2,
-        Raciocinio: 3,
+        Raciocinio: 4,
         Prontidao: 2,
         Interrogacao: 2,
         Intimidacao: 2,
@@ -51,8 +57,9 @@
         Apresamento: 2,
         Esportes: 1,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Pistola (Vel. 6, Dano 6, Mov. 0), Brain Cracker",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Brain Cracker",
         Combos: "",
         Gloria: 1,
         Honra: 1,

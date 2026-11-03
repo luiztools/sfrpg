@@ -40,7 +40,7 @@
         Apresamento: 4,
         Esportes: 3,
         Foco: 2,
-        ManobrasEspeciais: "Eye Rake, Stunning Shout, Sleeper, Haymaker, Widowmaker, Jump, Throw, Head Butt, Hundred Hand Slap, Double hit Kick, Knee Basher, Air Smash",
+        ManobrasEspeciais: "Eye Rake, Stunning Shout, Sleeper, Haymaker, Widowmaker, Jump, Throw, Head Butt, Hundred Hand Slap, Double Hit Kick, Knee Basher, Air Smash",
         Combos: "Eye Rake para Haymaker para Sleeper (Dizzy); Double Hit Kick para Stunning Shout para Air Smash (Dizzy)",
         Gloria: 4,
         Honra: 1,

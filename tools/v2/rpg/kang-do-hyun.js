@@ -61,7 +61,7 @@ function Kang() {
         Esportes: 3,
         Foco: 2,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Kick Defense, Punch Defense, Throw, Back Roll Throw, Knee Basher, Double-Hit Kick, Foot Sweep, Spinning Foot Sweep, Light Feet, Double Dread Kick, Flamingo Stance, Lightning Leg, Jump",
+        ManobrasEspeciais: "Kick Defense, Punch Defense, Throw, Back Roll Throw, Knee Basher, Double Hit Kick, Foot Sweep, Spinning Foot Sweep, Light Feet, Double Dread Kick, Flamingo Stance, Lightning Leg, Jump",
         Combos: "Bloqueio para Lightning Leg (Dizzy); Bloqueio para Knee Basher; Double Dread Kick para Lightning Leg (Dizzy)",
         Gloria: 1,
         Honra: 6,

@@ -56,7 +56,7 @@ function Reiko() {
         Foco: 4,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Breaker, Double-Hit Kick, Double-Hit Punch, Knee Basher, Yoga Teleport, Dislocate Limb, Weapon Sweep, Backflip Kick, Forward Backflip Kick",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Breaker, Double Hit Kick, Double Hit Punch, Knee Basher, Yoga Teleport, Dislocate Limb, Weapon Sweep, Backflip Kick, Forward Backflip Kick",
         Combos: "Double-Hit Punch - Double-Hit Punch - Power Uppercut (Dizzy); Double-Hit Punch - Double-Hit Punch - Power Uppercut (Dizzy); Yoga Teleport - Power Uppercut - Throw (Dizzy); Jumping Short - Foot Sweep - Power Uppercut",
         Gloria: 10,
         Honra: 2,

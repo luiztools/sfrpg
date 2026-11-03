@@ -57,7 +57,7 @@ function Jarek() {
         Foco: 3,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Double-Hit Punch, Double-Hit Kick, Foot Sweep, Handstand Kick, Knee Basher, Throw, Suplex, Rolling Attack",
+        ManobrasEspeciais: "Jump, Kippup, Power Uppercut, Double Hit Punch, Double Hit Kick, Foot Sweep, Handstand Kick, Knee Basher, Throw, Suplex, Rolling Attack",
         Combos: "Double-Hit Punch para Double-Hit Kick para Power Uppercut (Dizzy); Double-Hit Punch para Double-Hit Kick para Handstand Kick (Dizzy); Jump + Short para Foot Sweep para Power Uppercut (Dizzy); Bloqueio para Rolling Attack para Power Uppercut",
         Gloria: 10,
         Honra: 1,

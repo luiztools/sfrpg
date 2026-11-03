@@ -39,7 +39,7 @@ function ChuckLiddell() {
         Apresamento: 5,
         Esportes: 4,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Pin, Power Uppercut, Triple Strike, Improved Pin, Double-Hit Kick, Grappling Defense, Wounded Knee, Throw, Jump, Ground Fighting, Double Dread Kick",
+        ManobrasEspeciais: "Pin, Power Uppercut, Triple Strike, Improved Pin, Double Hit Kick, Grappling Defense, Wounded Knee, Throw, Jump, Ground Fighting, Double Dread Kick",
         Combos: "Jump + Fierce para Strong para Double Dread Kick (Dizzy))",
         Gloria: 7,
         Honra: 4,

@@ -4,6 +4,13 @@
     antecedentes[1] = newCaracteristica("Aliados", 2);
     antecedentes[2] = newCaracteristica("Recursos", 2);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
+
+    const armas = [];
+    armas[0] = "Pistola";
+    armas[1] = "Fuzil";
+
     const personagem = {
         Nome: "S.W.A.T.",
         Estilo: "Briga",
@@ -51,8 +58,9 @@
         Apresamento: 2,
         Esportes: 3,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Power Uppercut, Spinning Back Fist, Jump, Pistola (vel. 6, Dano 6, Mov. 0), Fuzil (Vel.4, Dano 8, Mov. 0)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Power Uppercut, Spinning Back Fist, Jump",
         Combos: "",
         Gloria: 2,
         Honra: 1,

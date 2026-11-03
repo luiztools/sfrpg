@@ -52,7 +52,7 @@ function Helio() {
         Apresamento: 7,
         Esportes: 3,
         Foco: 1,
-        ManobrasEspeciais: "Kick Defense, Punch Defense, Grappling Defense, Foot Sweep, Fist Sweep, Jump, Throw, Back Roll Throw, Zen no Mind, Pin, Improved Pin, Arm-Wrist Lock, Neck Choke, Breakfall, Ground Fighting, Kippup, Sleeper, Thigh Press",
+        ManobrasEspeciais: "Kick Defense, Punch Defense, Grappling Defense, Foot Sweep, Fist Sweep, Jump, Throw, Back Roll Throw, Zen No Mind, Pin, Improved Pin, Arm Wrist Lock, Neck Choke, Breakfall, Ground Fighting, Kippup, Sleeper, Thigh Press",
         Combos: "Throw para Improved Pin para Improved Pin (Dizzy); Bloqueio para Neck Choke para Neck Choke (Dizzy); Improved Pin para Improved Pin para Improved Pin (Dizzy), Neck Choke para Neck Choke para Neck Choke (Dizzy)",
         Gloria: 5,
         Honra: 9,

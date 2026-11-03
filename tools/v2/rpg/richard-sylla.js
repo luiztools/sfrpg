@@ -48,7 +48,7 @@ function RichardSylla() {
         Esportes: 5,
         Foco: 1,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Dashing Punch, Power Uppercut, Double Hit Punch, Double Dread Kick, Reverse Frontal Kick, Ax Kick, Double-Hit Kick, Deflecting Punch, Jump, Displacement, Esquives, Fist Sweep, Punch Defense, Kick Defense",
+        ManobrasEspeciais: "Dashing Punch, Power Uppercut, Double Hit Punch, Double Dread Kick, Reverse Frontal Kick, Ax Kick, Double Hit Kick, Deflecting Punch, Jump, Displacement, Esquives, Fist Sweep, Punch Defense, Kick Defense",
         Combos: "Deflecting Punch para Double Dread Kick para Power Uppercut (Dizzy); Jab para Dashing Punch para Ax Kick (Dizzy)",
         Gloria: 5,
         Honra: 8,

@@ -42,7 +42,7 @@
         Apresamento: 3,
         Esportes: 3,
         Foco: 3,
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Maka Wara, Throw, Jump, Fireball",
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Maka Wara, Throw, Jump, Fireball",
         Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash;",
         Gloria: 2,
         Honra: 6,

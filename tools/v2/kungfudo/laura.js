@@ -45,7 +45,7 @@ function LauraKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 3,
         Foco: 3,
-        ManobrasEspeciais: "Double Hit-Kick, Backflip Kick, Cartwheel Kick, Handstand Kick, Jump",
+        ManobrasEspeciais: "Double Hit Kick, Backflip Kick, Cartwheel Kick, Handstand Kick, Jump",
         Combos: "Cartwheel Kick para Backflip Kick;",
         Gloria: 2,
         Honra: 1,

@@ -58,7 +58,7 @@ function BoRaiCho() {
         Foco: 3,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Spinning Back Fist, Hundred Hand Slap, Handstand Kick, Wounded Knee, Ax Kick, Suplex, Air Smash, Double-Hit Kick, Jumping Shoulder Butt, Cartwheel Kick, Acid Breath, Fireball, Musical Accompaniment",
+        ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Spinning Back Fist, Hundred Hand Slap, Handstand Kick, Wounded Knee, Ax Kick, Suplex, Air Smash, Double Hit Kick, Jumping Shoulder Butt, Cartwheel Kick, Acid Breath, Fireball, Musical Accompaniment",
         Combos: "Suplex – Air Smash; Jab – Jab – Hundred Hand Slap (dizzy); Jab – Power Uppercut – Double-Hit Kick (dizzy); Spinning Back Fist – Forward – Roundhouse; Forward – Throw",
         Gloria: 6,
         Honra: 4,

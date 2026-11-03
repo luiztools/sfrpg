@@ -46,7 +46,7 @@
         Apresamento: 4,
         Esportes: 3,
         Foco: 1,
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Elbow Smash, Double-Hit Kick, Double Hit-Knee, Foot Sweep, Wounded Knee, Throw, Jump, Pin, Improved Pin",
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Wounded Knee, Throw, Jump, Pin, Improved Pin",
         Combos: "Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;",
         Gloria: 4,
         Honra: 7,

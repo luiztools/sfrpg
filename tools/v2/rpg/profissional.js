@@ -3,6 +3,12 @@
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Apoio", 2);
 
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Armas de Fogo", 4);
+
+    const armas = [];
+    armas[0] = "Pistola";
+
     const personagem = {
         Nome: "Profissional",
         Estilo: "Forças Especiais",
@@ -50,8 +56,9 @@
         Apresamento: 2,
         Esportes: 2,
         Foco: 0,
-        NovasTecnicas: [],
-        ManobrasEspeciais: "Spinning Back Fist, Suplex, Jump, Brain Cracker, Pistola (Vel. 6, Dano 7, Mov. 0)",
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Spinning Back Fist, Suplex, Jump, Brain Cracker",
         Combos: "",
         Gloria: 2,
         Honra: 1,

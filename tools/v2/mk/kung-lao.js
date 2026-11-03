@@ -129,7 +129,7 @@ function KungLaoMKX() {
         Foco: 2,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Spin, Dive Kick, Throw, Hair Throw, Elemental Stride, Sense Element, Double-Hit Kick, Hundred Hand Slap, Bicycle Kick ",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Spin, Dive Kick, Throw, Hair Throw, Elemental Stride, Sense Element, Double Hit Kick, Hundred Hand Slap, Bicycle Kick ",
         Combos: "Jab - Power Uppercut (dizzy); Dive Kick - Chapéu de borda afiada (dizzy); Forward - Forward - Roundhouse (dizzy); Jab - Jab - Forward (dizzy); Elemental Stride para Hair Throw",
         Gloria: 4,
         Honra: 7,

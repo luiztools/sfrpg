@@ -52,7 +52,7 @@ function MakotoSF4() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 5,
-        ManobrasEspeciais: "Jump, Throw, Flying Thrust Kick, Power Uppercut, Triple Strike, Neck Choke, Double-Hit Kick, Wall Spring, Rekka Ken, Double Dread Kick, Air Smash, Fist Sweep, Dive Kick, Dashing Punch, Knife Hand Strike",
+        ManobrasEspeciais: "Jump, Throw, Flying Thrust Kick, Power Uppercut, Triple Strike, Neck Choke, Double Hit Kick, Wall Spring, Rekka Ken, Double Dread Kick, Air Smash, Fist Sweep, Dive Kick, Dashing Punch, Knife Hand Strike",
         Combos: "Fierce para Double Dread Kick; Power Uppercut para Throw; Triple Strike para Neck Choke (Dizzy)",
         Gloria: 5,
         Honra: 9,

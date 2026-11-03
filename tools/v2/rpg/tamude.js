@@ -44,7 +44,7 @@
         Bloqueio: 2,
         Apresamento: 3,
         Esportes: 2,
-        ManobrasEspeciais: "Ear Pop, Kick Defense, Double-Hit Kick, Foot Sweep, Buffalo Punch, Bear Hug, Stomach Pump, Kippup, Jump, Throw, Suplex, Punch Defense",
+        ManobrasEspeciais: "Ear Pop, Kick Defense, Double Hit Kick, Foot Sweep, Buffalo Punch, Bear Hug, Stomach Pump, Kippup, Jump, Throw, Suplex, Punch Defense",
         Combos: "Jump + Strong para Foot Sweep",
         Gloria: 4,
         Honra: 2,

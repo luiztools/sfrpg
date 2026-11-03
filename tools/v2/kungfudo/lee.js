@@ -46,7 +46,7 @@ function LeeKungFuDoFighting() {
         Apresamento: 0,
         Esportes: 2,
         Foco: 0,
-        ManobrasEspeciais: "Double Dread Kick, Double Hit-Kick, Kippup, Jump",
+        ManobrasEspeciais: "Double Dread Kick, Double Hit Kick, Kippup, Jump",
         Combos: "",
         Gloria: 0,
         Honra: 3,

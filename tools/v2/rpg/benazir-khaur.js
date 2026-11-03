@@ -47,7 +47,7 @@
         Esportes: 3,
         Foco: 3,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Jump, Power Uppercut, Zen no Mind, Spinning Back Fist, Foot Sweep, Breakfall, Throw",
+        ManobrasEspeciais: "Jump, Power Uppercut, Zen No Mind, Spinning Back Fist, Foot Sweep, Breakfall, Throw",
         Combos: "",
         Gloria: 3,
         Honra: 3,

@@ -55,7 +55,7 @@ function Naldo() {
         Esportes: 2,
         Foco: 0,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Thow, Breakfall, Suplex, Jump, Pin, Improved Pin, Hair Throw",
+        ManobrasEspeciais: "Throw, Breakfall, Suplex, Jump, Pin, Improved Pin, Hair Throw",
         Combos: "Bloqueio para Ripping Bite para Head Bite",
         Gloria: 0,
         Honra: 3,

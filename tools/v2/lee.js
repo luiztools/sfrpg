@@ -39,7 +39,7 @@ function LeeSF1() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 3,
-        ManobrasEspeciais: "Jump, Throw, Double-Hit Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Slide Kick",
+        ManobrasEspeciais: "Jump, Throw, Double Hit Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Slide Kick",
         Combos: "Jab para Slide Kick, Flying Knee Thrust para Double-Hit Kick (Dizzy)",
         Gloria: 6,
         Honra: 5,

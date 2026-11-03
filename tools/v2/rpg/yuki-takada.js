@@ -46,7 +46,7 @@
         Apresamento: 3,
         Esportes: 6,
         Foco: 4,
-        ManobrasEspeciais: "Jump, Kippup, Throw, Deaths Visage, Boshi-ken, Sakki, Shikan Ken, Entrancing Cobra, Shuto, Shrouded Moon, Cartwheel Kick, Wall Spring, Flying Thrust Kick, Foot Sweep, Flying Heel Stomp, Disengage, Hair Throw",
+        ManobrasEspeciais: "Jump, Kippup, Throw, Deaths Visage, Boshi Ken, Sakki, Shikan Ken, Entrancing Cobra, Shuto, Shrouded Moon, Cartwheel Kick, Wall Spring, Flying Thrust Kick, Foot Sweep, Flying Heel Stomp, Disengage, Hair Throw",
         Combos: "Bloqueio para Foot Sweep para Hair Throw (Dizzy); Wall Spring para Flying Heel Stomp para Cartwhell Kick (Dizzy)",
         Gloria: 1,
         Honra: 6,

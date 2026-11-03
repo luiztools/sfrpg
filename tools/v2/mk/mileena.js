@@ -145,7 +145,7 @@ function MileenaMKX() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Backflip, Tumbling Attack, Bite, Athletic, Head Bite, Double-Hit Kick, Ax Kick, Handstand Kick",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Back Roll Throw, Backflip, Tumbling Attack, Bite, Athletic, Head Bite, Double Hit Kick, Ax Kick, Handstand Kick",
         Combos: "Tumbling Attack para Short (dizzy); Sai Arremessada para Tumbling Attack; Forward para Forward para Forward (dizzy); Jab para Jab para Forward (dizzy); Ax Kick para Handstand Kick para Foot Sweep (dizzy)",
         Gloria: 4,
         Honra: 0,

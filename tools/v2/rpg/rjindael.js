@@ -37,7 +37,7 @@ function Rjindael() {
         Apresamento: 3,
         Esportes: 4,
         Foco: 3,
-        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double Hit Punch, Heart Punch, Backflip Kick, Double Hit Kick, Gekiro, Jump, Wall Spring, Drunken Monkey Roll, Throw, Zen no Mind, Regeneration",
+        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double Hit Punch, Heart Punch, Backflip Kick, Double Hit Kick, Gekiro, Jump, Wall Spring, Drunken Monkey Roll, Throw, Zen No Mind, Regeneration",
         Combos: "Drunken Monkey Roll para Gekiro (Dizzy); Wall Spring + Jab para Double Hit Punch (Dizzy); Jump + Short para Double Hit Kick (Dizzy)",
         Gloria: 6,
         Honra: 1,

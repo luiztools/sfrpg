@@ -42,7 +42,7 @@
         Apresamento: 1,
         Esportes: 3,
         Foco: 1,
-        ManobrasEspeciais: "Fist Sweep, Extendible Limbs, Brain Cracker, Spinning Knuckle, Jump, Flying Knee Thrust, Slide Kick, Double Dread Kick, Double-Hit Kick, Forward Flip Knee, Ice Blast, Thunderclap",
+        ManobrasEspeciais: "Fist Sweep, Extendible Limbs, Brain Cracker, Spinning Knuckle, Jump, Flying Knee Thrust, Slide Kick, Double Dread Kick, Double Hit Kick, Forward Flip Knee, Ice Blast, Thunderclap",
         Combos: "Thunderclap para Double Dread Kick para Brain Cracker (Dizzy); Bloqueio para Ice Blast para Flying Knee Thrust (Dizzy)",
         Gloria: 5,
         Honra: 2,

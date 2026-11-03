@@ -616,7 +616,7 @@ function Hunter() {
         Foco: 0,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Slide Kick, Double-Hit Punch",
+        ManobrasEspeciais: "Slide Kick, Double Hit Punch",
         Combos: "",
         Gloria: 1,
         Honra: 0,

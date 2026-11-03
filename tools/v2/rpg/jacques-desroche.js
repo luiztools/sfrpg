@@ -46,7 +46,7 @@
         Apresamento: 1,
         Esportes: 5,
         Foco: 3,
-        ManobrasEspeciais: "Spinning Back Fist, Power Uppercut, Triple Strike, Stepping Front Kick, Reverse Frontal Kick, Ax Kick, Double-Hit Kick, Deflecting Punch, Jump, Displacement, Esquives",
+        ManobrasEspeciais: "Spinning Back Fist, Power Uppercut, Triple Strike, Stepping Front Kick, Reverse Frontal Kick, Ax Kick, Double Hit Kick, Deflecting Punch, Jump, Displacement, Esquives",
         Combos: "Deflecting Punch para Stepping Front Kick para Power Uppercut (Dizzy); Jab para Spinning Back Fist para Ax Kick (Dizzy)",
         Gloria: 5,
         Honra: 6,

@@ -52,7 +52,7 @@
         Esportes: 4,
         Foco: 5,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Power Uppercut, Elbow Smash, Double-Hit Kick, Light Feet, Foot Sweep, Throw, Jump, Ansatsuken, Ear Pop, Wall Spring, Eye Rake",
+        ManobrasEspeciais: "Power Uppercut, Elbow Smash, Double Hit Kick, Light Feet, Foot Sweep, Throw, Jump, Ansatsuken, Ear Pop, Wall Spring, Eye Rake",
         Combos: "Double Hit Kick para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;",
         Gloria: 8,
         Honra: 0,

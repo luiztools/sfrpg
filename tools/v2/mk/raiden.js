@@ -203,7 +203,7 @@ const tecnicas = [];
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Shock Treatment, Yoga Teleport, Flying Head Butt, Lightning, Psychokinetic Channeling, Improved Yoga Teleport, Double-Hit Kick, Dragon Punch, Back Breaker, Knee Basher, Flying Body Spear",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Shock Treatment, Yoga Teleport, Flying Head Butt, Lightning, Psychokinetic Channeling, Improved Yoga Teleport, Double Hit Kick, Dragon Punch, Back Breaker, Knee Basher, Flying Body Spear",
         Combos: "Strong para Power Uppercut para Roundhouse (dizzy); Throw para Flyng Head Butt; Jab para Jab para Power Uppercut (dizzy); Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (Dizzy)",
         Gloria: 10,
         Honra: 10,
