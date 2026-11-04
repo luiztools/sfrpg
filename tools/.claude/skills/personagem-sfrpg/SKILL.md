@@ -59,7 +59,8 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
 
 ## Pesquisa
 
-- **Cronologia SNK (AoF/KoF):** a oficial do site é a de **Art of Fighting (1979)**. Formato: `<strong>Nascimento:</strong> 02/08/1957 (22 anos em AoF)`. Para personagens de AoF2/AoF3 use "(N anos em AoF2)" e "(N anos em AoF3)" com o mesmo ano-base 1979 (ex.: Kasumi 29/03/1963, 16 anos em AoF3). Sem idade conhecida: `dd/mm (ano desconhecido)`. O peso também segue a era AoF quando as fontes divergem.
+- **Cronologia SNK (AoF/KoF):** a oficial do site é a de **Art of Fighting**: AoF = **1978**, AoF2 = **1979**, AoF3 = **1980**. Como não há ano de nascimento oficial, use a idade (oficial ou aproximada) no jogo de estreia do lutador e calcule o ano subtraindo-a do ano desse jogo. Formato: `<strong>Nascimento:</strong> 02/08/1956 (22 anos em AoF)`; para estreantes de AoF2/AoF3 use "(N anos em AoF2)" e "(N anos em AoF3)" (ex.: Geese 21/01/1953, 26 anos em AoF2; Kasumi 29/03/1964, 16 anos em AoF3). Sem idade conhecida: `dd/mm (ano desconhecido)`. O peso também segue a era AoF quando as fontes divergem.
+- **Cronologia de Fatal Fury** (fim do post `fatal-fury`): FF1 = **1991**, FF2 = **1992** (Special conta como era FF2), FF3 = **1995**. Mesma regra: idade no jogo de estreia, ano = ano do jogo − idade, formato "(21 anos em FF1)", "(28 anos em FF2)", "(22 anos em FF3)". Se a fonte só dá a idade em um jogo posterior, desconte os anos até a estreia (Terry: 22 em FF2 → 21 em FF1 → 1970).
 - **Fontes:** a wiki da SNK no Fandom, breezewiki, dreamcancel, pixiv e nicovideo bloqueiam o WebFetch (403/Anubis). O que funciona:
   - `https://days366.com/title/21_02_26.html`: tabela de aniversário, tipo sanguíneo, altura e peso de toda a série Ryuuko no Ken (AoF).
   - WebSearch em **japonês** com o nome em katakana/kanji (ex.: `ロディ・バーツ 国籍 出身 プロフィール`): o resumo da busca traz o perfil da Pixiv Encyclopedia e do Nico Nico Pedia.
