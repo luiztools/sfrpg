@@ -33,7 +33,7 @@ Quando o usuário mandar correções uma por mensagem, aplique cada uma e siga e
 - O objeto `manobras` é agrupado por técnica, com comentários (`//Esportes`, `//Apresamento`...). Coloque a entrada no bloco da técnica, perto de uma manobra relacionada (ex.: logo depois do pré-requisito).
 - **Técnica = a primeira técnica dos Pré-requisitos.** Essa é a categoria da manobra: vira o `Tecnica` da entrada, a tag do post e a lista do post da técnica. Ex.: "Esportes 4, Flying Heel Stomp" → `Tecnica: "Esportes"`.
   - **Cada manobra tem UMA categoria só:** uma única tag de técnica e uma única lista de técnica. Se os pré-requisitos estiverem fora de ordem, reordene no post para que a categoria venha primeiro (ex.: Take Down → "Apresamento 3, Chute 3").
-  - Exceção: a categoria pode seguir a manobra pré-requisito. Daikyou Burning ("Foco 3, Butsumetsu Buster") é Apresamento porque a Butsumetsu Buster é Apresamento.
+  - Exceção: a categoria pode seguir a manobra pré-requisito.
   - O `Tecnica` em `manobras.js` é a técnica usada no **cálculo do dano**. Normalmente é a mesma da categoria, mas não quando o Sistema diz outra (Take Down: categoria Apresamento, mas "o dano é calculado com Chute" → `Tecnica: "Chute"`).
   - Manobra de Foco exclusiva de Elemental (ex.: Flaming Fist, "Foco 1, Soco 1, Elemental 2") é da categoria Foco e fica no post Elemental, não na lista de Soco.
 - Formato (uma linha, tab no início):

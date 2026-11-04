@@ -168,10 +168,9 @@ const manobras = {
 	"Bear Hug": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "Sustentado" },
 	"Brain Cracker": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: "Um", Sistema: "Sustentado" },
 	"Bushin Musou Renge": { Tecnica: "Apresamento", ModVel: -2, ModDano: "4/4/4", ModMov: "Um", Chi: 1, FdV: 1, Sistema: "Três Hits baseado em Soco, Chute ou Apresamento; oponente absorve com Honra" },
-	"Butsumetsu Buster": { Tecnica: "Apresamento", ModVel: -2, ModDano: 5, ModMov: "Um", FdV: 1, Sistema: "Oponente arremessado em hex adjacente; KD" },
 	"Choke Throw": { Tecnica: "Apresamento", ModVel: -1, ModDano: 2, ModMov: 0, Sistema: "Pode interromper oponente em pé ou em Aérea; atacante e alvo terminam no mesmo hex; KD" },
 	"Clinch": { Tecnica: "Apresamento", ModVel: 2, ModDano: 0, ModMov: "Um", Sistema: "Não causa dano real, apenas anula manobra do oponente se agarrar. +1 Vel em apresamentos no próximo turno." },
-	"Daikyou Burning": { Tecnica: "Apresamento", ModVel: 0, ModDano: 5, ModMov: 0, Chi: 1, FdV: 1, Sistema: "KD; pode arrastar oponente pelo chão com movimento restante causando um dado de dano por hex" },
+	"Daikyou Burning": { Tecnica: "Soco", ModVel: 0, ModDano: -1, ModMov: "Um/-2", FdV: 2, Sistema: "Só contra vítima em Knockdown ou Atordoada; entra no hex da vítima e a arrasta com o 2º modificador de Movimento; rola o dano a cada hex arrastado; dano calculado com Soco (punhos ou arma); KD no final" },
 	"Disengage": { Tecnica: "Apresamento", ModVel: 1, ModMov: -2, Sistema: "Jogado quando estiver preso em Sustentado; o lutador pode fazer um 2º teste para sair do apresamento (Destreza vs. Força do atacante)" },
 	"Dislocate Limb": { Tecnica: "Apresamento", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "O alvo tem -3 VEL para todas as Manobras; Socos do alvo tem também -2 no DAN. Alvo pode recolocar o braço no lugar, perdendo um turno." },
 	"Displacement": { Tecnica: "Soco", ModVel: 2, ModDano: -1, ModMov: 1, FdV: 1, Sistema: "Precisa interromper um ataque; o lutador move-se para um dos lados esquivando do ataque e deve mover-se para o alvo à alcance de seu contra-soco" },
@@ -243,6 +242,7 @@ const manobras = {
 	"Web Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: "+0", ModMov: 3, Chi: 1, FdV: 1, Sistema: "Absorve com Raciocínio. Causa Dizzy, sem dano real." },
 	"Hyper Tackle": { Tecnica: "Esportes", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "Linha reta. Tem de entrar no hex. Acerta todos até o fim do movimento. -1 Mov por cada impacto. KD. Crítico cancela." },
 	"Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: -1, ModMov: "Nenhum", Chi: 1, FdV: 1, Sistema: "Causa KD; até 3 hits;" },
+	"Elemental Explosion": { Tecnica: "Esportes", ModVel: 0, ModDano: "-1/-1", ModMov: -2, Chi: 1, Sistema: "Acerta duas vezes: o 1º com o corpo (Força + Esportes - 1) e o 2º com a energia (Inteligência + Foco - 1); KD se o 2º acerto causar dano; pode ser usada sem gastar Chi, mas causa apenas o 1º acerto" },
 	"Shishiruirui": { Tecnica: "Esportes", ModVel: -1, ModDano: -1, ModMov: -1, FdV: 1, Sistema: "Aérea e tem de interromper aérea; Bate e empurra em linha reta; Causa KD no final" },
 	"Empty Step": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Passiva. Lutador pode atravessar hexes ocupados ou parcialmente bloqueados durante seu movimento." },
 
@@ -252,6 +252,7 @@ const manobras = {
 	"Chi Kun Healing": { Tecnica: "Foco", ModVel: -1, ModMov: -1, Chi: 1, Sistema: "Restaura 1 Saúde/ponto de Chi, até um máximo de (Foco do lutador) por turno; pode ser usado em outros no mesmo hex" },
 	"Cobra Charm": { Tecnica: "Foco", ModVel: -1, ModMov: -1, Chi: 1, Alcance: "Três", Sistema: "precisa olhar nos olhos do alvo; atacante precisa vencer uma disputa de Raciocínio + Mistérios para encantar o alvo; o alvo pode quebrar o controle vencendo um teste de Inteligência como em um Sustentado; o encantador só pode usar manobras de movimento sem se afastar mais de 3 hex e pode dar comandos simples para o alvo" },
 	"Extendible Limbs": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Combinado com socos e chutes básicos para adicionar 1 hex de Alcance/Foco; Oponentes podem atingir qualquer parte do membro estendido" },
+	"Final Wave": { Tecnica: "Foco", ModVel: -2, ModDano: 5, ModMov: "Nenhum", Chi: 2, Alcance: "Três", Sistema: "Área circular de 3 hex de raio, centrada no próprio lutador ou num hex à frente a até 3 hex; atinge aliados e inimigos, menos o próprio lutador; KD se causar dano; -1 de dano por hex de distância do centro (+5 a +3)" },
 	"Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "Linha de visão. Projétil." },
 	"Flying Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, ModMov: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; Não pode ser esquivada com Jump" },
 	"Ghost Form": { Tecnica: "Foco", ModVel: 1, ModMov: 0, Chi: 2, Sistema: "2 Chi 1º turno e 1 Chi nos turnos subsequentes; o lutador fica insubstancial" },
@@ -635,6 +636,9 @@ function calculaDano(npc, manobra) {
 	if (manobra.Nome === "Triple Strike")
 		return (npc["Força"] + npc["Soco"]) + "/" + (npc["Força"] + npc["Soco"]) + "/" + (npc["Força"] + npc["Chute"] + 1);
 
+	if (manobra.Nome === "Elemental Explosion")
+		return (npc.Forca + npc.Esportes - 1) + "/" + (npc.Inteligencia + npc.Foco - 1);
+
 	if (manobra.Nome === "Tameshiwari")
 		return (npc["Força"] + npc["Soco"]) * 2;
 
@@ -720,6 +724,8 @@ function calculaMovimento(npc, manobra) {
 	if (manobra.ModMov === null || manobra.ModMov === undefined || manobra.ModMov === "Nenhum") return "-";
 	if (manobra.ModMov === "Especial") return "Esp.";
 	if (valorFixoRegex.test(manobra.ModMov)) return manobra.ModMov;
+	if (typeof manobra.ModMov === "string" && manobra.ModMov.indexOf("/") !== -1)//ex.: "Um/-2"
+		return manobra.ModMov.split("/").map(mod => calculaMovimento(npc, { ModMov: valorFixoRegex.test(mod) ? mod : parseInt(mod) })).join("/");
 
 	const modMov = parseInt(manobra.ModMov);
 	const movFinal = npc.Esportes + modMov;
@@ -1062,6 +1068,12 @@ function carregarCartas(npc) {
 	// 		</table>`;
 }
 
+function numeroPorExtenso(valor) {
+	const extenso = { "um": 1, "dois": 2, "três": 3, "quatro": 4, "cinco": 5, "seis": 6 };
+	const texto = (valor + "").toLowerCase();
+	return extenso[texto] || parseInt(texto);
+}
+
 function getPCManobra(nome) {
 	const manobra = manobras[nome];
 	if (!manobra) return 1;//no mínimo cada manobra vale 1 PC
@@ -1093,7 +1105,11 @@ function getPCManobra(nome) {
 	//vantagens adicionam 1 ponto cada
 	if (/(knockdown|KD)/gi.test(manobra.Sistema))
 		ModDano += 1;
-	if (/(área)/gi.test(manobra.Sistema))
+	//área vale 1 ponto por hex de raio (mínimo 1)
+	const raio = /(\d+|um|dois|três) (?:hex|hexes|hexágonos?) de raio|raio de (\d+|um|dois|três) (?:hex|hexes|hexágonos?)/i.exec(manobra.Sistema);
+	if (raio)
+		ModDano += numeroPorExtenso(raio[1] || raio[2]);
+	else if (/(área)/gi.test(manobra.Sistema))
 		ModDano += 1;
 	if (/(ignora)/gi.test(manobra.Sistema) || /bloqueio|apresamento/i.test(manobra.Tecnica))//apresamentos ignoram bloqueio, e bloqueio tem bonus de ABS
 		ModDano += 1;
@@ -1104,12 +1120,19 @@ function getPCManobra(nome) {
 	if (/(agachamento)/gi.test(manobra.Sistema))
 		ModDano += 1;
 
+	//alcance maior que 1 hex adiciona 1 ponto (alcances por atributo/técnica contam como maior que 1)
+	if (manobra.Alcance !== undefined && manobra.Alcance !== "") {
+		const alcance = numeroPorExtenso(manobra.Alcance);
+		if (isNaN(alcance) || alcance > 1)
+			ModDano += 1;
+	}
+
 	//gastos em chi e FdV são penalidades para manobra
 	ModDano -= parseInt(manobra.Chi || 0) + parseInt(manobra.FdV || 0)
 
 	let ModMov = 0;
 	const modificadorMov = (manobra.ModMov + "").toLowerCase();
-	if (modificadorMov === "nenhum") ModMov = -2;
+	if (modificadorMov === "nenhum") ModMov = 0;//mesmo valor de quando não há ModMov
 	else if (modificadorMov === "um") ModMov = -1;
 	else if (modificadorMov === "dois") ModMov = 0;
 	else if (modificadorMov === "três") ModMov = 1;
