@@ -354,7 +354,7 @@ const manobras = {
 	"Tanden Copy": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", Chi: 1, Alcance: "Percepção", Sistema: "Linha de visão, Rola PER + CIBER dificuldade 5 + 1 por ponto de poder para copiar a manobra assistida" },
 
 	//Outros
-	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado/Chicote", ModVel: 0, ModDano: "1/1/1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
+	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado/Chicote/Faca", ModVel: 0, ModDano: "-1/-1/-1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
 	"Weapon Sweep": { Tecnica: "Bastão/Lança/Chicote", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento. Armado." },
 	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano." },
 	"Weapon Uppercut": { Tecnica: "Bastão/Espada/Faca/Garra", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD vs. Aérea" },
