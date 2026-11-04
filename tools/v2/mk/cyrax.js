@@ -3,7 +3,7 @@ function CyraxMK3() {
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Apoio", 3);
     antecedentes[2] = newCaracteristica("Cibernético", 5);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 3);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 3);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 5);

@@ -3,7 +3,7 @@ function SubZeroBiHan() {
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 5);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
 
     const tecnicas = [];
@@ -73,7 +73,7 @@ function SubZeroKuaiLiang() {
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 5);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
 
     const tecnicas = [];
@@ -143,7 +143,7 @@ function SubZeroMK4() {
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 5);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
 
     const tecnicas = [];
@@ -215,7 +215,7 @@ function SubZeroMKX() {
     antecedentes[0] = newCaracteristica("Aliados", 4);
     antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 5);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
 
     const tecnicas = [];
@@ -287,7 +287,7 @@ function CyberSubZero() {
     antecedentes[0] = newCaracteristica("Cibernético", 5);
     antecedentes[1] = newCaracteristica("Elemental (Gelo)", 5);
     antecedentes[2] = newCaracteristica("Fama", 2);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 5);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 5);
     antecedentes[4] = newCaracteristica("Sensei", 4);
 
     const tecnicas = [];

@@ -1,7 +1,7 @@
 function EijiKisaragi() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Fama", 1);
-    antecedentes[1] = newCaracteristica("Herança do Clã", 4);
+    antecedentes[1] = newCaracteristica("Herança de Clã", 4);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Espada", 4);

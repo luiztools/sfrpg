@@ -2,7 +2,7 @@ function Frost() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 1);
     antecedentes[1] = newCaracteristica("Elemental (Gelo)", 4);
-    antecedentes[2] = newCaracteristica("Herança do Clã", 4);
+    antecedentes[2] = newCaracteristica("Herança de Clã", 4);
     antecedentes[3] = newCaracteristica("Sensei", 4);
 
     const tecnicas = [];

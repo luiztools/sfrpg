@@ -3,7 +3,7 @@ function SmokeMK3() {
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Apoio", 3);
     antecedentes[2] = newCaracteristica("Cibernético", 5);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 4);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 4);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Arremesso", 5);
@@ -74,7 +74,7 @@ function SmokeMK2() {
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Apoio", 3);
     antecedentes[2] = newCaracteristica("Elemental (Ar)", 5);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 4);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 4);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Arremesso", 5);

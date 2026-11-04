@@ -3,7 +3,7 @@ function IbukiSF5() {
     antecedentes[0] = newCaracteristica("Mascote", 3);
     antecedentes[1] = newCaracteristica("Aliados", 5);
     antecedentes[2] = newCaracteristica("Contatos", 3);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 5);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 5);
     antecedentes[4] = newCaracteristica("Recursos", 2);
 
     var tecnicas = [];
@@ -79,7 +79,7 @@ function IbukiSF4() {
     antecedentes[0] = newCaracteristica("Mascote", 3);
     antecedentes[1] = newCaracteristica("Aliados", 4);
     antecedentes[2] = newCaracteristica("Contatos", 2);
-    antecedentes[3] = newCaracteristica("Herança do Clã", 5);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 5);
     antecedentes[4] = newCaracteristica("Recursos", 2);
 
     var tecnicas = [];

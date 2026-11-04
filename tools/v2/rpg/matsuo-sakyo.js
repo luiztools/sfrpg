@@ -31,7 +31,7 @@ function MatsuoSakyo() {
         Misterios: 5,
         Estilos: 3,
         NovosConhecimentos: [newCaracteristica("Idiomas", 5)],
-        Antecedentes: [newCaracteristica("Apoio", 4), newCaracteristica("Recursos", 5), newCaracteristica("Fama", 2), newCaracteristica("Heranca de Cla", 5), newCaracteristica("Aliados", 4), newCaracteristica("Staff", 5)],
+        Antecedentes: [newCaracteristica("Apoio", 4), newCaracteristica("Recursos", 5), newCaracteristica("Fama", 2), newCaracteristica("Herança de Clã", 5), newCaracteristica("Aliados", 4), newCaracteristica("Staff", 5)],
         Soco: 4,
         Chute: 4,
         Bloqueio: 3,

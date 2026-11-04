@@ -71,6 +71,7 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
 
 ## Imagens
 
+- **Imagem principal vinda do PDF (padrão):** se a fonte for um PDF e houver ilustração junto ao personagem, use-a como imagem principal sem perguntar. Extraia a imagem embutida com `pymupdf` (`page.get_images()` + `doc.extract_image(xref)`); se ela vier fatiada, com máscara/transparência quebrada ou muito pequena, renderize só a área dela (`page.get_pixmap(clip=rect, dpi=200)`). Abra o resultado (Read) para conferir se é o personagem certo e se não veio com texto ou moldura da página, e depois passe por `img.py main`. **Se o PDF não tiver imagem do personagem, peça a imagem ao usuário** (junto com as outras dúvidas do fim).
 - O usuário costuma mandar URLs. As da Fandom (`static.wikia.nocookie.net`) dão 403 (Cloudflare): **não contorne**. Peça para ele salvar em `~/Downloads` e use o arquivo local. Pinterest, ytimg, gstatic, redd.it e twimg baixam normalmente com `curl`.
 - Coloque cada download numa pasta nova e vazia do scratchpad e rode o Python com `-I`.
 - **Imagem principal:** `img.py main` gera `<slug>.webp`, uma versão média que cabe em 300x300 e a de 150x150. No post, use `width="300"`, ou a largura real se a imagem tiver menos de 300px (para não esticar).
@@ -87,6 +88,11 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
 ## Estrutura do post
 
 Copie o post de referência da franquia (AoF/KoF: `ryo-sakazaki`; Sensei: `gouken`; arma: `carlos`, `vega`, `eagle`). Ordem:
+
+**Gêmeos (ou dupla que a fonte trata como um personagem só) num mesmo post:** siga a estrutura de `yun-e-yang` (exemplo já convertido: `jin-chonshu-e-jin-chonrei`):
+- topo sem imagem: Altura/Peso/País/Nascimento comuns e depois a história e as crônicas comuns aos dois;
+- um bloco por gêmeo: `<div style="float: left; margin: 10px;"><img ... wp-image-ID src=".../<slug-do-gemeo>.webp" width="..." /></div>`, os links de planilha daquele gêmeo, `<strong>Aparência de X:</strong>` e `<strong>Interpretando X:</strong>`, fechando com `<div style="clear: both;"></div>`. Cada gêmeo tem sua própria imagem principal e seu anexo; se as imagens forem bem altas, reduza o `width` para as duas ficarem com altura parecida (cerca de 450px);
+- depois as seções comuns (NPC, Arena, Arma...), o crédito, uma imagem dos dois juntos (se houver) e os banners.
 
 1. `<p style="float: left; margin: 10px;"><img class="alignnone size-full wp-image-ID" src=".../<slug>.webp" alt="" width="300" /></p>`
 2. Link da planilha: `<a title="Planilha em AoF" href="https://sfrpg.com.br/tools/v2/_character.php?name=kof/<slug>&amp;age=aof" target="_blank" rel="noopener"><img src="/img/planilha-aof.jpg" alt="" /></a>` (uma linha por versão/era).
@@ -121,6 +127,8 @@ Copie o post de referência da franquia (AoF/KoF: `ryo-sakazaki`; Sensei: `gouke
    - Mascote: `<p align="center"><a href="https://www.sfrpg.com.br/post/mascote"><img class="size-full wp-image-10061 aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/2026/09/mascotes.jpg" alt="" width="450" height="253" /></a></p>`
    - Duelistas (todo personagem que **porta** arma branca na planilha): `<p align="center"><a href="https://www.sfrpg.com.br/post/duelistas"><img class="size-full wp-image-11154 aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/2025/10/duelista.jpg" alt="" width="450" height="253" /></a></p>`
    - Arena (todo personagem com antecedente Arena, mesmo que a seção ainda não exista): `<p align="center"><a href="https://www.sfrpg.com.br/post/arena"><img class="size-full wp-image-11127 aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/2026/11/arena-banner.jpg" alt="" width="450" height="253" /></a></p>`
+   - Ninja (estilo com "Ninjitsu", inclusive combinado e Ninjitsu Espanhol, ou antecedente Herança de Clã; também entra na lista "Exemplos de Ninjas" do post `ninjas`, com "(espanhol)" para Ninjitsu Espanhol). O antecedente se escreve sempre `newCaracteristica("Herança de Clã", N)`: `<p align="center"><a href="https://www.sfrpg.com.br/post/ninjas"><img class="size-full wp-image-11170 aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/2026/03/ninja.jpg" alt="" width="450" height="253" /></a></p>`
+   - Psycho Power (todo personagem com o antecedente `newCaracteristica("Psycho Power", N)` em qualquer versão da ficha): `<p align="center"><a href="https://www.sfrpg.com.br/post/psycho-power"><img class="size-full wp-image-10608 aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/2026/10/psycho-power.jpg" alt="" width="450" height="253" /></a></p>`
    - Forças Especiais (estilo com "Forças Especiais", inclusive combinado): `<a href="https://www.sfrpg.com.br/post/forcas-especiais"><img class="size-full wp-image-8039 aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/2024/04/forcas-especiais-banner.jpg" alt="" width="1200" height="675" /></a>`
    - Franquia: AoF `wp-image-10505` (`/post/art-of-fighting`), KoF `wp-image-10461` (`/post/the-king-of-fighters-rpg`). Copie a marcação exata de um post existente. **Nem todo personagem da pasta `v2/kof/` esteve em jogos KoF**: quem só apareceu em Art of Fighting (Jack Turner, Lee Pai Long, Mickey Rogers, John Crawley, Ryuhaku Todoh, Temjin, Wang Koh San, Rody Birts, Karman Cole, Jin Fuha, Lenny Creston, Sinclair, Tom Wyler) leva só o banner de AoF, **sem** o banner de KoF, e precisa estar na lista "Lutadores de Art of Fighting" (no fim do post `art-of-fighting`, agrupada por jogo). Personagens de AoF que também estão em KoF (Ryo, Robert, Yuri, Takuma, King, Kasumi, Eiji, Mr. Big, Geese) levam os dois banners.
 
@@ -163,6 +171,7 @@ Ao criar ou alterar personagem, mantenha atualizadas as listas no fim destes pos
 | `mascote` | Lista de Mascotes | quem tem antecedente Mascote: "Animal (Dono)". Todos também recebem o banner de Mascote |
 | `forcas-especiais` | Membros famosos | estilo Forças Especiais, com unidade/país entre parênteses (pesquise se o post não disser). Todos também recebem o banner |
 | `arena` | Locais de Conflito: "No Ringue" (arenas de luta) e "Fora do Ringue" (dojôs, academias, templos, octógonos de academia) | quem tem antecedente Arena: "Nome da arena (<a>Personagem</a>)". Se a arena já estiver listada com outro personagem, acrescente o nome no mesmo item. Todos também recebem o banner de Arena |
+| `psycho-power` | "Personagens que possuem Psycho Power, em variados graus de controle" | quem tem o antecedente Psycho Power em qualquer versão da ficha: `<li><a href="/post/<slug>">Nome</a></li>` (personagens de fã com "(não-oficial)", como Raj). Todos também recebem o banner de Psycho Power. Ache-os com `grep -rln 'newCaracteristica("Psycho Power' v2` |
 
 Listas de personagens em posts de franquia/história ficam **no final do post**, depois dos banners. Nos textos desses posts, coloque link no nome de cada personagem que tenha post, na primeira vez que ele aparece (personagens sem post, como Jeff Bogard ou Freia, ficam sem link).
 

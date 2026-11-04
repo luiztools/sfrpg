@@ -30,7 +30,7 @@ function DanniClaw() {
         Misterios: 2,
         Estilos: 3,
         NovosConhecimentos: [],
-        Antecedentes: [newCaracteristica("Apoio", 3), newCaracteristica("Heranca de Cla", 4), newCaracteristica("Aliados", 4)],
+        Antecedentes: [newCaracteristica("Apoio", 3), newCaracteristica("Herança de Clã", 4), newCaracteristica("Aliados", 4)],
         Soco: 5,
         Chute: 4,
         Bloqueio: 3,

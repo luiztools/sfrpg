@@ -3,7 +3,7 @@
     antecedentes[0] = newCaracteristica("Contatos", 5);
     antecedentes[1] = newCaracteristica("Fama", 3);
     antecedentes[2] = newCaracteristica("Recursos", 3);
-    antecedentes[3] = newCaracteristica("Heranca de Cla", 5);
+    antecedentes[3] = newCaracteristica("Herança de Clã", 5);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Espada", 4);
