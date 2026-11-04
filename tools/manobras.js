@@ -174,6 +174,7 @@ const manobras = {
 	"Disengage": { Tecnica: "Apresamento", ModVel: 1, ModMov: -2, Sistema: "Jogado quando estiver preso em Sustentado; o lutador pode fazer um 2º teste para sair do apresamento (Destreza vs. Força do atacante)" },
 	"Dislocate Limb": { Tecnica: "Apresamento", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "O alvo tem -3 VEL para todas as Manobras; Socos do alvo tem também -2 no DAN. Alvo pode recolocar o braço no lugar, perdendo um turno." },
 	"Displacement": { Tecnica: "Soco", ModVel: 2, ModDano: -1, ModMov: 1, FdV: 1, Sistema: "Precisa interromper um ataque; o lutador move-se para um dos lados esquivando do ataque e deve mover-se para o alvo à alcance de seu contra-soco" },
+	"Elemental Rage": { Tecnica: "Apresamento", ModVel: 0, ModDano: 3, ModMov: "Um", Chi: 1, Sistema: "Dano igual a Inteligência + Apresamento +3; se causar dano, KD; ignora Grappling Defense" },
 	"Eye Rake": { Tecnica: "Apresamento", ModVel: -2, ModDano: -3, ModMov: 0, Sistema: "Se funcionar, alvo deve rolar Percepção + Luta às Cegas, se falhar estará Dizzy no próximo turno; -1 Honra; em torneios -1 Glória também" },
 	"Face Slam": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD" },
 	"Flying Tackle": { Tecnica: "Apresamento", ModVel: -1, ModDano: 0, ModMov: 2, Sistema: "Atacante e alvo sofrem KD se nenhum dano for causado; ambos voam por 2 hex a partir do hex do oponente; +2 VEL na próxima manobra se ela for um Apresamento" },
@@ -638,6 +639,9 @@ function calculaDano(npc, manobra) {
 
 	if (manobra.Nome === "Elemental Explosion")
 		return (npc.Forca + npc.Esportes - 1) + "/" + (npc.Inteligencia + npc.Foco - 1);
+
+	if (manobra.Nome === "Elemental Rage")
+		return npc.Inteligencia + npc.Apresamento + 3;
 
 	if (manobra.Nome === "Tameshiwari")
 		return (npc["Força"] + npc["Soco"]) * 2;
