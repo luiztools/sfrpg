@@ -1,10 +1,7 @@
 function Necalli() {
     var antecedentes = [];
     antecedentes[0] = newCaracteristica("Fama", 3);
-    antecedentes[1] = newCaracteristica("Hibrido Animal", 4);
-
-    var tecnicas = [];
-    tecnicas[0] = newCaracteristica("Garra", 6);
+    antecedentes[1] = newCaracteristica("Híbrido Animal", 6);
 
     var necalli = {
         Nome: "Necalli",
@@ -44,9 +41,8 @@ function Necalli() {
         Apresamento: 6,
         Esportes: 5,
         Foco: 3,
-        NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Power Uppercut, Dragon Punch, Jump, Foot Sweep, Throw, Power Up, Shockwave, Head Butt, Dive Kick, Flying Head Butt, Storm Hammer, Hyper Fist, Pile Driver, Spinning Pile Driver, Daikyou Burning, Heart Punch, Shockwave",
-        Combos: "Forward para Roundhouse para Shockwave (Dizzy); Garra Jab para Garra Strong para Garra Fierce (Dizzy);Shockwave para Shockwave; Daikyou Burning para Hyper Fist",
+        ManobrasEspeciais: "Power Uppercut, Dragon Punch, Jump, Foot Sweep, Throw, Power Up, Shockwave, Head Butt, Dive Kick, Flying Head Butt, Storm Hammer, Hyper Fist, Pile Driver, Spinning Pile Driver, Daikyou Burning, Heart Punch, Shockwave, Claw",
+        Combos: "Forward para Roundhouse para Shockwave (Dizzy); Jab para Strong para Fierce (Dizzy);Shockwave para Shockwave; Daikyou Burning para Hyper Fist",
         Gloria: 3,
         Honra: 0,
         Chi: 3,

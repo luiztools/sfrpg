@@ -47,3 +47,15 @@ wp_upload_imgs() { # <AAAA/MM> <arquivos...>
         curl -s -o /dev/null -w "%{http_code} $(basename "$f")\n" "https://www.sfrpg.com.br/wp-content/uploads/$ym/$(basename "$f")"
     done
 }
+
+# Remove do WP Super Cache as páginas de um ou mais posts (gravar direto no banco não invalida o cache).
+# A página é regenerada na visita seguinte. Confira depois a URL sem parâmetros.
+wp_cache_purge() { # <slug> [<slug>...]
+    local cred="$(envget FTP_USER):$(envget FTP_PASSWORD)" host="$(envget FTP_HOST)" s dir f
+    for s in "$@"; do
+        dir="public/wp-content/cache/supercache/www.sfrpg.com.br/post/$s"
+        curl -sS --user "$cred" "ftp://$host/$dir/" --list-only 2>/dev/null | grep -v '^\.\.\?$' | while read -r f; do
+            curl -sS --user "$cred" "ftp://$host/" -Q "DELE $dir/$f" -o /dev/null || echo "ERRO $s/$f"
+        done
+    done
+}

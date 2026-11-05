@@ -7,7 +7,7 @@ description: Cadastra uma Manobra Especial nova no sfrpg.com.br — entrada em m
 
 Tudo em português, exceto o nome da manobra, que fica em inglês. Antes de começar, leia o CLAUDE.md do projeto: encoding com BOM, tabs em `manobras.js`, cache-buster e a proibição de ler `v2/wp-config.php`.
 
-Os scripts de banco, FTP e imagem são os da skill de personagens: `.claude/skills/personagem-sfrpg/scripts/` (`wp.sh`, `wp_meta.py`, `img.py`). A seção "Banco (WordPress)" daquela skill vale aqui também: nunca imprima credenciais, grave o texto em hex, use `wp_post_get`/`wp_post_put` para editar posts existentes e mostre o `diff` antes de gravar.
+Os scripts de banco e FTP são os da skill de personagens (`.claude/skills/personagem-sfrpg/scripts/wp.sh`), e o tratamento de imagens está na skill `imagem-sfrpg`. A seção "Banco (WordPress)" da skill de personagens vale aqui também: nunca imprima credenciais, grave o texto em hex, use `wp_post_get`/`wp_post_put` para editar posts existentes e mostre o `diff` antes de gravar.
 
 ## Fluxo
 
@@ -100,16 +100,13 @@ Modelos: `double-hit-kick`, `brain-cracker`, `drunken-monkey-roll`. Linhas solta
 
 ## Imagem
 
-1. **Procure antes se ela já existe no blog**, a começar pelos posts das manobras relacionadas (pré-requisito, variações). Baixe a imagem existente e compare com `cmp` com a que o usuário mandou. Se for igual, **reaproveite o anexo** (`wp-image-<ID>` e a URL existente) e não suba nada. Ex.: a Multiple Stomp usa o GIF da Flying Heel Stomp (anexo 9511, `2024/03/flying-heel-stomp.gif`).
-   ```sql
-   SELECT p.ID FROM wp_posts p JOIN wp_postmeta m ON m.post_id=p.ID AND m.meta_key='_wp_attached_file' WHERE m.meta_value LIKE '%<nome>%';
-   ```
-2. Se for nova: renomeie para `<slug>.<ext>` numa pasta nova do scratchpad, gere a miniatura 150x150 (GIF: quadro estático em `.gif`; outras: `img.py`) e envie com `wp_upload_imgs AAAA/MM ...`. Crie o anexo (`post_type='attachment'`, `post_status='inherit'`, `post_parent=<ID do post>`, `guid=<URL>`, `post_mime_type`) com `_wp_attached_file` e `_wp_attachment_metadata` (`wp_meta.py`, valide com `php -r 'unserialize(...)'`). Sem Pillow no sistema: crie um venv no scratchpad.
+1. **Procure antes se ela já existe no blog** e reaproveite o anexo se for igual ("Origem da imagem", na skill `imagem-sfrpg`).
+2. Se for nova: converta e publique conforme "Conversão" (imagem avulsa) e "Publicação", na mesma skill.
 3. **Posição:**
    - imagem **vertical** (altura > largura): sempre no **fim do post**, depois do crédito;
    - imagem horizontal: pode ficar entre a descrição e o Sistema (como na Double Hit Kick) ou no fim.
    - Marcação: `<img class="size-full wp-image-<ID> aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/AAAA/MM/<arquivo>" alt="" width="W" height="H" />`.
-4. **GIF animado nunca é imagem destacada** (`_thumbnail_id`). A destacada só pode ser imagem estática (jpg/png/webp, de preferência banner 16:9). Se a manobra só tiver GIF, o post fica sem destacada.
+4. **Imagem destacada:** siga a regra de GIF animado em "Publicação", na skill `imagem-sfrpg`. Se a manobra só tiver GIF, o post fica sem destacada.
 
 ## Listas cruzadas (posts publicados)
 

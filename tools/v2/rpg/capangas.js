@@ -353,11 +353,86 @@ function Hockey() {
     return personagem;
 }
 
+function HomemRa() {
+    const antecedentes = [];
+
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Faca", 1);
+    tecnicas[1] = newCaracteristica("Arremesso", 1);
+
+    const armas = [];
+    armas[0] = "Faca";
+    armas[1] = "Arpão de Mergulho";
+
+    const personagem = {
+        Nome: "Homem-Rã",
+        Estilo: "Briga",
+        Escola: "",
+        Jogador: "NPC",
+        Assinatura: "Nada rapidamente",
+        Conceito: "Mergulhador",
+        Cronica: "",
+        Equipe: "Shadaloo",
+        Time: "Shadaloo",
+        Forca: 3,
+        Destreza: 2,
+        Vigor: 2,
+        Carisma: 2,
+        Manipulacao: 2,
+        Aparencia: 2,
+        Percepcao: 2,
+        Inteligencia: 1,
+        Raciocinio: 2,
+        Prontidao: 0,
+        Interrogacao: 0,
+        Intimidacao: 2,
+        Perspicacia: 0,
+        Manha: 1,
+        Labia: 0,
+        NovosTalentos: [],
+        LutaCega: 0,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 2,
+        Furtividade: 0,
+        Sobrevivencia: 0,
+        NovasPericias: [],
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 0,
+        Misterios: 0,
+        Estilos: 0,
+        NovosConhecimentos: [],
+        Antecedentes: antecedentes,
+        Soco: 1,
+        Chute: 0,
+        Bloqueio: 1,
+        Apresamento: 1,
+        Esportes: 1,
+        Foco: 0,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Scuba Slash",
+        Combos: "",
+        Gloria: 1,
+        Honra: 0,
+        Chi: 1,
+        ForcaVontade: 2,
+        Saude: 6,
+        Divisao: "Duelistas",
+        Posto: 1
+    };
+    return personagem;
+}
+
 let npc;
 if (getParameterByName('age') === 'capanga-armado')
     npc = CapangaArmado();
 else if (getParameterByName('age') === 'hockey')
     npc = Hockey();
+else if (getParameterByName('age') === 'homem-ra')
+    npc = HomemRa();
 else if (getParameterByName('age') === 'guerreiro')
     npc = Guerreiro();
 else if (getParameterByName('age') === 'gangster')

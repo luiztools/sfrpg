@@ -363,6 +363,8 @@ const manobras = {
 	"Deflecting Weapon": { Tecnica: "Bastão/Espada/Machado/Faca", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
 	"Triple Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
 	"Double Hit Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois Hits a menos que o alvo esteja em Aérea ou Agachamento" },
+	"Scuba Slash": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "Corte de faca; exige equipamento de mergulho. Dano contra Destreza do alvo em vez do Vigor. Se acertar, teste resistido de DES contra DES: se vencer, KD e o cilindro de propulsão ou outro equipamento de mergulho do alvo fica arruinado." },
+	"Blood Bite": { Tecnica: "Apresamento", ModVel: -2, ModDano: -1, ModMov: "Um", Sistema: "Mordida; ignora Bloqueio; recupera 1 de Saúde por ponto de dano causado. Exclusiva de Rijndael." },
 };
 
 const armas = {
@@ -372,6 +374,7 @@ const armas = {
 	"Besta Leve": { Tecnica: "Besta", ModVel: 2, ModDano: 1, ModMov: "Nenhum", Alcance: 9, Sistema: "" },
 	"Besta Pesada": { Tecnica: "Besta", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: 12, Sistema: "" },
 	"Arpão": { Tecnica: "Arremesso", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Alcance: 5, Sistema: "Se causar 3 de dano, atordoa e puxa o oponente." },
+	"Arpão de Mergulho": { Tecnica: "Arremesso", ModVel: -1, ModDano: 3, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Funciona como uma lança, mas só pode ser disparado pela arma dos Homens-Rã." },
 	"Bagh Nakh": { Tecnica: "Faca", ModVel: 1, ModDano: 1, ModMov: 0, Sistema: "" },
 	"Balisong": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Bastão Longo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },
@@ -425,6 +428,7 @@ const armas = {
 	"Machadinha Arremessada": { Tecnica: "Arremesso", ModVel: 1, ModDano: 2, ModMov: 0, Alcance: "Força+Arremesso" },
 	"Machado Curto": { Tecnica: "Machado", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Machado Grande": { Tecnica: "Machado", ModVel: -1, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
+	"Maça-Estrela": { Tecnica: "Chicote", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Alcance: 2, Sistema: "A corrente estrangula como um Garrote no mesmo hex, usando também a outra mão. Única manobra especial permitida: Foot Sweep." },
 	"Martelo de Guerra": { Tecnica: "Martelo", ModVel: -1, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
 	"Martelo Arremessado": { Tecnica: "Arremesso", ModVel: -1, ModDano: 4, ModMov: "Nenhum", Alcance: "Força" },
 	"Naginata": { Tecnica: "Lança", ModVel: 0, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },

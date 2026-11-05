@@ -1,6 +1,6 @@
 ﻿function Drakis() {
     const personagem = {
-        Nome: "",
+        Nome: "Drakis",
         Estilo: "Briga",
         Escola: "",
         Jogador: "",
@@ -39,7 +39,7 @@
         Misterios: 3,
         Estilos: 2,
         NovosConhecimentos: [],
-        Antecedentes: [{ Nome: "Híbrido Animal", Valor: "3" }],
+        Antecedentes: [{ Nome: "Híbrido Animal", Valor: 5 }],
         Soco: 3,
         Chute: 4,
         Bloqueio: 3,
@@ -47,7 +47,7 @@
         Esportes: 5,
         Foco: 4,
         NovasTecnicas: [],
-        ManobrasEspeciais: "Flight, Flying Head Butt, Head Butt, Flying Heel Stomp, Tail Sweep, Kippup, Toughskin, Maka Wara, Rolling Attack, Head Bite, Thunderstrike, Ripping Bite, Vertical Rolling Attack, Neck Choke, Wall Spring, Throw, Fireball, Flying Body Spear, Air Smash, Flying Fireball, Beast Roll, Inferno Strike, Diving Hawk, Repeating Fireball, Upper Tail Strike, Dragons Tail",
+        ManobrasEspeciais: "Flight, Flying Head Butt, Head Butt, Flying Heel Stomp, Tail Sweep, Kippup, Toughskin, Maka Wara, Rolling Attack, Head Bite, Thunderstrike, Ripping Bite, Vertical Rolling Attack, Neck Choke, Wall Spring, Throw, Fireball, Flying Body Spear, Air Smash, Flying Fireball, Beast Roll, Inferno Strike, Diving Hawk, Repeating Fireball, Upper Tail Strike, Dragons Tail, Bite, Claw, Tail Slash",
         Combos: "",
         Gloria: 0,
         Honra: 5,

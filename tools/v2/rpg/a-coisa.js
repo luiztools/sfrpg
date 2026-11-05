@@ -39,7 +39,7 @@
         Misterios: 1,
         Estilos: 0,
         NovosConhecimentos: [],
-        Antecedentes: [newCaracteristica("Hibrido Animal", 5)],
+        Antecedentes: [newCaracteristica("Híbrido Animal", 5)],
         Soco: 4,
         Chute: 2,
         Bloqueio: 3,

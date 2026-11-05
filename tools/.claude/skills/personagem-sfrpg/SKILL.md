@@ -9,9 +9,8 @@ Tudo em português (exceto nomes de manobras). Leia o CLAUDE.md do projeto antes
 
 Scripts de apoio nesta pasta (`scripts/`):
 - `wp.sh`: banco (credenciais temporárias, GET/PUT de post com checagem de concorrência) e FTP.
-- `img.py`: conversão da imagem principal e de banners.
-- `wp_meta.py`: gera o `_wp_attachment_metadata` serializado.
-- `gerar_imagem.py`: gera a imagem da arena com o personagem (API da OpenAI), ver "Arena" em "Estrutura do post".
+
+Para gerar, extrair, converter e publicar imagens, use a skill `imagem-sfrpg`.
 
 ## Fluxo
 
@@ -35,7 +34,7 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
 
 - Base: CLAUDE.md. Indentação de 4 espaços. Campos sem acento (`Forca`, `Raciocinio`...).
 - **Estilo combinado** usa parênteses: `"Forças Especiais (Bojutsu)"`, `"Ninjitsu (Kenjutsu)"`, `"Karatê Rindoukan (Kenjutsu)"`. O `GeraLinkEstilo` em `scripts.js` gera um link para cada parte. Não use barra "/" (não é suportada e o usuário preferiu parênteses).
-- Grafias de estilo que geram link válido: `Karatê Rindoukan` (post `karate-rindoukan`), `Kenjutsu`, `Bojutsu`, `Ninjitsu`, `Forças Especiais`, `Baraqah`, `Ler Drit`, `Kickboxe`. Para confirmar, procure o slug no banco (`SELECT post_name FROM wp_posts WHERE post_name='...'`).
+- Grafias de estilo que geram link válido: `Karatê Rindoukan` (post `karate-rindoukan`), `Kenjutsu`, `Bojutsu`, `Ninjitsu`, `Forças Especiais`, `Baraqah`, `Ler Drit`, `Kickboxe`. Para confirmar, procure o slug no banco (`SELECT post_name FROM wp_posts WHERE post_name='...'`). **Kobujutsu** é arte marcial que luta com arma: quem usa espada fica `Kenjutsu`, quem usa bastão fica `Bojutsu`. Personagem de clã ninja é Ninjitsu: combine com a arma, como `Ninjitsu (Bojutsu)` (Nanase).
 - **Personagem armado** (modelo: `v2/ff/carlos.js`, `v2/vega.js`, `v2/eagle.js`):
   ```js
   const tecnicas = [];
@@ -59,6 +58,7 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
   wp_sql -N --raw -e "SELECT p.ID, p.post_title, REPLACE(REPLACE(p.post_content,'\n',' '),'\r',' ') FROM wp_posts p JOIN wp_term_relationships r ON r.object_id=p.ID WHERE r.term_taxonomy_id=17 AND p.post_type='post' AND p.post_status='publish'" > <scratchpad>/manobras-posts.tsv
   ```
   Achando o sinônimo, use na ficha a chave de `manobras.js` e cite no post o nome do jogo entre parênteses ("Reppuken (Fireball)"). Só o que não aparecer em lugar nenhum entra na lista de dúvidas.
+- **Poder exclusivo do personagem** (manobra que só ele usa, explicada no próprio post, como Tanden Vortex do Seth, Gore do Diablo, Brain Mulch da Rosa Radioativa e Scuba Slash dos Homens Rã): cadastre em `manobras.js` para calcular na planilha, mas **não crie post de manobra**. Como a planilha gera o link `/post/<slug-da-manobra>` para toda manobra, redirecione esse endereço para o post do personagem inserindo em `wp_postmeta` a linha `_wp_old_slug=<slug-da-manobra>` no post dele (301 nativo do WordPress). Antes, confirme com `grep` que nenhuma outra ficha usa a manobra e que o post cita o nome dela; depois, teste com `curl -s -o /dev/null -w "%{http_code} %{redirect_url}" https://www.sfrpg.com.br/post/<slug-da-manobra>`.
 - Grafias da fonte que precisam de ajuste para bater com as chaves: `Headbutt` → `Head Butt`, `Double-Hit X` → `Double Hit X`, `Shikan-Ken` → `Shikan Ken`, `Drunk Monkey Roll` → `Drunken Monkey Roll`, `Thing Press` → `Thigh Press`. Valide com um script que carrega `manobras.js` e compara ignorando caixa e pontuação.
 - **Combo com manobra que não está na lista** do personagem (ex.: combo com Dive Kick sem ter Dive Kick): acrescente a manobra a `ManobrasEspeciais` e avise o usuário. Combos com arma usam "Espada Fierce", "Espada Jab".
 - **Erros de copiar e colar na fonte**: confira se Conceito, Assinatura, Interpretação ou habilidades não foram copiados de outro personagem (no PDF de KoF, a Interpretação de B. Jenet era a do Hokutomaru e o Conceito/Assinatura de Hotaru eram os de Jenet). Reescreva com base no cânone e avise.
@@ -72,6 +72,7 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
 
 - **Cronologia SNK (AoF/KoF):** a oficial do site é a de **Art of Fighting**: AoF = **1978**, AoF2 = **1979**, AoF3 = **1980**. Como não há ano de nascimento oficial, use a idade (oficial ou aproximada) no jogo de estreia do lutador e calcule o ano subtraindo-a do ano desse jogo. Formato: `<strong>Nascimento:</strong> 02/08/1956 (22 anos em AoF)`; para estreantes de AoF2/AoF3 use "(N anos em AoF2)" e "(N anos em AoF3)" (ex.: Geese 21/01/1953, 26 anos em AoF2; Kasumi 29/03/1964, 16 anos em AoF3). Sem idade conhecida: `dd/mm (ano desconhecido)`. O peso também segue a era AoF quando as fontes divergem.
 - **Cronologia de Fatal Fury** (fim do post `fatal-fury`): FF1 = **1991**, FF2 = **1992** (Special conta como era FF2), FF3 = **1995**. Mesma regra: idade no jogo de estreia, ano = ano do jogo − idade, formato "(21 anos em FF1)", "(28 anos em FF2)", "(22 anos em FF3)". Se a fonte só dá a idade em um jogo posterior, desconte os anos até a estreia (Terry: 22 em FF2 → 21 em FF1 → 1970).
+- **Cronologia de Street Fighter EX:** ano de referência **1993**. Ano = 1993 − idade, formato "(17 anos em SF EX)" (Hokuto: 23/09/1976). Quase nenhum personagem de EX tem idade oficial: sem idade conhecida, estime pela história e sinalize com "~", formato `13/06/~1974 (~19 anos em SF EX)`, avisando o usuário.
 - **Cidades fictícias dos EUA:** quem cresceu ou mora em South Town ou Metro City, sem outro país conhecido, fica `<strong>País:</strong> EUA (<a href="https://www.sfrpg.com.br/post/south-town">South Town</a>)` (Kain, Grant) ou `<strong>País:</strong> EUA (<a href="https://www.sfrpg.com.br/post/metro-city">Metro City</a>)`.
 - **Garou: Mark of the Wolves = 2006** (dez anos após FF3, também no post `fatal-fury`). Formato "(17 anos em Garou)" (Rock: 24/06/1989). A cidade se chama Second Southtown (South Town reconstruída).
 - **Fontes:** a wiki da SNK no Fandom, breezewiki, dreamcancel, pixiv e nicovideo bloqueiam o WebFetch (403/Anubis). O que funciona:
@@ -84,19 +85,14 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
 
 ## Imagens
 
-- **Imagem principal vinda do PDF (padrão):** se a fonte for um PDF e houver ilustração junto ao personagem, use-a como imagem principal sem perguntar. Extraia a imagem embutida com `pymupdf` (`page.get_images()` + `doc.extract_image(xref)`); se ela vier fatiada, com máscara/transparência quebrada ou muito pequena, renderize só a área dela (`page.get_pixmap(clip=rect, dpi=200)`). Abra o resultado (Read) para conferir se é o personagem certo e se não veio com texto ou moldura da página, e depois passe por `img.py main`. **Se o PDF não tiver imagem do personagem, peça a imagem ao usuário** (junto com as outras dúvidas do fim).
-- O usuário costuma mandar URLs. As da Fandom (`static.wikia.nocookie.net`) dão 403 (Cloudflare): **não contorne**. Peça para ele salvar em `~/Downloads` e use o arquivo local. Pinterest, ytimg, gstatic, redd.it e twimg baixam normalmente com `curl`.
-- Coloque cada download numa pasta nova e vazia do scratchpad e rode o Python com `-I`.
-- **Imagem principal:** `img.py main` gera `<slug>.webp`, uma versão média que cabe em 300x300 e a de 150x150. No post, use `width="300"`, ou a largura real se a imagem tiver menos de 300px (para não esticar).
-- **Banner do personagem** (fica no fim do post e também é a imagem destacada / `_thumbnail_id`): `img.py banner` corta o letterbox (comum em `sddefault.jpg` do YouTube, 640x480) e limita imagens 4K a 1920.
+Extração de PDF, downloads, conversão, envio e anexos estão na skill `imagem-sfrpg`. Aqui ficam só as regras do post de personagem:
+
+- **Imagem principal:** se a fonte for um PDF e houver ilustração junto ao personagem, use-a sem perguntar. **Se o PDF não tiver imagem do personagem, peça a imagem ao usuário** (junto com as outras dúvidas do fim). No post, use `width="300"`, ou a largura real se a imagem tiver menos de 300px (para não esticar).
+- **Banner do personagem:** fica no fim do post e também é a imagem destacada (`_thumbnail_id`), exceto se for GIF animado (ver a regra de GIF em "Publicação", na skill `imagem-sfrpg`).
   - 16:9 grande (1280x720): use a versão 1024x576 com `class="size-large ..." width="474" height="267"`.
   - Pequeno ou quadrado: `size-full` com as dimensões reais (quadrado 1024: exibir em 474x474).
-  - GIF animado: mantenha o `.gif` original como arquivo principal.
   - Vários personagens podem reutilizar o mesmo anexo de banner (ex.: pai e filha).
 - Sem banner próprio: **nunca use banner genérico** (de franquia ou de jogo, como `art-of-fighting-1024x576.jpg` ou `garou.jpeg`), para nenhum personagem. Deixe o post **sem banner do personagem e sem imagem destacada** e peça as imagens ao usuário na lista de dúvidas. Se o PDF tiver uma segunda ilustração (cena, close), ela pode ser o banner do personagem (ex.: Rock com Terry, close da máscara de Grant).
-- Envie por FTP para `public/wp-content/uploads/AAAA/MM/` (`wp_upload_imgs`) e confira HTTP 200.
-- **Anexo no banco:** um `wp_posts` com `post_type='attachment'`, `post_status='inherit'`, `post_parent=<ID do post>`, `guid=<URL do arquivo>`, `post_mime_type`. Mais `wp_postmeta` com `_wp_attached_file` = `AAAA/MM/arquivo` e `_wp_attachment_metadata` = saída de `wp_meta.py` (valide com `php -r 'unserialize(...)'`). Depois adicione `wp-image-<ID>` na classe do `<img>`.
-- **Trocar uma imagem que já tem anexo:** sobrescreva os arquivos com o mesmo nome e atualize apenas o `_wp_attachment_metadata` do anexo existente.
 
 ## Estrutura do post
 
@@ -108,7 +104,7 @@ Copie o post de referência da franquia (AoF/KoF: `ryo-sakazaki`; Sensei: `gouke
 - depois as seções comuns (NPC, Arena, Arma...), o crédito, uma imagem dos dois juntos (se houver) e os banners.
 
 1. `<p style="float: left; margin: 10px;"><img class="alignnone size-full wp-image-ID" src=".../<slug>.webp" alt="" width="300" /></p>`
-2. Link da planilha: `<a title="Planilha em AoF" href="https://sfrpg.com.br/tools/v2/_character.php?name=kof/<slug>&amp;age=aof" target="_blank" rel="noopener"><img src="/img/planilha-aof.jpg" alt="" /></a>` (uma linha por versão/era).
+2. Link da planilha: `<a title="Planilha em AoF" href="https://sfrpg.com.br/tools/v2/_character.php?name=kof/<slug>&amp;age=aof" target="_blank" rel="noopener"><img src="/img/planilha-aof.jpg" alt="" /></a>` (uma linha por versão/era). Personagens de Street Fighter EX (`v2/ex`) usam o botão `/img/planilha-sf2-sf4-ff3.jpg`.
 3. `<strong>Altura:</strong>`, `Peso`, `País`, `Nascimento` (uma linha cada).
 4. História (com links `/post/<slug>` para personagens, estilos e lugares), `<strong>X em <Jogo>:</strong> ...`, `<strong>Aparência:</strong>`, `<strong>Interpretando X:</strong>`.
 5. Seções `<h3>` conforme o caso:
@@ -120,14 +116,7 @@ Copie o post de referência da franquia (AoF/KoF: `ryo-sakazaki`; Sensei: `gouke
      3. O cenário do personagem nos jogos (pesquise na internet).
      4. **Personagens de MMA**: o octógono da sua academia, a menos que o texto diga outra coisa.
      5. Se nada disso definir a arena, pergunte ao usuário (junte as dúvidas no fim).
-     Depois de escrever, passe ao usuário uma lista "Personagem: Nome da arena" para ele enviar as imagens, que entram logo abaixo do texto da seção (sem repetir uma imagem que o post já mostra ali). Quando o usuário pedir para **gerar** a imagem da arena, use `gerar_imagem.py` (API da OpenAI, chave `OPENAI_API_KEY` no `.env`; nunca imprima a chave). A imagem mostra a arena com o personagem nela fazendo sua pose de luta, em estilo anime, gerada direto em HD 1280x720 (16:9): o script pede esse tamanho à API (`--size 1280x720`) e o repete no prompt, para não precisar recortar e gastar menos créditos e tempo:
-     ```sh
-     venv/bin/python -I .claude/skills/personagem-sfrpg/scripts/gerar_imagem.py <scratchpad>/<slug>-arena.jpg \
-       --cenario "<arena em inglês, a partir do texto da seção>" \
-       --personagem "<nome e aparência em inglês, a partir da Aparência do post>" \
-       --ref <imagem principal do personagem baixada do post>
-     ```
-     Com `--ref`, o script pede para o modelo usar a referência só como guia de visual e redesenhar o personagem do zero no estilo e na luz da cena (sem colar o desenho antigo, que muitas vezes é de baixa qualidade). Abra a imagem gerada (Read) e confira se bate com a seção e com a aparência antes de subir; se o personagem parecer recortado e colado, gere de novo. Se a API devolver outra proporção e o corte 16:9 cortar parte do personagem (pé de um chute alto, cabeça), suba o `<saida>-original.png` inteiro em vez do recorte. Depois siga o fluxo normal: `img.py banner`, `wp_upload_imgs`, anexo e `<img>` logo abaixo do texto da seção. Se o post ainda não tiver imagem destacada (sem `_thumbnail_id` em `wp_postmeta`), use o anexo da imagem gerada como destacada (`_thumbnail_id=<ID do anexo>`); se já tiver, não troque. Cada chamada custa créditos da OpenAI: gere uma por pedido e só gere de novo se o usuário pedir. Se a API recusar (ex.: 429 sem créditos), informe o erro e, como alternativa, escreva um prompt em inglês para o usuário gerar por conta própria (modelo em `~/Downloads/prompts-arenas-sfrpg.md`), com o nome de arquivo `<slug>-arena.jpg`.
+     Depois de escrever, passe ao usuário uma lista "Personagem: Nome da arena" para ele enviar as imagens, que entram logo abaixo do texto da seção (sem repetir uma imagem que o post já mostra ali). Quando o usuário pedir para **gerar** a imagem da arena, use a skill `imagem-sfrpg` (cena horizontal, com o texto da seção como ambiente e o personagem em pose de luta). Depois publique-a como banner (ver "Publicação" na mesma skill) e coloque o `<img>` logo abaixo do texto da seção. Se o post ainda não tiver imagem destacada (sem `_thumbnail_id` em `wp_postmeta`), use o anexo da imagem gerada como destacada (`_thumbnail_id=<ID do anexo>`); se já tiver, não troque.
    - **Sensei** ("X como Sensei", modelo `gouken`, com `<img class="aligncenter" src="/img/2010/3/Sensei-logo.jpg" alt="Sensei" />`). O nível de Sensei vem da ficha, e o banner `<a title="Sensei" href="/post/sensei"><img class="aligncenter" src="/img/2010/3/Sensei-logo.jpg" alt="Sensei" /></a>` entra junto dos banners finais (modelo `kim-kaphwan`). **Aluno com antecedente Sensei:** o antecedente do aluno é o nível do mestre dele. Não crie seção no post do aluno: crie a seção "<Mestre> como Sensei" no post do **mestre**, com o nível que está na ficha do aluno (Rock tem Sensei 4 → "Terry como Sensei", nível 4; Hokutomaru tem Sensei 3 → "Andy como Sensei", nível 3), ponha o banner de Sensei no fim do post do mestre e acrescente o mestre na lista "Exemplos de Senseis" do post `sensei` (`<li><a href=".../post/<slug>">Nome</a> (<a href=".../post/<estilo>">Estilo</a>)</li>`). Se não souber quem é o mestre, pergunte.
    - Na primeira menção a um estilo do jogo original, acrescente o estilo adaptado: "Karatê Kyokugen-ryu (adaptado como <a>Karatê Rindoukan</a>)".
 6. Crédito em itálico, **sempre de acordo com a origem informada pelo usuário** (suplemento, autores). Exemplos já usados:
@@ -146,7 +135,7 @@ Copie o post de referência da franquia (AoF/KoF: `ryo-sakazaki`; Sensei: `gouke
    - Elemental (todo personagem com o antecedente `newCaracteristica("Elemental (<tipo>)", N)` em qualquer versão da ficha, inclusive sub-elementais como Gelo, Eletricidade, Trevas, Magma e Sangue; também entra na lista "Exemplos de Elementais" do post `elemental`): `<p align="center"><a title="Elementais" href="https://www.sfrpg.com.br/post/elemental"><img class="aligncenter" src="/img/2010/3/elementais-logo.jpg" alt="Elementais" /></a></p>`
    - Forças Especiais (estilo com "Forças Especiais", inclusive combinado): `<a href="https://www.sfrpg.com.br/post/forcas-especiais"><img class="size-full wp-image-8039 aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/2024/04/forcas-especiais-banner.jpg" alt="" width="1200" height="675" /></a>`
    - Kung Fu Do Fighting (todo personagem de `v2/kungfudo/`): `<p align="center"><a href="https://www.sfrpg.com.br/post/kung-fu-do-fighting"><img class="size-large wp-image-10002 aligncenter" src="https://www.sfrpg.com.br/wp-content/uploads/2026/09/kungfudo-banner-1024x344.png" alt="" width="450" height="151" /></a></p>`
-   - Franquia: AoF `wp-image-10505` (`/post/art-of-fighting`), KoF `wp-image-10461` (`/post/the-king-of-fighters-rpg`). Copie a marcação exata de um post existente. **Nem todo personagem da pasta `v2/kof/` esteve em jogos KoF**: quem só apareceu em Art of Fighting (Jack Turner, Lee Pai Long, Mickey Rogers, John Crawley, Ryuhaku Todoh, Temjin, Wang Koh San, Rody Birts, Karman Cole, Jin Fuha, Lenny Creston, Sinclair, Tom Wyler) leva só o banner de AoF, **sem** o banner de KoF, e precisa estar na lista "Lutadores de Art of Fighting" (no fim do post `art-of-fighting`, agrupada por jogo). Personagens de AoF que também estão em KoF (Ryo, Robert, Yuri, Takuma, King, Kasumi, Eiji, Mr. Big, Geese) levam os dois banners.
+   - Franquia: AoF `wp-image-10505` (`/post/art-of-fighting`), KoF `wp-image-10461` (`/post/the-king-of-fighters-rpg`). Copie a marcação exata de um post existente. **Nem todo personagem da pasta `v2/kof/` esteve em jogos KoF**: quem só apareceu em Art of Fighting (Jack Turner, Lee Pai Long, Mickey Rogers, John Crawley, Ryuhaku Todoh, Temjin, Wang Koh San, Rody Birts, Karman Cole, Jin Fuha, Lenny Creston, Sinclair, Tom Wyler) leva só o banner de AoF, **sem** o banner de KoF, e precisa estar nas tabelas do post `art-of-fighting`: há uma por jogo, ao final da descrição daquele jogo, com **todos** os lutadores dele, mesmo que já estejam em outro jogo (ver "Tabelas de personagens" na skill `imagem-sfrpg`). Personagens de AoF que também estão em KoF (Ryo, Robert, Yuri, Takuma, King, Kasumi, Eiji, Mr. Big, Geese) levam os dois banners.
 
 ## Banco (WordPress)
 
@@ -160,7 +149,7 @@ wp_db_close   # sempre; o my.cnf contém a senha
 - **Nunca** imprima credenciais nem leia `v2/wp-config.php`.
 - O shell é **zsh**: variável sem aspas não se divide em palavras (`for t in $tags` roda uma vez só) e arrays associativos travam a checagem de segurança do `wp_db_close`. Gere SQL com Python (arquivo `.sql` + `wp_sql < arquivo`) quando houver listas, e use `while read` com heredoc para laços.
 - Grave o texto como hex (`CONVERT(0x... USING utf8mb4)`) para não quebrar acentos. Em `REPLACE` com literais, use `COLLATE utf8mb4_unicode_ci` (senão dá "Illegal mix of collations").
-- Novo post: `post_status='draft'`, `post_type='post'`, `post_author=1`, `post_date` no horário de São Paulo, `post_date_gmt='0000-00-00 00:00:00'`, depois `guid = CONCAT('https://www.sfrpg.com.br/?p=', ID)`. Metas: `_edit_last=1` e `_thumbnail_id=<anexo do banner>`.
+- Novo post: `post_status='draft'`, `post_type='post'`, `post_author=1`, `post_date` no horário de São Paulo, `post_date_gmt='0000-00-00 00:00:00'`, depois `guid = CONCAT('https://www.sfrpg.com.br/?p=', ID)`. Metas: `_edit_last=1` e `_thumbnail_id=<anexo do banner>` (se o banner não for GIF animado).
 - **Categoria:** "Personagens" (`term_taxonomy_id` 20).
 - **Tags (post_tag) obrigatórias em todo post de personagem:**
   - `personagem`;
@@ -173,6 +162,7 @@ wp_db_close   # sempre; o my.cnf contém a senha
 - **Editar post existente:** use `wp_post_get` para guardar o original (é seu backup) e gere o novo arquivo em Python com `open(..., newline="")`. **Posts antigos usam CRLF**: ler e escrever sem `newline=""` converte todas as quebras e o diff vira o post inteiro. Depois use `wp_post_put ID original novo`, que aborta se alguém editou no wp-admin e confere o resultado byte a byte. Sempre mostre o `diff` antes de gravar.
 - Inserção de banner no fim de posts heterogêneos: depois da última linha com `<img` (absorvendo linhas que só fecham `</a></p></div>`) e antes de link de YouTube ou nota de créditos. Se a última imagem estiver antes do texto de fontes (ex.: Eagle), coloque no fim.
 - Posts publicados também podem ser alterados quando o usuário pedir, mas mostre o diff e preserve o resto do conteúdo.
+- **Cache:** o site usa WP Super Cache, e gravar direto no banco não o invalida. Depois de alterar um post publicado, rode `wp_cache_purge <slug> ...` e confira a URL **sem** parâmetros (`?x=` contorna o cache e esconde o problema). Antes de remover arquivos usados por posts, limpe o cache desses posts.
 
 ## Listas cruzadas (posts publicados)
 
@@ -189,11 +179,13 @@ Ao criar ou alterar personagem, mantenha atualizadas as listas no fim destes pos
 | `mascote` | Lista de Mascotes | quem tem antecedente Mascote: "Animal (Dono)". Todos também recebem o banner de Mascote |
 | `forcas-especiais` | Membros famosos | estilo Forças Especiais, com unidade/país entre parênteses (pesquise se o post não disser). Todos também recebem o banner |
 | `arena` | Locais de Conflito: "No Ringue" (arenas de luta) e "Fora do Ringue" (dojôs, academias, templos, octógonos de academia) | quem tem antecedente Arena: "Nome da arena (<a>Personagem</a>)". Se a arena já estiver listada com outro personagem, acrescente o nome no mesmo item. Todos também recebem o banner de Arena |
-| `fatal-fury` | "Lutadores de Fatal Fury", agrupada por jogo (FF1 1991, FF2 1992, FF3 1995, Garou 2006) | todo personagem que lutou na série; também linke o nome no texto do post na primeira menção |
+| `fatal-fury` | tabelas de bustos, uma por jogo, ao final da descrição daquele jogo (FF1 1991, FF2 1992 com o elenco de Special, FF3 1995, Garou 2006; ver "Tabelas de personagens" na skill `imagem-sfrpg`) | **todos** os lutadores de cada jogo, mesmo que já estejam em outro jogo; também linke o nome no texto do post na primeira menção |
 | `the-king-of-fighters-rpg` | "Personagens Contemplados" (tabela em 3 colunas, ordem alfabética) | quem lutou em KoF: troque o nome sem link pelo link do post |
 | `elemental` | "Exemplos de Elementais" (`<ul>` entre esse título e "Criando um Elemental") | quem tem o antecedente Elemental em qualquer versão da ficha: `<li><a href="https://www.sfrpg.com.br/post/<slug>">Nome</a> (Franquia, elemento)</li>`, com o elemento em minúsculas (ex.: "(Fatal Fury, fogo)", "(MK, gelo)"; sem franquia para Street Fighter e personagens do RPG). Todos também recebem o banner de Elemental. Ache-os com `grep -rln 'newCaracteristica("Elemental' v2` |
 | `psycho-power` | "Personagens que possuem Psycho Power, em variados graus de controle" | quem tem o antecedente Psycho Power em qualquer versão da ficha: `<li><a href="/post/<slug>">Nome</a></li>` (personagens de fã com "(não-oficial)", como Raj). Todos também recebem o banner de Psycho Power. Ache-os com `grep -rln 'newCaracteristica("Psycho Power' v2` |
 | `cibernetico` | lista de personagens cibernéticos (o primeiro `<ul>` do post, agrupado por franquia, antes de Killer Instinct e Tekken) | quem tem o antecedente Cibernético em qualquer versão da ficha: `<li><a href="https://www.sfrpg.com.br/post/<slug>">Nome</a> (Franquia)</li>`, com "(através do seu traje/robô)" quando o Cibernético representa equipamento. Todos também recebem o banner de Cibernéticos. Ache-os com `grep -rln 'newCaracteristica("Cibernético' v2` |
+
+Ao criar personagem de uma franquia com tabela de bustos (Street Fighter, EX, Art of Fighting, Fatal Fury, Captain Commando, Kung Fu Do Fighting, Mortal Kombat), recorte o busto e inclua-o na tabela, conforme a skill `imagem-sfrpg`.
 
 Listas de personagens em posts de franquia/história ficam **no final do post**, depois dos banners. Nos textos desses posts, coloque link no nome de cada personagem que tenha post, na primeira vez que ele aparece (personagens sem post, como Jeff Bogard ou Freia, ficam sem link).
 

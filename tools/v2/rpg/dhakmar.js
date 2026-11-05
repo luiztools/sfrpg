@@ -46,7 +46,8 @@
         Apresamento: 2,
         Esportes: 3,
         Foco: 1,
-        NovasTecnicas: [],
+        NovasTecnicas: [newCaracteristica("Chicote", 4)],
+        Armas: ["Maça-Estrela"],
         ManobrasEspeciais: "Power Uppercut, Air Throw, Foot Sweep, Head Butt, Dragon Kick, Head Bite, Back Breaker",
         Combos: "Head Butt para Head Butt (Dizzy); Apresamento para Brain Cracker",
         Gloria: 6,
@@ -54,7 +55,7 @@
         Chi: 4,
         ForcaVontade: 7,
         Saude: 12,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 5
     };
     return personagem;
