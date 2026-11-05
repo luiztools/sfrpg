@@ -2,7 +2,7 @@
 function VandaPegazzani() {
     const personagem = {
         Nome: "Vanda Pegazzani",
-        Estilo: "Tai Chi Chuan",
+        Estilo: "Tai Chi Chuan (Bojutsu)",
         Escola: "desconhecida",
         Jogador: "",
         Assinatura: "Posa em um pé.",
@@ -47,7 +47,8 @@ function VandaPegazzani() {
         Apresamento: 3,
         Esportes: 3,
         Foco: 1,
-        NovasTecnicas: [newCaracteristica("Bastao", 4)],
+        NovasTecnicas: [newCaracteristica("Bastão", 4)],
+        Armas: ["Bastão Longo"],
         ManobrasEspeciais: "Grappling Defense, Knee Basher, Back Roll Throw, Thigh Press, Foot Sweep",
         Combos: "Aparar para Bastão Fierce; Bloqueio para Foot Sweep",
         Gloria: 1,
@@ -55,7 +56,7 @@ function VandaPegazzani() {
         Chi: 2,
         ForcaVontade: 5,
         Saude: 10,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 3
     };
     return personagem;
