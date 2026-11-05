@@ -47,7 +47,8 @@ function TickeTock() {
         Apresamento: 1,
         Esportes: 3,
         Foco: 1,
-        NovasTecnicas: [newCaracteristica("Arremesso", 4)],
+        NovasTecnicas: [newCaracteristica("Faca", 4), newCaracteristica("Arremesso", 4)],
+        Armas: ["Faca", "Faca Arremessada"],
         ManobrasEspeciais: "Spinning Back Fist, Triple Strike, Kippup, Kick Defense, Punch Defense, Backflip Kick",
         Combos: "",
         Gloria: 2,
@@ -55,7 +56,7 @@ function TickeTock() {
         Chi: 1,
         ForcaVontade: 6,
         Saude: 10,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 3
     };
     return personagem;
