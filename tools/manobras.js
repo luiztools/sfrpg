@@ -374,6 +374,7 @@ const armas = {
 	"Besta Pesada": { Tecnica: "Besta", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: 12, Sistema: "" },
 	"Arpão": { Tecnica: "Arremesso", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Alcance: 5, Sistema: "Se causar 3 de dano, atordoa e puxa o oponente." },
 	"Arpão de Mergulho": { Tecnica: "Arremesso", ModVel: -1, ModDano: 3, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Funciona como uma lança, mas só pode ser disparado pela arma dos Homens-Rã." },
+	"Adaga Psíquica": { Tecnica: "Faca", ModVel: 1, ModDano: 1, ModMov: 0, Sistema: "Exclusiva de Decapre." },
 	"Bagh Nakh": { Tecnica: "Faca", ModVel: 1, ModDano: 1, ModMov: 0, Sistema: "" },
 	"Balisong": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Bastão Longo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },

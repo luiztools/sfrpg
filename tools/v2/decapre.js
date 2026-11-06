@@ -11,7 +11,7 @@ function DecapreSF5() {
     tecnicas[1] = newCaracteristica("Armas de Fogo", 4);
 
     const armas = [];
-    armas[0] = "Katar";
+    armas[0] = "Adaga Psíquica";
 
     const decapre = {
         Nome: "Decapre",
@@ -85,7 +85,7 @@ function DecapreSF4() {
     tecnicas[1] = newCaracteristica("Armas de Fogo", 3);
 
     const armas = [];
-    armas[0] = "Katar";
+    armas[0] = "Adaga Psíquica";
 
     const decapre = {
         Nome: "Decapre",
@@ -159,7 +159,7 @@ function DecapreSFZ3() {
     tecnicas[1] = newCaracteristica("Armas de Fogo", 3);
 
     const armas = [];
-    armas[0] = "Katar";
+    armas[0] = "Adaga Psíquica";
 
     const decapre = {
         Nome: "Decapre",
