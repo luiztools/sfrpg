@@ -6,7 +6,7 @@
     antecedentes[3] = newCaracteristica("Elemental (Gelo)", 4);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Mangual", 4);
+    tecnicas[0] = newCaracteristica("Martelo", 4);
 
     const thor = {
         Nome: "Thor",
@@ -46,6 +46,7 @@
         Esportes: 4,
         Foco: 3,
         NovasTecnicas: tecnicas,
+        Armas: ["Martelo de Guerra"],
         ManobrasEspeciais: "Buffalo Punch, Brain Cracker, Grappling Defense, Ice Blast, Throw, Ice Ground, Jump, Toughskin, Thunderclap",
         Combos: "Ice Blast para Brain Cracker (Dizzy); Ice Ground para Ice Blast; Bloqueio para Jab para Fierce (Dizzy);",
         Gloria: 5,

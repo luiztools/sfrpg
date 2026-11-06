@@ -354,22 +354,22 @@ const manobras = {
 	"Tanden Copy": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", Chi: 1, Alcance: "Percepção", Sistema: "Linha de visão, Rola PER + CIBER dificuldade 5 + 1 por ponto de poder para copiar a manobra assistida" },
 
 	//Outros
-	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado/Chicote/Faca", ModVel: 0, ModDano: "-1/-1/-1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
-	"Weapon Sweep": { Tecnica: "Bastão/Lança/Chicote", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento. Armado." },
+	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado/Chicote/Faca/Mangual/Garra", ModVel: 0, ModDano: "-1/-1/-1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
+	"Weapon Sweep": { Tecnica: "Bastão/Lança/Chicote/Mangual", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento. Armado." },
 	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano." },
-	"Weapon Uppercut": { Tecnica: "Bastão/Espada/Faca/Garra", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD vs. Aérea" },
-	"Buffalo Strike": { Tecnica: "Bastão/Espada/Machado", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
+	"Weapon Uppercut": { Tecnica: "Bastão/Espada/Faca/Garra/Mangual", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD vs. Aérea" },
+	"Buffalo Strike": { Tecnica: "Bastão/Espada/Machado/Mangual", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
 	"Weapon Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Arma escolhida; -2 vs. outros" },
-	"Deflecting Weapon": { Tecnica: "Bastão/Espada/Machado/Faca", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
-	"Triple Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
-	"Double Hit Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois Hits a menos que o alvo esteja em Aérea ou Agachamento" },
+	"Deflecting Weapon": { Tecnica: "Bastão/Espada/Machado/Faca/Mangual", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
+	"Triple Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
+	"Double Hit Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois Hits a menos que o alvo esteja em Aérea ou Agachamento" },
 	"Scuba Slash": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "Corte de faca; exige equipamento de mergulho. Dano contra Destreza do alvo em vez do Vigor. Se acertar, teste resistido de DES contra DES: se vencer, KD e o cilindro de propulsão ou outro equipamento de mergulho do alvo fica arruinado." },
 	"Blood Bite": { Tecnica: "Apresamento", ModVel: -2, ModDano: -1, ModMov: "Um", Sistema: "Mordida; ignora Bloqueio; recupera 1 de Saúde por ponto de dano causado. Exclusiva de Rijndael." },
 };
 
 const armas = {
-	"Arco Curto": { Tecnica: "Arco", ModVel: 1, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arco", Sistema: "Alc Máx 9" },
-	"Arco Longo": { Tecnica: "Arco", ModVel: 1, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arco", Sistema: "Alc Máx 12" },
+	"Arco Curto": { Tecnica: "Arco", ModVel: 1, ModDano: 2, ModMov: 0, Alcance: "Força+Arco", Sistema: "Alc Máx 9" },
+	"Arco Longo": { Tecnica: "Arco", ModVel: 1, ModDano: 2, ModMov: 0, Alcance: "Força+Arco", Sistema: "Alc Máx 12" },
 	"Yumi": { Tecnica: "Arco", ModVel: 0, ModDano: 4, ModMov: "Nenhum", Alcance: "Força+Arco", Sistema: "Alc Máx 15" },
 	"Besta Leve": { Tecnica: "Besta", ModVel: 2, ModDano: 1, ModMov: "Nenhum", Alcance: 9, Sistema: "" },
 	"Besta Pesada": { Tecnica: "Besta", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: 12, Sistema: "" },
@@ -392,9 +392,10 @@ const armas = {
 	"Chakram": { Tecnica: "Arremesso", ModVel: 1, ModDano: 1, ModMov: -3, Alcance: "Força+Arremesso" },
 	"Chapéu-Lâmina": { Tecnica: "Chapéu", ModVel: 0, ModDano: 2, ModMov: 1 },
 	"Chapéu Arremessado": { Tecnica: "Arremesso", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
-	"Chicote": { Tecnica: "Chicote", ModVel: -1, ModDano: 2, ModMov: 0, Alcance: 6 },
+	"Cestus": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: 0, Sistema: "Deve ser usado com manobras de Soco. +1 ABS em Bloqueios." },
+	"Chicote": { Tecnica: "Chicote", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Alcance: 6 },
 	"Pingalim": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: 0 },
-	"Chicote de Aço": { Tecnica: "Chicote", ModVel: -1, ModDano: 3, Alcance: 3 },
+	"Chicote de Aço": { Tecnica: "Chicote", ModVel: -1, ModDano: 3, ModMov: "Nenhum", Alcance: 3 },
 	"Cimitarra": { Tecnica: "Espada", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "Empunhadura: Variável" },
 	"Corrente": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: -2, Alcance: 2 },
 	"Escopeta": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: 2, ModMov: "-", Sistema: "2 Hits" },
@@ -406,6 +407,7 @@ const armas = {
 	"Faca Arremessada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: 0, Alcance: "Força+Arremesso" },
 	"Faca de Combate": { Tecnica: "Faca", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Faca Improvisada": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "" },
+	"Faca Borboleta": { Tecnica: "Espada", ModVel: 0, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Ferramenta Grande": { Tecnica: "Bastão", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Foice": { Tecnica: "Faca", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Funda": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: "Nenhum", Alcance: 5, Sistema: "Lança pedras." },
@@ -436,7 +438,7 @@ const armas = {
 	"Glaive": { Tecnica: "Lança", ModVel: 0, ModDano: 4, ModMov: 0, Sistema: "Empunhadura: Duas Mãos" },
 	"Navalha": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Ninjato": { Tecnica: "Espada", ModVel: 1, ModDano: 2, ModMov: 1, Sistema: "Empunhadura: Uma Mão." },
-	"Nunchaku": { Tecnica: "Bastão", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão" },
+	"Nunchaku": { Tecnica: "Mangual", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão" },
 	"Pata": { Tecnica: "Espada", ModVel: -2, ModDano: 3, ModMov: 0, Sistema: "ver descrição" },
 	"Molotov": { Tecnica: "Arremesso", ModVel: 0, ModDano: 6, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Raio de 3 hexes." },
 	"Granada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 6, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Raio de 3 hexes." },
@@ -446,10 +448,15 @@ const armas = {
 	"Pistola Pesada": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 4, ModMov: "-", Sistema: "" },
 	"Rapier": { Tecnica: "Espada", ModVel: 2, ModDano: 1, ModMov: 1, Sistema: "Empunhadura: Uma Mão." },
 	"Sabre": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },
+	"Sabre de Esgrima": { Tecnica: "Espada", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "+1 ABS em Bloqueios." },
 	"Sai": { Tecnica: "Faca", ModVel: 1, ModDano: 0, ModMov: 0, Sistema: "+1 ABS para Aparar e +2 para desarmar" },
 	"Sai Arremessada": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: 0, Alcance: "Força+Arremesso" },
 	"Shinai": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },
+	"Shikomi-Zue": { Tecnica: "Bastão", ModVel: 0, ModDano: 1, ModMov: 2, Sistema: "Bengala com lâmina escondida; esta é a arma usada como bastão." },
+	"Shikomi-Zue (Lâmina)": { Tecnica: "Lança", ModVel: 1, ModDano: 2, ModMov: 1, Sistema: "Bengala com a lâmina exposta." },
 	"Shuriken": { Tecnica: "Arremesso", ModVel: 2, ModDano: -2, ModMov: 0, Alcance: "Força+Arremesso", Sistema: "1 hit por ponto em Arremesso" },
+	"Shuko": { Tecnica: "Soco", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "Deve ser usado com manobras de Soco." },
+	"Soco Inglês": { Tecnica: "Soco", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "Deve ser usado com manobras de Soco." },
 	"Submetralhadora": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: "1/1", ModMov: "-", Sistema: "2 Hits" },
 	"Tonfa": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
 	"Tonfa de Ferro": { Tecnica: "Bastão", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
@@ -467,6 +474,11 @@ const ARMAS_ARRAY = Object.keys(armas).map((arma) => {
 });
 
 const valorFixoRegex = new RegExp("^(Um|Dois|Três|Quatro)$");
+
+//"", "-" e "Nenhum" significam que não há modificador (a tabela mostra "-"); 0 é um modificador válido (+0)
+function semModificador(valor) {
+	return typeof valor === "string" && ["", "-", "nenhum"].includes(valor.trim().toLowerCase());
+}
 
 function estilizaSistema(sistema) {
 	if (!sistema) return "";
@@ -523,7 +535,14 @@ function calculaAlcanceArremesso(npc, arma) {
 	return parseInt(npc[arma.Alcance]);
 }
 
+//valor da técnica usada por uma arma: técnica própria da ficha ou técnica básica (ex.: Soco); sem a técnica, vale 0
+function tecnicaDaArma(npc, arma) {
+	const nome = arma.Tecnica || arma.Nome;
+	return getCaracteristica(npc.NovasTecnicas || [], nome) || npc[nome] || 0;
+}
+
 function calculaVelocidade(npc, manobra) {
+	if (semModificador(manobra.ModVel)) return "-";
 	if (manobra.ModVel === null || manobra.ModVel === undefined || manobra.ModVel === "Especial" || manobra.ModVel === "Esp.") return "Esp.";
 
 	let modAtributo = 0;
@@ -544,7 +563,7 @@ function calculaVelocidadeArmaFogo(npc, arma) {
 }
 
 function calculaDanoArmaFogo(npc, arma) {
-	const modTecnica = getCaracteristica(npc.NovasTecnicas, arma.Tecnica);
+	const modTecnica = tecnicaDaArma(npc, arma);
 
 	//metralhadoras e outras armas de vários hits
 	if (typeof arma.ModDano === "string" && arma.ModDano.indexOf("/") !== -1) {
@@ -569,13 +588,13 @@ function calculaAlcanceArma(arma) {
 
 function calculaDanoArma(npc, arma, manobra) {
 	if (!arma || !manobra) return console.log(`Não foi possível calcular dano de uma manobra com arma`, arma, manobra);
-	const modTecnica = getCaracteristica(npc.NovasTecnicas, arma.Tecnica || arma.Nome);
+	const modTecnica = tecnicaDaArma(npc, arma);
 
 	if (manobra.Nome === "Aparar") {
-		return "ABS" + (npc["Vigor"] + npc["Bloqueio"] + npc[arma.Tecnica]);
+		return "ABS" + (npc["Vigor"] + npc["Bloqueio"] + tecnicaDaArma(npc, arma));
 	}
 
-	if (manobra.ModDano === undefined || arma.ModDano === undefined) return "-";
+	if (manobra.ModDano === undefined || arma.ModDano === undefined || semModificador(manobra.ModDano) || semModificador(arma.ModDano)) return "-";
 
 	//dano de manobras que dão vários hits
 	if (typeof manobra.ModDano === "string" && manobra.ModDano.indexOf("/") !== -1) {
@@ -587,13 +606,13 @@ function calculaDanoArma(npc, arma, manobra) {
 }
 
 function calculaDanoArmaDistancia(npc, arma) {
-	const modTecnica = getCaracteristica(npc.NovasTecnicas, arma.Tecnica || arma.Nome);
+	const modTecnica = tecnicaDaArma(npc, arma);
 	return npc.Forca + modTecnica + arma.ModDano;
 }
 
 function calculaDanoTripleBlow(npc, manobra) {
 	const arma = buscarArma(manobra.Tecnica, npc);
-	const danoArma = npc["Força"] + npc[arma.Tecnica] + arma.ModDano;
+	const danoArma = npc["Força"] + tecnicaDaArma(npc, arma) + arma.ModDano;
 	return danoArma + "/" + danoArma + "/" + (npc["Força"] + npc["Chute"] + 1);
 }
 
@@ -673,7 +692,7 @@ function calculaDano(npc, manobra) {
 	if (manobra.Nome === "Chi Push")
 		return npc["Raciocínio"] + npc["Foco"] + 3;
 
-	if (manobra.ModDano === null || manobra.ModDano === undefined || manobra.ModDano === "Nenhum") return "-";
+	if (manobra.ModDano === null || manobra.ModDano === undefined || semModificador(manobra.ModDano)) return "-";
 	if (manobra.ModDano === "Especial") return "Esp.";
 
 	let modAtributo = 0;
@@ -694,11 +713,11 @@ function calculaDano(npc, manobra) {
 			return calculaDanoArma(npc, arma, manobra);
 		}
 
-		const armasPossiveis = ARMAS_ARRAY.filter(a => a.Tecnica === nomeTecnica || a.Nome === nomeTecnica);
-		const arma = armasPossiveis.find(a => a.Tecnica === manobra.Tecnica || a.Nome === manobra.Tecnica);
+		const arma = ARMAS_ARRAY.find(a => a.Tecnica === manobra.Tecnica || a.Nome === manobra.Tecnica);
+		if (!arma) return "-";
 
 		if (manobra.Nome === "Aparar")
-			return "ABS" + (npc["Vigor"] + npc["Bloqueio"] + npc[arma.Tecnica]);
+			return "ABS" + (npc["Vigor"] + npc["Bloqueio"] + tecnicaDaArma(npc, arma));
 
 		return calculaDanoArma(npc, arma, manobra);
 	}
@@ -714,7 +733,7 @@ function calculaDano(npc, manobra) {
 }
 
 function calculaMovimentoArma(npc, arma, manobra) {
-	if (manobra.ModMov === null || manobra.ModMov === undefined || manobra.ModMov === "Nenhum" || arma.ModMov === null || arma.ModMov === undefined || arma.ModMov === "Nenhum") return "-";
+	if (manobra.ModMov === null || manobra.ModMov === undefined || semModificador(manobra.ModMov) || arma.ModMov === null || arma.ModMov === undefined || semModificador(arma.ModMov)) return "-";
 	if (valorFixoRegex.test(manobra.ModMov) || valorFixoRegex.test(arma.ModMov)) return manobra.ModMov;
 
 	const modMov = parseInt(manobra.ModMov);
@@ -723,13 +742,13 @@ function calculaMovimentoArma(npc, arma, manobra) {
 }
 
 function calculaMovimentoArmaDistancia(npc, arma) {
-	if (typeof arma.ModMov === "string" && arma.ModMov === "Nenhum") return "-";
+	if (arma.ModMov === null || arma.ModMov === undefined || semModificador(arma.ModMov)) return "-";
 	const movFinal = npc.Esportes + parseInt(arma.ModMov);
 	return movFinal > 0 ? movFinal : 0;
 }
 
 function calculaMovimento(npc, manobra) {
-	if (manobra.ModMov === null || manobra.ModMov === undefined || manobra.ModMov === "Nenhum") return "-";
+	if (manobra.ModMov === null || manobra.ModMov === undefined || semModificador(manobra.ModMov)) return "-";
 	if (manobra.ModMov === "Especial") return "Esp.";
 	if (valorFixoRegex.test(manobra.ModMov)) return manobra.ModMov;
 	if (typeof manobra.ModMov === "string" && manobra.ModMov.indexOf("/") !== -1)//ex.: "Um/-2"
@@ -761,6 +780,9 @@ function prepareNpc(npc) {
 	npc["Aparência"] = npc.Aparecia;
 	npc["Percepção"] = npc.Percepcao;
 	npc["Raciocínio"] = npc.Raciocinio;
+
+	//técnicas básicas omitidas na ficha valem 0
+	["Soco", "Chute", "Bloqueio", "Apresamento", "Esportes", "Foco"].forEach(t => { if (npc[t] === undefined) npc[t] = 0; });
 
 	//injetando antecedentes únicos
 	const antecedentesUnicos = ["Híbrido Animal", "Elemental", "Irmão das Sombras", "Espectro", "Herança de Clã", "Cibernético", "Tarkatan", "Shokan", "Centaurian", "Psycho Power", "Paranormal", "Satsui no Hadou", "Despertar", "Sangue de Orochi", "Sub-Elemental"];
@@ -802,13 +824,13 @@ function carregarTabela(npc) {
 		if (!manobra) return alert("Manobra " + v.trim() + " não encontrada!");
 		manobra.Nome = v.trim();
 
-		html += "<tr><td>" + v.trim() + "</td>";
-		html += "<td>" + calculaVelocidade(npc, manobra) + "</td>";
-		html += "<td>" + calculaDano(npc, manobra) + "</td>";
-		html += "<td>" + calculaMovimento(npc, manobra) + "</td>";
-		html += "<td></td>";
-		html += "<td></td>";
-		html += "<td>" + estilizaSistema(manobra.Sistema) + "</td></tr>\r\n";
+		html += `<tr><td>${v.trim()}</td>
+			<td>${calculaVelocidade(npc, manobra)}</td>
+			<td>${calculaDano(npc, manobra)}</td>
+			<td>${calculaMovimento(npc, manobra)}</td>
+			<td></td>
+			<td></td>
+			<td>${estilizaSistema(manobra.Sistema)}</td></tr>`;
 	})
 
 	if (npc.Armas != null && npc.Armas != undefined) {
@@ -818,49 +840,49 @@ function carregarTabela(npc) {
 
 			const armasDeFogo = ["Armas de Fogo", "Pistola", "Metralhadora", "Fuzil", "Rifle", "Armas Pesadas"];
 			if (armasDeFogo.includes(arma.Tecnica)) {
-				html += "<tr><td><a href='/post/armas-de-fogo'>" + v.trim() + "</a></td>";
-				html += "<td>" + calculaVelocidadeArmaFogo(npc, arma) + "</td>";
-				html += "<td>" + calculaDanoArmaFogo(npc, arma) + "</td>";
-				html += "<td>-</td>";
-				html += "<td>-</td>";
-				html += "<td></td>";
-				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+				html += `<tr><td><a href='/post/armas-de-fogo'>${v.trim()}</a></td>
+					<td>${calculaVelocidadeArmaFogo(npc, arma)}</td>
+					<td>${calculaDanoArmaFogo(npc, arma)}</td>
+					<td>-</td>
+					<td>-</td>
+					<td></td>
+					<td>${estilizaSistema(arma.Sistema)}</td></tr>`;
 			}
 			else if (arma.Tecnica === "Arco" || arma.Tecnica === "Arquearia") {
-				html += "<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>" + v.trim() + "</a></td>";
-				html += "<td>" + calculaVelocidadeArma(npc, arma, { ModVel: 0 }) + "</td>";
-				html += "<td>" + (npc.Destreza + npc["Arco"] + arma.ModDano) + "</td>";
-				html += "<td>-</td>";
-				html += "<td>" + calculaAlcanceArremesso(npc, arma) + "</td>";
-				html += "<td></td>";
-				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+				html += `<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>${v.trim()}</a></td>
+					<td>${calculaVelocidadeArma(npc, arma, { ModVel: 0 })}</td>
+					<td>${npc.Destreza + npc["Arco"] + arma.ModDano}</td>
+					<td>${calculaMovimentoArmaDistancia(npc, arma)}</td>
+					<td>${calculaAlcanceArremesso(npc, arma)}</td>
+					<td></td>
+					<td>${estilizaSistema(arma.Sistema)}</td></tr>`;
 			}
 			else if (arma.Tecnica === "Besta") {
-				html += "<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>" + v.trim() + "</a></td>";
-				html += "<td>" + calculaVelocidadeArmaFogo(npc, arma) + "</td>";
-				html += "<td>" + (npc.Destreza + npc["Besta"] + arma.ModDano) + "</td>";
-				html += "<td>-</td>";
-				html += "<td>" + arma.Alcance + "</td>";
-				html += "<td></td>";
-				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+				html += `<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>${v.trim()}</a></td>
+					<td>${calculaVelocidadeArmaFogo(npc, arma)}</td>
+					<td>${npc.Destreza + npc["Besta"] + arma.ModDano}</td>
+					<td>-</td>
+					<td>${arma.Alcance}</td>
+					<td></td>
+					<td>${estilizaSistema(arma.Sistema)}</td></tr>`;
 			}
 			else if (arma.Tecnica === "Arremesso") {
-				html += "<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>" + v.trim() + "</a></td>";
-				html += "<td>" + calculaVelocidadeArmaDistancia(npc, arma) + "</td>";
-				html += "<td>" + calculaDanoArmaDistancia(npc, arma) + "</td>";
-				html += "<td>" + calculaMovimentoArmaDistancia(npc, arma) + "</td>";
-				html += "<td>" + calculaAlcanceArremesso(npc, arma) + "</td>";
-				html += "<td></td>";
-				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+				html += `<tr><td><a href='/post/armas-brancas-de-combate-a-distancia'>${v.trim()}</a></td>
+					<td>${calculaVelocidadeArmaDistancia(npc, arma)}</td>
+					<td>${calculaDanoArmaDistancia(npc, arma)}</td>
+					<td>${calculaMovimentoArmaDistancia(npc, arma)}</td>
+					<td>${calculaAlcanceArremesso(npc, arma)}</td>
+					<td></td>
+					<td>${estilizaSistema(arma.Sistema)}</td></tr>`;
 			}
 			else if (arma.Tecnica === "Apresamento") {
-				html += "<tr><td><a href='/post/armas-brancas'>" + v.trim() + "</a></td>";
-				html += "<td>" + calculaVelocidadeArma(npc, arma, { ModVel: 0 }) + "</td>";
-				html += "<td>" + calculaDanoArma(npc, arma, { ModDano: 0 }) + "</td>";
-				html += "<td>" + calculaMovimentoArma(npc, arma, { ModMov: 0 }) + "</td>";
-				html += "<td>" + calculaAlcanceArma(arma) + "</td>";
-				html += "<td></td>";
-				html += "<td>" + estilizaSistema(arma.Sistema) + "</td></tr>\r\n";
+				html += `<tr><td><a href='/post/armas-brancas'>${v.trim()}</a></td>
+					<td>${calculaVelocidadeArma(npc, arma, { ModVel: 0 })}</td>
+					<td>${calculaDanoArma(npc, arma, { ModDano: 0 })}</td>
+					<td>${calculaMovimentoArma(npc, arma, { ModMov: 0 })}</td>
+					<td>${calculaAlcanceArma(arma)}</td>
+					<td></td>
+					<td>${estilizaSistema(arma.Sistema)}</td></tr>`;
 			}
 			else {
 				const manobrasComArmas = ["Jab", "Strong", "Fierce", "Berserk", "Aparar", "Desarmar"];
@@ -868,13 +890,13 @@ function carregarTabela(npc) {
 					const manobra = manobras[v2];
 					manobra.Nome = v2;
 
-					html += "<tr><td>" + v.trim() + " " + v2.trim() + "</td>";
-					html += "<td>" + calculaVelocidadeArma(npc, arma, manobra) + "</td>";
-					html += "<td>" + calculaDanoArma(npc, arma, manobra) + "</td>";
-					html += "<td>" + calculaMovimentoArma(npc, arma, manobra) + "</td>";
-					html += "<td>" + calculaAlcanceArma(arma) + "</td>";
-					html += "<td></td>";
-					html += "<td>" + estilizaSistema(manobra.Sistema + (arma.Sistema ? ". " + arma.Sistema : "")) + "</td></tr>\r\n";
+					html += `<tr><td>${v.trim()} ${v2.trim()}</td>
+						<td>${calculaVelocidadeArma(npc, arma, manobra)}</td>
+						<td>${calculaDanoArma(npc, arma, manobra)}</td>
+						<td>${calculaMovimentoArma(npc, arma, manobra)}</td>
+						<td>${calculaAlcanceArma(arma)}</td>
+						<td>${manobra.FdV ? manobra.FdV + " FdV" : ""}</td>
+						<td>${estilizaSistema(manobra.Sistema + (arma.Sistema ? ". " + arma.Sistema : ""))}</td></tr>`;
 				})
 			}
 		})
@@ -895,33 +917,33 @@ function carregarTabela(npc) {
 			const manobra = manobras[nome];
 			manobra.Nome = nome;
 
-			html += "<tr><td>" + GeraHtmlLink(v.trim()) + "</td>";
+			html += `<tr><td>${GeraHtmlLink(v.trim())}</td>`;
 			if (manobra == null || manobra == undefined) {
-				html += "<td></td><td></td><td></td><td></td><td></td><td>Manobra não encontrada</td>";
+				html += `<td></td><td></td><td></td><td></td><td></td><td>Manobra não encontrada</td>`;
 			}
 			else {
-				html += "<td>" + calculaVelocidade(npc, manobra) + "</td>";
-				html += "<td>" + calculaDano(npc, manobra) + "</td>";
-				html += "<td>" + calculaMovimento(npc, manobra) + "</td>";
-				html += "<td>" + calculaAlcance(npc, manobra) + "</td>";
+				html += `<td>${calculaVelocidade(npc, manobra)}</td>
+					<td>${calculaDano(npc, manobra)}</td>
+					<td>${calculaMovimento(npc, manobra)}</td>
+					<td>${calculaAlcance(npc, manobra)}</td>`;
 
 				if (manobra.Chi || manobra.FdV) {
-					html += "<td>";
+					html += `<td>`;
 					if (manobra.Chi > 0) html += " " + manobra.Chi + " Chi<br />";
 					if (manobra.FdV > 0) html += " " + manobra.FdV + " FdV ";
-					html += "</td>";
+					html += `</td>`;
 				} else {
-					html += "<td></td>";
+					html += `<td></td>`;
 				}
-				html += "<td>" + estilizaSistema(manobra.Sistema) + "</td></tr>\r\n";
+				html += `<td>${estilizaSistema(manobra.Sistema)}</td></tr>\r\n`;
 			}
 		})
 		npc.ManobrasEspeciais = manobrasNormalizadas;
 	}
 
 	if (npc.Combos) {
-		html += "<tr><td><b>Combos:</b></td></tr>";
-		html += "<tr><td colspan='7'>" + npc.Combos.replaceAll(/[;,]/g, ";<br />") + "</td></tr>";
+		html += `<tr><td><b>Combos:</b></td></tr>
+			<tr><td colspan='7'>${npc.Combos.replaceAll(/[;,]/g, ";<br />")}</td></tr>`;
 	}
 
 	return '<table id="tbCalculada" border=1><thead><tr style="font-weight:bold;background-color:Black;color:white;"><td width="30%">Manobra</td><td>Vel.</td><td>Dano</td><td>Mov.</td><td>Alc.</td><td>Custo</td><td>Especial</td></tr></thead><tbody>' + html + '</tbody></table>';

@@ -6,7 +6,7 @@ function HonFuFF() {
     antecedentes[3] = newCaracteristica("Recursos", 2);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Bastão", 5);
+    tecnicas[0] = newCaracteristica("Mangual", 5);
 
     const armas = [];
     armas[0] = "Nunchaku";

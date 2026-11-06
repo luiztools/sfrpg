@@ -1,9 +1,9 @@
 function Sultana() {
-    const antecedentes = [5];
-    antecedentes[1] = newCaracteristica("Arena", 3);
-    antecedentes[2] = newCaracteristica("Fama", 3);
-    antecedentes[3] = newCaracteristica("Recursos", 4);
-    antecedentes[4] = newCaracteristica("Paranormal", 5);
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Arena", 3);
+    antecedentes[1] = newCaracteristica("Fama", 3);
+    antecedentes[2] = newCaracteristica("Recursos", 4);
+    antecedentes[3] = newCaracteristica("Paranormal", 5);
 
     const tecnicas = [];
 

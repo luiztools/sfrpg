@@ -6,7 +6,7 @@ function FeiLongSF4() {
     antecedentes[3] = newCaracteristica("Staff", 4);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Bastão", 2);
+    tecnicas[0] = newCaracteristica("Mangual", 2);
 
     const armas = [];
     armas[0] = "Nunchaku";
@@ -74,7 +74,7 @@ function FeiLongSF2() {
     antecedentes[3] = newCaracteristica("Staff", 3);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Bastão", 2);
+    tecnicas[0] = newCaracteristica("Mangual", 2);
 
     const armas = [];
     armas[0] = "Nunchaku";
@@ -142,7 +142,7 @@ function FeiLongZ3() {
     antecedentes[3] = newCaracteristica("Staff", 2);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Bastão", 1);
+    tecnicas[0] = newCaracteristica("Mangual", 1);
 
     const armas = [];
     armas[0] = "Nunchaku";

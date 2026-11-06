@@ -47,7 +47,7 @@ function calcPC(char) {
     const attributes = [char.Forca, char.Destreza, char.Vigor, char.Inteligencia, char.Raciocinio];
     const attrPC = attributes.reduce((a, b) => a + b) - 15;
 
-    const techniques = [char.Soco, char.Chute, char.Bloqueio, char.Apresamento, char.Esportes, char.Foco];
+    const techniques = [char.Soco, char.Chute, char.Bloqueio, char.Apresamento, char.Esportes, char.Foco].map(t => t || 0);//técnica omitida na ficha vale 0
     if (char.NovasTecnicas && char.NovasTecnicas.length)
         char.NovasTecnicas.map(nt => techniques.push(nt.Valor));
 
@@ -57,8 +57,8 @@ function calcPC(char) {
 
     const manPC = manobrasEspeciais.length ? manobrasEspeciais.map(m => getPCManobra(normalizarNomeManobra(m))).reduce((a, b) => a + b) : 0;
     const comboPC = count(char.Combos, " para ") + count(char.Combos, "(Dizzy)") + count(char.Combos, "2x") + (count(char.Combos, "3x") * 2);
-    const fdvChiPC = char.ForcaVontade + char.Chi - 7;
-    const saudePC = char.Saude - 10;
+    const fdvChiPC = (char.ForcaVontade || 0) + (char.Chi || 0) - 7;
+    const saudePC = (char.Saude || 10) - 10;
     const bonus = 3;
 
     //antecedentes únicos que impactam em combate
