@@ -7,7 +7,7 @@ function Belger() {
     antecedentes[4] = newCaracteristica("Recursos", 3);
 
     const tecnicas = [newCaracteristica("Bastão", 5),newCaracteristica("Pistola", 5)];
-    const armas = ["Bastão"];
+    const armas = ["Tonfa de Ferro"];
 
     const npc = {
         Nome: "Edi E.",
