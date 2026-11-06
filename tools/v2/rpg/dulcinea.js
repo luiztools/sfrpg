@@ -11,7 +11,7 @@
     tecnicas[0] = newCaracteristica("Espada", 5);
 
     const armas = [];
-    armas[0] = "Espada";
+    armas[0] = "Rapier";
 
     var Dulcinea = {
         Nome: "Dulcinea",

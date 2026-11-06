@@ -368,7 +368,7 @@ const manobras = {
 };
 
 const armas = {
-	"Arco Curto": { Tecnica: "Arco", ModVel: 1, ModDano: 2, ModMov: 0, Alcance: "Força+Arco", Sistema: "Alc Máx 9" },
+	"Arco Curto": { Tecnica: "Arco", ModVel: 2, ModDano: 1, ModMov: 0, Alcance: "Força+Arco", Sistema: "Alc Máx 9" },
 	"Arco Longo": { Tecnica: "Arco", ModVel: 1, ModDano: 2, ModMov: 0, Alcance: "Força+Arco", Sistema: "Alc Máx 12" },
 	"Yumi": { Tecnica: "Arco", ModVel: 0, ModDano: 4, ModMov: "Nenhum", Alcance: "Força+Arco", Sistema: "Alc Máx 15" },
 	"Besta Leve": { Tecnica: "Besta", ModVel: 2, ModDano: 1, ModMov: "Nenhum", Alcance: 9, Sistema: "" },
@@ -379,15 +379,15 @@ const armas = {
 	"Balisong": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Bastão Longo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },
 	"Bastão Improvisado": { Tecnica: "Bastão", ModVel: -1, ModDano: 1, ModMov: -1, Sistema: "" },
-	"Clava": { Tecnica: "Bastão", ModVel: -1, ModDano: 1, ModMov: -1, Sistema: "" },
+	"Clava": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Bastão": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
-	"Bastão Curto": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
+	"Bastão Curto": { Tecnica: "Bastão", ModVel: 1, ModDano: 0, ModMov: 1, Sistema: "" },
 	"Bastão Curto Reforçado": { Tecnica: "Bastão", ModVel: 1, ModDano: 2, ModMov: 1, Sistema: "" },
 	"Bazuca": { Tecnica: "Armas de Fogo", ModVel: -4, ModDano: 12, ModMov: "-", Sistema: "A explosão do míssil atinge todos dentro de uma área de 5 hex de raio. Recarregar uma bazuca requer um turno inteiro." },
 	"Bo": { Tecnica: "Bastão", ModVel: 0, ModDano: 2, ModMov: 1, Sistema: "Duas Mãos" },
 	"Bokken": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Bumerangue": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: 0, Alcance: "Força+Arremesso", Sistema: "Volta ao dono, exceto em falha crítica" },
-	"Cassetete": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
+	"Cassetete": { Tecnica: "Bastão", ModVel: 1, ModDano: 0, ModMov: 1, Sistema: "" },
 	"Canivete": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Chakram": { Tecnica: "Arremesso", ModVel: 1, ModDano: 1, ModMov: -3, Alcance: "Força+Arremesso" },
 	"Chapéu-Lâmina": { Tecnica: "Chapéu", ModVel: 0, ModDano: 2, ModMov: 1 },
@@ -416,8 +416,8 @@ const armas = {
 	"Fuzil de Assalto": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: 6, ModMov: "-", Sistema: "" },
 	"Garra": { Tecnica: "Garra", ModVel: 1, ModDano: 1, ModMov: 0, Sistema: "" },
 	"Katana": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "Empunhadura: Variável" },
-	"Katar": { Tecnica: "Faca", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "" },
-	"Kris": { Tecnica: "Faca", ModVel: 2, ModDano: 3, ModMov: 0, Sistema: "" },
+	"Katar": { Tecnica: "Faca", ModVel: 2, ModDano: 3, ModMov: 0, Sistema: "+1 ABS contra armas com lâmina ao bloquear." },
+	"Kris": { Tecnica: "Faca", ModVel: 2, ModDano: 2, ModMov: 0, Sistema: "" },
 	"Kunai Arremessada": { Tecnica: "Arremesso", ModVel: 1, ModDano: -1, ModMov: -1, Alcance: "Força+Arremesso", Sistema: "1 Hit para cada 2 pontos em Arremesso." },
 	"Kunai": { Tecnica: "Faca", ModVel: 1, ModDano: -1, ModMov: -1 },
 	"Kusari": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: -1, Alcance: 2, Sistema: "Alcance: 2 hex" },
@@ -458,7 +458,7 @@ const armas = {
 	"Shuko": { Tecnica: "Soco", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "Deve ser usado com manobras de Soco." },
 	"Soco Inglês": { Tecnica: "Soco", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "Deve ser usado com manobras de Soco." },
 	"Submetralhadora": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: "1/1", ModMov: "-", Sistema: "2 Hits" },
-	"Tonfa": { Tecnica: "Bastão", ModVel: 1, ModDano: 1, ModMov: 1, Sistema: "" },
+	"Tonfa": { Tecnica: "Bastão", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "+1 ABS ao bloquear." },
 	"Tonfa de Ferro": { Tecnica: "Bastão", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Wakizashi": { Tecnica: "Faca", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Garrote": { Tecnica: "Apresamento", ModVel: -3, ModDano: 4, ModMov: "Nenhum", Sistema: "Se o alvo do ataque é tomado de surpresa ou tomar mais de 5 dano no ataque inicial, ele é considerado em choque e não ABS nos ataques subsequentes ao Apresamento Sustentado!" },
@@ -519,9 +519,9 @@ function calculaAlcance(npc, manobra) {
 	if (typeof manobra.Alcance === "number") return manobra.Alcance;
 	if (manobra.Alcance.indexOf("+") !== -1) {
 		const split = manobra.Alcance.split("+");
-		return parseInt(npc[split[0].trim()]) + parseInt(npc[split[1].trim()]);
+		return (parseInt(npc[split[0].trim()]) || 0) + (parseInt(npc[split[1].trim()]) || 0);
 	}
-	return parseInt(npc[manobra.Alcance]);
+	return parseInt(npc[manobra.Alcance]) || 0;
 }
 
 function calculaAlcanceArremesso(npc, arma) {
@@ -563,6 +563,7 @@ function calculaVelocidadeArmaFogo(npc, arma) {
 }
 
 function calculaDanoArmaFogo(npc, arma) {
+	if (arma.ModDano === "Especial") return "Esp.";
 	const modTecnica = tecnicaDaArma(npc, arma);
 
 	//metralhadoras e outras armas de vários hits
@@ -587,7 +588,7 @@ function calculaAlcanceArma(arma) {
 }
 
 function calculaDanoArma(npc, arma, manobra) {
-	if (!arma || !manobra) return console.log(`Não foi possível calcular dano de uma manobra com arma`, arma, manobra);
+	if (!arma || !manobra) return "-";
 	const modTecnica = tecnicaDaArma(npc, arma);
 
 	if (manobra.Nome === "Aparar") {

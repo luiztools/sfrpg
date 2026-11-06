@@ -47,7 +47,7 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
   Armas: armas,
   ManobrasEspeciais: "...",
   ```
-  Armas comuns em `manobras.js`: Katana (+1/+3/+0), Bokken (+1/+3/+0), Cimitarra (+0/+3/+0), Tonfa (+1/+1/+1), Garra (+1/+1/+0), Chicote (-1/+2/nenhum, alcance 6), Pistola (+2/+3/-), Pistola Pesada (+2/+4/-).
+  Armas comuns em `manobras.js`: Katana (+1/+3/+0), Bokken (+1/+3/+0), Cimitarra (+0/+3/+0), Tonfa (+0/+1/+0), Garra (+1/+1/+0), Chicote (-1/+2/nenhum, alcance 6), Pistola (+2/+3/-), Pistola Pesada (+2/+4/-).
   Armas de duas ou mais partes ligadas por corrente curta usam a técnica **"Mangual"** (Nunchaku). Corrente com mais de 30 cm é Chicote (Corrente, Kusari, Kusarigama, Maça-Estrela), como diz o post `tecnicas-com-armas`.
   A técnica de arma de fogo nas fichas se chama **"Armas de Fogo"** (é o nome que o cálculo reconhece), embora o post Armas de Fogo fale em técnica "Pistola".
 - Antecedente Mascote: `antecedentes[i] = newCaracteristica("Mascote", 1);`.

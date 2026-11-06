@@ -47,7 +47,8 @@ function WesleyAdams() {
         Apresamento: 2,
         Esportes: 4,
         Foco: 1,
-        NovasTecnicas: [newCaracteristica("Rapier", 3)],
+        NovasTecnicas: [newCaracteristica("Espada", 3)],
+        Armas: ["Rapier"],
         ManobrasEspeciais: "Jump, Slide Kick, Backflip Kick, Suplex, Wall Spring, Diving Hawk",
         Combos: "Bloqueio para Slide Kick para Diving Hawk",
         Gloria: 5,
@@ -55,7 +56,7 @@ function WesleyAdams() {
         Chi: 2,
         ForcaVontade: 6,
         Saude: 10,
-        Divisao: "Estilo Livre",
+        Divisao: "Duelistas",
         Posto: 3
     };
     return personagem;

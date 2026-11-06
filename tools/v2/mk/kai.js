@@ -55,6 +55,7 @@ function Kai() {
         Apresamento: 5,
         Esportes: 6,
         Foco: 6,
+        NovasTecnicas: [newCaracteristica("Faca", 5)],
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Backflip, Foot Sweep, Power Uppercut, Throw, Fireball, Flying Fireball, Slide Kick, Hair Throw, Tumbling Attack, Dragon Punch, Back Breaker",
         Combos: "Strong - Strong - Power Uppercut; Jumping Short - Flying Fireball - Slide Kick; Drunken Monkey Roll - Fireball - Flying Fireball",

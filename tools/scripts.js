@@ -388,8 +388,8 @@ function AutoGeradorP(p) {
         p.Forca, p.Destreza, p.Vigor, p.Carisma, p.Manipulacao, p.Aparencia, p.Percepcao, p.Inteligencia, p.Raciocinio, p.Prontidao, p.Interrogacao,
         p.Intimidacao, p.Perspicacia, p.Manha, p.Labia, p.LutaCega, p.Conducao, p.Lideranca, p.Seguranca, p.Furtividade, p.Sobrevivencia,
         p.Arena, p.Computador, p.Investigacao, p.Medicina, p.Misterios, p.Estilos, p.Antecedentes, p.Gloria, p.Honra,
-        p.Divisao, p.Posto, p.Soco, p.Chute, p.Bloqueio, p.Apresamento, p.Esportes, p.Foco, p.Chi, p.ForcaVontade, p.Saude,
-        p.ManobrasEspeciais, p.Combos, p.NovasTecnicas, p.NovosTalentos, p.NovasPericias, p.NovosConhecimentos, p.PC);
+        p.Divisao, p.Posto || "", p.Soco, p.Chute, p.Bloqueio, p.Apresamento, p.Esportes, p.Foco, p.Chi, p.ForcaVontade, p.Saude,
+        p.ManobrasEspeciais, p.Combos || "", p.NovasTecnicas, p.NovosTalentos, p.NovasPericias, p.NovosConhecimentos, p.PC);
 }
 
 function GeraLinkEstilo(estilo) {

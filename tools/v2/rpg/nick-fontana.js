@@ -46,6 +46,7 @@
         Honra: 2,
         Chi: 4,
         ForcaVontade: 4,
+        Saude: 10,
         Divisao: "Estilo Livre",
         Posto: 3
     };
