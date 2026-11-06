@@ -55,7 +55,7 @@ function Belger() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Buffalo Punch, Triple Strike",
-        Combos: "Jump + Bastão Fierce para Bastão Strong (Dizzy), Bastão Jab para Bastão Jab para Bastão Berserk (Dizzy), Bastão Strong para Bastão Strong para Bastão Berserk (Dizzy)",
+        Combos: "Jump + Tonfa de Ferro Fierce para Tonfa de Ferro Strong (Dizzy), Tonfa de Ferro Jab para Tonfa de Ferro Jab para Tonfa de Ferro Berserk (Dizzy), Tonfa de Ferro Strong para Tonfa de Ferro Strong para Tonfa de Ferro Berserk (Dizzy)",
         Gloria: 6,
         Honra: 1,
         Chi: 1,
