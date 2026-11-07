@@ -47,7 +47,7 @@ function Sultana() {
         Esportes: 3,
         Foco: 6,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Telekinesis, Jump, Soul Throw, Throw, Air Throw, Hair Throw, Soul Spiral, Slide Kick, Psychokinetic Channeling, Fireball, Missile Reflection, Energy Reflection, Power Uppercut, Telepathy, Soul Illusion, Ghost Form",
+        ManobrasEspeciais: "Telekinesis, Jump, Soul Throw, Throw, Air Throw, Hair Throw, Psychic Vise, Soul Spiral, Slide Kick, Psychokinetic Channeling, Fireball, Missile Reflection, Energy Reflection, Power Uppercut, Telepathy, Soul Illusion, Ghost Form",
         Combos: "Energy Reflection para Fireball (dizzy), Slide Kick para Soul Spiral (dizzy), Short para Soul Throw, Short para Short (dizzy); Bloqueio para Fireball",
         Gloria: 10,
         Honra: 4,

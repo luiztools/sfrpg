@@ -93,6 +93,7 @@ const manobras = {
 	"Air Hurricane Kick": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 1, Chi: 1, FdV: 1, Sistema: "Igual Hurricane Kick" },
 	"Backflip Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: "Dois", Sistema: "Mov para trás após dano" },
 	"Double Dread Kick": { Tecnica: "Chute", ModVel: -2, ModDano: "1/4", ModMov: 1, FdV: 1, Sistema: "1º teste com +1 DAN e joga o alvo 1 hex para trás, o atacante deve mover-se para o hex do oponente e fazer o 2º ataque com +4; pode usar o 2º ataque se o alvo estiver a alcance" },
+	"Sanren Geki": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1/4", ModMov: 1, FdV: 1, Chi: 1, Sistema: "Como Double Dread Kick, mas com três chutes: dano rolado três vezes; cada um dos dois primeiros empurra 1 hex e o lutador acompanha; o último causa KD" },
 	"Double Hit Kick": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois Hits a menos que o alvo esteja em Aérea ou Agachamento" },
 	"Double Hit Knee": { Tecnica: "Chute", ModVel: 0, ModDano: "0/0", ModMov: -2, Sistema: "Dois Hits" },
 	"Dragon Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 6, ModMov: -2, Chi: 1, FdV: 1, Sistema: "KD e joga todos os alvos 1 hex para trás; 2 testes vs. alvo que estiver no hex adjacente no começo do movimento; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
@@ -182,7 +183,8 @@ const manobras = {
 	"Iron Claw": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: "Um", Sistema: "Sustentado" },
 	"Jaw Spin": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 5, Chi: 1, Sistema: "Precisa sofrer um ataque mais lento antes de executar esta manobra" },
 	"Knee Basher": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: "Um", Sistema: "Sustentado; uma vez que o alvo é arremessado, ele é considerado KD" },
-	"Leaping Throw": { Tecnica: "Apresamento", ModVel: -2, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea, esquiva projétil; arremessa a FOR hexes" }, "Power Bomb": { Tecnica: "Apresamento", ModVel: 0, ModDano: 6, ModMov: "Um", FdV: 1, Sistema: "KD, vítima quica a até 3 hex de distância" },
+	"Leaping Throw": { Tecnica: "Apresamento", ModVel: -2, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea, esquiva projétil; arremessa a FOR hexes" },
+	"Power Bomb": { Tecnica: "Apresamento", ModVel: 0, ModDano: 6, ModMov: "Um", FdV: 1, Sistema: "KD, vítima quica a até 2 hex de distância; o atacante escolhe a direção" },
 	"Neck Choke": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "Sustentado" },
 	"Pile Driver": { Tecnica: "Apresamento", ModVel: -2, ModDano: 4, ModMov: "Um", Sistema: "KD" },
 	"Pin": { Tecnica: "Apresamento", ModVel: -1, ModDano: 2, ModMov: 1, FdV: 1, Sistema: "Sustentado; o alvo precisa estar KD ou Dizzy; turnos subsequentes DAN +0 e MOV Zero; o atacante ganha +3 FOR para sustentar mas precisa causar 2 dano ao invés de 1" },
@@ -192,7 +194,7 @@ const manobras = {
 	"Siberian Bear Crusher": { Tecnica: "Apresamento", ModVel: 0, ModDano: 3, ModMov: 1, FdV: 1, Sistema: "KD; Aérea enquanto estiver sendo executado (após o movimento)" },
 	"Siberian Suplex": { Tecnica: "Apresamento", ModVel: 0, ModDano: "2/2", ModMov: "Dois", FdV: 1, Sistema: "KD; considere um Suplex feito imediatamente após outro num mesmo alvo numa mesma direção (2 hits, mas move 1 hex depois)" },
 	"Sleeper": { Tecnica: "Apresamento", ModVel: -1, ModDano: 2, ModMov: "Um", FdV: 1, Sistema: "Sustentado; se o apresamento for mantido por 3 turnos o alvo é Dizzy" },
-	"Soul Throw": { Tecnica: "Apresamento", ModVel: -2, ModDano: 7, ModMov: "Dois", Chi: 1, Sistema: "Personagem passa pelo hex do oponente, arremessando-o em seguida" },
+	"Soul Throw": { Tecnica: "Foco", ModVel: 0, ModDano: 4, ModMov: "Dois", Chi: 1, FdV: 1, Sistema: "Como Hair Throw: atravessa o hex do oponente e o arremessa; dano contra a Inteligência do alvo, em Força de Vontade em vez de Saúde; KD se houver ao menos 1 sucesso; Dizzy se o alvo perder mais FdV que sua Inteligência" },
 	"Spinning Pile Driver": { Tecnica: "Apresamento", ModVel: -2, ModDano: 7, ModMov: "Dois", FdV: 2, Sistema: "KD; o alvo cai a 3 hex após o impacto; Aérea enquanto estiver sendo executado (após o movimento); esquiva de projétil enquanto estiver sendo executado" },
 	"Stomach Pump": { Tecnica: "Apresamento", ModVel: 0, ModDano: 4, ModMov: "Um", Sistema: "Sustentado" },
 	"Storm Hammer": { Tecnica: "Apresamento", ModVel: -2, ModDano: 7, ModMov: "Um", Sistema: "KD; atacante e alvo terminam a 3 hex do hex do ataque; Aérea enquanto estiver sendo executado (após o movimento inicial); esquiva de projétil enquanto estiver sendo executado" },
@@ -264,7 +266,7 @@ const manobras = {
 	"Sonic Boom": { Tecnica: "Foco", ModVel: -3, ModDano: 4, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "linha de visão" },
 	"Stunning Shout": { Tecnica: "Foco", ModVel: 2, ModMov: -2, Chi: 1, Sistema: "Afeta um alvo ou, a critério do Narrador, um grupo de pequeno; o atacante deve vencer uma disputa de FV Permanente; se o alvo não agiu neste turno, perderá sua ação; se já agiu, terá um redutor na VEL igual a diferença de que perdeu a disputa" },
 	"Telepathy": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "personagem pode ligar (Foco) pessoas em comunicação telepática, para poderem conversar mentalmente" },
-	"Thunderclap": { Tecnica: "Foco", ModVel: 0, ModDano: -3, Chi: 1, Alcance: "Três", Sistema: "Atinge todos em 3 hex em linha reta" },
+	"Thunderclap": { Tecnica: "Foco", ModVel: 0, ModDano: -3, ModMov: "Nenhum", Chi: 1, Alcance: "Três", Sistema: "Área: atinge todos a até 3 hex do lutador" },
 	"Toughskin": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Passiva; +2 ABS neste turno" },
 	"Yoga Flame": { Tecnica: "Foco", ModVel: -2, ModDano: 7, ModMov: "Um", Chi: 2, Alcance: "Dois", Sistema: "Afeta todos no hex adjacente e nos 3 posteriores a este; a chama dura até o fim do turno" },
 	"Yoga Teleport": { Tecnica: "Foco", ModVel: 3, ModMov: "Especial", Chi: 2, Sistema: "O personagem desaparece, reaparecendo a qualquer momento do turno em qualquer lugar que esteja a (Inteligência + Foco) hex da posição original" },
@@ -276,6 +278,7 @@ const manobras = {
 	"Awakening Blood": { Tecnica: "Foco", ModVel: 1, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "Só pode ser usada em um portador do Sangue de Orochi; usa as regras do Psychic Rage, mas o alvo sofre os efeitos do sangue despertado em vez dos efeitos do Psychic Rage; em pessoas normais, causa os mesmos efeitos do Psychic Rage" },
 	"Psychic Vise": { Tecnica: "Foco", ModVel: 0, ModDano: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Sistema: "O alvo absorve com Inteligência ao invés de Vigor, ignorando Bloqueios; o dano é retirado da FV do alvo e este terá um redutor na VEL no próximo turno igual ao dano; se o dano exceder a Inteligência do alvo, ele estará Dizzy;" },
 	"Brain Mulch": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Nenhum", Chi: 1, Sistema: "Canto em área: atinge todos que puderem ouvir. Cada alvo testa Força de Vontade para resistir; quem falhar sofre 3 dados de dano. Custa 1 Chi por turno de canto." },
+	"Psycho Shield": { Tecnica: "Foco", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Sistema: "Como Bloqueio, mas ABS = VIG + Foco/Psycho Power + 2; vale contra Apresamentos; não é Interrupção; +2 Vel na próxima manobra; dois turnos seguidos: maior velocidade automática, pagando o Chi; proteger outra pessoa adjacente: 1 FdV" },
 	"Psychokinetic Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Passiva com socos e chutes básicos; +2 DANO no turno" },
 	"Air Blast": { Tecnica: "Foco", ModVel: -1, ModDano: 3, Chi: 1, Alcance: "Inteligencia+Elemental", Sistema: "linha de visão; alvo precisa passar em um teste de Percepção + Luta às Cegas para perceber e interromper este ataque" },
 	"Balance": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "O lutador ganha +1 MOV para Manobra Aérea; automático" },
@@ -509,15 +512,22 @@ function estilizaSistema(sistema) {
 	return sistema;
 }
 
+//valor de uma característica usada no alcance; para Cibernéticos, Foco é substituído pelo antecedente Cibernético
+function valorAlcance(npc, nome) {
+	nome = nome.trim();
+	if (nome === "Foco" && npc["Cibernético"] > 0) return npc["Cibernético"];
+	return parseInt(npc[nome]) || 0;
+}
+
 function calculaAlcance(npc, manobra) {
 	if (manobra.Alcance === null || manobra.Alcance === undefined) return "";
 	if (valorFixoRegex.test(manobra.Alcance)) return manobra.Alcance;
 	if (typeof manobra.Alcance === "number") return manobra.Alcance;
 	if (manobra.Alcance.indexOf("+") !== -1) {
 		const split = manobra.Alcance.split("+");
-		return (parseInt(npc[split[0].trim()]) || 0) + (parseInt(npc[split[1].trim()]) || 0);
+		return valorAlcance(npc, split[0]) + valorAlcance(npc, split[1]);
 	}
-	return parseInt(npc[manobra.Alcance]) || 0;
+	return valorAlcance(npc, manobra.Alcance);
 }
 
 function calculaAlcanceArremesso(npc, arma) {
