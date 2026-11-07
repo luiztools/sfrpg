@@ -5,6 +5,7 @@ function DudleySF4() {
     antecedentes[2] = newCaracteristica("Contatos", 3);
     antecedentes[3] = newCaracteristica("Fama", 1);
     antecedentes[4] = newCaracteristica("Recursos", 4);
+    antecedentes[5] = newCaracteristica("Staff", 4);
 
     var dudley = {
         Nome: "Dudley",
@@ -50,8 +51,8 @@ function DudleySF4() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 2,
-        ManobrasEspeciais: "Jump, Air Throw, Deflecting Punch, Haymaker, Power Uppercut, Fist Sweep, Dashing Punch, Dashing Uppercut, Hyper Fist, Throw, Brain Cracker, Machine Gun Blow, Punch Defense, Cross Counter, Jet Uppercut",
-        Combos: "Jab para Strong para Fierce (Dizzy); Machine Gun Blow para Hyper Fist (Dizzy); Cross Counter para Jet Uppercut (Dizzy); Jump para Hyper Fist; Fist Sweep para Jet Uppercut",
+        ManobrasEspeciais: "Jump, Air Throw, Deflecting Punch, Haymaker, Power Uppercut, Fist Sweep, Dashing Punch, Dashing Uppercut, Hyper Fist, Throw, Brain Cracker, Machine Gun Blow, Punch Defense, Cross Counter, Jet Uppercut, Ducking Blow, Short Swing Blow, Thunderbolt",
+        Combos: "Jab para Strong para Fierce (Dizzy); Machine Gun Blow para Hyper Fist (Dizzy); Cross Counter para Jet Uppercut (Dizzy); Jump para Hyper Fist; Fist Sweep para Jet Uppercut; Fist Sweep para Machine Gun Blow (Dizzy); Fist Sweep para Fierce; Fist Sweep para Ducking Blow",
         Gloria: 7,
         Honra: 8,
         Chi: 3,

@@ -87,8 +87,6 @@ const manobras = {
 	"Tameshiwari": { Tecnica: "Soco", ModVel: 1, ModDano: "", ModMov: "Um", Chi: 1, FdV: 1, Sistema: "Tem de carregar por um turno. No seguinte, FOR + SOCO x 2 de dano, causa KD mesmo bloqueando, empurra FOR hexes" },
 	"Reaping Palm": { Tecnica: "Soco", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "anda linha reta, KD, esquiva projétil ao custo de 1 Chi adicional" },
 	"Metsu Shoryuken": { Tecnica: "Soco", ModVel: 1, ModDano: 7, ModMov: -1, FdV: 1, Chi: 1, Sistema: "KD vs. Aérea; empourra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva; Dano Agravado, -1 Honra; tem de estar com Satsui ativado mas não acumula os efeitos dele" },
-	"Ducking Straight": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "esquiva de projétil" },
-	"Ducking Upper": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "esquiva de projétil; KD vs Aérea" },
 	"Short Swing Blow": { Tecnica: "Soco", ModVel: -2, ModDano: 3, ModMov: "Dois/Um", Sistema: "anda dois hexes para esquivar, anda um para bater" },
 
 	//Chute
@@ -217,6 +215,7 @@ const manobras = {
 	"Flying Heel Stomp": { Tecnica: "Esportes", ModVel: 0, ModDano: 1, ModMov: 2, FdV: 1, Sistema: "Aérea; esquiva de projétil; Linha Reta; o atacante pode fazer o ataque a qualquer momento e continuar o movimento" },
 	"Multiple Stomp": { Tecnica: "Esportes", ModVel: -1, ModDano: "0/0/0", ModMov: -1, FdV: 1, Sistema: "Aérea; Linha Reta; dano rolado três vezes; esquiva de projétil como Jump; oponente em manobra de agachamento ainda é atingido pelo último chute" },
 	"Jump": { Tecnica: "Esportes", ModVel: 3, ModMov: 0, Sistema: "Aérea; Esquiva de projétil (Des + Esp vs. Foco); combina com chutes e socos básicos (use a VEL, DAN e MOV da manobra)" },
+	"Ducking Blow": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Jogada com soco básico ou Power Uppercut, mantendo os modificadores dela, com -1 MOV e movimento em linha reta; esquiva de projétil como Jump, mas não é Aérea nem Agachamento" },
 	"Jumping Shoulder Butt": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: -1, Sistema: "Aérea; esquiva de projétil" },
 	"Kippup": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Passiva; o lutador sofre apenas -1 VEL após sofrer KD" },
 	"Rolling Attack": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: 4, FdV: 1, Sistema: "Aérea; Linha Reta; o atacante termina o movimento 2 hex na frente do alvo; precisa entrar no hex do alvo" },
