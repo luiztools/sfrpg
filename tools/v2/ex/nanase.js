@@ -63,10 +63,84 @@ function NanaseEX() {
         Honra: 6,
         Chi: 5,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 6
     };
 }
 
-const npc = calcPC(NanaseEX());
+function SananeFEX() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 3);
+    antecedentes[1] = newCaracteristica("Arena", 2);
+    antecedentes[2] = newCaracteristica("Recursos", 1);
+    antecedentes[3] = newCaracteristica("Sensei", 3);
+
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Lança", 5);
+
+    const armas = [];
+    armas[0] = "Naginata";
+
+    return {
+        Nome: "Sanane Suzuki",
+        Estilo: "Karatê Shotokan (Bojutsu)",
+        Escola: "Clã Mizukami",
+        Equipe: "",
+        Time: "",
+        Jogador: "NPC",
+        Assinatura: "Gira a naginata",
+        Conceito: "Universitária",
+        Cronica: "Fighting EX",
+        Forca: 4,
+        Destreza: 5,
+        Vigor: 5,
+        Carisma: 4,
+        Manipulacao: 3,
+        Aparencia: 4,
+        Percepcao: 4,
+        Inteligencia: 4,
+        Raciocinio: 4,
+        Prontidao: 4,
+        Interrogacao: 0,
+        Intimidacao: 0,
+        Perspicacia: 5,
+        Manha: 2,
+        Labia: 2,
+        LutaCega: 5,
+        Conducao: 0,
+        Lideranca: 2,
+        Seguranca: 0,
+        Furtividade: 5,
+        Sobrevivencia: 4,
+        Arena: 1,
+        Computador: 0,
+        Investigacao: 2,
+        Medicina: 2,
+        Misterios: 2,
+        Estilos: 3,
+        Antecedentes: antecedentes,
+        Soco: 5,
+        Chute: 5,
+        Bloqueio: 4,
+        Apresamento: 4,
+        Esportes: 5,
+        Foco: 5,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Foot Sweep, Slide Kick, Punch Defense, Deflecting Punch, Throw, Jump, Lunging Punch",
+        Combos: "Naginata Jab para Naginata Strong para Naginata Strong (Dizzy); Naginata Fierce para Naginata Strong para Naginata Strong (Dizzy); Lunging Punch para Slide Kick",
+        Gloria: 5,
+        Honra: 8,
+        Chi: 7,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Duelistas",
+        Posto: 7
+    };
+}
+
+let npc;
+if (getParameterByName('age') === 'fex') npc = SananeFEX();
+else npc = NanaseEX();
+npc = calcPC(npc);

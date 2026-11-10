@@ -137,7 +137,7 @@ function CharlieSF5() {
         Esportes: 4,
         Foco: 5,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Jump, Foot Sweep, Sonic Scythe, Somersault Kick, Suplex, Air Suplex, Knee Basher, Throw, Air Throw, Spinning Back Fist, Flying Knee Thrust, Flash Kick, Power Uppercut, Sonic Boom",
+        ManobrasEspeciais: "Jump, Foot Sweep, Sonic Scythe, Somersault Kick, Suplex, Air Suplex, Knee Basher, Throw, Air Throw, Spinning Back Fist, Flying Knee Thrust, Flash Kick, Power Uppercut, Sonic Boom, Energy Ball, San He, Leech, Ashura Senku, Wheel Kick, Sonic Hurricane",
         Combos: "Bloqueio para Flash Kick; Bloqueio para Foot Sweep; Bloqueio para Knee Basher (Dizzy); Flying Knee Thrust para Spinning Back Fist",
         Gloria: 6,
         Honra: 7,

@@ -13,6 +13,8 @@ function DarunEX() {
         Assinatura: "Levanta o braço",
         Conceito: "Ex-wrestler",
         Cronica: "Street Fighter EX",
+        Equipe: "Família Purna",
+        Time: "Pullum Team",
         Forca: 7,
         Destreza: 2,
         Vigor: 6,

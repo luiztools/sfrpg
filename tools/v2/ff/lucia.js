@@ -80,7 +80,15 @@ function LuciaSF5() {
     lucia.ForcaVontade = 9;
     lucia.Chi = 8;
     lucia.Combos += "Bloqueio para Lightning Leg (Dizzy);"
+    lucia.Forca = 4;
+    lucia.Soco = 5;
+    lucia.Chute = 6;
     lucia.Bloqueio = 4;
+    lucia.Apresamento = 4;
+    lucia.Esportes = 5;
+    lucia.Foco = 2;
+    lucia.ManobrasEspeciais += ", Fireball, Wheel Kick, Spinning Back Fist, Air Throw, Slide Kick, Buffalo Punch";
+    lucia.Combos += " Lightning Leg para Spinning Back Fist (Dizzy);";
     return lucia;
 }
 

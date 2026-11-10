@@ -19,7 +19,7 @@ Os scripts de banco e FTP são os da skill de personagens (`.claude/skills/perso
    ```
    Fichas que citam uma manobra que ainda não está em `manobras.js` contam 1 PC para ela e não a mostram na tabela de cálculos. Depois do cadastro, elas passam a mostrar.
 3. **Entrada em `manobras.js`.** Ver "manobras.js".
-4. **Validar o custo em PC, enviar por FTP e atualizar o cache-buster.** Ver "manobras.js".
+4. **Validar o PC (eficiência) da manobra, enviar por FTP e atualizar o cache-buster.** Ver "manobras.js".
 5. **Imagem.** Ver "Imagem". Antes de subir qualquer arquivo, verifique se a imagem já existe no blog.
 6. **Post da manobra como rascunho.** Ver "Post da manobra".
 7. **Listas cruzadas** (posts publicados): post da técnica, Movimentos Comuns e posts de estilo. Ver "Listas cruzadas".
@@ -38,20 +38,27 @@ Quando o usuário mandar correções uma por mensagem, aplique cada uma e siga e
   - Manobra de Foco exclusiva de Elemental (ex.: Flaming Fist, "Foco 1, Soco 1, Elemental 2") é da categoria Foco e fica no post Elemental, não na lista de Soco.
 - Formato (uma linha, tab no início):
   ```js
-  	"Multiple Stomp": { Tecnica: "Esportes", ModVel: -1, ModDano: "0/0/0", ModMov: -1, FdV: 1, Sistema: "Aérea; Linha Reta; dano rolado três vezes; esquiva de projétil como Jump; oponente em manobra de agachamento ainda é atingido pelo último chute" },
+  	"Multiple Stomp": { Tecnica: "Esportes", ModVel: -1, ModDano: "0/0/0", ModMov: -1, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil", "Acerta Agachamento"], Sistema: "Três hits; Aérea; Linha Reta; esquiva de projétil como Jump; oponente em manobra de agachamento ainda é atingido pelo último chute" },
   ```
   - `Chi: N` e/ou `FdV: N` conforme o custo (omita quando o custo for "nenhum").
   - `ModMov`: número, ou `"Nenhum"`, `"Um"`, `"Dois"`, `"Três"`, `"Especial"`.
-  - Multi-hit: `ModDano` com um valor por acerto (`"1/1"`, `"0/0/0"`, `"2/0"`).
-- **O texto de `Sistema` decide o custo em PC** (`getPCManobra`):
-  - Repetição de dano só é contada com "dois testes", "duas vezes", "três testes" ou "três vezes". "3 hits" e "Três Hits" **não** contam. Para multi-hit, escreva "dano rolado três vezes".
-  - Somam +1 cada: "KD"/"knockdown", "área", "aérea" (ou "como Jump"/"esquivar de projétil"), "agachamento", "ignora" (e técnicas Bloqueio/Apresamento).
-  - Chi e FdV subtraem.
+  - Multi-hit: `ModDano` com um valor por acerto (`"1/1"`, `"0/0/0"`, `"2/0"`), e o `Sistema` começa com "Dois hits" ou "Três hits".
+  - `Alcance`: omitido = adjacente (no Apresamento, omitido = mesmo hex); `0` = mesmo hex; número fixo; `"Foco"`; `"Raciocinio+Foco"`.
+  - `Vantagens` e `Desvantagens`: listas com os nomes padronizados abaixo (omita a lista vazia). Se a manobra não tiver nenhum dos dois campos, eles são deduzidos do texto do `Sistema` por regex (`inferirVantagens`, mesmas regras da migração), assim como os hits citados só no texto (`inferirHits`). Prefira sempre preencher os campos.
+  - `PC: N`: só para manobra com `ModVel`/`ModDano`/`ModMov` "Especial"; é o valor do bônus que ela dá (ex.: Rekka Ken +3 VEL → `PC: 3`). Toda manobra "Especial" tem `PC` (use `PC: 1` quando não houver bônus numérico). Se a manobra tiver modificadores definidos no post (ex.: Lightness, "+1 (inicial)"), use os modificadores do turno inicial em vez de "Especial".
+- **Como o PC da manobra é calculado** (`calculaPCManobra`; PC mede a eficiência em combate, não é custo):
+  - Base: `ModVel` + dano + movimento + bônus de hits (ou o campo `PC`). O dano entra uma vez, pelo modificador do 1º hit. Bônus de hits (vale o maior): hits fixos no `ModDano` (`"1/1"` +1, `"0/0/0"` +2); vantagem `Impacto Técnico` (hits = técnica, ex.: Repeating Fireball, Gekiro) +3; `Impacto Dinâmico` (hits = movimento, ex.: Hurricane Kick) +2; `Sustentado` (hits possíveis = Apresamento, ex.: Head Bite) +1. Essas três vantagens não somam o +1 comum. Hits condicionais também contam (decisão do usuário).
+  - Movimento: sem movimento (`"Nenhum"`, `""`, `"-"` ou omitido) = -1; `"Um"` = 0; `"Dois"` = +1; `"Três"` = +2; números valem eles mesmos.
+  - Alcance: mesmo hex -1; adjacente 0; fixo (2, 3...) +1; um atributo ou técnica +2; atributo + técnica +3.
+  - Cada Vantagem +1 (`"Área N"` vale N); cada Desvantagem -1; técnica Apresamento ou Bloqueio +1 (se não tiver a vantagem `Ignora Bloqueio`); Chi e FdV subtraem; mínimo 1.
+  - Vantagens em uso: `Knockdown`, `Knockdown vs. Aérea`, `Aérea`, `Esquiva de Projétil`, `Agachamento`, `Acerta Agachamento`, `Imune a Agachamento`, `Imune a Knockdown`, `Ignora Bloqueio`, `Ignora Vigor`, `Ignora Armadura`, `Não pode ser esquivada`, `Defesa restrita`, `Área`, `Área N`, `Sustentado`, `Impacto Técnico`, `Impacto Dinâmico`, `Dano Agravado`.
+  - Desvantagens em uso: `Não afeta Agachamento`, `Não afeta Aérea`, `Só interrompendo Aérea`, `Precisa interromper`, `Precisa entrar no hex do alvo`, `Exclusiva`, `Não ataca quem lançou o projétil`, `Requer concentração`, `Só contra alvo caído ou atordoado`, `Só após bloquear`, `Precisa sofrer um ataque antes`, `Dano só atordoa`, `Não pode fazer parte de Combo`, `2º hit condicional`, `Exige Satsui ativado`, entre outras. Bloqueios já são imunes a Knockdown por padrão (não use essa vantagem neles). Reaproveite um nome existente antes de criar outro (cada restrição vale -1).
+  - Na ficha (`calcPC` em `scripts.js`): as 10 manobras de maior PC contam inteiras e as demais valem 1 cada. Entram as especiais e as básicas com a **melhor** arma do personagem (a que soma mais PC; ele usa uma arma por vez), como "Katana Fierce". `Berserk` custa 1 FdV.
 - Antes de editar, confira se a produção é igual ao `HEAD`:
   ```sh
   git show HEAD:./manobras.js | cmp - <(curl -s https://www.sfrpg.com.br/tools/manobras.js) && echo PROD=HEAD
   ```
-- Valide a sintaxe, o BOM e o custo, comparando com manobras parecidas e com o pré-requisito:
+- Valide a sintaxe, o BOM e o PC, comparando com manobras parecidas e com o pré-requisito:
   ```sh
   head -c3 manobras.js | xxd | head -1   # efbb bf
   node --check manobras.js && node -e 'const vm=require("vm");const c={};vm.createContext(c);vm.runInContext(require("fs").readFileSync("manobras.js","utf8")+";this.g=getPCManobra",c);for(const n of ["<Nova>","<Pré-requisito>"])console.log(n,c.g(n))'

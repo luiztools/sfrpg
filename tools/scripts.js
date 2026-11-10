@@ -36,7 +36,8 @@ function calcPC(char) {
     /**
      * Físicos, Int e Rac = soma e desconta 15
      * Técnicas = soma e desconta 8
-     * Manobras = soma modificadores Dano, Vel e Movimento
+     * Manobras = PC de cada manobra especial e de cada manobra básica com arma (getPCManobra);
+     *            as 10 maiores contam inteiras (um combate tem 10 turnos) e as demais valem 1 cada
      * Combos = soma os 'para', 'x2', 'x3' e os dizzy
      * FdV e Chi = soma e desconta 7
      * Saúde = desconta 10
@@ -55,7 +56,11 @@ function calcPC(char) {
 
     const manobrasEspeciais = char.ManobrasEspeciais.split(/[,;]/g).filter(m => m && m.trim()) || [];
 
-    const manPC = manobrasEspeciais.length ? manobrasEspeciais.map(m => getPCManobra(normalizarNomeManobra(m), char)).reduce((a, b) => a + b) : 0;
+    const manobrasComArmas = typeof getManobrasComArmas === "function" ? getManobrasComArmas(char) : [];
+    const pcManobras = manobrasEspeciais.map(m => getPCManobra(normalizarNomeManobra(m), char))
+        .concat(manobrasComArmas.map(m => calculaPCManobra(m, char)))
+        .sort((a, b) => b - a);
+    const manPC = pcManobras.reduce((total, pc, i) => total + (i < 10 ? pc : 1), 0);
     const comboPC = count(char.Combos, " para ") + count(char.Combos, "(Dizzy)") + count(char.Combos, "2x") + (count(char.Combos, "3x") * 2);
     const fdvChiPC = (char.ForcaVontade || 0) + (char.Chi || 0) - 7;
     const saudePC = (char.Saude || 10) - 10;

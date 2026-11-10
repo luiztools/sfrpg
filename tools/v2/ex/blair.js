@@ -14,6 +14,8 @@ function BlairEX() {
         Assinatura: "Cabelos azuis",
         Conceito: "Aventureira",
         Cronica: "Street Fighter EX",
+        Equipe: "Família Purna",
+        Time: "Pullum Team",
         Forca: 5,
         Destreza: 6,
         Vigor: 4,

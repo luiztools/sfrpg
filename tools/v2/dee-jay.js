@@ -184,7 +184,7 @@ function DeeJaySF6() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 3,
-        ManobrasEspeciais: "Hyper Fist, Power Uppercut, Triple Strike, Double Dread Kick, Double Hit Kick, Slide Kick, Wounded Knee, Back Roll Throw, Throw, Jump, Musical Accompaniment, Sonic Boom",
+        ManobrasEspeciais: "Hyper Fist, Power Uppercut, Triple Strike, Double Dread Kick, Double Hit Kick, Slide Kick, Wounded Knee, Back Roll Throw, Throw, Jump, Musical Accompaniment, Sonic Boom, Gekiro",
         Combos: "Jump + Fierce para Strong para Double Dread Kick (Dizzy); Roundhouse para Jab para Hyper Fist (Dizzy); Fierce para Strong para Sonic Boom (Dizzy)",
         Gloria: 10,
         Honra: 9,

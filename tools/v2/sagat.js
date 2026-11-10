@@ -135,6 +135,7 @@ function SagatSF5() {
     antecedentes[2] = newCaracteristica("Apoio", 4);
     antecedentes[3] = newCaracteristica("Fama", 4);
     antecedentes[4] = newCaracteristica("Recursos", 2);
+    antecedentes[5] = newCaracteristica("Mascote", 3);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 2);
@@ -180,7 +181,7 @@ function SagatSF5() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 5,
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball, Knee Basher",
         Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;",
         Gloria: 10,
         Honra: 2,
@@ -200,6 +201,7 @@ function SagatSF6() {
     antecedentes[2] = newCaracteristica("Apoio", 4);
     antecedentes[3] = newCaracteristica("Fama", 4);
     antecedentes[4] = newCaracteristica("Recursos", 2);
+    antecedentes[5] = newCaracteristica("Mascote", 3);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 3);
@@ -210,7 +212,7 @@ function SagatSF6() {
         Jogador: "NPC",
         Assinatura: "Gargalhadas",
         Conceito: "Lutador",
-        Cronica: "Street Fighter 5",
+        Cronica: "Street Fighter 6",
         Equipe: "Nenhuma",
         Time: "Nenhum",
         Forca: 6,
@@ -245,7 +247,7 @@ function SagatSF6() {
         Apresamento: 4,
         Esportes: 3,
         Foco: 5,
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball, Knee Basher",
         Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;",
         Gloria: 10,
         Honra: 3,
@@ -259,10 +261,12 @@ function SagatSF6() {
 }
 
 let npc;
-if (getParameterByName('age') === 'sfa')
+if (getParameterByName('age') === 'sfa' || getParameterByName('age') === 'sf1')
     npc = SagatZ3();
 else if (getParameterByName('age') === 'sf6')
     npc = SagatSF6();
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
+    npc = SagatSF5();
 else
     npc = SagatSF2();
 npc = calcPC(npc);

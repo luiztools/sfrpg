@@ -237,7 +237,7 @@ function BlankaSF5() {
         Esportes: 7,
         Foco: 5,
         NovasTecnicas: tecnicas,
-        ManobrasEspeciais: "Head Butt, Power Uppercut, Backflip Kick, Foot Sweep, Head Bite, Jump, Rolling Attack, Beast Roll, Vertical Rolling Attack, Shock Treatment, Claw, Bite",
+        ManobrasEspeciais: "Head Butt, Power Uppercut, Backflip Kick, Foot Sweep, Head Bite, Jump, Rolling Attack, Beast Roll, Vertical Rolling Attack, Shock Treatment, Claw, Bite, Shockwave",
         Combos: "Jump + Strong para Head Bite; Jump + Fierce para Strong para Foot Sweep; Jump + Forward para Shock Treatment; Bloqueio para Backflip Kick",
         Gloria: 9,
         Honra: 9,

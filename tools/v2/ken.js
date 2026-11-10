@@ -136,6 +136,7 @@ function KenSF5() {
     antecedentes[3] = newCaracteristica("Fama", 5);
     antecedentes[4] = newCaracteristica("Recursos", 4);
     antecedentes[5] = newCaracteristica("Sensei", 5);
+    antecedentes[6] = newCaracteristica("Elemental (Fogo)", 2);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 1);
@@ -184,8 +185,8 @@ function KenSF5() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 5,
-        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Knee Basher, Double Hit Kick",
-        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep;",
+        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Knee Basher, Double Hit Kick, Light Feet, Flaming Heel, Ax Kick",
+        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep; Forward para Roundhouse (Dizzy); Flaming Heel Forward para Flaming Heel Roundhouse (Dizzy);",
         Gloria: 10,
         Honra: 9,
         Chi: 10,
@@ -205,6 +206,7 @@ function KenSF6() {
     antecedentes[3] = newCaracteristica("Fama", 5);
     antecedentes[4] = newCaracteristica("Recursos", 5);
     antecedentes[5] = newCaracteristica("Sensei", 5);
+    antecedentes[6] = newCaracteristica("Elemental (Fogo)", 2);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 2);
@@ -253,8 +255,8 @@ function KenSF6() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 5,
-        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Light Feet, Knee Basher, Double Hit Kick",
-        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep;",
+        ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Light Feet, Knee Basher, Double Hit Kick, Flaming Heel, Ax Kick",
+        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep; Forward para Roundhouse (Dizzy); Flaming Heel Forward para Flaming Heel Roundhouse (Dizzy);",
         Gloria: 10,
         Honra: 10,
         Chi: 10,
