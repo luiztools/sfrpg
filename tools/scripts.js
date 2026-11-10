@@ -55,14 +55,14 @@ function calcPC(char) {
 
     const manobrasEspeciais = char.ManobrasEspeciais.split(/[,;]/g).filter(m => m && m.trim()) || [];
 
-    const manPC = manobrasEspeciais.length ? manobrasEspeciais.map(m => getPCManobra(normalizarNomeManobra(m))).reduce((a, b) => a + b) : 0;
+    const manPC = manobrasEspeciais.length ? manobrasEspeciais.map(m => getPCManobra(normalizarNomeManobra(m), char)).reduce((a, b) => a + b) : 0;
     const comboPC = count(char.Combos, " para ") + count(char.Combos, "(Dizzy)") + count(char.Combos, "2x") + (count(char.Combos, "3x") * 2);
     const fdvChiPC = (char.ForcaVontade || 0) + (char.Chi || 0) - 7;
     const saudePC = (char.Saude || 10) - 10;
     const bonus = 3;
 
     //antecedentes únicos que impactam em combate
-    const backgrounds = /Hibrido Animal|Híbrido Animal|Cibernético|Elemental|Psycho Power|Satsui no Hadou|Paranormal/i;
+    const backgrounds = /Hibrido Animal|Híbrido Animal|Cibernético|Elemental|Psycho Power|Satsui no Hadou|Sangue de Orochi|Paranormal/i;
     const uniqueBacks = (char.Antecedentes || []).filter(an => backgrounds.test(an.Nome));
     const backgroundPC = uniqueBacks.length ? uniqueBacks.map(an => Number(an.Valor) || 0).reduce((a, b) => a + b) : 0;
 

@@ -2,6 +2,7 @@ function YamazakiFF() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Fama", 1);
     antecedentes[1] = newCaracteristica("Recursos", 2);
+    antecedentes[2] = newCaracteristica("Sangue de Orochi", 1);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 5);

@@ -120,6 +120,7 @@ Toda manobra nova entra nestes três lugares. Edite sempre com `wp_post_get` →
 
 - `*` marca manobra **não oficial** (fan-made), conforme a nota "* OBS" desses posts. Manobra oficial da White Wolf entra sem `*`.
 - O custo de "Outros" vai **apenas** no Movimentos Comuns, nunca em post de estilo. Nos posts, ele aparece como "Outros N", "Outros Estilos N", "Qualquer N" ou "Qualquer Estilo N"; todos contam.
+- Manobra cujos Pontos de Poder são **só** "Qualquer Estilo"/"Outros" (sem estilo nomeado, ex.: Power Uppercut) **não entra** nas listas dos posts de estilo; fica apenas no post da técnica e no Movimentos Comuns. Não aponte como faltando a ausência dela num post de estilo.
 - No Movimentos Comuns, a coluna é a da tag de técnica da manobra. Manobras de arma sem tag de técnica (Buffalo Strike, Triple Blow, Weapon Uppercut...) ficam na linha **Armas** (`colspan="2"`, cabeçalho `background-color: silver`), no fim da tabela. Manobras comuns de Híbridos Animais ficam no post `explorando-os-hibridos-animais`.
 - **O post da manobra é a fonte da verdade.** Se o custo de uma lista (Movimentos Comuns, post de estilo) for diferente do custo nos Pontos de Poder do post da manobra, corrija a lista.
 - **Páginas de desambiguação:** `/post/push` explica que existem duas manobras com esse nome e aponta para elas: Push (Elemental), em `push-elemental`, e Push (Body), de Apresamento, em `push-body`. Nas listas, aponte sempre para a manobra, nunca para a desambiguação. Leia os custos sempre no post **atual** da manobra (o usuário pode ter editado).

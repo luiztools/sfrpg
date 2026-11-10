@@ -54,7 +54,7 @@ function EagleZ3() {
         Foco: 0,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Buffalo Strike, Triple Blow, Weapon Sweep",
+        ManobrasEspeciais: "Jump, Buffalo Strike, Triple Blow, Weapon Sweep, Energy Reflection, Missile Reflection",
         Combos: "Jump + Bastão Fierce para Bastão Strong (Dizzy), Bastão Jab para Bastão Jab para Bastão Berserk (Dizzy), Bastão Strong para Bastão Strong para Bastão Berserk (Dizzy), Bastão Fierce para Bastão Fierce para Bastão Berserk (Dizzy), Aparar para Triple Blow",
         Gloria: 6,
         Honra: 5,

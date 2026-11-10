@@ -56,8 +56,8 @@ npc = calcPC(npc);
 
 ## Convenções e cuidados
 
-- Ao adicionar/alterar manobra, edite o objeto `manobras` em [manobras.js](manobras.js). O nome usado em `ManobrasEspeciais` precisa bater exatamente com a chave; manobra não encontrada ainda vale 1 PC mas não aparece na tabela com cálculos.
-- `ModVel`/`ModDano`/`ModMov` podem ser número ou string (`"Um"`, `"Nenhum"`, `"Especial"`, `"0/0/0"` para multi-hit). O texto de `Sistema` é interpretado por regex em `getPCManobra` (KD, área, aérea, "ignora", "dois testes"...), então a redação afeta o custo calculado.
+- Ao adicionar/alterar manobra, edite o objeto `manobras` em [manobras.js](manobras.js). O nome usado em `ManobrasEspeciais` precisa bater exatamente com a chave; manobra (ou arma) não encontrada ainda vale 1 PC e aparece na tabela sem cálculos, com a mensagem de erro em vermelho na coluna Especial (`erroTabela`), sem interromper a montagem da tabela.
+- `ModVel`/`ModDano`/`ModMov` podem ser número ou string (`"Um"`, `"Nenhum"`, `"Especial"`, `"0/0/0"` para multi-hit). `ModMov: "+<Técnica>"` (ex.: `"+Foco"`) soma o valor daquela técnica do personagem: no movimento final (Esportes + Foco) e no custo em PC (`getPCManobra(nome, npc)`). Já `ModMov: "<Técnica>+N"` (ex.: `"Foco+2"`, Ashura Senku) usa a técnica no lugar de Esportes no movimento final (Foco + 2); no custo em PC só conta o N. O texto de `Sistema` é interpretado por regex em `getPCManobra` (KD, área, aérea, "ignora", "dois testes"...), então a redação afeta o custo calculado.
 - Regras de balanceamento de manobras novas estão em [champs.txt](champs.txt).
 - `manobras.js` e `scripts.js` são UTF-8 **com BOM**; preserve o encoding e os acentos.
 - Indentação: tabs em `manobras.js`, 4 espaços em `scripts.js` e nas fichas.

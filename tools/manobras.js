@@ -42,6 +42,7 @@ const manobras = {
 	"Hyper Fist": { Tecnica: "Soco", ModVel: 1, ModDano: "0/0/0", ModMov: "Um", FdV: 1, Sistema: "3 hits" },
 	"Monkey Grab Punch": { Tecnica: "Soco", ModVel: -2, ModDano: 1, ModMov: 0, Sistema: "Ignora Bloqueio" },
 	"Power Uppercut": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD vs. Aérea" },
+	"Shoot Upper": { Tecnica: "Soco", ModVel: 0, ModDano: "2/3", ModMov: -1, FdV: 1, Sistema: "Como Double Dread Kick, com dois testes de dano: o 1º, com +2 DAN, empurra o alvo 1 hex para trás, o atacante usa o resto do movimento para o 2º teste com +3; pode lançar o alvo ao ar com o 1º golpe para acertá-lo com o 2º" },
 	"Rekka Ken": { Tecnica: "Soco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "Deve ser jogado com um Soco Básico, adiciona +3 na VEL; pode ser jogado por até 3 turnos consecutivos, somando para atordoar; mas neste caso deve se exibir após senão -3 Glória" },
 	"Shockwave": { Tecnica: "Soco", ModVel: 0, ModDano: 0, Chi: 1, Sistema: "Afeta (Força) hex em liha reta; todos os alvos na linha sofrem o dano e sofrem KD automático; não afeta lutadores que estão executando uma Aérea" },
 	"Spinning Back Fist": { Tecnica: "Soco", ModVel: -1, ModDano: 2, ModMov: 1, Sistema: "" },
@@ -63,7 +64,6 @@ const manobras = {
 	"Dashing Clothesline": { Tecnica: "Soco", ModVel: -1, ModDano: 5, ModMov: 2, FdV: 1, Sistema: "KD" },
 	"Houzantou": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: 1, FdV: 1, Sistema: "Esquiva de projétil, KD" },
 	"Jet Uppercut": { Tecnica: "Soco", ModVel: 1, ModDano: 5, ModMov: -3, FdV: 1, Sistema: "Aérea; esquiva de projétil como o Dragon Punch; KD vs. Aérea" },
-	"Kobokushi": { Tecnica: "Soco", ModVel: -2, ModDano: 5, ModMov: "Um", Chi: 1, Sistema: "Ao interromper um projétil, fazer um teste de Raciocínio (2 Sucessos) para dissipá-lo por 1 Força de Vontade. Causa KD." },
 	"Machine Gun Blow": { Tecnica: "Soco", ModVel: 0, ModDano: "0/0/0", ModMov: 2, FdV: 1, Sistema: "Três Hits" },
 	"Punch Sweep": { Tecnica: "Soco", ModVel: -2, ModDano: 3, ModMov: -2, Sistema: "Agachamento; KD; a única forma de se defender é com Kick Defense; defensor pode rolar Percepção + Perspicácia contra Destreza + Soco do atacante; se vencer, pode se defender com um bloqueio comum" },
 	"Ressen Ha": { Tecnica: "Soco", ModVel: 0, ModDano: 5, ModMov: 0, Chi: 1, FdV: 1, Sistema: "KD contra Aérea" },
@@ -88,11 +88,12 @@ const manobras = {
 	"Reaping Palm": { Tecnica: "Soco", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Sistema: "anda linha reta, KD, esquiva projétil ao custo de 1 Chi adicional" },
 	"Metsu Shoryuken": { Tecnica: "Soco", ModVel: 1, ModDano: 7, ModMov: -1, FdV: 1, Chi: 1, Sistema: "KD vs. Aérea; empourra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva; Dano Agravado, -1 Honra; tem de estar com Satsui ativado mas não acumula os efeitos dele" },
 	"Short Swing Blow": { Tecnica: "Soco", ModVel: -2, ModDano: 3, ModMov: "Dois/Um", Sistema: "anda dois hexes para esquivar, anda um para bater" },
+	"Alacer Wrist": { Tecnica: "Soco", ModVel: 1, ModDano: 0, ModMov: 2, FdV: 1, Sistema: "Aérea; esquiva de projétil como Jump; Linha Reta; o atacante pode fazer o ataque a qualquer momento e continuar o movimento" },
 
 	//Chute
 	"Air Hurricane Kick": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 1, Chi: 1, FdV: 1, Sistema: "Igual Hurricane Kick" },
 	"Backflip Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: "Dois", Sistema: "Mov para trás após dano" },
-	"Double Dread Kick": { Tecnica: "Chute", ModVel: -2, ModDano: "1/4", ModMov: 1, FdV: 1, Sistema: "1º teste com +1 DAN e joga o alvo 1 hex para trás, o atacante deve mover-se para o hex do oponente e fazer o 2º ataque com +4; pode usar o 2º ataque se o alvo estiver a alcance" },
+	"Double Dread Kick": { Tecnica: "Chute", ModVel: -2, ModDano: "1/4", ModMov: 1, FdV: 1, Sistema: "dois testes de dano: o 1º, com +1 DAN, joga o alvo 1 hex para trás; o atacante deve mover-se para o hex do oponente e fazer o 2º ataque com +4; pode usar o 2º ataque se o alvo estiver a alcance" },
 	"Sanren Geki": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1/4", ModMov: 1, FdV: 1, Chi: 1, Sistema: "Como Double Dread Kick, mas com três chutes: dano rolado três vezes; cada um dos dois primeiros empurra 1 hex e o lutador acompanha; o último causa KD" },
 	"Double Hit Kick": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois Hits a menos que o alvo esteja em Aérea ou Agachamento" },
 	"Double Hit Knee": { Tecnica: "Chute", ModVel: 0, ModDano: "0/0", ModMov: -2, Sistema: "Dois Hits" },
@@ -124,6 +125,7 @@ const manobras = {
 	"Dive Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Sistema: "Aérea, afeta personagens em agachamentos" },
 	"Hayagake": { Tecnica: "Chute", ModVel: 0, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea ou agachamento, à escolha do jogador; se aérea, esquiva de projétil; se agachamento, causa KD" },
 	"Power Kick": { Tecnica: "Chute", ModVel: -3, ModDano: 5, ModMov: "Dois", Sistema: "Empurra 1 Hexágono para trás e causa KD em Manobras Aéreas" },
+	"Soccer Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, ModMov: "Um", Sistema: "Causa KD se causar dano" },
 	"Rhino Horn": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 3, FdV: 1, Sistema: "Aérea" },
 	"Roundabout Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, FdV: 1, Sistema: "Acerta oponentes no mesmo hex ou adjacente igual à técnica Chute do lutador; causa KD; Aérea" },
 	"Tsumuji": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 3, FdV: 2, Sistema: "Após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +1, empurrando de novo e tentando um terceiro com dano +3, que causa KD; pode aplicar um quarto chute no oponente caído com dano +1, porém custará 1 ponto temporário de Honra" },
@@ -159,12 +161,14 @@ const manobras = {
 	"Arm Wrist Lock": { Tecnica: "Apresamento", ModVel: 0, ModDano: 0, ModMov: "Dois", Sistema: "Sustentado. KD. Somente pode ser usado no turno após bloquear soco ou chute e interrompendo o oponente." },
 	"Back Breaker": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD" },
 	"Argentine Back Breaker": { Tecnica: "Apresamento", ModVel: 0, ModDano: "2/0", ModMov: "Dois", FdV: 1, Sistema: "Joga o oponente para cima, apara-o no ombro e depois o arremessa no chão a no máximo 3 hex; KD" },
+	"Dark Spark": { Tecnica: "Apresamento", ModVel: -2, ModDano: "0/3", ModMov: "Nenhum", Chi: 1, Sistema: "Prende o alvo com o garrote e o eletrifica: dois testes de dano em sequência, o 1º com Força + Apresamento e o 2º com Inteligência + Cibernético +3; se o 1º não causar dano, o 2º não é rolado; aplica os modificadores de VEL e DAN do Garrote (no 1º dano)" },
 	"Back Roll Throw": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: "Um", Sistema: "O alvo é arremessado a FOR + CHUT hex; KD" },
 	"Baton Throw": { Tecnica: "Apresamento", ModVel: -3, ModDano: 2, ModMov: "Um", Sistema: "O alvo é arremessado a (FOR) hex; KD" },
 	"Bear Hug": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "Sustentado" },
 	"Brain Cracker": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: "Um", Sistema: "Sustentado" },
 	"Bushin Musou Renge": { Tecnica: "Apresamento", ModVel: -2, ModDano: "4/4/4", ModMov: "Um", Chi: 1, FdV: 1, Sistema: "Três Hits baseado em Soco, Chute ou Apresamento; oponente absorve com Honra" },
 	"Choke Throw": { Tecnica: "Apresamento", ModVel: -1, ModDano: 2, ModMov: 0, Sistema: "Pode interromper oponente em pé ou em Aérea; atacante e alvo terminam no mesmo hex; KD" },
+	"Block And Grab": { Tecnica: "Apresamento", ModVel: 3, ModDano: 2, ModMov: "Um", FdV: 1, Sistema: "Bloqueio normal (adiciona Bloqueio na ABS e evita KD); após sofrer o dano, se não ficar Dizzy, agarra o membro do oponente e pode seguir com Throw usando estes modificadores (só então gasta FdV e aplica o dano); só contra Soco e Chute; Esportes e Foco são bloqueados mas não contra-atacados; Apresamento não é bloqueado; não funciona contra manobras agachadas" },
 	"Clinch": { Tecnica: "Apresamento", ModVel: 2, ModDano: 0, ModMov: "Um", Sistema: "Não causa dano real, apenas anula manobra do oponente se agarrar. +1 Vel em apresamentos no próximo turno." },
 	"Daikyou Burning": { Tecnica: "Soco", ModVel: 0, ModDano: -1, ModMov: "Um/-2", FdV: 2, Sistema: "Só contra vítima em Knockdown ou Atordoada; entra no hex da vítima e a arrasta com o 2º modificador de Movimento; rola o dano a cada hex arrastado; dano calculado com Soco (punhos ou arma); KD no final" },
 	"Disengage": { Tecnica: "Apresamento", ModVel: 1, ModMov: -2, Sistema: "Jogado quando estiver preso em Sustentado; o lutador pode fazer um 2º teste para sair do apresamento (Destreza vs. Força do atacante)" },
@@ -217,6 +221,7 @@ const manobras = {
 	"Flying Heel Stomp": { Tecnica: "Esportes", ModVel: 0, ModDano: 1, ModMov: 2, FdV: 1, Sistema: "Aérea; esquiva de projétil; Linha Reta; o atacante pode fazer o ataque a qualquer momento e continuar o movimento" },
 	"Multiple Stomp": { Tecnica: "Esportes", ModVel: -1, ModDano: "0/0/0", ModMov: -1, FdV: 1, Sistema: "Aérea; Linha Reta; dano rolado três vezes; esquiva de projétil como Jump; oponente em manobra de agachamento ainda é atingido pelo último chute" },
 	"Jump": { Tecnica: "Esportes", ModVel: 3, ModMov: 0, Sistema: "Aérea; Esquiva de projétil (Des + Esp vs. Foco); combina com chutes e socos básicos (use a VEL, DAN e MOV da manobra)" },
+	"Double Jump": { Tecnica: "Esportes", ModVel: 3, ModMov: "+Foco", Chi: 1, Sistema: "Similar ao Jump: aérea, combina com básicas e esquiva de projétil (dificuldade 7 para o projétil acertar); nunca é interrupção; Movimento = Esportes + Foco; salta 1 metro por ponto de Esportes + Foco" },
 	"Ducking Blow": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Jogada com soco básico ou Power Uppercut, mantendo os modificadores dela, com -1 MOV e movimento em linha reta; esquiva de projétil como Jump, mas não é Aérea nem Agachamento" },
 	"Jumping Shoulder Butt": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: -1, Sistema: "Aérea; esquiva de projétil" },
 	"Kippup": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Sistema: "Passiva; o lutador sofre apenas -1 VEL após sofrer KD" },
@@ -316,7 +321,7 @@ const manobras = {
 	"Mu No Hadou": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "+1Vel/Dano com Foco ou +1Abs/imune dizzy/imune telepatia neste turno" },
 	"Banishing Flat": { Tecnica: "Soco", ModVel: -2, ModDano: 4, ModMov: -2, Chi: 1, Sistema: "Raciocínio, 2 sucessos, dissipa projétil" },
 	"Ansatsuken": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, Sistema: "+3 Dano Agravado na Manobra Assassina, -1 Honra" },
-	"Ashura Senku": { Tecnica: "Foco", ModVel: 3, ModMov: 2, Chi: 1, Sistema: "Lutador não pode ser atingido enquanto a executa" },
+	"Ashura Senku": { Tecnica: "Foco", ModVel: 3, ModMov: "Foco+2", Chi: 1, Sistema: "Lutador não pode ser atingido enquanto a executa" },
 	"Chi Pull": { Tecnica: "Foco", ModVel: -2, ModDano: 8, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "Dano só para atordoar; ABS com Vigor, mas se ultrapassar o Vigor da vítima, ela estará atordoada; havendo sucesso vítima é atraída um número de hex igual ao Foco do atacante; vítima pode tentar resistir rolando sua FOR x Foco do adversário" },
 	"Chill Touch": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 2, Sistema: "Usado com qualquer Soco, Chute ou Apresamento básicos; adiciona os efeitos do Ice Blast e +2 de dano" },
 	"Criminal Upper": { Tecnica: "Foco", ModVel: -1, ModDano: 4, ModMov: "Um", Chi: 1, Sistema: "KD; o oponente não pode Bloquear (só com San He)" },
@@ -352,15 +357,16 @@ const manobras = {
 	"Tanden Copy": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", Chi: 1, Alcance: "Percepção", Sistema: "Linha de visão, Rola PER + CIBER dificuldade 5 + 1 por ponto de poder para copiar a manobra assistida" },
 
 	//Outros
-	"Spinning Weapon": { Tecnica: "Bastão/Espada/Machado/Chicote/Faca/Mangual/Garra", ModVel: 0, ModDano: "-1/-1/-1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
+	"Spinning Weapon": { Tecnica: "Bastão/Lança/Espada/Machado/Chicote/Faca/Mangual/Garra", ModVel: 0, ModDano: "-1/-1/-1", ModMov: "Um", FdV: 1, Sistema: "Três Hits. Armado." },
 	"Weapon Sweep": { Tecnica: "Bastão/Lança/Chicote/Mangual", ModVel: -2, ModDano: 2, ModMov: -3, Sistema: "KD. Agachamento. Armado." },
 	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano." },
 	"Weapon Uppercut": { Tecnica: "Bastão/Espada/Faca/Garra/Mangual", ModVel: -1, ModDano: 3, ModMov: "Um", Sistema: "KD vs. Aérea" },
-	"Buffalo Strike": { Tecnica: "Bastão/Espada/Machado/Mangual", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
+	"Killing Blade": { Tecnica: "Espada/Machado/Faca/Garra", ModVel: -1, ModDano: 4, ModMov: -2, FdV: 1, Sistema: "Como Dragon Punch, com arma: KD vs. Aérea; empurra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
+	"Buffalo Strike": { Tecnica: "Bastão/Lança/Espada/Machado/Mangual", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
 	"Weapon Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Arma escolhida; -2 vs. outros" },
-	"Deflecting Weapon": { Tecnica: "Bastão/Espada/Machado/Faca/Mangual", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
-	"Triple Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
-	"Double Hit Blow": { Tecnica: "Bastão/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois Hits a menos que o alvo esteja em Aérea ou Agachamento" },
+	"Deflecting Weapon": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Mangual", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
+	"Triple Blow": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
+	"Double Hit Blow": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois Hits a menos que o alvo esteja em Aérea ou Agachamento" },
 	"Scuba Slash": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Sistema: "Corte de faca; exige equipamento de mergulho. Dano contra Destreza do alvo em vez do Vigor. Se acertar, teste resistido de DES contra DES: se vencer, KD e o cilindro de propulsão ou outro equipamento de mergulho do alvo fica arruinado." },
 	"Blood Bite": { Tecnica: "Apresamento", ModVel: -2, ModDano: -1, ModMov: "Um", Sistema: "Mordida; ignora Bloqueio; recupera 1 de Saúde por ponto de dano causado. Exclusiva de Rijndael." },
 };
@@ -547,8 +553,14 @@ function tecnicaDaArma(npc, arma) {
 	return getCaracteristica(npc.NovasTecnicas || [], nome) || npc[nome] || 0;
 }
 
+//Dark Spark aplica os modificadores do Garrote, se o lutador o portar
+function modGarrote(npc, campo) {
+	return npc.Armas && npc.Armas.indexOf("Garrote") !== -1 ? parseInt(armas["Garrote"][campo]) : 0;
+}
+
 function calculaVelocidade(npc, manobra) {
 	if (semModificador(manobra.ModVel)) return "-";
+	if (manobra.Nome === "Dark Spark") return npc.Destreza + parseInt(manobra.ModVel) + modGarrote(npc, "ModVel");
 	if (manobra.ModVel === null || manobra.ModVel === undefined || manobra.ModVel === "Especial" || manobra.ModVel === "Esp.") return "Esp.";
 
 	let modAtributo = 0;
@@ -619,6 +631,7 @@ function calculaDanoArmaDistancia(npc, arma) {
 
 function calculaDanoTripleBlow(npc, manobra) {
 	const arma = buscarArma(manobra.Tecnica, npc);
+	if (!arma) return "-";
 	const danoArma = npc["Força"] + tecnicaDaArma(npc, arma) + arma.ModDano;
 	return danoArma + "/" + danoArma + "/" + (npc["Força"] + npc["Chute"] + 1);
 }
@@ -669,6 +682,9 @@ function calculaDano(npc, manobra) {
 
 	if (manobra.Nome === "Elemental Explosion")
 		return (npc.Forca + npc.Esportes - 1) + "/" + (npc.Inteligencia + npc.Foco - 1);
+
+	if (manobra.Nome === "Dark Spark")
+		return (npc.Forca + npc.Apresamento + modGarrote(npc, "ModDano")) + "/" + (npc.Inteligencia + (npc["Cibernético"] || 0) + 3);
 
 	if (manobra.Nome === "Elemental Rage")
 		return npc.Inteligencia + npc.Apresamento + 3;
@@ -754,12 +770,25 @@ function calculaMovimentoArmaDistancia(npc, arma) {
 	return movFinal > 0 ? movFinal : 0;
 }
 
+//ModMov "<Técnica>+N" ou "<Técnica>-N" (ex.: "Foco+2"): o movimento parte da técnica no lugar de Esportes
+const baseMovRegex = /^(\p{L}+)\s*([+-]\s*\d+)$/u;
+
 function calculaMovimento(npc, manobra) {
 	if (manobra.ModMov === null || manobra.ModMov === undefined || semModificador(manobra.ModMov)) return "-";
 	if (manobra.ModMov === "Especial") return "Esp.";
 	if (valorFixoRegex.test(manobra.ModMov)) return manobra.ModMov;
 	if (typeof manobra.ModMov === "string" && manobra.ModMov.indexOf("/") !== -1)//ex.: "Um/-2"
 		return manobra.ModMov.split("/").map(mod => calculaMovimento(npc, { ModMov: valorFixoRegex.test(mod) ? mod : parseInt(mod) })).join("/");
+
+	const tecnica = /^\+(\p{L}+)$/u.exec(manobra.ModMov);//ex.: "+Foco" (Esportes + Foco)
+	if (tecnica && typeof npc[tecnica[1]] === "number")
+		return npc.Esportes + npc[tecnica[1]];
+
+	const base = baseMovRegex.exec(manobra.ModMov);//ex.: "Foco+2" (Foco no lugar de Esportes, + 2)
+	if (base && typeof npc[base[1]] === "number") {
+		const movBase = npc[base[1]] + (parseInt(base[2].replace(/\s/g, "")) || 0);
+		return movBase > 0 ? movBase : 0;
+	}
 
 	const modMov = parseInt(manobra.ModMov);
 	const movFinal = npc.Esportes + modMov;
@@ -818,6 +847,11 @@ function prepareNpc(npc) {
 	return npc;
 }
 
+// Mensagem de erro exibida na coluna Especial da tabela, sem interromper a montagem.
+function erroTabela(msg) {
+	return `<span style="color:red;font-weight:bold;">${msg}</span>`;
+}
+
 function carregarTabela(npc) {
 
 	npc = prepareNpc(npc);
@@ -828,7 +862,10 @@ function carregarTabela(npc) {
 	let html = "";
 	manobrasBasicas.forEach((v) => {
 		const manobra = manobras[v.trim()];
-		if (!manobra) return alert("Manobra " + v.trim() + " não encontrada!");
+		if (!manobra) {
+			html += `<tr><td>${v.trim()}</td><td></td><td></td><td></td><td></td><td></td><td>${erroTabela("Manobra " + v.trim() + " não encontrada!")}</td></tr>`;
+			return;
+		}
 		manobra.Nome = v.trim();
 
 		html += `<tr><td>${v.trim()}</td>
@@ -843,7 +880,10 @@ function carregarTabela(npc) {
 	if (npc.Armas != null && npc.Armas != undefined) {
 		npc.Armas.forEach((v) => {
 			const arma = armas[v.trim()];
-			if (!arma) return alert("Arma " + v.trim() + " não encontrada!");
+			if (!arma) {
+				html += `<tr><td>${v.trim()}</td><td></td><td></td><td></td><td></td><td></td><td>${erroTabela("Arma " + v.trim() + " não encontrada!")}</td></tr>`;
+				return;
+			}
 
 			const armasDeFogo = ["Armas de Fogo", "Pistola", "Metralhadora", "Fuzil", "Rifle", "Armas Pesadas"];
 			if (armasDeFogo.includes(arma.Tecnica)) {
@@ -917,18 +957,14 @@ function carregarTabela(npc) {
 		npc.ManobrasEspeciais.split(/[,;]/).sort().forEach((v) => {
 			const nome = normalizarNomeManobra(v);
 			manobrasNormalizadas += nome + ";";
-			if (!manobras[nome]) {
-				alert("Manobra " + nome + " não encontrada!");
-				throw new Error("Manobra " + nome + " não encontrada!");
-			}
 			const manobra = manobras[nome];
-			manobra.Nome = nome;
 
 			html += `<tr><td>${GeraHtmlLink(v.trim())}</td>`;
 			if (manobra == null || manobra == undefined) {
-				html += `<td></td><td></td><td></td><td></td><td></td><td>Manobra não encontrada</td>`;
+				html += `<td></td><td></td><td></td><td></td><td></td><td>${erroTabela("Manobra " + nome + " não encontrada!")}</td></tr>\r\n`;
 			}
 			else {
+				manobra.Nome = nome;
 				html += `<td>${calculaVelocidade(npc, manobra)}</td>
 					<td>${calculaDano(npc, manobra)}</td>
 					<td>${calculaMovimento(npc, manobra)}</td>
@@ -1111,7 +1147,7 @@ function numeroPorExtenso(valor) {
 	return extenso[texto] || parseInt(texto);
 }
 
-function getPCManobra(nome) {
+function getPCManobra(nome, npc) {
 	const manobra = manobras[nome];
 	if (!manobra) return 1;//no mínimo cada manobra vale 1 PC
 
@@ -1173,7 +1209,11 @@ function getPCManobra(nome) {
 	else if (modificadorMov === "um") ModMov = -1;
 	else if (modificadorMov === "dois") ModMov = 0;
 	else if (modificadorMov === "três") ModMov = 1;
-	else ModMov = parseInt(modificadorMov) || 0;
+	else {
+		const tecnica = /^\+(\p{L}+)$/u.exec(manobra.ModMov);//ex.: "+Foco" vale o Foco do personagem
+		const base = baseMovRegex.exec(manobra.ModMov);//ex.: "Foco+2" vale só o modificador (+2)
+		ModMov = tecnica ? ((npc && npc[tecnica[1]]) || 0) : base ? (parseInt(base[2].replace(/\s/g, "")) || 0) : (parseInt(modificadorMov) || 0);
+	}
 
 	const total = ModVel + ModDano + ModMov;
 	return total >= 1 ? total : 1;//no mínimo cada manobra vale 1 PC
