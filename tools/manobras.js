@@ -27,10 +27,10 @@ const manobras = {
 	"Bull Head": { Tecnica: "Soco", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Vantagens: ["Knockdown", "Esquiva de Projétil"], Sistema: "Esquiva de projétil antes de iniciar o movimento; linha reta, KD; pode ser carregada por até 3 turnos, ganhando +1 VEL e dano a cada turno carregado (mas resultando em Movimento Um) e reduzindo, enquanto carregada, os três modificadores das manobras utilizadas em 1" },
 	"Bull Horn": { Tecnica: "Soco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, FdV: 1, Sistema: "Semelhante a Turn Punch. Ver descrição." },
 	"Dashing Punch": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 2, FdV: 1, Sistema: "" },
-	"Dashing Uppercut": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 2, FdV: 1, Vantagens: ["Knockdown vs. Aérea"], Sistema: "KD vs. Aérea" },
+	"Dashing Uppercut": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 2, FdV: 1, Vantagens: ["Anti-Aérea"], Sistema: "KD vs. Aérea" },
 	"Dim Mak": { Tecnica: "Soco", ModVel: 0, ModDano: 0, ModMov: 0, Chi: 1, Sistema: "Pode retardar o dano se desejado; -1 para qualquer atributo físico" },
 	"Zan Ei": { Tecnica: "Soco", ModVel: 0, ModDano: 5, ModMov: 0, Chi: 2, Vantagens: ["Dano Agravado"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Precisa de movimento para atravessar o hex do oponente e parar no mínimo 1 hex atrás dele; funciona como Dim Mak (pode retardar o dano; reduz Atributos Físicos, recuperados como Dano Agravado); manobra assassina, causa dano agravado; custa 1 Honra temporária e 1 permanente se matar" },
-	"Dragon Punch": { Tecnica: "Soco", ModVel: 0, ModDano: 6, ModMov: -2, FdV: 1, Vantagens: ["Knockdown vs. Aérea", "Esquiva de Projétil"], Desvantagens: ["Não ataca quem lançou o projétil"], Sistema: "KD vs. Aérea; empourra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
+	"Dragon Punch": { Tecnica: "Soco", ModVel: 0, ModDano: 6, ModMov: -2, FdV: 1, Vantagens: ["Anti-Aérea", "Esquiva de Projétil"], Desvantagens: ["Não ataca quem lançou o projétil"], Sistema: "KD vs. Aérea; empourra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
 	"Ear Pop": { Tecnica: "Soco", ModVel: -1, ModDano: -4, ModMov: -1, Sistema: "Ignora o Vigor; -1 Honra por uso" },
 	"Fist Sweep": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: -2, Vantagens: ["Knockdown", "Agachamento"], Sistema: "Agachamento, KD" },
 	"Flaming Dragon Punch": { Tecnica: "Soco", ModVel: -1, ModDano: "6/6", ModMov: -2, Chi: 1, FdV: 1, Vantagens: ["Knockdown", "Esquiva de Projétil"], Desvantagens: ["Não ataca quem lançou o projétil"], Sistema: "KD e empurra 1 hex; Dois hits se alvo estiver adjacente (vc não se mover); pode esquivar de projétil mas não pode atacar quem lançou" },
@@ -41,7 +41,7 @@ const manobras = {
 	"Hundred Hand Slap": { Tecnica: "Soco", ModVel: -2, ModDano: "0/0/0", ModMov: "Um", FdV: 1, Sistema: "Três hits" },
 	"Hyper Fist": { Tecnica: "Soco", ModVel: 1, ModDano: "0/0/0", ModMov: "Um", FdV: 1, Sistema: "Três hits" },
 	"Monkey Grab Punch": { Tecnica: "Soco", ModVel: -2, ModDano: 1, ModMov: 0, Vantagens: ["Ignora Bloqueio"], Sistema: "Ignora Bloqueio" },
-	"Power Uppercut": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Knockdown vs. Aérea"], Sistema: "KD vs. Aérea" },
+	"Power Uppercut": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Anti-Aérea"], Sistema: "KD vs. Aérea" },
 	"Shoot Upper": { Tecnica: "Soco", ModVel: 0, ModDano: "2/3", ModMov: -1, FdV: 1, Sistema: "Dois hits; Como Double Dread Kick, com dois testes de dano: o 1º, com +2 DAN, empurra o alvo 1 hex para trás, o atacante usa o resto do movimento para o 2º teste com +3; pode lançar o alvo ao ar com o 1º golpe para acertá-lo com o 2º" },
 	"Rekka Ken": { Tecnica: "Soco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, PC: 3, Sistema: "Deve ser jogado com um Soco Básico, adiciona +3 na VEL; pode ser jogado por até 3 turnos consecutivos, somando para atordoar; mas neste caso deve se exibir após senão -3 Glória" },
 	"Shockwave": { Tecnica: "Soco", ModVel: 0, ModDano: 0, Chi: 1, Vantagens: ["Knockdown", "Área"], Desvantagens: ["Não afeta Aérea"], Sistema: "Afeta (Força) hex em liha reta; todos os alvos na linha sofrem o dano e sofrem KD automático; não afeta lutadores que estão executando uma Aérea" },
@@ -55,7 +55,7 @@ const manobras = {
 	"Elbow Smash": { Tecnica: "Soco", ModVel: 2, ModDano: 2, ModMov: "Um", Sistema: "" },
 	"Boshi Ken": { Tecnica: "Soco", ModVel: -1, ModDano: 2, ModMov: 0, Sistema: "Se bem sucedido, o alvo terá -1 MOV no próximo turno" },
 	"Haymaker": { Tecnica: "Soco", ModVel: -2, ModDano: 4, ModMov: -2, Sistema: "" },
-	"Shikan Ken": { Tecnica: "Soco", ModVel: 1, ModDano: 1, ModMov: 0, Vantagens: ["Knockdown vs. Aérea"], Sistema: "Se bem sucedido, o atacante deve vencer um disputa de FOR para empurrar alvo 1 hex; KD vs. Aérea" },
+	"Shikan Ken": { Tecnica: "Soco", ModVel: 1, ModDano: 1, ModMov: 0, Vantagens: ["Anti-Aérea"], Sistema: "Se bem sucedido, o atacante deve vencer um disputa de FOR para empurrar alvo 1 hex; KD vs. Aérea" },
 	"Shuto": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: -2, Vantagens: ["Ignora Armadura"], Sistema: "Ignora Toughskin, armaduras, etc.; contra um oponente sem armadura, causa +4 DAN" },
 	"Widowmaker": { Tecnica: "Soco", ModVel: -3, ModDano: 5, ModMov: "Dois", Vantagens: ["Knockdown", "Aérea", "Esquiva de Projétil"], Desvantagens: ["Não afeta Aérea"], Sistema: "Se bem sucedido, o alvo sofre KD; não afeta lutadores em Aérea; Aérea; esquiva de projétil" },
 	"Heart Punch": { Tecnica: "Soco", ModVel: -1, ModDano: 5, ModMov: -2, Desvantagens: ["Dano só atordoa", "Não pode fazer parte de Combo"], Sistema: "Dano somente para atordoar, não perde Saúde; não pode fazer parte de Combo Atordoante" },
@@ -63,10 +63,9 @@ const manobras = {
 	"Lunging Punch": { Tecnica: "Soco", ModVel: 0, ModDano: 1, ModMov: 1, Vantagens: ["Defesa restrita", "Agachamento"], Sistema: "Agachamento; apenas Kick Defense funciona" },
 	"Dashing Clothesline": { Tecnica: "Soco", ModVel: -1, ModDano: 5, ModMov: 2, FdV: 1, Vantagens: ["Knockdown"], Sistema: "KD" },
 	"Houzantou": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: 1, FdV: 1, Vantagens: ["Knockdown", "Esquiva de Projétil"], Sistema: "Esquiva de projétil, KD" },
-	"Jet Uppercut": { Tecnica: "Soco", ModVel: 1, ModDano: 5, ModMov: -3, FdV: 1, Vantagens: ["Knockdown vs. Aérea", "Aérea", "Esquiva de Projétil"], Sistema: "Aérea; esquiva de projétil como o Dragon Punch; KD vs. Aérea" },
+	"Jet Uppercut": { Tecnica: "Soco", ModVel: 1, ModDano: 5, ModMov: -3, FdV: 1, Vantagens: ["Anti-Aérea", "Aérea", "Esquiva de Projétil"], Sistema: "Aérea; esquiva de projétil como o Dragon Punch; KD vs. Aérea" },
 	"Machine Gun Blow": { Tecnica: "Soco", ModVel: 0, ModDano: "0/0/0", ModMov: 2, FdV: 1, Sistema: "Três hits" },
-	"Punch Sweep": { Tecnica: "Soco", ModVel: -2, ModDano: 3, ModMov: -2, Vantagens: ["Knockdown", "Defesa restrita", "Agachamento"], Sistema: "Agachamento; KD; a única forma de se defender é com Kick Defense; defensor pode rolar Percepção + Perspicácia contra Destreza + Soco do atacante; se vencer, pode se defender com um bloqueio comum" },
-	"Ressen Ha": { Tecnica: "Soco", ModVel: 0, ModDano: 5, ModMov: 0, Chi: 1, FdV: 1, Vantagens: ["Knockdown vs. Aérea"], Sistema: "KD contra Aérea" },
+	"Ressen Ha": { Tecnica: "Soco", ModVel: 0, ModDano: 5, ModMov: 0, Chi: 1, FdV: 1, Vantagens: ["Anti-Aérea"], Sistema: "KD contra Aérea" },
 	"Shoouken": { Tecnica: "Soco", ModVel: -1, ModDano: 1, ModMov: 0, FdV: 2, Vantagens: ["Knockdown"], Sistema: "Linha reta; empurra o oponente para trás e segue acertando enquanto tiver movimento; após o último dano o oponente sofre um KD; só é considerada aérea após o rolamento do último dano" },
 	"Senkju Tai": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 0, FdV: 1, Vantagens: ["Knockdown"], Sistema: "KD" },
 	"Snake Strike": { Tecnica: "Soco", ModVel: 1, ModDano: "1/1/1", ModMov: -1, Vantagens: ["Aérea", "Esquiva de Projétil"], Sistema: "Aérea, esquiva de projétil; oponente interrompido em uma Aérea sofre Três hits" },
@@ -82,29 +81,32 @@ const manobras = {
 	"Flicker Jab": { Tecnica: "Soco", ModVel: 3, ModDano: -1, ModMov: "Um", Alcance: 2, Sistema: "Alcance 2 hex" },
 	"Rabbit Punch": { Tecnica: "Soco", ModVel: 1, ModDano: 1, ModMov: -1, Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Tem de entrar no hex; ignora metade do ABS total, -1 Honra" },
 	"White Fang": { Tecnica: "Soco", ModVel: 0, ModDano: "2/2", ModMov: "Um", FdV: 1, Sistema: "Dois hits. Agachados ou aéreos só levam um hit. Bloqueio só absorve um hit, exceto Punch Defense (sem o bônus)." },
-	"Split Punch": { Tecnica: "Soco", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Vantagens: ["Ignora Vigor"], Sistema: "Ignora Vigor se não bloquear. Dizzy se causar 1 dano. Perde Honra." },
+	"Split Punch": { Tecnica: "Soco", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Vantagens: ["Ignora Vigor", "Agachamento"], Sistema: "Agachamento. Ignora Vigor se não bloquear. Dizzy se causar 1 dano. Perde Honra." },
 	"Palm Press": { Tecnica: "Soco", ModVel: -2, ModDano: 5, ModMov: "Nenhum", Chi: 1, Vantagens: ["Knockdown"], Sistema: "Alcance 2. Se dano superar DES, causa KD e arremessa FOR hexes. Pode bloquear projéteis." },
 	"Tameshiwari": { Tecnica: "Soco", ModVel: 1, ModDano: "", ModMov: "Um", Chi: 1, FdV: 1, Vantagens: ["Knockdown"], Sistema: "Tem de carregar por um turno. No seguinte, FOR + SOCO x 2 de dano, causa KD mesmo bloqueando, empurra FOR hexes" },
 	"Reaping Palm": { Tecnica: "Soco", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Vantagens: ["Knockdown", "Esquiva de Projétil"], Sistema: "anda linha reta, KD, esquiva projétil ao custo de 1 Chi adicional" },
-	"Metsu Shoryuken": { Tecnica: "Soco", ModVel: 1, ModDano: 7, ModMov: -1, FdV: 1, Chi: 1, Vantagens: ["Knockdown vs. Aérea", "Esquiva de Projétil", "Dano Agravado"], Desvantagens: ["Não ataca quem lançou o projétil", "Exige Satsui ativado"], Sistema: "KD vs. Aérea; empourra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva; Dano Agravado, -1 Honra; tem de estar com Satsui ativado mas não acumula os efeitos dele" },
+	"Metsu Shoryuken": { Tecnica: "Soco", ModVel: 1, ModDano: 7, ModMov: -1, FdV: 1, Chi: 1, Vantagens: ["Anti-Aérea", "Esquiva de Projétil", "Dano Agravado"], Desvantagens: ["Não ataca quem lançou o projétil", "Exige Satsui ativado"], Sistema: "KD vs. Aérea; empourra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva; Dano Agravado, -1 Honra; tem de estar com Satsui ativado mas não acumula os efeitos dele" },
 	"Short Swing Blow": { Tecnica: "Soco", ModVel: -2, ModDano: 3, ModMov: "Dois/Um", Sistema: "anda dois hexes para esquivar, anda um para bater" },
 	"Alacer Wrist": { Tecnica: "Soco", ModVel: 1, ModDano: 0, ModMov: 2, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil"], Sistema: "Aérea; esquiva de projétil como Jump; Linha Reta; o atacante pode fazer o ataque a qualquer momento e continuar o movimento" },
 
 	//Chute
-	"Air Hurricane Kick": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 1, Chi: 1, FdV: 1, Sistema: "Igual Hurricane Kick" },
+	"Air Hurricane Kick": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 1, Chi: 1, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil", "Área", "Impacto Dinâmico"], Sistema: "Igual Hurricane Kick; salta sobre projéteis como Jump" },
 	"Backflip Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: "Dois", Sistema: "Mov para trás após dano" },
 	"Double Dread Kick": { Tecnica: "Chute", ModVel: -2, ModDano: "1/4", ModMov: 1, FdV: 1, Desvantagens: ["Precisa entrar no hex do alvo", "2º hit condicional"], Sistema: "Dois hits; dois testes de dano: o 1º, com +1 DAN, joga o alvo 1 hex para trás; o atacante deve mover-se para o hex do oponente e fazer o 2º ataque com +4; pode usar o 2º ataque se o alvo estiver a alcance" },
 	"Sanren Geki": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1/4", ModMov: 1, FdV: 1, Chi: 1, Vantagens: ["Knockdown"], Sistema: "Três hits; Como Double Dread Kick, mas com três chutes: dano rolado três vezes; cada um dos dois primeiros empurra 1 hex e o lutador acompanha; o último causa KD" },
 	"Double Hit Kick": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1", ModMov: -1, Sistema: "Dois hits a menos que o alvo esteja em Aérea ou Agachamento" },
 	"Double Hit Knee": { Tecnica: "Chute", ModVel: 0, ModDano: "0/0", ModMov: -2, Sistema: "Dois hits" },
 	"Dragon Kick": { Tecnica: "Chute", ModVel: -1, ModDano: "6/6", ModMov: -2, Chi: 1, FdV: 1, Vantagens: ["Knockdown", "Esquiva de Projétil", "Área"], Desvantagens: ["Não ataca quem lançou o projétil"], Sistema: "Dois hits; KD e joga todos os alvos 1 hex para trás; 2 testes vs. alvo que estiver no hex adjacente no começo do movimento; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
-	"Flash Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 7, Chi: 1, FdV: 1, Vantagens: ["Knockdown vs. Aérea", "Aérea"], Sistema: "Aérea; KD vs. Aérea" },
-	"Flying Knee Thrust": { Tecnica: "Chute", ModVel: 1, ModDano: 2, ModMov: 1, FdV: 1, Vantagens: ["Knockdown vs. Aérea", "Aérea"], Sistema: "Aérea; KD vs. Aérea" },
-	"Flying Thrust Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 6, ModMov: -2, FdV: 1, Vantagens: ["Knockdown vs. Aérea", "Esquiva de Projétil"], Desvantagens: ["Não ataca quem lançou o projétil"], Sistema: "KD vs. Aérea; joga o alvo 1 hex para trás; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
+	"Flash Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 7, Chi: 1, FdV: 1, Vantagens: ["Anti-Aérea", "Aérea"], Sistema: "Aérea; KD vs. Aérea" },
+	"Flying Knee Thrust": { Tecnica: "Chute", ModVel: 1, ModDano: 2, ModMov: 1, FdV: 1, Vantagens: ["Anti-Aérea", "Aérea"], Sistema: "Aérea; KD vs. Aérea" },
+	"Flying Thrust Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 6, ModMov: -2, FdV: 1, Vantagens: ["Anti-Aérea", "Esquiva de Projétil"], Desvantagens: ["Não ataca quem lançou o projétil"], Sistema: "KD vs. Aérea; joga o alvo 1 hex para trás; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
+	"Flying Twin Kick": { Tecnica: "Chute", ModVel: 0, ModDano: "1/1", ModMov: 1, FdV: 1, Vantagens: ["Anti-Aérea", "Aérea", "Esquiva de Projétil"], Sistema: "Dois hits; KD vs. Aérea se causar dano; contra oponente em Agachamento, só um hit e sem KD; Aérea; esquiva de projétil como Jump" },
+	"Two-Sided Jumping Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Vantagens: ["Anti-Aérea", "Aérea", "Esquiva de Projétil", "Área"], Sistema: "O lutador ocupa o hex central de uma linha reta de 3 hex, com um oponente em cada ponta, e o dano atinge os dois; KD vs. Aérea; oponentes no solo recuam 1 hex se falharem numa disputa de Força; Aérea após se posicionar; esquiva de projétil como Jump" },
 	"Foot Sweep": { Tecnica: "Chute", ModVel: -2, ModDano: 3, ModMov: -2, Vantagens: ["Knockdown", "Agachamento"], Sistema: "Agachamento; KD" },
-	"Forward Flip Knee": { Tecnica: "Chute", ModVel: -2, ModDano: 4, ModMov: "Dois", Sistema: "Somente acerta alvos no mesmo e/ou adjacente hex; o atacante move-se para trás do alvo e rola o dano; se o alvo foi interrompido, perde o ataque" },
+	"Kick Roll": { Tecnica: "Chute", ModVel: 1, ModDano: 2, ModMov: "Um", Vantagens: ["Agachamento"], Sistema: "Agachamento; rolamento para frente atacando com o pé" },
+	"Forward Flip Knee": { Tecnica: "Chute", ModVel: -2, ModDano: 4, ModMov: "Dois", Vantagens: ["Aérea", "Anula ataque interrompido"], Sistema: "Aérea; não esquiva de projétil; somente acerta alvos no mesmo e/ou adjacente hex; o atacante move-se para trás do alvo e rola o dano; se o alvo foi interrompido, perde o ataque" },
 	"Great Wall Of China": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1/1", FdV: 2, Sistema: "Três hits, afeta 3 hex adjacentes e consecutivos" },
-	"Handstand Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: -2, Vantagens: ["Knockdown vs. Aérea"], Sistema: "KD vs. Aérea" },
+	"Handstand Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: -2, Vantagens: ["Anti-Aérea"], Sistema: "KD vs. Aérea" },
 	"Hurricane Kick": { Tecnica: "Chute", ModVel: 0, ModDano: -1, ModMov: -1, Chi: 1, FdV: 1, Vantagens: ["Aérea", "Área", "Impacto Dinâmico"], Sistema: "Linha Reta; acerta todos os hex adjacentes e o mesmo hex, causando dano toda vez que se move; todos os alvos recuam um hex; Aérea" },
 	"Lightning Leg": { Tecnica: "Chute", ModVel: -2, ModDano: "1/1/1", FdV: 1, Sistema: "Três hits" },
 	"Slide Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 1, Vantagens: ["Knockdown"], Sistema: "KD a menos que o alvo esteja bloqueando, Agachamento" },
@@ -115,24 +117,23 @@ const manobras = {
 	"Forward Slide Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: 0, Vantagens: ["Knockdown"], Sistema: "KD a menos que o alvo esteja bloqueando" },
 	"Scissor Kick": { Tecnica: "Chute", ModVel: 0, ModDano: "3/3", ModMov: 3, FdV: 1, Vantagens: ["Aérea"], Sistema: "Dois hits; Aérea" },
 	"Tiger Knee": { Tecnica: "Chute", ModVel: 3, ModDano: 2, ModMov: 0, FdV: 2, Vantagens: ["Knockdown", "Aérea", "Esquiva de Projétil"], Sistema: "KD; Aérea; esquiva de projétil" },
-	"Ax Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: -2, Vantagens: ["Knockdown vs. Aérea", "Aérea", "Acerta Agachamento"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Precisa entrar no hex do oponente; KD vs. Aérea; Acerta oponentes em Agachamento; Aérea" },
+	"Ax Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: -2, Vantagens: ["Anti-Aérea", "Aérea", "Esquiva de Projétil", "Acerta Agachamento"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Precisa entrar no hex do oponente; KD vs. Aérea; Acerta oponentes em Agachamento; Aérea; esquiva de projétil" },
 	"Cartwheel Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 1, ModMov: 2, FdV: 1, Sistema: "Linha Reta; Dano = Força + Chute + 1 para cada hex que andou; o alvo recua 1 hex" },
 	"Heel Stamp": { Tecnica: "Chute", ModVel: 2, ModDano: -4, ModMov: 1, Sistema: "O atacante recua 1 hex após o dano, o alvo recua [(Força + Esportes do atacante) - Força do alvo] hex" },
 	"Reverse Frontal Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: -1, Vantagens: ["Ignora Bloqueio"], Sistema: "Ignora bloqueios" },
 	"Forward Backflip Kick": { Tecnica: "Chute", ModVel: 2, ModDano: "1/1", ModMov: "Dois", FdV: 1, Desvantagens: ["Só interrompendo Aérea"], Sistema: "Dois hits se o atacante interromper um alvo em Aérea" },
 	"Bushin Hurricane Kick": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", Chi: 1, FdV: 1, Vantagens: ["Impacto Técnico", "Knockdown", "Área"], Sistema: "Todos ao redor são atingidos e empurrados para trás; oponentes no mesmo hex são puxados pelo golpe, podendo ser acertados até um número de vezes igual à Técnica Esportes do usuário; para cada novo ataque, devem ter sofrido dano no ataque anterior; KD no último acerto" },
-	"Dakukyaku": { Tecnica: "Chute", ModVel: -1, ModDano: 0, ModMov: 4, FdV: 2, Vantagens: ["Knockdown", "Aérea", "Esquiva de Projétil"], Sistema: "Aérea, esquiva de projétil (dif. 8), após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +2, empurrando de novo e tentando um terceiro com dano +4, que causa KD" },
-	"Dive Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Vantagens: ["Aérea", "Acerta Agachamento"], Sistema: "Aérea, afeta personagens em agachamentos" },
-	"Hayagake": { Tecnica: "Chute", ModVel: 0, ModDano: 3, ModMov: 3, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Esquiva de Projétil"], Sistema: "Aérea ou agachamento, à escolha do jogador; se aérea, esquiva de projétil; se agachamento, causa KD" },
+	"Dankukyaku": { Tecnica: "Chute", ModVel: -1, ModDano: 0, ModMov: 4, FdV: 2, Vantagens: ["Knockdown", "Aérea", "Esquiva de Projétil"], Sistema: "Aérea, esquiva de projétil (dif. 8), após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +2, empurrando de novo e tentando um terceiro com dano +4, que causa KD" },
+	"Dive Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Vantagens: ["Aérea", "Esquiva de Projétil", "Acerta Agachamento"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Aérea; esquiva de projétil; termina o ataque no hex do oponente; acerta oponentes em Agachamento" },
 	"Power Kick": { Tecnica: "Chute", ModVel: -3, ModDano: 5, ModMov: "Dois", Vantagens: ["Knockdown"], Sistema: "Empurra 1 Hexágono para trás e causa KD em Manobras Aéreas" },
 	"Soccer Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, ModMov: "Um", Vantagens: ["Knockdown"], Sistema: "Causa KD se causar dano" },
 	"Rhino Horn": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 3, FdV: 1, Vantagens: ["Aérea"], Sistema: "Aérea" },
 	"Roundabout Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, FdV: 1, Vantagens: ["Knockdown", "Aérea"], Sistema: "Acerta oponentes no mesmo hex ou adjacente igual à técnica Chute do lutador; causa KD; Aérea" },
 	"Tsumuji": { Tecnica: "Chute", ModVel: -1, ModDano: -1, ModMov: 3, FdV: 2, Vantagens: ["Knockdown"], Sistema: "Após o primeiro acerto, empurra o oponente e pode avançar para um segundo com dano +1, empurrando de novo e tentando um terceiro com dano +3, que causa KD; pode aplicar um quarto chute no oponente caído com dano +1, porém custará 1 ponto temporário de Honra" },
 	"Wheel Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 1, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil"], Sistema: "Aérea, esquiva de projétil" },
-	"Gekiro": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", FdV: 2, Alcance: 0, Vantagens: ["Impacto Técnico", "Knockdown", "Aérea"], Sistema: "Mesmo hex; Hits = Esportes; Causa KD; Aérea;" },
+	"Gekiro": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", FdV: 2, Alcance: 0, Vantagens: ["Impacto Técnico", "Knockdown", "Aérea", "Esquiva de Projétil"], Sistema: "Mesmo hex; Hits = Esportes; Causa KD; Aérea; esquiva de projétil como Jump" },
 	"Flamingo Stance": { Tecnica: "Chute", ModVel: "Especial", ModDano: "Nenhum", ModMov: "Especial", Sistema: "+1 Vel em chutes; Movimento vira Um ou 1/2 (Aéreas)" },
-	"Bushin Sempu Kyaku": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", Chi: 1, FdV: 1, Vantagens: ["Impacto Técnico", "Knockdown", "Aérea", "Área"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Tem de entrar no hex. Acerta todos ao redor. Hits = Esportes. Se não causar dano, acaba. KD. Manobra Aérea." },
+	"Bushin Sempu Kyaku": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", Chi: 1, FdV: 1, Vantagens: ["Impacto Técnico", "Knockdown", "Aérea", "Esquiva de Projétil", "Área"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Tem de entrar no hex. Acerta todos ao redor. Hits = Esportes. Se não causar dano, acaba. KD. Manobra Aérea; esquiva de projétil como Jump." },
 	"Take Down": { Tecnica: "Chute", ModVel: "+0", ModDano: 2, ModMov: "Um", Vantagens: ["Knockdown"], Sistema: "Apresamento. KD." },
 	"Flying Kick": { Tecnica: "Chute", ModVel: "+0", ModDano: 3, ModMov: 2, FdV: 1, Vantagens: ["Knockdown", "Aérea"], Sistema: "Aérea. KD." },
 	"Bicycle Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 0, ModMov: 1, FdV: 1, Vantagens: ["Aérea", "Impacto Dinâmico"], Sistema: "Linha Reta; causando dano toda vez que entra no hex da vítima; o alvo recua um hex; Aérea" },
@@ -187,7 +188,6 @@ const manobras = {
 	"Iron Claw": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: "Um", Vantagens: ["Sustentado"], Sistema: "Sustentado" },
 	"Jaw Spin": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 5, Chi: 1, Desvantagens: ["Precisa sofrer um ataque antes"], Sistema: "Precisa sofrer um ataque mais lento antes de executar esta manobra" },
 	"Knee Basher": { Tecnica: "Chute", ModVel: -1, ModDano: 4, ModMov: "Um", Vantagens: ["Knockdown", "Sustentado"], Sistema: "Sustentado; uma vez que o alvo é arremessado, ele é considerado KD" },
-	"Leaping Throw": { Tecnica: "Apresamento", ModVel: -2, ModDano: 3, ModMov: 3, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil"], Sistema: "Aérea, esquiva projétil; arremessa a FOR hexes" },
 	"Power Bomb": { Tecnica: "Apresamento", ModVel: 0, ModDano: 6, ModMov: "Um", FdV: 1, Vantagens: ["Knockdown"], Sistema: "KD, vítima quica a até 2 hex de distância; o atacante escolhe a direção" },
 	"Neck Choke": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Sustentado"], Sistema: "Sustentado" },
 	"Pile Driver": { Tecnica: "Apresamento", ModVel: -2, ModDano: 4, ModMov: "Um", Vantagens: ["Knockdown"], Sistema: "KD" },
@@ -227,18 +227,18 @@ const manobras = {
 	"Kippup": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Vantagens: ["Knockdown"], Sistema: "Passiva; o lutador sofre apenas -1 VEL após sofrer KD" },
 	"Rolling Attack": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: 4, FdV: 1, Vantagens: ["Aérea"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Aérea; Linha Reta; o atacante termina o movimento 2 hex na frente do alvo; precisa entrar no hex do alvo" },
 	"Thunderstrike": { Tecnica: "Esportes", ModVel: 0, ModDano: 5, ModMov: -1, Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Precisa entrar no hex do alvo; Complete o movimento após o dano" },
-	"Vertical Rolling Attack": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: 0, FdV: 1, Vantagens: ["Knockdown vs. Aérea", "Aérea", "Esquiva de Projétil"], Sistema: "Aérea; esquiva de projétil; KD vs. Aérea" },
+	"Vertical Rolling Attack": { Tecnica: "Esportes", ModVel: 0, ModDano: 3, ModMov: 0, FdV: 1, Vantagens: ["Anti-Aérea", "Aérea", "Esquiva de Projétil"], Sistema: "Aérea; esquiva de projétil; KD vs. Aérea" },
 	"Wall Spring": { Tecnica: "Esportes", ModVel: 2, ModMov: 0, Vantagens: ["Aérea", "Esquiva de Projétil"], Sistema: "Aérea; esquiva de projétil; o lutador pode pular em um obstáculo com +0 MOV, quando quica na direção oposta com +2; pode ser combinado com chutes e socos básicos (use o modificador de MOV do Wall Spring)" },
 	"Backflip": { Tecnica: "Esportes", ModVel: 3, ModMov: 2, FdV: 1, Sistema: "Linha Reta; o lutador não pode ser atingido enquanto usa esta manobra, somente antes ou depois" },
 	"Flying Punch": { Tecnica: "Esportes", ModVel: -2, ModDano: 2, ModMov: 5, FdV: 1, Vantagens: ["Aérea", "Ignora Vigor"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Aérea; o atacante precisa mover 2 hex para trás do alvo e voltar para atingi-lo, reduz a metade (arredondado para baixo) o Vigor efetivo do alvo; -1 Honra por uso; não há perda de Honra ou Vigor se o ataque for frontal" },
 	"Light Feet": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "+1 MOV passivo para todas manobras; pode gastar 1 FdV opcional para virar +3 MOV neste turno" },
 	"Tumbling Attack": { Tecnica: "Esportes", ModVel: -1, ModDano: -1, ModMov: 0, FdV: 1, Vantagens: ["Agachamento", "Impacto Dinâmico"], Desvantagens: ["Precisa entrar no hex do alvo"], Sistema: "Agachamento; Linha Reta; precisa entrar no hex do alvo; após o dano o alvo recua 1 hex; role o dano para cada hex que entrar e continue se movendo" },
-	"Dragons Tail": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 5, ModMov: -2, Vantagens: ["Knockdown vs. Aérea"], Sistema: "KD vs. Aérea; oponentes em pé recuam 1 hex" },
+	"Dragons Tail": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 5, ModMov: -2, Vantagens: ["Anti-Aérea"], Sistema: "KD vs. Aérea; oponentes em pé recuam 1 hex" },
 	"Esquives": { Tecnica: "Esportes", ModVel: 2, ModMov: "Dois", Sistema: "Manobra de Interrupção, evita o ataque se for mais rápido" },
 	"Pounce": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 2, ModMov: 4, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Esquiva de Projétil"], Sistema: "Aérea; esquiva de projétil; KD; ambos os lutadores terminam no mesmo hex" },
 	"Tail Sweep": { Tecnica: "Esportes", ModVel: -1, ModDano: 1, Vantagens: ["Knockdown", "Agachamento", "Área"], Sistema: "KD; Agachamento; atinge todos os hex adjacentes" },
 	"Typhoon Tail": { Tecnica: "Esportes", ModVel: -2, ModDano: 5, ModMov: 1, Chi: 1, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil", "Área"], Sistema: "Aérea; não pode ser atingido por projétil enquanto executa esta manobra; o oponente no hex alvo sofre +5 DAN e é jogado 1 hex para trás; todos os lutadores nos hex adjacentes sofrem +2 DAN e são jogados 1 hex para trás" },
-	"Upper Tail Strike": { Tecnica: "Esportes", ModVel: 1, ModDano: 2, ModMov: 1, Vantagens: ["Knockdown vs. Aérea"], Sistema: "KD vs. Aérea" },
+	"Upper Tail Strike": { Tecnica: "Esportes", ModVel: 1, ModDano: 2, ModMov: 1, Vantagens: ["Anti-Aérea"], Sistema: "KD vs. Aérea" },
 	"Breakfall": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "Rola DES + ESP quando sofrer Throw e outras projeções para reduzir dano" },
 	"Ground Fighting": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, FdV: 1, Vantagens: ["Knockdown"], Sistema: "Após sofrer KD o lutador continua a lutar no chão; não pode usar Manobras Aéreas ou manobras que precisem estar de pé (Narrador decide); sem esta manobra os ataques feitos no chão terão -3 na VEL e DAN; ataques contra quem estiver usando esta manobra terão -2 na VEL e DAN, exceto Manobras de Agachamento e ataques rasteiros" },
 	"Rear Crush": { Tecnica: "Esportes", ModVel: 1, ModDano: 2, ModMov: 1, FdV: 1, Vantagens: ["Acerta Agachamento", "Imune a Agachamento"], Sistema: "Não é afetada por agachamentos, mas os afeta; lutador ganha 1 ponto temporário de Glória; caso a vítima seja atordoada ou nocauteada pelo golpe, ela perde 1 ponto temporário de Glória" },
@@ -257,11 +257,12 @@ const manobras = {
 	"Extendible Limbs": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "Combinado com socos e chutes básicos para adicionar 1 hex de Alcance/Foco; Oponentes podem atingir qualquer parte do membro estendido" },
 	"Final Wave": { Tecnica: "Foco", ModVel: -2, ModDano: 5, ModMov: "Nenhum", Chi: 2, Alcance: "Três", Vantagens: ["Knockdown", "Área 3"], Sistema: "Área circular de 3 hex de raio, centrada no próprio lutador ou num hex à frente a até 3 hex; atinge aliados e inimigos, menos o próprio lutador; KD se causar dano; -1 de dano por hex de distância do centro (+5 a +3)" },
 	"Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "Linha de visão. Projétil." },
-	"Flying Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, ModMov: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Vantagens: ["Não pode ser esquivada"], Sistema: "linha de visão; Não pode ser esquivada com Jump" },
+	"Flying Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 2, ModMov: 0, Chi: 1, FdV: 1, Alcance: "Raciocinio+Foco", Vantagens: ["Não pode ser esquivada", "Aérea", "Esquiva de Projétil"], Sistema: "linha de visão; Não pode ser esquivada com Jump; Aérea (houserule), esquiva de projétil como Jump" },
 	"Ghost Form": { Tecnica: "Foco", ModVel: 1, ModMov: 0, Chi: 2, Sistema: "2 Chi 1º turno e 1 Chi nos turnos subsequentes; o lutador fica insubstancial" },
 	"Ice Blast": { Tecnica: "Foco", ModVel: -2, ModDano: 3, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; se sofrer dano, a vítima é congelada até ser atingida ou conseguir acumular 4 sucessos em um teste prolongado de FOR (teste no final de cada turno)" },
 	"Improved Ice Blast": { Tecnica: "Foco", ModVel: -1, ModDano: 5, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "linha de visão; se sofrer dano, a vítima é congelada até ser atingida ou conseguir acumular 6 sucessos em um teste prolongado de FOR (teste no final de cada turno)" },
 	"Improved Fireball": { Tecnica: "Foco", ModVel: -1, ModDano: 4, Chi: 1, Alcance: "Raciocinio+Foco", Vantagens: ["Knockdown"], Sistema: "Linha de visão, KD, projétil" },
+	"Shinkuu Hadouken": { Tecnica: "Foco", ModVel: -2, ModDano: 5, ModMov: "Nenhum", Chi: 2, Alcance: "Raciocinio+Foco", Vantagens: ["Knockdown", "Área"], Sistema: "Projétil; linha de visão; atinge todos numa linha reta de Raciocínio + Foco hex; KD em quem sofrer dano sem estar bloqueando; para no primeiro alvo que bloquear ou obstáculo; não pode ser refletida com Energy Reflection, só desviada" },
 	"Inferno Strike": { Tecnica: "Foco", ModVel: -2, ModDano: 4, Chi: 2, Alcance: "Raciocinio+Foco", Sistema: "hex linha de visão; afeta o hex alvo e todos os adjacentes" },
 	"Mind Reading": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "usuário declara o alvo de Mind Reading e precisa vencer uma disputa de FV Permanente; se conseguir, o usuário pode ver 2 cartas de combate do alvo, uma deve ser jogada no próximo turno; as cartas devem ser mostradas entre os turnos" },
 	"Musical Accompaniment": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "Se sua música estiver tocando, ganha +1VEL, DAN ou MOV em cada turno" },
@@ -269,8 +270,9 @@ const manobras = {
 	"Repeating Fireball": { Tecnica: "Foco", ModVel: -2, ModDano: 0, Chi: 2, Alcance: "Raciocinio+Foco", Vantagens: ["Impacto Técnico"], Sistema: "linha de visão; produz uma Fireball por ponto de Foco; pode atingir diferentes inimigos; alvos que tentam esquivar de vários ataques devem testar para cada ataque separado" },
 	"Shock Treatment": { Tecnica: "Foco", ModVel: 0, ModDano: 7, Chi: 2, Vantagens: ["Knockdown", "Área"], Sistema: "Afeta todos adjacentes; KD a menos que bloqueiem;" },
 	"Sonic Boom": { Tecnica: "Foco", ModVel: -3, ModDano: 4, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "linha de visão" },
+	"Sonic Barrage": { Tecnica: "Foco", ModVel: -3, ModDano: 2, ModMov: "Nenhum", Chi: 2, Alcance: "Raciocinio+Foco", Vantagens: ["Impacto Técnico"], Sistema: "Projétil; linha de visão; dispara (Foco - 1) Sonic Booms, que podem mirar oponentes diferentes; quem esquivar testa para cada um" },
 	"Stunning Shout": { Tecnica: "Foco", ModVel: 2, ModMov: -2, Chi: 1, Sistema: "Afeta um alvo ou, a critério do Narrador, um grupo de pequeno; o atacante deve vencer uma disputa de FV Permanente; se o alvo não agiu neste turno, perderá sua ação; se já agiu, terá um redutor na VEL igual a diferença de que perdeu a disputa" },
-	"Telepathy": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "personagem pode ligar (Foco) pessoas em comunicação telepática, para poderem conversar mentalmente" },
+	"Telepathy": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 0, Chi: 1, Alcance: "Raciocinio+Foco", Sistema: "personagem pode ligar (Foco) pessoas em comunicação telepática, para poderem conversar mentalmente" },
 	"Thunderclap": { Tecnica: "Foco", ModVel: 0, ModDano: -3, ModMov: "Nenhum", Chi: 1, Alcance: "Três", Sistema: "Área: atinge todos a até 3 hex do lutador" },
 	"Toughskin": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, PC: 2, Sistema: "Passiva; +2 ABS neste turno" },
 	"Yoga Flame": { Tecnica: "Foco", ModVel: -2, ModDano: 7, ModMov: "Um", Chi: 2, Alcance: "Dois", Vantagens: ["Área"], Sistema: "Afeta todos no hex adjacente e nos 3 posteriores a este; a chama dura até o fim do turno" },
@@ -304,7 +306,7 @@ const manobras = {
 	"Lightness": { Tecnica: "Foco", ModVel: 1, ModDano: "Nenhum", ModMov: 1, Alcance: "Raciocínio+Foco", Chi: 1, Sistema: "Pode ser usado no elemental ou outro alvo; o alvo ganha +2 VEL e +3 MOV para todas as manobras acrescidas por Jump; dura (Foco) turnos" },
 	"Pit": { Tecnica: "Foco", ModVel: -1, ModDano: 1, ModMov: -1, Chi: 1, Alcance: "Raciocínio+Foco", Desvantagens: ["Precisa contato com a terra"], Sistema: "Cria no hex alvo um buraco com (5 + Foco) pés de profundidade; lutadores no buraco sofrem o dano pela queda no fim do turno e devem gastar o próximo turno subindo (Movimento com -4 VEL); o atacante precisa estar em contato com a terra; buracos são permanentes após criados; -1 Glória se usado em arena" },
 	"Pool": { Tecnica: "Foco", ModVel: 1, ModMov: -2, Sistema: "Adquire imunidade a ataques físicos e a habilidade de escoar por frestas, etc.; alguns ataques de Foco podem afetar o lutador (Narrador decide)" },
-	"Push": { Tecnica: "Foco", ModVel: -2, ModDano: 1, Chi: 1, Alcance: "Três", Vantagens: ["Knockdown vs. Aérea", "Área"], Sistema: "Afeta 3 hex a frente e (Foco) hex de lado; todos os lutadores na área são atingidos; todos recuam 1 hex por ponto de dano sofrido; KD vs. Aérea" },
+	"Push": { Tecnica: "Foco", ModVel: -2, ModDano: 1, Chi: 1, Alcance: "Três", Vantagens: ["Anti-Aérea", "Área"], Sistema: "Afeta 3 hex a frente e (Foco) hex de lado; todos os lutadores na área são atingidos; todos recuam 1 hex por ponto de dano sofrido; KD vs. Aérea" },
 	"Sakki": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "Personagem está a par do ataque surpresa e pode agir de acordo com esta informação; pode mover Foco + Esportes para evitar o ataque surpresa" },
 	"Shrouded Moon": { Tecnica: "Foco", ModVel: 0, ModMov: -1, Chi: 1, Sistema: "Ninja fica invisível; atacante precisa vencer uma disputa de Percepção + Prontidão vs. Foco + Furtividade do ninja para percebê-lo; se não percebê-lo o ninja terá +1 VEL no próximo turno" },
 	"Speed Of The Mongoose": { Tecnica: "Foco", ModVel: 2, ModMov: -2, Chi: 1, Sistema: "Adiciona +4 VEL ou +6 MOV para a Manobra escolhida no próximo turno" },
@@ -341,12 +343,12 @@ const manobras = {
 	"Metamorphose": { Tecnica: "Foco", ModVel: 1, ModMov: -2, Chi: 2, Sistema: "Ver Manobra" },
 	"Determination": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, FdV: 1, Sistema: "Permite usar sua manobra no mesmo turno em que ficou Dizzy, mas não no turno seguinte." },
 	"Improved Yoga Teleport": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Especial", Chi: 1, Sistema: "Permite teleportar outras pessoas e a distâncias maiores." },
-	"Sense Element": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "Percepção + Elemental para perceber seu elemento" },
-	"Sense Orochi": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Nenhum", ModMov: "Nenhum", Sistema: "Percepção + Orochi quando um portador do Sangue de Orochi estiver no campo de visão (o Narrador pede o teste sem dizer para quê); 0 sucessos: percebe um Orochi, mas não sabe quem é; 1: identifica o Orochi; 2: identifica Orochi não despertados; 3: identifica Orochi, seus servos e pessoas de má índole; só não percebe nada em falha crítica" },
+	"Sense Element": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 0, Sistema: "Percepção + Elemental para perceber seu elemento" },
+	"Sense Orochi": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Nenhum", ModMov: "Nenhum", PC: 0, Sistema: "Percepção + Orochi quando um portador do Sangue de Orochi estiver no campo de visão (o Narrador pede o teste sem dizer para quê); 0 sucessos: percebe um Orochi, mas não sabe quem é; 1: identifica o Orochi; 2: identifica Orochi não despertados; 3: identifica Orochi, seus servos e pessoas de má índole; só não percebe nada em falha crítica" },
 	"Ice Ground": { Tecnica: "Foco", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Alcance: 3, Vantagens: ["Knockdown"], Sistema: "Congela 3 hexes à frente, se pisar leva KD e -3 Vel na próxima manobra. Gelo dura 2 turnos." },
 	"Ice Strike": { Tecnica: "Foco", ModVel: 0, ModDano: 5, ModMov: 0, Chi: 1, Sistema: "" },
 	"Ice Clone": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", ModMov: "Dois", Chi: 1, Sistema: "Move para trás. Alvo testa Des + Esp contra Foco para não tocar no gelo. Mesmo efeito do Ice Blast mas sem dano. Dura 2 rodadas." },
-	"The Hand From Hell": { Tecnica: "Foco", ModVel: -2, ModDano: 10, ModMov: "Nenhum", Chi: 2, Vantagens: ["Sustentado"], Sistema: "rola Carisma + Mistérios e compara com tabela para saber efeito (dano único ou apresamento sustentado). Não pode ser ser bloqueada." },
+	"The Hand From Hell": { Tecnica: "Foco", ModVel: -2, ModDano: 10, ModMov: "Nenhum", Chi: 2, Vantagens: ["Sustentado"], Desvantagens: ["Exclusiva"], Sistema: "rola Carisma + Mistérios e compara com tabela para saber efeito (dano único ou apresamento sustentado). Não pode ser bloqueada. Exclusiva de Shinnok (poder do Amuleto)." },
 	"Telekinesis": { Tecnica: "Foco", ModVel: -2, ModDano: "Nenhum", ModMov: "Nenhum", Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Ver Descrição" },
 	"Cryokinesis": { Tecnica: "Foco", ModVel: -2, ModDano: "2/0", ModMov: "Nenhum", Alcance: "Raciocinio+Foco", Chi: 2, Sistema: "Dois hits; Linha de Visão. Similar a Ice Blast, veja descrição." },
 	"Portal Attack": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Alcance: "Raciocinio+Foco", Chi: 1, Sistema: "Manobras Básicas ou de projeção à distância (alcance)" },
@@ -361,9 +363,9 @@ const manobras = {
 	"Spinning Weapon": { Tecnica: "Bastão/Lança/Espada/Machado/Chicote/Faca/Mangual/Garra", ModVel: 0, ModDano: "-1/-1/-1", ModMov: "Um", FdV: 1, Sistema: "Três hits. Armado." },
 	"Weapon Sweep": { Tecnica: "Bastão/Lança/Chicote/Mangual", ModVel: -2, ModDano: 2, ModMov: -3, Vantagens: ["Knockdown", "Agachamento"], Sistema: "KD. Agachamento. Armado." },
 	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, PC: 2, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano." },
-	"Weapon Uppercut": { Tecnica: "Bastão/Espada/Faca/Garra/Mangual", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Knockdown vs. Aérea"], Sistema: "KD vs. Aérea" },
+	"Weapon Uppercut": { Tecnica: "Bastão/Espada/Faca/Garra/Mangual", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Anti-Aérea"], Sistema: "KD vs. Aérea" },
 	"Battojutsu": { Tecnica: "Espada", ModVel: 2, ModDano: 1, ModMov: 0, FdV: 1, Sistema: "Revele a carta antes das velocidades; soma +2 Vel e +1 Dano a uma manobra básica ou especial de Espada que não gaste FdV" },
-	"Killing Blade": { Tecnica: "Espada/Machado/Faca/Garra", ModVel: -1, ModDano: 4, ModMov: -2, FdV: 1, Vantagens: ["Knockdown vs. Aérea", "Esquiva de Projétil"], Desvantagens: ["Não ataca quem lançou o projétil"], Sistema: "Como Dragon Punch, com arma: KD vs. Aérea; empurra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
+	"Killing Blade": { Tecnica: "Espada/Machado/Faca/Garra", ModVel: -1, ModDano: 4, ModMov: -2, FdV: 1, Vantagens: ["Anti-Aérea", "Esquiva de Projétil"], Desvantagens: ["Não ataca quem lançou o projétil"], Sistema: "Como Dragon Punch, com arma: KD vs. Aérea; empurra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
 	"Buffalo Strike": { Tecnica: "Bastão/Lança/Espada/Machado/Mangual", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
 	"Weapon Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Arma escolhida; -2 vs. outros" },
 	"Deflecting Weapon": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Mangual", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
@@ -1150,7 +1152,8 @@ function numeroPorExtenso(valor) {
 }
 
 //PC (Pontos de Combate) mede a eficiência de uma manobra em combate (não é custo).
-//Valores das Vantagens e Desvantagens: cada uma vale +1/-1, exceto "Área N" (N hex de raio), que vale N.
+//Valores das Vantagens e Desvantagens: cada uma vale +1/-1, exceto "Área"/"Área N" (acertar vários alvos só ajuda
+//contra capangas fracos) e "Agachamento" (não apanha de Aérea, mas também não acerta Aérea), que valem 0.
 //Multi-hit: o dano entra uma vez (modificador do 1º hit) e a quantidade de hits soma um bônus (vale o maior):
 //hits fixos (ModDano "x/y") +1 por hit extra; Impacto Técnico (hits = técnica) +3;
 //Impacto Dinâmico (hits = movimento) +2; Apresamento Sustentado (hits possíveis = Apresamento) +1.
@@ -1162,8 +1165,8 @@ function valorModificador(valor) {//"Especial", "", "Nenhum" e "-" valem 0
 }
 
 function valorVantagem(vantagem) {
-	const area = /^Área (\d+)$/.exec(vantagem);
-	return area ? parseInt(area[1]) : 1;
+	if (vantagem === "Agachamento" || /^Área( \d+)?$/.test(vantagem)) return 0;
+	return 1;
 }
 
 //Movimento: sem movimento (Nenhum, "", "-" ou omitido) = -1; Um = 0; Dois = +1; Três = +2; números valem eles mesmos
@@ -1176,8 +1179,7 @@ function pcMovimento(modMov, npc) {
 	const fixos = { "um": 0, "dois": 1, "três": 2 };
 	if (fixos[minusculo] !== undefined) return fixos[minusculo];
 	if (texto.indexOf("/") !== -1) return pcMovimento(texto.split("/")[0], npc);//ex.: "Dois/Um" usa o 1º movimento
-	const tecnica = /^\+(\p{L}+)$/u.exec(texto);//ex.: "+Foco" vale o Foco do personagem
-	if (tecnica) return (npc && npc[tecnica[1]]) || 0;
+	if (/^\+(\p{L}+)$/u.test(texto)) return 2;//ex.: "+Foco" vale +2 fixo, como um Alcance de uma técnica (o PC da manobra não usa a ficha)
 	const base = baseMovRegex.exec(texto);//ex.: "Foco+2" vale só o modificador (+2)
 	if (base) return parseInt(base[2].replace(/\s/g, "")) || 0;
 	return valorModificador(texto);
@@ -1186,7 +1188,9 @@ function pcMovimento(modMov, npc) {
 //Alcance: mesmo hex (0, padrão do Apresamento) = -1; adjacente (1, padrão) = 0; fixo (2, 3...) = +1;
 //um atributo ou técnica = +2; atributo + técnica = +3
 function pcAlcance(manobra) {
-	const alcance = manobra.Alcance;
+	//o Alcance só conta quando a manobra causa dano (ModDano numérico, positivo ou negativo); senão é desconsiderado
+	const temDano = !isNaN(parseInt(manobra.ModDano));
+	const alcance = temDano ? manobra.Alcance : undefined;
 	if (alcance === undefined || alcance === null || alcance === "")
 		return /apresamento/i.test(manobra.Tecnica) ? -1 : 0;
 	const numero = numeroPorExtenso(alcance);
@@ -1201,7 +1205,7 @@ function inferirVantagens(sistema) {
 	const v = [], d = [];
 	if (/\b(kd|knockdown)\b/.test(s) && !/não sofre kd/.test(s)) {
 		const soAereo = /\bkd (vs\.?|contra) a[ée]rea/.test(s) && !/(^|[;.,]\s*|causa |e )kd(?! (vs\.?|contra))/.test(s.replace(/kd (vs\.?|contra) a[ée]rea/g, ""));
-		v.push(soAereo ? "Knockdown vs. Aérea" : "Knockdown");
+		v.push(soAereo ? "Anti-Aérea" : "Knockdown");
 	}
 	if (clausulas.some(c => /^(manobra )?a[ée]rea\b(?! enquanto)/.test(c)) || /\b(é|são) (considerada )?(uma )?(manobra )?a[ée]rea\b/.test(s.replace(/não é a[ée]rea/g, "")) || /manobra a[ée]rea\.?$/.test(s)) v.push("Aérea");
 	if (/esquivar? (de )?proj[ée]t|esquiva proj|não pode ser atingid[oa] por proj|esquiva de fireball/.test(s)) v.push("Esquiva de Projétil");
@@ -1264,6 +1268,7 @@ function calculaPCManobra(manobra, npc) {
 	const vantagens = temCampos ? (manobra.Vantagens || []) : inferido.Vantagens;
 	const desvantagens = temCampos ? (manobra.Desvantagens || []) : inferido.Desvantagens;
 	const especial = (manobra.ModVel + "" + manobra.ModDano + manobra.ModMov).toLowerCase() === "especialespecialespecial";
+	if (manobra.PC === 0) return 0;//manobra que não é usada em combate (ex.: Telepathy) não vale nada
 	if (especial && manobra.PC === undefined) return 1;//manobra "Especial" sem PC definido vale 1
 
 	let base;
@@ -1275,7 +1280,9 @@ function calculaPCManobra(manobra, npc) {
 		if (!temCampos && hits === 1 && manobra.ModDano !== undefined && !semModificador(manobra.ModDano))
 			hits = inferirHits(manobra.Sistema);
 		const bonusHits = Math.max(hits - 1, ...vantagens.map(v => BONUS_HITS[v] || 0));
-		base = valorModificador(manobra.ModVel) + danos[0] + bonusHits + pcMovimento(manobra.ModMov, npc);
+		//no Impacto Dinâmico o movimento já gera os hits, então ele não conta de novo
+		const movimento = vantagens.includes("Impacto Dinâmico") ? 0 : pcMovimento(manobra.ModMov, npc);
+		base = valorModificador(manobra.ModVel) + danos[0] + bonusHits + movimento;
 	}
 
 	let total = base;

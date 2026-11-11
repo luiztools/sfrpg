@@ -101,7 +101,7 @@ function AbigailFF1() {
         Apresamento: 4,
         Esportes: 2,
         Foco: 1,
-        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Foot Sweep, Wheel Kick",
+        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Foot Sweep",
         Combos: "Flying Tackle para Throw; Hyper Fist para Power Uppercut (Dizzy); Jab para Jab (Dizy); Bloqueio para Air Smash (Dizzy);",
         Gloria: 4,
         Honra: 0,

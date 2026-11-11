@@ -22,7 +22,7 @@ Os scripts de banco e FTP são os da skill de personagens (`.claude/skills/perso
 4. **Validar o PC (eficiência) da manobra, enviar por FTP e atualizar o cache-buster.** Ver "manobras.js".
 5. **Imagem.** Ver "Imagem". Antes de subir qualquer arquivo, verifique se a imagem já existe no blog.
 6. **Post da manobra como rascunho.** Ver "Post da manobra".
-7. **Listas cruzadas** (posts publicados): post da técnica, Movimentos Comuns e posts de estilo. Ver "Listas cruzadas".
+7. **Listas cruzadas** (posts publicados): post da técnica, Movimentos Comuns, posts de estilo e, se for Aérea, Manobras Aéreas. Ver "Listas cruzadas".
 8. **Fichas:** se o usuário pedir para colocar a manobra em um personagem, edite todas as versões (`age`) da ficha, valide em Node e envie por FTP (fluxo da skill personagem-sfrpg).
 9. **Informar** o link de edição `https://www.sfrpg.com.br/wp-admin/post.php?post=<ID>&action=edit` e juntar todas as dúvidas no fim.
 
@@ -41,17 +41,17 @@ Quando o usuário mandar correções uma por mensagem, aplique cada uma e siga e
   	"Multiple Stomp": { Tecnica: "Esportes", ModVel: -1, ModDano: "0/0/0", ModMov: -1, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil", "Acerta Agachamento"], Sistema: "Três hits; Aérea; Linha Reta; esquiva de projétil como Jump; oponente em manobra de agachamento ainda é atingido pelo último chute" },
   ```
   - `Chi: N` e/ou `FdV: N` conforme o custo (omita quando o custo for "nenhum").
-  - `ModMov`: número, ou `"Nenhum"`, `"Um"`, `"Dois"`, `"Três"`, `"Especial"`.
+  - `ModMov`: número, ou `"Nenhum"`, `"Um"`, `"Dois"`, `"Três"`, `"Especial"`. Também `"+<Técnica>"` (ex.: `"+Foco"`, Double Jump): Esportes + a técnica; e `"<Técnica>+N"` (ex.: `"Foco+2"`, Ashura Senku): a técnica no lugar de Esportes, + N.
   - Multi-hit: `ModDano` com um valor por acerto (`"1/1"`, `"0/0/0"`, `"2/0"`), e o `Sistema` começa com "Dois hits" ou "Três hits".
   - `Alcance`: omitido = adjacente (no Apresamento, omitido = mesmo hex); `0` = mesmo hex; número fixo; `"Foco"`; `"Raciocinio+Foco"`.
   - `Vantagens` e `Desvantagens`: listas com os nomes padronizados abaixo (omita a lista vazia). Se a manobra não tiver nenhum dos dois campos, eles são deduzidos do texto do `Sistema` por regex (`inferirVantagens`, mesmas regras da migração), assim como os hits citados só no texto (`inferirHits`). Prefira sempre preencher os campos.
-  - `PC: N`: só para manobra com `ModVel`/`ModDano`/`ModMov` "Especial"; é o valor do bônus que ela dá (ex.: Rekka Ken +3 VEL → `PC: 3`). Toda manobra "Especial" tem `PC` (use `PC: 1` quando não houver bônus numérico). Se a manobra tiver modificadores definidos no post (ex.: Lightness, "+1 (inicial)"), use os modificadores do turno inicial em vez de "Especial".
+  - `PC: N`: só para manobra com `ModVel`/`ModDano`/`ModMov` "Especial"; é o valor do bônus que ela dá (ex.: Rekka Ken +3 VEL → `PC: 3`). Manobra que não é usada em combate (Telepathy, Sense Element, Sense Orochi) tem `PC: 0` e vale 0, sem o mínimo de 1. Toda manobra "Especial" tem `PC` (use `PC: 1` quando não houver bônus numérico). Se a manobra tiver modificadores definidos no post (ex.: Lightness, "+1 (inicial)"), use os modificadores do turno inicial em vez de "Especial".
 - **Como o PC da manobra é calculado** (`calculaPCManobra`; PC mede a eficiência em combate, não é custo):
-  - Base: `ModVel` + dano + movimento + bônus de hits (ou o campo `PC`). O dano entra uma vez, pelo modificador do 1º hit. Bônus de hits (vale o maior): hits fixos no `ModDano` (`"1/1"` +1, `"0/0/0"` +2); vantagem `Impacto Técnico` (hits = técnica, ex.: Repeating Fireball, Gekiro) +3; `Impacto Dinâmico` (hits = movimento, ex.: Hurricane Kick) +2; `Sustentado` (hits possíveis = Apresamento, ex.: Head Bite) +1. Essas três vantagens não somam o +1 comum. Hits condicionais também contam (decisão do usuário).
-  - Movimento: sem movimento (`"Nenhum"`, `""`, `"-"` ou omitido) = -1; `"Um"` = 0; `"Dois"` = +1; `"Três"` = +2; números valem eles mesmos.
-  - Alcance: mesmo hex -1; adjacente 0; fixo (2, 3...) +1; um atributo ou técnica +2; atributo + técnica +3.
-  - Cada Vantagem +1 (`"Área N"` vale N); cada Desvantagem -1; técnica Apresamento ou Bloqueio +1 (se não tiver a vantagem `Ignora Bloqueio`); Chi e FdV subtraem; mínimo 1.
-  - Vantagens em uso: `Knockdown`, `Knockdown vs. Aérea`, `Aérea`, `Esquiva de Projétil`, `Agachamento`, `Acerta Agachamento`, `Imune a Agachamento`, `Imune a Knockdown`, `Ignora Bloqueio`, `Ignora Vigor`, `Ignora Armadura`, `Não pode ser esquivada`, `Defesa restrita`, `Área`, `Área N`, `Sustentado`, `Impacto Técnico`, `Impacto Dinâmico`, `Dano Agravado`.
+  - Base: `ModVel` + dano + movimento + bônus de hits (ou o campo `PC`). O dano entra uma vez, pelo modificador do 1º hit. Bônus de hits (vale o maior): hits fixos no `ModDano` (`"1/1"` +1, `"0/0/0"` +2); vantagem `Impacto Técnico` (hits = técnica, ex.: Repeating Fireball, Gekiro) +3; `Impacto Dinâmico` (hits = movimento, ex.: Hurricane Kick) +2; `Sustentado` (hits possíveis = Apresamento, ex.: Head Bite) +1. Essas três vantagens não somam o +1 comum. No `Impacto Dinâmico` o movimento não entra no PC (ele já gera os hits). Hits condicionais também contam (decisão do usuário).
+  - Movimento: sem movimento (`"Nenhum"`, `""`, `"-"` ou omitido) = -1; `"Um"` = 0; `"Dois"` = +1; `"Três"` = +2; números valem eles mesmos; `"+<Técnica>"` = +2 fixo (o PC da manobra nunca usa atributos ou técnicas da ficha); `"<Técnica>+N"` = N.
+  - Alcance: mesmo hex -1; adjacente 0; fixo (2, 3...) +1; um atributo ou técnica +2; atributo + técnica +3. Só conta se o `ModDano` for numérico (positivo ou negativo); com `ModDano` `"Nenhum"`, `"Especial"` ou omitido, o campo `Alcance` é desconsiderado (vale como omitido).
+  - Cada Vantagem +1 (`Área` e `"Área N"` valem 0, porque acertar vários alvos só ajuda contra capangas fracos, e nenhuma manobra ganha PC por isso; `Agachamento` vale 0, porque não apanha de Aérea mas também não a acerta); cada Desvantagem -1; técnica Apresamento ou Bloqueio +1 (se não tiver a vantagem `Ignora Bloqueio`); Chi e FdV subtraem; mínimo 1.
+  - Vantagens em uso: `Knockdown`, `Anti-Aérea` (KD só contra Aérea; no `Sistema` continua escrito "KD vs. Aérea"), `Aérea`, `Esquiva de Projétil`, `Agachamento`, `Acerta Agachamento`, `Imune a Agachamento`, `Imune a Knockdown`, `Anula ataque interrompido` (Forward Flip Knee: se interromper, o ataque do oponente é cancelado), `Ignora Bloqueio`, `Ignora Vigor`, `Ignora Armadura`, `Não pode ser esquivada`, `Defesa restrita`, `Área`, `Área N`, `Sustentado`, `Impacto Técnico`, `Impacto Dinâmico`, `Dano Agravado`.
   - Desvantagens em uso: `Não afeta Agachamento`, `Não afeta Aérea`, `Só interrompendo Aérea`, `Precisa interromper`, `Precisa entrar no hex do alvo`, `Exclusiva`, `Não ataca quem lançou o projétil`, `Requer concentração`, `Só contra alvo caído ou atordoado`, `Só após bloquear`, `Precisa sofrer um ataque antes`, `Dano só atordoa`, `Não pode fazer parte de Combo`, `2º hit condicional`, `Exige Satsui ativado`, entre outras. Bloqueios já são imunes a Knockdown por padrão (não use essa vantagem neles). Reaproveite um nome existente antes de criar outro (cada restrição vale -1).
   - Na ficha (`calcPC` em `scripts.js`): as 10 manobras de maior PC contam inteiras e as demais valem 1 cada. Entram as especiais e as básicas com a **melhor** arma do personagem (a que soma mais PC; ele usa uma arma por vez), como "Katana Fierce". `Berserk` custa 1 FdV.
 - Antes de editar, confira se a produção é igual ao `HEAD`:
@@ -117,13 +117,16 @@ Modelos: `double-hit-kick`, `brain-cracker`, `drunken-monkey-roll`. Linhas solta
 
 ## Listas cruzadas (posts publicados)
 
-Toda manobra nova entra nestes três lugares. Edite sempre com `wp_post_get` → Python com `open(..., newline="")` → `diff` → `wp_post_put`. **Esses posts são antigos e usam CRLF**; preserve também a indentação de cada item (ex.: `" \t<li>"` com espaço e tab).
+Toda manobra nova entra nos três primeiros lugares da tabela abaixo; a manobra Aérea entra também no quarto. Edite sempre com `wp_post_get` → Python com `open(..., newline="")` → `diff` → `wp_post_put`. **Esses posts são antigos e usam CRLF**; preserve também a indentação de cada item (ex.: `" \t<li>"` com espaço e tab).
 
 | Post | Onde | Formato do item |
 |---|---|---|
 | post da técnica (`esportes` ID 1387, `chute`, `soco`, `apresamento`, `foco`, `bloqueio`...) | lista "Manobras de <Técnica>", ordem alfabética | `<li><a href="https://www.sfrpg.com.br/post/<slug>">Nome</a>*</li>` |
 | `movimentos-comuns` (ID 293) | coluna da técnica na tabela, ordem alfabética; **só se os Pontos de Poder tiverem "Outros"**, com o custo de Outros | `<a href="https://www.sfrpg.com.br/post/<slug>">Nome</a> (N)*` |
 | post de **cada estilo** dos Pontos de Poder (ex.: `kung-fu` 368, `wu-shu` 412, `forcas-especiais` 377) | coluna da técnica na tabela de manobras do estilo, ordem alfabética, com o custo daquele estilo | `<a href="https://www.sfrpg.com.br/post/<slug>">Nome (N)</a>*` |
+| `manobra-aerea` (ID 855), **só se a manobra for Aérea** (o post dela diz que é Manobra Aérea, mesmo que só durante a execução) | "Lista de Manobras Aéreas", ordem alfabética | `<li><a href="/post/<slug>">Nome</a> * <sup><small>EP</small></sup></li>` |
+
+- **Manobras Aéreas:** a lista usa links relativos e ` *` (com espaço) para as não oficiais. `<sup><small>EP</small></sup>` vai só nas que **esquivam de projéteis**, e só quando o post da manobra diz isso explicitamente (esquivar não é regra geral das aéreas; vale o que está escrito na manobra). As que não esquivam ficam sem marcação. A legenda do EP já está no fim da lista. A manobra Aérea também recebe `"Aérea"` nas `Vantagens` em `manobras.js` (e `"Esquiva de Projétil"`, se esquivar).
 
 - `*` marca manobra **não oficial** (fan-made), conforme a nota "* OBS" desses posts. Manobra oficial da White Wolf entra sem `*`.
 - O custo de "Outros" vai **apenas** no Movimentos Comuns, nunca em post de estilo. Nos posts, ele aparece como "Outros N", "Outros Estilos N", "Qualquer N" ou "Qualquer Estilo N"; todos contam.

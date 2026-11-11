@@ -1,6 +1,6 @@
 ﻿function count(str, search) {
     if (!str || !search) return 0;
-    return (str.match(/search/g) || []).length;
+    return str.split(search).length - 1;//conta ocorrências do texto (antes usava /search/, que procurava a palavra "search")
 }
 
 //XP para atributos e técnicas (current x Y)
@@ -34,25 +34,33 @@ function getXP2(att) {
 
 function calcPC(char) {
     /**
-     * Físicos, Int e Rac = soma e desconta 15
-     * Técnicas = soma e desconta 8
+     * Físicos, Percepção, Int e Rac = soma
+     * Técnicas = soma (Elemental ou Cibernético substituem o Foco se forem maiores)
      * Manobras = PC de cada manobra especial e de cada manobra básica com arma (getPCManobra);
-     *            as 10 maiores contam inteiras (um combate tem 10 turnos) e as demais valem 1 cada
-     * Combos = soma os 'para', 'x2', 'x3' e os dizzy
-     * FdV e Chi = soma e desconta 7
-     * Saúde = desconta 10
-     * Pontos Bônus = soma 3 (assumindo que vai tudo pra atributo ou técnica)
+     *            só as 10 maiores contam (um combate tem 10 turnos); as demais são ignoradas
+     * Combos = soma os 'para', '2x', '3x' (vale 2) e os dizzy (maiúsculo ou minúsculo)
+     * FdV e Chi = soma
+     * Saúde = soma
      * */
 
-    //Físicos + 2 Mentais - 5 naturais - 7 Criação - 3 Bônus (gastando 15 pontos)
-    const attributes = [char.Forca, char.Destreza, char.Vigor, char.Inteligencia, char.Raciocinio];
-    const attrPC = attributes.reduce((a, b) => a + b) - 15;
+    const attributes = [char.Forca, char.Destreza, char.Vigor, char.Percepcao, char.Inteligencia, char.Raciocinio];
+    const attrPC = attributes.reduce((a, b) => a + (b || 0), 0);
 
-    const techniques = [char.Soco, char.Chute, char.Bloqueio, char.Apresamento, char.Esportes, char.Foco].map(t => t || 0);//técnica omitida na ficha vale 0
+    //Elemental e Cibernético substituem o Foco quando são maiores (não somam)
+    const nivelAntecedente = regex => Math.max(0, ...(char.Antecedentes || []).filter(an => regex.test(an.Nome)).map(an => Number(an.Valor) || 0));
+    const foco = Math.max(char.Foco || 0, nivelAntecedente(/^Elemental/i), nivelAntecedente(/^Cibernético/i));
+    //Híbrido Animal substitui Apresamento ou Esportes (o menor dos dois) quando é maior que ele
+    const hibrido = nivelAntecedente(/^Híbrido Animal/i);
+    let apresamento = char.Apresamento || 0, esportes = char.Esportes || 0;
+    if (hibrido > Math.min(apresamento, esportes)) {
+        if (apresamento <= esportes) apresamento = hibrido;
+        else esportes = hibrido;
+    }
+    const techniques = [char.Soco, char.Chute, char.Bloqueio, apresamento, esportes, foco].map(t => t || 0);//técnica omitida na ficha vale 0
     if (char.NovasTecnicas && char.NovasTecnicas.length)
         char.NovasTecnicas.map(nt => techniques.push(nt.Valor));
 
-    const techPC = techniques.reduce((a, b) => a + b) - 8;
+    const techPC = techniques.reduce((a, b) => a + (Number(b) || 0), 0);
 
     const manobrasEspeciais = char.ManobrasEspeciais.split(/[,;]/g).filter(m => m && m.trim()) || [];
 
@@ -60,18 +68,16 @@ function calcPC(char) {
     const pcManobras = manobrasEspeciais.map(m => getPCManobra(normalizarNomeManobra(m), char))
         .concat(manobrasComArmas.map(m => calculaPCManobra(m, char)))
         .sort((a, b) => b - a);
-    const manPC = pcManobras.reduce((total, pc, i) => total + (i < 10 ? pc : 1), 0);
-    const comboPC = count(char.Combos, " para ") + count(char.Combos, "(Dizzy)") + count(char.Combos, "2x") + (count(char.Combos, "3x") * 2);
-    const fdvChiPC = (char.ForcaVontade || 0) + (char.Chi || 0) - 7;
-    const saudePC = (char.Saude || 10) - 10;
-    const bonus = 3;
+    const manPC = pcManobras.reduce((total, pc, i) => total + (i < 10 ? pc : 0), 0);
+    const comboPC = count(char.Combos, " para ") + count((char.Combos || "").toLowerCase(), "(dizzy)") + count(char.Combos, "2x") + (count(char.Combos, "3x") * 2);
+    const fdvChiPC = (char.ForcaVontade || 0) + (char.Chi || 0);
+    const saudePC = char.Saude || 0;
 
-    //antecedentes únicos que impactam em combate
-    const backgrounds = /Hibrido Animal|Híbrido Animal|Cibernético|Elemental|Psycho Power|Satsui no Hadou|Sangue de Orochi|Paranormal/i;
-    const uniqueBacks = (char.Antecedentes || []).filter(an => backgrounds.test(an.Nome));
-    const backgroundPC = uniqueBacks.length ? uniqueBacks.map(an => Number(an.Valor) || 0).reduce((a, b) => a + b) : 0;
+    //só Satsui no Hadou e Sangue de Orochi somam (1 PC); Elemental, Cibernético e Híbrido Animal entram no lugar
+    //de técnicas (acima) e os demais antecedentes não contam
+    const backgroundPC = (char.Antecedentes || []).some(an => /Satsui no Hadou|Sangue de Orochi/i.test(an.Nome)) ? 1 : 0;
 
-    char.PC = attrPC + techPC + manPC + comboPC + fdvChiPC + saudePC + backgroundPC + bonus;
+    char.PC = attrPC + techPC + manPC + comboPC + fdvChiPC + saudePC + backgroundPC;
     return char;
 }
 

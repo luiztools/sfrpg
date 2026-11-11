@@ -5,12 +5,6 @@ function FeiLongSF4() {
     antecedentes[2] = newCaracteristica("Recursos", 4);
     antecedentes[3] = newCaracteristica("Staff", 4);
 
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Mangual", 2);
-
-    const armas = [];
-    armas[0] = "Nunchaku";
-
     const feiLong = {
         Nome: "Fei Long",
         Estilo: "Kung Fu",
@@ -51,8 +45,6 @@ function FeiLongSF4() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
-        NovasTecnicas: tecnicas,
-        Armas: armas,
         ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
         Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);",
         Gloria: 10,
@@ -72,12 +64,6 @@ function FeiLongSF2() {
     antecedentes[1] = newCaracteristica("Fama", 3);
     antecedentes[2] = newCaracteristica("Recursos", 4);
     antecedentes[3] = newCaracteristica("Staff", 3);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Mangual", 2);
-
-    const armas = [];
-    armas[0] = "Nunchaku";
 
     const feiLong = {
         Nome: "Fei Long",
@@ -119,8 +105,6 @@ function FeiLongSF2() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
-        NovasTecnicas: tecnicas,
-        Armas: armas,
         ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
         Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);",
         Gloria: 9,
@@ -140,12 +124,6 @@ function FeiLongZ3() {
     antecedentes[1] = newCaracteristica("Fama", 2);
     antecedentes[2] = newCaracteristica("Recursos", 3);
     antecedentes[3] = newCaracteristica("Staff", 2);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Mangual", 1);
-
-    const armas = [];
-    armas[0] = "Nunchaku";
 
     const feiLong = {
         Nome: "Fei Long",
@@ -187,8 +165,6 @@ function FeiLongZ3() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
-        NovasTecnicas: tecnicas,
-        Armas: armas,
         ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
         Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);",
         Gloria: 9,
