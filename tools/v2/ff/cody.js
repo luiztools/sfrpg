@@ -223,7 +223,7 @@ function CodySF5() {
 }
 
 let npc;
-if (getParameterByName('age') === 'sf5')
+if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = CodySF5();
 else if (getParameterByName('age') === 'sfa')
     npc = CodyZ3();

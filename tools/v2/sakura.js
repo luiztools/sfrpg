@@ -189,7 +189,7 @@ function SakuraSF5() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = SakuraSFZ3();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = SakuraSF5();
 else
     npc = SakuraSF4();

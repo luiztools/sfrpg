@@ -198,7 +198,7 @@ function BalrogSF5() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = BalrogZ3();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = BalrogSF5();
 else
     npc = BalrogSF2();

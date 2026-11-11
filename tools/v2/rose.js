@@ -201,7 +201,7 @@ function RoseZ3() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = RoseZ3();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = RoseSF5();
 else
     npc = RoseSF4();

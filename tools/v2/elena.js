@@ -119,7 +119,7 @@ function ElenaSF5() {
 }
 
 let npc;
-if (getParameterByName('age') === 'sf5')
+if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = ElenaSF5();
 else
     npc = ElenaSF4();

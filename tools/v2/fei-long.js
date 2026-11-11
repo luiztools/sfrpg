@@ -1,63 +1,3 @@
-function FeiLongSF4() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Arena", 4);
-    antecedentes[1] = newCaracteristica("Fama", 4);
-    antecedentes[2] = newCaracteristica("Recursos", 4);
-    antecedentes[3] = newCaracteristica("Staff", 4);
-
-    const feiLong = {
-        Nome: "Fei Long",
-        Estilo: "Kung Fu",
-        Escola: "Templo de Hong Kong",
-        Jogador: "NPC",
-        Assinatura: "Grita e tensiona os músculos",
-        Conceito: "Astro de Cinema",
-        Cronica: "Street Fighter 4",
-        Forca: 5,
-        Destreza: 6,
-        Vigor: 5,
-        Carisma: 5,
-        Manipulacao: 3,
-        Aparencia: 5,
-        Percepcao: 4,
-        Inteligencia: 4,
-        Raciocinio: 5,
-        Prontidao: 5,
-        Intimidacao: 3,
-        Perspicacia: 5,
-        Manha: 4,
-        Labia: 3,
-        LutaCega: 5,
-        Conducao: 3,
-        Lideranca: 2,
-        Furtividade: 5,
-        Sobrevivencia: 3,
-        Arena: 4,
-        Computador: 1,
-        Investigacao: 3,
-        Medicina: 4,
-        Misterios: 4,
-        Estilos: 5,
-        Antecedentes: antecedentes,
-        Soco: 5,
-        Chute: 6,
-        Bloqueio: 6,
-        Apresamento: 4,
-        Esportes: 5,
-        Foco: 4,
-        ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
-        Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);",
-        Gloria: 10,
-        Honra: 8,
-        Chi: 10,
-        ForcaVontade: 9,
-        Saude: 20,
-        Divisao: "Tradicional",
-        Posto: 10
-    };
-    return feiLong;
-}
-
 function FeiLongSF2() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Arena", 3);
@@ -181,8 +121,6 @@ function FeiLongZ3() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = FeiLongZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = FeiLongSF4();
 else
     npc = FeiLongSF2();
 npc = calcPC(npc);

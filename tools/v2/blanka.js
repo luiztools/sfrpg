@@ -124,7 +124,7 @@ function BlankaSF2() {
     return blanka;
 }
 
-function BlankaSF4() {
+function BlankaSF5() {
     var antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 3);
     antecedentes[1] = newCaracteristica("Mascote", 5);
@@ -141,7 +141,7 @@ function BlankaSF4() {
         Jogador: "NPC",
         Assinatura: "Rugir",
         Conceito: "Mutante",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -187,7 +187,7 @@ function BlankaSF4() {
     return blanka;
 }
 
-function BlankaSF5() {
+function BlankaSF6() {
     var antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 3);
     antecedentes[1] = newCaracteristica("Mascote", 5);
@@ -204,7 +204,7 @@ function BlankaSF5() {
         Jogador: "NPC",
         Assinatura: "Rugir",
         Conceito: "Mutante",
-        Cronica: "Street Fighter 5",
+        Cronica: "Street Fighter 6",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -253,9 +253,9 @@ function BlankaSF5() {
 var npc;
 if (getParameterByName('age') === 'sfa')
     npc = BlankaZ3();
-else if (getParameterByName('age') === 'sf4')
-    npc = BlankaSF4();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf6')
+    npc = BlankaSF6();
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = BlankaSF5();
 else
     npc = BlankaSF2();

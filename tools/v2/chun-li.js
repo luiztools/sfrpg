@@ -273,7 +273,7 @@ function ChunLiZ3() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = ChunLiZ3();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = ChunLiSF5();
 else if (getParameterByName('age') === 'sf6')
     npc = ChunLiSF6();

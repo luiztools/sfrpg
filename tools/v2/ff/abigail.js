@@ -115,7 +115,7 @@ function AbigailFF1() {
 }
 
 let npc;
-if (getParameterByName('age') === 'sf5')
+if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = calcPC(AbigailSF5());
 else
     npc = calcPC(AbigailFF1());

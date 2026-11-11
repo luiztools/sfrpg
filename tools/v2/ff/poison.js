@@ -241,7 +241,7 @@ function PoisonFF() {
 var npc;
 if (getParameterByName('age') === 'ff')
     npc = PoisonFF();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = PoisonSF5();
 else
     npc = PoisonSF4();

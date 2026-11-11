@@ -252,7 +252,7 @@ function RyuSF6() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = RyuSFZ3();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = RyuSF5();
 else if (getParameterByName('age') === 'sf6')
     npc = RyuSF6();

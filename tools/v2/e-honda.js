@@ -249,7 +249,7 @@ function EHondaSF6() {
 var npc;
 if (getParameterByName('age') === 'sfa')
     npc = EHondaZ3();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = EHondaSF5();
 else if (getParameterByName('age') === 'sf6')
     npc = EHondaSF6();

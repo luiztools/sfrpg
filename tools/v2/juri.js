@@ -124,7 +124,7 @@ function JuriSF4() {
 }
 
 var npc;
-if (getParameterByName('age') === 'sf4')
+if (getParameterByName('age') === 'sf4' || getParameterByName('age') === 'sf2')
     npc = JuriSF4();
 else
     npc = JuriSF5();

@@ -105,7 +105,7 @@ function AkumaSF2() {
     return akuma;
 }
 
-function AkumaSF4() {
+function AkumaSF5() {
     var antecedentes = [];
     antecedentes[0] = newCaracteristica("Fama", 4);
     antecedentes[1] = newCaracteristica("Satsui no Hadou", 7);
@@ -116,7 +116,7 @@ function AkumaSF4() {
         Jogador: "NPC",
         Assinatura: "Explosão de Energia",
         Conceito: "Demônio",
-        Cronica: "Street Fighter 4",
+        Cronica: "Street Fighter 5",
         Forca: 7,
         Destreza: 7,
         Vigor: 7,
@@ -159,7 +159,7 @@ function AkumaSF4() {
     return akuma;
 }
 
-function AkumaSF3() {
+function AkumaSF6() {
     var antecedentes = [];
     antecedentes[0] = newCaracteristica("Fama", 4);
     antecedentes[1] = newCaracteristica("Satsui no Hadou", 7);
@@ -170,7 +170,7 @@ function AkumaSF3() {
         Jogador: "NPC",
         Assinatura: "Morte!",
         Conceito: "Lutador demoníaco",
-        Cronica: "Street Fighter 3",
+        Cronica: "Street Fighter 6",
         Forca: 7,
         Destreza: 7,
         Vigor: 7,
@@ -216,10 +216,10 @@ function AkumaSF3() {
 var npc;
 if (getParameterByName('age') === 'sfa')
     npc = AkumaZ3();
-else if (getParameterByName('age') === 'sf2')
-    npc = AkumaSF2();
-else if (getParameterByName('age') === 'sf3')
-    npc = AkumaSF3();
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
+    npc = AkumaSF5();
+else if (getParameterByName('age') === 'sf6')
+    npc = AkumaSF6();
 else
-    npc = AkumaSF4();
+    npc = AkumaSF2();
 npc = calcPC(npc);

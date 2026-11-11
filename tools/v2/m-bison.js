@@ -265,9 +265,9 @@ function MBisonSFZ3() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = MBisonSFZ3();
-else if (getParameterByName('age') === 'sf2')
+else if (getParameterByName('age') === 'sf2' || getParameterByName('age') === 'sf4')
     npc = MBisonSF2();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = MBisonSF5();
 else
     npc = MBisonSF6();

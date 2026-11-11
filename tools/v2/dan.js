@@ -197,7 +197,7 @@ function DanZ3() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = DanZ3();
-else if (getParameterByName('age') === 'sf4')
+else if (getParameterByName('age') === 'sf4' || getParameterByName('age') === 'sf2')
     npc = DanSF4();
 else
     npc = DanSF5();

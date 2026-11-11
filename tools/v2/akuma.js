@@ -241,9 +241,9 @@ function AkumaSF6() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = AkumaZ3();
-else if (getParameterByName('age') === 'sf2')
+else if (getParameterByName('age') === 'sf2' || getParameterByName('age') === 'sf4')
     npc = AkumaSF2();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = AkumaSF5();
 else
     npc = AkumaSF6();

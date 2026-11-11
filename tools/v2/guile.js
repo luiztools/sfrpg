@@ -270,7 +270,7 @@ function GuileSF6() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = GuileSFZ3();
-else if (getParameterByName('age') === 'sf2')
+else if (getParameterByName('age') === 'sf2' || getParameterByName('age') === 'sf4')
     npc = GuileSF2();
 else if (getParameterByName('age') === 'sf6')
     npc = GuileSF6();

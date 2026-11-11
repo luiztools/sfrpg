@@ -127,7 +127,7 @@ function LukeSF5() {
 }
 
 let npc;
-if (getParameterByName('age') === 'sf5')
+if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = LukeSF5();
 else
     npc = LukeSF6();

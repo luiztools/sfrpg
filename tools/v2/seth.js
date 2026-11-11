@@ -124,7 +124,7 @@ function SethSF5() {
 }
 
 let npc;
-if (getParameterByName('age') === 'sf5')
+if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = SethSF5();
 else
     npc = SethSF4();

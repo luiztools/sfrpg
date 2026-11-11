@@ -243,7 +243,7 @@ if (getParameterByName('age') === 'sfa')
     npc = DhalsimSFZ3();
 else if (getParameterByName('age') === 'sf6')
     npc = DhalsimSF6();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = DhalsimSF5();
 else
     npc = DhalsimSF2();

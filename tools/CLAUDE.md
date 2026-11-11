@@ -51,6 +51,7 @@ npc = calcPC(npc);
 
 - Campos sem acento (`Forca`, `Manipulacao`, `Raciocinio`...). Opcionais: `NovasTecnicas`, `NovosTalentos`, `NovasPericias`, `NovosConhecimentos` (arrays de `newCaracteristica`) e `Armas` (array de nomes de `armas`).
 - Valores comuns de `age`: `sf1`, `sf2` (padrão), `sfa`, `sf4`, `sf5`, `sf6`, `mk2`, `mk3`, `mk4`, `mkx`.
+- `sf3` é sinônimo de `sf5` e `sf4` é sinônimo de `sf2`: a ficha com versão SF5 testa `=== 'sf5' || === 'sf3'`, a com versão SF2 explícita testa `=== 'sf2' || === 'sf4'` (sem SF2, uma versão SF4 testa `=== 'sf4' || === 'sf2'`). Nenhum personagem tem versões SF3 e SF5, ou SF2 e SF4, separadas. O PC das versões cresce na ordem dos jogos: SF1/Alpha (`sfa`) < SF2/SF4 < SF5/SF3 < SF6 (exceção: M. Bison é mais forte na Alpha).
 - Antecedentes "únicos" (Elemental, Híbrido Animal, Tarkatan, Satsui no Hadou, Psycho Power...) afetam manobras; ver lista em `prepareNpc` em [manobras.js](manobras.js).
 - Muitas fichas antigas (principalmente em `v2/rpg/` e `v2/mma/`) ainda são `.html` autocontidas. O caminho atual é migrar para `.js` no formato acima (remover o `.html` e criar o `.js` equivalente).
 

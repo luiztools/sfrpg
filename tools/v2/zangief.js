@@ -236,7 +236,7 @@ function ZangiefSF6() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = ZangiefSFZ3();
-else if (getParameterByName('age') === 'sf5')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = ZangiefSF5();
 else if (getParameterByName('age') === 'sf6')
     npc = ZangiefSF6();

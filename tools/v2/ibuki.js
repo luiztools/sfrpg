@@ -151,7 +151,7 @@ function IbukiSF4() {
 }
 
 var npc;
-if (getParameterByName('age') === 'sf5')
+if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = IbukiSF5();
 else
     npc = IbukiSF4();

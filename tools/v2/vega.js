@@ -228,7 +228,7 @@ function VegaSFZ3() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = VegaSFZ3();
-else if (getParameterByName('age') === 'sf2')
+else if (getParameterByName('age') === 'sf2' || getParameterByName('age') === 'sf4')
     npc = VegaSF2();
 else
     npc = VegaSF5();
