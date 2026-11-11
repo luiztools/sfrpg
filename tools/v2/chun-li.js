@@ -8,9 +8,6 @@ function ChunLiSF6() {
     antecedentes[5] = newCaracteristica("Recursos", 3);
     antecedentes[6] = newCaracteristica("Sensei", 3);
 
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Pistola", 2);
-
     const novosTalentos = [];
     novosTalentos[0] = newCaracteristica("Instrução", 2);
 
@@ -58,7 +55,6 @@ function ChunLiSF6() {
         Apresamento: 4,
         Esportes: 7,
         Foco: 5,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Backflip Kick, Forward Flip Knee, Lightning Leg, Whirlwind Kick, Throw, Air Throw, Flying Heel Stomp, Jump, Wall Spring, Fireball, Balance, Ax Kick, Gekiro, Energy Ball",
         Combos: "Strong para Fierce (Dizzy); Fireball para Jump + Roundhouse para Strong; Jump + Forward para Lightning Leg (Dizzy); Lightning Leg para Lightning Leg (Dizzy);",
         Gloria: 10,
@@ -81,9 +77,6 @@ function ChunLiSF5() {
     antecedentes[4] = newCaracteristica("Empresario", 3);
     antecedentes[5] = newCaracteristica("Recursos", 3);
     antecedentes[6] = newCaracteristica("Sensei", 3);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Pistola", 2);
 
     const novosTalentos = [];
     novosTalentos[0] = newCaracteristica("Instrução", 2);
@@ -132,7 +125,6 @@ function ChunLiSF5() {
         Apresamento: 4,
         Esportes: 6,
         Foco: 5,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Backflip Kick, Forward Flip Knee, Lightning Leg, Whirlwind Kick, Throw, Air Throw, Flying Heel Stomp, Jump, Wall Spring, Fireball, Balance, Ax Kick, Gekiro, Energy Ball",
         Combos: "Strong para Fierce (Dizzy); Fireball para Jump + Roundhouse para Strong; Jump + Forward para Lightning Leg (Dizzy); Lightning Leg para Lightning Leg (Dizzy);",
         Gloria: 9,
@@ -155,9 +147,6 @@ function ChunLiSF2() {
     antecedentes[4] = newCaracteristica("Empresario", 3);
     antecedentes[5] = newCaracteristica("Recursos", 3);
     antecedentes[6] = newCaracteristica("Sensei", 3);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Pistola", 2);
 
     const chunLi = {
         Nome: "Chun Li",
@@ -202,7 +191,6 @@ function ChunLiSF2() {
         Apresamento: 4,
         Esportes: 6,
         Foco: 4,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Backflip Kick, Forward Flip Knee, Lightning Leg, Whirlwind Kick, Throw, Air Throw, Flying Heel Stomp, Jump, Wall Spring, Fireball",
         Combos: "Strong para Fierce (Dizzy); Fireball para Jump + Roundhouse para Strong; Jump + Forward para Lightning Leg (Dizzy);",
         Gloria: 8,
@@ -225,9 +213,6 @@ function ChunLiZ3() {
     antecedentes[4] = newCaracteristica("Empresario", 3);
     antecedentes[5] = newCaracteristica("Recursos", 2);
     antecedentes[6] = newCaracteristica("Sensei", 3);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Pistola", 1);
 
     const chunLi = {
         Nome: "Chun Li",
@@ -272,7 +257,6 @@ function ChunLiZ3() {
         Apresamento: 3,
         Esportes: 5,
         Foco: 3,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Backflip Kick, Forward Flip Knee, Lightning Leg, Whirlwind Kick, Throw, Air Throw, Flying Heel Stomp, Jump, Wall Spring, Fireball",
         Combos: "Strong para Fierce (Dizzy); Fireball para Jump + Roundhouse para Strong; Jump + Forward para Lightning Leg (Dizzy);",
         Gloria: 7,

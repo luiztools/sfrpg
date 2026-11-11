@@ -9,9 +9,6 @@ function GuileSFZ3() {
     antecedentes[6] = newCaracteristica("Staff", 2);
     antecedentes[7] = newCaracteristica("Sensei", 3);
 
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
-
     const guile = {
         Nome: "Guile",
         Estilo: "Forças Especiais",
@@ -54,7 +51,6 @@ function GuileSFZ3() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 4,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
         Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom;",
         Gloria: 7,
@@ -77,9 +73,6 @@ function GuileSF2() {
     antecedentes[4] = newCaracteristica("Fama", 2);
     antecedentes[5] = newCaracteristica("Recursos", 3);
     antecedentes[6] = newCaracteristica("Staff", 3);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
     const guile = {
         Nome: "Guile",
@@ -123,7 +116,6 @@ function GuileSF2() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 5,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup",
         Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep;",
         Gloria: 8,
@@ -146,9 +138,6 @@ function GuileSF5() {
     antecedentes[4] = newCaracteristica("Fama", 3);
     antecedentes[5] = newCaracteristica("Recursos", 3);
     antecedentes[6] = newCaracteristica("Staff", 4);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 2);
@@ -196,7 +185,6 @@ function GuileSF5() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 5,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup, Suplex, Air Suplex, Energy Ball, Sonic Hurricane",
         Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep; Energy Ball para Sonic Boom (Dizzy);",
         Gloria: 9,
@@ -219,9 +207,6 @@ function GuileSF6() {
     antecedentes[4] = newCaracteristica("Fama", 4);
     antecedentes[5] = newCaracteristica("Recursos", 3);
     antecedentes[6] = newCaracteristica("Staff", 5);
-
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 3);
@@ -269,7 +254,6 @@ function GuileSF6() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 6,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Spinning Back Fist, Flash Kick, Flying Knee Thrust, Foot Sweep, Spinning Foot Sweep, Air Throw, Throw, Jump, Sonic Boom, Kippup, Suplex, Air Suplex, Energy Ball, Sonic Hurricane",
         Combos: "Flying Knee Thrust para Spinning Back Fist (Dizzy); Jump + Short para Strong para Flash Kick (Dizzy); Sonic Boom para Jump + Fierce para Sonic Boom; Jump + Forward para Spinning Foot Sweep; Energy Ball para Sonic Boom (Dizzy);",
         Gloria: 10,

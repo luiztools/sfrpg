@@ -69,8 +69,6 @@ function CammySF2() {
     antecedentes[2] = newCaracteristica("Apoio", 5);
     antecedentes[3] = newCaracteristica("Contatos", 4);
     antecedentes[4] = newCaracteristica("Recursos", 3);
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
     const cammy = {
         Nome: "Cammy",
         Estilo: "Forças Especiais",
@@ -113,7 +111,6 @@ function CammySF2() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 2,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill",
         Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);",
         Gloria: 8,
@@ -134,8 +131,6 @@ function CammySF5() {
     antecedentes[2] = newCaracteristica("Apoio", 5);
     antecedentes[3] = newCaracteristica("Contatos", 4);
     antecedentes[4] = newCaracteristica("Recursos", 3);
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
     const cammy = {
         Nome: "Cammy",
         Estilo: "Forças Especiais",
@@ -178,7 +173,6 @@ function CammySF5() {
         Apresamento: 5,
         Esportes: 5,
         Foco: 2,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill, Choke Throw, Dive Kick",
         Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);",
         Gloria: 9,
@@ -199,8 +193,6 @@ function CammySF6() {
     antecedentes[2] = newCaracteristica("Apoio", 5);
     antecedentes[3] = newCaracteristica("Contatos", 5);
     antecedentes[4] = newCaracteristica("Recursos", 3);
-    const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Armas de Fogo", 3);
     const cammy = {
         Nome: "Cammy",
         Estilo: "Forças Especiais",
@@ -243,7 +235,6 @@ function CammySF6() {
         Apresamento: 5,
         Esportes: 6,
         Foco: 2,
-        NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill, Choke Throw, Dive Kick",
         Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);",
         Gloria: 10,

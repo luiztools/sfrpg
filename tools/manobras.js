@@ -154,10 +154,10 @@ const manobras = {
 	"Parry": { Tecnica: "Bloqueio", ModVel: 2, Sistema: "Usuário rola DES + BLOCK contra a Técnica da manobra do adversário; se bem-sucedido, evita todo o dano do ataque, adicionando também +1 Velocidade no próximo turno para cada sucesso a mais que tiver obtido (ao invés do +2 do Bloqueio comum); se falhar, recebe todo o dano do ataque; contra projétil, o Narrador pode pedir primeiro um teste de Raciocínio como no Energy Reflection; manobras mais poderosas - com custo em Força de Vontade – podem pedir mais de um sucesso para o Parry ser bem-sucedido; contra Manobras de Múltiplo Impacto, um teste deve ser feito a cada novo rolamento, a não ser por aquelas em que é preciso causar dano para empurrar e seguir batendo, nas quais o Parry as cancela imediatamente se o atacante for impedido de seguir se movendo; Parry bem-sucedido causa o dano do Maka Wara" },
 
 	//apresamento
-	"Air Suplex": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: 0, Vantagens: ["Knockdown", "Aérea"], Desvantagens: ["Ataque Condicional"], Sistema: "Precisa interromper uma Aérea do oponente; KD; Atacante e alvo terminam no hex da interrupção; Aérea" },
-	"Air Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback", "Move Depois"], Desvantagens: ["Ataque Condicional"], Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; atacante termina seu movimento após o ataque; Aérea" },
-	"Air Baton Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback"], Desvantagens: ["Ataque Condicional"], Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; Aérea" },
-	"Arm Wrist Lock": { Tecnica: "Apresamento", ModVel: 0, ModDano: 0, ModMov: "Dois", Vantagens: ["Knockdown", "Sustentado"], Desvantagens: ["Ataque Condicional"], Sistema: "Sustentado. KD. Somente pode ser usado no turno após bloquear soco ou chute e interrompendo o oponente." },
+	"Air Suplex": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: 0, Vantagens: ["Knockdown", "Aérea"], Desvantagens: ["Condição Rara"], Sistema: "Precisa interromper uma Aérea do oponente; KD; Atacante e alvo terminam no hex da interrupção; Aérea" },
+	"Air Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback", "Move Depois"], Desvantagens: ["Condição Rara"], Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; atacante termina seu movimento após o ataque; Aérea" },
+	"Air Baton Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback"], Desvantagens: ["Condição Rara"], Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; Aérea" },
+	"Arm Wrist Lock": { Tecnica: "Apresamento", ModVel: 0, ModDano: 0, ModMov: "Dois", Vantagens: ["Knockdown", "Sustentado"], Desvantagens: ["Condição Rara"], Sistema: "Sustentado. KD. Somente pode ser usado no turno após bloquear soco ou chute e interrompendo o oponente." },
 	"Back Breaker": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Knockdown"], Sistema: "KD" },
 	"Argentine Back Breaker": { Tecnica: "Apresamento", ModVel: 0, ModDano: "2/0", ModMov: "Dois", FdV: 1, Vantagens: ["Knockdown", "Knockback"], Sistema: "Dois hits; Joga o oponente para cima, apara-o no ombro e depois o arremessa no chão a no máximo 3 hex; KD" },
 	"Dark Spark": { Tecnica: "Apresamento", ModVel: -2, ModDano: "0/3", ModMov: "Nenhum", Chi: 1, Desvantagens: ["Ataque Condicional"], Sistema: "Dois hits; Prende o alvo com o garrote e o eletrifica: dois testes de dano em sequência, o 1º com Força + Apresamento e o 2º com Inteligência + Cibernético +3; se o 1º não causar dano, o 2º não é rolado; aplica os modificadores de VEL e DAN do Garrote (no 1º dano)" },
@@ -169,7 +169,7 @@ const manobras = {
 	"Choke Throw": { Tecnica: "Apresamento", ModVel: -1, ModDano: 2, ModMov: 0, Vantagens: ["Knockdown"], Sistema: "Pode interromper oponente em pé ou em Aérea; atacante e alvo terminam no mesmo hex; KD" },
 	"Block And Grab": { Tecnica: "Apresamento", ModVel: 3, ModDano: 2, ModMov: "Um", FdV: 1, Vantagens: ["Knockdown"], Sistema: "Bloqueio normal (adiciona Bloqueio na ABS e evita KD); após sofrer o dano, se não ficar Dizzy, agarra o membro do oponente e pode seguir com Throw usando estes modificadores (só então gasta FdV e aplica o dano); só contra Soco e Chute; Esportes e Foco são bloqueados mas não contra-atacados; Apresamento não é bloqueado; não funciona contra manobras agachadas" },
 	"Clinch": { Tecnica: "Apresamento", ModVel: 2, ModDano: 0, ModMov: "Um", Vantagens: ["Anula Ataque"], Sistema: "Não causa dano real, apenas anula manobra do oponente se agarrar. +1 Vel em apresamentos no próximo turno." },
-	"Daikyou Burning": { Tecnica: "Soco", ModVel: 0, ModDano: -1, ModMov: "Um/-2", FdV: 2, Vantagens: ["Knockdown", "Impacto Dinâmico"], Desvantagens: ["Ataque Condicional"], Sistema: "Só contra vítima em Knockdown ou Atordoada; entra no hex da vítima e a arrasta com o 2º modificador de Movimento; rola o dano a cada hex arrastado; dano calculado com Soco (punhos ou arma); KD no final" },
+	"Daikyou Burning": { Tecnica: "Soco", ModVel: 0, ModDano: -1, ModMov: "Um/-2", FdV: 2, Vantagens: ["Knockdown", "Impacto Dinâmico"], Desvantagens: ["Condição Rara"], Sistema: "Só contra vítima em Knockdown ou Atordoada; entra no hex da vítima e a arrasta com o 2º modificador de Movimento; rola o dano a cada hex arrastado; dano calculado com Soco (punhos ou arma); KD no final" },
 	"Disengage": { Tecnica: "Apresamento", ModVel: 1, ModMov: -2, Sistema: "Jogado quando estiver preso em Sustentado; o lutador pode fazer um 2º teste para sair do apresamento (Destreza vs. Força do atacante)" },
 	"Dislocate Limb": { Tecnica: "Apresamento", ModVel: -1, ModDano: 1, ModMov: 1, Sistema: "O alvo tem -3 VEL para todas as Manobras; Socos do alvo tem também -2 no DAN. Alvo pode recolocar o braço no lugar, perdendo um turno." },
 	"Displacement": { Tecnica: "Soco", ModVel: 2, ModDano: -1, ModMov: 1, FdV: 1, Desvantagens: ["Ataque Condicional"], Sistema: "Precisa interromper um ataque; o lutador move-se para um dos lados esquivando do ataque e deve mover-se para o alvo à alcance de seu contra-soco" },
@@ -189,7 +189,7 @@ const manobras = {
 	"Power Bomb": { Tecnica: "Apresamento", ModVel: 0, ModDano: 6, ModMov: "Um", FdV: 1, Vantagens: ["Knockdown"], Sistema: "KD, vítima quica a até 2 hex de distância; o atacante escolhe a direção" },
 	"Neck Choke": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Sustentado"], Sistema: "Sustentado" },
 	"Pile Driver": { Tecnica: "Apresamento", ModVel: -2, ModDano: 4, ModMov: "Um", Vantagens: ["Knockdown"], Sistema: "KD" },
-	"Pin": { Tecnica: "Apresamento", ModVel: -1, ModDano: 2, ModMov: 1, FdV: 1, Vantagens: ["Knockdown", "Sustentado"], Desvantagens: ["Ataque Condicional"], Sistema: "Sustentado; o alvo precisa estar KD ou Dizzy; turnos subsequentes DAN +0 e MOV Zero; o atacante ganha +3 FOR para sustentar mas precisa causar 2 dano ao invés de 1" },
+	"Pin": { Tecnica: "Apresamento", ModVel: -1, ModDano: 2, ModMov: 1, FdV: 1, Vantagens: ["Knockdown", "Sustentado"], Desvantagens: ["Condição Rara"], Sistema: "Sustentado; o alvo precisa estar KD ou Dizzy; turnos subsequentes DAN +0 e MOV Zero; o atacante ganha +3 FOR para sustentar mas precisa causar 2 dano ao invés de 1" },
 	"Push Body": { Tecnica: "Apresamento", ModVel: 1, ModMov: "Um", Vantagens: ["Knockdown", "Knockback"], Sistema: "arremessa FOR + APR hexes e causa KD" },
 	"Ripping Bite": { Tecnica: "Híbrido Animal", ModVel: -1, ModDano: 1, ModMov: "Um", FdV: 1, Sistema: "Alvo tem -1 FOR e DES pelo resto do combate; pode ser usado várias vezes no mesmo alvo" },
 	"Sean Tackle": { Tecnica: "Apresamento", ModVel: 1, ModDano: 3, ModMov: 2, FdV: 2, Vantagens: ["Knockdown", "Knockback"], Sistema: "KD e empurra um hex para trás" },
@@ -243,7 +243,7 @@ const manobras = {
 	"Hyper Tackle": { Tecnica: "Esportes", ModVel: -1, ModDano: 4, ModMov: 1, FdV: 1, Vantagens: ["Knockdown"], Desvantagens: ["Mesmo Hex"], Sistema: "Linha reta. Tem de entrar no hex. Acerta todos até o fim do movimento. -1 Mov por cada impacto. KD. Crítico cancela." },
 	"Spin": { Tecnica: "Esportes", ModVel: 1, ModDano: "-1/-1/-1", ModMov: "Nenhum", Chi: 1, FdV: 1, Vantagens: ["Knockdown"], Sistema: "Causa KD; até Três hits;" },
 	"Elemental Explosion": { Tecnica: "Esportes", ModVel: 0, ModDano: "-1/-1", ModMov: -2, Chi: 1, Vantagens: ["Knockdown"], Sistema: "Dois hits; Acerta duas vezes: o 1º com o corpo (Força + Esportes - 1) e o 2º com a energia (Inteligência + Foco - 1); KD se o 2º acerto causar dano; pode ser usada sem gastar Chi, mas causa apenas o 1º acerto" },
-	"Shishiruirui": { Tecnica: "Esportes", ModVel: -1, ModDano: -1, ModMov: -1, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback"], Desvantagens: ["Ataque Condicional"], Sistema: "Aérea e tem de interromper aérea; Bate e empurra em linha reta; Causa KD no final" },
+	"Shishiruirui": { Tecnica: "Esportes", ModVel: -1, ModDano: -1, ModMov: -1, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback"], Desvantagens: ["Condição Rara"], Sistema: "Aérea e tem de interromper aérea; Bate e empurra em linha reta; Causa KD no final" },
 	"Empty Step": { Tecnica: "Esportes", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "Passiva. Lutador pode atravessar hexes ocupados ou parcialmente bloqueados durante seu movimento." },
 
 	//Foco
@@ -299,7 +299,7 @@ const manobras = {
 	"Flight": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, PC: 1, Desvantagens: ["Concentração"], Sistema: "Requer 1 turno de concentração, no qual o lutador só poderá bloquear; nos turnos seguintes o lutador estará flutuando, todas as manobras terão +1 VEL and MOV = Vigor, só pode ser atingido por Manobras Aérea e ataques de projétil; fora de combate, custa 1 chi/hora de vôo de (Foco + Destreza) x 10 milhas p/ hora" },
 	"Heal": { Tecnica: "Foco", ModVel: -1, ModMov: -1, Chi: 1, Sistema: "O usuário pode curar-se ou a alguém no mesmo hex a 1 Chi por Saúde; também pode purificar um elemento por 1 Chi/5 cm³" },
 	"Heat Wave": { Tecnica: "Foco", ModVel: 0, ModDano: 2, ModMov: 0, Chi: 1, Alcance: "Raciocínio+Foco", Vantagens: ["Ignora Bloqueio"], Desvantagens: ["Dano Dizzy"], Sistema: "Ignora bloqueio; pode ser esquivado como um projétil; dano conta somente para atordoar" },
-	"Leech": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", Chi: 1, Desvantagens: ["Ataque Condicional"], Sistema: "Atacante deve prender o alvo em um Sustentado antes; atacante pode passar 1 Saúde do alvo para si por ponto de Chi gasto, máximo de (Foco) pontos por turno; atacante não pode ter mais Saúde que o máximo" },
+	"Leech": { Tecnica: "Foco", ModVel: 0, ModDano: "Especial", Chi: 1, Desvantagens: ["Condição Rara"], Sistema: "Atacante deve prender o alvo em um Sustentado antes; atacante pode passar 1 Saúde do alvo para si por ponto de Chi gasto, máximo de (Foco) pontos por turno; atacante não pode ter mais Saúde que o máximo" },
 	"Lightness": { Tecnica: "Foco", ModVel: 1, ModDano: "Nenhum", ModMov: 1, Alcance: "Raciocínio+Foco", Chi: 1, Sistema: "Pode ser usado no elemental ou outro alvo; o alvo ganha +2 VEL e +3 MOV para todas as manobras acrescidas por Jump; dura (Foco) turnos" },
 	"Pit": { Tecnica: "Foco", ModVel: -1, ModDano: 1, ModMov: -1, Chi: 1, Alcance: "Raciocínio+Foco", Desvantagens: ["Ataque Condicional"], Sistema: "Cria no hex alvo um buraco com (5 + Foco) pés de profundidade; lutadores no buraco sofrem o dano pela queda no fim do turno e devem gastar o próximo turno subindo (Movimento com -4 VEL); o atacante precisa estar em contato com a terra; buracos são permanentes após criados; -1 Glória se usado em arena" },
 	"Pool": { Tecnica: "Foco", ModVel: 1, ModMov: -2, Sistema: "Adquire imunidade a ataques físicos e a habilidade de escoar por frestas, etc.; alguns ataques de Foco podem afetar o lutador (Narrador decide)" },
@@ -368,7 +368,7 @@ const manobras = {
 	"Deflecting Weapon": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Mangual", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
 	"Triple Blow": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
 	"Double Hit Blow": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "1/1", ModMov: -1, Desvantagens: ["Ataque Condicional"], Sistema: "Dois hits a menos que o alvo esteja em Aérea ou Agachamento" },
-	"Scuba Slash": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Vantagens: ["Knockdown"], Desvantagens: ["Ataque Condicional"], Sistema: "Corte de faca; exige equipamento de mergulho. Dano contra Destreza do alvo em vez do Vigor. Se acertar, teste resistido de DES contra DES: se vencer, KD e o cilindro de propulsão ou outro equipamento de mergulho do alvo fica arruinado." },
+	"Scuba Slash": { Tecnica: "Faca", ModVel: 2, ModDano: 1, ModMov: 0, Vantagens: ["Knockdown"], Desvantagens: ["Condição Rara"], Sistema: "Corte de faca; exige equipamento de mergulho. Dano contra Destreza do alvo em vez do Vigor. Se acertar, teste resistido de DES contra DES: se vencer, KD e o cilindro de propulsão ou outro equipamento de mergulho do alvo fica arruinado." },
 	"Blood Bite": { Tecnica: "Apresamento", ModVel: -2, ModDano: -1, ModMov: "Um", Vantagens: ["Ignora Bloqueio"], Sistema: "Mordida; ignora Bloqueio; recupera 1 de Saúde por ponto de dano causado. Exclusiva de Rijndael." },
 };
 
@@ -1150,7 +1150,9 @@ function numeroPorExtenso(valor) {
 
 //PC (Pontos de Combate) mede a eficiência de uma manobra em combate (não é custo).
 //Valores das Vantagens e Desvantagens: cada uma vale +1/-1, exceto "Área" (acertar vários alvos só ajuda
-//contra capangas fracos) e "Agachamento" (não apanha de Aérea, mas também não acerta Aérea), que valem 0, e "Ignora Vigor" e "Anula Ataque", que valem 2.
+//contra capangas fracos) e "Agachamento" (não apanha de Aérea, mas também não acerta Aérea), que valem 0, e "Ignora Vigor" e "Anula Ataque", que valem 2;
+//a Desvantagem "Condição Rara" (só funciona numa situação rara: interromper uma Aérea do oponente, alvo em KD/Dizzy,
+//turno após bloquear interrompendo, exigir Sustentado antes ou equipamento) vale -2.
 //Dano: manobra que causa dano (ModDano numérico) soma +1 (BONUS_DANO) por hit, para golpes não ficarem abaixo de manobras sem dano;
 //sem dano (ModDano omitido, "", "-" ou "Nenhum") vale -1 (como um ModDano -2); "Especial" vale 0.
 //Multi-hit: todos os hits contam (soma dos modificadores, com +1 em cada); hit limitado (ex.: só se o alvo estiver a alcance) leva "Ataque Condicional" e a quantidade de hits soma um bônus (vale o maior):
@@ -1170,6 +1172,10 @@ function valorVantagem(vantagem) {
 	return 1;
 }
 
+function valorDesvantagem(desvantagem) {//"Condição Rara" (ex.: só interrompendo uma Aérea do oponente) vale 2
+	return desvantagem === "Condição Rara" ? 2 : 1;
+}
+
 //Movimento: sem movimento (Nenhum, "", "-" ou omitido) = -1; Um = 0; Dois = +1; Três = +2; números valem eles mesmos
 function pcMovimento(modMov, npc) {
 	if (modMov === undefined || modMov === null) return -1;
@@ -1186,8 +1192,8 @@ function pcMovimento(modMov, npc) {
 	return valorModificador(texto);
 }
 
-//Alcance: mesmo hex (0, padrão do Apresamento) = -1; adjacente (1, padrão) = 0; fixo (2, 3...) = +1;
-//um atributo ou técnica = +2; atributo + técnica = +3
+//Alcance: mesmo hex (0, padrão do Apresamento) = -1; adjacente (1, padrão) = 0; fixo (2, 3...) = o próprio número, no máximo +3;
+//um atributo ou técnica = +3; atributo + técnica = +5
 function pcAlcance(manobra) {
 	//o Alcance só conta quando a manobra causa dano (ModDano numérico, positivo ou negativo); senão é desconsiderado
 	const temDano = !isNaN(parseInt(manobra.ModDano));
@@ -1195,8 +1201,8 @@ function pcAlcance(manobra) {
 	if (alcance === undefined || alcance === null || alcance === "")
 		return /apresamento/i.test(manobra.Tecnica) ? -1 : 0;
 	const numero = numeroPorExtenso(alcance);
-	if (!isNaN(numero)) return numero <= 0 ? -1 : numero === 1 ? 0 : 1;
-	return (alcance + "").split("+").length >= 2 ? 3 : 2;
+	if (!isNaN(numero)) return numero <= 0 ? -1 : numero === 1 ? 0 : Math.min(numero, 3);
+	return (alcance + "").split("+").length >= 2 ? 5 : 3;
 }
 
 //Quando a manobra não tem os campos Vantagens/Desvantagens, eles são deduzidos do texto do Sistema (mesmas regras usadas na migração)
@@ -1228,13 +1234,13 @@ function inferirVantagens(sistema) {
 	if (/se o alvo foi interrompido, perde o ataque|anula manobra do oponente|perderá sua ação/.test(s)) v.push("Anula Ataque");
 	if (/não (afeta|atinge)[^;.]*agach/.test(s)) d.push("Não afeta Agachamento");
 	if (/não (afeta|atinge)[^;.]*a[ée]re/.test(s)) d.push("Não afeta Aérea");
-	if (/(precisa|tem de|deve) interromper (uma )?a[ée]rea|interromper um alvo em a[ée]rea|tem de interromper a[ée]rea/.test(s)) d.push("Ataque Condicional");
-	else if (/precisa interromper|interrompendo o oponente/.test(s)) d.push("Ataque Condicional");
+	if (/(precisa|tem de|deve) interromper (uma )?a[ée]rea|tem de interromper a[ée]rea/.test(s)) d.push("Condição Rara");
+	else if (/interromper um alvo em a[ée]rea|precisa interromper|interrompendo o oponente/.test(s)) d.push("Ataque Condicional");
 	if (/(precisa|tem de|deve) (de movimento para )?(entrar|atravessar|mover)[^;.]*hex|precisa entrar|tem de entrar|deve entrar/.test(s)) d.push("Mesmo Hex");
 	if (/não pode atacar (o oponente )?(que|quem) lançou/.test(s)) d.push("Esquiva Condicional");
 	if (/requer \d+ turno de concentração|requer 1 turno/.test(s)) d.push("Concentração");
-	if (/(o alvo precisa estar|só contra vítima em) (kd|knockdown)/.test(s)) d.push("Ataque Condicional");
-	if (/somente pode ser usado no turno após bloquear/.test(s)) d.push("Ataque Condicional");
+	if (/(o alvo precisa estar|só contra vítima em) (kd|knockdown)/.test(s)) d.push("Condição Rara");
+	if (/somente pode ser usado no turno após bloquear/.test(s)) d.push("Condição Rara");
 	if (/precisa sofrer um ataque/.test(s)) d.push("Ataque Condicional");
 	if (/(dano|dano conta) (somente|só) para atordoar|dano só para atordoar/.test(s)) d.push("Dano Dizzy");
 	if (/não pode fazer parte de combo/.test(s)) d.push("Não entra em combo");
@@ -1243,10 +1249,12 @@ function inferirVantagens(sistema) {
 	if (/só pode ser usada em um portador/.test(s)) d.push("Ataque Condicional");
 	if (/precisa olhar nos olhos/.test(s)) d.push("Ataque Condicional");
 	if (/não pode levar dano no turno/.test(s)) d.push("Concentração");
-	if (/exige equipamento/.test(s)) d.push("Ataque Condicional");
+	if (/exige equipamento/.test(s)) d.push("Condição Rara");
 	if (/precisa estar em contato com a terra/.test(s)) d.push("Ataque Condicional");
-	if (/(deve|precisa) prender o alvo em um sustentado antes/.test(s)) d.push("Ataque Condicional");
-	return { Vantagens: [...new Set(v)], Desvantagens: [...new Set(d)] };
+	if (/(deve|precisa) prender o alvo em um sustentado antes/.test(s)) d.push("Condição Rara");
+	//a Condição Rara já inclui a restrição; não soma também o Ataque Condicional
+	const desv = d.includes("Condição Rara") ? d.filter(x => x !== "Ataque Condicional") : d;
+	return { Vantagens: [...new Set(v)], Desvantagens: [...new Set(desv)] };
 }
 
 //Hits citados só no texto ("dois testes", "três hits"...), para manobras sem os campos novos e com ModDano de um valor só
@@ -1296,7 +1304,7 @@ function calculaPCManobra(manobra, npc) {
 
 	let total = base;
 	total += vantagens.filter(v => BONUS_HITS[v] === undefined).reduce((a, v) => a + valorVantagem(v), 0);
-	total -= desvantagens.length;
+	total -= desvantagens.reduce((a, d) => a + valorDesvantagem(d), 0);
 	//apresamentos ignoram bloqueio e bloqueios dão bônus de ABS
 	if (/bloqueio|apresamento/i.test(manobra.Tecnica) && !vantagens.includes("Ignora Bloqueio"))
 		total += 1;
