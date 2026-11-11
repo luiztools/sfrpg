@@ -156,7 +156,7 @@ const manobras = {
 	//apresamento
 	"Air Suplex": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: 0, Vantagens: ["Knockdown", "Aérea"], Desvantagens: ["Condição Rara"], Sistema: "Precisa interromper uma Aérea do oponente; KD; Atacante e alvo terminam no hex da interrupção; Aérea" },
 	"Air Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback", "Move Depois"], Desvantagens: ["Condição Rara"], Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; atacante termina seu movimento após o ataque; Aérea" },
-	"Air Baton Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 5, ModMov: 0, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback"], Desvantagens: ["Condição Rara"], Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; Aérea" },
+	"Air Baton Throw": { Tecnica: "Apresamento", ModVel: 2, ModDano: 4, ModMov: -1, FdV: 1, Vantagens: ["Knockdown", "Aérea", "Knockback"], Desvantagens: ["Condição Rara"], Sistema: "Precisa interromper uma Aérea do oponente; KD; o alvo pode ser arremessado a 3 hex do atacante; dano soma o mod. de dano do bastão; não pode se mover após o dano; Aérea" },
 	"Arm Wrist Lock": { Tecnica: "Apresamento", ModVel: 0, ModDano: 0, ModMov: "Dois", Vantagens: ["Knockdown", "Sustentado"], Desvantagens: ["Condição Rara"], Sistema: "Sustentado. KD. Somente pode ser usado no turno após bloquear soco ou chute e interrompendo o oponente." },
 	"Back Breaker": { Tecnica: "Apresamento", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Knockdown"], Sistema: "KD" },
 	"Argentine Back Breaker": { Tecnica: "Apresamento", ModVel: 0, ModDano: "2/0", ModMov: "Dois", FdV: 1, Vantagens: ["Knockdown", "Knockback"], Sistema: "Dois hits; Joga o oponente para cima, apara-o no ombro e depois o arremessa no chão a no máximo 3 hex; KD" },
@@ -321,7 +321,6 @@ const manobras = {
 	"Banishing Flat": { Tecnica: "Soco", ModVel: -2, ModDano: 4, ModMov: -2, Chi: 1, Sistema: "Raciocínio, 2 sucessos, dissipa projétil" },
 	"Ansatsuken": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, PC: 3, Vantagens: ["Dano Agravado"], Sistema: "+3 Dano Agravado na Manobra Assassina, -1 Honra" },
 	"Ashura Senku": { Tecnica: "Foco", ModVel: 3, ModMov: "Foco+2", Chi: 1, Sistema: "Lutador não pode ser atingido enquanto a executa" },
-	"Chi Pull": { Tecnica: "Foco", ModVel: -2, ModDano: 8, Chi: 1, Alcance: "Raciocinio+Foco", Desvantagens: ["Dano Dizzy"], Sistema: "Dano só para atordoar; ABS com Vigor, mas se ultrapassar o Vigor da vítima, ela estará atordoada; havendo sucesso vítima é atraída um número de hex igual ao Foco do atacante; vítima pode tentar resistir rolando sua FOR x Foco do adversário" },
 	"Chill Touch": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 2, PC: 2, Sistema: "Usado com qualquer Soco, Chute ou Apresamento básicos; adiciona os efeitos do Ice Blast e +2 de dano" },
 	"Criminal Upper": { Tecnica: "Foco", ModVel: -1, ModDano: 4, ModMov: "Um", Chi: 1, Vantagens: ["Knockdown", "Ignora Bloqueio"], Sistema: "KD; o oponente não pode Bloquear (só com San He)" },
 	"Eletric Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 2, PC: 3, Vantagens: ["Knockdown", "Área"], Sistema: "Adiciona +3 dano a Socos, Chutes e Apresamento básicos; afeta todos os alvos no hex à frente do lutador, e causa um KD a eles" },
@@ -675,7 +674,7 @@ function calculaDano(npc, manobra) {
 
 	if (manobra.Nome === "Air Baton Throw") {
 		const arma = armas[npc.Armas[0]];
-		return (npc["Força"] + npc["Apresamento"]) + 5 + arma.ModDano;
+		return (npc["Força"] + npc["Apresamento"]) + 4 + arma.ModDano;
 	}
 
 	if (manobra.Nome === "Triple Strike")
@@ -1154,9 +1153,9 @@ function numeroPorExtenso(valor) {
 
 //PC (Pontos de Combate) mede a eficiência de uma manobra em combate (não é custo).
 //Valores das Vantagens e Desvantagens: cada uma vale +1/-1, exceto "Área" (acertar vários alvos só ajuda
-//contra capangas fracos) e "Agachamento" (não apanha de Aérea, mas também não acerta Aérea), que valem 0, e "Ignora Vigor" e "Anula Ataque", que valem 2;
+//contra capangas fracos), "Aérea" e "Agachamento" (só a postura da manobra), que valem 0, e "Ignora Vigor" e "Anula Ataque", que valem 2;
 //a Desvantagem "Condição Rara" (só funciona numa situação rara: interromper uma Aérea do oponente, alvo em KD/Dizzy,
-//turno após bloquear interrompendo, exigir Sustentado antes ou equipamento) vale -2.
+//turno após bloquear interrompendo, exigir Sustentado antes ou equipamento) vale -3.
 //Dano: manobra que causa dano (ModDano numérico) soma +2 (BONUS_DANO) por hit (-2 vale 0, -1 vale 1, 0 vale 2...), para golpes não ficarem abaixo de manobras sem dano;
 //sem dano (ModDano omitido, "", "-" ou "Nenhum") vale -2; "Especial" vale +1.
 //Multi-hit: todos os hits contam (soma dos modificadores, com +2 em cada); hit limitado (ex.: só se o alvo estiver a alcance) leva "Ataque Condicional" e a quantidade de hits soma um bônus (vale o maior):
@@ -1170,14 +1169,14 @@ function valorModificador(valor) {//"Especial", "", "Nenhum" e "-" valem 0
 	return isNaN(numero) ? 0 : numero;
 }
 
-function valorVantagem(vantagem) {
-	if (vantagem === "Agachamento" || vantagem === "Área") return 0;
+function valorVantagem(vantagem) {//"Aérea", "Agachamento" e "Área" não dão PC ("Esquiva de Projétil" continua valendo +1)
+	if (vantagem === "Aérea" || vantagem === "Agachamento" || vantagem === "Área") return 0;
 	if (vantagem === "Ignora Vigor" || vantagem === "Anula Ataque") return 2;
 	return 1;
 }
 
-function valorDesvantagem(desvantagem) {//"Condição Rara" (ex.: só interrompendo uma Aérea do oponente) vale 2
-	return desvantagem === "Condição Rara" ? 2 : 1;
+function valorDesvantagem(desvantagem) {//"Condição Rara" (ex.: só interrompendo uma Aérea do oponente) vale 3
+	return desvantagem === "Condição Rara" ? 3 : 1;
 }
 
 //Movimento: sem movimento (Nenhum, "", "-" ou omitido) = -1; Um = 0; Dois = +1; Três = +2; números valem eles mesmos
