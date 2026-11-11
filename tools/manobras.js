@@ -70,7 +70,7 @@ const manobras = {
 	"Senkju Tai": { Tecnica: "Soco", ModVel: 0, ModDano: 4, ModMov: 0, FdV: 1, Vantagens: ["Knockdown"], Sistema: "KD" },
 	"Snake Strike": { Tecnica: "Soco", ModVel: 1, ModDano: "1/1/1", ModMov: -1, Vantagens: ["Aérea", "Esquiva de Projétil"], Desvantagens: ["Ataque Condicional"], Sistema: "Aérea, esquiva de projétil; oponente interrompido em uma Aérea sofre Três hits" },
 	"Thunderbolt": { Tecnica: "Soco", ModVel: -1, ModDano: 3, ModMov: -1, Vantagens: ["Knockdown", "Aérea", "Esquiva de Projétil"], Desvantagens: ["Mesmo Hex"], Sistema: "Aérea, esquiva de projétil, causa KD, tem de entrar no mesmo hex" },
-	"Cross Counter": { Tecnica: "Soco", ModVel: 2, ModDano: 4, ModMov: "Dois", FdV: 1, Vantagens: ["Knockdown", "Ignora Vigor", "Knockback", "Move Depois"], Sistema: "Se o lutador é mais rápido que o oponente, ele deve esperar o seu ataque para acertá-lo logo em seguida, de modo que ele absorve com apenas metade do seu Vigor, empurrando um hex e causando KD; o lutador pode seguir se movimentando após o soco, mantendo-se próximo do oponente; se derrubado ou Dizzy, o atacante não prossegue com o Cross Counter; conta como Manobra de Bloqueio, com bônus de Bloqueio -2 na ABS; se atingir antes de receber o ataque, não empurra, não causa KD e não tem bônus; não há ganho de +2 VEL no próximo turno" },
+	"Cross Counter": { Tecnica: "Soco", ModVel: 2, ModDano: 4, ModMov: "Dois", FdV: 1, Vantagens: ["Knockdown", "Ignora Vigor", "Knockback", "Move Depois"], Desvantagens: ["Ataque Condicional"], Sistema: "Se o lutador é mais rápido que o oponente, ele deve esperar o seu ataque para acertá-lo logo em seguida, de modo que ele absorve com apenas metade do seu Vigor, empurrando um hex e causando KD; o lutador pode seguir se movimentando após o soco, mantendo-se próximo do oponente; se derrubado ou Dizzy, o atacante não prossegue com o Cross Counter; conta como Manobra de Bloqueio, com bônus de Bloqueio -2 na ABS; se atingir antes de receber o ataque, não empurra, não causa KD e não tem bônus; não há ganho de +2 VEL no próximo turno" },
 	"Double Hit Punch": { Tecnica: "Soco", ModVel: -1, ModDano: "0/0", ModMov: -1, Desvantagens: ["Ataque Condicional"], Sistema: "Dois hits; Oponentes aéreos ou agachados tomam apenas 1 hit" },
 	"Burn Knuckle": { Tecnica: "Soco", ModVel: -1, ModDano: 5, ModMov: 3, Chi: 1, FdV: 1, Vantagens: ["Knockdown"], Sistema: "Linha reta, causa KD" },
 	"Boxing Punches": { Tecnica: "Soco", ModVel: "", ModDano: "", ModMov: "", Sistema: "3 novos socos básicos" },
@@ -122,7 +122,7 @@ const manobras = {
 	"Reverse Frontal Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: -1, Vantagens: ["Ignora Bloqueio"], Sistema: "Ignora bloqueios" },
 	"Forward Backflip Kick": { Tecnica: "Chute", ModVel: 2, ModDano: "1/1", ModMov: "Dois", FdV: 1, Desvantagens: ["Ataque Condicional"], Sistema: "Dois hits se o atacante interromper um alvo em Aérea" },
 	"Bushin Hurricane Kick": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", Chi: 1, FdV: 1, Vantagens: ["Impacto Técnico", "Knockdown", "Área", "Knockback"], Sistema: "Todos ao redor são atingidos e empurrados para trás; oponentes no mesmo hex são puxados pelo golpe, podendo ser acertados até um número de vezes igual à Técnica Esportes do usuário; para cada novo ataque, devem ter sofrido dano no ataque anterior; KD no último acerto" },
-	"Dankukyaku": { Tecnica: "Chute", ModVel: -1, ModDano: "0/2/4", ModMov: 2, FdV: 2, Vantagens: ["Knockdown", "Aérea", "Esquiva de Projétil", "Knockback"], Desvantagens: ["Ataque Condicional", "Esquiva Condicional"], Sistema: "Três hits; Aérea; esquiva de projétil como Jump (dif. 8); Linha Reta; como Double Dread Kick, cada chute empurra o oponente 1 hex para trás e o lutador acompanha; o último chute causa KD se causar dano" },
+	"Dankukyaku": { Tecnica: "Chute", ModVel: 0, ModDano: -1, ModMov: -1, FdV: 2, Vantagens: ["Aérea", "Impacto Dinâmico", "Knockback"], Sistema: "Linha Reta; Aérea; causa dano a cada hex em que entra, e o alvo é jogado 1 hex para trás (knockback); pode seguir um único oponente, acertando-o a cada hex, até gastar o Movimento; o oponente pode Bloquear cada rolamento; os danos múltiplos não se combinam para Dizzy" },
 	"Dive Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Vantagens: ["Aérea", "Esquiva de Projétil", "Acerta Agachamento"], Desvantagens: ["Mesmo Hex"], Sistema: "Aérea; esquiva de projétil; termina o ataque no hex do oponente; acerta oponentes em Agachamento" },
 	"Power Kick": { Tecnica: "Chute", ModVel: -3, ModDano: 5, ModMov: "Dois", Vantagens: ["Knockdown", "Knockback"], Sistema: "Empurra 1 Hexágono para trás e causa KD em Manobras Aéreas" },
 	"Soccer Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, ModMov: "Um", Vantagens: ["Knockdown"], Sistema: "Causa KD se causar dano" },
@@ -326,7 +326,7 @@ const manobras = {
 	"Criminal Upper": { Tecnica: "Foco", ModVel: -1, ModDano: 4, ModMov: "Um", Chi: 1, Vantagens: ["Knockdown", "Ignora Bloqueio"], Sistema: "KD; o oponente não pode Bloquear (só com San He)" },
 	"Eletric Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 2, PC: 3, Vantagens: ["Knockdown", "Área"], Sistema: "Adiciona +3 dano a Socos, Chutes e Apresamento básicos; afeta todos os alvos no hex à frente do lutador, e causa um KD a eles" },
 	"Flaming Heel": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, PC: 3, Sistema: "Adiciona +3 dano a Chutes básicos" },
-	"Instant Hell Murder": { Tecnica: "Foco", ModVel: -3, ModDano: "Especial", ModMov: 2, Chi: 2, Vantagens: ["Impacto Técnico"], Sistema: "Funciona como Apresamento; é rolado um dano padrão de 15 um número de vezes igual ao Foco do atacante; oponente rola Raciocínio + Mistérios (dif. 10, reduzindo se já conhecer o golpe); cada sucesso permite evitar uma rolagem de dano, mas deve-se gastar 1 Chi a cada duas rolagens evitadas; não pode gastar mais Chi que o Foco; o usuário também é atacado, rolando Raciocínio + Mistérios (dif. 6, caindo conforme vá utilizando) e gastando Chi para não sofrer o próprio golpe; dano absorvido com Honra" },
+	"Instant Hell Murder": { Tecnica: "Foco", ModVel: -3, ModDano: 5, ModMov: 2, Chi: 2, Vantagens: ["Sustentado", "Ignora Bloqueio", "Ignora Vigor", "Dano Agravado"], Desvantagens: ["Mesmo Hex"], Sistema: "Apresamento Sustentado: tem de entrar no hex da vítima; durante o movimento está sob os efeitos do Ashura Senku e não pode ser atingido; velocidade com Raciocínio e dano com Inteligência + Foco, absorvido com a Honra da vítima; dano agravado; após cada rolagem de dano, teste resistido de Raciocínio + Mistérios: se vencer, mantém o apresamento e rola o dano de novo; se perder, a vítima se solta e o lutador sofre 1 de dano agravado por diferença; falha crítica de qualquer um dos dois em algum teste é morte instantânea; pode ser mantido por um número de turnos igual ao Foco; usar consome 1 ponto permanente de Honra, e matar alguém com ela, outro" },
 	"Kubiori": { Tecnica: "Foco", ModVel: -1, ModDano: 4, ModMov: -1, Chi: 1, Vantagens: ["Knockdown", "Knockback"], Desvantagens: ["Mesmo Hex"], Sistema: "KD e empurra 1 hex; atacante deve entrar no hex da vítima" },
 	"Raida": { Tecnica: "Foco", ModVel: 0, ModDano: 5, ModMov: -1, Chi: 1, Vantagens: ["Knockdown", "Knockback"], Desvantagens: ["Mesmo Hex"], Sistema: "KD e empurra 1 hex; atacante deve entrar no hex da vítima" },
 	"Energy Ball": { Tecnica: "Foco", ModVel: 0, ModDano: "2/2", Chi: 1, Alcance: "Um", Sistema: "Dois hits; projétil (pode ser esquivada com Jump)" },
@@ -694,6 +694,10 @@ function calculaDano(npc, manobra) {
 		return (npc["Força"] + npc["Soco"]) * 2;
 
 	if (manobra.Nome === "Triple Blow") return calculaDanoTripleBlow(npc, manobra);
+
+	//Cross Counter é Manobra de Bloqueio (ABS com Bloqueio -2) e depois contra-ataca com um soco
+	if (manobra.Nome === "Cross Counter")
+		return "ABS" + (npc["Vigor"] + npc["Bloqueio"] - 2) + " e " + (npc["Força"] + npc["Soco"] + parseInt(manobra.ModDano));
 
 	if (manobra.Nome === "Maka Wara")
 		return npc["Vigor"] + npc["Bloqueio"] - 3;
@@ -1153,13 +1157,13 @@ function numeroPorExtenso(valor) {
 //contra capangas fracos) e "Agachamento" (não apanha de Aérea, mas também não acerta Aérea), que valem 0, e "Ignora Vigor" e "Anula Ataque", que valem 2;
 //a Desvantagem "Condição Rara" (só funciona numa situação rara: interromper uma Aérea do oponente, alvo em KD/Dizzy,
 //turno após bloquear interrompendo, exigir Sustentado antes ou equipamento) vale -2.
-//Dano: manobra que causa dano (ModDano numérico) soma +1 (BONUS_DANO) por hit, para golpes não ficarem abaixo de manobras sem dano;
-//sem dano (ModDano omitido, "", "-" ou "Nenhum") vale -1 (como um ModDano -2); "Especial" vale 0.
-//Multi-hit: todos os hits contam (soma dos modificadores, com +1 em cada); hit limitado (ex.: só se o alvo estiver a alcance) leva "Ataque Condicional" e a quantidade de hits soma um bônus (vale o maior):
-//hits fixos (ModDano "x/y") +1 por hit extra; Impacto Técnico (hits = técnica) +3;
+//Dano: manobra que causa dano (ModDano numérico) soma +2 (BONUS_DANO) por hit (-2 vale 0, -1 vale 1, 0 vale 2...), para golpes não ficarem abaixo de manobras sem dano;
+//sem dano (ModDano omitido, "", "-" ou "Nenhum") vale -2; "Especial" vale +1.
+//Multi-hit: todos os hits contam (soma dos modificadores, com +2 em cada); hit limitado (ex.: só se o alvo estiver a alcance) leva "Ataque Condicional" e a quantidade de hits soma um bônus (vale o maior):
+//hits fixos (ModDano "x/y") +1 por hit extra; Impacto Técnico (hits = técnica) +4 e o dano conta 4 hits;
 //Impacto Dinâmico (hits = movimento) movimento + 3; Apresamento Sustentado (hits possíveis = Apresamento) +2.
-const BONUS_DANO = 1;
-const BONUS_HITS = { "Impacto Técnico": 3, "Impacto Dinâmico": 3, "Sustentado": 2 };//no Impacto Dinâmico, soma ao movimento
+const BONUS_DANO = 2;
+const BONUS_HITS = { "Impacto Técnico": 4, "Impacto Dinâmico": 3, "Sustentado": 2 };//no Impacto Dinâmico, soma ao movimento
 
 function valorModificador(valor) {//"Especial", "", "Nenhum" e "-" valem 0
 	const numero = parseInt(valor);
@@ -1290,15 +1294,21 @@ function calculaPCManobra(manobra, npc) {
 		if (!temCampos && hits === 1 && manobra.ModDano !== undefined && !semModificador(manobra.ModDano))
 			hits = inferirHits(manobra.Sistema);
 		const movimento = pcMovimento(manobra.ModMov, npc);
+		//no Impacto Dinâmico o dano conta movimento + 3 hits (mínimo 1), como nas manobras de hits fixos
+		if (vantagens.includes("Impacto Dinâmico") && danos.length === 1 && !isNaN(parseInt(manobra.ModDano)))
+			hits = Math.max(1, movimento + 3);
+		//no Impacto Técnico o dano conta 4 hits (o mesmo valor do bônus de hits)
+		if (vantagens.includes("Impacto Técnico") && danos.length === 1 && !isNaN(parseInt(manobra.ModDano)))
+			hits = Math.max(hits, BONUS_HITS["Impacto Técnico"]);
 		//no Impacto Dinâmico o bônus é o movimento + 3 (quanto mais anda, mais hits)
 		const bonusHits = Math.max(hits - 1, ...vantagens.map(v => v === "Impacto Dinâmico" ? movimento + BONUS_HITS[v] : BONUS_HITS[v] || 0));
-		//dano: soma dos modificadores de todos os hits + 1 por hit (-1 vale 0, +0 vale +1, "1/4" vale 2 + 5); sem dano -1; "Especial" 0
+		//dano: soma dos modificadores de todos os hits + 2 por hit (-2 vale 0, -1 vale 1, +0 vale 2, "1/4" vale 3 + 6); sem dano -2; "Especial" +1
 		//(hits citados só no texto repetem o modificador do ModDano)
 		let dano;
 		if (!isNaN(parseInt(manobra.ModDano)))
 			dano = (danos.length === hits ? danos.reduce((a, d) => a + d, 0) : danos[0] * hits) + BONUS_DANO * hits;
-		else if (manobra.ModDano === undefined || manobra.ModDano === null || semModificador(manobra.ModDano)) dano = -1;
-		else dano = 0;
+		else if (manobra.ModDano === undefined || manobra.ModDano === null || semModificador(manobra.ModDano)) dano = -2;
+		else dano = 1;
 		base = valorModificador(manobra.ModVel) + dano + bonusHits + movimento;
 	}
 
@@ -1309,8 +1319,9 @@ function calculaPCManobra(manobra, npc) {
 	if (/bloqueio|apresamento/i.test(manobra.Tecnica) && !vantagens.includes("Ignora Bloqueio"))
 		total += 1;
 	total += pcAlcance(manobra);
-	//gastos em Chi e FdV reduzem a eficiência
-	total -= parseInt(manobra.Chi || 0) + parseInt(manobra.FdV || 0);
+	//gastos em Chi e FdV reduzem a eficiência: custo total 1 = -1, 2 = -3 (cada ponto além do 1º custa -2)
+	const custo = parseInt(manobra.Chi || 0) + parseInt(manobra.FdV || 0);
+	if (custo > 0) total -= custo * 2 - 1;
 
 	return total >= 1 ? total : 1;//no mínimo cada manobra vale 1 PC
 }
