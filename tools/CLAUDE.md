@@ -11,15 +11,15 @@ Não há build, bundler, testes nem package.json. É HTML + JavaScript puro (jQu
 - [StyleSheet.css](StyleSheet.css) + [sheet-img/](sheet-img/) — visual da ficha (imagens de bolinhas de pontuação, logo). [styles.css](styles.css) é CSS do tema WordPress do site, não da ficha.
 - [gerador.html](gerador.html) — formulário do gerador de personagem. [personagem.html](personagem.html) — página antiga de exibição de personagem.
 - [v2/](v2/) — fichas de personagens, uma por arquivo:
-  - raiz: Street Fighter; subpastas por franquia: `ff/` (Final Fight), `kof/`, `mk/` (Mortal Kombat), `tekken/`, `kungfudo/`, `mma/`, `rpg/` (NPCs originais/de campanhas).
-  - [v2/_framework.html](v2/_framework.html) é o template; [v2/_character.php](v2/_character.php) lê `?name=<arquivo>` e substitui `[NPCHERE]` pelo conteúdo do `.js`.
+  - subpastas por franquia: `sf/` (Street Fighter), `ex/` (Street Fighter EX), `ff/` (Final Fight), `kof/`, `mk/` (Mortal Kombat), `tekken/`, `kungfudo/`, `mma/`, `rpg/` (NPCs originais/de campanhas).
+  - [v2/_framework.html](v2/_framework.html) é o template; [v2/_character.php](v2/_character.php) lê `?name=<pasta>/<arquivo>` (ex.: `sf/ryu`, `kof/terry-bogard`; não há mais fichas na raiz de `v2/`). Links antigos sem pasta (`?name=ryu`) ainda funcionam: o PHP procura em `sf/` e depois nas demais pastas. Novos links sempre levam a pasta e substitui `[NPCHERE]` pelo conteúdo do `.js`.
 - Arquivos de apoio (não usados em runtime): `Planilha de Manobras Especiais - Shotokan.csv` (fonte das manobras; convertida para JSON e colada em `manobras.js`), `ajustes tabelas de manobras.txt` (notas de renomeações/custos de manobras), `champs.txt` (regras de balanceamento para criar manobras).
 
 ## Rodando localmente
 
 ```sh
 cd v2 && php -S localhost:8000
-# http://localhost:8000/_character.php?name=ryu&age=sfa
+# http://localhost:8000/_character.php?name=sf/ryu&age=sfa
 # http://localhost:8000/_character.php?name=mk/scorpion&age=mkx
 ```
 

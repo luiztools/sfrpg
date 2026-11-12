@@ -36,7 +36,7 @@ O usuário prefere receber **todas as dúvidas juntas no fim** da geração, em 
 - **Estilo combinado** usa parênteses: `"Forças Especiais (Bojutsu)"`, `"Ninjitsu (Kenjutsu)"`, `"Karatê Rindoukan (Kenjutsu)"`. O `GeraLinkEstilo` em `scripts.js` gera um link para cada parte. Não use barra "/" (não é suportada e o usuário preferiu parênteses).
 - Grafias de estilo que geram link válido: `Karatê Rindoukan` (post `karate-rindoukan`), `Kenjutsu`, `Bojutsu`, `Ninjitsu`, `Forças Especiais`, `Baraqah`, `Ler Drit`, `Kickboxe`. Para confirmar, procure o slug no banco (`SELECT post_name FROM wp_posts WHERE post_name='...'`). **Kobujutsu** é arte marcial que luta com arma: quem usa espada fica `Kenjutsu`, quem usa bastão fica `Bojutsu`. Personagem de clã ninja é Ninjitsu: combine com a arma, como `Ninjitsu (Bojutsu)` (Nanase).
 - **Estilo "coringa": Jeet Kune Dô.** Personagem sem estilo definido (a fonte diz "Desconhecido" ou "Variável") ou que muda de forma e imita outros lutadores fica com `Estilo: "Jeet Kune Dô"`, nunca "Desconhecido". Exemplos: Q, Twelve e Eleven. No post, a frase sobre o estilo cita "(adaptado como <a>Jeet Kune Dô</a>)". O post leva a tag `jeet kune do`, e nas tabelas de bustos a célula fica "J. Kune Dô". Personagem sem ficha (como o Eleven) registra o estilo no texto do post e na tag.
-- **Personagem armado** (modelo: `v2/ff/carlos.js`, `v2/vega.js`, `v2/eagle.js`):
+- **Personagem armado** (modelo: `v2/ff/carlos.js`, `v2/sf/vega.js`, `v2/sf/eagle.js`):
   ```js
   const tecnicas = [];
   tecnicas[0] = newCaracteristica("Espada", 4);   // Espada, Bastão, Chicote, Garra, Armas de Fogo...
