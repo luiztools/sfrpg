@@ -225,7 +225,7 @@ function DhalsimSF6() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 7,
-        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport, Suplex, Air Suplex",
+        ManobrasEspeciais: "Head Butt, Slide Kick, Brain Cracker, Throw, Flying Body Spear, Jump, Extendible Limbs, Fireball, Improved Fireball, Telepathy, Yoga Flame, Yoga Teleport, Suplex, Air Suplex, Flying Fireball",
         Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);",
         Gloria: 8,
         Honra: 10,

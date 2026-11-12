@@ -235,7 +235,7 @@ function CammySF6() {
         Apresamento: 5,
         Esportes: 6,
         Foco: 2,
-        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill, Choke Throw, Dive Kick",
+        ManobrasEspeciais: "Spinning Back Fist, Spinning Knuckle, Power Uppercut, Flying Thrust Kick, Foot Sweep, Handstand Kick, Spinning Foot Sweep, Air Throw, Suplex, Thigh Press, Kippup, Throw, Jump, Cannon Drill, Choke Throw, Dive Kick, Hair Throw",
         Combos: "Jump + Fierce para Strong para Cannon Drill (Dizzy); Jump + Roundhouse para Strong para Flying Thrust Kick (dizzy); Spinning Knuckle para Foot Sweep para Flying Thrust Kick (Dizzy);",
         Gloria: 10,
         Honra: 8,

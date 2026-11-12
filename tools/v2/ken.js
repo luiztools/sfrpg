@@ -256,7 +256,7 @@ function KenSF6() {
         Esportes: 5,
         Foco: 5,
         ManobrasEspeciais: "Dragon Punch, Flaming Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Jump, Kippup, Light Feet, Knee Basher, Double Hit Kick, Flaming Heel, Ax Kick",
-        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep; Forward para Roundhouse (Dizzy); Flaming Heel Forward para Flaming Heel Roundhouse (Dizzy);",
+        Combos: "Fireball para Flaming Dragon Punch; Jump + Fierce para Strong para Flaming Dragon Punch (Dizzy); Dragon Punch (Dizzy); Hurricane Kick para Foot Sweep; Forward para Roundhouse (Dizzy); Flaming Heel Forward para Flaming Heel Roundhouse (Dizzy); Knee Basher para Throw",
         Gloria: 10,
         Honra: 10,
         Chi: 10,

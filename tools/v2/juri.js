@@ -123,9 +123,74 @@ function JuriSF4() {
     return juri;
 }
 
+function JuriSF6() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Apoio", 5);
+    antecedentes[1] = newCaracteristica("Cibernético", 1);
+    antecedentes[2] = newCaracteristica("Fama", 1);
+
+    const juri = {
+        Nome: "Juri Han",
+        Estilo: "Tae Kwon Dô",
+        Escola: "Nenhuma",
+        Jogador: "NPC",
+        Assinatura: "Lambe os Lábios",
+        Conceito: "Agente da S.I.N",
+        Cronica: "Street Fighter 6",
+        Equipe: "SIN",
+        Time: "SIN",
+        Forca: 5,
+        Destreza: 6,
+        Vigor: 5,
+        Carisma: 2,
+        Manipulacao: 3,
+        Aparencia: 5,
+        Percepcao: 6,
+        Inteligencia: 4,
+        Raciocinio: 4,
+        Prontidao: 4,
+        Interrogacao: 5,
+        Intimidacao: 4,
+        Perspicacia: 3,
+        Manha: 4,
+        Labia: 3,
+        LutaCega: 6,
+        Conducao: 3,
+        Lideranca: 2,
+        Seguranca: 4,
+        Furtividade: 5,
+        Sobrevivencia: 2,
+        Arena: 2,
+        Computador: 3,
+        Investigacao: 3,
+        Medicina: 1,
+        Misterios: 3,
+        Estilos: 3,
+        Antecedentes: antecedentes,
+        Soco: 3,
+        Chute: 7,
+        Bloqueio: 5,
+        Apresamento: 3,
+        Esportes: 5,
+        Foco: 4,
+        ManobrasEspeciais: "Accuracy, Double Hit Kick, Fireball, Foot Sweep, Handstand Kick, Jump, Kick Defense, Kippup, Knee Basher, Throw, Air Smash, Wheel Kick, Hurricane Kick, Gekiro, Flying Heel Stomp, Reverse Frontal Kick",
+        Combos: "Forward para Fireball; Fireball para Hurricane Kick (dizzy); Handstand Kick para Hurricane Kick; Double-Hit Kick para Fireball para Hurricane Kick (dizzy); Gekiro para Hurricane Kick (dizzy)",
+        Gloria: 6,
+        Honra: 1,
+        Chi: 5,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Estilo Livre",
+        Posto: 9
+    };
+    return juri;
+}
+
 var npc;
 if (getParameterByName('age') === 'sf4' || getParameterByName('age') === 'sf2')
     npc = JuriSF4();
+else if (getParameterByName('age') === 'sf6')
+    npc = JuriSF6();
 else
     npc = JuriSF5();
 npc = calcPC(npc);

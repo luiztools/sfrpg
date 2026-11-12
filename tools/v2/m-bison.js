@@ -139,6 +139,7 @@ function MBisonSF6() {
     antecedentes[2] = newCaracteristica("Recursos", 5);
     antecedentes[3] = newCaracteristica("Staff", 5);
     antecedentes[4] = newCaracteristica("Psycho Power", 4);
+    antecedentes[5] = newCaracteristica("Mascote", 3);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 2);
@@ -186,8 +187,8 @@ function MBisonSF6() {
         Apresamento: 5,
         Esportes: 7,
         Foco: 7,
-        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telepathy, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick, Yoga Teleport, Fireball, Telekinesis",
-        Combos: "Forward Slide Kick para Ducking Fierce; Bloqueio para Psycho Crusher; Flying Heel Stomp para Jump + Fierce (Dizzy);",
+        ManobrasEspeciais: "Ducking Fierce, Psychic Rage, Power Uppercut, Jump, Flying Knee Thrust, Telepathy, Scissor Kick, Throw, Psychokinetic Channeling, Flying Heel Stomp, Flying Punch, Psychic Vise, Psycho Crusher, Mind Control, Mind Reading, Forward Slide Kick, Yoga Teleport, Fireball, Telekinesis, Foot Sweep, Face Slam",
+        Combos: "Forward Slide Kick para Ducking Fierce; Bloqueio para Psycho Crusher; Flying Heel Stomp para Jump + Fierce (Dizzy); Scissor Kick para Flying Knee Thrust (Dizzy); Flying Heel Stomp para Face Slam;",
         Gloria: 10,
         Honra: 0,
         Chi: 10,

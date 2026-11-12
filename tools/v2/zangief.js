@@ -220,7 +220,7 @@ function ZangiefSF6() {
         Apresamento: 7,
         Esportes: 4,
         Foco: 1,
-        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist, Toughskin",
+        ManobrasEspeciais: "Ear Pop, Spinning Clothesline, Turbo Spinning Clothesline, Double Hit Kick, Foot Sweep, Back Breaker, Bear Hug, Grappling Defense, Head Bite, Iron Claw, Pile Driver, Siberian Bear Crusher, Jump, Siberian Suplex, Throw, Spinning Pile Driver, Suplex, Stomach Pump, Air Throw, Banishing Flat, Spinning Back Fist, Toughskin, Block And Grab",
         Combos: "Jump + Short para Jump para Pile Driver (Dizzy); Jump + Strong para Foot Sweep; Jump + Strong para Turbo Spinning Clothesline (Dizzy); Bloqueio para Siberian Suplex; Bloqueio para Spinning Pile Driver;",
         Gloria: 10,
         Honra: 9,

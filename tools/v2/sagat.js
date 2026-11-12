@@ -247,7 +247,7 @@ function SagatSF6() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 5,
-        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball, Knee Basher",
+        ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball, Knee Basher, Brain Cracker, Reverse Frontal Kick",
         Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy); Jump + Roundhouse para Foot Sweep;",
         Gloria: 10,
         Honra: 3,

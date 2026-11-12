@@ -463,6 +463,7 @@ const armas = {
 	"Soco Inglês": { Tecnica: "Soco", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "Deve ser usado com manobras de Soco." },
 	"Submetralhadora": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: "1/1", ModMov: "-", Sistema: "2 Hits" },
 	"Tonfa": { Tecnica: "Bastão", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "+1 ABS ao bloquear." },
+	"Bengala": { Tecnica: "Bastão", ModVel: 0, ModDano: 1, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Tonfa de Ferro": { Tecnica: "Bastão", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "" },
 	"Wakizashi": { Tecnica: "Faca", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "Empunhadura: Uma Mão." },
 	"Garrote": { Tecnica: "Apresamento", ModVel: -3, ModDano: 4, ModMov: "Nenhum", Sistema: "Se o alvo do ataque é tomado de surpresa ou tomar mais de 5 dano no ataque inicial, ele é considerado em choque e não ABS nos ataques subsequentes ao Apresamento Sustentado!" },
