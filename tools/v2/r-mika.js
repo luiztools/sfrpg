@@ -9,7 +9,7 @@ function RMikaZ3() {
     antecedentes[6] = newCaracteristica("Staff", 3);
     var mika = {
         Nome: "Rainbow Mika",
-        Estilo: "Luta Livre",
+        Estilo: "Wrestling",
         Escola: "Dojô de Yoko",
         Jogador: "NPC",
         Assinatura: "Levanta os braços!",
@@ -67,7 +67,7 @@ function RMikaSF5() {
     antecedentes[6] = newCaracteristica("Staff", 3);
     var mika = {
         Nome: "Rainbow Mika",
-        Estilo: "Luta Livre",
+        Estilo: "Wrestling",
         Escola: "Dojô de Yoko",
         Jogador: "NPC",
         Assinatura: "Levanta os braços!",

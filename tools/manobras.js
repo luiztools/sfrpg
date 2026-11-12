@@ -357,6 +357,8 @@ const manobras = {
 	//Outros
 	"Spinning Weapon": { Tecnica: "Bastão/Lança/Espada/Machado/Chicote/Faca/Mangual/Garra", ModVel: 0, ModDano: "-1/-1/-1", ModMov: "Um", FdV: 1, Sistema: "Três hits. Armado." },
 	"Weapon Sweep": { Tecnica: "Bastão/Lança/Chicote/Mangual", ModVel: -2, ModDano: 2, ModMov: -3, Vantagens: ["Knockdown", "Agachamento"], Sistema: "KD. Agachamento. Armado." },
+	"Weapon Choke": { Tecnica: "Chicote", ModVel: -1, ModDano: -1, ModMov: "Nenhum", FdV: 1, Vantagens: ["Sustentado", "Ignora Bloqueio"], Sistema: "Apresamento Sustentado com o chicote no pescoço; dano com Chicote e limite de turnos com Apresamento; mantido por três turnos, o oponente fica Atordoado; alcance da arma usada; FdV só no primeiro turno" },
+	"Strangle Throw": { Tecnica: "Chicote", ModVel: -1, ModDano: 1, ModMov: 0, Vantagens: ["Knockdown", "Knockback"], Sistema: "Pega o oponente pela garganta com o chicote; acerta oponente aéreo ou no chão (agachado ou em pé); qualquer dano causa KD; o alvo termina o turno em hex adjacente ao atacante, à escolha dele; alcance da arma usada" },
 	"Weapon Channeling": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", Chi: 1, PC: 2, Sistema: "Jogado com manobras básicas de armas; adiciona +2 no dano." },
 	"Weapon Uppercut": { Tecnica: "Bastão/Espada/Faca/Garra/Mangual", ModVel: -1, ModDano: 3, ModMov: "Um", Vantagens: ["Anti-Aérea"], Sistema: "KD vs. Aérea" },
 	"Battojutsu": { Tecnica: "Espada", ModVel: 2, ModDano: 1, ModMov: 0, FdV: 1, Sistema: "Revele a carta antes das velocidades; soma +2 Vel e +1 Dano a uma manobra básica ou especial de Espada que não gaste FdV" },

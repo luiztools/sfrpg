@@ -12,7 +12,7 @@ function Nightwolf() {
 
     const personagem = {
         Nome: "Nightwolf",
-        Estilo: "Luta Live Nativo Americana",
+        Estilo: "Luta-Livre Nativo Americana",
         Escola: "Tribo",
         Jogador: "NPC",
         Assinatura: "Gargalhada",
@@ -83,7 +83,7 @@ function NightwolfArmageddon() {
 
     const personagem = {
         Nome: "Nightwolf",
-        Estilo: "Luta Live Nativo Americana",
+        Estilo: "Luta-Livre Nativo Americana",
         Escola: "Tribo",
         Jogador: "NPC",
         Assinatura: "Gargalhada",

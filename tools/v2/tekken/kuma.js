@@ -6,7 +6,7 @@ function Kuma() {
 
     var personagem = {
         Nome: "Kuma",
-        Estilo: "Luta Livre",
+        Estilo: "Wrestling",
         Escola: "Dojô Mishima",
         Jogador: "NPC",
         Assinatura: "Levanta os braços",

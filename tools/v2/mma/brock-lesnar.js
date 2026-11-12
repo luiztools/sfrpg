@@ -2,7 +2,7 @@
 function BrockLesnar() {
     const personagem = {
         Nome: "Brock Lesnar",
-        Estilo: "Vale-Tudo (Luta-Livre)",
+        Estilo: "Vale-Tudo (Wrestling)",
         Escola: "Minessota High School",
         Assinatura: "Palavreado de baixo calão",
         Conceito: "Lutador Violento",
