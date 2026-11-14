@@ -14,7 +14,7 @@ function BigBearFF() {
         Conceito: "Lutador profissional",
         Cronica: "Fatal Fury",
         Equipe: "Howard Connection",
-        Time: "Howard Connection",
+        Time: "Korea Justice",
         Forca: 6,
         Destreza: 3,
         Vigor: 6,
@@ -55,7 +55,7 @@ function BigBearFF() {
         Honra: 5,
         Chi: 4,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

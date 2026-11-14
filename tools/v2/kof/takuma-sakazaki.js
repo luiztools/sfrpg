@@ -14,7 +14,7 @@ function TakumaSakazaki() {
         Conceito: "Sensei",
         Cronica: "Art of Fighting",
         Equipe: "Clã Sakazaki",
-        Time: "Art of Fighting",
+        Time: "Art of Fighting Team",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,

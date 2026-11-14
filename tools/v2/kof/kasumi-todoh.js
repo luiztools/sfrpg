@@ -18,6 +18,7 @@ function KasumiTodoh() {
         Conceito: "Lutadora Profissional",
         Cronica: "Art of Fighting 3",
         Equipe: "Clã Todoh",
+        Time: "Women Fighters",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,
@@ -60,7 +61,7 @@ function KasumiTodoh() {
         Honra: 0,
         Chi: 7,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

@@ -14,7 +14,7 @@ function KimFF() {
         Conceito: "Campeão Mundial de Tae Kwon Dô",
         Cronica: "Fatal Fury 2",
         Equipe: "Nenhuma",
-        Time: "Nenhum",
+        Time: "Korea Justice",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -55,7 +55,7 @@ function KimFF() {
         Honra: 7,
         Chi: 7,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

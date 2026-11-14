@@ -59,7 +59,7 @@ function Sinclair() {
         Honra: 3,
         Chi: 2,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 8
     };

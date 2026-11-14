@@ -54,7 +54,7 @@ function AxelFF() {
         Honra: 2,
         Chi: 3,
         ForcaVontade: 8,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

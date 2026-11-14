@@ -16,7 +16,7 @@ function GeeseKoF() {
         Conceito: "Rei do Crime",
         Cronica: "King of Fighters",
         Equipe: "Howard Connection",
-        Time: "Howard Connection",
+        Time: "South Town Team",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -82,7 +82,7 @@ function GeeseFF() {
         Conceito: "Rei do Crime",
         Cronica: "Fatal Fury",
         Equipe: "Howard Connection",
-        Time: "Howard Connection",
+        Time: "South Town Team",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -123,7 +123,7 @@ function GeeseFF() {
         Honra: 0,
         Chi: 9,
         ForcaVontade: 10,
-        Saude: 18,
+        Saude: 20,
         Divisao: "Livre",
         Posto: 7
     };
@@ -148,7 +148,7 @@ function GeeseAoF() {
         Conceito: "Rei do Crime",
         Cronica: "Art of Fighting",
         Equipe: "Howard Connection",
-        Time: "Howard Connection",
+        Time: "South Town Team",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -189,7 +189,7 @@ function GeeseAoF() {
         Honra: 0,
         Chi: 8,
         ForcaVontade: 10,
-        Saude: 15,
+        Saude: 20,
         Divisao: "Livre",
         Posto: 6
     };

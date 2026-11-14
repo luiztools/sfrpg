@@ -12,6 +12,7 @@ function KingKoF() {
         Assinatura: "Elegância",
         Conceito: "Estudante",
         Cronica: "Art of Fighting",
+        Time: "Women Fighters",
         Forca: 4,
         Destreza: 6,
         Vigor: 5,
@@ -52,7 +53,7 @@ function KingKoF() {
         Honra: 3,
         Chi: 5,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

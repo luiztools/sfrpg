@@ -16,7 +16,7 @@ function DuckKingFF() {
         Conceito: "Punk",
         Cronica: "Fatal Fury",
         Equipe: "Nenhuma",
-        Time: "Nenhum",
+        Time: "Fatal Fury Team",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,

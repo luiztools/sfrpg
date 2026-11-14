@@ -28,7 +28,7 @@ function GatoGarou() {
         Conceito: "Assassino e mestre de Gou-kei",
         Cronica: "Garou: Mark of the Wolves",
         Equipe: "Nenhuma",
-        Time: "Nenhum",
+        Time: "Fatal Fury Team",
         Forca: 5,
         Destreza: 4,
         Vigor: 5,

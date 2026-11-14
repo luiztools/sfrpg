@@ -13,7 +13,7 @@ function YuriSakazaki() {
         Conceito: "Aventureira",
         Cronica: "Art of Fighting 2",
         Equipe: "Clã Sakazaki",
-        Time: "Art of Fighting",
+        Time: "Art of Fighting Team",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -54,7 +54,7 @@ function YuriSakazaki() {
         Honra: 7,
         Chi: 7,
         ForcaVontade: 8,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

@@ -13,7 +13,7 @@ function RobertKoF() {
         Conceito: "Playboy",
         Cronica: "King of Fighters",
         Equipe: "Clã Sakazaki",
-        Time: "Art of Fighting",
+        Time: "Art of Fighting Team",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,

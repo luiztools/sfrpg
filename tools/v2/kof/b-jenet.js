@@ -32,7 +32,7 @@ function JenetGarou() {
         Conceito: "Pirata",
         Cronica: "Garou: Mark of the Wolves",
         Equipe: "Nenhuma",
-        Time: "Nenhum",
+        Time: "Fatal Fury Team",
         Forca: 3,
         Destreza: 6,
         Vigor: 4,

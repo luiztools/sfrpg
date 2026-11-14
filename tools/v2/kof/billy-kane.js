@@ -20,7 +20,7 @@ function BillyKane() {
         Conceito: "Capanga",
         Cronica: "Fatal Fury",
         Equipe: "Howard Connection",
-        Time: "Howard Connection",
+        Time: "South Town Team",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -63,7 +63,7 @@ function BillyKane() {
         Honra: 2,
         Chi: 5,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 8
     };

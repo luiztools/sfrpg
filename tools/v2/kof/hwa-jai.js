@@ -13,7 +13,7 @@ function HwaJai() {
         Conceito: "Lutador vingativo",
         Cronica: "Fatal Fury",
         Equipe: "Howard Connection",
-        Time: "Howard Connection",
+        Time: "Korea Justice",
         Forca: 5,
         Destreza: 5,
         Vigor: 5,
@@ -54,7 +54,7 @@ function HwaJai() {
         Honra: 1,
         Chi: 5,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 8
     };

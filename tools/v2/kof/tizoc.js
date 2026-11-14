@@ -33,7 +33,7 @@ function TizocGarou() {
         Conceito: "Campeão de Luta Livre",
         Cronica: "Garou: Mark of the Wolves",
         Equipe: "Nenhuma",
-        Time: "Nenhum",
+        Time: "Fatal Fury Team",
         Forca: 6,
         Destreza: 4,
         Vigor: 5,

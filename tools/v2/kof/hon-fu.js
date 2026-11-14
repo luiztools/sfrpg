@@ -63,7 +63,7 @@ function HonFuFF() {
         Honra: 6,
         Chi: 5,
         ForcaVontade: 6,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 8
     };

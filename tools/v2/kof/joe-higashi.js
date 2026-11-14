@@ -54,7 +54,7 @@ function JoeFF() {
         Honra: 6,
         Chi: 7,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 9
     };

@@ -49,7 +49,7 @@ function JinFuha() {
         Honra: 0,
         Chi: 5,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

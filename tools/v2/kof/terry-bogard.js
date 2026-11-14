@@ -55,7 +55,7 @@ function TerryFF() {
         Honra: 7,
         Chi: 10,
         ForcaVontade: 10,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 10
     };

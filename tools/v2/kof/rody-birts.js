@@ -59,7 +59,7 @@ function RodyBirts() {
         Honra: 0,
         Chi: 3,
         ForcaVontade: 10,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 8
     };

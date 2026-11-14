@@ -52,7 +52,7 @@ function TomWyler() {
         Honra: 1,
         Chi: 4,
         ForcaVontade: 10,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

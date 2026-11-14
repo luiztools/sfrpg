@@ -20,7 +20,7 @@ function MaiFF() {
         Conceito: "Menina Mimada",
         Cronica: "Fatal Fury 2",
         Equipe: "Nenhuma",
-        Time: "Nenhum",
+        Time: "Fatal Fury Team",
         Forca: 4,
         Destreza: 6,
         Vigor: 4,
@@ -63,7 +63,7 @@ function MaiFF() {
         Honra: 5,
         Chi: 9,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 8
     };

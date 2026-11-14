@@ -61,7 +61,7 @@ function RyuhakuTodoh() {
         Honra: 2,
         Chi: 4,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

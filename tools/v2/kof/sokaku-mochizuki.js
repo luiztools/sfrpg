@@ -4,6 +4,7 @@ function SokakuFF() {
     antecedentes[1] = newCaracteristica("Apoio", 4);
     antecedentes[2] = newCaracteristica("Recursos", 2);
     antecedentes[3] = newCaracteristica("Contatos", 3);
+    antecedentes[4] = newCaracteristica("Elemental (Eletricidade)", 6);
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Bastão", 5);
@@ -58,7 +59,7 @@ function SokakuFF() {
         Foco: 6,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Foot Sweep, Throw, Breakfall, Energy Ball, Shock Treatment, Spinning Weapon, Spinning Back Fist, Lightning, Deaths Visage, Elemental Explosion, Pile Driver, Rolling Attack, Missile Reflection, Energy Reflection, Chi Kun Healing, Shrouded Moon",
+        ManobrasEspeciais: "Jump, Foot Sweep, Throw, Breakfall, Energy Ball, Shock Treatment, Spinning Weapon, Spinning Back Fist, Electro Bolt, Deaths Visage, Elemental Explosion, Pile Driver, Rolling Attack, Missile Reflection, Energy Reflection, Chi Kun Healing, Shrouded Moon",
         Combos: "Bastão Jab para Bastão Jab para Bastão Jab; Bastão Jab para Shock Treatment (Dizzy); Bastão Strong para Elemental Explosion; Shock Treatment para Pile Driver",
         Gloria: 4,
         Honra: 5,

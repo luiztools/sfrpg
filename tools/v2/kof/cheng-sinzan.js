@@ -55,7 +55,7 @@ function ChengFF() {
         Honra: 4,
         Chi: 8,
         ForcaVontade: 6,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

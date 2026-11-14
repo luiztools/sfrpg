@@ -3,11 +3,17 @@ function Orochi() {
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Fama", 3);
     antecedentes[2] = newCaracteristica("Sangue de Orochi", 5);
-    antecedentes[3] = newCaracteristica("Elemental (Fogo e Ar)", 5);
+    antecedentes[3] = newCaracteristica("Elemental (Todos)", 5);
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Instrução", 2);
+
+    const conhecimentos = [];
+    conhecimentos[0] = newCaracteristica("Linguística", 5);
 
     const personagem = {
         Nome: "Orochi",
-        Estilo: "Todos",
+        Estilo: "Jeet Kune Dô",
         Escola: "Nenhuma",
         Jogador: "NPC",
         Assinatura: "Caçoa do oponente",
@@ -47,7 +53,9 @@ function Orochi() {
         Apresamento: 7,
         Esportes: 7,
         Foco: 7,
-        ManobrasEspeciais: "Jump, Power Uppercut,  Wheel Kick, Flaming Fist, Fist Sweep, Fire Strike, Sonic Boom, Breakfall, Kippup, Telepathy, Mind Reading, Psychic Vise, Yoga Teleport, Air Blast, Push, Chi Push, Chi Kun Healing, Elemental Stride, Double Hit Punch, Sense Orochi, Awakening Blood",
+        NovosTalentos: talentos,
+        NovosConhecimentos: conhecimentos,
+        ManobrasEspeciais: "Jump, Power Uppercut, Wheel Kick, Flaming Fist, Fist Sweep, Fire Strike, Sonic Boom, Breakfall, Kippup, Telepathy, Mind Reading, Psychic Vise, Yoga Teleport, Air Blast, Push, Chi Push, Chi Kun Healing, Elemental Stride, Double Hit Punch, Sense Orochi, Awakening Blood",
         Combos: "Double-Hit Punch para Sonic Boom para Sonic Boom (Dizzy); Chi Push para Yoga Teleport para Push (Dizzy); Chi Push para Elemental Stride para Push (Dizzy); Wheel Kick para Push para Chi Push (Dizzy)",
         Gloria: 0,
         Honra: 0,

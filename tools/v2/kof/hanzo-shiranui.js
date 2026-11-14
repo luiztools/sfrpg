@@ -54,7 +54,7 @@ function HanzoFF() {
         Honra: 8,
         Chi: 10,
         ForcaVontade: 8,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 9
     };

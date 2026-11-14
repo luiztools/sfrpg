@@ -54,7 +54,7 @@ function BobWilson() {
         Honra: 3,
         Chi: 5,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 8
     };
