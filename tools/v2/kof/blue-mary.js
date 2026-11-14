@@ -123,7 +123,7 @@ function BlueMaryKoF() {
         Esportes: 5,
         Foco: 2,
         NovasPericias: pericias,
-        ManobrasEspeciais: "Jump, Kippup, Breakfall, Grappling Defense, Throw, Suplex, Thigh Press, Dislocate Limb, Back Roll Throw, Foot Sweep, Spinning Foot Sweep, Power Uppercut, Double Hit Kick, Air Throw, Air Suplex, Counter Attack, Slide Kick, Spinning Pile Driver",
+        ManobrasEspeciais: "Jump, Kippup, Breakfall, Grappling Defense, Throw, Suplex, Thigh Press, Dislocate Limb, Back Roll Throw, Foot Sweep, Spinning Foot Sweep, Power Uppercut, Double Hit Kick, Air Throw, Air Suplex, Cross Counter, Slide Kick, Spinning Pile Driver",
         Combos: "Short para Short para Jumping Roundhouse; Thigh Press para Dislocate Limb para Back Roll Throw (Dizzy); Jab para Strong para Forward; Thigh Press para Dislocate Limb para Thigh Press (Dizzy); Short para Slide Kick; Bloqueio para Air Throw; Bloqueio para Back Roll Throw; Bloqueio para Spinning Pile Driver",
         Gloria: 4,
         Honra: 5,

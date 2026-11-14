@@ -56,7 +56,7 @@ function Frost() {
         Foco: 4,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Spinning Back Fist, Face Slam, Ducking Fierce, Elbow Smash, Throw, Flamingo Stance, Power Uppercut, Backflip, Double Hit Punch, Double Hit Kick, Palm Press, Triple Strike, Power Up, Wounded Knee, Ice Blast, Ice Ground, Slide Kick",
+        ManobrasEspeciais: "Jump, Kippup, Spinning Back Fist, Face Slam, Ducking Fierce, Elbow Smash, Throw, Flamingo Stance, Power Uppercut, Backflip, Double Hit Punch, Double Hit Kick, Reaping Palm, Triple Strike, Power Up, Wounded Knee, Ice Blast, Ice Ground, Slide Kick",
         Combos: "Jab para Jab para Face Slam (dizzy); Jab para Strong para Throw (dizzy); Jab para Strong para Roundhouse (dizzy); Short para Forward para Roundhouse (dizzy); Espada Jab (3x) (Dizzy);",
         Gloria: 4,
         Honra: 0,

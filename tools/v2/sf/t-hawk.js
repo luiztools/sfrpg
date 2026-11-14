@@ -117,7 +117,7 @@ function THawkSF2() {
     return hawk;
 }
 
-var npc;
+let npc;
 if (getParameterByName('age') === 'sfa')
     npc = THawkSFZ3();
 else

@@ -15,6 +15,7 @@ function Ron() {
         Assinatura: "Postura sinistra",
         Conceito: "Necromante",
         Cronica: "The King of Fighters",
+        Equipe: "NESTS",
         Time: "Nenhum",
         Forca: 5,
         Destreza: 6,

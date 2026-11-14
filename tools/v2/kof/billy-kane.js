@@ -70,6 +70,82 @@ function BillyKane() {
     return personagem;
 }
 
-let npc = BillyKane();
+function BillyKaneKoF() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 2);
+    antecedentes[1] = newCaracteristica("Apoio", 4);
+    antecedentes[2] = newCaracteristica("Fama", 3);
+    antecedentes[3] = newCaracteristica("Recursos", 2);
+
+    const tecnicas = [];
+    tecnicas[0] = newCaracteristica("Bastão", 5);
+
+    const armas = [];
+    armas[0] = "Bastão";
+
+    const personagem = {
+        Nome: "Billy Kane",
+        Estilo: "Bojutsu",
+        Escola: "Desconhecida",
+        Jogador: "NPC",
+        Assinatura: "Bandana",
+        Conceito: "Capanga",
+        Cronica: "The King of Fighters",
+        Equipe: "Howard Connection",
+        Time: "South Town Team",
+        Forca: 4,
+        Destreza: 6,
+        Vigor: 4,
+        Carisma: 3,
+        Manipulacao: 3,
+        Aparencia: 3,
+        Percepcao: 3,
+        Inteligencia: 3,
+        Raciocinio: 3,
+        Prontidao: 3,
+        Interrogacao: 0,
+        Intimidacao: 4,
+        Perspicacia: 2,
+        Manha: 4,
+        Labia: 2,
+        LutaCega: 0,
+        Conducao: 2,
+        Lideranca: 0,
+        Seguranca: 3,
+        Furtividade: 3,
+        Sobrevivencia: 2,
+        Arena: 2,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 1,
+        Misterios: 0,
+        Estilos: 3,
+        Antecedentes: antecedentes,
+        Soco: 3,
+        Chute: 3,
+        Bloqueio: 4,
+        Apresamento: 4,
+        Esportes: 6,
+        Foco: 5,
+        NovasTecnicas: tecnicas,
+        Armas: armas,
+        ManobrasEspeciais: "Slide Kick, Breakfall, Throw, Jump, Wall Spring, Spinning Weapon, Fireball, Handstand Kick",
+        Combos: "Bastão Strong - Bastão Fierce; Handstand Kick - Jumping - Bastão Fierce (Dizzy); Spinning Weapon - Fireball (dizzy); Bloqueio para Slide Kick; Bloqueio para Fireball; Bloqueio para Throw",
+        Gloria: 9,
+        Honra: 2,
+        Chi: 6,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Duelistas",
+        Posto: 8
+    };
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'kof')
+    npc = BillyKaneKoF();
+else
+    npc = BillyKane();
 
 npc = calcPC(npc);

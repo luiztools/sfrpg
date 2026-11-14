@@ -93,7 +93,7 @@ wp_db_close
 ```
 
 - **Aparência:** o parágrafo `<strong>Aparência:</strong>`, traduzido para `--personagem`.
-- **Imagem do personagem:** o primeiro `<img>` do post, ignorando os botões `/img/planilha-*`. Em post de gêmeos ou duplas, use o bloco do personagem certo. Prefira o arquivo sem sufixo de tamanho (`-300x300`).
+- **Imagem do personagem:** o primeiro `<img>` do post, ignorando os botões de planilha (`planilha-*.jpg`). Em post de gêmeos ou duplas, use o bloco do personagem certo. Prefira o arquivo sem sufixo de tamanho (`-300x300`).
 - **Arena:** a seção `<h3>` "Arena de X" e a imagem logo abaixo dela.
 - **País:** a linha `<strong>País:</strong>`.
 - **Ficha (`Estilo` e antecedente Arena):** o link da planilha `_character.php?name=<caminho>` aponta para `v2/<caminho>.js`.
