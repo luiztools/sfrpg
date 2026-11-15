@@ -55,7 +55,7 @@ function Torr() {
         Foco: 1,
         Armas: armas,
         ManobrasEspeciais: "Jump, Spinning Back Fist, Foot Sweep, Power Uppercut, Face Slam, Bear Hug, Back Breaker",
-        Combos: "Jab – Strong – Forward (dizzy); Jab – Foot Sweep (dizzy); Spinning Back Fist – Fierce; Bloqueio – Face Slam – Ataque de Mascote",
+        Combos: "Jab para Strong para Forward (dizzy); Jab para Foot Sweep (dizzy); Spinning Back Fist para Fierce; Bloqueio para Face Slam para Ataque de Mascote",
         Gloria: 1,
         Honra: 1,
         Chi: 1,

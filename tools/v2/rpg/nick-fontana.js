@@ -41,7 +41,7 @@
         Esportes: 2,
         Foco: 3,
         ManobrasEspeciais: "Power Uppercut, Dragon Punch, Jump, Foot Sweep, Fireball",
-        Combos: "Jab para Dragon Punch (Dizzy); JUmp + Short para Foot Sweep (Dizzy)",
+        Combos: "Jab para Dragon Punch (Dizzy); Jump + Short para Foot Sweep (Dizzy)",
         Gloria: 2,
         Honra: 2,
         Chi: 4,

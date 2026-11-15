@@ -56,7 +56,7 @@ function Kenshi() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Spinning Back Fist, Power Uppercut, Foot Sweep, Brain Cracker, Triple Strike, Double Hit Kick, Missile Reflection, Energy Reflection, Chi Kun Healing, Chi Push, Telekinesis, Weapon Channeling, Soul Illusion",
-        Combos: "Jab – Strong – Power Uppercut (dizzy); Jab – Strong – Katana Fierce (dizzy); Jab – Forward – Triple Strike (dizzy); Chi Push – Chi Push – Chi Push",
+        Combos: "Jab para Strong para Power Uppercut (dizzy); Jab para Strong para Katana Fierce (dizzy); Jab para Forward para Triple Strike (dizzy); Chi Push para Chi Push para Chi Push",
         Gloria: 6,
         Honra: 8,
         Chi: 6,

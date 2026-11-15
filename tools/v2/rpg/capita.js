@@ -57,7 +57,7 @@
         Foco: 3,
         NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Jump, Throw, Slide Kick, Ice Blast, Double Hit Kick, Double Dread Kick",
-        Combos: "Aparar – Bastão Fierce – Bastão Fierce; Slide Kick – Double Dread Kick – Ice Blast (dizzy)",
+        Combos: "Aparar para Bastão Fierce para Bastão Fierce; Slide Kick para Double Dread Kick para Ice Blast (dizzy)",
         Gloria: 4,
         Honra: 2,
         Chi: 6,

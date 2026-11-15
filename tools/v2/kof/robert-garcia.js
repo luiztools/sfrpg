@@ -49,7 +49,7 @@ function RobertKoF() {
         Esportes: 4,
         Foco: 6,
         ManobrasEspeciais: "Lightning Leg, Fireball, Jump, Throw, Power Uppercut, Dragon Punch, Hurricane Kick, Dive Kick, Double Hit Kick, Slide Kick, Wall Spring, Triple Strike, Improved Fireball, Foot Sweep",
-        Combos: "Roundhouse - Fireball; Short - Forward - Roundhouse (Dizzy); Double Hit Kick - Dragon Punch - Foot Sweep; Movimento - Lightning Leg - Dragon Punch (Dizzy); Short - Forward - Double Hit Kick (Dizzy); Slide Kick - Foot Sweep (Dizzy)",
+        Combos: "Roundhouse para Fireball; Short para Forward para Roundhouse (Dizzy); Double Hit Kick para Dragon Punch para Foot Sweep; Movimento para Lightning Leg para Dragon Punch (Dizzy); Short para Forward para Double Hit Kick (Dizzy); Slide Kick para Foot Sweep (Dizzy); Bloqueio para Improved Fireball; Bloqueio para Lightning Leg; Bloqueio para Dragon Punch",
         Gloria: 10,
         Honra: 6,
         Chi: 9,
@@ -64,7 +64,12 @@ function RobertKoF() {
 function RobertAoF() {
     const personagem = RobertKoF();
     personagem.Cronica = "Art of Fighting";
-    personagem.Chi = 7;
+    personagem.Combos = "Roundhouse para Fireball; Short para Forward para Roundhouse (Dizzy); Double Hit Kick para Dragon Punch para Foot Sweep; Movimento para Lightning Leg para Dragon Punch (Dizzy); Short para Forward para Double Hit Kick (Dizzy); Slide Kick para Foot Sweep (Dizzy)";
+    personagem.Chi = 8;
+    personagem.ForcaVontade = 8;
+    personagem.Posto = 7;
+    personagem.Gloria = 9;
+    personagem.Honra = 5;
     personagem.Saude = 18;
     return personagem;
 }

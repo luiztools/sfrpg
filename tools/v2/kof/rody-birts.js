@@ -54,7 +54,7 @@ function RodyBirts() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Breakfall, Double Hit Knee, Double Hit Punch, Hyper Fist, Power Uppercut, Throw",
-        Combos: "Tonfa Strong - Tonfa Fierce; Aparar (Tonfa) - Ataque Furioso (Tonfa)",
+        Combos: "Tonfa Strong para Tonfa Fierce; Aparar (Tonfa) para Ataque Furioso (Tonfa)",
         Gloria: 0,
         Honra: 0,
         Chi: 3,

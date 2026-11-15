@@ -55,19 +55,36 @@ function KasumiTodoh() {
         Foco: 5,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Breakfall, Throw, Power Uppercut, Foot Sweep, Fireball, Double Hit Kick",
-        Combos: "Fireball - Ultimate Ecstasy Crunch (Dizzy); Bloqueio - Ultimate Ecstasy Crunch; Jab - Power Uppercut - Fireball (Dizzy)",
-        Gloria: 0,
-        Honra: 0,
-        Chi: 7,
-        ForcaVontade: 9,
+        ManobrasEspeciais: "Jump, Breakfall, Throw, Power Uppercut, Foot Sweep, Fireball, Double Hit Kick, Reaping Palm, Elbow Smash, Final Wave, Cross Counter, Triple Strike",
+        Combos: "Fireball para Final Wave (Dizzy); Bloqueio para Final Wave; Jab para Power Uppercut para Fireball (Dizzy)",
+        Gloria: 1,
+        Honra: 2,
+        Chi: 6,
+        ForcaVontade: 8,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }
 
-let npc = KasumiTodoh();
+function KasumiKoF() {
+    const personagem = KasumiTodoh();
+    personagem.Cronica = "The King of Fighters";
+    personagem.Combos += "; Bloqueio para Elbow Smash; Bloqueio para Power Uppercut; Bloqueio para Fireball";
+    personagem.Gloria = Math.min(personagem.Gloria + 1, 9);
+    personagem.Honra = Math.min(personagem.Honra + 1, 9);
+    personagem.Chi = Math.min(personagem.Chi + 1, 10);
+    personagem.ForcaVontade = Math.min(personagem.ForcaVontade + 1, 10);
+    personagem.Saude = Math.min(personagem.Saude + 2, 20);
+    personagem.Posto = Math.min(personagem.Posto + 1, 9);
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'kof')
+    npc = KasumiKoF();
+else
+    npc = KasumiTodoh();
 
 npc = calcPC(npc);

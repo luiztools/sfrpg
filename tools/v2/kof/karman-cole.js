@@ -52,7 +52,7 @@ function KarmanCole() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Breakfall, Reverse Frontal Kick, Foot Sweep, Throw, Brain Cracker, Dashing Punch, Spinning Back Fist",
-        Combos: "Jab - Spinning Back Fist (Dizzy); Foot Sweep - Brain Cracker - Brain Cracker (Dizzy); Jab - Brain Cracker (Dizzy)",
+        Combos: "Jab para Spinning Back Fist (Dizzy); Foot Sweep para Brain Cracker para Brain Cracker (Dizzy); Jab para Brain Cracker (Dizzy)",
         Gloria: 0,
         Honra: 0,
         Chi: 3,

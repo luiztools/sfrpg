@@ -56,7 +56,7 @@ function RyuhakuTodoh() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Breakfall, Throw, Power Uppercut, Foot Sweep, Fireball, Double Hit Kick",
-        Combos: "Fireball - Fireball (Dizzy); Bloqueio - Fireball; Jab - Power Uppercut - Fireball (Dizzy)",
+        Combos: "Fireball para Fireball (Dizzy); Bloqueio para Fireball; Jab para Power Uppercut para Fireball (Dizzy)",
         Gloria: 5,
         Honra: 2,
         Chi: 4,

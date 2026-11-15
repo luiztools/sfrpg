@@ -64,7 +64,7 @@ function KotalKahn() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Power Uppercut, Fireball, Jumping Shoulder Butt, Foot Sweep, Buffalo Punch, Face Slam, Throw",
-        Combos: "Jab – Strong – Jumping Shoulder Butt (dizzy); Jab – Strong – Forward (dizzy); Jumping Strong – Throw; Espada Jab – Espada Fierce (dizzy); Bloqueio – Face Slam – Buffalo Punch",
+        Combos: "Jab para Strong para Jumping Shoulder Butt (dizzy); Jab para Strong para Forward (dizzy); Jumping Strong para Throw; Espada Jab para Espada Fierce (dizzy); Bloqueio para Face Slam para Buffalo Punch",
         Gloria: 8,
         Honra: 7,
         Chi: 7,

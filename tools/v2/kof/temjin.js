@@ -47,7 +47,7 @@ function Temjin() {
         Esportes: 5,
         Foco: 4,
         ManobrasEspeciais: "Jump, Kippup, Throw, Pile Driver, Spinning Pile Driver, Energy Ball, Hyper Tackle, Grappling Defense, Wall Spring, Flying Body Spear",
-        Combos: "Strong - Roundhouse - Fierce (Dizzy)",
+        Combos: "Strong para Roundhouse para Fierce (Dizzy)",
         Gloria: 4,
         Honra: 2,
         Chi: 7,

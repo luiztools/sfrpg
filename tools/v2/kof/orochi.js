@@ -19,6 +19,8 @@ function Orochi() {
         Assinatura: "Caçoa do oponente",
         Conceito: "Emissário da Morte",
         Cronica: "The King of Fighters 97",
+        Equipe: "Hakkesshu",
+        Time: "Orochi Team",
         Forca: 7,
         Destreza: 5,
         Vigor: 7,

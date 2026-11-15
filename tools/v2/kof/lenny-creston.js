@@ -52,7 +52,7 @@ function LennyCreston() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Breakfall, Backflip Kick, Throw, Spinning Weapon, Kippup",
-        Combos: "Chicote Jab - Spinning Weapon (Dizzy); Short - Forward - Spinning Weapon (Dizzy)",
+        Combos: "Chicote Jab para Spinning Weapon (Dizzy); Short para Forward para Spinning Weapon (Dizzy)",
         Gloria: 0,
         Honra: 0,
         Chi: 2,

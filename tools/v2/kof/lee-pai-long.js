@@ -56,7 +56,7 @@ function LeePaiLong() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Throw, Air Throw, Rising Storm Crow, Spinning Weapon, Wall Spring, Handstand Kick, Triple Strike, Hundred Hand Slap, Chi Kun Healing, Foot Sweep, Spinning Foot Sweep, Multiple Stomp, Balance, Rolling Attack, Flying Heel Stomp, Power Uppercut",
-        Combos: "Wall Spring - Spinning Weapon; Jump - Spinning Weapon; Bloqueio - Power Uppercut; Hundred Hand Slap - Power Uppercut - Jumping Forward (Dizzy)",
+        Combos: "Wall Spring para Spinning Weapon; Jump para Spinning Weapon; Bloqueio para Power Uppercut; Hundred Hand Slap para Power Uppercut para Jumping Forward (Dizzy)",
         Gloria: 3,
         Honra: 6,
         Chi: 4,

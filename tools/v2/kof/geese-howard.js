@@ -52,7 +52,7 @@ function GeeseKoF() {
         Esportes: 4,
         Foco: 6,
         ManobrasEspeciais: "Power Uppercut, Jump, Kippup, Throw, Double Hit Kick, Foot Sweep, Face Slam, Flying Fireball, Fireball, Punch Defense, Kick Defense,Throw, Shock Treatment, San He, Breakfall, Burn Knuckle, Grappling Defense, Air Throw, Spinning Back Fist, Improved Fireball",
-        Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment",
+        Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment; Bloqueio para Improved Fireball; Bloqueio para Air Throw; Bloqueio para Burn Knuckle",
         Gloria: 10,
         Honra: 0,
         Chi: 10,
@@ -185,13 +185,13 @@ function GeeseAoF() {
         Foco: 4,
         ManobrasEspeciais: "Power Uppercut, Jump, Kippup, Throw, Double Hit Kick, Foot Sweep, Face Slam, Flying Fireball, Fireball, Punch Defense, Kick Defense,Throw, Shock Treatment, San He, Breakfall, Burn Knuckle, Grappling Defense, Air Throw, Spinning Back Fist, Improved Fireball",
         Combos: "Punch Defense para Throw; Kick Defense para Throw; Bloqueio para Throw; Jump + Jab para Fierce para Fireball; Jump + Jab para Roundhouse para Burn Knuckle; Fierce para Flying Fireball para Shock Treatment",
-        Gloria: 8,
+        Gloria: 9,
         Honra: 0,
-        Chi: 8,
-        ForcaVontade: 10,
+        Chi: 9,
+        ForcaVontade: 9,
         Saude: 20,
         Divisao: "Livre",
-        Posto: 6
+        Posto: 7
     };
     return personagem;
 }

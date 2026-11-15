@@ -54,7 +54,7 @@ function Sinclair() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Fist Sweep, Hundred Hand Slap, Power Uppercut, Foot Sweep, Slide Kick, Breakfall",
-        Combos: "Cimitarra Jab - Hundred Hand Slap - Hundred Hand Slap (Dizzy); Aparar - Power Uppercut",
+        Combos: "Cimitarra Jab para Hundred Hand Slap para Hundred Hand Slap (Dizzy); Aparar para Power Uppercut",
         Gloria: 6,
         Honra: 3,
         Chi: 2,

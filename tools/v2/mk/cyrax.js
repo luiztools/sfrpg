@@ -62,7 +62,7 @@ function CyraxMK3() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Air Throw, Shrouded Moon, Pile Driver, Spinning Pile Driver",
-        Combos: "Granada - Power Uppercut - Rede (dizzy); Rede - Granada - Rede (dizzy); Forward - Forward - Foot Sweep (dizzy); Forward - Forward - Power Uppercut (dizzy); Jab - Jab - Power Uppercut (dizzy)",
+        Combos: "Granada para Power Uppercut para Rede (dizzy); Rede para Granada para Rede (dizzy); Forward para Forward para Foot Sweep (dizzy); Forward para Forward para Power Uppercut (dizzy); Jab para Jab para Power Uppercut (dizzy)",
         Gloria: 4,
         Honra: 0,
         Chi: 7,

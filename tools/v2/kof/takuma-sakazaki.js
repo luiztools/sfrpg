@@ -50,7 +50,7 @@ function TakumaSakazaki() {
         Esportes: 4,
         Foco: 6,
         ManobrasEspeciais: "Jump, Hyper Fist, Power Uppercut, Fireball, Improved Fireball, Knee Basher, Regeneration, Foot Sweep, Throw, Hurricane Kick, Triple Strike",
-        Combos: "Jab - Fierce; Jab - Fierce - Power Uppercut (Dizzy); Movimento - Hyper Fist - Improved Fireball (Dizzy)",
+        Combos: "Jab para Fierce; Jab para Fierce para Power Uppercut (Dizzy); Movimento para Hyper Fist para Improved Fireball (Dizzy)",
         Gloria: 8,
         Honra: 7,
         Chi: 10,
@@ -62,6 +62,23 @@ function TakumaSakazaki() {
     return personagem;
 }
 
-let npc = TakumaSakazaki();
+function TakumaKoF() {
+    const personagem = TakumaSakazaki();
+    personagem.Cronica = "The King of Fighters";
+    personagem.Combos += "; Bloqueio para Improved Fireball; Bloqueio para Knee Basher; Bloqueio para Hyper Fist";
+    personagem.Gloria = Math.min(personagem.Gloria + 1, 9);
+    personagem.Honra = Math.min(personagem.Honra + 1, 9);
+    personagem.Chi = Math.min(personagem.Chi + 1, 10);
+    personagem.ForcaVontade = Math.min(personagem.ForcaVontade + 1, 10);
+    personagem.Saude = 20;
+    personagem.Posto = Math.min(personagem.Posto + 1, 9);
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'kof')
+    npc = TakumaKoF();
+else
+    npc = TakumaSakazaki();
 
 npc = calcPC(npc);

@@ -57,7 +57,7 @@ function DVorah() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Monkey Grab Punch, Acid Breath, Throw, Air Throw, Upper Tail Strike, Typhoon Tail, Claw, Tail Slash",
-        Combos: "Jab – Claw – Tail Slash (dizzy); Jab – Strong – Fierce (dizzy); Power Uppercut – Tail Slash; Acid Breath – Acid Breath (dizzy)",
+        Combos: "Jab para Claw para Tail Slash (dizzy); Jab para Strong para Fierce (dizzy); Power Uppercut para Tail Slash; Acid Breath para Acid Breath (dizzy)",
         Gloria: 5,
         Honra: 2,
         Chi: 9,

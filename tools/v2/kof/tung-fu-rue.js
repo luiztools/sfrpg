@@ -153,7 +153,7 @@ function TungFuRueKoF() {
         Conceito: "Sensei verdadeiro",
         Cronica: "The King of Fighters",
         Equipe: "Nenhuma",
-        Time: "Nenhum",
+        Time: "China Team",
         Forca: 3,
         Destreza: 3,
         Vigor: 3,

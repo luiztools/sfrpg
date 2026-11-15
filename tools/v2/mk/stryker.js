@@ -73,7 +73,7 @@ function Stryker() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Weapon Sweep",
-        Combos: "Power Uppercut - Roundhouse; Foot Sweep - Granada (dizzy); Short - Short - Foot Sweep (dizzy); Short - Short - Jab (dizzy); Jab - Jab - Power Uppercut (dizzy)",
+        Combos: "Power Uppercut para Roundhouse; Foot Sweep para Granada (dizzy); Short para Short para Foot Sweep (dizzy); Short para Short para Jab (dizzy); Jab para Jab para Power Uppercut (dizzy)",
         Gloria: 5,
         Honra: 5,
         Chi: 3,

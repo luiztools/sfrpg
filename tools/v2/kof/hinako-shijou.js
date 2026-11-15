@@ -13,7 +13,7 @@ function HinakoShijou() {
         Conceito: "Estudante",
         Cronica: "The King of Fighters",
         Equipe: "Nenhuma",
-        Time: "Women Fighters",
+        Time: "High School Girls",
         Forca: 6,
         Destreza: 4,
         Vigor: 5,

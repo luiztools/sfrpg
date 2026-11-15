@@ -49,7 +49,7 @@ function Menat() {
         Esportes: 5,
         Foco: 6,
         ManobrasEspeciais: "Jump, Throw, Power Uppercut, Handstand Kick, Flying Body Spear, Air Throw, Missile Reflection, Energy Reflection, Double Hit Kick, Slide Kick, Fireball, Repeating Fireball, Psychokinetic Channeling, Extendible Limbs, Flying Heel Stomp, Accuracy, Flying Fireball, Telekinesis",
-        Combos: "Jab para Psycokinetic + Fierce (dizzy), Strong para Fierce (dizzy), Double-Hit Kick para Slide Kick",
+        Combos: "Jab para Psychokinetic + Fierce (dizzy), Strong para Fierce (dizzy), Double-Hit Kick para Slide Kick",
         Gloria: 5,
         Honra: 7,
         Chi: 10,

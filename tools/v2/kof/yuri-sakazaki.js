@@ -49,7 +49,7 @@ function YuriSakazaki() {
         Esportes: 5,
         Foco: 5,
         ManobrasEspeciais: "Jump, Power Uppercut, Fireball, Improved Fireball, Flying Fireball, Air Suplex, Kippup, Lightning Leg, Throw, Back Roll Throw, Brain Cracker, Energy Ball, Energy Reflection, Wall Spring, Dragon Punch",
-        Combos: "Jab - Forward - Roundhouse; Dragon Punch - Dragon Punch; Short - Lightning Leg (Dizzy)",
+        Combos: "Jab para Forward para Roundhouse; Dragon Punch para Dragon Punch; Short para Lightning Leg (Dizzy)",
         Gloria: 3,
         Honra: 7,
         Chi: 7,
@@ -61,6 +61,23 @@ function YuriSakazaki() {
     return personagem;
 }
 
-let npc = YuriSakazaki();
+function YuriKoF() {
+    const personagem = YuriSakazaki();
+    personagem.Cronica = "The King of Fighters";
+    personagem.Combos += "; Bloqueio para Improved Fireball; Bloqueio para Lightning Leg; Bloqueio para Back Roll Throw";
+    personagem.Gloria += 1;
+    personagem.Honra += 1;
+    personagem.Chi += 1;
+    personagem.ForcaVontade += 1;
+    personagem.Saude = 20;
+    personagem.Posto += 1;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'kof')
+    npc = YuriKoF();
+else
+    npc = YuriSakazaki();
 
 npc = calcPC(npc);

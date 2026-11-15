@@ -58,7 +58,7 @@ function Kai() {
         NovasTecnicas: [newCaracteristica("Faca", 5)],
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Backflip, Foot Sweep, Power Uppercut, Throw, Fireball, Flying Fireball, Slide Kick, Hair Throw, Tumbling Attack, Dragon Punch, Back Breaker",
-        Combos: "Strong - Strong - Power Uppercut; Jumping Short - Flying Fireball - Slide Kick; Drunken Monkey Roll - Fireball - Flying Fireball",
+        Combos: "Strong para Strong para Power Uppercut; Jumping Short para Flying Fireball para Slide Kick; Drunken Monkey Roll para Fireball para Flying Fireball",
         Gloria: 6,
         Honra: 9,
         Chi: 8,

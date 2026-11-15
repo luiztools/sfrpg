@@ -62,7 +62,7 @@ function SektorMK3() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Shrouded Moon, Fireball, Yoga Flame, Accuracy",
-        Combos: "Shrouded Moon - Power Uppercut - Fireball; Foot Sweep - Power Uppercut - Fireball; Forward - Forward - Roundhouse (dizzy); Forward - Forward - Jab (dizzy); Jab - Jab - Power Uppercut (dizzy)",
+        Combos: "Shrouded Moon para Power Uppercut para Fireball; Foot Sweep para Power Uppercut para Fireball; Forward para Forward para Roundhouse (dizzy); Forward para Forward para Jab (dizzy); Jab para Jab para Power Uppercut (dizzy)",
         Gloria: 4,
         Honra: 0,
         Chi: 8,

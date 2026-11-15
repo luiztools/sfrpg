@@ -63,7 +63,7 @@ function Skarlet() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Spinning Back Fist, Monkey Grab Punch, Drunken Monkey Roll, Handstand Kick, Drench, Drain, Shrouded Moon, Speed Of The Mongoose, Slide Kick",
-        Combos: "Jab - Jab - Strong; Jab - Jab - Roundhouse (dizzy); Kunai Jab - Kunai Strong - Forward (dizzy); Kunai Fierce - Roundhouse",
+        Combos: "Jab para Jab para Strong; Jab para Jab para Roundhouse (dizzy); Kunai Jab para Kunai Strong para Forward (dizzy); Kunai Fierce para Roundhouse",
         Gloria: 6,
         Honra: 2,
         Chi: 6,

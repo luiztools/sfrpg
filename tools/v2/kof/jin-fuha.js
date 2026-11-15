@@ -44,7 +44,7 @@ function JinFuha() {
         Esportes: 3,
         Foco: 4,
         ManobrasEspeciais: "Jump, Throw, Head Butt, Spinning Clothesline, Shrouded Moon, Boshi Ken, Shikan Ken, Wall Spring, Breakfall",
-        Combos: "Strong - Boshi Ken - Spinning Clothesline (Dizzy); Jab - Jab - Jab (Dizzy)",
+        Combos: "Strong para Boshi Ken para Spinning Clothesline (Dizzy); Jab para Jab para Jab (Dizzy)",
         Gloria: 0,
         Honra: 0,
         Chi: 5,

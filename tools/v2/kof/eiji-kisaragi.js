@@ -54,18 +54,36 @@ function EijiKisaragi() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Throw, Flying Heel Stomp, Multiple Stomp, Fireball, Improved Fireball, Psychokinetic Channeling, Wall Spring, Foot Sweep, Double Hit Kick, Sakki",
-        Combos: "Strong - Roundhouse - Fierce (Dizzy); Strong - Fierce - Katana Fierce (Dizzy)",
-        Gloria: 3,
+        Combos: "Strong para Roundhouse para Fierce (Dizzy); Strong para Fierce para Katana Fierce (Dizzy)",
+        Gloria: 2,
         Honra: 1,
-        Chi: 6,
-        ForcaVontade: 6,
+        Chi: 5,
+        ForcaVontade: 5,
         Saude: 16,
         Divisao: "Duelistas",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }
 
-let npc = EijiKisaragi();
+function EijiKoF() {
+    const personagem = EijiKisaragi();
+    personage.Time = "Yagami Team"
+    personagem.Cronica = "The King of Fighters";
+    personagem.Combos += "; Bloqueio para Improved Fireball; Bloqueio para Multiple Stomp; Bloqueio para Flying Heel Stomp";
+    personagem.Gloria = Math.min(personagem.Gloria + 1, 9);
+    personagem.Honra = Math.min(personagem.Honra + 1, 9);
+    personagem.Chi = Math.min(personagem.Chi + 1, 10);
+    personagem.ForcaVontade = Math.min(personagem.ForcaVontade + 1, 10);
+    personagem.Saude = Math.min(personagem.Saude + 2, 20);
+    personagem.Posto = Math.min(personagem.Posto + 1, 9);
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'kof')
+    npc = EijiKoF();
+else
+    npc = EijiKisaragi();
 
 npc = calcPC(npc);

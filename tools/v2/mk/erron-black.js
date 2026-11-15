@@ -62,7 +62,7 @@ function ErronBlack() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Slide Kick, Foot Sweep, Power Uppercut, Flying Tackle",
-        Combos: "Jab – Strong – Pistola; Jab – Strong – Forward (dizzy); Slide Kick – Pistola – Pistola; Flying Tackle – Pistola (dizzy); Granada – Pistola – Pistola",
+        Combos: "Jab para Strong para Pistola; Jab para Strong para Forward (dizzy); Slide Kick para Pistola para Pistola; Flying Tackle para Pistola (dizzy); Granada para Pistola para Pistola",
         Gloria: 5,
         Honra: 1,
         Chi: 1,

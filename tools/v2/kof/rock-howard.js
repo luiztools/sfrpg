@@ -28,7 +28,7 @@ function RockGarou() {
         Conceito: "Órfão e músico",
         Cronica: "Garou: Mark of the Wolves",
         Equipe: "Nenhuma",
-        Time: "Fatal Fury Team",
+        Time: "Garou Team",
         Forca: 4,
         Destreza: 5,
         Vigor: 4,

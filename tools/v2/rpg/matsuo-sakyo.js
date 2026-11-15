@@ -40,7 +40,7 @@ function MatsuoSakyo() {
         Foco: 3,
         NovasTecnicas: [newCaracteristica("Espada", 5)],
         ManobrasEspeciais: "Jump, Kippup, Rekka Ken, Ear Pop, Backflip Kick, Double Hit Kick, Deflecting Punch, Drunken Monkey Roll, Wall Spring, Throw, Dislocate Limb, Air Throw, Zen No Mind, Sakki",
-        Combos: "Wall Spring + Espada Jab para Double Hit Kick; Wall Spring + Estada Strong para Ear Pop",
+        Combos: "Wall Spring + Espada Jab para Double Hit Kick; Wall Spring + Espada Strong para Ear Pop",
         Gloria: 7,
         Chi: 5,
         ForcaVontade: 9,

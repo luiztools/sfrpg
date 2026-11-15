@@ -59,7 +59,7 @@ function Fujin() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Double Hit Kick, Flying Knee Thrust, Power Uppercut, Throw, Hair Throw, Dislocate Limb, Air Blast, Elemental Skin, Elemental Stride, Flight, Heal, Lightness, Push, Sense Element, Spin, Levitation, Double Hit Knee, Dive Kick, Push, Chi Push",
-        Combos: "Bloqueio - Air Blast; Strong - Strong - Air Blast (Dizzy); Jab - Air Blast (Dizzy); Jumping Short - Foot Sweep - Push; Double Hit Kick para Besta para Besta (Dizzy)",
+        Combos: "Bloqueio para Air Blast; Strong para Strong para Air Blast (Dizzy); Jab para Air Blast (Dizzy); Jumping Short para Foot Sweep para Push; Double Hit Kick para Besta para Besta (Dizzy)",
         Gloria: 10,
         Honra: 9,
         Chi: 10,

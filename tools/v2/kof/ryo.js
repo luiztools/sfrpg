@@ -50,7 +50,7 @@ function RyoKoF() {
         Esportes: 4,
         Foco: 6,
         ManobrasEspeciais: "Punch Defense, Kick Defense, Hyper Fist, Power Uppercut, Throw, Fireball, Dragon Punch, Jump, Kippup, Hurricane Kick, Flying Fireball, Breakfall, Tameshiwari, Foot Sweep, Improved Fireball, Triple Strike",
-        Combos: "Power Uppercut – Fireball; Foot Sweep - Throw - Improved Fireball (Dizzy); Power Uppercut - Dragon Punch; Short - Short - Foot Sweep (Dizzy); Jab - Strong - Power Uppercut (Dizzy); Movimento - Hyper Fist - Dragon Punch (dizzy)",
+        Combos: "Power Uppercut para Fireball; Foot Sweep para Throw para Improved Fireball (Dizzy); Power Uppercut para Dragon Punch; Short para Short para Foot Sweep (Dizzy); Jab para Strong para Power Uppercut (Dizzy); Movimento para Hyper Fist para Dragon Punch (dizzy); Bloqueio para Improved Fireball; Bloqueio para Hyper Fist; Bloqueio para Dragon Punch",
         Gloria: 6,
         Honra: 9,
         Chi: 10,
@@ -114,14 +114,14 @@ function RyoAoF() {
         Esportes: 4,
         Foco: 5,
         ManobrasEspeciais: "Punch Defense, Kick Defense, Hyper Fist, Power Uppercut, Throw, Fireball, Dragon Punch, Jump, Kippup, Hurricane Kick, Flying Fireball, Breakfall, Tameshiwari, Foot Sweep, Improved Fireball, Triple Strike",
-        Combos: "Power Uppercut – Fireball; Foot Sweep - Throw - Improved Fireball (Dizzy); Power Uppercut - Dragon Punch; Short - Short - Foot Sweep (Dizzy); Jab - Strong - Power Uppercut (Dizzy); Movimento - Hyper Fist - Dragon Punch (dizzy)",
-        Gloria: 4,
-        Honra: 7,
-        Chi: 8,
-        ForcaVontade: 9,
+        Combos: "Power Uppercut para Fireball; Foot Sweep para Throw para Improved Fireball (Dizzy); Power Uppercut para Dragon Punch; Short para Short para Foot Sweep (Dizzy); Jab para Strong para Power Uppercut (Dizzy); Movimento para Hyper Fist para Dragon Punch (dizzy)",
+        Gloria: 5,
+        Honra: 8,
+        Chi: 9,
+        ForcaVontade: 8,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 6
+        Posto: 7
     };
     return personagem;
 }

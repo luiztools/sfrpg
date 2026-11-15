@@ -48,7 +48,7 @@ function KDash() {
         Apresamento: 4,
         Esportes: 5,
         Foco: 6,
-        ManobrasEspeciais: "Jump, Throw, Fireball, Power Uppercut, Dragon Punch, Flaming Dragon Punch, Slash Kick, Elemental Explosion, Flaming Fist, Flaming Heel, Light Feet, Empty Step, Slide Kick, Elemental Skin",
+        ManobrasEspeciais: "Jump, Throw, Fireball, Power Uppercut, Dragon Punch, Flaming Dragon Punch, Slash Kick, Elemental Explosion, Flaming Fist, Flaming Heel, Light Feet, Empty Step, Slide Kick, Elemental Skin, Pyrokinesis",
         Combos: "Flaming Dragon Punch para Jumping Roundhouse (Dizzy); Strong para Power Uppercut para Flaming Dragon Punch (Dizzy); Elemental Explosion para Fireball; Elemental Explosion para Roundhouse (Dizzy)",
         Gloria: 6,
         Honra: 6,

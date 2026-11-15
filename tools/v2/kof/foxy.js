@@ -13,6 +13,7 @@ function Foxy() {
 
     const armas = [];
     armas[0] = "Rapier";
+    armas[1] = "Kunai";
 
     const personagem = {
         Nome: "Foxy",
@@ -61,8 +62,8 @@ function Foxy() {
         NovasTecnicas: tecnicas,
         NovosTalentos: talentos,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Throw, Empty Step, Weapon Uppercut, Slide Kick, Sonic Boom, Double Hit Blow, Spinning Weapon",
-        Combos: "Double Hit Blow para Weapon Uppercut (Dizzy); Jumping Forward para Spinning Weapon",
+        ManobrasEspeciais: "Jump, Throw, Empty Step, Weapon Uppercut, Slide Kick, Sonic Boom, Double Hit Blow, Spinning Weapon, Weapon Defense, Cross Counter",
+        Combos: "Double Hit Blow para Weapon Uppercut (Dizzy); Jumping Forward para Spinning Weapon; Slide Kick para Rapier Fierce (Dizzy);",
         Gloria: 5,
         Honra: 1,
         Chi: 1,

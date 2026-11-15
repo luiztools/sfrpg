@@ -43,7 +43,7 @@
         Apresamento: 3,
         Esportes: 4,
         ManobrasEspeciais: "Spinning Back Fist, Backflip Kick, Back Roll Throw, Hair Throw, Backflip, Wall Spring, Jump, Throw",
-        Combos: "Wall Spring para Jump + Roundehouse para Hair Throw (Dizzy)",
+        Combos: "Wall Spring para Jump + Roundhouse para Hair Throw (Dizzy)",
         Gloria: 5,
         Honra: 3,
         Chi: 3,

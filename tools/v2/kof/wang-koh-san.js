@@ -45,7 +45,7 @@ function WangKohSan() {
         Esportes: 4,
         Foco: 4,
         ManobrasEspeciais: "Jump, Foot Sweep, Sonic Boom, Air Smash, Head Butt, Double Hit Punch, Breakfall, Throw",
-        Combos: "Movimento - Hundred Hand Slap - Hundred Hand Slap (Dizzy); Foot Sweep - Air Smash; Jab - Strong - Head Butt (Dizzy)",
+        Combos: "Movimento para Hundred Hand Slap para Hundred Hand Slap (Dizzy); Foot Sweep para Air Smash; Jab para Strong para Head Butt (Dizzy)",
         Gloria: 0,
         Honra: 0,
         Chi: 5,
