@@ -514,7 +514,7 @@ function estilizaSistema(sistema) {
 	if (/aérea/i.test(sistema)) sistema = sistema.replace(/aérea/i, "<a href='/post/manobra-aerea' target='_blank'>Aérea</a>");
 	if (/agachamento/i.test(sistema)) sistema = sistema.replace(/agachamento/i, "<a href='/post/manobra-de-agachamento' target='_blank'>Agachamento</a>");
 	if (sistema.indexOf("Sustentado") !== -1) sistema = sistema.replace("Sustentado", "<a href='/post/apresamento-sustentado' target='_blank'>Sustentado</a>");
-	if (sistema.indexOf("Básica de Híbrido Animal") !== -1) sistema = sistema.replace("Básica de Híbrido Animal", "<a href='/post/hibrido-animal' target='_blank'>Básica de Híbrido Animal</a>");
+	if (sistema.indexOf("Básica de Híbrido Animal") !== -1) sistema = sistema.replace("Básica de Híbrido Animal", "<a href='/post/hibrido-animal#manobras-basicas' target='_blank'>Básica de Híbrido Animal</a>");
 	else if (sistema.indexOf("Básica") !== -1) sistema = sistema.replace("Básica", "<a href='/post/manobras-basicas' target='_blank'>Básica</a>");
 	if (sistema.indexOf("ABS") !== -1) sistema = sistema.replace("ABS", "<a href='/post/absorcao' target='_blank'>ABS</a>");
 	if (sistema.indexOf("Dizzy") !== -1) sistema = sistema.replace("Dizzy", "<a href='/post/dizzy' target='_blank'>Dizzy</a>");
@@ -833,7 +833,7 @@ function prepareNpc(npc) {
 	["Soco", "Chute", "Bloqueio", "Apresamento", "Esportes", "Foco"].forEach(t => { if (npc[t] === undefined) npc[t] = 0; });
 
 	//injetando antecedentes únicos
-	const antecedentesUnicos = ["Híbrido Animal", "Elemental", "Irmão das Sombras", "Espectro", "Herança de Clã", "Cibernético", "Tarkatan", "Shokan", "Centaurian", "Psycho Power", "Paranormal", "Satsui no Hadou", "Despertar", "Sangue de Orochi", "Sub-Elemental"];
+	const antecedentesUnicos = ["Híbrido Animal", "Elemental", "Irmão das Sombras", "Espectro", "Herança de Clã", "Cibernético", "Tarkatan", "Shokan", "Centaurian", "Psycho Power", "Paranormal", "Satsui no Hadou", "Devil Gene", "Despertar", "Sangue de Orochi", "Sub-Elemental"];
 	antecedentesUnicos.forEach((v, i, a) => {
 		//aceita detalhe entre parênteses, ex.: "Elemental (Fogo)"
 		const antecedente = npc.Antecedentes.find(a => a.Nome === v || a.Nome.startsWith(v + " ("));
@@ -851,6 +851,7 @@ function prepareNpc(npc) {
 	if (npc["Irmão das Sombras"]) npc["Herança de Clã"] = npc["Irmão das Sombras"];
 	if (npc["Centaurian"]) npc["Híbrido Animal"] = npc["Centaurian"];
 	if (npc["Shokan"]) npc["Híbrido Animal"] = npc["Shokan"];
+	if (npc["Devil Gene"] > (npc["Satsui no Hadou"] || 0)) npc["Satsui no Hadou"] = npc["Devil Gene"];
 
 	if (npc["Paranormal"] > npc["Psycho Power"]) npc["Psycho Power"] = npc["Paranormal"];
 	else npc["Paranormal"] = npc["Psycho Power"];

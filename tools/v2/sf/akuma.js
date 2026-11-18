@@ -47,7 +47,7 @@ function AkumaZ3() {
         Foco: 6,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Fireball, Improved Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Air Hurricane Kick, Ashura Senku, Dive Kick, Instant Hell Murder, Air Throw, Knife Hand Strike, Choke Throw, Kippup, Maka Wara",
         Combos: "Hurricane Kick para Dragon Punch (Dizzy); Ashura Senku para Improved Fireball; Bloqueio para Instant Hell Murder",
-        Gloria: 4,
+        Gloria: 3,
         Honra: 0,
         Chi: 9,
         ForcaVontade: 9,

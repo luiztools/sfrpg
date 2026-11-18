@@ -118,9 +118,9 @@ function SagatZ3() {
         ManobrasEspeciais: "Power Uppercut, Tiger Knee, Dragon Punch, Elbow Smash, Double Hit Kick, Double Hit Knee, Foot Sweep, Wounded Knee, Maka Wara, Throw, Jump, Fireball",
         Combos: "Fireball para Dragon Punch; Tiger Knee para Elbow Smash; Jump + Roundhouse para Double-Hit Kick (Dizzy);",
         Gloria: 8,
-        Honra: 1,
+        Honra: 0,
         Chi: 9,
-        ForcaVontade: 9,
+        ForcaVontade: 8,
         Saude: 18,
         Divisao: "Estilo Livre",
         Posto: 8

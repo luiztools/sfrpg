@@ -37,7 +37,8 @@
         Combos: "",
         Chi: 1,
         ForcaVontade: 2,
-        Saude: 10
+        Saude: 10,
+        Posto: 1
     };
     return personagem;
 }

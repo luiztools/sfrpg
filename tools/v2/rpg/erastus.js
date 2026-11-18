@@ -57,7 +57,7 @@
         ForcaVontade: 10,
         Saude: 20,
         Divisao: "Tradicional",
-        Posto: 0
+        Posto: 1
     };
     return erastus;
 }

@@ -59,13 +59,13 @@ function BillyKane() {
         Armas: armas,
         ManobrasEspeciais: "Slide Kick, Breakfall, Throw, Jump, Wall Spring, Spinning Weapon, Fireball, Handstand Kick",
         Combos: "Bastão Strong para Bastão Fierce; Handstand Kick para Jumping para Bastão Fierce (Dizzy); Spinning Weapon para Fireball (dizzy)",
-        Gloria: 9,
-        Honra: 2,
+        Gloria: 8,
+        Honra: 1,
         Chi: 5,
         ForcaVontade: 9,
         Saude: 18,
         Divisao: "Duelistas",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }

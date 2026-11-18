@@ -48,13 +48,13 @@ function Alfred() {
         Foco: 1,
         ManobrasEspeciais: "Widowmaker, Jump, Throw, Flying Body Spear, Flying Thrust Kick, Spinning Back Fist, Buffalo Punch, Flash Kick, Somersault Kick",
         Combos: "Flying Body Spear para Flying Thrust Kick (Dizzy); Jab para Widowmaker (Dizzy); Buffalo Punch para Spinning Back Fist (Dizzy)",
-        Gloria: 7,
-        Honra: 6,
+        Gloria: 6,
+        Honra: 5,
         Chi: 2,
         ForcaVontade: 8,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }

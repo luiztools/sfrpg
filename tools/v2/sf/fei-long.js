@@ -107,13 +107,13 @@ function FeiLongZ3() {
         Foco: 4,
         ManobrasEspeciais: "Monkey Grab Punch, Rekka Ken, Double Hit Kick, Dragon Kick, Foot Sweep, Stepping Front Kick, Deflecting Punch, Punch Defense, Hair Throw, Throw, Drunken Monkey Roll, Jump, Kippup",
         Combos: "Fierce para Rekka Ken (Dizzy); Fierce para Strong para Dragon Kick (Dizzy); Roundhouse para Strong para Fierce (Dizzy); Stepping Front Kick para Hair Throw (Dizzy);",
-        Gloria: 9,
-        Honra: 7,
-        Chi: 9,
-        ForcaVontade: 8,
-        Saude: 20,
+        Gloria: 8,
+        Honra: 6,
+        Chi: 8,
+        ForcaVontade: 7,
+        Saude: 18,
         Divisao: "Tradicional",
-        Posto: 9
+        Posto: 8
     };
     return feiLong;
 }

@@ -56,7 +56,7 @@ function WillianStanton() {
         ForcaVontade: 9,
         Saude: 12,
         Divisao: "Nenhuma",
-        Posto: 0
+        Posto: 1
     };
     return personagem;
 }

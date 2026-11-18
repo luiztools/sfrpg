@@ -107,7 +107,7 @@ function DhalsimSFZ3() {
         Combos: "Jab para Jab para Slide Kick (Dizzy); Slide Kick para Forward para Yoga Flame (Dizzy); Yoga Teleport para Yoga Flame para Brain Cracker (Dizzy); Flying Body Spear para Throw (Dizzy);",
         Gloria: 5,
         Honra: 8,
-        Chi: 10,
+        Chi: 9,
         ForcaVontade: 9,
         Saude: 18,
         Divisao: "Estilo Livre",

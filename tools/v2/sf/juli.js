@@ -53,7 +53,7 @@ function Juli() {
         Honra: 1,
         Chi: 4,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Posto: 4
     };
     return calcPC(juli);

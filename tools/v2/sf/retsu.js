@@ -44,7 +44,7 @@ function RetsuSF1() {
         Honra: 6,
         Chi: 6,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 7
     };

@@ -1,13 +1,15 @@
-function Kuma() {
-    var antecedentes = [];
+function KumaTk4() {
+    const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 3);
-    antecedentes[1] = newCaracteristica("Empresário", 2);
-    antecedentes[2] = newCaracteristica("Sensei", 3);
+    antecedentes[1] = newCaracteristica("Empresário", 3);
+    antecedentes[2] = newCaracteristica("Híbrido Animal", 5);
+    antecedentes[3] = newCaracteristica("Sensei", 3);
 
-    var personagem = {
+    return {
         Nome: "Kuma",
         Estilo: "Wrestling",
-        Escola: "Dojô Mishima",
+        Escola: "Heihachi Mishima",
+        Equipe: "Mishima Zaibatsu",
         Jogador: "NPC",
         Assinatura: "Levanta os braços",
         Conceito: "Urso",
@@ -35,7 +37,7 @@ function Kuma() {
         Sobrevivencia: 3,
         Arena: 3,
         Computador: 1,
-        Investigacao: 2,
+        Investigacao: 3,
         Medicina: 2,
         Misterios: 3,
         Estilos: 4,
@@ -46,7 +48,7 @@ function Kuma() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 0,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Bear Hug, Double Hit Punch, Buffalo Punch, Head Bite, Head Butt",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Throw, Bear Hug, Double Hit Punch, Buffalo Punch, Head Bite, Head Butt, Claw, Bite",
         Combos: "Double Hit Punch para Double Hit Punch para Buffalo Punch, Bloqueio para Bear Hug para Head Bite",
         Gloria: 5,
         Honra: 5,
@@ -56,8 +58,7 @@ function Kuma() {
         Divisao: "Livre",
         Posto: 8
     };
-    return personagem;
 }
 
-var npc = Kuma();
+let npc = KumaTk4();
 npc = calcPC(npc);

@@ -57,12 +57,12 @@ function BlueMaryFF() {
         ManobrasEspeciais: "Jump, Kippup, Breakfall, Grappling Defense, Throw, Suplex, Thigh Press, Dislocate Limb, Back Roll Throw, Foot Sweep, Spinning Foot Sweep, Power Uppercut, Double Hit Kick, Air Throw, Air Suplex",
         Combos: "Short para Short para Jumping Roundhouse; Thigh Press para Dislocate Limb para Back Roll Throw (Dizzy); Jab para Strong para Forward; Thigh Press para Dislocate Limb para Thigh Press (Dizzy)",
         Gloria: 3,
-        Honra: 5,
+        Honra: 4,
         Chi: 4,
-        ForcaVontade: 9,
+        ForcaVontade: 8,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }

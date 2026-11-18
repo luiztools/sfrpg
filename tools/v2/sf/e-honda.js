@@ -51,7 +51,7 @@ function EHondaZ3() {
         Honra: 8,
         Chi: 4,
         ForcaVontade: 8,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 8
     };

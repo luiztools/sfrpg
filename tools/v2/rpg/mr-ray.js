@@ -62,7 +62,7 @@
         ForcaVontade: 3,
         Saude: 8,
         Divisao: "",
-        Posto: 0
+        Posto: 1
     };
     return personagem;
 }

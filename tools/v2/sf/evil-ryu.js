@@ -47,8 +47,8 @@ function RyuSF4() {
         Foco: 6,
         ManobrasEspeciais: "Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Improved Fireball, Jump, Kippup",
         Combos: "Hurricane Kick para Foot Sweep, Jab para Improved Fireball (Dizzy), Short para Short para Short (Dizzy), Improved Fireball para Dragon Punch (Dizzy)",
-        Gloria: 10,
-        Honra: 10,
+        Gloria: 0,
+        Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
@@ -108,12 +108,12 @@ function RyuSFZ3() {
         ManobrasEspeciais: "Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Improved Fireball, Jump, Kippup",
         Combos: "Hurricane Kick para Foot Sweep, Jab para Improved Fireball (Dizzy), Short para Short para Short (Dizzy), Improved Fireball para Dragon Punch (Dizzy)",
         Gloria: 0,
-        Honra: 1,
-        Chi: 10,
-        ForcaVontade: 10,
-        Saude: 20,
+        Honra: 0,
+        Chi: 9,
+        ForcaVontade: 9,
+        Saude: 18,
         Divisao: "Estilo Livre",
-        Posto: 10
+        Posto: 9
     };
     return ryu;
 }
@@ -166,8 +166,8 @@ function RyuSF5() {
         Foco: 7,
         ManobrasEspeciais: "Dragon Punch, Power Uppercut, Foot Sweep, Back Roll Throw, Throw, Hurricane Kick, Air Hurricane Kick, Fireball, Improved Fireball, Jump, Kippup",
         Combos: "Hurricane Kick para Foot Sweep, Jab para Improved Fireball (Dizzy), Short para Short para Short (Dizzy), Improved Fireball para Dragon Punch (Dizzy)",
-        Gloria: 10,
-        Honra: 10,
+        Gloria: 0,
+        Honra: 0,
         Chi: 10,
         ForcaVontade: 10,
         Saude: 20,
@@ -180,7 +180,7 @@ function RyuSF5() {
 let npc;
 if (getParameterByName('age') === 'sfa')
     npc = RyuSFZ3();
-if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
+else if (getParameterByName('age') === 'sf5' || getParameterByName('age') === 'sf3')
     npc = RyuSF5();
 else
     npc = RyuSF4();

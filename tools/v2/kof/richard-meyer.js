@@ -50,13 +50,13 @@ function RichardMeyer() {
         Foco: 1,
         ManobrasEspeciais: "Jump, Breakfall, Handstand Kick, Foot Sweep, Throw, Ax Kick, Musical Accompaniment, Wall Spring",
         Combos: "Handstand Kick para Handstand Kick para Handstand Kick (Dizzy);",
-        Gloria: 4,
-        Honra: 3,
+        Gloria: 3,
+        Honra: 2,
         Chi: 2,
         ForcaVontade: 6,
         Saude: 15,
         Divisao: "Tradicional",
-        Posto: 7
+        Posto: 6
     };
     return personagem;
 }

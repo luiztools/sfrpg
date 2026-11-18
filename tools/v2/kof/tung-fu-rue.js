@@ -55,13 +55,13 @@ function TungFuRue() {
         NovosTalentos: talentos,
         ManobrasEspeciais: "Jump, Throw, Foot Sweep, Hundred Hand Slap, Double Hit Kick, Kippup, Chi Kun Healing, Spinning Clothesline, Turbo Spinning Clothesline, Dashing Punch, Fist Sweep, Head Butt, Energy Ball, Ear Pop, Light Feet, Psychokinetic Channeling, San He, Maka Wara, Haymaker, Widowmaker, Flying Heel Stomp, Multiple Stomp",
         Combos: "Haymaker para Energy Ball para Dashing Punch; Roundhouse para Multiple Stomp; San He para Widowmaker (Dizzy); San He para Turbo Spinning Clothesline (Dizzy)",
-        Gloria: 4,
-        Honra: 10,
-        Chi: 10,
-        ForcaVontade: 10,
+        Gloria: 3,
+        Honra: 9,
+        Chi: 9,
+        ForcaVontade: 9,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }
@@ -123,13 +123,13 @@ function TungFuRueJovem() {
         NovosTalentos: talentos,
         ManobrasEspeciais: "Jump, Throw, Foot Sweep, Hundred Hand Slap, Double Hit Kick, Kippup, Chi Kun Healing, Spinning Clothesline, Turbo Spinning Clothesline, Dashing Punch, Fist Sweep, Head Butt, Energy Ball, Ear Pop, Light Feet, Psychokinetic Channeling, San He, Maka Wara, Haymaker, Widowmaker, Flying Heel Stomp, Multiple Stomp",
         Combos: "Haymaker para Energy Ball para Dashing Punch; Roundhouse para Multiple Stomp; San He para Widowmaker (Dizzy); San He para Turbo Spinning Clothesline (Dizzy)",
-        Gloria: 4,
-        Honra: 10,
-        Chi: 10,
-        ForcaVontade: 10,
+        Gloria: 3,
+        Honra: 9,
+        Chi: 9,
+        ForcaVontade: 9,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }

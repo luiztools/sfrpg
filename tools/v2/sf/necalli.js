@@ -41,7 +41,7 @@ function Necalli() {
         Apresamento: 6,
         Esportes: 5,
         Foco: 3,
-        ManobrasEspeciais: "Power Uppercut, Dragon Punch, Jump, Foot Sweep, Throw, Power Up, Shockwave, Head Butt, Dive Kick, Flying Head Butt, Storm Hammer, Hyper Fist, Pile Driver, Spinning Pile Driver, Daikyou Burning, Heart Punch, Shockwave, Claw",
+        ManobrasEspeciais: "Power Uppercut, Dragon Punch, Jump, Foot Sweep, Throw, Power Up, Shockwave, Head Butt, Dive Kick, Flying Head Butt, Storm Hammer, Hyper Fist, Pile Driver, Spinning Pile Driver, Daikyou Burning, Heart Punch, Claw",
         Combos: "Forward para Roundhouse para Shockwave (Dizzy); Jab para Strong para Fierce (Dizzy);Shockwave para Shockwave; Daikyou Burning para Hyper Fist",
         Gloria: 3,
         Honra: 0,

@@ -183,7 +183,7 @@ function DanZ3() {
         Foco: 1,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Air Throw, Power Uppercut, Dragon Punch, Dankukyaku, Energy Ball, Triple Strike",
         Combos: "Power Uppercut para Dragon Punch (dizzy), Power Uppercut para Energy Ball (dizzy), Energy Ball para Dankukyaku",
-        Gloria: 1,
+        Gloria: 0,
         Honra: 4,
         Chi: 3,
         ForcaVontade: 6,

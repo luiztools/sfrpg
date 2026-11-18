@@ -49,7 +49,7 @@ function RMikaZ3() {
         Honra: 3,
         Chi: 2,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 6
     };

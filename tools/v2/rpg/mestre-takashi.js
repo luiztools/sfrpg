@@ -56,7 +56,7 @@ function MestreTakashi() {
         ForcaVontade: 8,
         Saude: 16,
         Divisao: 'Nenhuma',
-        Posto: 0
+        Posto: 1
     };
     return personagem;
 }

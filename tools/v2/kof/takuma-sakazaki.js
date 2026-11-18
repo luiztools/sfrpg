@@ -53,8 +53,8 @@ function TakumaSakazaki() {
         Combos: "Jab para Fierce; Jab para Fierce para Power Uppercut (Dizzy); Movimento para Hyper Fist para Improved Fireball (Dizzy)",
         Gloria: 8,
         Honra: 7,
-        Chi: 10,
-        ForcaVontade: 10,
+        Chi: 9,
+        ForcaVontade: 9,
         Saude: 20,
         Divisao: "Livre",
         Posto: 8

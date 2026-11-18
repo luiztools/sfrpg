@@ -46,7 +46,8 @@ function Midnight() {
         Honra: 5,
         Chi: 6,
         ForcaVontade: 8,
-        Saude: 13
+        Saude: 13,
+        Posto: 0
     };
     return personagem;
 }

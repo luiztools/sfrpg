@@ -50,13 +50,13 @@ function BlankaZ3() {
         NovasTecnicas: tecnicas,
         ManobrasEspeciais: "Head Butt, Power Uppercut, Backflip Kick, Foot Sweep, Head Bite, Jump, Rolling Attack, Beast Roll, Vertical Rolling Attack, Shock Treatment, Claw, Bite",
         Combos: "Jump + Strong para Head Bite; Jump + Fierce para Strong para Foot Sweep; Jump + Forward para Shock Treatment; Bloqueio para Backflip Kick",
-        Gloria: 6,
-        Honra: 6,
-        Chi: 6,
-        ForcaVontade: 6,
+        Gloria: 7,
+        Honra: 7,
+        Chi: 7,
+        ForcaVontade: 7,
         Saude: 15,
         Divisao: "Estilo Livre",
-        Posto: 7
+        Posto: 8
     };
     return blanka;
 }

@@ -46,6 +46,7 @@ function Shade() {
         Chi: 7,
         ForcaVontade: 5,
         Saude: 14,
+        Posto: 0,
         Divisao: "Duelistas"
     };
     return personagem;

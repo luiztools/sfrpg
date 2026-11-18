@@ -39,7 +39,8 @@ function Ravana() {
         ManobrasEspeciais: "Triple Strike, Fireball, Flying Knee Thrust, Yoga Flame, Slide Kick, Yoga Teleport, San He, Ghost Form, Cannon Drill, Regeneration, Missile Reflection, Stunning Shout, Spinning Foot Sweep, Energy Reflection, Extendible Limbs",
         Chi: 3,
         ForcaVontade: 7,
-        Saude: 20
+        Saude: 20,
+        Posto: 0
     };
     return personagem;
 }

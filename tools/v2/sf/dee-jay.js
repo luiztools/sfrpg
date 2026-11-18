@@ -57,9 +57,9 @@ function DeeJayZ3() {
         Honra: 7,
         Chi: 7,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Estilo Livre",
-        Posto: 8
+        Posto: 9
     };
     return deeJay;
 }

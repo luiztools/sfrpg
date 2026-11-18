@@ -45,7 +45,7 @@ function LeeSF1() {
         Honra: 5,
         Chi: 6,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 7
     };

@@ -54,7 +54,7 @@ function KarinZ3() {
         Honra: 3,
         Chi: 6,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 6
     };

@@ -51,13 +51,13 @@ function KimFF() {
         Foco: 4,
         ManobrasEspeciais: "Double Hit Kick, Foot Sweep, Jump, Kippup, Throw, Flash Kick, Ax Kick, Flying Heel Stomp, Multiple Stomp, Kick Defense, Lightning Leg, Hurricane Kick",
         Combos: "Jumping Short para Combo Strike (Dizzy); Short para Short para Short; Multiple Stomp para Foot Sweep; Roundhouse para Flash Kick para Jumping Roundhouse (Dizzy); Movimento para Lightning Leg para Flash Kick (Dizzy)",
-        Gloria: 5,
-        Honra: 7,
+        Gloria: 4,
+        Honra: 6,
         Chi: 7,
         ForcaVontade: 9,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }

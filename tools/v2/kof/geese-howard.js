@@ -122,7 +122,7 @@ function GeeseFF() {
         Gloria: 9,
         Honra: 0,
         Chi: 9,
-        ForcaVontade: 10,
+        ForcaVontade: 9,
         Saude: 20,
         Divisao: "Livre",
         Posto: 7

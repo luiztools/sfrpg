@@ -55,7 +55,7 @@
         ForcaVontade: 2,
         Saude: 8,
         Divisao: "Nenhuma",
-        Posto: 0
+        Posto: 1
     };
     return personagem;
 }

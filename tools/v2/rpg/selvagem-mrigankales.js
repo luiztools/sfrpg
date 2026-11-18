@@ -63,11 +63,11 @@
         Combos: "",
         Gloria: 0,
         Honra: 0,
-        Chi: 0,
+        Chi: 1,
         ForcaVontade: 1,
         Saude: 10,
         Divisao: "Duelistas",
-        Posto: 0
+        Posto: 1
     };
     return personagem;
 }

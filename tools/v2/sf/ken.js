@@ -56,9 +56,9 @@ function KenZ3() {
         Honra: 7,
         Chi: 8,
         ForcaVontade: 8,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Estilo Livre",
-        Posto: 8
+        Posto: 9
     };
     return ken;
 }

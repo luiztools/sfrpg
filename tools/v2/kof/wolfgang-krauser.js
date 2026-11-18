@@ -57,13 +57,13 @@ function KrauserFF() {
         NovasPericias: pericias,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Buffalo Punch, Power Uppercut, Haymaker, Stomach Pump, Fireball, Improved Fireball, Wheel Kick, Gekiro, Missile Reflection, Energy Reflection, San He, Air Smash, Grappling Defense, Wounded Knee, Musical Accompaniment",
         Combos: "Wounded Knee para Buffalo Punch para Wheel Kick (Dizzy); Haymaker para Wheel Kick; Throw para Improved Fireball (Dizzy); Forward para Roundhouse (Dizzy)",
-        Gloria: 8,
-        Honra: 3,
-        Chi: 10,
+        Gloria: 7,
+        Honra: 2,
+        Chi: 9,
         ForcaVontade: 9,
         Saude: 20,
         Divisao: "Livre",
-        Posto: 10
+        Posto: 9
     };
     return personagem;
 }

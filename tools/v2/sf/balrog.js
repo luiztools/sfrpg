@@ -51,9 +51,9 @@ function BalrogZ3() {
         ManobrasEspeciais: "Fist Sweep, Dashing Punch, Dashing Uppercut, Head Butt, Turn Punch, Power Uppercut, Punch Defense, Head Butt Hold, Jump, Jumping Shoulder Butt",
         Combos: "Jab para Strong para Fierce (Dizzy); Jump + Fierce para Jab para Dashing Uppercut (Dizzy); Bloqueio para Dashing Punch;",
         Gloria: 9,
-        Honra: 1,
+        Honra: 0,
         Chi: 4,
-        ForcaVontade: 9,
+        ForcaVontade: 8,
         Saude: 18,
         Divisao: "Tradicional",
         Posto: 9

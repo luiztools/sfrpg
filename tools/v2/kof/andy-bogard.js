@@ -50,13 +50,13 @@ function AndyFF() {
         Foco: 4,
         ManobrasEspeciais: "Flying Body Spear, Jump, Throw, Fireball, Energy Ball, Power Uppercut, Snake Strike, Foot Sweep, Handstand Kick, Hyper Tackle, Breakfall",
         Combos: "Hyper Tackle para Power Uppercut para Energy Ball (Dizzy); Short para Foot Sweep para Flying Body Spear; Jumping Forward para Strong para Snake Strike (Dizzy); Jumping Forward para Handstand Kick para Hyper Tackle",
-        Gloria: 6,
-        Honra: 8,
-        Chi: 10,
+        Gloria: 5,
+        Honra: 7,
+        Chi: 9,
         ForcaVontade: 8,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 9
+        Posto: 8
     };
     return personagem;
 }

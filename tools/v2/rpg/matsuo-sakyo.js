@@ -44,7 +44,8 @@ function MatsuoSakyo() {
         Gloria: 7,
         Chi: 5,
         ForcaVontade: 9,
-        Saude: 20
+        Saude: 20,
+        Posto: 1
     };
     return personagem;
 }

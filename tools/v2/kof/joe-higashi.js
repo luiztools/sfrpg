@@ -50,13 +50,13 @@ function JoeFF() {
         Foco: 5,
         ManobrasEspeciais: "Flying Knee Thrust, Criminal Upper, Tiger Knee, Slash Kick, Triple Strike, Elbow Smash, Jump, Throw, Foot Sweep, Wounded Knee, Wheel Kick, Air Blast",
         Combos: "Elbow Smash para Triple Strike; Triple Strike para Criminal Upper para Tiger Knee (Dizzy); Wounded Knee para Knee Basher (Dizzy); Throw para Criminal Upper para Tiger Knee",
-        Gloria: 10,
-        Honra: 6,
+        Gloria: 9,
+        Honra: 5,
         Chi: 7,
         ForcaVontade: 9,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 9
+        Posto: 8
     };
     return personagem;
 }

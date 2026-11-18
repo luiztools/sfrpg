@@ -53,13 +53,13 @@ function DuckKingFF() {
         Foco: 3,
         ManobrasEspeciais: "Jump, Kippup, Rolling Attack, Foot Sweep, Spinning Foot Sweep, Gekiro, Triple Strike, Flying Knee Thrust, Slide Kick, Throw, Musical Accompaniment, Flying Body Spear, Tumbling Attack",
         Combos: "Jab para Jab para Flying Body Spear (Dizzy); Tumbling Attack para Gekiro (Dizzy)",
-        Gloria: 7,
-        Honra: 3,
+        Gloria: 6,
+        Honra: 2,
         Chi: 3,
         ForcaVontade: 8,
         Saude: 16,
         Divisao: "Livre",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }

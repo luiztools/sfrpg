@@ -69,7 +69,7 @@ function Kang() {
         ForcaVontade: 7,
         Saude: 14,
         Divisao: "Tradicional",
-        Posto: 0
+        Posto: 1
     };
     return personagem;
 }

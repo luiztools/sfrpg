@@ -51,6 +51,7 @@
         Chi: 5,
         ForcaVontade: 6,
         Saude: 15,
+        Posto: 0,
         Divisao: "Nenhuma"
     };
     return akaZahn;

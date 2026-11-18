@@ -68,7 +68,7 @@ function EijiKisaragi() {
 
 function EijiKoF() {
     const personagem = EijiKisaragi();
-    personage.Time = "Yagami Team"
+    personagem.Time = "Yagami Team";
     personagem.Cronica = "The King of Fighters";
     personagem.Combos += "; Bloqueio para Improved Fireball; Bloqueio para Multiple Stomp; Bloqueio para Flying Heel Stomp";
     personagem.Gloria = Math.min(personagem.Gloria + 1, 9);

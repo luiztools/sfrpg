@@ -51,7 +51,8 @@
         Honra: 1,
         Chi: 1,
         ForcaVontade: 8,
-        Saude: 10
+        Saude: 10,
+        Posto: 0
     };
     return karen;
 }

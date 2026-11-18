@@ -189,7 +189,7 @@ function RoseZ3() {
         Combos: "Energy Reflection para Fireball (dizzy), Slide Kick para Ducking Fierce (dizzy), Short para Soul Throw",
         Gloria: 2,
         Honra: 8,
-        Chi: 10,
+        Chi: 9,
         ForcaVontade: 6,
         Saude: 15,
         Divisao: "Estilo Livre",

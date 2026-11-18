@@ -58,13 +58,13 @@ function YamazakiFF() {
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Breakfall, Grappling Defense, Throw, Foot Sweep, Power Uppercut, Dragon Punch, Daikyou Burning, Rekka Ken, Wheel Kick, Head Butt, Face Slam, Brain Cracker, Flying Tackle, Pile Driver",
         Combos: "Short para Short para Power Uppercut (Dizzy); Rekka Ken para Rekka Ken para Rekka Ken; Power Uppercut para Flying Tackle para Brain Cracker",
-        Gloria: 7,
-        Honra: 1,
+        Gloria: 6,
+        Honra: 0,
         Chi: 1,
-        ForcaVontade: 10,
+        ForcaVontade: 9,
         Saude: 18,
         Divisao: "Duelistas",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }

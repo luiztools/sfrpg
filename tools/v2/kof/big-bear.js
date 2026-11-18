@@ -51,13 +51,13 @@ function BigBearFF() {
         Foco: 3,
         ManobrasEspeciais: "Jump, Foot Sweep, Throw, Back Breaker, Neck Choke, Dashing Clothesline, Acid Breath, Air Suplex, Face Slam, Air Smash, Pile Driver, Buffalo Punch, Turn Punch, Bear Hug",
         Combos: "Neck Choke para Pile Driver (Dizzy); Strong para Strong para Buffalo Punch; Bloqueio para Bear Hug (Dizzy)",
-        Gloria: 5,
-        Honra: 5,
+        Gloria: 4,
+        Honra: 4,
         Chi: 4,
         ForcaVontade: 7,
         Saude: 18,
         Divisao: "Livre",
-        Posto: 8
+        Posto: 7
     };
     return personagem;
 }

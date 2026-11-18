@@ -56,7 +56,7 @@ function HansGordon() {
         ForcaVontade: 3,
         Saude: 8,
         Divisao: "Nenhuma",
-        Posto: 0
+        Posto: 1
     };
     return personagem;
 }

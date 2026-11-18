@@ -73,9 +73,9 @@ function calcPC(char) {
     const fdvChiPC = (char.ForcaVontade || 0) + (char.Chi || 0);
     const saudePC = char.Saude || 0;
 
-    //só Satsui no Hadou e Sangue de Orochi somam (1 PC); Elemental, Cibernético e Híbrido Animal entram no lugar
+    //só Satsui no Hadou (ou Devil Gene, equivalente) e Sangue de Orochi somam (1 PC); Elemental, Cibernético e Híbrido Animal entram no lugar
     //de técnicas (acima) e os demais antecedentes não contam
-    const backgroundPC = (char.Antecedentes || []).some(an => /Satsui no Hadou|Sangue de Orochi/i.test(an.Nome)) ? 1 : 0;
+    const backgroundPC = (char.Antecedentes || []).some(an => /Satsui no Hadou|Devil Gene|Sangue de Orochi/i.test(an.Nome)) ? 1 : 0;
 
     char.PC = attrPC + techPC + manPC + comboPC + fdvChiPC + saudePC + backgroundPC;
     return char;
@@ -299,6 +299,16 @@ function GeraLinkValido(titulo) {
     titulo = titulo.replace(new RegExp("[\\s\\+]", 'g'), "-");
     //+ , ; . /
     titulo = titulo.replace(new RegExp("[,;\\./:]", 'g'), "");
+
+    //antecedentes sem post próprio, explicados numa seção de outro post
+    const secoes = {
+        "devil-gene": "satsui-no-hadou#devil-gene",
+        //manobras básicas de Híbrido Animal
+        "bite": "hibrido-animal#manobras-basicas",
+        "claw": "hibrido-animal#manobras-basicas",
+        "tail-slash": "hibrido-animal#manobras-basicas"
+    };
+    if (secoes[titulo]) titulo = secoes[titulo];
 
     return "http://www.sfrpg.com.br/post/" + titulo;
 }

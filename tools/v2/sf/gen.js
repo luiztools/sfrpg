@@ -48,12 +48,12 @@ function GenSF1() {
         ManobrasEspeciais: "Ansatsuken, Zan-ei, Tumbling Attack, Gekiro, Jump, Kippup, Foot Sweep, Throw, Hundred Hand Slap, Chi Kun Healing, Dim Mak, Drunken Monkey Roll, Punch Defense, Deflecting Punch, Air Throw, Wall Spring",
         Combos: "Dim Mak (Ansatsuken); Hundred Hand Slap (Ansatsuken); Drunken Monkey Roll para Hundred Hand Slap (Dizzy), Hundred Hand Slap para Dim Mak (Dizzy)",
         Gloria: 9,
-        Honra: 2,
+        Honra: 3,
         Chi: 9,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
-        Posto: 6
+        Posto: 8
     };
     return gen;
 }
@@ -175,13 +175,13 @@ function GenZ3() {
         Foco: 5,
         ManobrasEspeciais: "Ansatsuken, Zan-ei, Tumbling Attack, Gekiro, Jump, Kippup, Foot Sweep, Throw, Hundred Hand Slap, Chi Kun Healing, Dim Mak, Drunken Monkey Roll, Punch Defense, Deflecting Punch, Air Throw, Wall Spring",
         Combos: "Dim Mak (Ansatsuken); Hundred Hand Slap (Ansatsuken); Drunken Monkey Roll para Hundred Hand Slap (Dizzy), Hundred Hand Slap para Dim Mak (Dizzy), Jab para Jab para Short (Dizzy)",
-        Gloria: 10,
+        Gloria: 9,
         Honra: 3,
-        Chi: 10,
-        ForcaVontade: 10,
-        Saude: 20,
+        Chi: 9,
+        ForcaVontade: 9,
+        Saude: 18,
         Divisao: "Tradicional",
-        Posto: 7
+        Posto: 8
     };
     return gen;
 }

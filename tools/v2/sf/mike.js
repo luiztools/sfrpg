@@ -46,7 +46,7 @@ function MikeSF1() {
         Honra: 1,
         Chi: 3,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 7
     };

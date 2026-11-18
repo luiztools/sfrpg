@@ -1,201 +1,64 @@
-function EddyTekken3() {
+function EddyTk3() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 1);
-    antecedentes[1] = newCaracteristica("Contatos", 3);
-    antecedentes[2] = newCaracteristica("Fama", 3);
-    antecedentes[3] = newCaracteristica("Recursos", 4);
-    antecedentes[4] = newCaracteristica("Staff", 3);
-    antecedentes[5] = newCaracteristica("Sensei", 5);
+    antecedentes[0] = newCaracteristica("Contatos", 3);
+    antecedentes[1] = newCaracteristica("Recursos", 5);
+    antecedentes[2] = newCaracteristica("Sensei", 3);
 
-    const personagem = {
+    return {
         Nome: "Eduardo \"Eddy\" Gordo",
         Estilo: "Capoeira",
-        Escola: "Prisão",
+        Escola: "Professor Particular",
+        Equipe: "Tekken Force",
+        Time: "Tekken Force",
         Jogador: "NPC",
-        Assinatura: "Ginga",
-        Conceito: "Dançarino",
+        Assinatura: "Ginga de batalha",
+        Conceito: "Vingador",
         Cronica: "Tekken 3",
         Forca: 4,
         Destreza: 5,
-        Vigor: 4,
-        Carisma: 4,
-        Manipulacao: 4,
-        Aparencia: 4,
-        Percepcao: 3,
-        Inteligencia: 3,
-        Raciocinio: 3,
-        Prontidao: 3,
-        Interrogacao: 3,
-        Intimidacao: 2,
-        Perspicacia: 2,
-        Manha: 3,
-        Labia: 3,
-        LutaCega: 2,
-        Conducao: 2,
-        Lideranca: 2,
-        Seguranca: 2,
-        Furtividade: 3,
-        Sobrevivencia: 2,
-        Arena: 1,
-        Computador: 2,
-        Investigacao: 2,
-        Medicina: 2,
-        Misterios: 0,
-        Estilos: 1,
-        Antecedentes: antecedentes,
-        Soco: 3,
-        Chute: 5,
-        Bloqueio: 4,
-        Apresamento: 3,
-        Esportes: 5,
-        Foco: 1,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;",
-        Gloria: 2,
-        Honra: 3,
-        Chi: 5,
-        ForcaVontade: 7,
-        Saude: 16,
-        Divisao: "Tradicional",
-        Posto: 7
-    };
-    return personagem;
-}
-
-function EddyTekken4() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Contatos", 4);
-    antecedentes[2] = newCaracteristica("Fama", 4);
-    antecedentes[3] = newCaracteristica("Recursos", 4);
-    antecedentes[4] = newCaracteristica("Staff", 3);
-    antecedentes[5] = newCaracteristica("Sensei", 5);
-
-    const personagem = {
-        Nome: "Eduardo \"Eddy\" Gordo",
-        Estilo: "Capoeira",
-        Escola: "Prisão",
-        Jogador: "NPC",
-        Assinatura: "Ginga",
-        Conceito: "Dançarino",
-        Cronica: "Tekken 4",
-        Forca: 4,
-        Destreza: 5,
         Vigor: 5,
         Carisma: 4,
-        Manipulacao: 4,
+        Manipulacao: 3,
         Aparencia: 4,
-        Percepcao: 3,
+        Percepcao: 4,
         Inteligencia: 3,
-        Raciocinio: 4,
-        Prontidao: 3,
-        Interrogacao: 3,
-        Intimidacao: 3,
-        Perspicacia: 2,
-        Manha: 4,
-        Labia: 3,
-        LutaCega: 2,
-        Conducao: 2,
-        Lideranca: 3,
-        Seguranca: 3,
-        Furtividade: 3,
-        Sobrevivencia: 3,
-        Arena: 2,
-        Computador: 2,
-        Investigacao: 2,
-        Medicina: 2,
-        Misterios: 0,
-        Estilos: 2,
-        Antecedentes: antecedentes,
-        Soco: 4,
-        Chute: 5,
-        Bloqueio: 4,
-        Apresamento: 3,
-        Esportes: 5,
-        Foco: 2,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn; Bloqueio para Take Down para Back Flip Kick",
-        Gloria: 3,
-        Honra: 3,
-        Chi: 6,
-        ForcaVontade: 8,
-        Saude: 18,
-        Divisao: "Tradicional",
-        Posto: 8
-    };
-    return personagem;
-}
-
-function EddyTekken8() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 3);
-    antecedentes[1] = newCaracteristica("Contatos", 5);
-    antecedentes[2] = newCaracteristica("Fama", 4);
-    antecedentes[3] = newCaracteristica("Recursos", 4);
-    antecedentes[4] = newCaracteristica("Staff", 4);
-    antecedentes[5] = newCaracteristica("Sensei", 5);
-
-    const personagem = {
-        Nome: "Eduardo \"Eddy\" Gordo",
-        Estilo: "Capoeira",
-        Escola: "Prisão",
-        Jogador: "NPC",
-        Assinatura: "Ginga",
-        Conceito: "Dançarino",
-        Cronica: "Tekken 8",
-        Forca: 5,
-        Destreza: 5,
-        Vigor: 5,
-        Carisma: 4,
-        Manipulacao: 4,
-        Aparencia: 4,
-        Percepcao: 3,
-        Inteligencia: 4,
-        Raciocinio: 4,
+        Raciocinio: 5,
         Prontidao: 4,
         Interrogacao: 3,
         Intimidacao: 3,
-        Perspicacia: 3,
-        Manha: 5,
+        Perspicacia: 4,
+        Manha: 4,
         Labia: 3,
-        LutaCega: 2,
-        Conducao: 2,
-        Lideranca: 4,
-        Seguranca: 3,
+        LutaCega: 0,
+        Conducao: 3,
+        Lideranca: 0,
+        Seguranca: 2,
         Furtividade: 3,
-        Sobrevivencia: 3,
+        Sobrevivencia: 2,
         Arena: 3,
-        Computador: 2,
-        Investigacao: 2,
+        Computador: 1,
+        Investigacao: 3,
         Medicina: 2,
-        Misterios: 1,
+        Misterios: 0,
         Estilos: 3,
         Antecedentes: antecedentes,
         Soco: 4,
-        Chute: 5,
+        Chute: 6,
         Bloqueio: 5,
         Apresamento: 4,
         Esportes: 5,
         Foco: 2,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn; Bloqueio para Take Down para Back Flip Kick",
-        Gloria: 4,
-        Honra: 4,
-        Chi: 7,
+        ManobrasEspeciais: "Jump, Foot Sweep, Spinning Foot Sweep, Power Uppercut, Thigh Press, Throw, Back Roll Throw, Backflip Kick, Forward Backflip Kick, Cartwheel Kick, Tumbling Attack, Spinning Back Fist, Handstand Kick, Backflip, Triple Strike, Head Butt, Musical Accompaniment, Flying Tackle, Flying Body Spear",
+        Combos: "Roundhouse para Tumbling Attack para Handstand Kick (Dizzy), Roundhouse para Handstand Kick para Forward Backflip Kick (Dizzy), Handstand Kick para Tumbling Attack, Handstand Kick para Foot Sweep, Movimento para Triple Strike (Dizzy)",
+        Gloria: 7,
+        Honra: 6,
+        Chi: 4,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Tradicional",
-        Posto: 9
+        Posto: 8
     };
-    return personagem;
 }
 
-let npc;
-if (getParameterByName('age') === 'tekken8')
-    npc = EddyTekken8();
-else if (getParameterByName('age') === 'tekken4')
-    npc = EddyTekken4();
-else
-    npc = EddyTekken3();
-
+let npc = EddyTk3();
 npc = calcPC(npc);

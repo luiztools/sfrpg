@@ -45,10 +45,10 @@ function Rick() {
         Foco: 3,
         ManobrasEspeciais: "Double Hit Punch, Power Uppercut, Lunging Punch, Ducking Fierce, Dashing Punch, Hyper Fist, Dashing Uppercut, Punch Defense, Turn Punch, Esquives, Fist Sweep, Jump, Jumping Shoulder Butt, Criminal Upper, Flicker Jab",
         Combos: "Movimento para Hyper Fist; Punch Defense para Dashing Punch; Jab para Power Uppercut (Dizzy); Punch Defense para Jab para Power Uppercut (Dizzy); Double Hit Punch para Fierce (Dizzy); Hyper Fist para Jab para Fist Sweep (Dizzy); Ducking Fierce para Ducking Fierce para Fist Sweep (Dizzy); Power Uppercut para Jumping Shoulder Butt (Dizzy); Flicker Jab para Flicker Jab para Flicker Jab (Dizzy)",
-        Gloria: 7,
-        Honra: 8,
+        Gloria: 6,
+        Honra: 7,
         Chi: 3,
-        ForcaVontade: 10,
+        ForcaVontade: 9,
         Saude: 18,
         Divisao: "Livre",
         Posto: 8

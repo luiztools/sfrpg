@@ -56,7 +56,7 @@ function RaizenHaito() {
         ForcaVontade: 3,
         Saude: 10,
         Divisao: "Nenhuma",
-        Posto: 0
+        Posto: 1
     };
     return personagem;
 }

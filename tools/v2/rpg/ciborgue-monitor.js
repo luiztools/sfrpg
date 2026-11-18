@@ -29,8 +29,10 @@
         Esportes: 1,
         ManobrasEspeciais: "",
         Combos: "nenhum",
+        Chi: 1,
         ForcaVontade: 2,
-        Saude: 10
+        Saude: 10,
+        Posto: 1
     };
     return ciborgue;
 }

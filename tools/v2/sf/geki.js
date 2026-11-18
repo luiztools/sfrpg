@@ -63,7 +63,7 @@ function Geki() {
         Honra: 1,
         Chi: 10,
         ForcaVontade: 8,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 9
     };

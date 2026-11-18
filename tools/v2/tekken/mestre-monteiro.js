@@ -1,64 +1,3 @@
-function MonteiroTekken3() {
-    const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Aliados", 2);
-    antecedentes[1] = newCaracteristica("Contatos", 2);
-    antecedentes[2] = newCaracteristica("Fama", 4);
-
-    const personagem = {
-        Nome: "Mestre Monteiro",
-        Estilo: "Capoeira",
-        Escola: "Desconhecida",
-        Jogador: "NPC",
-        Assinatura: "Ginga",
-        Conceito: "Mestre Ancião",
-        Cronica: "Tekken 3",
-        Forca: 3,
-        Destreza: 4,
-        Vigor: 3,
-        Carisma: 4,
-        Manipulacao: 3,
-        Aparencia: 3,
-        Percepcao: 2,
-        Inteligencia: 4,
-        Raciocinio: 3,
-        Prontidao: 2,
-        Interrogacao: 3,
-        Intimidacao: 1,
-        Perspicacia: 3,
-        Manha: 4,
-        Labia: 3,
-        LutaCega: 3,
-        Conducao: 1,
-        Lideranca: 3,
-        Seguranca: 1,
-        Furtividade: 2,
-        Sobrevivencia: 3,
-        Arena: 2,
-        Computador: 0,
-        Investigacao: 1,
-        Medicina: 3,
-        Misterios: 1,
-        Estilos: 2,
-        Antecedentes: antecedentes,
-        Soco: 2,
-        Chute: 4,
-        Bloqueio: 3,
-        Apresamento: 2,
-        Esportes: 4,
-        Foco: 2,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
-        Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;",
-        Gloria: 1,
-        Honra: 4,
-        Chi: 6,
-        ForcaVontade: 6,
-        Saude: 14,
-        Divisao: "Tradicional",
-        Posto: 6
-    };
-    return personagem;
-}
-
 function MonteiroTekken4() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
@@ -107,7 +46,7 @@ function MonteiroTekken4() {
         Apresamento: 1,
         Esportes: 3,
         Foco: 3,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Throw, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Spinning Foot Sweep, Double Hit Kick, Handstand Kick, Backflip Kick, Throw, Cartwheel Kick, Rhino Horn, Take Down, Psychokinetic Channeling, Tumbling Attack, Backflip",
         Combos: "Double Hit Kick para Spinning Foot Sweep para Cartwheel Kick; Cartwheel Kick para Tumbling Attack; Double Hit Kick para Handstand Kick para Rhino Horn;",
         Gloria: 1,
         Honra: 5,
@@ -120,10 +59,6 @@ function MonteiroTekken4() {
     return personagem;
 }
 
-let npc;
-if (getParameterByName('age') === 'tekken3')
-    npc = MonteiroTekken3();
-else
-    npc = MonteiroTekken4();
+let npc = MonteiroTekken4();
 
 npc = calcPC(npc);
