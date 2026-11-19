@@ -2,6 +2,7 @@
 
 Complementa a skill `personagem-sfrpg`: o que estiver lá vale aqui, e estas regras valem só para personagens desta pasta.
 
+- **Tag da franquia:** `guerreiro mundial` (`term_taxonomy_id` 110; post `guerreiros-mundiais`; não existe tag "street fighter"). **Só** para quem está no elenco jogável de um jogo principal (numerado) de Street Fighter: SF1, SF2 (e revisões), SF3, SF4, SF5 e SF6. Em SF1, como só Ryu e Ken eram jogáveis, contam todos os lutadores do torneio (Retsu, Geki, Joe, Mike, Lee, Gen, Birdie, Eagle, Adon e Sagat). Quem só foi jogável em spin-offs (Alpha, EX, crossovers...) ou nunca foi jogável (NPCs, chefes não jogáveis, personagens só da história) **não** leva.
 - **Versões:** `sf1`, `sfa`, `sf2` (padrão), `sf4`, `sf5`, `sf6`, com as equivalências e a ordem de PC descritas no CLAUDE.md (`sf3` = `sf5`, `sf4` = `sf2`).
 - **Street Fighter 2 é a base e a verdade.** As versões de Street Fighter 1 (`sf1`) e Alpha (`sfa`) partem da ficha de SF2 (ou da SF4, que é sinônimo, quando não há SF2):
   - Saúde no máximo 18 (valores menores ficam como estão), exceto os chefões: Sagat em SF1 e M. Bison na Alpha;

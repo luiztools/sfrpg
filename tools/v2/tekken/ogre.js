@@ -1,0 +1,121 @@
+function OgreTk3() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Fama", 3);
+
+    return {
+        Nome: "Ogre",
+        Estilo: "Jeet Kune Dô",
+        Escola: "Almas dos lutadores absorvidos",
+        Jogador: "NPC",
+        Assinatura: "Ruge enquanto uma aura roxa envolve o corpo",
+        Conceito: "Deus da Luta",
+        Cronica: "Tekken 3",
+        Forca: 6,
+        Destreza: 5,
+        Vigor: 6,
+        Carisma: 1,
+        Manipulacao: 3,
+        Aparencia: 1,
+        Percepcao: 6,
+        Inteligencia: 4,
+        Raciocinio: 6,
+        Prontidao: 5,
+        Interrogacao: 0,
+        Intimidacao: 5,
+        Perspicacia: 4,
+        Manha: 0,
+        Labia: 0,
+        LutaCega: 5,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 0,
+        Furtividade: 4,
+        Sobrevivencia: 5,
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 0,
+        Misterios: 5,
+        Estilos: 5,
+        Antecedentes: antecedentes,
+        Soco: 6,
+        Chute: 6,
+        Bloqueio: 5,
+        Apresamento: 5,
+        Esportes: 5,
+        Foco: 5,
+        ManobrasEspeciais: "Jump, Kippup, Throw, Double Hit Punch, Double Hit Kick, Spinning Back Fist, Elbow Smash, Reaping Palm, Ax Kick, Lightning Leg, Cartwheel Kick, Spinning Foot Sweep, Foot Sweep, Wounded Knee, Tiger Knee, Knee Basher, Dashing Clothesline, Jumping Shoulder Butt, Deflecting Punch, Block And Grab, Pile Driver, Power Bomb, Psychokinetic Channeling, Absorb Soul, Regeneration, Toughskin, Neck Choke",
+        Combos: "Double Hit Punch para Reaping Palm (Dizzy), Elbow Smash 2x para Tiger Knee (Dizzy), Ax Kick para Lightning Leg, Bloqueio para Block And Grab para Power Bomb, Spinning Foot Sweep para Dashing Clothesline",
+        Gloria: 8,
+        Honra: 0,
+        Chi: 10,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Livre",
+        Posto: 9
+    };
+}
+
+function TrueOgre() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Fama", 3);
+    antecedentes[1] = newCaracteristica("Híbrido Animal", 5);
+
+    return {
+        Nome: "True Ogre",
+        Estilo: "Jeet Kune Dô",
+        Escola: "Almas dos lutadores absorvidos",
+        Jogador: "NPC",
+        Assinatura: "Abre as asas e cospe fogo",
+        Conceito: "Deus da Luta desperto",
+        Cronica: "Tekken 3",
+        Forca: 7,
+        Destreza: 5,
+        Vigor: 7,
+        Carisma: 1,
+        Manipulacao: 3,
+        Aparencia: 0,
+        Percepcao: 7,
+        Inteligencia: 4,
+        Raciocinio: 7,
+        Prontidao: 5,
+        Interrogacao: 0,
+        Intimidacao: 5,
+        Perspicacia: 4,
+        Manha: 0,
+        Labia: 0,
+        LutaCega: 5,
+        Conducao: 0,
+        Lideranca: 0,
+        Seguranca: 0,
+        Furtividade: 2,
+        Sobrevivencia: 5,
+        Arena: 0,
+        Computador: 0,
+        Investigacao: 0,
+        Medicina: 0,
+        Misterios: 5,
+        Estilos: 5,
+        Antecedentes: antecedentes,
+        Soco: 7,
+        Chute: 6,
+        Bloqueio: 6,
+        Apresamento: 5,
+        Esportes: 4,
+        Foco: 6,
+        ManobrasEspeciais: "Jump, Kippup, Throw, Bite, Claw, Tail Slash, Horn, Flight, Double Hit Punch, Elbow Smash, Reaping Palm, Ax Kick, Spinning Foot Sweep, Foot Sweep, Tiger Knee, Knee Basher, Dashing Clothesline, Jumping Shoulder Butt, Power Bomb, Air Smash, Dragons Tail, Tearing Bite, Yoga Flame, Psychokinetic Channeling, Absorb Soul, Regeneration, Toughskin, Extendible Limbs, Ripping Bite",
+        Combos: "Double Hit Punch para Reaping Palm (Dizzy), Elbow Smash 2x para Tiger Knee (Dizzy), Claw para Horn (Dizzy), Spinning Foot Sweep para Dragons Tail, Air Smash para Yoga Flame",
+        Gloria: 8,
+        Honra: 0,
+        Chi: 10,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Livre",
+        Posto: 9
+    };
+}
+
+let npc;
+if (getParameterByName('age') === 'true-ogre') npc = TrueOgre();
+else npc = OgreTk3();
+npc = calcPC(npc);
