@@ -34,17 +34,17 @@ function getXP2(att) {
 
 function calcPC(char) {
     /**
-     * Físicos, Percepção, Int e Rac = soma
-     * Técnicas = soma (Elemental ou Cibernético substituem o Foco se forem maiores)
+     * Físicos, Percepção, Int e Rac = soma x2 (peso 2)
+     * Técnicas = soma x2 (peso 2; Elemental ou Cibernético substituem o Foco se forem maiores)
      * Manobras = PC de cada manobra especial e de cada manobra básica com arma (getPCManobra);
      *            só as 10 maiores contam (um combate tem 10 turnos); as demais são ignoradas
      * Combos = soma os 'para', '2x', '3x' (vale 2) e os dizzy (maiúsculo ou minúsculo)
-     * FdV e Chi = soma
-     * Saúde = soma
+     * FdV e Chi = soma (peso 1)
+     * Saúde = soma (peso 1)
      * */
 
     const attributes = [char.Forca, char.Destreza, char.Vigor, char.Percepcao, char.Inteligencia, char.Raciocinio];
-    const attrPC = attributes.reduce((a, b) => a + (b || 0), 0);
+    const attrPC = attributes.reduce((a, b) => a + (b || 0), 0) * 2;//atributos têm peso 2
 
     //Elemental e Cibernético substituem o Foco quando são maiores (não somam)
     const nivelAntecedente = regex => Math.max(0, ...(char.Antecedentes || []).filter(an => regex.test(an.Nome)).map(an => Number(an.Valor) || 0));
@@ -60,7 +60,7 @@ function calcPC(char) {
     if (char.NovasTecnicas && char.NovasTecnicas.length)
         char.NovasTecnicas.map(nt => techniques.push(nt.Valor));
 
-    const techPC = techniques.reduce((a, b) => a + (Number(b) || 0), 0);
+    const techPC = techniques.reduce((a, b) => a + (Number(b) || 0), 0) * 2;//técnicas têm peso 2
 
     const manobrasEspeciais = char.ManobrasEspeciais.split(/[,;]/g).filter(m => m && m.trim()) || [];
 
@@ -418,7 +418,15 @@ function GeraLinkEstilo(estilo) {
     if (estilo.indexOf("(") == -1)
         return FontPadrao(GeraHtmlLink(estilo));
     else {
-        return FontPadrao(GeraHtmlLink(estilo.split('(')[0].trim()) + " (" + GeraHtmlLink(estilo.split('(')[1].replace(")", "").trim()) + ")");
+        const principal = estilo.split('(')[0].trim();
+        const especializacao = estilo.split('(')[1].replace(")", "").trim();
+        //especializações de Kung Fu (ex.: "Kung Fu (Kenpo)") levam ao post das especializações;
+        //estilos combinados com post próprio (ex.: "Kung Fu (Bojutsu)") mantêm o próprio link
+        const estilosComPost = ["bojutsu", "kenjutsu"];
+        let linkEspecializacao = GeraHtmlLink(especializacao);
+        if (GeraLinkValido(principal).endsWith("/kung-fu") && estilosComPost.indexOf(GeraLinkValido(especializacao).split("/").pop()) == -1)
+            linkEspecializacao = "<a href=\"http://www.sfrpg.com.br/post/especializacoes-do-kung-fu\" target=\"_blank\" title=\"" + especializacao + "\">" + especializacao + "</a>";
+        return FontPadrao(GeraHtmlLink(principal) + " (" + linkEspecializacao + ")");
     }
 }
 

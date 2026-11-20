@@ -8,7 +8,7 @@ function GenSF1() {
 
     const gen = {
         Nome: "Gen",
-        Estilo: "Kempo",
+        Estilo: "Kung Fu (Kenpo)",
         Escola: "Desconhecida",
         Jogador: "NPC",
         Assinatura: "Você luta, você perde, você morre!",
@@ -71,7 +71,7 @@ function GenSF4() {
 
     const gen = {
         Nome: "Gen",
-        Estilo: "Kempo",
+        Estilo: "Kung Fu (Kenpo)",
         Escola: "Desconhecida",
         Jogador: "NPC",
         Assinatura: "Você luta, você perde, você morre!",
@@ -135,7 +135,7 @@ function GenZ3() {
 
     const gen = {
         Nome: "Gen",
-        Estilo: "Kempo",
+        Estilo: "Kung Fu (Kenpo)",
         Escola: "Desconhecida",
         Jogador: "NPC",
         Assinatura: "Você luta, você perde, você morre!",

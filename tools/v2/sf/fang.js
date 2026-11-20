@@ -9,7 +9,7 @@ function Fang() {
 
     const npc = {
         Nome: "F.A.N.G",
-        Estilo: "Kempo",
+        Estilo: "Kung Fu (Kenpo)",
         Escola: "Nguuhao",
         Jogador: "NPC",
         Assinatura: "Dança histérica",

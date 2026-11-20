@@ -5,7 +5,7 @@ function RetsuSF1() {
 
     const retsu = {
         Nome: "Retsu",
-        Estilo: "Kempo",
+        Estilo: "Kung Fu (Kenpo)",
         Escola: "Templo Shaolin",
         Jogador: "NPC",
         Assinatura: "Cruza os braços",
@@ -58,7 +58,7 @@ function RetsuSF6() {
 
     const retsu = {
         Nome: "Retsu",
-        Estilo: "Kempo",
+        Estilo: "Kung Fu (Kenpo)",
         Escola: "Templo Shaolin",
         Jogador: "NPC",
         Assinatura: "Cruza os braços",

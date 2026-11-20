@@ -11,7 +11,7 @@ function VioletTk4() {
         Nome: "Violet (Lee Chaolan)",
         Estilo: "Kickboxe",
         Escola: "Particular",
-        Equipe: "Mishima Zaibatsu",
+        Equipe: "Violet Systems",
         Jogador: "NPC",
         Assinatura: "Chuta o ar",
         Conceito: "Executivo",

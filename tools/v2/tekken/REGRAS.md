@@ -18,6 +18,7 @@ Complementa a skill `personagem-sfrpg`: o que estiver lá vale aqui, e estas reg
 
 ## Post
 
+- **Cronologia:** os parágrafos de crônica usam o ano da história, não o de lançamento do jogo: Tekken (1994), Tekken 2 (1996), Tekken 3 (2015), Tekken 4 e Tekken 5 (2016; o 5 acontece meses depois do 4), Tekken 6 e Tekken 7 (2017; o 6 acontece meses depois do 5), Tekken 8 (2018). Ex.: "<strong>Azazel em Tekken 6 (2017):</strong>".
 - **Tag da franquia (obrigatória em todo personagem desta pasta):** `tekken` (`term_taxonomy_id` 217), inclusive personagens secundários, convidados e capangas (ex.: Tiger Jackson).
 - **Banner da franquia:** sempre a versão 1024x576: `<a href="https://www.sfrpg.com.br/post/tekken"><img class="aligncenter wp-image-8018 size-large" src="https://www.sfrpg.com.br/wp-content/uploads/2025/08/tekken-banner-1024x576.jpg" alt="" width="474" height="267" /></a>` (nunca a `tekken-banner.jpg` de 1200x675).
 - **Equipes:** quem faz ou fez parte da Mishima Zaibatsu (tag `mishima zaibatsu`, banner anexo 13822), da Tekken Force (tag `tekken force`, banner anexo 13823) ou da G Corporation (empresa rival de Kazuya, com forças especiais próprias, que **não** são a Tekken Force; tag `g corporation`, `term_taxonomy_id` 315, banner anexo 13906, `uploads/2026/11/g-corporation-banner.jpg`, 450x253) recebe a tag e o banner, logo abaixo do banner da franquia. Ninguém recebe mais de um: vale a prioridade Tekken Force > G Corporation > Mishima Zaibatsu (ex.: Nina, guarda-costas de Kazuya em Tekken 8, fica na Tekken Force; Kazuya fica na G Corporation).
