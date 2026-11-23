@@ -60,5 +60,21 @@ function EddyTk3() {
     };
 }
 
-let npc = EddyTk3();
+function EddyTk8() {
+    const personagem = EddyTk3();
+    personagem.Cronica = "Tekken 8";
+    personagem.Chute = 7;
+    personagem.Esportes = 6;
+    personagem.Gloria = 8;
+    personagem.Honra = 7;
+    personagem.Chi = 5;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = EddyTk8();
+else npc = EddyTk3();
 npc = calcPC(npc);

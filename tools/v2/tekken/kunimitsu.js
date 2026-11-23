@@ -146,7 +146,20 @@ function KunimitsuIITk4() {
     };
 }
 
+function KunimitsuIITk8() {
+    const personagem = KunimitsuIITk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.NovasTecnicas = personagem.NovasTecnicas.map(t => t.Nome === "Espada" ? newCaracteristica("Espada", 5) : t);
+    personagem.Gloria = 5;
+    personagem.Chi = 8;
+    personagem.ForcaVontade = 8;
+    personagem.Saude = 20;
+    personagem.Posto = 7;
+    return personagem;
+}
+
 let npc;
 if (getParameterByName('age') === 'tk1') npc = KunimitsuITk1();
+else if (getParameterByName('age') === 'tk8') npc = KunimitsuIITk8();
 else npc = KunimitsuIITk4();
 npc = calcPC(npc);

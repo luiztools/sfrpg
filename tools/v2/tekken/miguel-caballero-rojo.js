@@ -52,7 +52,7 @@ function MiguelTk4() {
         Honra: 2,
         Chi: 2,
         ForcaVontade: 8,
-        Saude: 19,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

@@ -60,5 +60,19 @@ function FengTk4() {
     };
 }
 
-let npc = FengTk4();
+function FengTk8() {
+    const personagem = FengTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Bloqueio = 5;
+    personagem.Gloria = 7;
+    personagem.Chi = 7;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 8;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = FengTk8();
+else npc = FengTk4();
 npc = calcPC(npc);

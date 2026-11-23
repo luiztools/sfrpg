@@ -4,14 +4,14 @@ function EijiKisaragi() {
     antecedentes[1] = newCaracteristica("Herança de Clã", 4);
 
     const tecnicas = [];
-    tecnicas[0] = newCaracteristica("Espada", 4);
+    tecnicas[0] = newCaracteristica("Faca", 4);
 
     const armas = [];
-    armas[0] = "Katana";
+    armas[0] = "Faca";
 
     const personagem = {
         Nome: "Eiji Kisaragi",
-        Estilo: "Ninjitsu (Kenjutsu)",
+        Estilo: "Ninjitsu",
         Escola: "Desconhecida",
         Jogador: "NPC",
         Assinatura: "Cumprimento oriental",
@@ -54,7 +54,7 @@ function EijiKisaragi() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Throw, Flying Heel Stomp, Multiple Stomp, Fireball, Improved Fireball, Psychokinetic Channeling, Wall Spring, Foot Sweep, Double Hit Kick, Sakki",
-        Combos: "Strong para Roundhouse para Fierce (Dizzy); Strong para Fierce para Katana Fierce (Dizzy)",
+        Combos: "Strong para Roundhouse para Fierce (Dizzy); Strong para Fierce para Faca Fierce (Dizzy)",
         Gloria: 2,
         Honra: 1,
         Chi: 5,

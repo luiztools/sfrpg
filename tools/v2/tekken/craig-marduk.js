@@ -57,7 +57,7 @@ function MardukTk4() {
         Honra: 5,
         Chi: 6,
         ForcaVontade: 10,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };

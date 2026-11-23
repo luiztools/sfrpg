@@ -60,5 +60,19 @@ function KumaTk4() {
     };
 }
 
-let npc = KumaTk4();
+function KumaTk8() {
+    const personagem = KumaTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Soco = 5;
+    personagem.Gloria = 6;
+    personagem.Chi = 4;
+    personagem.ForcaVontade = 5;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = KumaTk8();
+else npc = KumaTk4();
 npc = calcPC(npc);

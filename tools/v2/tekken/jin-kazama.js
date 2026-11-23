@@ -127,9 +127,20 @@ function DevilJin() {
     };
 }
 
+function JinTk8() {
+    const personagem = JinTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Bloqueio = 5;
+    personagem.Gloria = 8;
+    personagem.Chi = 9;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
 let npc;
-if(getParameterByName('age') === 'devil')
-    npc = DevilJin();
-else 
-    npc = JinTk4();
+if (getParameterByName('age') === 'devil') npc = DevilJin();
+else if (getParameterByName('age') === 'tk8') npc = JinTk8();
+else npc = JinTk4();
 npc = calcPC(npc);

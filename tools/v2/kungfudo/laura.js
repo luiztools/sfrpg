@@ -13,7 +13,7 @@ function LauraKungFuDoFighting() {
         Cronica: "Kung Fu Do Fighting",
         Forca: 2,
         Destreza: 5,
-        Vigor: 1,
+        Vigor: 2,
         Carisma: 5,
         Manipulacao: 1,
         Aparencia: 4,

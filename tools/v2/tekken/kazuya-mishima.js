@@ -129,9 +129,20 @@ function DevilKazuya() {
     };
 }
 
+function KazuyaTk8() {
+    const personagem = KazuyaTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Foco = 6;
+    personagem.Gloria = 10;
+    personagem.Chi = 10;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
 let npc;
-if(getParameterByName('age') === 'devil')
-    npc = DevilKazuya();
-else 
-    npc = KazuyaTk4();
+if (getParameterByName('age') === 'devil') npc = DevilKazuya();
+else if (getParameterByName('age') === 'tk8') npc = KazuyaTk8();
+else npc = KazuyaTk4();
 npc = calcPC(npc);

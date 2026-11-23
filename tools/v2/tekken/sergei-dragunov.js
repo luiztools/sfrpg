@@ -64,5 +64,19 @@ function DragunovTk4() {
     };
 }
 
-let npc = DragunovTk4();
+function DragunovTk8() {
+    const personagem = DragunovTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Apresamento = 7;
+    personagem.Gloria = 7;
+    personagem.Chi = 6;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 8;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = DragunovTk8();
+else npc = DragunovTk4();
 npc = calcPC(npc);

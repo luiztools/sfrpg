@@ -61,5 +61,20 @@ function PaulTk4() {
     };
 }
 
-let npc = PaulTk4();
+function PaulTk8() {
+    const personagem = PaulTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Soco = 6;
+    personagem.Gloria = 10;
+    personagem.Honra = 8;
+    personagem.Chi = 7;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = PaulTk8();
+else npc = PaulTk4();
 npc = calcPC(npc);

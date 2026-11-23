@@ -52,9 +52,9 @@ function CombotTk4() {
         Combos: "",
         Gloria: 0,
         Honra: 0,
-        Chi: 10,
-        ForcaVontade: 10,
-        Saude: 20,
+        Chi: 9,
+        ForcaVontade: 9,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 8
     };

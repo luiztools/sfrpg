@@ -14,7 +14,7 @@ function LeeKungFuDoFighting() {
         Cronica: "Kung Fu Do Fighting",
         Forca: 3,
         Destreza: 5,
-        Vigor: 2,
+        Vigor: 3,
         Carisma: 2,
         Manipulacao: 2,
         Aparencia: 2,

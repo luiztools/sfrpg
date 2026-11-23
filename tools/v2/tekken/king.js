@@ -115,7 +115,7 @@ function KingTk3() {
         ManobrasEspeciais: "Buffalo Punch, Jumping Hammer Punch, Power Uppercut, Double Hit Punch, Wounded Knee, Rhino Horn, Foot Sweep, Slide Kick, Block And Grab, Back Breaker, Dislocate Limb, Grappling Defense, Flying Tackle, Pin, Pile Driver, Siberian Suplex, Suplex, Thigh Press, Jump, Kippup",
         Combos: "Dislocate Limb para Siberian Suplex para Siberian Suplex, Siberian Suplex para Siberian Suplex para Pile Driver, Bloqueio para Block And Grab para Pin, Movimento para Rhino Horn",
         Gloria: 9,
-        Honra: 5,
+        Honra: 6,
         Chi: 3,
         ForcaVontade: 9,
         Saude: 18,
@@ -178,7 +178,7 @@ function KingTk4() {
         ManobrasEspeciais: "Buffalo Punch, Jumping Hammer Punch, Power Uppercut, Double Hit Punch, Wounded Knee, Rhino Horn, Foot Sweep, Slide Kick, Block And Grab, Back Breaker, Dislocate Limb, Grappling Defense, Flying Tackle, Pin, Improved Pin, Pile Driver, Siberian Suplex, Suplex, Thigh Press, Jump, Kippup, Hyper Tackle",
         Combos: "Dislocate Limb para Siberian Suplex para Siberian Suplex, Siberian Suplex para Siberian Suplex para Pile Driver, Bloqueio para Block And Grab para Improved Pin, Movimento para Rhino Horn, Movimento para Hyper Tackle",
         Gloria: 10,
-        Honra: 6,
+        Honra: 7,
         Chi: 4,
         ForcaVontade: 10,
         Saude: 20,
@@ -187,8 +187,22 @@ function KingTk4() {
     };
 }
 
+function KingTk8() {
+    const personagem = KingTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Apresamento = 8;
+    personagem.Gloria = 10;
+    personagem.Honra = 8;
+    personagem.Chi = 5;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
 let npc;
 if (getParameterByName('age') === 'tk1') npc = KingITk1();
 else if (getParameterByName('age') === 'tk3') npc = KingTk3();
+else if (getParameterByName('age') === 'tk8') npc = KingTk8();
 else npc = KingTk4();
 npc = calcPC(npc);

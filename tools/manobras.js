@@ -118,11 +118,11 @@ const manobras = {
 	"Cartwheel Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 1, ModMov: 2, FdV: 1, Vantagens: ["Knockback"], Sistema: "Linha Reta; Dano = Força + Chute + 1 para cada hex que andou; o alvo recua 1 hex" },
 	"Heel Stamp": { Tecnica: "Chute", ModVel: 2, ModDano: -4, ModMov: 1, Vantagens: ["Knockback", "Move Depois"], Sistema: "O atacante recua 1 hex após o dano, o alvo recua [(Força + Esportes do atacante) - Força do alvo] hex" },
 	"Reverse Frontal Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: -1, Vantagens: ["Ignora Bloqueio"], Sistema: "Ignora bloqueios" },
-	"Forward Backflip Kick": { Tecnica: "Chute", ModVel: 2, ModDano: "1/1", ModMov: "Dois", FdV: 1, Desvantagens: ["Ataque Condicional"], Sistema: "Dois hits se o atacante interromper um alvo em Aérea" },
+	"Forward Backflip Kick": { Tecnica: "Chute", ModVel: 2, ModDano: "1/1", ModMov: "Dois", FdV: 1, Desvantagens: ["Ataque Condicional"], Sistema: "Dois hits e KD se o atacante interromper um alvo em Aérea" },
 	"Bushin Hurricane Kick": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", Chi: 1, FdV: 1, Vantagens: ["Impacto Técnico", "Knockdown", "Área", "Knockback"], Sistema: "Todos ao redor são atingidos e empurrados para trás; oponentes no mesmo hex são puxados pelo golpe, podendo ser acertados até um número de vezes igual à Técnica Esportes do usuário; para cada novo ataque, devem ter sofrido dano no ataque anterior; KD no último acerto" },
 	"Dankukyaku": { Tecnica: "Chute", ModVel: 0, ModDano: -1, ModMov: -1, FdV: 2, Vantagens: ["Aérea", "Impacto Dinâmico", "Knockback"], Sistema: "Linha Reta; Aérea; causa dano a cada hex em que entra, e o alvo é jogado 1 hex para trás (knockback); pode seguir um único oponente, acertando-o a cada hex, até gastar o Movimento; o oponente pode Bloquear cada rolamento; os danos múltiplos não se combinam para Dizzy" },
 	"Dive Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 2, ModMov: -1, Vantagens: ["Aérea", "Esquiva de Projétil", "Acerta Agachamento"], Desvantagens: ["Mesmo Hex"], Sistema: "Aérea; esquiva de projétil; termina o ataque no hex do oponente; acerta oponentes em Agachamento" },
-	"Power Kick": { Tecnica: "Chute", ModVel: -3, ModDano: 5, ModMov: "Dois", Vantagens: ["Knockdown", "Knockback"], Sistema: "Empurra 1 Hexágono para trás e causa KD em Manobras Aéreas" },
+	"Power Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 5, ModMov: "Dois", Vantagens: ["Anti-Aérea", "Knockback"], Sistema: "Empurra a vítima 1 hex para trás; KD vs. Aérea se causar dano" },
 	"Soccer Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, ModMov: "Um", Vantagens: ["Knockdown"], Sistema: "Causa KD se causar dano" },
 	"Rhino Horn": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 3, FdV: 1, Vantagens: ["Aérea"], Sistema: "Aérea" },
 	"Roundabout Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, FdV: 1, Vantagens: ["Knockdown", "Aérea"], Sistema: "Acerta oponentes no mesmo hex ou adjacente igual à técnica Chute do lutador; causa KD; Aérea" },
@@ -148,7 +148,6 @@ const manobras = {
 	"Missile Reflection": { Tecnica: "Bloqueio", ModVel: 3, ModMov: -1, Sistema: "DES para refletir projétil; armas de arremesso=1 sucesso; flechas=2; armas de fogo=3 e um pedaço de material; balas não podem ser refletidas no atirador" },
 	"Punch Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Soco; -2 vs. outros" },
 	"San He": { Tecnica: "Bloqueio", ModVel: 2, Chi: 1, Sistema: "BlOCK x2 na ABS; não sofre KD e não pode ser forçado para fora do hex exceto por Apresamentos; o lutador não ganha +2 na VEL no próximo turno" },
-	"Parry": { Tecnica: "Bloqueio", ModVel: 2, Sistema: "Usuário rola DES + BLOCK contra a Técnica da manobra do adversário; se bem-sucedido, evita todo o dano do ataque, adicionando também +1 Velocidade no próximo turno para cada sucesso a mais que tiver obtido (ao invés do +2 do Bloqueio comum); se falhar, recebe todo o dano do ataque; contra projétil, o Narrador pode pedir primeiro um teste de Raciocínio como no Energy Reflection; manobras mais poderosas - com custo em Força de Vontade – podem pedir mais de um sucesso para o Parry ser bem-sucedido; contra Manobras de Múltiplo Impacto, um teste deve ser feito a cada novo rolamento, a não ser por aquelas em que é preciso causar dano para empurrar e seguir batendo, nas quais o Parry as cancela imediatamente se o atacante for impedido de seguir se movendo; Parry bem-sucedido causa o dano do Maka Wara" },
 
 	//apresamento
 	"Air Suplex": { Tecnica: "Apresamento", ModVel: -1, ModDano: 4, ModMov: 0, Vantagens: ["Knockdown", "Aérea"], Desvantagens: ["Condição Rara"], Sistema: "Precisa interromper uma Aérea do oponente; KD; Atacante e alvo terminam no hex da interrupção; Aérea" },
@@ -785,6 +784,13 @@ function calculaMovimentoArmaDistancia(npc, arma) {
 //ModMov "<Técnica>+N" ou "<Técnica>-N" (ex.: "Foco+2"): o movimento parte da técnica no lugar de Esportes
 const baseMovRegex = /^(\p{L}+)\s*([+-]\s*\d+)$/u;
 
+//valor de uma técnica usada no movimento; Cibernético substitui o Foco e Elemental também, quando é maior
+function valorMovimento(npc, nome) {
+	const valor = valorAlcance(npc, nome);
+	if (nome.trim() === "Foco") return Math.max(valor, npc["Elemental"] || 0);
+	return valor;
+}
+
 function calculaMovimento(npc, manobra) {
 	if (manobra.ModMov === null || manobra.ModMov === undefined || semModificador(manobra.ModMov)) return "-";
 	if (manobra.ModMov === "Especial") return "Esp.";
@@ -794,11 +800,11 @@ function calculaMovimento(npc, manobra) {
 
 	const tecnica = /^\+(\p{L}+)$/u.exec(manobra.ModMov);//ex.: "+Foco" (Esportes + Foco)
 	if (tecnica && typeof npc[tecnica[1]] === "number")
-		return npc.Esportes + npc[tecnica[1]];
+		return npc.Esportes + valorMovimento(npc, tecnica[1]);
 
 	const base = baseMovRegex.exec(manobra.ModMov);//ex.: "Foco+2" (Foco no lugar de Esportes, + 2)
 	if (base && typeof npc[base[1]] === "number") {
-		const movBase = npc[base[1]] + (parseInt(base[2].replace(/\s/g, "")) || 0);
+		const movBase = valorMovimento(npc, base[1]) + (parseInt(base[2].replace(/\s/g, "")) || 0);
 		return movBase > 0 ? movBase : 0;
 	}
 

@@ -46,7 +46,7 @@ function MickeyRogers() {
         Apresamento: 4,
         Esportes: 4,
         Foco: 4,
-        ManobrasEspeciais: "Jump, Grappling Defense, Fist Sweep, Fireball, Sonic Boom, Bear Hug, Wall Spring",
+        ManobrasEspeciais: "Light Feet, Ducking Fierce, Lunging Punch, Power Uppercut, Sonic Boom, Energy Ball, Hyper Fist, Jump, Wall Spring, Double Hit Punch, Boxing Punches",
         Combos: "",
         Gloria: 3,
         Honra: 4,

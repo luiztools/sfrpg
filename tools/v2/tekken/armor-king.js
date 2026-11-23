@@ -117,13 +117,26 @@ function ArmorKingIITk4() {
         Honra: 3,
         Chi: 5,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };
 }
 
+function ArmorKingIITk8() {
+    const personagem = ArmorKingIITk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Apresamento = 7;
+    personagem.Gloria = 8;
+    personagem.Chi = 6;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
 let npc;
 if (getParameterByName('age') === 'tk4') npc = ArmorKingIITk4();
+else if (getParameterByName('age') === 'tk8') npc = ArmorKingIITk8();
 else npc = ArmorKingTk1();
 npc = calcPC(npc);

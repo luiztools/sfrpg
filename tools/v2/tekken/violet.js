@@ -63,5 +63,20 @@ function VioletTk4() {
     };
 }
 
-let npc = VioletTk4();
+function VioletTk8() {
+    const personagem = VioletTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Chute = 7;
+    personagem.Gloria = 7;
+    personagem.Honra = 7;
+    personagem.Chi = 7;
+    personagem.ForcaVontade = 7;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = VioletTk8();
+else npc = VioletTk4();
 npc = calcPC(npc);

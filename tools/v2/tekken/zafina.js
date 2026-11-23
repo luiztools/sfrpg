@@ -60,5 +60,21 @@ function ZafinaTk4() {
     };
 }
 
-let npc = ZafinaTk4();
+function ZafinaTk8() {
+    const personagem = ZafinaTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Antecedentes = personagem.Antecedentes.filter(a => a.Nome !== "Devil Gene");
+    personagem.Esportes = 7;
+    personagem.Gloria = 4;
+    personagem.Honra = 8;
+    personagem.Chi = 8;
+    personagem.ForcaVontade = 8;
+    personagem.Saude = 20;
+    personagem.Posto = 8;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = ZafinaTk8();
+else npc = ZafinaTk4();
 npc = calcPC(npc);

@@ -10,7 +10,7 @@ function KingAoF() {
         Escola: "Desconhecida",
         Jogador: "NPC",
         Assinatura: "Elegância",
-        Conceito: "Estudante",
+        Conceito: "Dona de Bar",
         Cronica: "Art of Fighting",
         Time: "Women Fighters",
         Forca: 4,

@@ -68,5 +68,20 @@ function YoshimitsuTk4() {
     };
 }
 
-let npc = YoshimitsuTk4();
+function YoshimitsuTk8() {
+    const personagem = YoshimitsuTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Foco = 6;
+    personagem.Gloria = 7;
+    personagem.Honra = 7;
+    personagem.Chi = 9;
+    personagem.ForcaVontade = 9;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = YoshimitsuTk8();
+else npc = YoshimitsuTk4();
 npc = calcPC(npc);

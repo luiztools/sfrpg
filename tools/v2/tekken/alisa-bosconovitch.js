@@ -71,5 +71,19 @@ function AlisaTk4() {
     };
 }
 
-let npc = AlisaTk4();
+function AlisaTk8() {
+    const personagem = AlisaTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Soco = 4;
+    personagem.Gloria = 3;
+    personagem.Chi = 4;
+    personagem.ForcaVontade = 7;
+    personagem.Saude = 20;
+    personagem.Posto = 5;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = AlisaTk8();
+else npc = AlisaTk4();
 npc = calcPC(npc);

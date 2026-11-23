@@ -59,5 +59,20 @@ function LeoTk4() {
     };
 }
 
-let npc = LeoTk4();
+function LeoTk8() {
+    const personagem = LeoTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Bloqueio = 5;
+    personagem.Gloria = 4;
+    personagem.Honra = 7;
+    personagem.Chi = 5;
+    personagem.ForcaVontade = 8;
+    personagem.Saude = 20;
+    personagem.Posto = 5;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = LeoTk8();
+else npc = LeoTk4();
 npc = calcPC(npc);

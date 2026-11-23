@@ -61,6 +61,21 @@ function HwoarangTk4() {
     return personagem;
 }
 
-let npc = HwoarangTk4();
+function HwoarangTk8() {
+    const personagem = HwoarangTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Chute = 8;
+    personagem.Gloria = 7;
+    personagem.Honra = 7;
+    personagem.Chi = 4;
+    personagem.ForcaVontade = 9;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = HwoarangTk8();
+else npc = HwoarangTk4();
 
 npc = calcPC(npc);

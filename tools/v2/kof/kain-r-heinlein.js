@@ -31,7 +31,7 @@ function KainGarou() {
         Assinatura: "Olhar assustador",
         Conceito: "Líder de Gangue",
         Cronica: "Garou: Mark of the Wolves",
-        Equipe: "Nenhuma",
+        Equipe: "Howard Connection",
         Time: "Nenhum",
         Forca: 3,
         Destreza: 6,

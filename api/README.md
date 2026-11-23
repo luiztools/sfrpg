@@ -9,7 +9,7 @@ Maneuvers Options
 - ?source=All: all sources
 - ?source=Officials: only official sources
 - ?source=Fanmade: only fanmade sources
-- ?source= Core | Players | Contenders | Perfect | Shotokan: only one source
+- ?source= Core | Players | Contenders | Perfect | Secrets | Shotokan | Sites de Fãs: only one source
 
 **GET /maneuvers | /manobras**
 

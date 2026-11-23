@@ -71,7 +71,20 @@ function RogerTk1() {
     return roger;
 }
 
+function RogerJrTk8() {
+    const personagem = RogerJrTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Chute = 5;
+    personagem.Gloria = 4;
+    personagem.Chi = 3;
+    personagem.ForcaVontade = 5;
+    personagem.Saude = 20;
+    personagem.Posto = 7;
+    return personagem;
+}
+
 let npc;
 if (getParameterByName('age') === 'tk1') npc = RogerTk1();
+else if (getParameterByName('age') === 'tk8') npc = RogerJrTk8();
 else npc = RogerJrTk4();
 npc = calcPC(npc);

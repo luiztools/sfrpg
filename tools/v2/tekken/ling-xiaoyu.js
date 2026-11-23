@@ -61,5 +61,20 @@ function XiaoyuTk4() {
     };
 }
 
-let npc = XiaoyuTk4();
+function XiaoyuTk8() {
+    const personagem = XiaoyuTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Esportes = 7;
+    personagem.Gloria = 7;
+    personagem.Honra = 7;
+    personagem.Chi = 7;
+    personagem.ForcaVontade = 9;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = XiaoyuTk8();
+else npc = XiaoyuTk4();
 npc = calcPC(npc);

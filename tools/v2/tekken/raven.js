@@ -59,5 +59,23 @@ function RavenTk4() {
     };
 }
 
-let npc = RavenTk4();
+function RavenTk8() {
+    const personagem = RavenTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Foco = 5;
+    personagem.NovasTecnicas = [newCaracteristica("Faca", 4)];
+    personagem.Armas = ["Wakizashi"];
+    personagem.Divisao = "Duelistas";
+    personagem.Gloria = 5;
+    personagem.Honra = 7;
+    personagem.Chi = 8;
+    personagem.ForcaVontade = 9;
+    personagem.Saude = 20;
+    personagem.Posto = 8;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = RavenTk8();
+else npc = RavenTk4();
 npc = calcPC(npc);

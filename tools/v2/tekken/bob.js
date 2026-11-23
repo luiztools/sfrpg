@@ -52,7 +52,7 @@ function BobTk4() {
         Honra: 6,
         Chi: 3,
         ForcaVontade: 8,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 7
     };
@@ -75,7 +75,21 @@ function SlimBob() {
     return npc;
 }
 
+function BobTk8() {
+    const personagem = BobTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Soco = 6;
+    personagem.Gloria = 6;
+    personagem.Honra = 7;
+    personagem.Chi = 4;
+    personagem.ForcaVontade = 9;
+    personagem.Saude = 20;
+    personagem.Posto = 8;
+    return personagem;
+}
+
 let npc;
 if (getParameterByName('age') === 'slim') npc = SlimBob();
+else if (getParameterByName('age') === 'tk8') npc = BobTk8();
 else npc = BobTk4();
 npc = calcPC(npc);

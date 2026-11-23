@@ -1,8 +1,8 @@
 const maneuvers = require('../data/maneuvers.json');
 
 function getSources(source) {
-    const officials = ["Core", "Players", "Contenders", "Perfect"];
-    const fanmade = ["Shotokan"];
+    const officials = ["Core", "Players", "Contenders", "Perfect", "Secrets"];
+    const fanmade = ["Shotokan", "Sites de Fãs"];
     source = source ? source.toLowerCase() : '';
 
     if (!source || source.startsWith('all')
@@ -14,7 +14,8 @@ function getSources(source) {
     if (source.startsWith('fan')
         || source.startsWith('fã')) return fanmade;
 
-    return source;
+    const all = [...officials, ...fanmade];
+    return all.filter(s => s.toLowerCase() === source);
 }
 
 function getTech(tech) {
@@ -49,7 +50,7 @@ function getManeuver(name, source) {
 function searchManeuvers(text, source) {
     const sourceArr = getSources(source);
     text = text.toLowerCase();
-    return maneuvers.filter(m => m.Name.toLowerCase().contains(text) && sourceArr.some(s => s === m.Source));
+    return maneuvers.filter(m => m.Name.toLowerCase().includes(text) && sourceArr.some(s => s === m.Source));
 }
 
 module.exports = {

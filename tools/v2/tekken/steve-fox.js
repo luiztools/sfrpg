@@ -54,11 +54,26 @@ function SteveTk4() {
         Honra: 6,
         Chi: 3,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Livre",
         Posto: 8
     };
 }
 
-let npc = SteveTk4();
+function SteveTk8() {
+    const personagem = SteveTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Soco = 7;
+    personagem.Gloria = 3;
+    personagem.Honra = 7;
+    personagem.Chi = 4;
+    personagem.ForcaVontade = 8;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = SteveTk8();
+else npc = SteveTk4();
 npc = calcPC(npc);

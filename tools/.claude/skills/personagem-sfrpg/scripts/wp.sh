@@ -3,8 +3,15 @@
 # Requer .env com DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, FTP_HOST, FTP_USER, FTP_PASSWORD.
 # Nunca imprima valores do .env. O .env tem caracteres como "&", por isso não dá para fazer "source .env".
 
-: "${WP_TMP:=${TMPDIR:-/tmp}/sfrpg-wp}"
-mkdir -p "$WP_TMP"
+# Cada "source" cria um diretório temporário exclusivo (credenciais e arquivos de trabalho),
+# para que sessões paralelas não apaguem o my.cnf umas das outras no wp_db_close.
+# Se WP_TMP já vier definido, ele é usado como está (e não é removido no wp_db_close).
+if [ -n "$WP_TMP" ]; then
+    mkdir -p "$WP_TMP"; WP_TMP_OWN=0
+else
+    WP_TMP=$(mktemp -d "${TMPDIR:-/tmp}/sfrpg-wp.XXXXXX"); WP_TMP_OWN=1
+fi
+chmod 700 "$WP_TMP"
 WP_CNF="$WP_TMP/my.cnf"
 
 envget() { grep "^$1=" .env | head -1 | cut -d= -f2- | sed -e 's/^["'\'']//' -e 's/["'\'']$//'; }
@@ -14,7 +21,11 @@ wp_db_open() {
     ( umask 077; printf "[client]\nuser=%s\npassword=\"%s\"\nhost=%s\nport=%s\ndatabase=%s\ndefault-character-set=utf8mb4\n" \
         "$(envget DB_USER)" "$(envget DB_PASSWORD)" "$(envget DB_HOST)" "$(envget DB_PORT)" "$(envget DB_NAME)" > "$WP_CNF" )
 }
-wp_db_close() { rm -f "$WP_CNF"; }
+wp_db_close() {
+    rm -f "$WP_CNF"
+    [ "$WP_TMP_OWN" = 1 ] && case "$WP_TMP" in */sfrpg-wp.??????) rm -rf "$WP_TMP" ;; esac
+    return 0
+}
 wp_sql() { mysql --defaults-extra-file="$WP_CNF" "$@"; }
 
 # Baixa o post_content exato (bytes, incluindo CRLF) para um arquivo.

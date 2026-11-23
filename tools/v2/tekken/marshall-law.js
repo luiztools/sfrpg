@@ -121,7 +121,21 @@ function LawTk4() {
     };
 }
 
+function LawTk8() {
+    const personagem = LawTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Chute = 7;
+    personagem.Gloria = 9;
+    personagem.Honra = 9;
+    personagem.Chi = 10;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
 let npc;
 if (getParameterByName('age') === 'tk1') npc = LawTk1();
+else if (getParameterByName('age') === 'tk8') npc = LawTk8();
 else npc = LawTk4();
 npc = calcPC(npc);

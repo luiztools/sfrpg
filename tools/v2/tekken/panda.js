@@ -59,5 +59,19 @@ function PandaTk4() {
     };
 }
 
-let npc = PandaTk4();
+function PandaTk8() {
+    const personagem = PandaTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Soco = 5;
+    personagem.Gloria = 6;
+    personagem.Chi = 4;
+    personagem.ForcaVontade = 5;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = PandaTk8();
+else npc = PandaTk4();
 npc = calcPC(npc);

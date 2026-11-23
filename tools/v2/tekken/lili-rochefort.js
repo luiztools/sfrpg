@@ -61,5 +61,19 @@ function LiliTk4() {
     };
 }
 
-let npc = LiliTk4();
+function LiliTk8() {
+    const personagem = LiliTk4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Chute = 6;
+    personagem.Gloria = 4;
+    personagem.Chi = 5;
+    personagem.ForcaVontade = 9;
+    personagem.Saude = 20;
+    personagem.Posto = 7;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = LiliTk8();
+else npc = LiliTk4();
 npc = calcPC(npc);

@@ -66,6 +66,20 @@ function HeihachiTekken4() {
     return personagem;
 }
 
-let npc = HeihachiTekken4();
+function HeihachiTk8() {
+    const personagem = HeihachiTekken4();
+    personagem.Cronica = "Tekken 8";
+    personagem.Foco = 6;
+    personagem.Gloria = 10;
+    personagem.Chi = 10;
+    personagem.ForcaVontade = 10;
+    personagem.Saude = 20;
+    personagem.Posto = 9;
+    return personagem;
+}
+
+let npc;
+if (getParameterByName('age') === 'tk8') npc = HeihachiTk8();
+else npc = HeihachiTekken4();
 
 npc = calcPC(npc);
