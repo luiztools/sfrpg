@@ -63,6 +63,20 @@ function VioletTk4() {
     };
 }
 
+function LeeChaolanTk1() {
+    const personagem = VioletTk4();
+    personagem.Nome = "Lee Chaolan";
+    personagem.Equipe = "Mishima Zaibatsu";
+    personagem.Cronica = "Tekken 2";
+    personagem.Gloria = 5;
+    personagem.Honra = 5;
+    personagem.Chi = 5;
+    personagem.ForcaVontade = 5;
+    personagem.Saude = 18;
+    personagem.Posto = 7;
+    return personagem;
+}
+
 function VioletTk8() {
     const personagem = VioletTk4();
     personagem.Cronica = "Tekken 8";
@@ -77,6 +91,7 @@ function VioletTk8() {
 }
 
 let npc;
-if (getParameterByName('age') === 'tk8') npc = VioletTk8();
+if (getParameterByName('age') === 'tk1') npc = LeeChaolanTk1();
+else if (getParameterByName('age') === 'tk8') npc = VioletTk8();
 else npc = VioletTk4();
 npc = calcPC(npc);

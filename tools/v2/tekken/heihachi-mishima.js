@@ -66,6 +66,19 @@ function HeihachiTekken4() {
     return personagem;
 }
 
+function HeihachiTk1() {
+    const personagem = HeihachiTekken4();
+    personagem.Cronica = "Tekken 2";
+    personagem.Equipe = "Mishima Zaibatsu";
+    delete personagem.Time;
+    personagem.Gloria = 8;
+    personagem.Honra = 3;
+    personagem.Chi = 9;
+    personagem.ForcaVontade = 9;
+    personagem.Posto = 7;
+    return personagem;
+}
+
 function HeihachiTk8() {
     const personagem = HeihachiTekken4();
     personagem.Cronica = "Tekken 8";
@@ -79,7 +92,8 @@ function HeihachiTk8() {
 }
 
 let npc;
-if (getParameterByName('age') === 'tk8') npc = HeihachiTk8();
+if (getParameterByName('age') === 'tk1') npc = HeihachiTk1();
+else if (getParameterByName('age') === 'tk8') npc = HeihachiTk8();
 else npc = HeihachiTekken4();
 
 npc = calcPC(npc);

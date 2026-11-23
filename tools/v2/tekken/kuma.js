@@ -60,6 +60,18 @@ function KumaTk4() {
     };
 }
 
+function KumaTk1() {
+    const personagem = KumaTk4();
+    personagem.Cronica = "Tekken 2";
+    personagem.Gloria = 4;
+    personagem.Honra = 4;
+    personagem.Chi = 2;
+    personagem.ForcaVontade = 3;
+    personagem.Saude = 18;
+    personagem.Posto = 7;
+    return personagem;
+}
+
 function KumaTk8() {
     const personagem = KumaTk4();
     personagem.Cronica = "Tekken 8";
@@ -73,6 +85,7 @@ function KumaTk8() {
 }
 
 let npc;
-if (getParameterByName('age') === 'tk8') npc = KumaTk8();
+if (getParameterByName('age') === 'tk1') npc = KumaTk1();
+else if (getParameterByName('age') === 'tk8') npc = KumaTk8();
 else npc = KumaTk4();
 npc = calcPC(npc);

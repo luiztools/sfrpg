@@ -19,8 +19,6 @@ function AnnaTk1() {
         Assinatura: "Manda um beijo e ri da adversária",
         Conceito: "Agente Especial",
         Cronica: "Tekken",
-        Equipe: "G Corporation",
-        Time: "G Corporation",
         Forca: 3,
         Destreza: 6,
         Vigor: 4,

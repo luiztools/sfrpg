@@ -22,8 +22,6 @@ function NinaTk1() {
         Assinatura: "Ajeita o cabelo e vira as costas sem dizer nada",
         Conceito: "Assassina",
         Cronica: "Tekken",
-        Equipe: "Tekken Force",
-        Time: "Tekken Force",
         Forca: 3,
         Destreza: 6,
         Vigor: 4,

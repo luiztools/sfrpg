@@ -129,6 +129,20 @@ function DevilKazuya() {
     };
 }
 
+function KazuyaTk1() {
+    const personagem = KazuyaTk4();
+    personagem.Cronica = "Tekken 2";
+    personagem.Equipe = "Mishima Zaibatsu";
+    delete personagem.Time;
+    personagem.Gloria = 8;
+    personagem.Honra = 5;
+    personagem.Chi = 9;
+    personagem.ForcaVontade = 9;
+    personagem.Saude = 18;
+    personagem.Posto = 7;
+    return personagem;
+}
+
 function KazuyaTk8() {
     const personagem = KazuyaTk4();
     personagem.Cronica = "Tekken 8";
@@ -142,7 +156,8 @@ function KazuyaTk8() {
 }
 
 let npc;
-if (getParameterByName('age') === 'devil') npc = DevilKazuya();
+if (getParameterByName('age') === 'tk1') npc = KazuyaTk1();
+else if (getParameterByName('age') === 'devil') npc = DevilKazuya();
 else if (getParameterByName('age') === 'tk8') npc = KazuyaTk8();
 else npc = KazuyaTk4();
 npc = calcPC(npc);

@@ -68,6 +68,18 @@ function YoshimitsuTk4() {
     };
 }
 
+function YoshimitsuTk1() {
+    const personagem = YoshimitsuTk4();
+    personagem.Cronica = "Tekken 2";
+    personagem.Gloria = 5;
+    personagem.Honra = 5;
+    personagem.Chi = 7;
+    personagem.ForcaVontade = 7;
+    personagem.Saude = 18;
+    personagem.Posto = 7;
+    return personagem;
+}
+
 function YoshimitsuTk8() {
     const personagem = YoshimitsuTk4();
     personagem.Cronica = "Tekken 8";
@@ -82,6 +94,7 @@ function YoshimitsuTk8() {
 }
 
 let npc;
-if (getParameterByName('age') === 'tk8') npc = YoshimitsuTk8();
+if (getParameterByName('age') === 'tk1') npc = YoshimitsuTk1();
+else if (getParameterByName('age') === 'tk8') npc = YoshimitsuTk8();
 else npc = YoshimitsuTk4();
 npc = calcPC(npc);
