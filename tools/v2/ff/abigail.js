@@ -2,7 +2,7 @@ function AbigailSF5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 3);
     antecedentes[1] = newCaracteristica("Contatos", 2);
-    antecedentes[2] = newCaracteristica("Recursos", 1);
+    antecedentes[2] = newCaracteristica("Recursos", 3);
     const abigail = {
         Nome: "Abigail",
         Estilo: "Wrestling",
@@ -41,7 +41,7 @@ function AbigailSF5() {
         Chute: 3,
         Bloqueio: 5,
         Apresamento: 5,
-        Esportes: 3,
+        Esportes: 4,
         Foco: 2,
         ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Toughskin, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Backflip, Tumbling Attack, Foot Sweep, Wheel Kick, Hyper Tackle",
         Combos: "Flying Tackle para Throw; Hyper Fist para Power Uppercut (Dizzy); Jab para Jab (Dizy); Bloqueio para Air Smash (Dizzy); Tumbling Attack para Foot Sweep",
@@ -59,8 +59,9 @@ function AbigailSF5() {
 function AbigailFF1() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 4);
-    antecedentes[1] = newCaracteristica("Contatos", 3);
+    antecedentes[1] = newCaracteristica("Contatos", 2);
     antecedentes[2] = newCaracteristica("Recursos", 2);
+
     const abigail = {
         Nome: "Abigail",
         Estilo: "Wrestling",
@@ -71,10 +72,10 @@ function AbigailFF1() {
         Cronica: "Final Fight",
         Equipe: "Mad Gear",
         Time: "Mad Gear",
-        Forca: 6,
+        Forca: 7,
         Destreza: 2,
-        Vigor: 7,
-        Carisma: 3,
+        Vigor: 6,
+        Carisma: 2,
         Manipulacao: 2,
         Aparencia: 1,
         Percepcao: 2,
@@ -95,19 +96,19 @@ function AbigailFF1() {
         Arena: 1,
         Estilos: 0,
         Antecedentes: antecedentes,
-        Soco: 4,
+        Soco: 5,
         Chute: 2,
         Bloqueio: 4,
         Apresamento: 4,
-        Esportes: 2,
-        Foco: 1,
-        ManobrasEspeciais: "Jump, Throw, Hyper Fist, Flying Tackle, Head Butt, Haymaker, Widowmaker, Power Uppercut, Buffalo Punch, Face Slam, Air Smash, Foot Sweep",
-        Combos: "Flying Tackle para Throw; Hyper Fist para Power Uppercut (Dizzy); Jab para Jab (Dizy); Bloqueio para Air Smash (Dizzy);",
+        Esportes: 4,
+        Foco: 2,
+        ManobrasEspeciais: "Jump, Air Smash, Toughskin",
+        Combos: "Bloqueio para Air Smash",
         Gloria: 4,
         Honra: 0,
         Chi: 5,
-        ForcaVontade: 7,
-        Saude: 15,
+        ForcaVontade: 9,
+        Saude: 18,
         Divisao: "Tradicional",
         Posto: 5
     };

@@ -7,7 +7,7 @@ function Sodom() {
 
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Faca", 4);
-    tecnicas[1] = newCaracteristica("Espada", 4);
+    tecnicas[1] = newCaracteristica("Espada", 5);
     tecnicas[2] = newCaracteristica("Mangual", 4);
 
     const armas = [];
@@ -55,19 +55,19 @@ function Sodom() {
         Antecedentes: antecedentes,
         Soco: 3,
         Chute: 4,
-        Bloqueio: 5,
-        Apresamento: 5,
+        Bloqueio: 3,
+        Apresamento: 3,
         Esportes: 4,
         Foco: 3,
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Slide Kick, Throw, Suplex, Air Suplex, Pile Driver, Spinning Pile Driver, Daikyou Burning",
         Combos: "Jitte Jab para Jitte Strong para Jitte Fierce (Dizzy); Bloqueio para Spinning Pile Driver; Bloqueio para Daikyou Burning",
-        Gloria: 5,
+        Gloria: 4,
         Honra: 2,
-        Chi: 6,
+        Chi: 4,
         ForcaVontade: 7,
-        Saude: 20,
+        Saude: 16,
         Divisao: "Duelistas",
         Posto: 7
     };

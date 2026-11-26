@@ -833,7 +833,7 @@ function Fritz() {
         Chi: 1,
         ForcaVontade: 2,
         Saude: 6,
-        Divisao: "Duelistas",
+        Divisao: "Tradicional",
         Posto: 1
     };
     return personagem;

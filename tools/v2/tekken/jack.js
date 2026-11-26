@@ -1,3 +1,35 @@
+function Jack1() {
+    const personagem = JackTk1();
+    personagem.Nome = "Jack";
+    personagem.Cronica = "Tekken";
+    personagem.Assinatura = "Encara o oponente em silêncio, à espera da ordem de ataque";
+    personagem.Conceito = "Robô militar";
+    personagem.Antecedentes = [
+        newCaracteristica("Apoio", 4),
+        newCaracteristica("Cibernético", 5)
+    ];
+    personagem.ManobrasEspeciais = "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Ducking Fierce, Fist Sweep, Spinning Clothesline, Air Smash, Head Butt, Throw, Bear Hug, Back Breaker, Jump";
+    personagem.Combos = "Machine Gun Blow para Power Uppercut, Ducking Fierce para Fist Sweep, Bloqueio para Turn Punch";
+    personagem.Gloria = 4;
+    return personagem;
+}
+
+function PJack() {
+    const personagem = JackTk1();
+    personagem.Nome = "P. Jack";
+    personagem.Escola = "Mishima Zaibatsu";
+    personagem.Assinatura = "Os propulsores das costas cospem fogo antes do ataque";
+    personagem.Conceito = "Protótipo assassino";
+    personagem.Antecedentes = [
+        newCaracteristica("Apoio", 3),
+        newCaracteristica("Cibernético", 5)
+    ];
+    personagem.ManobrasEspeciais = "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Ducking Fierce, Fist Sweep, Spinning Clothesline, Air Smash, Head Butt, Throw, Bear Hug, Back Breaker, Jump, Flight, Shockwave";
+    personagem.Combos = "Machine Gun Blow para Power Uppercut, Bloqueio para Turn Punch, Jump para Air Smash";
+    personagem.Honra = 2;
+    return personagem;
+}
+
 function JackTk1() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 1);
@@ -5,7 +37,7 @@ function JackTk1() {
     antecedentes[2] = newCaracteristica("Cibernético", 5);
 
     return {
-        Nome: "Jack / Jack-2",
+        Nome: "Jack-2",
         Estilo: "Forças Especiais",
         Escola: "Exército Russo",
         Equipe: "Mishima Zaibatsu",
@@ -119,7 +151,34 @@ function GunJackTk3() {
     };
 }
 
-function JackTk4() {
+function Jack4() {
+    const personagem = GunJackTk3();
+    personagem.Nome = "Jack-4";
+    personagem.Escola = "G Corporation";
+    personagem.Equipe = "G Corporation";
+    personagem.Time = "G Corporation";
+    personagem.Assinatura = "Avança em formação com os outros Jack-4, sem emitir som";
+    personagem.Conceito = "Robô de produção em massa";
+    personagem.Cronica = "Tekken 5";
+    personagem.Antecedentes = [
+        newCaracteristica("Apoio", 5),
+        newCaracteristica("Cibernético", 5)
+    ];
+    personagem.Intimidacao = 4;
+    personagem.Arena = 0;
+    personagem.Estilos = 1;
+    personagem.ManobrasEspeciais = "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Ducking Fierce, Fist Sweep, Head Butt, Throw, Bear Hug, Jump";
+    personagem.Combos = "Machine Gun Blow para Power Uppercut, Ducking Fierce para Fist Sweep";
+    personagem.Gloria = 1;
+    personagem.Honra = 1;
+    personagem.Chi = 1;
+    personagem.ForcaVontade = 4;
+    personagem.Saude = 16;
+    personagem.Posto = 4;
+    return personagem;
+}
+
+function Jack5() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 3);
     antecedentes[1] = newCaracteristica("Apoio", 4);
@@ -169,7 +228,7 @@ function JackTk4() {
         Apresamento: 4,
         Esportes: 3,
         Foco: 0,
-        ManobrasEspeciais: "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Buffalo Punch, Ducking Fierce, Fist Sweep, Turbo Spinning Clothesline, Air Smash, Head Butt, Throw, Bear Hug, Back Breaker, Grappling Defense, Jump, Extendible Limbs, Shockwave, Toughskin",
+        ManobrasEspeciais: "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Buffalo Punch, Ducking Fierce, Fist Sweep, Turbo Spinning Clothesline, Air Smash, Head Butt, Throw, Bear Hug, Back Breaker, Grappling Defense, Jump, Shockwave, Toughskin",
         Combos: "Machine Gun Blow para Power Uppercut, Ducking Fierce para Fist Sweep para Buffalo Punch (Dizzy), Bloqueio para Turn Punch, Jump para Air Smash para Bear Hug, Haymaker para Shockwave",
         Gloria: 6,
         Honra: 5,
@@ -179,6 +238,29 @@ function JackTk4() {
         Divisao: "Duelistas",
         Posto: 8
     };
+}
+
+function Jack6() {
+    const personagem = Jack5();
+    personagem.Nome = "Jack-6";
+    personagem.Assinatura = "Bate os punhos de metal, e as placas hexagonais dos braços se ajustam";
+    personagem.Conceito = "Robô investigador";
+    personagem.Cronica = "Tekken 6";
+    personagem.Forca = 8;
+    personagem.ManobrasEspeciais = "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Buffalo Punch, Ducking Fierce, Fist Sweep, Turbo Spinning Clothesline, Air Smash, Head Butt, Throw, Bear Hug, Back Breaker, Grappling Defense, Jump, Extendible Limbs, Shockwave, Toughskin";
+    return personagem;
+}
+
+function Jack7() {
+    const personagem = Jack6();
+    personagem.Nome = "Jack-7";
+    personagem.Assinatura = "Os olhos brilham em vermelho enquanto ele cerra os punhos";
+    personagem.Conceito = "Arma humanoide";
+    personagem.Cronica = "Tekken 7";
+    personagem.Prontidao = 5;
+    personagem.Soco = 6;
+    personagem.Combos += ", Extendible Limbs para Turbo Spinning Clothesline";
+    return personagem;
 }
 
 function JackTk8() {
@@ -245,8 +327,13 @@ function JackTk8() {
 
 let npc;
 const age = getParameterByName('age');
-if (age === 'tk1') npc = JackTk1();
-else if (age === 'tk3') npc = GunJackTk3();
-else if (age === 'tk8') npc = JackTk8();
-else npc = JackTk4();
+if (age === 'jack') npc = Jack1();
+else if (age === 'pjack') npc = PJack();
+else if (age === 'tk1' || age === 'jack2') npc = JackTk1();
+else if (age === 'tk3' || age === 'gunjack') npc = GunJackTk3();
+else if (age === 'jack4') npc = Jack4();
+else if (age === 'jack5') npc = Jack5();
+else if (age === 'jack6') npc = Jack6();
+else if (age === 'tk8' || age === 'jack8') npc = JackTk8();
+else npc = Jack7();
 npc = calcPC(npc);

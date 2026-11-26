@@ -456,6 +456,7 @@ const armas = {
 	"Granada de Gelo": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Raio de 3 hexes. Igual Ice Blast." },
 	"Pistola": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 3, ModMov: "-", Sistema: "" },
 	"Pistola de Choque": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: "Especial", ModMov: "-", Alcance: 5, Sistema: "5 cargas. Dano 10 fixo. Sustentado Força 5. Ignora Bloqueio." },
+	"Diapasão de Choque": { Tecnica: "Bastão", ModVel: 1, ModDano: "Especial", ModMov: 0, Sistema: "Exclusiva de Elick: diapasões ligados a um gerador caseiro. Corpo a corpo. 5 cargas. Dano 10 fixo. Sustentado Força 5. Ignora Bloqueio." },
 	"Pistola Pesada": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 4, ModMov: "-", Sistema: "" },
 	"Rapier": { Tecnica: "Espada", ModVel: 2, ModDano: 1, ModMov: 1, Sistema: "Empunhadura: Uma Mão." },
 	"Sabre": { Tecnica: "Espada", ModVel: 1, ModDano: 3, ModMov: 0, Sistema: "" },

@@ -7,8 +7,8 @@ function HaggarFF3() {
     antecedentes[4] = newCaracteristica("Fama", 3);
 
     const talentos = [];
-    talentos[0] = newCaracteristica("Administrar", 4);
-    talentos[1] = newCaracteristica("Instrução", 5);
+    talentos[0] = newCaracteristica("Administrar", 2);
+    talentos[1] = newCaracteristica("Instrução", 1);
 
     const pericias = [];
     pericias[0] = newCaracteristica("Reparos", 4);
@@ -21,7 +21,7 @@ function HaggarFF3() {
         Escola: "Associação Slam Masters",
         Jogador: "NPC",
         Assinatura: "Flexiona os músculos!",
-        Conceito: "Ex-Wrestler",
+        Conceito: "Prefeito Ex-Wrestler",
         Cronica: "Final Fight 3",
         Equipe: "Prefeitura de Metro City",
         Time: "Final Fight",
@@ -76,27 +76,77 @@ function HaggarFF3() {
 }
 
 function Haggar() {
-    const haggar = HaggarFF3();
-    haggar.Saude = 18;
-    haggar.ForcaVontade = 9;
-    haggar.Cronica = "Final Fight";
-    haggar.Manipulacao = 3;
-    haggar.Inteligencia = 3;
-    haggar.Posto = 5;
-    haggar.Chi = 2;
-    haggar.Foco = 0;
-    haggar.Manha = 2;
-    haggar.Computador = 0;
-    haggar.Investigacao = 3;
-    haggar.Lideranca = 4;
-    haggar.Antecedentes[0].Valor = 3;//Recursos
-    haggar.Antecedentes[1].Valor = 4;//Contatos
-    haggar.Antecedentes[2].Valor = 4;//Aliados
-    haggar.Antecedentes[3].Valor = 4;//Staff
-    haggar.Antecedentes[4].Valor = 2;//Fama
-    haggar.NovosTalentos[0].Valor = 3;//Administrar
-    haggar.NovosTalentos[1].Valor = 0;//Instrução
-    haggar.NovasPericias[0].Valor = 3;//Reparos
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Recursos", 4);
+    antecedentes[1] = newCaracteristica("Contatos", 5);
+    antecedentes[2] = newCaracteristica("Aliados", 5);
+    antecedentes[3] = newCaracteristica("Staff", 5);
+    antecedentes[4] = newCaracteristica("Fama", 3);
+
+    const talentos = [];
+    talentos[0] = newCaracteristica("Administrar", 1);
+
+    const pericias = [];
+
+    const conhecimentos = [];
+
+    const haggar = {
+        Nome: "Mike Haggar",
+        Estilo: "Wrestling",
+        Escola: "Associação Slam Masters",
+        Jogador: "NPC",
+        Assinatura: "Flexiona os músculos!",
+        Conceito: "Prefeito Ex-Wrestler",
+        Cronica: "Final Fight 1-2",
+        Equipe: "Prefeitura de Metro City",
+        Time: "Final Fight",
+        Forca: 5,
+        Destreza: 2,
+        Vigor: 5,
+        Carisma: 3,
+        Manipulacao: 2,
+        Aparencia: 3,
+        Percepcao: 2,
+        Inteligencia: 3,
+        Raciocinio: 3,
+        Prontidao: 1,
+        Interrogacao: 3,
+        Intimidacao: 4,
+        Perspicacia: 2,
+        Manha: 2,
+        Labia: 2,
+        NovosTalentos: talentos,
+        LutaCega: 0,
+        Conducao: 2,
+        Lideranca: 3,
+        Seguranca: 0,
+        Furtividade: 0,
+        Sobrevivencia: 0,
+        NovasPericias: pericias,
+        Arena: 2,
+        Computador: 1,
+        Investigacao: 2,
+        Medicina: 1,
+        Misterios: 0,
+        Estilos: 2,
+        NovosConhecimentos: conhecimentos,
+        Antecedentes: antecedentes,
+        Soco: 4,
+        Chute: 2,
+        Bloqueio: 1,
+        Apresamento: 4,
+        Esportes: 3,
+        Foco: 0,
+        ManobrasEspeciais: "Pile Driver, Suplex, Jump, Spinning Clothesline, Head Butt, Throw, Haymaker, Head Butt Hold",
+        Combos: "Jab para Suplex",
+        Gloria: 5,
+        Honra: 3,
+        Chi: 1,
+        ForcaVontade: 9,
+        Saude: 12,
+        Divisao: "Tradicional",
+        Posto: 5
+    };
     return haggar;
 }
 

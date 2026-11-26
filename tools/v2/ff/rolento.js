@@ -10,7 +10,7 @@ function RolentoZ3() {
     const tecnicas = [];
     tecnicas[0] = newCaracteristica("Armas de Fogo", 5);
     tecnicas[1] = newCaracteristica("Faca", 4);
-    tecnicas[2] = newCaracteristica("Arremesso", 4);
+    tecnicas[2] = newCaracteristica("Arremesso", 5);
     tecnicas[3] = newCaracteristica("Bastão", 5);
 
     const armas = [];
@@ -18,6 +18,7 @@ function RolentoZ3() {
     armas[1] = "Faca";
     armas[2] = "Granada";
     armas[3] = "Garrote";
+    armas[4] = "Pistola Pesada";
 
     const rolento = {
         Nome: "Rolento F. Schugerg",
@@ -35,14 +36,14 @@ function RolentoZ3() {
         Carisma: 3,
         Manipulacao: 5,
         Aparencia: 2,
-        Percepcao: 4,
-        Inteligencia: 5,
-        Raciocinio: 5,
+        Percepcao: 2,
+        Inteligencia: 4,
+        Raciocinio: 4,
         Prontidao: 3,
         Interrogacao: 5,
         Intimidacao: 4,
         Perspicacia: 2,
-        Manha: 5,
+        Manha: 4,
         Labia: 4,
         LutaCega: 1,
         Conducao: 4,
@@ -60,18 +61,18 @@ function RolentoZ3() {
         Soco: 3,
         Chute: 5,
         Bloqueio: 4,
-        Apresamento: 5,
+        Apresamento: 4,
         Esportes: 4,
         Foco: 2,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Weapon Sweep, Throw, Air Throw, Spinning Weapon",
+        ManobrasEspeciais: "Jump, Weapon Sweep, Throw, Air Throw, Spinning Weapon, Wall Spring, Air Smash",
         Combos: "Faca Arremessada para Granada; Spinning Weapon para Spinning Weapon para Spinning Weapon (Dizzy)",
-        Gloria: 6,
-        Honra: 3,
+        Gloria: 4,
+        Honra: 0,
         Chi: 3,
         ForcaVontade: 9,
-        Saude: 18,
+        Saude: 16,
         Divisao: "Duelistas",
         Posto: 6
     };
@@ -99,6 +100,7 @@ function RolentoSF4() {
     armas[2] = "Faca Arremessada";
     armas[3] = "Granada";
     armas[4] = "Garrote";
+    armas[5] = "Pistola Pesada";
 
     const rolento = {
         Nome: "Rolento F. Schugerg",
@@ -146,13 +148,13 @@ function RolentoSF4() {
         Foco: 2,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Weapon Sweep, Throw, Air Throw, Spinning Weapon",
+        ManobrasEspeciais: "Jump, Weapon Sweep, Throw, Air Throw, Spinning Weapon, Wall Spring, Air Smash",
         Combos: "Faca Arremessada para Granada; Spinning Weapon para Spinning Weapon para Spinning Weapon (Dizzy)",
-        Gloria: 7,
-        Honra: 4,
+        Gloria: 6,
+        Honra: 2,
         Chi: 4,
         ForcaVontade: 10,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 7
     };

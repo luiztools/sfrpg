@@ -3,14 +3,16 @@ function Belger() {
     antecedentes[0] = newCaracteristica("Aliados", 5);
     antecedentes[1] = newCaracteristica("Apoio", 5);
     antecedentes[2] = newCaracteristica("Contatos", 5);
-    antecedentes[3] = newCaracteristica("Recursos", 5);
+    antecedentes[3] = newCaracteristica("Recursos", 4);
     antecedentes[4] = newCaracteristica("Staff", 5);
 
     const tecnicas = [newCaracteristica("Besta", 5)];
 
+    const armas = ["Besta"];
+
     const npc = {
         Nome: "Belger",
-        Estilo: "Nenhum",
+        Estilo: "Briga",
         Jogador: "NPC",
         Assinatura: "Cadeirante",
         Conceito: "Chefão do Crime",
@@ -18,14 +20,14 @@ function Belger() {
         Equipe: "Mad Gear",
         Time: "Mad Gear",
         Forca: 3,
-        Destreza: 3,
-        Vigor: 4,
-        Carisma: 5,
+        Destreza: 4,
+        Vigor: 5,
+        Carisma: 3,
         Manipulacao: 5,
         Aparencia: 2,
         Percepcao: 3,
         Inteligencia: 5,
-        Raciocinio: 4,
+        Raciocinio: 5,
         Prontidao: 3,
         Interrogacao: 5,
         Intimidacao: 1,
@@ -45,23 +47,24 @@ function Belger() {
         Misterios: 1,
         Estilos: 0,
         Antecedentes: antecedentes,
-        Soco: 3,
+        Soco: 0,
         Chute: 0,
         Bloqueio: 2,
-        Apresamento: 2,
-        Esportes: 1,
+        Apresamento: 0,
+        Esportes: 0,
         Foco: 0,
+        Armas: armas,
         NovasTecnicas: tecnicas,
         Armas: [],
-        ManobrasEspeciais: "Brain Cracker",
+        ManobrasEspeciais: "",
         Combos: "",
-        Gloria: 1,
-        Honra: 1,
-        Chi: 2,
-        ForcaVontade: 5,
+        Gloria: 3,
+        Honra: 0,
+        Chi: 1,
+        ForcaVontade: 10,
         Saude: 10,
         Divisao: "Duelistas",
-        Posto: 1
+        Posto: 0
     };
     return npc;
 }
