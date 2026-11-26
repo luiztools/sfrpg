@@ -303,10 +303,18 @@ function GeraLinkValido(titulo) {
     //antecedentes sem post próprio, explicados numa seção de outro post
     const secoes = {
         "devil-gene": "satsui-no-hadou#devil-gene",
+        //antecedentes de Netherrealm
+        "espectro": "netherrealm#espectros",
+        "irmao-das-sombras": "netherrealm#irmaos-das-sombras",
+        "irmaos-das-sombras": "netherrealm#irmaos-das-sombras",
         //manobras básicas de Híbrido Animal
         "bite": "hibrido-animal#manobras-basicas",
         "claw": "hibrido-animal#manobras-basicas",
-        "tail-slash": "hibrido-animal#manobras-basicas"
+        "horn": "hibrido-animal#manobras-basicas",
+        "tail-slash": "hibrido-animal#manobras-basicas",
+        "fin-slash": "hibrido-animal#manobras-basicas",
+        "quill-sweep": "hibrido-animal#manobras-basicas",
+        "tentacle-squeeze": "hibrido-animal#manobras-basicas"
     };
     if (secoes[titulo]) titulo = secoes[titulo];
 

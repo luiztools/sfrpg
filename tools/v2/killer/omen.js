@@ -1,0 +1,60 @@
+function OmenKI() {
+    const antecedentes = [];
+    antecedentes[0] = newCaracteristica("Aliados", 3);
+
+    const ficha = {
+        Nome: "Omen",
+        Estilo: "Kung Fu",
+        Escola: "Nenhuma (imita os golpes de Jago)",
+        Jogador: "NPC",
+        Assinatura: "Ri e abre as asas sombrias",
+        Conceito: "Arauto demônio",
+        Cronica: "Killer Instinct",
+        Forca: 5,
+        Destreza: 6,
+        Vigor: 5,
+        Carisma: 2,
+        Manipulacao: 5,
+        Aparencia: 0,
+        Percepcao: 5,
+        Inteligencia: 5,
+        Raciocinio: 6,
+        Prontidao: 5,
+        Interrogacao: 3,
+        Intimidacao: 5,
+        Perspicacia: 4,
+        Manha: 2,
+        Labia: 4,
+        LutaCega: 4,
+        Conducao: 0,
+        Lideranca: 2,
+        Seguranca: 2,
+        Furtividade: 4,
+        Sobrevivencia: 3,
+        Arena: 2,
+        Computador: 0,
+        Investigacao: 2,
+        Medicina: 0,
+        Misterios: 6,
+        Estilos: 4,
+        Antecedentes: antecedentes,
+        Soco: 6,
+        Chute: 6,
+        Bloqueio: 4,
+        Apresamento: 4,
+        Esportes: 6,
+        Foco: 6,
+        ManobrasEspeciais: "Jump, Throw, Fireball, Flying Fireball, Dragon Punch, Hurricane Kick, Flying Body Spear, Flight, Deaths Visage, Leech, Yoga Teleport, Mind Control",
+        Combos: "Fireball para Dragon Punch (Dizzy); Flying Body Spear para Hurricane Kick (Dizzy); Deaths Visage para Leech",
+        Gloria: 3,
+        Honra: 0,
+        Chi: 10,
+        ForcaVontade: 10,
+        Saude: 20,
+        Divisao: "Livre",
+        Posto: 8
+    };
+    return ficha;
+}
+
+const npc = calcPC(OmenKI());

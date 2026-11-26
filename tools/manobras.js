@@ -127,6 +127,7 @@ const manobras = {
 	"Rhino Horn": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 3, FdV: 1, Vantagens: ["Aérea"], Sistema: "Aérea" },
 	"Roundabout Kick": { Tecnica: "Chute", ModVel: -2, ModDano: 4, FdV: 1, Vantagens: ["Knockdown", "Aérea"], Sistema: "Acerta oponentes no mesmo hex ou adjacente igual à técnica Chute do lutador; causa KD; Aérea" },
 	"Wheel Kick": { Tecnica: "Chute", ModVel: -1, ModDano: 3, ModMov: 1, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil"], Sistema: "Aérea, esquiva de projétil" },
+	"Wind Kick": { Tecnica: "Chute", ModVel: 0, ModDano: 3, ModMov: 2, FdV: 1, Vantagens: ["Aérea", "Esquiva de Projétil"], Sistema: "Roundhouse voador com giro de corpo; Aérea; esquiva de projétil como o Jump" },
 	"Gekiro": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", FdV: 2, Alcance: 0, Vantagens: ["Impacto Técnico", "Knockdown", "Aérea", "Esquiva de Projétil"], Sistema: "Mesmo hex; Hits = Esportes; Causa KD; Aérea; esquiva de projétil como Jump" },
 	"Flamingo Stance": { Tecnica: "Chute", ModVel: "Especial", ModDano: "Nenhum", ModMov: "Especial", Sistema: "+1 Vel em chutes; Movimento vira Um ou 1/2 (Aéreas)" },
 	"Bushin Sempu Kyaku": { Tecnica: "Chute", ModVel: 1, ModDano: -1, ModMov: "Um", Chi: 1, FdV: 1, Vantagens: ["Impacto Técnico", "Knockdown", "Aérea", "Esquiva de Projétil", "Área"], Desvantagens: ["Mesmo Hex"], Sistema: "Tem de entrar no hex. Acerta todos ao redor. Hits = Esportes. Se não causar dano, acaba. KD. Manobra Aérea; esquiva de projétil como Jump." },
@@ -143,6 +144,7 @@ const manobras = {
 	//bloqueio
 	"Deflecting Punch": { Tecnica: "Soco", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para socos; Após a ABS faça um contra-soco (vs. qualquer ataque)" },
 	"Energy Reflection": { Tecnica: "Bloqueio", ModVel: 1, Chi: 1, Sistema: "Cada projétil requer 2 sucessos num teste de Raciocínio; 1 Chi por projétil" },
+	"Energy Absorption": { Tecnica: "Bloqueio", ModVel: 2, ModDano: "Nenhum", ModMov: "Nenhum", Chi: 1, Vantagens: ["Anula Ataque"], Sistema: "Como Energy Reflection, mas anula o projétil de energia e absorve o Chi nele utilizado; 1 Chi por turno de ativação" },
 	"Kick Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Chute; -2 vs. outros" },
 	"Maka Wara": { Tecnica: "Bloqueio", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "Passiva no bloqueio, causa dano no atacante;" },
 	"Missile Reflection": { Tecnica: "Bloqueio", ModVel: 3, ModMov: -1, Sistema: "DES para refletir projétil; armas de arremesso=1 sucesso; flechas=2; armas de fogo=3 e um pedaço de material; balas não podem ser refletidas no atirador" },
@@ -301,6 +303,7 @@ const manobras = {
 	"Lightness": { Tecnica: "Foco", ModVel: 1, ModDano: "Nenhum", ModMov: 1, Alcance: "Raciocínio+Foco", Chi: 1, Sistema: "Pode ser usado no elemental ou outro alvo; o alvo ganha +2 VEL e +3 MOV para todas as manobras acrescidas por Jump; dura (Foco) turnos" },
 	"Pit": { Tecnica: "Foco", ModVel: -1, ModDano: 1, ModMov: -1, Chi: 1, Alcance: "Raciocínio+Foco", Desvantagens: ["Ataque Condicional"], Sistema: "Cria no hex alvo um buraco com (5 + Foco) pés de profundidade; lutadores no buraco sofrem o dano pela queda no fim do turno e devem gastar o próximo turno subindo (Movimento com -4 VEL); o atacante precisa estar em contato com a terra; buracos são permanentes após criados; -1 Glória se usado em arena" },
 	"Pool": { Tecnica: "Foco", ModVel: 1, ModMov: -2, Sistema: "Adquire imunidade a ataques físicos e a habilidade de escoar por frestas, etc.; alguns ataques de Foco podem afetar o lutador (Narrador decide)" },
+	"Tiger Attack": { Tecnica: "Foco", ModVel: 0, ModDano: 3, ModMov: 2, Chi: 1, Vantagens: ["Agachamento", "Esquiva de Projétil"], Sistema: "O lutador se converte em um projétil de chi e se lança contra o oponente; Agachamento; esquiva de projétil como o Jump" },
 	"Push": { Tecnica: "Foco", ModVel: -2, ModDano: 1, Chi: 1, Alcance: "Três", Vantagens: ["Anti-Aérea", "Área", "Knockback"], Sistema: "Afeta 3 hex a frente e (Foco) hex de lado; todos os lutadores na área são atingidos; todos recuam 1 hex por ponto de dano sofrido; KD vs. Aérea" },
 	"Sakki": { Tecnica: "Foco", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", PC: 1, Sistema: "Personagem está a par do ataque surpresa e pode agir de acordo com esta informação; pode mover Foco + Esportes para evitar o ataque surpresa" },
 	"Shrouded Moon": { Tecnica: "Foco", ModVel: 0, ModMov: -1, Chi: 1, Sistema: "Ninja fica invisível; atacante precisa vencer uma disputa de Percepção + Prontidão vs. Foco + Furtividade do ninja para percebê-lo; se não percebê-lo o ninja terá +1 VEL no próximo turno" },
@@ -364,6 +367,7 @@ const manobras = {
 	"Killing Blade": { Tecnica: "Espada/Machado/Faca/Garra", ModVel: -1, ModDano: 4, ModMov: -2, FdV: 1, Vantagens: ["Anti-Aérea", "Esquiva de Projétil", "Knockback"], Desvantagens: ["Esquiva Condicional"], Sistema: "Como Dragon Punch, com arma: KD vs. Aérea; empurra 1 hex; esquiva de projétil; não pode atacar o oponente que lançou o projétil de que se esquiva" },
 	"Buffalo Strike": { Tecnica: "Bastão/Lança/Espada/Machado/Mangual", ModVel: -2, ModDano: 5, ModMov: "Um", Sistema: "" },
 	"Weapon Defense": { Tecnica: "Bloqueio", ModVel: 4, Sistema: "ABS+4 vs. Arma escolhida; -2 vs. outros" },
+	"Iaijutsu": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Mangual", ModVel: "Especial", ModDano: "Especial", ModMov: "Especial", FdV: 1, PC: 1, Sistema: "Saca a arma embainhada (ou a pistola do coldre) e ataca com ela no mesmo turno; aprendida separadamente para cada Técnica de arma (Técnica da arma 5)" },
 	"Deflecting Weapon": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Mangual", ModVel: 2, ModDano: 0, Sistema: "Bônus de BLOCK apenas para arma escolhida; Após a ABS faça um contra-ataque (vs. qualquer ataque)" },
 	"Triple Blow": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "Especial", Sistema: "Role 3 hits, use somente os dois maiores." },
 	"Double Hit Blow": { Tecnica: "Bastão/Lança/Espada/Machado/Faca/Garra/Mangual", ModVel: -2, ModDano: "1/1", ModMov: -1, Desvantagens: ["Ataque Condicional"], Sistema: "Dois hits a menos que o alvo esteja em Aérea ou Agachamento" },
@@ -399,9 +403,10 @@ const armas = {
 	"Chapéu-Lâmina": { Tecnica: "Chapéu", ModVel: 0, ModDano: 2, ModMov: 1 },
 	"Chapéu Arremessado": { Tecnica: "Arremesso", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
 	"Carta de Baralho": { Tecnica: "Garra", ModVel: 1, ModDano: 1, ModMov: 0, Sistema: "Cartas de baralho afiadas. Empunhadura: Uma Mão." },
-	"Carta Arremessada": { Tecnica: "Arremesso", ModVel: 1, ModDano: -2, ModMov: 0, Alcance: "Força+Arremesso", Sistema:  "1 hit por ponto em Arremesso" },
+	"Carta Arremessada": { Tecnica: "Arremesso", ModVel: 1, ModDano: -2, ModMov: 0, Alcance: "Força+Arremesso", Sistema: "1 hit por ponto em Arremesso" },
 	"Cestus": { Tecnica: "Soco", ModVel: 0, ModDano: 2, ModMov: 0, Sistema: "Deve ser usado com manobras de Soco. +1 ABS em Bloqueios." },
 	"Chicote": { Tecnica: "Chicote", ModVel: -1, ModDano: 2, ModMov: "Nenhum", Alcance: 6 },
+	"Escudo": { Tecnica: "Soco", ModVel: -1, ModDano: 1, ModMov: 0, Sistema: "+3 ABS em Aparar" },
 	"Pingalim": { Tecnica: "Chicote", ModVel: 0, ModDano: 2, ModMov: 0 },
 	"Chicote de Aço": { Tecnica: "Chicote", ModVel: -1, ModDano: 3, ModMov: "Nenhum", Alcance: 3 },
 	"Cimitarra": { Tecnica: "Espada", ModVel: 0, ModDano: 3, ModMov: 0, Sistema: "Empunhadura: Variável" },
@@ -434,6 +439,7 @@ const armas = {
 	"Kusarigama": { Tecnica: "Chicote", ModVel: 0, ModDano: 3, ModMov: -2, Alcance: 2, Sistema: "Alcance: 2 hex" },
 	"Lança": { Tecnica: "Lança", ModVel: 0, ModDano: 3, ModMov: 1, Sistema: "Empunhadura: Variável" },
 	"Lança Arremessada": { Tecnica: "Arremesso", ModVel: -1, ModDano: 3, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
+	"Laser": { Tecnica: "Armas de Fogo", ModVel: 2, ModDano: 5, ModMov: "-", Sistema: "Dano fixo agravado Agravado. Apresamento Sustentado (se causar dano), max 6 turnos" },
 	"Leque": { Tecnica: "Leque", ModVel: 0, ModDano: 2, ModMov: 1 },
 	"Leque Arremessado": { Tecnica: "Arremesso", ModVel: 0, ModDano: 2, ModMov: "Nenhum", Alcance: "Força+Arremesso" },
 	"Machadinha": { Tecnica: "Faca", ModVel: 1, ModDano: 2, ModMov: 0, Sistema: "" },
@@ -477,6 +483,13 @@ const armas = {
 	"Garrote": { Tecnica: "Apresamento", ModVel: -3, ModDano: 4, ModMov: "Nenhum", Sistema: "Se o alvo do ataque é tomado de surpresa ou tomar mais de 5 dano no ataque inicial, ele é considerado em choque e não ABS nos ataques subsequentes ao Apresamento Sustentado!" },
 	"Rede": { Tecnica: "Arremesso", ModVel: 0, ModDano: 0, ModMov: "Nenhum", Alcance: "Força+Arremesso", Sistema: "Projétil, ignora Bloqueio, requer linha de visão. Não causa dano real, mas se tirar ao menos um sucesso no teste de dano, o oponente está Dizzy até que consiga um número de sucessos em teste de FOR igual ao dano causado, testando ao final de cada turno." },
 	"Wind Blade": { Tecnica: "Faca", ModVel: 0, ModDano: 2, ModMov: 0 },
+	//armas de Darkstalkers
+	"Espingarda de Caça": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: 6, ModMov: "-", Sistema: "Rifle de caça de grosso calibre." },
+	"Metralhadora Pequena": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: "4/4", ModMov: "-", Sistema: "Metralhadora de mão. 2 Hits (faz o teste de dano 2 vezes)." },
+	"Metralhadora Grande": { Tecnica: "Armas de Fogo", ModVel: -2, ModDano: "4/4/4/4", ModMov: "-", Sistema: "4 Hits (faz o teste de dano 4 vezes). Empunhadura: Duas Mãos." },
+	"Metralhadora Acoplada": { Tecnica: "Armas de Fogo", ModVel: 1, ModDano: "2/2/2/2", ModMov: "-", Sistema: "Metralhadora embutida no corpo (Fulgore). Precisa de um turno para armá-la. 4 Hits (faz o teste de dano 4 vezes)." },
+	"Serra Elétrica": { Tecnica: "Serra Elétrica", ModVel: -2, ModDano: 5, ModMov: -1, Sistema: "Empunhadura: Duas Mãos." },
+	"Tridente": { Tecnica: "Lança", ModVel: 0, ModDano: 3, ModMov: 1, Sistema: "Empunhadura: Variável" },
 };
 
 const ARMAS_ARRAY = Object.keys(armas).map((arma) => {
@@ -751,8 +764,11 @@ function calculaDano(npc, manobra) {
 		const arma = ARMAS_ARRAY.find(a => a.Tecnica === manobra.Tecnica || a.Nome === manobra.Tecnica);
 		if (!arma) return "-";
 
-		if (manobra.Nome === "Aparar")
-			return "ABS" + (npc["Vigor"] + npc["Bloqueio"] + tecnicaDaArma(npc, arma));
+		if (manobra.Nome === "Aparar") {
+			let abs = npc["Vigor"] + npc["Bloqueio"] + tecnicaDaArma(npc, arma);
+			if (arma.Nome === "Escudo") abs += 3;
+			return "ABS" + abs;
+		}
 
 		return calculaDanoArma(npc, arma, manobra);
 	}
@@ -1018,7 +1034,7 @@ function montaCarta(npc, nomeManobra) {
 	manobra.Nome = nomeManobra.trim();
 
 	const x =
-	`<table style="border:1px solid black;">
+		`<table style="border:1px solid black;">
 		<tr><td colspan="2" class="ArialBlackBlack" style="font-size:14px">${manobra.Nome}</td></tr>
 		<tr><td class="ArialBlackBlack">Vel.:</td><td class="ArialPadrao">${calculaVelocidade(npc, manobra)}</td></tr>
 		<tr><td class="ArialBlackBlack">Dano:</td><td class="ArialPadrao">${calculaDano(npc, manobra)}</td></tr>
