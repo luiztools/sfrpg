@@ -174,7 +174,7 @@ function Kenny() {
 
     const kenny = {
         Nome: "Kenny",
-        Estilo: "Aikido",
+        Estilo: "Aikidô",
         Escola: "Academia de Aikido Massaro",
         Jogador: "NPC",
         Assinatura: "Sorri para o adversário",

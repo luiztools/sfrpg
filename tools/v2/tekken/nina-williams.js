@@ -16,7 +16,7 @@ function NinaTk1() {
 
     return {
         Nome: "Nina Williams",
-        Estilo: "Aikido",
+        Estilo: "Aikidô",
         Escola: "Família Williams",
         Jogador: "NPC",
         Assinatura: "Ajeita o cabelo e vira as costas sem dizer nada",
@@ -89,7 +89,7 @@ function NinaTk4() {
 
     return {
         Nome: "Nina Williams",
-        Estilo: "Aikido",
+        Estilo: "Aikidô",
         Escola: "Família Williams",
         Jogador: "NPC",
         Assinatura: "Ajeita o cabelo e vira as costas sem dizer nada",
@@ -167,7 +167,7 @@ function NinaTk8() {
 
     return {
         Nome: "Nina Williams",
-        Estilo: "Aikido",
+        Estilo: "Aikidô",
         Escola: "Família Williams",
         Jogador: "NPC",
         Assinatura: "Ajeita os óculos escuros e vira as costas sem dizer nada",

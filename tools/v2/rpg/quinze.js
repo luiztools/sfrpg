@@ -9,7 +9,7 @@ function QuinzeKiet() {
 
     const ryu = {
         Nome: "Quinze x Kiet",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
         Jogador: "NPC",
         Assinatura: "Pura determinação",

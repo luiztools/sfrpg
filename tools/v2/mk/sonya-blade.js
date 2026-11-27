@@ -227,7 +227,7 @@ function SonyaMkX() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Foot Sweep, Power Uppercut, Throw, Back Roll Throw, Sonic Boom, Fireball, Elbow Smash, Thigh Press, Gekiro, Handstand Kick, Reverse Frontal Kick, Double Hit Kick, Flying Knee Thrust, Flying Body Spear, Hair Throw, Air Throw, Suplex, Forward Backflip Kick, Jumping Shoulder Butt",
-        Combos: "Short para Thigh Press (Dizzy); Jab para Jab para Jab (Dizzy); Forward para Forward para Jab (Dizzy); Elbow Smash para Elbow Smash (dizzy); Double-Hit Kick para Elbow Smash para Flying Knee Thrust (dizzy)",
+        Combos: "Short para Thigh Press (Dizzy); Jab para Jab para Jab (Dizzy); Forward para Forward para Jab (Dizzy); Elbow Smash para Elbow Smash (dizzy); Double Hit Kick para Elbow Smash para Flying Knee Thrust (dizzy)",
         Gloria: 3,
         Honra: 5,
         Chi: 6,

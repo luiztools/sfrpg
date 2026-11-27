@@ -58,7 +58,7 @@ function Orochi() {
         NovosTalentos: talentos,
         NovosConhecimentos: conhecimentos,
         ManobrasEspeciais: "Jump, Power Uppercut, Wheel Kick, Flaming Fist, Fist Sweep, Fire Strike, Sonic Boom, Breakfall, Kippup, Telepathy, Mind Reading, Psychic Vise, Yoga Teleport, Air Blast, Push, Chi Push, Chi Kun Healing, Elemental Stride, Double Hit Punch, Sense Orochi, Awakening Blood",
-        Combos: "Double-Hit Punch para Sonic Boom para Sonic Boom (Dizzy); Chi Push para Yoga Teleport para Push (Dizzy); Chi Push para Elemental Stride para Push (Dizzy); Wheel Kick para Push para Chi Push (Dizzy)",
+        Combos: "Double Hit Punch para Sonic Boom para Sonic Boom (Dizzy); Chi Push para Yoga Teleport para Push (Dizzy); Chi Push para Elemental Stride para Push (Dizzy); Wheel Kick para Push para Chi Push (Dizzy)",
         Gloria: 0,
         Honra: 0,
         Chi: 10,

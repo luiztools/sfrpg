@@ -74,7 +74,7 @@ function Lars() {
 
     const personagem = {
         Nome: "Lars",
-        Estilo: "Sanbô",
+        Estilo: "Sanbo",
         Escola: "",
         Jogador: "NPC",
         Assinatura: "Ergue o oponente acima da cabeça",

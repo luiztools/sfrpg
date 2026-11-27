@@ -76,7 +76,7 @@ function Revenant() {
 
     const personagem = {
         Nome: "Revenant",
-        Estilo: "Ler drit",
+        Estilo: "Ler Drit",
         Escola: "Shadaloo",
         Jogador: "",
         Assinatura: "Sorriso zumbi",

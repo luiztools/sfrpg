@@ -9,7 +9,7 @@ function Ybytu() {
 
     const personagem = {
         Nome: "Ybytu",
-        Estilo: "Tae kwon do",
+        Estilo: "Tae Kwon Dô",
         Escola: "Kang Do-Hyun",
         Jogador: "Rodrigo Magnus",
         Assinatura: "Sempre em Paz",

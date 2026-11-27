@@ -15,7 +15,7 @@ function Kang() {
 
     const personagem = {
         Nome: "Kang Do-Hyun",
-        Estilo: "Tae kwon do",
+        Estilo: "Tae Kwon Dô",
         Escola: "Exército Sul-Coreano",
         Jogador: "",
         Assinatura: "Sempre em Paz",

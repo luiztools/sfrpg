@@ -2,7 +2,7 @@ function NoFace() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Aliados", 2);
     antecedentes[1] = newCaracteristica("Contatos", 3);
-    antecedentes[2] = newCaracteristica("Cibernetico", 3);
+    antecedentes[2] = newCaracteristica("Cibernético", 3);
     antecedentes[3] = newCaracteristica("Fama", 2);
     antecedentes[4] = newCaracteristica("Elemental (Fogo)", 5);
     

@@ -11,6 +11,7 @@ function Jack1() {
     personagem.ManobrasEspeciais = "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Ducking Fierce, Fist Sweep, Spinning Clothesline, Air Smash, Head Butt, Throw, Bear Hug, Back Breaker, Jump";
     personagem.Combos = "Machine Gun Blow para Power Uppercut, Ducking Fierce para Fist Sweep, Bloqueio para Turn Punch";
     personagem.Gloria = 4;
+    personagem.Saude = 12;
     return personagem;
 }
 
@@ -27,6 +28,7 @@ function PJack() {
     personagem.ManobrasEspeciais = "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Ducking Fierce, Fist Sweep, Spinning Clothesline, Air Smash, Head Butt, Throw, Bear Hug, Back Breaker, Jump, Flight, Shockwave";
     personagem.Combos = "Machine Gun Blow para Power Uppercut, Bloqueio para Turn Punch, Jump para Air Smash";
     personagem.Honra = 2;
+    personagem.Saude = 12;
     return personagem;
 }
 
@@ -85,7 +87,7 @@ function JackTk1() {
         Honra: 4,
         Chi: 2,
         ForcaVontade: 7,
-        Saude: 18,
+        Saude: 13,
         Divisao: "Duelistas",
         Posto: 7
     };
@@ -145,7 +147,7 @@ function GunJackTk3() {
         Honra: 4,
         Chi: 3,
         ForcaVontade: 7,
-        Saude: 19,
+        Saude: 14,
         Divisao: "Duelistas",
         Posto: 8
     };
@@ -161,20 +163,42 @@ function Jack4() {
     personagem.Conceito = "Robô de produção em massa";
     personagem.Cronica = "Tekken 5";
     personagem.Antecedentes = [
-        newCaracteristica("Apoio", 5),
-        newCaracteristica("Cibernético", 5)
+        newCaracteristica("Apoio", 1),
+        newCaracteristica("Cibernético", 4)
     ];
+    personagem.Forca = 6;
+    personagem.Destreza = 1;
+    personagem.Vigor = 6;
+    personagem.Carisma = 0;
+    personagem.Aparencia = 0;
+    personagem.Percepcao = 2;
+    personagem.Inteligencia = 1;
+    personagem.Raciocinio = 1;
+    personagem.Prontidao = 3;
+    personagem.Interrogacao = 1;
     personagem.Intimidacao = 4;
-    personagem.Arena = 0;
-    personagem.Estilos = 1;
+    personagem.Perspicacia = 0;
+    personagem.LutaCega = 2;
+    personagem.Conducao = 0;
+    personagem.Seguranca = 2;
+    personagem.Sobrevivencia = 3;
+    personagem.Arena = 1;
+    personagem.Computador = 2;
+    personagem.Investigacao = 0;
+    personagem.Estilos = 2;
+    personagem.Soco = 4;
+    personagem.Chute = 1;
+    personagem.Bloqueio = 4;
+    personagem.Apresamento = 3;
+    personagem.Esportes = 2;
     personagem.ManobrasEspeciais = "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Ducking Fierce, Fist Sweep, Head Butt, Throw, Bear Hug, Jump";
-    personagem.Combos = "Machine Gun Blow para Power Uppercut, Ducking Fierce para Fist Sweep";
-    personagem.Gloria = 1;
+    personagem.Combos = "Machine Gun Blow para Power Uppercut";
+    personagem.Gloria = 0;
     personagem.Honra = 1;
     personagem.Chi = 1;
-    personagem.ForcaVontade = 4;
-    personagem.Saude = 16;
-    personagem.Posto = 4;
+    personagem.ForcaVontade = 3;
+    personagem.Saude = 10;
+    personagem.Posto = 3;
     return personagem;
 }
 
@@ -234,7 +258,7 @@ function Jack5() {
         Honra: 5,
         Chi: 3,
         ForcaVontade: 8,
-        Saude: 20,
+        Saude: 15,
         Divisao: "Duelistas",
         Posto: 8
     };
@@ -247,6 +271,7 @@ function Jack6() {
     personagem.Conceito = "Robô investigador";
     personagem.Cronica = "Tekken 6";
     personagem.Forca = 8;
+    personagem.Saude = 16;
     personagem.ManobrasEspeciais = "Turn Punch, Tameshiwari, Power Uppercut, Machine Gun Blow, Haymaker, Buffalo Punch, Ducking Fierce, Fist Sweep, Turbo Spinning Clothesline, Air Smash, Head Butt, Throw, Bear Hug, Back Breaker, Grappling Defense, Jump, Extendible Limbs, Shockwave, Toughskin";
     return personagem;
 }
@@ -259,6 +284,7 @@ function Jack7() {
     personagem.Cronica = "Tekken 7";
     personagem.Prontidao = 5;
     personagem.Soco = 6;
+    personagem.Saude = 17;
     personagem.Combos += ", Extendible Limbs para Turbo Spinning Clothesline";
     return personagem;
 }
@@ -319,7 +345,7 @@ function JackTk8() {
         Honra: 5,
         Chi: 4,
         ForcaVontade: 9,
-        Saude: 20,
+        Saude: 18,
         Divisao: "Duelistas",
         Posto: 8
     };

@@ -32,6 +32,482 @@ function getXP2(att) {
     return xp;
 }
 
+//XP para subir um atributo do valor x para o y, ponto a ponto: cada ponto custa o nível atual x 4XP
+//(x 6XP se o nível destino passar de 5, x 8XP se passar de 8); de 0 para 1 não custa XP
+//<muls> = [até 5, acima de 5, acima de 8], para as regras que mudam os multiplicadores (ver regraAtributo)
+function calcXPAtributo(x, y, muls = [4, 6, 8]) {
+    let xp = 0;
+    for (let atual = Math.max(x, 0); atual < y; atual++) {
+        const destino = atual + 1;
+        const mul = destino > 8 ? muls[2] : (destino > 5 ? muls[1] : muls[0]);
+        xp += atual * mul;
+    }
+    return xp;
+}
+
+//XP para subir uma técnica do valor x para o y, ponto a ponto: cada ponto custa o nível atual x 3XP
+//(x 5XP se o nível destino passar de 5, x 7XP se passar de 8); de 0 para 1 custa 3XP
+function calcXPTecnica(x, y) {
+    let xp = 0;
+    for (let atual = Math.max(x, 0); atual < y; atual++) {
+        if (atual === 0) {
+            xp += 3;
+            continue;
+        }
+        const destino = atual + 1;
+        const mul = destino > 8 ? 7 : (destino > 5 ? 5 : 3);
+        xp += atual * mul;
+    }
+    return xp;
+}
+
+//XP para subir uma habilidade do valor x para o y, ponto a ponto: cada ponto custa o nível atual x 2XP (x <base>; Híbrido
+//Animal paga x 3XP) (x 4XP se o nível destino passar de 5, x 6XP se passar de 8); de 0 para 1 custa 3XP
+function calcXPHabilidade(x, y, base = 2) {
+    let xp = 0;
+    for (let atual = Math.max(x, 0); atual < y; atual++) {
+        if (atual === 0) {
+            xp += 3;
+            continue;
+        }
+        const destino = atual + 1;
+        const mul = destino > 8 ? 6 : (destino > 5 ? 4 : base);
+        xp += atual * mul;
+    }
+    return xp;
+}
+
+//XP para subir Chi ou Força de Vontade do valor x para o y, ponto a ponto: cada ponto custa o nível atual x 1XP
+//até 10 (x 2XP se o nível destino passar de 10); o máximo é 20 (ex.: 6 > 7 = 6XP; 5 > 7 = 5 + 6 = 13XP)
+function calcXPChiFdV(x, y) {
+    let xp = 0;
+    for (let atual = Math.max(x, 0); atual < Math.min(y, 20); atual++) {
+        const mul = atual + 1 > 10 ? 2 : 1;
+        xp += atual * mul;
+    }
+    return xp;
+}
+
+//XP para subir Saúde do valor x para o y, ponto a ponto: cada ponto custa 4XP até 20
+//(8XP se o nível destino passar de 20); o máximo é 30 (ex.: 18 > 20 = 8XP; 19 > 22 = 4 + 8 + 8 = 20XP)
+function calcXPSaude(x, y) {
+    let xp = 0;
+    for (let atual = Math.max(x, 0); atual < Math.min(y, 30); atual++)
+        xp += atual + 1 > 20 ? 8 : 4;
+    return xp;
+}
+
+//XP para subir um Antecedente do valor x para o y, ponto a ponto: de 0 para 1 custa 2XP; os demais custam o nível atual
+//em XP, ou o nível atual x 2XP se o nível destino passar de 5 (ex.: 2 > 3 = 2XP; 0 > 3 = 2 + 1 + 2 = 5XP; 5 > 6 = 10XP)
+function calcXPAntecedente(x, y) {
+    let xp = 0;
+    for (let atual = Math.max(x, 0); atual < y; atual++)
+        xp += atual === 0 ? 2 : (atual + 1 > 5 ? atual * 2 : atual);
+    return xp;
+}
+
+//XP para comprar uma Manobra Especial: Pontos de Poder da manobra (x) x 4XP
+function calcXPManobra(x) {
+    if (!x || x < 0) return 0;
+    return x * 4;
+}
+
+//XP para comprar um Combo (ex.: "Jab para Fireball (Dizzy)"): número de manobras no combo x 4XP, +4XP se for Dizzy
+//manobras repetidas com "2x"/"3x" contam 2/3 vezes (ex.: "Elbow Smash 2x para Tiger Knee" = 3 manobras)
+function calcXPCombo(combo) {
+    if (!combo || !combo.trim()) return 0;
+    const texto = combo.trim();
+    const manobras = texto.split(/\s+para\s+/i).reduce((total, trecho) => {
+        const repeticoes = trecho.match(/\b(\d+)x\b/i);
+        return total + (repeticoes ? parseInt(repeticoes[1]) : 1);
+    }, 0);
+    const dizzy = /\(dizzy\)/i.test(texto) ? 4 : 0;
+    return (manobras * 4) + dizzy;
+}
+
+//XP total para comprar todos os combos de uma ficha (campo Combos, separados por vírgula ou ponto e vírgula)
+function calcXPCombos(combos) {
+    if (!combos) return 0;
+    return combos.split(/[,;]/).reduce((total, combo) => total + calcXPCombo(combo), 0);
+}
+
+//a chave de Pontos de Poder (campo PP de manobras.js) é um antecedente do personagem? "Elemental (Fogo ou Magma)" e
+//"Sub-Elemental (Magma)" valem para qualquer um dos elementos citados; "Elemental" e "Elemental (Qualquer)", para todos
+function chavePPAntecedente(chave, antecedentes) {
+    const elemental = chave.match(/^(?:Sub-)?Elemental(?:\s*\((.+)\))?$/i);
+    if (!elemental) return antecedentes.some(an => an.Nome === chave);
+    const elementos = antecedentes.map(an => an.Nome.match(/^Elemental\s*\((.+)\)/i)).filter(Boolean).map(m => m[1].trim());
+    if (!elementos.length) return false;
+    if (!elemental[1] || /^qualquer$/i.test(elemental[1].trim())) return true;
+    const aceitos = elemental[1].split(/,|\s+ou\s+|\s+e\s+/).map(e => e.trim());
+    return elementos.some(e => aceitos.includes(e));
+}
+
+//Chi e Força de Vontade iniciais de cada estilo (https://www.sfrpg.com.br/estilos-de-luta); a chave é o nome do estilo
+//igual ao título do post e ao Estilo das fichas. Judô segue Jiu Jitsu, Maculelê segue Capoeira; Briga vem do texto da página.
+//Especialização entre parênteses não é estilo (ex.: "Kung Fu (Kenpo)", "Kung Fu (Wing Chun)" usam Kung Fu)
+const chiFdVEstilos = {
+    "Aikidô": { Chi: 5, FdV: 2 },
+    "Baraqah": { Chi: 4, FdV: 3 },
+    "Bojutsu": { Chi: 1, FdV: 6 },
+    "Boxe": { Chi: 1, FdV: 6 },
+    "Briga": { Chi: 1, FdV: 6 },
+    "Capoeira": { Chi: 2, FdV: 5 },
+    "Forças Especiais": { Chi: 1, FdV: 6 },
+    "Glimae": { Chi: 4, FdV: 3 },
+    "Jeet Kune Dô": { Chi: 1, FdV: 6 },
+    "Jiu Jitsu": { Chi: 3, FdV: 4 },
+    "Judô": { Chi: 3, FdV: 4 },
+    "Kabaddi": { Chi: 5, FdV: 2 },
+    "Kalaripayt": { Chi: 3, FdV: 4 },
+    "Karatê Rindoukan": { Chi: 1, FdV: 6 },
+    "Karatê Shotokan": { Chi: 3, FdV: 4 },
+    "Kenjutsu": { Chi: 3, FdV: 4 },
+    "Kickboxe": { Chi: 2, FdV: 5 },
+    "Krav Maga": { Chi: 2, FdV: 5 },
+    "Kung Fu": { Chi: 4, FdV: 3 },
+    "Ler Drit": { Chi: 5, FdV: 2 },
+    "Lua": { Chi: 3, FdV: 4 },
+    "Lucha Libre": { Chi: 1, FdV: 6 },
+    "Luta-Livre Nativo Americana": { Chi: 3, FdV: 4 },
+    "Maculelê": { Chi: 2, FdV: 5 },
+    "Majestic Crow Kung Fu": { Chi: 3, FdV: 4 },
+    "Ninjitsu": { Chi: 5, FdV: 2 },
+    "Ninjitsu Espanhol": { Chi: 2, FdV: 5 },
+    "Pankration": { Chi: 1, FdV: 6 },
+    "Sanbo": { Chi: 1, FdV: 6 },
+    "Savate": { Chi: 2, FdV: 5 },
+    "Silat": { Chi: 4, FdV: 3 },
+    "Soul Power": { Chi: 5, FdV: 2 },
+    "Sumô": { Chi: 2, FdV: 5 },
+    "Tae Kwon Dô": { Chi: 2, FdV: 5 },
+    "Tai Chi Chuan": { Chi: 6, FdV: 1 },
+    "Thai Kickboxe": { Chi: 2, FdV: 5 },
+    "Vale-Tudo": { Chi: 1, FdV: 6 },
+    "Wrestling": { Chi: 1, FdV: 6 },
+    "Wu Shu": { Chi: 3, FdV: 4 },
+    "Yagli Gures": { Chi: 1, FdV: 6 }
+};
+
+//Pontos bônus da criação (15) que sobram depois de pagar o Chi e a FdV acima dos iniciais do estilo (chiFdVEstilos):
+//x = (chi - Chi inicial) + (fdv - FdV inicial), cada parte no mínimo 0 (abaixo do inicial não gasta nem devolve pontos);
+//retorna 15 - x. Usa o estilo principal (antes dos parênteses: "Kung Fu (Kenpo)" = Kung Fu); estilo fora de
+//chiFdVEstilos retorna 15
+function usaPontosBonusChiFdV(estilo, chi, fdv) {
+    const iniciais = chiFdVEstilos[String(estilo || "").split("(")[0].trim()];
+    if (!iniciais) return 15;
+    const x = Math.max(0, (chi || 0) - iniciais.Chi) + Math.max(0, (fdv || 0) - iniciais.FdV);
+    return 15 - x;
+}
+
+//estilos que a chave "Estilos Armados" dos Pontos de Poder representa (inclua aqui os novos estilos armados)
+const estilosArmados = ["Kenjutsu", "Bojutsu", "Maculelê"];
+
+//Pontos de Poder de uma Manobra Especial para o personagem, conforme o campo PP de manobras.js:
+//1. antecedente do personagem listado na manobra (Elemental, Híbrido Animal, Paranormal...) tem prioridade (menor custo entre eles);
+//2. senão, o menor custo entre os estilos do personagem (o estilo entre parênteses também vale, ex.: "Karatê Shotokan (Kenjutsu)";
+//   "Estilos Armados" vale para os estilos de estilosArmados);
+//3. senão, o custo de "Outros";
+//4. sem "Outros", 1 a mais que o custo mais caro da manobra.
+//Manobras sem Pontos de Poder (básicas) valem 0; null = manobra fora de manobras.js
+function getPontosPoder(nomeManobra, char) {
+    if (typeof manobras === "undefined" || !manobras[nomeManobra]) return null;
+    const custos = (manobras[nomeManobra].PP || []).flatMap(pp => Object.entries(pp)).filter(([, custo]) => typeof custo === "number");//ignora Obs
+    if (!custos.length) return 0;
+
+    const antecedentes = char.Antecedentes || [];
+    const porAntecedente = custos.filter(([chave]) => chavePPAntecedente(chave, antecedentes)).map(([, custo]) => custo);
+    if (porAntecedente.length) return Math.min(...porAntecedente);
+
+    const estilos = String(char.Estilo || "").split(/[()]/).map(e => e.trim()).filter(Boolean);
+    const armado = estilos.some(e => estilosArmados.includes(e));
+    const porEstilo = custos.filter(([chave]) => estilos.includes(chave) || (chave === "Estilos Armados" && armado)).map(([, custo]) => custo);
+    if (porEstilo.length) return Math.min(...porEstilo);
+
+    const outros = custos.find(([chave]) => chave === "Outros");
+    if (outros) return outros[1];
+    return Math.max(...custos.map(([, custo]) => custo)) + 1;
+}
+
+//XP gasto em Manobras Especiais (Pontos de Poder x 4XP, ver getPontosPoder) e Combos; chamado na renderização da ficha
+//(v2/_framework.html), depois do calcPC feito pela ficha. Manobras fora de manobras.js não somam e ficam em XPManobrasSemDados
+function calcXP(char) {
+    //pontos bônus da criação que sobram depois do Chi e da FdV: a cada 5, 1 ponto de atributo; do resto,
+    //4 viram 1 ponto de poder e 3 viram 1 ponto de Saúde; o que ainda sobrar vira ponto de Antecedente
+    let bonus = usaPontosBonusChiFdV(char.Estilo, char.Chi, char.ForcaVontade);
+    char.BonusAtributo = Math.floor(Math.max(0, bonus) / 5);
+    bonus -= char.BonusAtributo * 5;
+    char.BonusPoder = bonus >= 4 ? 1 : 0;
+    bonus -= char.BonusPoder * 4;
+    char.BonusSaude = bonus >= 3 ? 1 : 0;//abate o XP de 1 ponto de Saúde (ainda não calculado)
+    bonus -= char.BonusSaude * 3;
+    char.BonusAntecedente = Math.max(0, bonus);
+
+    const especiais = (char.ManobrasEspeciais || "").split(/[,;]/).map(m => m.trim()).filter(Boolean);
+    char.XPManobrasSemDados = [];
+    const centaurian = temUnicoInicial(char, "Centaurian");
+    const xpManobras = especiais.reduce((total, m) => {
+        const nome = normalizarNomeManobra(m);
+        if (centaurian && nome === "Double Hit Kick") return total;//Centaurian ganha a manobra na criação
+        let pp = getPontosPoder(nome, char);
+        if (nome === "Double Hit Punch" && pp !== null && nivelUnicoInicial(char, "Shokan") >= 4) pp = Math.min(pp, 1);//Shokan 4+ compra por 1
+        if (pp === null) {
+            char.XPManobrasSemDados.push(m);
+            return total;
+        }
+        return total + calcXPManobra(pp);
+    }, 0);
+    //cada bônus de poder paga 1 Ponto de Poder das manobras
+    char.XPManobras = Math.max(0, xpManobras - calcXPManobra(char.BonusPoder));
+    char.XPCombos = calcXPCombos(char.Combos);
+
+    //bônus de atributo vale para físicos, mentais ou sociais: usa a divisão que dá o menor XP total;
+    //Cibernético ganha também 1 ponto extra para um atributo físico ou mental (o que der menor XP)
+    let melhor = null;
+    const extras = ehCibernetico(char) ? [[1, 0], [0, 1]] : [[0, 0]];
+    for (const [extraFis, extraMen] of extras)
+        for (let fis = 0; fis <= char.BonusAtributo; fis++) {
+            for (let men = 0; fis + men <= char.BonusAtributo; men++) {
+                const xp = {
+                    XPFisicos: calcXPFisicos(char, fis + extraFis),
+                    XPMentais: calcXPMentais(char, men + extraMen),
+                    XPSociais: calcXPSociais(char, char.BonusAtributo - fis - men)
+                };
+                const total = xp.XPFisicos + xp.XPMentais + xp.XPSociais;
+                if (!melhor || total < melhor.total) melhor = { ...xp, total };
+            }
+        }
+    char.XPFisicos = melhor.XPFisicos;
+    char.XPMentais = melhor.XPMentais;
+    char.XPSociais = melhor.XPSociais;
+
+    char.XPTecnicas = calcXPTecnicas(char);
+    char.XPTalentos = calcXPTalentos(char);
+    char.XPPericias = calcXPPericias(char);
+    char.XPConhecimentos = calcXPConhecimentos(char);
+
+    //Antecedentes começam em 0 e a criação dá 5 pontos, + os pontos bônus que sobraram (BonusAntecedente)
+    //(Híbrido Animal ganha 2 pontos grátis em Mascote); 1º ponto mais caro: 1 em cada antes
+    const antecedentes = (char.Antecedentes || []).map(an => an.Valor);
+    const hibrido = ehHibrido(char);
+    const minimos = (char.Antecedentes || []).map(an => hibrido && an.Nome === "Mascote" ? Math.min(2, Number(an.Valor) || 0) : 0);
+    char.XPAntecedentes = calcXPGrupo(antecedentes, minimos, 5 + char.BonusAntecedente, calcXPAntecedente, true);
+
+    //Saúde começa em 10 (12 para Cibernético; +1 com o bônus de Saúde); o resto foi comprado com XP
+    char.XPSaude = calcXPSaude((ehCibernetico(char) ? saudeInicialCibernetico : saudeInicial) + char.BonusSaude, Number(char.Saude) || 0);
+
+    //total exibido na ficha
+    char.XPTotal = char.XPTecnicas + char.XPFisicos + char.XPMentais + char.XPSociais + char.XPTalentos + char.XPPericias
+        + char.XPConhecimentos + char.XPAntecedentes + char.XPSaude + char.XPManobras + char.XPCombos;
+    return char;
+}
+
+//pontos para distribuir na criação e teto da criação de cada grupo de atributos:
+//- padrão: físicos 7, sociais 3, mentais 5, teto 5
+//- estilos de estilosMentais (Kabaddi, Soul Power): físicos 5, mentais 7
+//- antecedentesAnimais (Híbrido Animal, Tarkatan, Centaurian; prevalecem sobre o estilo): físicos 9 (teto 6), sociais 4, mentais 2 (teto 4)
+//- Cibernético: -1 ponto nos sociais (os multiplicadores ficam em regraAtributo); o ponto extra para físico ou mental é
+//  tratado no calcXP
+function criacaoAtributos(char) {
+    let c;
+    if (temNaturezaAnimal(char))
+        c = { Fisicos: 9, Sociais: 4, Mentais: 2, TetoFisicos: 6, TetoSociais: 5, TetoMentais: 4 };
+    else {
+        const mentais = priorizaMentais(char);
+        c = { Fisicos: mentais ? 5 : 7, Sociais: 3, Mentais: mentais ? 7 : 5, TetoFisicos: 5, TetoSociais: 5, TetoMentais: 5 };
+    }
+    if (ehCibernetico(char)) c.Sociais--;
+    return c;
+}
+
+//o personagem tem o antecedente Cibernético?
+function ehCibernetico(char) {
+    return temUnicoInicial(char, "Cibernético");
+}
+
+//XP gasto em atributos sociais: Carisma, Manipulação e Aparência começam em 1 (grátis) e a criação dá mais 3 pontos
+//(ver criacaoAtributos), + bônus de atributo usados neles; o que passar disso foi comprado com XP
+function calcXPSociais(char, bonusAtributo = 0) {
+    const c = criacaoAtributos(char);
+    return calcXPAtributosGrupo(char, ["Carisma", "Manipulacao", "Aparencia"], c.Sociais + bonusAtributo, c.TetoSociais);
+}
+
+//antecedente único com que o personagem começou: o primeiro da ficha que está em antecedentesUnicos (manobras.js). Ninguém
+//começa com dois; um segundo antecedente único é comprado depois com XP e não dá nenhuma regra de criação
+function antecedenteUnicoInicial(char) {
+    const unicos = typeof antecedentesUnicos !== "undefined" ? antecedentesUnicos : [];
+    return (char.Antecedentes || []).find(an => unicos.some(u => an.Nome === u || an.Nome.startsWith(u + " (")));
+}
+
+//nível do antecedente único <nome> se for o inicial do personagem (0 se não tiver ou se foi comprado depois)
+function nivelUnicoInicial(char, nome) {
+    const an = antecedenteUnicoInicial(char);
+    return an && (an.Nome === nome || an.Nome.startsWith(nome + " (")) ? Number(an.Valor) || 0 : 0;
+}
+
+//valor inicial grátis e multiplicadores de XP ([até 5, acima de 5, acima de 8]) de um atributo:
+//- padrão: começa em 1; x 4 / x 6 / x 8
+//- Cibernético: sociais sempre x 6; físicos e mentais x 4 até 8 (sem o custo super-humano) e x 6 acima de 8
+//- Shokan 2+: Aparência começa em 0; Shokan 3+: Força começa em 2 e Aparência custa x 5 / x 7; Shokan 4+: Vigor começa em 2
+//  e Destreza custa x 5 / x 7; Shokan 5: Força e Vigor acima de 5 custam x 5
+const atributosSociais = ["Carisma", "Manipulacao", "Aparencia"];
+function regraAtributo(char, atributo) {
+    let minimo = 1, muls = [4, 6, 8];
+    if (ehCibernetico(char)) muls = atributosSociais.includes(atributo) ? [6, 6, 6] : [4, 4, 6];
+    const shokan = nivelUnicoInicial(char, "Shokan");
+    if (atributo === "Aparencia" && shokan >= 2) minimo = 0;
+    if (atributo === "Aparencia" && shokan >= 3) muls = [5, 7, 7];
+    if (atributo === "Forca" && shokan >= 3) minimo = 2;
+    if (atributo === "Vigor" && shokan >= 4) minimo = 2;
+    if (atributo === "Destreza" && shokan >= 4) muls = [5, 7, 7];
+    if ((atributo === "Forca" || atributo === "Vigor") && shokan >= 5) muls = [muls[0], 5, 5];
+    return { minimo, muls };
+}
+
+//Saúde de todo personagem na criação (Cibernético começa com 12; o bônus de Saúde soma 1)
+const saudeInicial = 10;
+const saudeInicialCibernetico = 12;
+
+//estilos que priorizam atributos mentais: na criação, 7 pontos para os mentais e 5 para os físicos (os demais, o contrário)
+const estilosMentais = ["Kabaddi", "Soul Power"];
+function priorizaMentais(char) {
+    return estilosMentais.includes(String(char.Estilo || "").split("(")[0].trim());
+}
+
+//XP gasto em atributos físicos: Força, Destreza e Vigor começam em 1 (grátis) e a criação dá mais 7 pontos (ver
+//criacaoAtributos), + bônus de atributo usados neles; o que passar disso foi comprado com XP
+function calcXPFisicos(char, bonusAtributo = 0) {
+    const c = criacaoAtributos(char);
+    return calcXPAtributosGrupo(char, ["Forca", "Destreza", "Vigor"], c.Fisicos + bonusAtributo, c.TetoFisicos);
+}
+
+//XP gasto em atributos mentais: Percepção, Inteligência e Raciocínio começam em 1 (grátis) e a criação dá mais 5 pontos
+//(ver criacaoAtributos), + bônus de atributo usados neles; o que passar disso foi comprado com XP
+function calcXPMentais(char, bonusAtributo = 0) {
+    const c = criacaoAtributos(char);
+    return calcXPAtributosGrupo(char, ["Percepcao", "Inteligencia", "Raciocinio"], c.Mentais + bonusAtributo, c.TetoMentais);
+}
+
+//XP de um grupo de atributos da ficha, com <pontosCriacao> para distribuir na criação e <teto> como valor máximo na criação;
+//cada atributo começa no valor grátis e paga os multiplicadores de regraAtributo (ver calcXPGrupo).
+//Ex.: físicos 5/5/5 com 7 pontos = criação Força 5 (+4), Destreza 4 (+3), Vigor 1; XP de Destreza 4 > 5 e Vigor 1 > 5 = 56
+function calcXPAtributosGrupo(char, atributos, pontosCriacao, teto = 5) {
+    const regras = atributos.map(a => regraAtributo(char, a));
+    return calcXPGrupo(atributos.map(a => char[a]), regras.map(r => r.minimo), pontosCriacao,
+        regras.map(r => (x, y) => calcXPAtributo(x, y, r.muls)), false, teto);
+}
+
+//XP de um grupo de habilidades que começam em 0, com <pontosCriacao> para distribuir na criação; o 1º ponto é o mais caro,
+//então a criação compra primeiro 1 ponto de cada habilidade que o personagem tem (ver calcXPGrupo)
+function calcXPHabilidadesGrupo(valores, pontosCriacao) {
+    return calcXPGrupo(valores, 0, pontosCriacao, calcXPHabilidade, true);
+}
+
+//XP de um grupo de características que começam em <minimo> (grátis), com <pontosCriacao> para distribuir na criação; a
+//criação vem antes do XP. Distribuição da criação: com <umEmCada>, primeiro 1 ponto em cada característica que o personagem
+//tem (das maiores para as menores, enquanto houver pontos); depois, o máximo possível na maior, até o valor da ficha, e o
+//que sobrar na seguinte, e assim por diante. Na criação nada passa de <limite> (5 em atributos, habilidades, técnicas
+//e antecedentes; acima disso, só com XP). O XP compra o resto: custo(valor da criação, valor da ficha) de cada uma
+//<minimo>, <limite> e <custo> podem ser um valor para todas ou um array com o de cada característica
+function calcXPGrupo(valores, minimo, pontosCriacao, custo, umEmCada = false, limite = 5) {
+    const min = i => Array.isArray(minimo) ? minimo[i] : minimo;
+    const lim = i => Array.isArray(limite) ? limite[i] : limite;
+    const cus = i => Array.isArray(custo) ? custo[i] : custo;
+    const ficha = valores.map((v, i) => Math.max(min(i), Number(v) || 0));
+    const criacao = ficha.map((_, i) => min(i));
+    const ordem = ficha.map((_, i) => i).sort((a, b) => ficha[b] - ficha[a]);//da maior para a menor
+    let pontos = pontosCriacao;
+    if (umEmCada)
+        for (const i of ordem)
+            if (pontos > 0 && ficha[i] > criacao[i] && criacao[i] < lim(i)) {
+                criacao[i]++;
+                pontos--;
+            }
+    for (const i of ordem) {
+        const gasto = Math.max(0, Math.min(pontos, Math.min(ficha[i], lim(i)) - criacao[i]));
+        criacao[i] += gasto;
+        pontos -= gasto;
+    }
+    return ficha.reduce((total, v, i) => total + cus(i)(criacao[i], v), 0);
+}
+
+//valores de habilidades da ficha: os campos fixos + as habilidades novas (array de newCaracteristica)
+function valoresHabilidades(char, campos, novas) {
+    return campos.map(c => char[c]).concat((novas || []).map(n => n.Valor));
+}
+
+//XP gasto em Técnicas: começam em 0 e a criação dá 8 pontos; inclui as NovasTecnicas (Espada, Bastão...).
+//antecedentesAnimais ganham 1 ponto grátis em Esportes, e Tarkatan também 1 em Garra (a lâmina retrátil)
+function calcXPTecnicas(char) {
+    const campos = ["Soco", "Chute", "Bloqueio", "Apresamento", "Esportes", "Foco"];
+    const nomes = campos.concat((char.NovasTecnicas || []).map(t => t.Nome));
+    const valores = valoresHabilidades(char, campos, char.NovasTecnicas);
+    const animal = temNaturezaAnimal(char), tarkatan = temUnicoInicial(char, "Tarkatan");
+    const minimos = nomes.map((nome, i) =>
+        (animal && nome === "Esportes") || (tarkatan && nome === "Garra") ? Math.min(1, Number(valores[i]) || 0) : 0);
+    return calcXPGrupo(valores, minimos, 8, calcXPTecnica);
+}
+
+//o personagem começou com o antecedente único <nome>? (regras de criação só valem para o inicial)
+function temUnicoInicial(char, nome) {
+    const an = antecedenteUnicoInicial(char);
+    return !!an && (an.Nome === nome || an.Nome.startsWith(nome + " ("));//aceita detalhe: "Híbrido Animal (Lagarto)"
+}
+
+//o personagem tem o antecedente Híbrido Animal?
+function ehHibrido(char) {
+    return temUnicoInicial(char, "Híbrido Animal");
+}
+
+//antecedentes únicos com as regras de criação do Híbrido Animal (atributos 9/4/2, teto e custo das habilidades,
+//1 ponto grátis em Esportes); cada um tem um benefício próprio: Híbrido ganha 2 em Mascote, Tarkatan 1 na técnica Garra
+//e Centaurian a manobra Double Hit Kick
+const antecedentesAnimais = ["Híbrido Animal", "Tarkatan", "Centaurian"];
+function temNaturezaAnimal(char) {
+    return antecedentesAnimais.some(nome => temUnicoInicial(char, nome));
+}
+
+//teto das habilidades dos antecedentesAnimais (dificuldades culturais); as demais seguem o teto de 5 da criação
+const tetoHabilidadesHibrido = { Manha: 1, Labia: 1, Conducao: 1, Seguranca: 1, Computador: 1, Interrogacao: 2, Arena: 2, Investigacao: 2 };
+
+//habilidades grátis do Cibernético (fora dos pontos de criação) e as que ele não começa com mais de 2 (e melhora com XP
+//de nível atual x 3)
+const habilidadesGratisCibernetico = { Interrogacao: 1, Intimidacao: 2, Computador: 1, Medicina: 1 };
+const habilidadesTeto2Cibernetico = ["Manha", "Investigacao"];
+
+//XP de um grupo de habilidades (campos fixos + habilidades novas): começam em 0, com <pontosCriacao> na criação e 1 ponto
+//em cada antes (ver calcXPGrupo).
+//- antecedentesAnimais: teto de tetoHabilidadesHibrido e XP de nível atual x 3 em vez de x 2 em todas
+//- Cibernético: habilidadesGratisCibernetico já começam com o valor grátis; habilidadesTeto2Cibernetico têm teto 2 na
+//  criação e XP de nível atual x 3
+function calcXPHabilidadesFicha(char, campos, novas, pontosCriacao) {
+    const valores = valoresHabilidades(char, campos, novas);
+    const nomes = campos.concat((novas || []).map(n => n.Nome));
+    const animal = temNaturezaAnimal(char), ciborgue = ehCibernetico(char);
+    const minimos = nomes.map((n, i) => ciborgue && habilidadesGratisCibernetico[n] ? Math.min(habilidadesGratisCibernetico[n], Number(valores[i]) || 0) : 0);
+    const tetos = nomes.map(n => Math.min(animal && tetoHabilidadesHibrido[n] || 5, ciborgue && habilidadesTeto2Cibernetico.includes(n) ? 2 : 5));
+    const custos = nomes.map(n => {
+        const base = animal || (ciborgue && habilidadesTeto2Cibernetico.includes(n)) ? 3 : 2;
+        return (x, y) => calcXPHabilidade(x, y, base);
+    });
+    return calcXPGrupo(valores, minimos, pontosCriacao, custos, true, tetos);
+}
+
+//XP gasto em Talentos: começam em 0 e a criação dá 9 pontos (7 nos estilos de estilosMentais)
+function calcXPTalentos(char) {
+    return calcXPHabilidadesFicha(char, ["Prontidao", "Perspicacia", "Interrogacao", "Intimidacao", "Manha", "Labia"], char.NovosTalentos, priorizaMentais(char) ? 7 : 9);
+}
+
+//XP gasto em Perícias: começam em 0 e a criação dá 7 pontos
+function calcXPPericias(char) {
+    return calcXPHabilidadesFicha(char, ["LutaCega", "Conducao", "Lideranca", "Seguranca", "Furtividade", "Sobrevivencia"], char.NovasPericias, 7);
+}
+
+//XP gasto em Conhecimentos: começam em 0 e a criação dá 4 pontos (9 nos estilos de estilosMentais)
+function calcXPConhecimentos(char) {
+    return calcXPHabilidadesFicha(char, ["Arena", "Computador", "Investigacao", "Medicina", "Misterios", "Estilos"], char.NovosConhecimentos, priorizaMentais(char) ? 9 : 4);
+}
+
 function calcPC(char) {
     /**
      * Físicos, Percepção, Int e Rac = soma x2 (peso 2)
@@ -418,7 +894,7 @@ function AutoGeradorP(p) {
         p.Intimidacao, p.Perspicacia, p.Manha, p.Labia, p.LutaCega, p.Conducao, p.Lideranca, p.Seguranca, p.Furtividade, p.Sobrevivencia,
         p.Arena, p.Computador, p.Investigacao, p.Medicina, p.Misterios, p.Estilos, p.Antecedentes, p.Gloria, p.Honra,
         p.Divisao, p.Posto || "", p.Soco, p.Chute, p.Bloqueio, p.Apresamento, p.Esportes, p.Foco, p.Chi, p.ForcaVontade, p.Saude,
-        p.ManobrasEspeciais, p.Combos || "", p.NovasTecnicas, p.NovosTalentos, p.NovasPericias, p.NovosConhecimentos, p.PC);
+        p.ManobrasEspeciais, p.Combos || "", p.NovasTecnicas, p.NovosTalentos, p.NovasPericias, p.NovosConhecimentos, p.PC, p.XPTotal);
 }
 
 function GeraLinkEstilo(estilo) {
@@ -444,7 +920,7 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
     prontidao, interrogacao, intimidacao, perspicacia, manha, labia, lutacega, conducao, lideranca, seguranca,
     furtividade, sobrevivencia, arena, computador, investigacao, medicina, misterios, estilos, antecedentes,
     gloria, honra, divisao, posto, soco, chute, bloqueio, apresamento, esportes, foco, chi, fdv, saude, especiais,
-    combos, novasTecnicas = [], novosTalentos = [], novasPericias = [], novosConhecimentos = [], pontosCombate = 0) {
+    combos, novasTecnicas = [], novosTalentos = [], novasPericias = [], novosConhecimentos = [], pontosCombate = 0, xpTotal = null) {
     let newWindow = "";
 
     newWindow += "<table width=\"100%\" class=\"topoTitulo\"><tr><td align=\"center\" colspan=\"6\"><img alt=\"Street Fighter RPG\" src=\"http://www.sfrpg.com.br/tools/sheet-img/logo.png\" /></td></tr>"
@@ -669,6 +1145,10 @@ function AutoGerador(nome, jogador, cronica, estilo, escola, equipe, time, conce
         newWindow += "<td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/" + (saude - 10) + "-10bluedot.jpg\" alt=\"" + saude + "\" /></td></tr>";
     else
         newWindow += "<td colspan=\"2\" align=\"center\"><img src=\"http://www.sfrpg.com.br/tools/sheet-img/0-10bluedot.jpg\" alt=\"" + saude + "\" /></td></tr>";
+
+    //XP total gasto na ficha (calcXP, chamado pelo v2/_framework.html); sem calcXP, a linha não aparece
+    if (xpTotal !== undefined && xpTotal !== null)
+        newWindow += "<tr><td class=\"ArialBlack\" colspan=\"2\" valign=\"top\" nowrap=\"nowrap\" style=\"padding-top:10px;padding-left:50px;\"><b>XP Gasto: </b><u>" + xpTotal + "</u></td><td colspan=\"4\"></td></tr>";
 
     return newWindow + "<tr><td colspan=\"6\" style=\"height:25px;\"></td></tr></table>";
 }

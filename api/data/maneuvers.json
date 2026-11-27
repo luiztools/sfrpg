@@ -169,7 +169,7 @@
         "Will": null,
         "SystemBr": "Básica de Híbrido Animal",
         "System": "",
-        "Source": "Sites de Fãs"
+        "Source": "Players"
     },
     {
         "Name": "Tail Slash",
@@ -182,7 +182,7 @@
         "Will": null,
         "SystemBr": "Básica de Híbrido Animal",
         "System": "",
-        "Source": "Sites de Fãs"
+        "Source": "Players"
     },
     {
         "Name": "Fin Slash",
@@ -234,7 +234,7 @@
         "Will": null,
         "SystemBr": "Básica de Híbrido Animal",
         "System": "",
-        "Source": "Sites de Fãs"
+        "Source": "Players"
     },
     {
         "Name": "Horn",
@@ -247,7 +247,7 @@
         "Will": null,
         "SystemBr": "Básica de Híbrido Animal",
         "System": "",
-        "Source": "Sites de Fãs"
+        "Source": "Shotokan"
     },
     {
         "Name": "Athletic",
@@ -1212,7 +1212,7 @@
         "Source": "Sites de Fãs"
     },
     {
-        "Name": "Two-Sided Jumping Kick",
+        "Name": "Two Sided Jumping Kick",
         "TechBr": "Chute",
         "Tech": "Kick",
         "Spd": 0,
@@ -3653,7 +3653,7 @@
         "Will": null,
         "SystemBr": "Jogado com qualquer Soco, Chute ou Apresamento Básico; adiciona +2 DAN; se sofrer dano, a vítima é congelada até ser atingida ou conseguir acumular 4 sucessos em um teste prolongado de FOR (teste no final de cada turno)",
         "System": "",
-        "Source": "Sites de Fãs"
+        "Source": "Shotokan"
     },
     {
         "Name": "Flight",
@@ -4199,7 +4199,7 @@
         "Will": null,
         "SystemBr": "Percepção + Elemental para perceber seu elemento",
         "System": "",
-        "Source": "Sites de Fãs"
+        "Source": "Players"
     },
     {
         "Name": "Sense Orochi",

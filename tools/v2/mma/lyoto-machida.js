@@ -7,7 +7,7 @@
 
     const machida = {
         Nome: "Lyoto 'Dragão' Machida",
-        Estilo: "Vale-Tudo (Shotokan)",
+        Estilo: "Vale-Tudo (Karatê Shotokan)",
         Escola: "Dojô Machida",
         Jogador: "NPC",
         Assinatura: "Invicto!",

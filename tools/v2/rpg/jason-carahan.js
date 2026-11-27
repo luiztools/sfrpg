@@ -49,7 +49,7 @@ function JasonCarahan() {
         Foco: 1,
         NovasTecnicas: [],
         ManobrasEspeciais: "Backflip Kick, Handstand Kick, Double Hit Kick, Jump, Wall Spring",
-        Combos: "Bloqueio para Roundhouse Kick para Double-hit Kick",
+        Combos: "Bloqueio para Roundhouse Kick para Double Hit Kick",
         Gloria: 2,
         Honra: 1,
         Chi: 3,

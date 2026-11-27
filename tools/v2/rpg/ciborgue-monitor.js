@@ -2,7 +2,7 @@
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
     antecedentes[1] = newCaracteristica("Contatos", 5);
-    antecedentes[2] = newCaracteristica("Cibernetico", 5);
+    antecedentes[2] = newCaracteristica("Cibernético", 5);
 
     const ciborgue = {
         Nome: "Ciborgue Monitor",

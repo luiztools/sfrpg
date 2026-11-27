@@ -13,7 +13,7 @@ function AnnaTk1() {
 
     return {
         Nome: "Anna Williams",
-        Estilo: "Aikido",
+        Estilo: "Aikidô",
         Escola: "Família Williams",
         Jogador: "NPC",
         Assinatura: "Manda um beijo e ri da adversária",
@@ -82,7 +82,7 @@ function AnnaTk4() {
 
     return {
         Nome: "Anna Williams",
-        Estilo: "Aikido",
+        Estilo: "Aikidô",
         Escola: "Família Williams",
         Jogador: "NPC",
         Assinatura: "Manda um beijo e ri da adversária",
@@ -156,7 +156,7 @@ function AnnaTk8() {
 
     return {
         Nome: "Anna Williams",
-        Estilo: "Aikido",
+        Estilo: "Aikidô",
         Escola: "Família Williams",
         Jogador: "NPC",
         Assinatura: "Apoia a bazuca no ombro e manda um beijo",

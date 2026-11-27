@@ -1,6 +1,6 @@
 function Kabal() {
     const antecedentes = [];
-    antecedentes[0] = newCaracteristica("Cibernetico", 4);
+    antecedentes[0] = newCaracteristica("Cibernético", 4);
     antecedentes[1] = newCaracteristica("Fama", 3);
     antecedentes[2] = newCaracteristica("Recursos", 2);
 

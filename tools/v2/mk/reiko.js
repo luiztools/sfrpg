@@ -57,7 +57,7 @@ function Reiko() {
         NovasTecnicas: tecnicas,
         Armas: armas,
         ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Throw, Back Breaker, Double Hit Kick, Double Hit Punch, Knee Basher, Yoga Teleport, Dislocate Limb, Weapon Sweep, Backflip Kick, Forward Backflip Kick",
-        Combos: "Double-Hit Punch para Double-Hit Punch para Power Uppercut (Dizzy); Yoga Teleport para Power Uppercut para Throw (Dizzy); Jumping Short para Foot Sweep para Power Uppercut",
+        Combos: "Double Hit Punch para Double Hit Punch para Power Uppercut (Dizzy); Yoga Teleport para Power Uppercut para Throw (Dizzy); Jumping Short para Foot Sweep para Power Uppercut",
         Gloria: 10,
         Honra: 2,
         Chi: 8,

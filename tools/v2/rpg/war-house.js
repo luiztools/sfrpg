@@ -249,7 +249,7 @@ function KO() {
 function DanadoBastao() {
     const personagem = {
         Nome: "Dana do Bastão",
-        Estilo: "Karate Shotokan (Bojutsu)",
+        Estilo: "Karatê Shotokan (Bojutsu)",
         Escola: "desconhecida",
         Jogador: "",
         Assinatura: "Gira o Cajado",

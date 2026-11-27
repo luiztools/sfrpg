@@ -6,7 +6,7 @@ function YangKungFuDoFighting() {
 
     const yang = {
         Nome: "Yang",
-        Estilo: "Kickboxing",
+        Estilo: "Kickboxe",
         Escola: "",
         Jogador: "NPC",
         Assinatura: "Pose de Luta",

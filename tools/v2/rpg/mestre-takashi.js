@@ -2,7 +2,7 @@
 function MestreTakashi() {
     const personagem = {
         Nome: "Mestre Takashi",
-        Estilo: "Aikido",
+        Estilo: "Aikidô",
         Escola: "",
         Jogador: "",
         Assinatura: "Arqueia-se",

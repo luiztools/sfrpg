@@ -6,7 +6,7 @@ function RyuSF4() {
 
     const ryu = {
         Nome: "Evil Ryu",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
         Jogador: "NPC",
         Assinatura: "Instinto assassino",
@@ -66,7 +66,7 @@ function RyuSFZ3() {
 
     const ryu = {
         Nome: "Evil Ryu",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
         Jogador: "NPC",
         Assinatura: "Instinto assassino",
@@ -125,7 +125,7 @@ function RyuSF5() {
 
     const ryu = {
         Nome: "Kage",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
         Jogador: "NPC",
         Assinatura: "Instinto assassino",

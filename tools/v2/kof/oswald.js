@@ -57,7 +57,7 @@ function Oswald() {
         Esportes: 5,
         Foco: 6,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Slide Kick, Knife Hand Strike, Haymaker, Weapon Uppercut, Esquives, Widowmaker, Gekiro, Double Hit Blow, Spinning Weapon, Two-Sided Jumping Kick",
+        ManobrasEspeciais: "Jump, Kippup, Slide Kick, Knife Hand Strike, Haymaker, Weapon Uppercut, Esquives, Widowmaker, Gekiro, Double Hit Blow, Spinning Weapon, Two Sided Jumping Kick",
         Combos: "Carta Jab para Carta Jab para Carta Jab; Haymaker para Weapon Uppercut para Gekiro (Dizzy); Weapon Uppercut para Widowmaker; Spinning Weapon para Spinning Weapon",
         Gloria: 8,
         Honra: 4,

@@ -6,7 +6,7 @@ function ZangiefSFZ3() {
 
     const zangief = {
         Nome: "Zangief",
-        Estilo: "Sanbô",
+        Estilo: "Sanbo",
         Escola: "Campo de Treino Siberiano",
         Jogador: "NPC",
         Assinatura: "Levanta os braços em vitória",
@@ -65,7 +65,7 @@ function ZangiefSF2() {
 
     const zangief = {
         Nome: "Zangief",
-        Estilo: "Sanbô",
+        Estilo: "Sanbo",
         Escola: "Campo de Treino Siberiano",
         Jogador: "NPC",
         Assinatura: "Levanta os braços em vitória",
@@ -124,7 +124,7 @@ function ZangiefSF5() {
 
     const zangief = {
         Nome: "Zangief",
-        Estilo: "Sanbô",
+        Estilo: "Sanbo",
         Escola: "Campo de Treino Siberiano",
         Jogador: "NPC",
         Assinatura: "Levanta os braços em vitória",
@@ -183,7 +183,7 @@ function ZangiefSF6() {
 
     const zangief = {
         Nome: "Zangief",
-        Estilo: "Sanbô",
+        Estilo: "Sanbo",
         Escola: "Campo de Treino Siberiano",
         Jogador: "NPC",
         Assinatura: "Levanta os braços em vitória",

@@ -5,7 +5,7 @@ function TaroKungFuDoFighting() {
 
     const taro = {
         Nome: "Taro",
-        Estilo: "Ninjutsu",
+        Estilo: "Ninjitsu",
         Escola: "",
         Jogador: "NPC",
         Assinatura: "Cumprimento Ninja",

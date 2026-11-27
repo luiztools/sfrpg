@@ -5,7 +5,7 @@ function ChatchaiKungFuDoFighting() {
 
     const chatchai = {
         Nome: "Chatchai",
-        Estilo: "Muay Thai",
+        Estilo: "Thai Kickboxe",
         Escola: "",
         Jogador: "NPC",
         Assinatura: "Salto comemorativo",

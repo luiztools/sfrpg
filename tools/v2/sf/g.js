@@ -10,7 +10,7 @@ function G() {
 
     const personagem = {
         Nome: "G",
-        Estilo: "Jeet Kune Do",
+        Estilo: "Jeet Kune Dô",
         Escola: "Várias",
         Jogador: "NPC",
         Assinatura: "Cartola Preta",

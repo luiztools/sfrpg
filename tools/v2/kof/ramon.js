@@ -10,7 +10,7 @@ function Ramon() {
 
     const personagem = {
         Nome: "Ramon",
-        Estilo: "Lucha-Libre",
+        Estilo: "Lucha Libre",
         Escola: "Professor Particular",
         Jogador: "NPC",
         Assinatura: "Sorriso cativante",

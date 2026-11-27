@@ -60,7 +60,7 @@ function DehrikSavitch() {
 
     const dehrik = {
         Nome: "Dehrik Savitch",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Professor Particular",
         Jogador: "NPC",
         Assinatura: "Grito da vitória",

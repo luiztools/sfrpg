@@ -30,7 +30,7 @@ function Matrix() {
         Misterios: 2,
         Estilos: 2,
         NovosConhecimentos: [],
-        Antecedentes: [newCaracteristica("Cibernetico", 3), newCaracteristica("Fama", 3)],
+        Antecedentes: [newCaracteristica("Cibernético", 3), newCaracteristica("Fama", 3)],
         Soco: 4,
         Chute: 4,
         Bloqueio: 2,

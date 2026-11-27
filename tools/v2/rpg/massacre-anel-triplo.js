@@ -63,7 +63,7 @@
 function TickeTock() {
     const personagem = {
         Nome: "Tick e Tock",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "desconhecida",
         Jogador: "",
         Assinatura: "Malabarismos com Machados",

@@ -9,7 +9,7 @@ function KanoMK3() {
     tecnicas[0] = newCaracteristica("Faca", 5);
     tecnicas[1] = newCaracteristica("Arremesso", 6);
 
-    const armas = ["Faca", "Faca Arremessada"];
+    const armas = ["Faca", "Faca Arremessada", "Laser"];
 
     const personagem = {
         Nome: "Kano",
@@ -57,7 +57,7 @@ function KanoMK3() {
         Foco: 1,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Head Butt, Throw, Rolling Attack, Sonic Boom",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Head Butt, Throw, Rolling Attack",
         Combos: "Head Butt para Power Uppercut (dizzy); Forward para Forward para Roundhouse (Dizzy); Forward para Forward para Head Butt (Dizzt); Jab para Jab para Head Butt (dizzy)",
         Gloria: 5,
         Honra: 0,
@@ -73,7 +73,7 @@ function KanoMK3() {
 function KanoMKX() {
     const antecedentes = [];
     antecedentes[0] = newCaracteristica("Apoio", 5);
-    antecedentes[1] = newCaracteristica("Cibernetico", 1);
+    antecedentes[1] = newCaracteristica("Cibernético", 1);
     antecedentes[2] = newCaracteristica("Fama", 2);
     antecedentes[3] = newCaracteristica("Recursos", 3);
 
@@ -82,7 +82,7 @@ function KanoMKX() {
     tecnicas[1] = newCaracteristica("Arremesso", 6);
     tecnicas[2] = newCaracteristica("Armas de Fogo", 3);
 
-    const armas = ["Faca", "Faca Arremessada", "Granada"];
+    const armas = ["Faca", "Faca Arremessada", "Granada", "Laser"];
 
     const personagem = {
         Nome: "Kano",
@@ -130,7 +130,7 @@ function KanoMKX() {
         Foco: 1,
         NovasTecnicas: tecnicas,
         Armas: armas,
-        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Head Butt, Throw, Rolling Attack, Sonic Boom, Double Hit Kick, Flying Tackle, Vertical Rolling Attack, Suplex, Knee Basher",
+        ManobrasEspeciais: "Jump, Kippup, Foot Sweep, Power Uppercut, Head Butt, Throw, Rolling Attack, Double Hit Kick, Flying Tackle, Vertical Rolling Attack, Suplex, Knee Basher",
         Combos: "Head Butt para Power Uppercut (dizzy); Forward para Forward para Roundhouse (Dizzy); Forward para Forward para Head Butt (Dizzt); Jab para Jab para Head Butt (dizzy); Rolling Attack para Flying Tackle (dizzy);",
         Gloria: 5,
         Honra: 0,

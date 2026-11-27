@@ -9,7 +9,7 @@ function RyuSFZ3() {
 
     const ryu = {
         Nome: "Ryu",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
         Jogador: "NPC",
         Assinatura: "Pura determinação",
@@ -72,7 +72,7 @@ function RyuSF2() {
 
     const ryu = {
         Nome: "Ryu",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
         Jogador: "NPC",
         Assinatura: "Pura determinação",
@@ -135,7 +135,7 @@ function RyuSF5() {
 
     const ryu = {
         Nome: "Ryu",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
         Jogador: "NPC",
         Assinatura: "Pura determinação",
@@ -197,7 +197,7 @@ function RyuSF6() {
 
     const ryu = {
         Nome: "Ryu",
-        Estilo: "Karate Shotokan",
+        Estilo: "Karatê Shotokan",
         Escola: "Dojô de Gouken",
         Jogador: "NPC",
         Assinatura: "Pura determinação",

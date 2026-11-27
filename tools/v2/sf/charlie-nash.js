@@ -80,7 +80,7 @@ function CharlieSF5() {
     antecedentes[1] = newCaracteristica("Arena", 1);
     antecedentes[2] = newCaracteristica("Contatos", 4);
     antecedentes[3] = newCaracteristica("Aliados", 2);
-    antecedentes[4] = newCaracteristica("Cibernetico", 3);
+    antecedentes[4] = newCaracteristica("Cibernético", 3);
 
     const talentos = [];
     talentos[0] = newCaracteristica("Instrução", 3);
